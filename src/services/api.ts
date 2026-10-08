@@ -177,7 +177,21 @@ export const ApiService = {
         console.warn('GAS API connection failed, fallback to local storage:', e);
       }
     }
-    const rides = getStored<RideReservation[]>(STORAGE_KEYS.RIDES, INITIAL_RIDES);
+
+    let rides = getStored<RideReservation[]>(STORAGE_KEYS.RIDES, INITIAL_RIDES);
+    const todayStr = new Date().toISOString().split('T')[0];
+
+    // デモ用: 本日の送迎予定（未完了）が1件もない場合は、RIDE-101とRIDE-102を本日の日付・未完了に自動更新
+    const hasTodayScheduled = rides.some((r) => r.rideDate === todayStr && r.status === 'scheduled');
+    if (!hasTodayScheduled) {
+      rides = rides.map((r) => {
+        if (r.id === 'RIDE-101') return { ...r, rideDate: todayStr, status: 'scheduled', completedAt: undefined };
+        if (r.id === 'RIDE-102') return { ...r, rideDate: todayStr, status: 'scheduled', completedAt: undefined };
+        return r;
+      });
+      setStored(STORAGE_KEYS.RIDES, rides);
+    }
+
     return rides.sort((a, b) => `${b.rideDate} ${b.rideTime}`.localeCompare(`${a.rideDate} ${a.rideTime}`));
   },
 
