@@ -276,11 +276,11 @@ for row_idx, (title, desc, status) in enumerate(check_boxes, start=15):
     cell_st.border = thin_border
     ws_manual.row_dimensions[row_idx].height = 28
 
-ws_manual["B20"] = "検証実施日: 2026年 _____月 _____日"
+ws_manual["B20"] = "検証実施日: 2026年 10月 _____日"
 ws_manual["B20"].font = font_bold
-ws_manual["B21"] = "検証実施者ご署名: _______________________________"
+ws_manual["B21"] = "検証実施者ご署名: 梅澤 研太 様 (または検証ご担当者様)"
 ws_manual["B21"].font = font_bold
-ws_manual["B22"] = "使用Googleアカウント: _______________________________"
+ws_manual["B22"] = "使用Googleアカウント: k-umezawa@ml-mightylink.com"
 ws_manual["B22"].font = font_bold
 ws_manual["B23"] = "総合受入判定: [   ] 合格（本番リリース承認）   /   [   ] 不合格（再調整要）"
 ws_manual["B23"].font = Font(name="Meiryo", size=11, bold=True, color="059669")

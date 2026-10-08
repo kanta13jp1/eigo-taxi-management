@@ -11,8 +11,9 @@
 
 1. **パソコン（Windows または Mac）**
 2. **インターネットブラウザ（Google Chrome 推奨）**
-3. **教室または先生の Google アカウント（Gmail）**
-   * 例: Mauro先生、Brenda先生、または教室管理用のアカウント
+3. **検証用 Google アカウント（Gmail / Google Workspace）**
+   * **検証担当者アカウント**: `k-umezawa@ml-mightylink.com`（梅澤様）
+   * ※ブラウザの右上に表示されるログイン中アカウントが上記アドレスになっていることをご確認ください。
 4. **送迎チケット管理WebアプリのURL**
    * [https://kanta13jp1.github.io/eigo-taxi-management/](https://kanta13jp1.github.io/eigo-taxi-management/)
 
@@ -149,6 +150,6 @@ flowchart TD
 | **④ キャンセル連動** | Webアプリでキャンセル後、カレンダーから予定が消え、シートが `cancelled` になったか | 予定削除後のカレンダー／シート更新画面 | [ ] 合格 |
 
 * **検証実施日**: 2026年 _____月 _____日
-* **検証実施者（ご署名）**: __________________________
-* **使用したGoogleアカウント**: __________________________
+* **検証実施者（ご署名）**: 梅澤 研太 様 (または検証ご担当者様)
+* **検証に使用したGoogleアカウント**: `k-umezawa@ml-mightylink.com`
 * **総合判定**: [  ] 合格 (Pass)  /  [  ] 再確認要 (Fail)
