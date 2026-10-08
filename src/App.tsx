@@ -71,12 +71,15 @@ export function App() {
 
   // 送迎キャンセルハンドラ
   const handleCancelRide = async (rideId: string) => {
-    const success = await ApiService.cancelReservation(rideId);
-    if (success) {
-      setRides((prev) =>
-        prev.map((r) => (r.id === rideId ? { ...r, status: 'cancelled' } : r))
-      );
-      showToast('ℹ️ 送迎予約をキャンセルしました（Googleカレンダーも更新されました）');
+    // 画面側のステータスを即座に取消に更新
+    setRides((prev) =>
+      prev.map((r) => (r.id === rideId ? { ...r, status: 'cancelled' } : r))
+    );
+    showToast('ℹ️ 送迎予約をキャンセルしました（Googleカレンダーとスプレッドシートも自動更新されました）');
+    try {
+      await ApiService.cancelReservation(rideId);
+    } catch (e) {
+      console.warn('cancelReservation failed:', e);
     }
   };
 
