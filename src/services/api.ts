@@ -172,7 +172,35 @@ export const ApiService = {
       try {
         const res = await fetch(`${gasUrl}?action=getRides`);
         const json = await res.json();
-        if (json.success && Array.isArray(json.data)) return json.data;
+        if (json.success && Array.isArray(json.data)) {
+          return json.data.map((r: any) => {
+            let rideDate = String(r.rideDate || '');
+            const dateMatch = rideDate.match(/\d{4}-\d{2}-\d{2}/);
+            if (dateMatch) {
+              rideDate = dateMatch[0];
+            } else {
+              const d = new Date(r.rideDate);
+              if (!isNaN(d.getTime())) {
+                const y = d.getFullYear();
+                const m = String(d.getMonth() + 1).padStart(2, '0');
+                const day = String(d.getDate()).padStart(2, '0');
+                rideDate = `${y}-${m}-${day}`;
+              }
+            }
+
+            let rideTime = String(r.rideTime || '');
+            const timeMatch = rideTime.match(/(\d{1,2}):(\d{2})/);
+            if (timeMatch) {
+              rideTime = `${timeMatch[1].padStart(2, '0')}:${timeMatch[2]}`;
+            }
+
+            return {
+              ...r,
+              rideDate,
+              rideTime,
+            };
+          }).sort((a: any, b: any) => `${b.rideDate} ${b.rideTime}`.localeCompare(`${a.rideDate} ${a.rideTime}`));
+        }
       } catch (e) {
         console.warn('GAS API connection failed, fallback to local storage:', e);
       }
