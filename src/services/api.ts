@@ -208,9 +208,9 @@ export const ApiService = {
     const students = await this.getStudents();
     const student = students.find((s) => s.id === params.studentId);
     const rides = await this.getRides();
-
     const gasUrl = this.getGasApiUrl();
     const studentName = student?.name || '受講生徒';
+    let gasResult: { id?: string; calendarEventId?: string } | undefined;
     if (gasUrl) {
       try {
         const res = await fetch(gasUrl, {
@@ -218,22 +218,24 @@ export const ApiService = {
           body: JSON.stringify({ action: 'createReservation', studentName, ...params }),
         });
         const json = await res.json();
-        if (json.success) return json.data;
+        if (json.success) {
+          gasResult = json.data;
+        }
       } catch (e) {
         console.warn('GAS API connection failed, fallback to local storage:', e);
       }
     }
 
     const newRide: RideReservation = {
-      id: `RIDE-${Date.now().toString().slice(-5)}`,
+      id: gasResult?.id || `RIDE-${Date.now().toString().slice(-5)}`,
       studentId: params.studentId,
-      studentName: student?.name || '不明な生徒',
+      studentName: studentName,
       rideDate: params.rideDate,
       rideTime: params.rideTime,
       rideType: params.rideType,
       pickupLocation: params.pickupLocation,
       status: 'scheduled',
-      calendarEventId: `cal-${Date.now()}`,
+      calendarEventId: gasResult?.calendarEventId || `cal-${Date.now()}`,
       note: params.note || '',
       reservedBy: params.reservedBy,
     };
