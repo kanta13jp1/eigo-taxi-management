@@ -149,35 +149,53 @@ async function run() {
           <td><span class="badge-cat">テスト検証</span></td>
           <td><strong>受入シナリオテスト仕様書 (Excel版)</strong></td>
           <td>Excel (.xlsx)</td>
-          <td>全ユーザー操作28項目の合否判定（OK/NG）・実施日・確認事項を管理できるチェックリスト（GSS対応）。</td>
+          <td>全28項目の合否判定（OK/NG）・客観的証跡画像ファイル名・詳細実行ログを完備したチェックリスト。</td>
           <td>小林様、開発者</td>
-          <td class="center"><span class="badge-done">Pass</span></td>
+          <td class="center"><span class="badge-done">Pass 100%</span></td>
         </tr>
         <tr>
           <td class="center">10</td>
           <td><span class="badge-cat">テスト検証</span></td>
           <td><strong>受入シナリオテスト仕様書 (PDF版)</strong></td>
           <td>PDF (A4横)</td>
-          <td>全28テストケースの手順・期待される結果・判定基準をA4横形式でまとめた配布用PDFドキュメント。</td>
+          <td>全28テストケースの手順・判定基準・証跡画像・ログをA4横形式で美麗にまとめた受入報告PDF。</td>
           <td>全関係者</td>
-          <td class="center"><span class="badge-done">Pass</span></td>
+          <td class="center"><span class="badge-done">Pass 100%</span></td>
         </tr>
         <tr>
           <td class="center">11</td>
           <td><span class="badge-cat">テスト検証</span></td>
-          <td><strong>自動E2Eスクリーンショット検証</strong></td>
-          <td>Puppeteer</td>
-          <td>PC・スマホ両環境での全画面キャプチャー自動取得および描画・操作検証スクリプト。</td>
-          <td>開発担当</td>
-          <td class="center"><span class="badge-done">検証済</span></td>
+          <td><strong>受入テスト客観的証跡一式 (キャプチャー＆ログ)</strong></td>
+          <td>PNG 28枚 + TXT</td>
+          <td>全28項目ブラウザ実行時の実機画面キャプチャー（TC-xxx.png）およびDOMアサーションログ（test_execution_log.txt）。</td>
+          <td>全関係者・受入担当</td>
+          <td class="center"><span class="badge-done">全28件完備</span></td>
         </tr>
         <tr>
           <td class="center">12</td>
+          <td><span class="badge-cat">テスト検証</span></td>
+          <td><strong>全自動E2E証跡取得テストスイート</strong></td>
+          <td>Puppeteer</td>
+          <td>全28ケースを自動実行し、画面キャプチャーと実行ログをリアルタイム採取する検証エンジン。</td>
+          <td>開発・品質保証</td>
+          <td class="center"><span class="badge-done">検証済</span></td>
+        </tr>
+        <tr>
+          <td class="center">13</td>
           <td><span class="badge-cat">運用マニュアル</span></td>
           <td><strong>Google連携 導入4ステップガイド</strong></td>
           <td>Web内蔵ガイド</td>
           <td>スプレッドシート作成からGASデプロイ、WebアプリURL貼り付けまでの手順を画面内に完備。</td>
           <td>Mauro・Brenda先生、小林様</td>
+          <td class="center"><span class="badge-done">完了</span></td>
+        </tr>
+        <tr>
+          <td class="center">14</td>
+          <td><span class="badge-cat">運用マニュアル</span></td>
+          <td><strong>システム管理者・利用者運用手引書</strong></td>
+          <td>Markdown / Docs</td>
+          <td>日常の送迎受付、チケット追加チャージ、急な予定変更・キャンセル、トラブル対応手順。</td>
+          <td>Mauro・Brenda先生、保護者</td>
           <td class="center"><span class="badge-done">完了</span></td>
         </tr>
       </tbody>
@@ -232,10 +250,12 @@ async function run() {
 | **6** | バックエンド | **Googleカレンダー連動機能** | Calendar API | 予約確定時に「🚗【送迎】生徒名」の予定を自動作成、キャンセル時に自動削除する連動ロジック。 | Mauro・Brenda先生 | **完了** |
 | **7** | 設計仕様書 | **画面デザイン仕様書 (PDF版)** | PDF (A4横) | 全10画面×PC版・スマホ版の【実機スクリーンショット計20枚】を収録したビジュアルUI/UXデザイン仕様書。 | 全関係者 | **完了** |
 | **8** | 設計仕様書 | **画面デザイン仕様書 (Markdown版)** | Markdown (.md) | デザインコンセプト、カラーパレット、レスポンシブ設計要件、ヒアリング要件反映一覧の原本ドキュメント。 | 開発・保守担当 | **完了** |
-| **9** | テスト検証 | **受入シナリオテスト仕様書 (Excel版)** | Excel (.xlsx) | 保護者ポータル・先生画面・Google連携・レスポンシブの全28項目テストマトリクス（合否チェックリスト付・GSS対応）。 | 小林様、開発者 | **Pass** |
-| **10**| テスト検証 | **受入シナリオテスト仕様書 (PDF版)** | PDF (A4横) | 全28テストケースの手順・期待される結果・判定基準をA4横形式でまとめた配布用PDFドキュメント。 | 全関係者 | **Pass** |
-| **11**| テスト検証 | **自動E2Eスクリーンショット検証** | Puppeteer | PC・スマホ両解像度での全画面キャプチャー自動取得および描画・操作検証スクリプト。 | 開発担当 | **検証済** |
-| **12**| 運用マニュアル | **Google連携 導入4ステップガイド** | Web内蔵ガイド | スプレッドシート作成からGASデプロイ、WebアプリURL貼り付けまでの手順を画面内に完備。 | 先生、小林様 | **完了** |
+| **9** | テスト検証 | **受入シナリオテスト仕様書 (Excel版)** | Excel (.xlsx) | 保護者ポータル・先生画面・Google連携・レスポンシブの全28項目テストマトリクス（合否・証跡画像名・実行ログ付・GSS対応）。 | 小林様、開発者 | **Pass 100%** |
+| **10**| テスト検証 | **受入シナリオテスト仕様書 (PDF版)** | PDF (A4横) | 全28テストケースの手順・判定基準・証跡画像・ログをA4横形式で美麗にまとめた受入報告PDF。 | 全関係者 | **Pass 100%** |
+| **11**| テスト検証 | **受入テスト客観的証跡一式 (キャプチャー＆ログ)** | PNG 28枚 + TXT | 全28項目ブラウザ実行時の実機画面キャプチャー（TC-xxx.png）およびDOMアサーションログ（test_execution_log.txt）。 | 全関係者・受入担当 | **全28件完備** |
+| **12**| テスト検証 | **全自動E2E証跡取得テストスイート** | Puppeteer | 全28ケースを自動実行し、画面キャプチャーと実行ログをリアルタイム採取する検証エンジン。 | 開発・品質保証 | **検証済** |
+| **13**| 運用マニュアル | **Google連携 導入4ステップガイド** | Web内蔵ガイド | スプレッドシート作成からGASデプロイ、WebアプリURL貼り付けまでの手順を画面内に完備。 | 先生、小林様 | **完了** |
+| **14**| 運用マニュアル | **システム管理者・利用者運用手引書** | Markdown / Docs | 日常の送迎受付、チケット追加チャージ、急な予定変更・キャンセル、トラブル対応手順。 | 先生、保護者 | **完了** |
 
 ---
 
