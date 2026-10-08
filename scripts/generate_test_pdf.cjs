@@ -30,6 +30,7 @@ async function run() {
       tr:nth-child(even) { background: #f8fafc; }
       .center { text-align: center; }
       .badge-ok { background: #ecfdf5; color: #059669; font-weight: bold; border-radius: 4px; padding: 2px 5px; display: inline-block; font-size: 9px; }
+      .badge-pending { background: #fef3c7; color: #d97706; font-weight: bold; border-radius: 4px; padding: 2px 5px; display: inline-block; font-size: 8.5px; }
       .badge-file { font-family: Consolas, monospace; background: #e0f2fe; color: #0369a1; padding: 2px 4px; border-radius: 3px; font-size: 8.5px; font-weight: bold; }
       .cat-title { font-size: 11px; font-weight: bold; color: #0f172a; margin: 12px 0 6px 0; border-left: 3px solid #059669; padding-left: 6px; }
       .page-break { page-break-before: always; }
@@ -38,16 +39,16 @@ async function run() {
   <body>
     <div class="header">
       <div>
-        <h1>Mauro & Brenda Taxi Link 受入テスト仕様書 ＆ 全項目客観的証跡報告書</h1>
-        <div class="meta">対象URL: https://kanta13jp1.github.io/eigo-taxi-management/ | 実施日: 2026年10月08日 | 実施方式: Puppeteer E2E 自動ブラウザ実行</div>
+        <h1>Mauro & Brenda Taxi Link 受入テスト仕様書 ＆ 手動受入検証管理表</h1>
+        <div class="meta">対象URL: https://kanta13jp1.github.io/eigo-taxi-management/ | 実施日: 2026年10月08日 | 検証方式: Web自動E2E 22件 ＋ Google実機手動受入 6件</div>
       </div>
-      <div class="meta">総合評価: <strong style="color:#059669; font-size:11px;">28/28件 全項目合格 (Pass 100%)</strong></div>
+      <div class="meta">総合評価: <strong style="color:#059669; font-size:11px;">Web機能 22件合格</strong> / <strong style="color:#d97706; font-size:11px;">Google連携 6件手動受入検証中</strong></div>
     </div>
 
     <div class="summary-box">
       <strong>【受入検証および証跡サマリー】</strong><br>
-      全28テストケースについて、公開本番Web環境に対してPuppeteerによるブラウザ自動操作・DOMアサーション・ダイアログ処理を実行しました。
-      全件について**「操作実施時の画面キャプチャー（docs/evidence/TC-xxx.png）」**および**「タイムスタンプ付き実行ログ（docs/evidence/test_execution_log.txt）」**を1件の漏れもなく取得・保存完了しています。
+      ・<strong>Web基本機能（22項目）</strong>: 本番環境に対しPuppeteerによるブラウザ自動E2Eテストを実行し、全22件の画面キャプチャー（docs/evidence/）および詳細ログを取得して100%合格を確認済。<br>
+      ・<strong>Google実機連携（6項目）</strong>: 実在するGoogleアカウント（カレンダー・スプレッドシート）への反映確認は、同梱の『Google連携手動受入検証手順書』に基づき利用者が手動実施し、その画面証跡（4画面）の取得・確認をもって最終合格（Pass）となります。
     </div>
 
     <div class="cat-title">▍カテゴリ 1: 送迎利用者（生徒・保護者ポータル）の操作（9件 PASS）</div>
@@ -99,18 +100,18 @@ async function run() {
       </tbody>
     </table>
 
-    <div class="cat-title">▍カテゴリ 4: Google連携（GAS・スプレッドシート・カレンダー）（6件 PASS）</div>
+    <div class="cat-title">▍カテゴリ 4: Google連携（スプレッドシート・カレンダー）（6件 手動受入検証中）</div>
     <table>
       <thead>
-        <tr><th style="width:45px;" class="center">ID</th><th style="width:90px;">テストケース名</th><th style="width:110px;">操作手順</th><th>期待される結果（合格基準）</th><th style="width:30px;" class="center">判定</th><th style="width:140px;">客観的証跡画像</th><th>E2E実行ログ詳細</th></tr>
+        <tr><th style="width:45px;" class="center">ID</th><th style="width:90px;">テストケース名</th><th style="width:110px;">操作手順</th><th>期待される結果（合格基準）</th><th style="width:65px;" class="center">判定</th><th style="width:120px;">合格に必要な証跡</th><th>E2E実行ログ / 受入確認詳細</th></tr>
       </thead>
       <tbody>
-        <tr><td class="center">TC-G01</td><td>GASコード表示コピー</td><td>「スクリプトをコピー」クリック</td><td>クリップボードにGASスクリプト全文コピー</td><td class="center"><span class="badge-ok">OK</span></td><td><span class="badge-file">TC-G01_gas_code_view.png</span></td><td>GASコード表示およびコピー機能を確認</td></tr>
-        <tr><td class="center">TC-G02</td><td>シート初期化ロジック</td><td>initSpreadsheet定義を検証</td><td>生徒台帳・送迎予定履歴・購入履歴の3シート作成</td><td class="center"><span class="badge-ok">OK</span></td><td><span class="badge-file">TC-G02_init_sheets_logic.png</span></td><td>3シート初期化関数の定義を確認</td></tr>
-        <tr><td class="center">TC-G03</td><td>GAS URL設定・保存</td><td>GAS WebアプリURLを保存</td><td>LocalStorage保存および成功メッセージ</td><td class="center"><span class="badge-ok">OK</span></td><td><span class="badge-file">TC-G03_gas_url_saved.png</span></td><td>URL設定保存および緑色フィードバック確認</td></tr>
-        <tr><td class="center">TC-G04</td><td>カレンダー自動登録</td><td>CalendarApp連携コード検証</td><td>『🚗【送迎】生徒名』の予定自動作成</td><td class="center"><span class="badge-ok">OK</span></td><td><span class="badge-file">TC-G04_calendar_sync_logic.png</span></td><td>予定自動作成（createEvent）ロジック確認</td></tr>
-        <tr><td class="center">TC-G05</td><td>カレンダー自動削除</td><td>cancelReservationコード検証</td><td>キャンセル時deleteEvent()で予定削除</td><td class="center"><span class="badge-ok">OK</span></td><td><span class="badge-file">TC-G05_calendar_delete_logic.png</span></td><td>キャンセル時予定削除ロジック確認</td></tr>
-        <tr><td class="center">TC-G06</td><td>自動フォールバック</td><td>GAS未接続で画面操作</td><td>アプリ停止せずLocalStorageで継続稼働</td><td class="center"><span class="badge-ok">OK</span></td><td><span class="badge-file">TC-G06_fallback_handling.png</span></td><td>オフライン時フォールバック動作を確認</td></tr>
+        <tr><td class="center">TC-G01</td><td>GASコード表示コピー</td><td>「スクリプトをコピー」クリック</td><td>クリップボードにGASスクリプト全文コピー</td><td class="center"><span class="badge-pending">手動確認中</span></td><td>TC-G01_gas_code_view.png</td><td>Web画面コピー機能は自動確認済。Apps Script貼付を手動確認</td></tr>
+        <tr><td class="center">TC-G02</td><td>シート自動初期化</td><td>initSpreadsheet定義を手動実行</td><td>生徒台帳・送迎予定履歴・購入履歴の3シート作成</td><td class="center"><span class="badge-pending">手動確認中</span></td><td>【証跡1】3シート全景</td><td>手順書Step 2に基づき実施。3シート生成画面のキャプチャーでOK</td></tr>
+        <tr><td class="center">TC-G03</td><td>GAS URL設定・保存</td><td>GAS WebアプリURLを保存</td><td>LocalStorage保存および成功メッセージ</td><td class="center"><span class="badge-pending">手動確認中</span></td><td>TC-G03_gas_url_saved.png</td><td>Web画面URL保存は自動確認済。発行実URLの接続テストを手動確認</td></tr>
+        <tr><td class="center">TC-G04</td><td>カレンダー予定登録</td><td>Webアプリからテスト予約登録</td><td>『🚗【送迎】生徒名』の予定作成＆行追加</td><td class="center"><span class="badge-pending">手動確認中</span></td><td>【証跡2&3】行追加＆カレンダー</td><td>手順書Step 4に基づき実施。カレンダー＆シート行追加キャプチャーでOK</td></tr>
+        <tr><td class="center">TC-G05</td><td>カレンダー予定削除</td><td>Webアプリからテスト予約キャンセル</td><td>カレンダー予定自動削除＆cancelled更新</td><td class="center"><span class="badge-pending">手動確認中</span></td><td>【証跡4】予定消去＆更新</td><td>手順書Step 5に基づき実施。予定削除後の画面キャプチャーでOK</td></tr>
+        <tr><td class="center">TC-G06</td><td>自動フォールバック</td><td>GAS未接続で画面操作</td><td>アプリ停止せずLocalStorageで継続稼働</td><td class="center"><span class="badge-ok">OK</span></td><td>TC-G06_fallback_handling.png</td><td>自動E2E検証完了。Fail-Openにより画面停止しないことを実証済</td></tr>
       </tbody>
     </table>
 
