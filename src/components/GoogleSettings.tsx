@@ -62,6 +62,41 @@ function doGet(e) {
       .setMimeType(ContentService.MimeType.JSON);
   }
 
+  if (action === "getRides") {
+    const rideSheet = ss.getSheetByName("送迎予定履歴");
+    if (!rideSheet) return ContentService.createTextOutput(JSON.stringify({ success: true, data: [] })).setMimeType(ContentService.MimeType.JSON);
+    const data = rideSheet.getDataRange().getValues();
+    const rides = [];
+    for (let i = 1; i < data.length; i++) {
+      if (data[i][0]) {
+        let rDate = data[i][3];
+        if (rDate instanceof Date) {
+          rDate = Utilities.formatDate(rDate, "JST", "yyyy-MM-dd");
+        }
+        let rTime = data[i][4];
+        if (rTime instanceof Date) {
+          rTime = Utilities.formatDate(rTime, "JST", "HH:mm");
+        }
+        rides.push({
+          id: String(data[i][0]),
+          studentId: String(data[i][1]),
+          studentName: String(data[i][2]),
+          rideDate: String(rDate),
+          rideTime: String(rTime),
+          rideType: String(data[i][5]),
+          pickupLocation: String(data[i][6]),
+          status: String(data[i][7]),
+          calendarEventId: String(data[i][8]),
+          reservedBy: String(data[i][9]),
+          note: String(data[i][10] || ""),
+          completedAt: data[i][11] ? String(data[i][11]) : undefined
+        });
+      }
+    }
+    return ContentService.createTextOutput(JSON.stringify({ success: true, data: rides }))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
+
   return ContentService.createTextOutput(JSON.stringify({ success: true, message: "Eigo Taxi API Ready" }))
     .setMimeType(ContentService.MimeType.JSON);
 }
@@ -90,9 +125,9 @@ function doPost(e) {
 
       // 2. スプレッドシートへ行追加
       const rideSheet = ss.getSheetByName("送迎予定履歴");
-      const rideId = "RIDE-" + new Date().getTime();
+      const rideId = body.rideId || ("RIDE-" + new Date().getTime());
       rideSheet.appendRow([
-        rideId, body.studentId, body.studentName, body.rideDate, body.rideTime,
+        rideId, body.studentId, name, body.rideDate, body.rideTime,
         body.rideType, body.pickupLocation, "scheduled", event.getId(), body.reservedBy, body.note || "", ""
       ]);
 
@@ -101,15 +136,24 @@ function doPost(e) {
     }
 
     if (action === "cancelReservation") {
-      // カレンダーイベントの削除
+      // カレンダーイベントの削除 & スプレッドシート更新
       const rideSheet = ss.getSheetByName("送迎予定履歴");
       const data = rideSheet.getDataRange().getValues();
       for (let i = 1; i < data.length; i++) {
-        if (data[i][0] === body.rideId) {
+        // ID一致、または (日付 & 時間 & 生徒名/ID) 一致で確実に特定
+        const idMatch = body.rideId && String(data[i][0]) === String(body.rideId);
+        const detailMatch = body.rideDate && body.rideTime && 
+          String(data[i][3]).indexOf(body.rideDate) !== -1 && 
+          String(data[i][4]).indexOf(body.rideTime) !== -1;
+        
+        if (idMatch || detailMatch) {
           const calId = data[i][8];
           if (calId) {
             try {
-              CalendarApp.getDefaultCalendar().getEventById(calId).deleteEvent();
+              const event = CalendarApp.getDefaultCalendar().getEventById(calId);
+              if (event) {
+                event.deleteEvent();
+              }
             } catch (err) {}
           }
           rideSheet.getRange(i + 1, 8).setValue("cancelled");

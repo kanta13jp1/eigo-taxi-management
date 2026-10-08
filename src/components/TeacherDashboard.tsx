@@ -404,8 +404,12 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
                                   完了
                                 </button>
                                 <button
-                                  onClick={() => onCancelRide(ride.id)}
-                                  className="text-xs text-rose-600 hover:bg-rose-50 py-1 px-2 rounded-lg"
+                                  onClick={() => {
+                                    if (window.confirm('この送迎予定をキャンセルしますか？（Googleカレンダーおよびスプレッドシートからも自動で更新・削除されます）')) {
+                                      onCancelRide(ride.id);
+                                    }
+                                  }}
+                                  className="text-xs text-rose-600 hover:bg-rose-50 py-1 px-2 rounded-lg font-bold transition-colors"
                                 >
                                   取消
                                 </button>

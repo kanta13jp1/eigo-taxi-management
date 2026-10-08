@@ -210,12 +210,19 @@ export const ApiService = {
     const rides = await this.getRides();
     const gasUrl = this.getGasApiUrl();
     const studentName = student?.name || '受講生徒';
+    const generatedRideId = `RIDE-${Date.now()}`;
     let gasResult: { id?: string; calendarEventId?: string } | undefined;
     if (gasUrl) {
       try {
         const res = await fetch(gasUrl, {
           method: 'POST',
-          body: JSON.stringify({ action: 'createReservation', studentName, ...params }),
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body: JSON.stringify({
+            action: 'createReservation',
+            rideId: generatedRideId,
+            studentName,
+            ...params,
+          }),
         });
         const json = await res.json();
         if (json.success) {
@@ -227,7 +234,7 @@ export const ApiService = {
     }
 
     const newRide: RideReservation = {
-      id: gasResult?.id || `RIDE-${Date.now().toString().slice(-5)}`,
+      id: gasResult?.id || generatedRideId,
       studentId: params.studentId,
       studentName: studentName,
       rideDate: params.rideDate,
@@ -250,16 +257,26 @@ export const ApiService = {
     const rides = await this.getRides();
     const index = rides.findIndex((r) => r.id === rideId);
     if (index === -1) return false;
+    const targetRide = rides[index];
 
     const gasUrl = this.getGasApiUrl();
     if (gasUrl) {
       try {
         await fetch(gasUrl, {
           method: 'POST',
-          body: JSON.stringify({ action: 'cancelReservation', rideId }),
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body: JSON.stringify({
+            action: 'cancelReservation',
+            rideId,
+            studentId: targetRide.studentId,
+            studentName: targetRide.studentName,
+            rideDate: targetRide.rideDate,
+            rideTime: targetRide.rideTime,
+            calendarEventId: targetRide.calendarEventId,
+          }),
         });
       } catch (e) {
-        console.warn('GAS API connection failed:', e);
+        console.warn('GAS API cancel failed:', e);
       }
     }
 
