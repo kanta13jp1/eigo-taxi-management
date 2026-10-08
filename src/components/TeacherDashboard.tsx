@@ -36,20 +36,23 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
   onOpenAddTicket,
   onOpenAddStudent,
 }) => {
+  const safeStudents = Array.isArray(students) ? students : [];
+  const safeRides = Array.isArray(rides) ? rides : [];
+
   const [filterStatus, setFilterStatus] = useState<string>('all');
   const [activeTab, setActiveTab] = useState<'today' | 'allRides' | 'students'>('today');
 
   // 今日
   const todayStr = new Date().toISOString().split('T')[0];
-  const todayRides = rides.filter((r) => r.rideDate === todayStr);
+  const todayRides = safeRides.filter((r) => r.rideDate === todayStr);
   const todayPendingRides = todayRides.filter((r) => r.status === 'scheduled');
   const todayCompletedRides = todayRides.filter((r) => r.status === 'completed');
 
   // チケット残少・ゼロの生徒
-  const lowTicketStudents = students.filter((s) => s.ticketBalance <= 1);
+  const lowTicketStudents = safeStudents.filter((s) => s.ticketBalance <= 1);
 
   // フィルタ済み送迎
-  const filteredRides = rides.filter((r) => {
+  const filteredRides = safeRides.filter((r) => {
     if (filterStatus === 'all') return true;
     return r.status === filterStatus;
   });

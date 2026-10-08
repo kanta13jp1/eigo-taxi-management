@@ -138,7 +138,7 @@ export const ApiService = {
       try {
         const res = await fetch(`${gasUrl}?action=getStudents`);
         const json = await res.json();
-        if (json.success) return json.data;
+        if (json.success && Array.isArray(json.data)) return json.data;
       } catch (e) {
         console.warn('GAS API connection failed, fallback to local storage:', e);
       }
@@ -172,7 +172,7 @@ export const ApiService = {
       try {
         const res = await fetch(`${gasUrl}?action=getRides`);
         const json = await res.json();
-        if (json.success) return json.data;
+        if (json.success && Array.isArray(json.data)) return json.data;
       } catch (e) {
         console.warn('GAS API connection failed, fallback to local storage:', e);
       }

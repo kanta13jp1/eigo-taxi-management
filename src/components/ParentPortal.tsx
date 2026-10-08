@@ -25,14 +25,17 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({
   onOpenAddRide,
   onCancelRide,
 }) => {
+  const safeStudents = Array.isArray(students) ? students : [];
+  const safeRides = Array.isArray(rides) ? rides : [];
+
   const [selectedStudentId, setSelectedStudentId] = useState<string>(
-    students[0]?.id || ''
+    safeStudents[0]?.id || ''
   );
 
-  const student = students.find((s) => s.id === selectedStudentId);
+  const student = safeStudents.find((s) => s.id === selectedStudentId);
 
   // この生徒の送迎データ
-  const studentRides = rides.filter((r) => r.studentId === selectedStudentId);
+  const studentRides = safeRides.filter((r) => r.studentId === selectedStudentId);
   const upcomingRides = studentRides.filter((r) => r.status === 'scheduled');
   const pastRides = studentRides.filter((r) => r.status !== 'scheduled');
 
