@@ -79,7 +79,9 @@ function doPost(e) {
       const startTime = new Date(body.rideDate + "T" + body.rideTime + ":00");
       const endTime = new Date(startTime.getTime() + 30 * 60000); // 30分枠
       
-      const eventTitle = "【送迎】" + body.studentName + " (" + body.rideType + ")";
+      const typeLabel = body.rideType === "pickup" ? "行き" : (body.rideType === "dropoff" ? "帰り" : "送迎");
+      const name = body.studentName || "生徒";
+      const eventTitle = "🚗【送迎】" + name + " (" + typeLabel + ")";
       const eventDesc = "送迎場所: " + body.pickupLocation + "\\nメモ: " + (body.note || "なし");
       const event = cal.createEvent(eventTitle, startTime, endTime, {
         description: eventDesc,

@@ -210,11 +210,12 @@ export const ApiService = {
     const rides = await this.getRides();
 
     const gasUrl = this.getGasApiUrl();
+    const studentName = student?.name || '受講生徒';
     if (gasUrl) {
       try {
         const res = await fetch(gasUrl, {
           method: 'POST',
-          body: JSON.stringify({ action: 'createReservation', ...params }),
+          body: JSON.stringify({ action: 'createReservation', studentName, ...params }),
         });
         const json = await res.json();
         if (json.success) return json.data;
