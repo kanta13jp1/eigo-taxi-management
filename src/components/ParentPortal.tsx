@@ -95,17 +95,20 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({
                 </div>
               </div>
 
-              {student.ticketBalance <= 1 ? (
-                <div className="mt-4 bg-amber-400/20 border border-amber-300/40 rounded-xl p-2.5 flex items-center gap-2 text-xs text-amber-100">
-                  <AlertCircle className="w-4 h-4 text-amber-300 shrink-0" />
-                  <span>
-                    チケットが残りわずかです（残り{student.ticketBalance}回）。次回のレッスン時に先生へ購入をご相談ください。
-                  </span>
+              {student.ticketBalance <= 2 ? (
+                <div className="mt-4 bg-amber-500/25 border border-amber-300/50 rounded-xl p-3 flex items-start gap-2.5 text-xs text-amber-100">
+                  <AlertCircle className="w-5 h-5 text-amber-300 shrink-0 mt-0.5" />
+                  <div>
+                    <span className="font-bold text-amber-200 block text-sm">
+                      ⚠️ チケットが無くなりそうです（残り{student.ticketBalance}回）
+                    </span>
+                    <span>Mauro・Brenda に連絡してね！ 次回のチケットをご用意します。</span>
+                  </div>
                 </div>
               ) : (
-                <p className="mt-4 text-xs text-emerald-100/80 flex items-center gap-1">
-                  <Sparkles className="w-3.5 h-3.5 text-amber-300" />
-                  チケットは当日の送迎完了後に自動で消化されます。キャンセル時に無駄に引かれることはありません。
+                <p className="mt-4 text-xs text-emerald-100/90 flex items-center gap-1.5">
+                  <Sparkles className="w-4 h-4 text-amber-300 shrink-0" />
+                  <span>片道1回につきチケット1枚消費です。当日の送迎完了後に引かれるため、キャンセル時も安心です。</span>
                 </p>
               )}
             </div>

@@ -16,8 +16,8 @@ export const Navbar: React.FC<NavbarProps> = ({ currentTab, setCurrentTab }) => 
             <Car className="w-5 h-5" />
           </div>
           <div>
-            <h1 className="text-lg font-bold text-slate-800 leading-tight">Eigo Taxi Link</h1>
-            <p className="text-xs text-slate-500 font-medium">英語教室 送迎チケット管理</p>
+            <h1 className="text-lg font-bold text-slate-800 leading-tight">Mauro & Brenda Taxi Link</h1>
+            <p className="text-xs text-slate-500 font-medium">英語教室 送迎チケット管理システム</p>
           </div>
         </div>
 
@@ -32,7 +32,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentTab, setCurrentTab }) => 
             }`}
           >
             <ShieldCheck className="w-4 h-4" />
-            先生用管理画面
+            管理者用 (Mauro・Brenda)
           </button>
           <button
             onClick={() => setCurrentTab('parent')}
@@ -43,7 +43,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentTab, setCurrentTab }) => 
             }`}
           >
             <UserCheck className="w-4 h-4" />
-            保護者ポータル
+            送迎利用者用 (生徒・保護者)
           </button>
           <button
             onClick={() => setCurrentTab('settings')}

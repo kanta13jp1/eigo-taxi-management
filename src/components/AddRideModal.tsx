@@ -156,7 +156,10 @@ export const AddRideModal: React.FC<AddRideModalProps> = ({
 
           {/* 送迎タイプ */}
           <div>
-            <label className="block text-xs font-semibold text-slate-600 mb-1.5">送迎区分</label>
+            <label className="block text-xs font-semibold text-slate-600 mb-1.5 flex items-center justify-between">
+              <span>送迎区分（フレックス予約）</span>
+              <span className="text-[11px] text-emerald-600 font-medium">片道1回＝チケット1枚</span>
+            </label>
             <div className="grid grid-cols-3 gap-2">
               <label
                 className={`flex flex-col items-center justify-center p-2.5 rounded-xl border text-xs cursor-pointer transition-all ${
@@ -174,7 +177,7 @@ export const AddRideModal: React.FC<AddRideModalProps> = ({
                   className="sr-only"
                 />
                 <span>行き（お迎え）</span>
-                <span className="text-[10px] text-slate-400 mt-0.5">教室へ</span>
+                <span className="text-[10px] text-emerald-600 font-semibold mt-0.5">チケット1枚</span>
               </label>
 
               <label
@@ -193,7 +196,7 @@ export const AddRideModal: React.FC<AddRideModalProps> = ({
                   className="sr-only"
                 />
                 <span>帰り（送り）</span>
-                <span className="text-[10px] text-slate-400 mt-0.5">自宅へ</span>
+                <span className="text-[10px] text-emerald-600 font-semibold mt-0.5">チケット1枚</span>
               </label>
 
               <label
@@ -212,7 +215,7 @@ export const AddRideModal: React.FC<AddRideModalProps> = ({
                   className="sr-only"
                 />
                 <span>往復</span>
-                <span className="text-[10px] text-slate-400 mt-0.5">行き＋帰り</span>
+                <span className="text-[10px] text-amber-600 font-semibold mt-0.5">チケット2枚</span>
               </label>
             </div>
           </div>

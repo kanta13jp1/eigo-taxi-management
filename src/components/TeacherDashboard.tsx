@@ -67,6 +67,17 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
 
   return (
     <div className="space-y-6">
+      {/* 管理者バナー */}
+      <div className="bg-emerald-50/80 border border-emerald-200 rounded-2xl p-3.5 px-4 flex flex-col sm:flex-row sm:items-center justify-between gap-2 shadow-xs">
+        <div className="flex items-center gap-2 text-emerald-900 font-bold text-sm">
+          <span className="bg-emerald-600 text-white text-[10px] font-black px-2 py-0.5 rounded-md">管理者画面</span>
+          <span>Mauro・Brenda 先生用管理ダッシュボード</span>
+        </div>
+        <p className="text-xs text-emerald-700 font-medium">
+          ※完全予約制対応：送迎完了時に「送迎完了（1回消費）」を押すと片道1枚分が自動消化されます
+        </p>
+      </div>
+
       {/* 上部サマリーカード */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
         <div className="bg-white p-4 rounded-2xl border border-slate-200/80 shadow-xs flex items-center justify-between">
