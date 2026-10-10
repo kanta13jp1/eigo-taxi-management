@@ -8,6 +8,7 @@ import { GoogleSettings } from './components/GoogleSettings';
 import { AddRideModal } from './components/AddRideModal';
 import { AddTicketModal } from './components/AddTicketModal';
 import { AddStudentModal } from './components/AddStudentModal';
+import { TermsModal } from './components/TermsModal';
 
 export function App() {
   const [currentTab, setCurrentTab] = useState<'teacher' | 'parent' | 'settings'>('teacher');
@@ -24,6 +25,13 @@ export function App() {
   const [addTicketStudentId, setAddTicketStudentId] = useState<string | undefined>();
 
   const [isAddStudentOpen, setIsAddStudentOpen] = useState(false);
+  const [isTermsOpen, setIsTermsOpen] = useState(false);
+  const [termsTab, setTermsTab] = useState<'terms' | 'privacy' | 'disclaimer'>('terms');
+
+  const openTerms = (tab: 'terms' | 'privacy' | 'disclaimer') => {
+    setTermsTab(tab);
+    setIsTermsOpen(true);
+  };
 
   // トースト通知
   const [toastMessage, setToastMessage] = useState<string | null>(null);
@@ -162,6 +170,37 @@ export function App() {
         )}
       </main>
 
+      {/* フッター */}
+      <footer className="mt-12 py-8 border-t border-slate-200/80 bg-white/60 backdrop-blur-sm text-center text-xs text-slate-500">
+        <div className="max-w-5xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="font-medium text-slate-600">
+            © 2026 Mauro & Brenda English School. All rights reserved.
+          </p>
+          <div className="flex items-center gap-4 text-xs font-medium">
+            <button
+              onClick={() => openTerms('terms')}
+              className="text-slate-500 hover:text-indigo-600 transition-colors underline-offset-4 hover:underline"
+            >
+              利用規約
+            </button>
+            <span className="text-slate-300">|</span>
+            <button
+              onClick={() => openTerms('privacy')}
+              className="text-slate-500 hover:text-indigo-600 transition-colors underline-offset-4 hover:underline"
+            >
+              個人情報の取扱い
+            </button>
+            <span className="text-slate-300">|</span>
+            <button
+              onClick={() => openTerms('disclaimer')}
+              className="text-slate-500 hover:text-indigo-600 transition-colors underline-offset-4 hover:underline"
+            >
+              免責事項
+            </button>
+          </div>
+        </div>
+      </footer>
+
       {/* トースト通知 */}
       {toastMessage && (
         <div className="fixed bottom-6 right-6 z-50 bg-slate-900 text-white text-xs sm:text-sm font-semibold px-4 py-3 rounded-2xl shadow-xl flex items-center gap-2 animate-in fade-in slide-in-from-bottom-5">
@@ -191,6 +230,12 @@ export function App() {
         isOpen={isAddStudentOpen}
         onClose={() => setIsAddStudentOpen(false)}
         onSubmit={handleAddStudent}
+      />
+
+      <TermsModal
+        isOpen={isTermsOpen}
+        onClose={() => setIsTermsOpen(false)}
+        initialTab={termsTab}
       />
     </div>
   );

@@ -383,4 +383,11 @@ export const ApiService = {
     localStorage.removeItem(STORAGE_KEYS.RIDES);
     localStorage.removeItem(STORAGE_KEYS.PURCHASES);
   },
+
+  // 本番用完全パージ（すべてのデモ・テストデータを消去して空にする）
+  purgeAllData(): void {
+    setStored(STORAGE_KEYS.STUDENTS, []);
+    setStored(STORAGE_KEYS.RIDES, []);
+    setStored(STORAGE_KEYS.PURCHASES, []);
+  },
 };

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ApiService } from '../services/api';
-import { Check, Copy, RefreshCw, Database, Calendar, Shield } from 'lucide-react';
+import { Check, Copy, RefreshCw, Database, Calendar, Shield, Trash2, AlertTriangle } from 'lucide-react';
 
 const SAMPLE_GAS_CODE = `/**
  * 英語教室 送迎チケット管理 Google Apps Script (GAS)
@@ -194,8 +194,15 @@ export const GoogleSettings: React.FC = () => {
   };
 
   const handleReset = () => {
-    if (window.confirm('モックデータを初期状態にリセットしますか？')) {
+    if (window.confirm('モックデータを初期状態（デモ生徒3名）にリセットしますか？')) {
       ApiService.resetToMock();
+      window.location.reload();
+    }
+  };
+
+  const handlePurge = () => {
+    if (window.confirm('【本番開始前クレンジング】\nすべてのデモデータ（生徒・送迎履歴・チケット購入履歴）を完全に消去して空にしますか？\n※本番の生徒データを新規登録する前に実行してください。')) {
+      ApiService.purgeAllData();
       window.location.reload();
     }
   };
@@ -298,21 +305,42 @@ export const GoogleSettings: React.FC = () => {
         </div>
       </div>
 
-      {/* デモ用リセット */}
-      <div className="bg-slate-100 rounded-2xl p-4 border border-slate-200 flex items-center justify-between">
-        <div>
-          <p className="text-xs font-bold text-slate-700">デモデータの初期化</p>
-          <p className="text-[11px] text-slate-500">
-            送迎完了やチケット追加のテスト内容をリセットして初期状態に戻します。
-          </p>
+      {/* データ管理 & リセット */}
+      <div className="bg-slate-100 rounded-2xl p-5 border border-slate-200 space-y-4">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <div>
+            <p className="text-xs font-bold text-slate-700">デモデータの初期化</p>
+            <p className="text-[11px] text-slate-500">
+              送迎完了やチケット追加のテスト内容をリセットして初期デモ状態（生徒3名）に戻します。
+            </p>
+          </div>
+          <button
+            onClick={handleReset}
+            className="inline-flex items-center gap-1.5 text-xs text-slate-600 hover:text-slate-900 bg-white border border-slate-300 px-3 py-1.5 rounded-xl font-medium transition-colors shrink-0"
+          >
+            <RefreshCw className="w-3.5 h-3.5" />
+            モック初期化
+          </button>
         </div>
-        <button
-          onClick={handleReset}
-          className="inline-flex items-center gap-1.5 text-xs text-slate-600 hover:text-slate-900 bg-white border border-slate-300 px-3 py-1.5 rounded-xl font-medium transition-colors"
-        >
-          <RefreshCw className="w-3.5 h-3.5" />
-          モック初期化
-        </button>
+
+        <div className="pt-3 border-t border-slate-200/80 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <div>
+            <p className="text-xs font-bold text-rose-700 flex items-center gap-1.5">
+              <AlertTriangle className="w-3.5 h-3.5" />
+              本番開始用：デモデータの完全消去（パージ）
+            </p>
+            <p className="text-[11px] text-slate-500">
+              すべての生徒データ・予約履歴を空にし、本番の生徒データを新規登録できるクリーンな状態にします。
+            </p>
+          </div>
+          <button
+            onClick={handlePurge}
+            className="inline-flex items-center gap-1.5 text-xs text-rose-600 hover:text-rose-700 hover:bg-rose-50 bg-white border border-rose-200 px-3 py-1.5 rounded-xl font-bold transition-colors shrink-0"
+          >
+            <Trash2 className="w-3.5 h-3.5" />
+            全データ消去
+          </button>
+        </div>
       </div>
     </div>
   );
