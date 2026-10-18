@@ -4,11 +4,12 @@
  * 機能:
  * 1. スプレッドシート初期化 (initSpreadsheet)
  * 2. 生徒台帳の同期 (getStudents)
- * 3. 送迎予定の登録 ＆ Googleカレンダー自動作成 (createReservation)
- * 4. 送迎予約のキャンセル ＆ カレンダー予定の自動削除 (cancelReservation)
- * 5. 送迎完了 ＆ チケット残数マイナス1消化 (completeRide)
- * 6. チケット購入・残数チャージ (addTickets)
- * 7. 新規生徒の追加登録 (createStudent)
+ * 3. 送迎予定の取得・日付時刻正規化 (getRides)
+ * 4. 送迎予定の登録 ＆ Googleカレンダー自動作成 (createReservation)
+ * 5. 送迎予約のキャンセル ＆ カレンダー予定の自動削除 (cancelReservation)
+ * 6. 送迎完了 ＆ チケット残数消化 (completeRide)
+ * 7. チケット購入・残数チャージ (addTickets)
+ * 8. 新規生徒の追加登録 (createStudent)
  */
 
 // 初回に一度だけ実行する初期化関数
@@ -55,38 +56,60 @@ function doGet(e) {
     const sheet = ss.getSheetByName("生徒台帳");
     if (!sheet) return jsonResponse({ success: false, error: "生徒台帳シートがありません" });
     const data = sheet.getDataRange().getValues();
-    const students = data.slice(1).map(row => ({
-      id: String(row[0]),
-      name: String(row[1]),
-      parentName: String(row[2]),
-      phone: String(row[3]),
-      address: String(row[4]),
-      pickupNote: String(row[5]),
-      ticketBalance: Number(row[6]) || 0,
-      createdAt: String(row[7])
-    }));
+    const students = [];
+    for (let i = 1; i < data.length; i++) {
+      if (data[i][0]) {
+        let createdDate = data[i][7];
+        if (createdDate instanceof Date) {
+          createdDate = Utilities.formatDate(createdDate, "JST", "yyyy-MM-dd");
+        }
+        students.push({
+          id: String(data[i][0]),
+          name: String(data[i][1]),
+          parentName: String(data[i][2] || ""),
+          phone: String(data[i][3] || ""),
+          address: String(data[i][4] || ""),
+          pickupNote: String(data[i][5] || ""),
+          ticketBalance: Number(data[i][6]) || 0,
+          createdAt: String(createdDate || "")
+        });
+      }
+    }
     return jsonResponse({ success: true, data: students });
   }
 
   // 送迎予定一覧取得
   if (action === "getRides") {
-    const sheet = ss.getSheetByName("送迎予定履歴");
-    if (!sheet) return jsonResponse({ success: false, error: "送迎予定履歴シートがありません" });
-    const data = sheet.getDataRange().getValues();
-    const rides = data.slice(1).map(row => ({
-      id: String(row[0]),
-      studentId: String(row[1]),
-      studentName: String(row[2]),
-      rideDate: String(row[3]),
-      rideTime: String(row[4]),
-      rideType: String(row[5]),
-      pickupLocation: String(row[6]),
-      status: String(row[7]),
-      calendarEventId: String(row[8]),
-      reservedBy: String(row[9]),
-      note: String(row[10]),
-      completedAt: String(row[11])
-    }));
+    const rideSheet = ss.getSheetByName("送迎予定履歴");
+    if (!rideSheet) return jsonResponse({ success: true, data: [] });
+    const data = rideSheet.getDataRange().getValues();
+    const rides = [];
+    for (let i = 1; i < data.length; i++) {
+      if (data[i][0]) {
+        let rDate = data[i][3];
+        if (rDate instanceof Date) {
+          rDate = Utilities.formatDate(rDate, "JST", "yyyy-MM-dd");
+        }
+        let rTime = data[i][4];
+        if (rTime instanceof Date) {
+          rTime = Utilities.formatDate(rTime, "JST", "HH:mm");
+        }
+        rides.push({
+          id: String(data[i][0]),
+          studentId: String(data[i][1]),
+          studentName: String(data[i][2]),
+          rideDate: String(rDate),
+          rideTime: String(rTime),
+          rideType: String(data[i][5]),
+          pickupLocation: String(data[i][6]),
+          status: String(data[i][7]),
+          calendarEventId: String(data[i][8] || ""),
+          reservedBy: String(data[i][9]),
+          note: String(data[i][10] || ""),
+          completedAt: data[i][11] ? String(data[i][11]) : undefined
+        });
+      }
+    }
     return jsonResponse({ success: true, data: rides });
   }
 
@@ -106,8 +129,10 @@ function doPost(e) {
       const startTime = new Date(body.rideDate + "T" + body.rideTime + ":00");
       const endTime = new Date(startTime.getTime() + 30 * 60000); // 30分枠
       
-      const eventTitle = "【送迎】" + body.studentName + " (" + (body.rideType === 'pickup' ? 'お迎え' : body.rideType === 'dropoff' ? '送り' : '往復') + ")";
-      const eventDesc = "送迎場所: " + body.pickupLocation + "\n連絡先/メモ: " + (body.note || "なし") + "\n予約者: " + (body.reservedBy === 'parent' ? '保護者予約' : '先生登録');
+      const typeLabel = body.rideType === "pickup" ? "お迎え" : (body.rideType === "dropoff" ? "送り" : "往復");
+      const name = body.studentName || "生徒";
+      const eventTitle = "🚗【送迎】" + name + " (" + typeLabel + ")";
+      const eventDesc = "送迎場所: " + body.pickupLocation + "\n連絡先/メモ: " + (body.note || "なし") + "\n予約者: " + (body.reservedBy === "parent" ? "保護者予約" : "先生登録");
       
       const event = cal.createEvent(eventTitle, startTime, endTime, {
         description: eventDesc,
@@ -115,9 +140,9 @@ function doPost(e) {
       });
 
       const rideSheet = ss.getSheetByName("送迎予定履歴");
-      const rideId = "RIDE-" + new Date().getTime();
+      const rideId = body.rideId || ("RIDE-" + new Date().getTime());
       rideSheet.appendRow([
-        rideId, body.studentId, body.studentName, body.rideDate, body.rideTime,
+        rideId, body.studentId, name, body.rideDate, body.rideTime,
         body.rideType, body.pickupLocation, "scheduled", event.getId(), body.reservedBy, body.note || "", ""
       ]);
 
@@ -126,7 +151,7 @@ function doPost(e) {
         data: {
           id: rideId,
           studentId: body.studentId,
-          studentName: body.studentName,
+          studentName: name,
           rideDate: body.rideDate,
           rideTime: body.rideTime,
           rideType: body.rideType,
@@ -144,11 +169,19 @@ function doPost(e) {
       const rideSheet = ss.getSheetByName("送迎予定履歴");
       const data = rideSheet.getDataRange().getValues();
       for (let i = 1; i < data.length; i++) {
-        if (String(data[i][0]) === String(body.rideId)) {
+        const idMatch = body.rideId && String(data[i][0]) === String(body.rideId);
+        const detailMatch = body.rideDate && body.rideTime &&
+          String(data[i][3]).indexOf(body.rideDate) !== -1 &&
+          String(data[i][4]).indexOf(body.rideTime) !== -1;
+
+        if (idMatch || detailMatch) {
           const calId = data[i][8];
           if (calId) {
             try {
-              CalendarApp.getDefaultCalendar().getEventById(calId).deleteEvent();
+              const event = CalendarApp.getDefaultCalendar().getEventById(calId);
+              if (event) {
+                event.deleteEvent();
+              }
             } catch (err) {
               console.warn("カレンダーイベント削除スキップ: " + err);
             }
@@ -160,7 +193,7 @@ function doPost(e) {
       return jsonResponse({ success: false, error: "該当の送迎IDが見つかりません" });
     }
 
-    // 3. 送迎完了 ＆ チケット1回分消化
+    // 3. 送迎完了 ＆ チケット消化
     if (action === "completeRide") {
       const rideSheet = ss.getSheetByName("送迎予定履歴");
       const studentSheet = ss.getSheetByName("生徒台帳");
@@ -168,19 +201,22 @@ function doPost(e) {
       const students = studentSheet.getDataRange().getValues();
 
       let targetStudentId = "";
+      let rideType = "";
       for (let i = 1; i < rides.length; i++) {
         if (String(rides[i][0]) === String(body.rideId)) {
           targetStudentId = String(rides[i][1]);
+          rideType = String(rides[i][5]);
           rideSheet.getRange(i + 1, 8).setValue("completed");
-          rideSheet.getRange(i + 1, 12).setValue(new Date().toLocaleString("ja-JP"));
+          rideSheet.getRange(i + 1, 12).setValue(Utilities.formatDate(new Date(), "JST", "yyyy/MM/dd HH:mm:ss"));
           break;
         }
       }
 
       if (!targetStudentId) return jsonResponse({ success: false, error: "送迎が見つかりません" });
 
-      // 生徒台帳の残チケット数をマイナス
-      const consumeCount = Number(body.consumeTickets) || 1;
+      // 生徒台帳の残チケット数をマイナス（往復の場合はデフォルト2枚、片道は1枚）
+      const defaultConsume = rideType === "roundtrip" ? 2 : 1;
+      const consumeCount = Number(body.consumeTickets) || defaultConsume;
       let newBalance = 0;
       for (let j = 1; j < students.length; j++) {
         if (String(students[j][0]) === targetStudentId) {
@@ -191,7 +227,7 @@ function doPost(e) {
         }
       }
 
-      return jsonResponse({ success: true, remainingBalance: newBalance });
+      return jsonResponse({ success: true, remainingBalance: newBalance, consumedTickets: consumeCount });
     }
 
     // 4. チケット追加（購入）
@@ -200,7 +236,7 @@ function doPost(e) {
       const purchaseSheet = ss.getSheetByName("チケット購入履歴");
       const students = studentSheet.getDataRange().getValues();
 
-      let targetName = "";
+      let targetName = body.studentName || "";
       let newBalance = 0;
       for (let i = 1; i < students.length; i++) {
         if (String(students[i][0]) === String(body.studentId)) {
@@ -213,9 +249,10 @@ function doPost(e) {
       }
 
       // 購入履歴記録
-      const purId = "PUR-" + new Date().getTime();
+      const purId = body.purchaseId || ("PUR-" + new Date().getTime());
+      const today = Utilities.formatDate(new Date(), "JST", "yyyy-MM-dd");
       purchaseSheet.appendRow([
-        purId, body.studentId, targetName, new Date().toISOString().split("T")[0],
+        purId, body.studentId, targetName, today,
         Number(body.ticketCount), Number(body.amount), body.note || ""
       ]);
 
@@ -226,8 +263,8 @@ function doPost(e) {
     if (action === "createStudent") {
       const studentSheet = ss.getSheetByName("生徒台帳");
       const data = studentSheet.getDataRange().getValues();
-      const newId = "STU-" + String(data.length).padStart(3, "0");
-      const today = new Date().toISOString().split("T")[0];
+      const newId = body.id || ("STU-" + String(data.length).padStart(3, "0"));
+      const today = Utilities.formatDate(new Date(), "JST", "yyyy-MM-dd");
       studentSheet.appendRow([
         newId, body.name, body.parentName || "", body.phone || "",
         body.address, body.pickupNote || "", Number(body.ticketBalance) || 0, today
@@ -238,10 +275,10 @@ function doPost(e) {
         data: {
           id: newId,
           name: body.name,
-          parentName: body.parentName,
-          phone: body.phone,
+          parentName: body.parentName || "",
+          phone: body.phone || "",
           address: body.address,
-          pickupNote: body.pickupNote,
+          pickupNote: body.pickupNote || "",
           ticketBalance: Number(body.ticketBalance) || 0,
           createdAt: today
         }

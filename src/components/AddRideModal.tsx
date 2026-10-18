@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import type { Student, RideType } from '../types';
+import { getLocalDateString } from '../services/api';
 import { X, Calendar, Clock, MapPin, FileText, CheckCircle2 } from 'lucide-react';
 
 interface AddRideModalProps {
@@ -27,26 +28,14 @@ export const AddRideModal: React.FC<AddRideModalProps> = ({
   isTeacher = false,
   onSubmit,
 }) => {
-  const [studentId, setStudentId] = useState(initialStudentId || '');
-  const [rideDate, setRideDate] = useState(new Date().toISOString().split('T')[0]);
+  const defaultStudent = students.find((s) => s.id === initialStudentId) || students[0];
+  const [studentId, setStudentId] = useState(defaultStudent?.id || '');
+  const [rideDate, setRideDate] = useState(() => getLocalDateString());
   const [rideTime, setRideTime] = useState('16:00');
   const [rideType, setRideType] = useState<RideType>('pickup');
-  const [pickupLocation, setPickupLocation] = useState('');
+  const [pickupLocation, setPickupLocation] = useState(defaultStudent?.address || '');
   const [note, setNote] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
-
-  useEffect(() => {
-    if (initialStudentId) {
-      setStudentId(initialStudentId);
-      const student = students.find((s) => s.id === initialStudentId);
-      if (student) {
-        setPickupLocation(student.address);
-      }
-    } else if (students.length > 0 && !studentId) {
-      setStudentId(students[0].id);
-      setPickupLocation(students[0].address);
-    }
-  }, [initialStudentId, students]);
 
   const handleStudentChange = (id: string) => {
     setStudentId(id);

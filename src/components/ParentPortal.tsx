@@ -214,7 +214,7 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({
                     <div>
                       {ride.status === 'completed' && (
                         <span className="inline-flex items-center gap-1 text-emerald-600 font-bold">
-                          <CheckCircle2 className="w-3.5 h-3.5" /> 送迎済 (-1回)
+                          <CheckCircle2 className="w-3.5 h-3.5" /> 送迎済 (-{ride.rideType === 'roundtrip' ? 2 : 1}回)
                         </span>
                       )}
                       {ride.status === 'cancelled' && (

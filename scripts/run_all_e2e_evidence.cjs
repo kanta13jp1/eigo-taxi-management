@@ -568,7 +568,7 @@ async function run() {
 
   // TC-G06: GAS接続失敗時のフォールバック
   await recordCase('TC-G06', 'GAS通信失敗時の自動フォールバック動作', async () => {
-    const text = await page.evaluate(() => document.body.innerText);
+    await page.evaluate(() => document.body.innerText);
     log('Verified fallback handling.');
 
     const screenPath = path.join(EVIDENCE_DIR, 'TC-G06_fallback_handling.png');

@@ -19,6 +19,8 @@
 | [Google連携 (GAS / スプレッドシート / カレンダー)](#google連携-gas--スプレッドシート--カレンダー) | インフラ・バックエンド | サーバーレス・無料運用を実現する外部基盤 |
 | [LocalStorageモックエンジン](#localstorageモックエンジン) | アーキテクチャ | GAS未設定時やオフライン開発時に即時動作する仕組み |
 | [正式納品](#正式納品) | プロジェクト管理・リリース | クライアントへの成果物一式の引き渡しおよび検収手続き |
+| [リリース](#リリース) | 運用・CI/CD・デリバリー | 本番環境へのフロントエンド自動展開およびGAS/DB反映手順 |
+| [GA (General Availability)](#ga-general-availability) | プロジェクト管理・リリースサイクル | 正式商用版・一般提供開始マイルストーン |
 
 ---
 
@@ -122,3 +124,26 @@
 - **本プロジェクトでの定義・位置づけ**:
   - 英語教室の運営者（Mauro様、Brenda様）に対し、本システム「Mauro & Brenda Taxi Link（Eigo Taxi Link）v1.0 (GA)」および関連成果物を正式に引き渡すマイルストーン。
   - [`docs/DELIVERY_CHECKLIST.md`](file:///c:/Users/kanta/GitHub/eigo-taxi-management/docs/DELIVERY_CHECKLIST.md) に規定された納品構成（プログラム一式、Google Apps Script、Webアプリ本番URL、スプレッドシート、Googleカレンダー、管理者マニュアル、保護者向け利用ガイド、運用手順書、UAT完了証跡等）の検収完了をもって成立する。
+
+---
+
+### リリース
+- **読み**: リリース
+- **カテゴリ**: 運用・CI/CD・デリバリー
+- **解説**: 開発・テストが完了したソフトウェアや新機能を本番環境に展開し、利用者がアクセス・利用できる状態にする作業。
+- **本プロジェクトでの定義・位置づけ**:
+  - 本システムにおけるリリースは、**①フロントエンド（Webアプリ）の自動デプロイ** と **②バックエンド（GAS/スプレッドシート）の本番公開・接続** の2段階で構成される。
+  - **フロントエンド**: GitHub Actions ワークフロー（[`.github/workflows/deploy.yml`](file:///c:/Users/kanta/GitHub/eigo-taxi-management/.github/workflows/deploy.yml)）により、`main` ブランチへのプッシュ・マージをトリガーとして GitHub Pages へ自動ビルド＆公開される。
+  - **バックエンド/DB**: 教室用のGoogleアカウント上で [`gas/Code.gs`](file:///c:/Users/kanta/GitHub/eigo-taxi-management/gas/Code.gs) をウェブアプリとして新規デプロイし、発行されたURLを管理画面（`GoogleSettings`）に登録・疎通確認（スモークテスト）を行う手順を指す（詳細は [`docs/OPERATION_RUNBOOK.md`](file:///c:/Users/kanta/GitHub/eigo-taxi-management/docs/OPERATION_RUNBOOK.md) 参照）。
+
+---
+
+### GA (General Availability)
+- **読み**: ジーエー / ジェネラル アベイラビリティ
+- **カテゴリ**: プロジェクト管理・リリースサイクル
+- **解説**: ソフトウェア開発において、先行試験版（Alpha/Beta）やリリース候補版（RC）を経て、全ユーザーに向けて本番提供される「正式版・一般提供開始」の状態。
+- **本プロジェクトでの定義・位置づけ**:
+  - 本システム「Mauro & Brenda Taxi Link（Eigo Taxi Link）」の正式商用稼働バージョン（**v1.0 (GA)**）を指す。
+  - すべての機能受入試験（UAT: TC-G01〜G06、TC-P01〜P09、TC-T01〜T08等）を合格し、教室運営者（Mauro様、Brenda様）の実運用に供する品質基準を満たした状態（「GA Ready」）を示す。
+  - 保守運用手順書（[`docs/OPERATION_RUNBOOK.md`](file:///c:/Users/kanta/GitHub/eigo-taxi-management/docs/OPERATION_RUNBOOK.md)）において、納品後の無償不具合対応を行う「QA対応保証期間（30日間）」の起算点として定義されている。
+  - ※Google技術スタックを採用しているが、本プロジェクトの文脈においては「Google Analytics」ではなく「一般提供（General Availability）」の意味で使用される。

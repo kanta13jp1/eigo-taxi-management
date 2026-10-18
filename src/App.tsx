@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import type { Student, RideReservation, RideType } from './types';
 import { ApiService } from './services/api';
 import { Navbar } from './components/Navbar';
@@ -43,7 +43,7 @@ export function App() {
     }, 3500);
   };
 
-  const loadData = async () => {
+  const loadData = useCallback(async () => {
     try {
       const [studentsData, ridesData] = await Promise.all([
         ApiService.getStudents(),
@@ -56,10 +56,28 @@ export function App() {
     } finally {
       setIsLoading(false);
     }
-  };
+  }, []);
 
   useEffect(() => {
-    loadData();
+    let active = true;
+    Promise.all([ApiService.getStudents(), ApiService.getRides()])
+      .then(([studentsData, ridesData]) => {
+        if (active) {
+          setStudents(studentsData);
+          setRides(ridesData);
+        }
+      })
+      .catch((err) => {
+        console.error('Failed to load data:', err);
+      })
+      .finally(() => {
+        if (active) {
+          setIsLoading(false);
+        }
+      });
+    return () => {
+      active = false;
+    };
   }, []);
 
   // 送迎予約ハンドラ
@@ -96,7 +114,8 @@ export function App() {
     const res = await ApiService.completeRide(rideId);
     if (res.success) {
       await loadData();
-      showToast(`🎉 送迎が完了しました！チケットを1回分消化しました（残数: ${res.remainingBalance}回）`);
+      const consumed = res.consumedTickets ?? 1;
+      showToast(`🎉 送迎が完了しました！チケットを${consumed}回分消化しました（残数: ${res.remainingBalance}回）`);
     }
   };
 
@@ -139,8 +158,8 @@ export function App() {
                 rides={rides}
                 onCompleteRide={handleCompleteRide}
                 onCancelRide={handleCancelRide}
-                onOpenAddRide={() => {
-                  setAddRideStudentId(undefined);
+                onOpenAddRide={(studentId) => {
+                  setAddRideStudentId(studentId);
                   setAddRideIsTeacher(true);
                   setIsAddRideOpen(true);
                 }}
@@ -210,6 +229,7 @@ export function App() {
 
       {/* モーダル群 */}
       <AddRideModal
+        key={`ride-${isAddRideOpen}-${addRideStudentId || 'default'}`}
         isOpen={isAddRideOpen}
         onClose={() => setIsAddRideOpen(false)}
         students={students}
@@ -219,6 +239,7 @@ export function App() {
       />
 
       <AddTicketModal
+        key={`ticket-${isAddTicketOpen}-${addTicketStudentId || 'default'}`}
         isOpen={isAddTicketOpen}
         onClose={() => setIsAddTicketOpen(false)}
         students={students}

@@ -7,6 +7,14 @@ const STORAGE_KEYS = {
   GAS_API_URL: 'eigo_taxi_gas_api_url',
 };
 
+// ローカルタイム（JST）基準で YYYY-MM-DD を取得するヘルパー
+export function getLocalDateString(date: Date = new Date()): string {
+  const y = date.getFullYear();
+  const m = String(date.getMonth() + 1).padStart(2, '0');
+  const d = String(date.getDate()).padStart(2, '0');
+  return `${y}-${m}-${d}`;
+}
+
 // 初期モックデータ
 const INITIAL_STUDENTS: Student[] = [
   {
@@ -46,7 +54,7 @@ const INITIAL_RIDES: RideReservation[] = [
     id: 'RIDE-101',
     studentId: 'STU-001',
     studentName: '田中 陽菜 (ひな)',
-    rideDate: new Date().toISOString().split('T')[0], // 今日
+    rideDate: getLocalDateString(), // 今日
     rideTime: '16:00',
     rideType: 'pickup',
     pickupLocation: '東京都世田谷区桜新町1-10-5 パークサイド201',
@@ -59,7 +67,7 @@ const INITIAL_RIDES: RideReservation[] = [
     id: 'RIDE-102',
     studentId: 'STU-002',
     studentName: '山本 颯太 (そうた)',
-    rideDate: new Date().toISOString().split('T')[0], // 今日
+    rideDate: getLocalDateString(), // 今日
     rideTime: '17:30',
     rideType: 'dropoff',
     pickupLocation: '英語教室 → 東京都世田谷区用賀2-5-12',
@@ -155,10 +163,35 @@ export const ApiService = {
   // 生徒新規登録
   async createStudent(student: Omit<Student, 'id' | 'createdAt'>): Promise<Student> {
     const students = await this.getStudents();
-    const newStudent: Student = {
+    const generatedId = `STU-${String(students.length + 1).padStart(3, '0')}`;
+    const today = getLocalDateString();
+    const gasUrl = this.getGasApiUrl();
+
+    let gasStudent: Student | undefined;
+    if (gasUrl) {
+      try {
+        const res = await fetch(gasUrl, {
+          method: 'POST',
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body: JSON.stringify({
+            action: 'createStudent',
+            id: generatedId,
+            ...student,
+          }),
+        });
+        const json = await res.json();
+        if (json.success && json.data) {
+          gasStudent = json.data;
+        }
+      } catch (e) {
+        console.warn('GAS API createStudent failed, fallback to local storage:', e);
+      }
+    }
+
+    const newStudent: Student = gasStudent || {
       ...student,
-      id: `STU-${String(students.length + 1).padStart(3, '0')}`,
-      createdAt: new Date().toISOString().split('T')[0],
+      id: generatedId,
+      createdAt: today,
     };
     students.push(newStudent);
     setStored(STORAGE_KEYS.STUDENTS, students);
@@ -173,7 +206,7 @@ export const ApiService = {
         const res = await fetch(`${gasUrl}?action=getRides`);
         const json = await res.json();
         if (json.success && Array.isArray(json.data)) {
-          return json.data.map((r: any) => {
+          return json.data.map((r: RideReservation) => {
             let rideDate = String(r.rideDate || '');
             const dateMatch = rideDate.match(/\d{4}-\d{2}-\d{2}/);
             if (dateMatch) {
@@ -181,10 +214,7 @@ export const ApiService = {
             } else {
               const d = new Date(r.rideDate);
               if (!isNaN(d.getTime())) {
-                const y = d.getFullYear();
-                const m = String(d.getMonth() + 1).padStart(2, '0');
-                const day = String(d.getDate()).padStart(2, '0');
-                rideDate = `${y}-${m}-${day}`;
+                rideDate = getLocalDateString(d);
               }
             }
 
@@ -199,7 +229,7 @@ export const ApiService = {
               rideDate,
               rideTime,
             };
-          }).sort((a: any, b: any) => `${b.rideDate} ${b.rideTime}`.localeCompare(`${a.rideDate} ${a.rideTime}`));
+          }).sort((a: RideReservation, b: RideReservation) => `${b.rideDate} ${b.rideTime}`.localeCompare(`${a.rideDate} ${a.rideTime}`));
         }
       } catch (e) {
         console.warn('GAS API connection failed, fallback to local storage:', e);
@@ -207,7 +237,7 @@ export const ApiService = {
     }
 
     let rides = getStored<RideReservation[]>(STORAGE_KEYS.RIDES, INITIAL_RIDES);
-    const todayStr = new Date().toISOString().split('T')[0];
+    const todayStr = getLocalDateString();
 
     // デモ用: 本日の送迎予定（未完了）が1件もない場合は、RIDE-101とRIDE-102を本日の日付・未完了に自動更新
     const hasTodayScheduled = rides.some((r) => r.rideDate === todayStr && r.status === 'scheduled');
@@ -314,7 +344,10 @@ export const ApiService = {
   },
 
   // 送迎完了＆チケット消化（先生が当日実行）
-  async completeRide(rideId: string, consumeTickets: number = 1): Promise<{ success: boolean; remainingBalance?: number }> {
+  async completeRide(
+    rideId: string,
+    consumeTickets?: number
+  ): Promise<{ success: boolean; remainingBalance?: number; consumedTickets?: number }> {
     const rides = await this.getRides();
     const ride = rides.find((r) => r.id === rideId);
     if (!ride) return { success: false };
@@ -323,8 +356,11 @@ export const ApiService = {
     const studentIndex = students.findIndex((s) => s.id === ride.studentId);
     if (studentIndex === -1) return { success: false };
 
+    // 往復の場合はデフォルト2枚、片道は1枚消費
+    const actualConsume = consumeTickets ?? (ride.rideType === 'roundtrip' ? 2 : 1);
+
     // チケット残数を減算
-    students[studentIndex].ticketBalance = Math.max(0, students[studentIndex].ticketBalance - consumeTickets);
+    students[studentIndex].ticketBalance = Math.max(0, students[studentIndex].ticketBalance - actualConsume);
     ride.status = 'completed';
     ride.completedAt = new Date().toLocaleString('ja-JP');
 
@@ -336,14 +372,19 @@ export const ApiService = {
       try {
         await fetch(gasUrl, {
           method: 'POST',
-          body: JSON.stringify({ action: 'completeRide', rideId, consumeTickets }),
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body: JSON.stringify({ action: 'completeRide', rideId, consumeTickets: actualConsume }),
         });
       } catch (e) {
         console.warn('GAS API connection failed:', e);
       }
     }
 
-    return { success: true, remainingBalance: students[studentIndex].ticketBalance };
+    return {
+      success: true,
+      remainingBalance: students[studentIndex].ticketBalance,
+      consumedTickets: actualConsume,
+    };
   },
 
   // チケット購入・追加（先生が実行）
@@ -362,17 +403,36 @@ export const ApiService = {
 
     // 購入履歴追加
     const purchases = getStored<TicketPurchase[]>(STORAGE_KEYS.PURCHASES, INITIAL_PURCHASES);
+    const purchaseId = `PUR-${Date.now().toString().slice(-5)}`;
     const newPurchase: TicketPurchase = {
-      id: `PUR-${Date.now().toString().slice(-5)}`,
+      id: purchaseId,
       studentId: params.studentId,
       studentName: student.name,
-      purchaseDate: new Date().toISOString().split('T')[0],
+      purchaseDate: getLocalDateString(),
       ticketCount: params.ticketCount,
       amount: params.amount,
       note: params.note || '',
     };
     purchases.unshift(newPurchase);
     setStored(STORAGE_KEYS.PURCHASES, purchases);
+
+    const gasUrl = this.getGasApiUrl();
+    if (gasUrl) {
+      try {
+        await fetch(gasUrl, {
+          method: 'POST',
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body: JSON.stringify({
+            action: 'addTickets',
+            purchaseId,
+            studentName: student.name,
+            ...params,
+          }),
+        });
+      } catch (e) {
+        console.warn('GAS API addTickets failed, fallback to local storage:', e);
+      }
+    }
 
     return { success: true, newBalance: student.ticketBalance };
   },

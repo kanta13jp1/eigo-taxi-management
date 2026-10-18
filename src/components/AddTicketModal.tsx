@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import type { Student } from '../types';
 import { X, Ticket, PlusCircle } from 'lucide-react';
 
@@ -22,19 +22,11 @@ export const AddTicketModal: React.FC<AddTicketModalProps> = ({
   initialStudentId,
   onSubmit,
 }) => {
-  const [studentId, setStudentId] = useState(initialStudentId || '');
+  const [studentId, setStudentId] = useState(initialStudentId || students[0]?.id || '');
   const [ticketCount, setTicketCount] = useState<number>(10);
   const [amount, setAmount] = useState<number>(10000);
   const [note, setNote] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
-
-  useEffect(() => {
-    if (initialStudentId) {
-      setStudentId(initialStudentId);
-    } else if (students.length > 0 && !studentId) {
-      setStudentId(students[0].id);
-    }
-  }, [initialStudentId, students]);
 
   if (!isOpen) return null;
 

@@ -1,25 +1,36 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { ApiService } from '../services/api';
 import { Check, Copy, RefreshCw, Database, Calendar, Shield, Trash2, AlertTriangle } from 'lucide-react';
 
 const SAMPLE_GAS_CODE = `/**
  * 英語教室 送迎チケット管理 Google Apps Script (GAS)
- * スプレッドシート & Googleカレンダー連携コード
+ * 
+ * 機能:
+ * 1. スプレッドシート初期化 (initSpreadsheet)
+ * 2. 生徒台帳の同期 (getStudents)
+ * 3. 送迎予定の取得・日付時刻正規化 (getRides)
+ * 4. 送迎予定の登録 ＆ Googleカレンダー自動作成 (createReservation)
+ * 5. 送迎予約のキャンセル ＆ カレンダー予定の自動削除 (cancelReservation)
+ * 6. 送迎完了 ＆ チケット残数消化 (completeRide)
+ * 7. チケット購入・残数チャージ (addTickets)
+ * 8. 新規生徒の追加登録 (createStudent)
  */
 
-// スプレッドシート初期化関数（初回に実行）
+// 初回に一度だけ実行する初期化関数
 function initSpreadsheet() {
   const ss = SpreadsheetApp.getActiveSpreadsheet();
-  
+
   // 1. 生徒台帳シート
   let studentSheet = ss.getSheetByName("生徒台帳");
   if (!studentSheet) {
     studentSheet = ss.insertSheet("生徒台帳");
-    studentSheet.appendRow(["生徒ID", "生徒氏名", "保護者名", "連絡先", "送迎先住所", "送迎メモ", "残チケット", "登録日"]);
+    studentSheet.appendRow(["生徒ID", "生徒氏名", "保護者名", "緊急連絡先", "送迎場所住所", "送迎時メモ", "残チケット数", "登録日"]);
     studentSheet.getRange("A1:H1").setBackground("#10b981").setFontColor("#ffffff").setFontWeight("bold");
-    // サンプルデータ
-    studentSheet.appendRow(["STU-001", "田中 陽菜", "田中 美咲", "090-1111-2222", "東京都世田谷区桜新町1-10-5", "エントランス前", 7, "2026-09-01"]);
-    studentSheet.appendRow(["STU-002", "山本 颯太", "山本 健一", "080-3333-4444", "東京都世田谷区用賀2-5-12", "道路沿いで待機", 1, "2026-09-10"]);
+    
+    // サンプルデータ登録
+    studentSheet.appendRow(["STU-001", "田中 陽菜 (ひな)", "田中 美咲", "090-1111-2222", "東京都世田谷区桜新町1-10-5 パークサイド201", "エントランス前。到着時LINE", 7, "2026-09-01"]);
+    studentSheet.appendRow(["STU-002", "山本 颯太 (そうた)", "山本 健一", "080-3333-4444", "東京都世田谷区用賀2-5-12", "正面道路沿いで待機", 1, "2026-09-10"]);
+    studentSheet.appendRow(["STU-003", "高橋 莉子 (りこ)", "高橋 智子", "090-5555-6666", "東京都世田谷区弦巻3-8-1", "玄関先までお越しください", 0, "2026-09-15"]);
   }
 
   // 2. 送迎予定・履歴シート
@@ -34,7 +45,7 @@ function initSpreadsheet() {
   let purchaseSheet = ss.getSheetByName("チケット購入履歴");
   if (!purchaseSheet) {
     purchaseSheet = ss.insertSheet("チケット購入履歴");
-    purchaseSheet.appendRow(["購入ID", "生徒ID", "生徒名", "購入日", "枚数", "金額", "備考"]);
+    purchaseSheet.appendRow(["購入ID", "生徒ID", "生徒名", "購入日", "追加枚数", "金額", "備考"]);
     purchaseSheet.getRange("A1:G1").setBackground("#8b5cf6").setFontColor("#ffffff").setFontWeight("bold");
   }
 }
@@ -43,28 +54,38 @@ function initSpreadsheet() {
 function doGet(e) {
   const action = e.parameter.action;
   const ss = SpreadsheetApp.getActiveSpreadsheet();
-  
+
+  // 生徒一覧取得
   if (action === "getStudents") {
     const sheet = ss.getSheetByName("生徒台帳");
+    if (!sheet) return jsonResponse({ success: false, error: "生徒台帳シートがありません" });
     const data = sheet.getDataRange().getValues();
-    const headers = data[0];
-    const students = data.slice(1).map(row => ({
-      id: row[0],
-      name: row[1],
-      parentName: row[2],
-      phone: row[3],
-      address: row[4],
-      pickupNote: row[5],
-      ticketBalance: Number(row[6]),
-      createdAt: row[7]
-    }));
-    return ContentService.createTextOutput(JSON.stringify({ success: true, data: students }))
-      .setMimeType(ContentService.MimeType.JSON);
+    const students = [];
+    for (let i = 1; i < data.length; i++) {
+      if (data[i][0]) {
+        let createdDate = data[i][7];
+        if (createdDate instanceof Date) {
+          createdDate = Utilities.formatDate(createdDate, "JST", "yyyy-MM-dd");
+        }
+        students.push({
+          id: String(data[i][0]),
+          name: String(data[i][1]),
+          parentName: String(data[i][2] || ""),
+          phone: String(data[i][3] || ""),
+          address: String(data[i][4] || ""),
+          pickupNote: String(data[i][5] || ""),
+          ticketBalance: Number(data[i][6]) || 0,
+          createdAt: String(createdDate || "")
+        });
+      }
+    }
+    return jsonResponse({ success: true, data: students });
   }
 
+  // 送迎予定一覧取得
   if (action === "getRides") {
     const rideSheet = ss.getSheetByName("送迎予定履歴");
-    if (!rideSheet) return ContentService.createTextOutput(JSON.stringify({ success: true, data: [] })).setMimeType(ContentService.MimeType.JSON);
+    if (!rideSheet) return jsonResponse({ success: true, data: [] });
     const data = rideSheet.getDataRange().getValues();
     const rides = [];
     for (let i = 1; i < data.length; i++) {
@@ -86,44 +107,42 @@ function doGet(e) {
           rideType: String(data[i][5]),
           pickupLocation: String(data[i][6]),
           status: String(data[i][7]),
-          calendarEventId: String(data[i][8]),
+          calendarEventId: String(data[i][8] || ""),
           reservedBy: String(data[i][9]),
           note: String(data[i][10] || ""),
           completedAt: data[i][11] ? String(data[i][11]) : undefined
         });
       }
     }
-    return ContentService.createTextOutput(JSON.stringify({ success: true, data: rides }))
-      .setMimeType(ContentService.MimeType.JSON);
+    return jsonResponse({ success: true, data: rides });
   }
 
-  return ContentService.createTextOutput(JSON.stringify({ success: true, message: "Eigo Taxi API Ready" }))
-    .setMimeType(ContentService.MimeType.JSON);
+  return jsonResponse({ success: true, message: "Eigo Taxi Link API Ready" });
 }
 
-// Web API (POST) - 予約追加・キャンセル・送迎完了
+// Web API (POST)
 function doPost(e) {
   try {
     const body = JSON.parse(e.postData.contents);
     const action = body.action;
     const ss = SpreadsheetApp.getActiveSpreadsheet();
 
+    // 1. 送迎予約の登録 ＆ Googleカレンダー自動作成
     if (action === "createReservation") {
-      // 1. Googleカレンダーへ予定を作成
       const cal = CalendarApp.getDefaultCalendar();
       const startTime = new Date(body.rideDate + "T" + body.rideTime + ":00");
       const endTime = new Date(startTime.getTime() + 30 * 60000); // 30分枠
       
-      const typeLabel = body.rideType === "pickup" ? "行き" : (body.rideType === "dropoff" ? "帰り" : "送迎");
+      const typeLabel = body.rideType === "pickup" ? "お迎え" : (body.rideType === "dropoff" ? "送り" : "往復");
       const name = body.studentName || "生徒";
       const eventTitle = "🚗【送迎】" + name + " (" + typeLabel + ")";
-      const eventDesc = "送迎場所: " + body.pickupLocation + "\\nメモ: " + (body.note || "なし");
+      const eventDesc = "送迎場所: " + body.pickupLocation + "\\n連絡先/メモ: " + (body.note || "なし") + "\\n予約者: " + (body.reservedBy === "parent" ? "保護者予約" : "先生登録");
+      
       const event = cal.createEvent(eventTitle, startTime, endTime, {
         description: eventDesc,
         location: body.pickupLocation
       });
 
-      // 2. スプレッドシートへ行追加
       const rideSheet = ss.getSheetByName("送迎予定履歴");
       const rideId = body.rideId || ("RIDE-" + new Date().getTime());
       rideSheet.appendRow([
@@ -131,21 +150,34 @@ function doPost(e) {
         body.rideType, body.pickupLocation, "scheduled", event.getId(), body.reservedBy, body.note || "", ""
       ]);
 
-      return ContentService.createTextOutput(JSON.stringify({ success: true, data: { id: rideId, calendarEventId: event.getId() } }))
-        .setMimeType(ContentService.MimeType.JSON);
+      return jsonResponse({
+        success: true,
+        data: {
+          id: rideId,
+          studentId: body.studentId,
+          studentName: name,
+          rideDate: body.rideDate,
+          rideTime: body.rideTime,
+          rideType: body.rideType,
+          pickupLocation: body.pickupLocation,
+          status: "scheduled",
+          calendarEventId: event.getId(),
+          reservedBy: body.reservedBy,
+          note: body.note || ""
+        }
+      });
     }
 
+    // 2. 送迎予約のキャンセル ＆ カレンダー予定の自動削除
     if (action === "cancelReservation") {
-      // カレンダーイベントの削除 & スプレッドシート更新
       const rideSheet = ss.getSheetByName("送迎予定履歴");
       const data = rideSheet.getDataRange().getValues();
       for (let i = 1; i < data.length; i++) {
-        // ID一致、または (日付 & 時間 & 生徒名/ID) 一致で確実に特定
         const idMatch = body.rideId && String(data[i][0]) === String(body.rideId);
-        const detailMatch = body.rideDate && body.rideTime && 
-          String(data[i][3]).indexOf(body.rideDate) !== -1 && 
+        const detailMatch = body.rideDate && body.rideTime &&
+          String(data[i][3]).indexOf(body.rideDate) !== -1 &&
           String(data[i][4]).indexOf(body.rideTime) !== -1;
-        
+
         if (idMatch || detailMatch) {
           const calId = data[i][8];
           if (calId) {
@@ -154,32 +186,125 @@ function doPost(e) {
               if (event) {
                 event.deleteEvent();
               }
-            } catch (err) {}
+            } catch (err) {
+              console.warn("カレンダーイベント削除スキップ: " + err);
+            }
           }
           rideSheet.getRange(i + 1, 8).setValue("cancelled");
+          return jsonResponse({ success: true });
+        }
+      }
+      return jsonResponse({ success: false, error: "該当の送迎IDが見つかりません" });
+    }
+
+    // 3. 送迎完了 ＆ チケット消化
+    if (action === "completeRide") {
+      const rideSheet = ss.getSheetByName("送迎予定履歴");
+      const studentSheet = ss.getSheetByName("生徒台帳");
+      const rides = rideSheet.getDataRange().getValues();
+      const students = studentSheet.getDataRange().getValues();
+
+      let targetStudentId = "";
+      let rideType = "";
+      for (let i = 1; i < rides.length; i++) {
+        if (String(rides[i][0]) === String(body.rideId)) {
+          targetStudentId = String(rides[i][1]);
+          rideType = String(rides[i][5]);
+          rideSheet.getRange(i + 1, 8).setValue("completed");
+          rideSheet.getRange(i + 1, 12).setValue(Utilities.formatDate(new Date(), "JST", "yyyy/MM/dd HH:mm:ss"));
           break;
         }
       }
-      return ContentService.createTextOutput(JSON.stringify({ success: true })).setMimeType(ContentService.MimeType.JSON);
+
+      if (!targetStudentId) return jsonResponse({ success: false, error: "送迎が見つかりません" });
+
+      // 生徒台帳の残チケット数をマイナス（往復の場合はデフォルト2枚、片道は1枚）
+      const defaultConsume = rideType === "roundtrip" ? 2 : 1;
+      const consumeCount = Number(body.consumeTickets) || defaultConsume;
+      let newBalance = 0;
+      for (let j = 1; j < students.length; j++) {
+        if (String(students[j][0]) === targetStudentId) {
+          const currentBal = Number(students[j][6]) || 0;
+          newBalance = Math.max(0, currentBal - consumeCount);
+          studentSheet.getRange(j + 1, 7).setValue(newBalance);
+          break;
+        }
+      }
+
+      return jsonResponse({ success: true, remainingBalance: newBalance, consumedTickets: consumeCount });
     }
 
-    return ContentService.createTextOutput(JSON.stringify({ success: false, error: "Unknown action" }))
-      .setMimeType(ContentService.MimeType.JSON);
+    // 4. チケット追加（購入）
+    if (action === "addTickets") {
+      const studentSheet = ss.getSheetByName("生徒台帳");
+      const purchaseSheet = ss.getSheetByName("チケット購入履歴");
+      const students = studentSheet.getDataRange().getValues();
+
+      let targetName = body.studentName || "";
+      let newBalance = 0;
+      for (let i = 1; i < students.length; i++) {
+        if (String(students[i][0]) === String(body.studentId)) {
+          targetName = String(students[i][1]);
+          const currentBal = Number(students[i][6]) || 0;
+          newBalance = currentBal + Number(body.ticketCount);
+          studentSheet.getRange(i + 1, 7).setValue(newBalance);
+          break;
+        }
+      }
+
+      // 購入履歴記録
+      const purId = body.purchaseId || ("PUR-" + new Date().getTime());
+      const today = Utilities.formatDate(new Date(), "JST", "yyyy-MM-dd");
+      purchaseSheet.appendRow([
+        purId, body.studentId, targetName, today,
+        Number(body.ticketCount), Number(body.amount), body.note || ""
+      ]);
+
+      return jsonResponse({ success: true, newBalance: newBalance });
+    }
+
+    // 5. 新規生徒の追加
+    if (action === "createStudent") {
+      const studentSheet = ss.getSheetByName("生徒台帳");
+      const data = studentSheet.getDataRange().getValues();
+      const newId = body.id || ("STU-" + String(data.length).padStart(3, "0"));
+      const today = Utilities.formatDate(new Date(), "JST", "yyyy-MM-dd");
+      studentSheet.appendRow([
+        newId, body.name, body.parentName || "", body.phone || "",
+        body.address, body.pickupNote || "", Number(body.ticketBalance) || 0, today
+      ]);
+
+      return jsonResponse({
+        success: true,
+        data: {
+          id: newId,
+          name: body.name,
+          parentName: body.parentName || "",
+          phone: body.phone || "",
+          address: body.address,
+          pickupNote: body.pickupNote || "",
+          ticketBalance: Number(body.ticketBalance) || 0,
+          createdAt: today
+        }
+      });
+    }
+
+    return jsonResponse({ success: false, error: "不明なアクションです" });
   } catch (err) {
-    return ContentService.createTextOutput(JSON.stringify({ success: false, error: err.toString() }))
-      .setMimeType(ContentService.MimeType.JSON);
+    return jsonResponse({ success: false, error: err.toString() });
   }
+}
+
+function jsonResponse(data) {
+  return ContentService.createTextOutput(JSON.stringify(data))
+    .setMimeType(ContentService.MimeType.JSON);
 }
 `;
 
 export const GoogleSettings: React.FC = () => {
-  const [apiUrl, setApiUrl] = useState('');
+  const [apiUrl, setApiUrl] = useState(() => ApiService.getGasApiUrl());
   const [copied, setCopied] = useState(false);
   const [saveSuccess, setSaveSuccess] = useState(false);
-
-  useEffect(() => {
-    setApiUrl(ApiService.getGasApiUrl());
-  }, []);
 
   const handleSaveUrl = () => {
     ApiService.setGasApiUrl(apiUrl);

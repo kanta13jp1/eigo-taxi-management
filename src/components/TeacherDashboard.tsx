@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import type { Student, RideReservation, RideType } from '../types';
+import { getLocalDateString } from '../services/api';
 import {
   Car,
   Calendar,
@@ -22,7 +23,7 @@ interface TeacherDashboardProps {
   rides: RideReservation[];
   onCompleteRide: (rideId: string) => Promise<void>;
   onCancelRide: (rideId: string) => Promise<void>;
-  onOpenAddRide: () => void;
+  onOpenAddRide: (studentId?: string) => void;
   onOpenAddTicket: (studentId?: string) => void;
   onOpenAddStudent: () => void;
 }
@@ -42,8 +43,8 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
   const [filterStatus, setFilterStatus] = useState<string>('all');
   const [activeTab, setActiveTab] = useState<'today' | 'allRides' | 'students'>('today');
 
-  // 今日
-  const todayStr = new Date().toISOString().split('T')[0];
+  // 今日（JST基準）
+  const [todayStr] = useState(() => getLocalDateString());
   const todayRides = safeRides.filter((r) => r.rideDate === todayStr);
   const todayPendingRides = todayRides.filter((r) => r.status === 'scheduled');
   const todayCompletedRides = todayRides.filter((r) => r.status === 'completed');
@@ -60,11 +61,11 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
   const getRideTypeLabel = (type: RideType) => {
     switch (type) {
       case 'pickup':
-        return { text: 'お迎え', color: 'bg-blue-100 text-blue-700 border-blue-200' };
+        return { text: 'お迎え', color: 'bg-blue-100 text-blue-700 border-blue-200', consume: 1 };
       case 'dropoff':
-        return { text: '送り', color: 'bg-indigo-100 text-indigo-700 border-indigo-200' };
+        return { text: '送り', color: 'bg-indigo-100 text-indigo-700 border-indigo-200', consume: 1 };
       case 'roundtrip':
-        return { text: '往復', color: 'bg-purple-100 text-purple-700 border-purple-200' };
+        return { text: '往復', color: 'bg-purple-100 text-purple-700 border-purple-200', consume: 2 };
     }
   };
 
@@ -77,7 +78,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
           <span>Mauro・Brenda 先生用管理ダッシュボード</span>
         </div>
         <p className="text-xs text-emerald-700 font-medium">
-          ※完全予約制対応：送迎完了時に「送迎完了（1回消費）」を押すと片道1枚分が自動消化されます
+          ※完全予約制対応：送迎完了時に「送迎完了」を押すと片道1枚（往復は2枚）が自動消化されます
         </p>
       </div>
 
@@ -171,7 +172,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
 
         <div className="flex items-center gap-2">
           <button
-            onClick={onOpenAddRide}
+            onClick={() => onOpenAddRide()}
             className="flex-1 sm:flex-none flex items-center justify-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 text-white px-3.5 py-2 rounded-xl text-xs font-bold shadow-xs transition-colors"
           >
             <Plus className="w-4 h-4" />
@@ -206,7 +207,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
                 右上の「送迎予定を追加」ボタンから急な送迎もすぐに追加できます。
               </p>
               <button
-                onClick={onOpenAddRide}
+                onClick={() => onOpenAddRide()}
                 className="mt-4 inline-flex items-center gap-1.5 bg-emerald-50 text-emerald-700 hover:bg-emerald-100 px-4 py-2 rounded-xl text-xs font-bold transition-colors"
               >
                 <Plus className="w-4 h-4" />
@@ -241,7 +242,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
                       <div>
                         {isCompleted && (
                           <span className="inline-flex items-center gap-1 text-xs font-bold text-emerald-700 bg-emerald-100/80 px-2.5 py-1 rounded-full">
-                            <CheckCircle2 className="w-3.5 h-3.5" /> 送迎完了 (消化済)
+                            <CheckCircle2 className="w-3.5 h-3.5" /> 送迎完了 (-{typeInfo.consume}回消化済)
                           </span>
                         )}
                         {ride.status === 'cancelled' && (
@@ -302,7 +303,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
                           className="bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs py-2 px-3.5 rounded-xl shadow-xs inline-flex items-center gap-1.5 transition-colors"
                         >
                           <CheckCircle2 className="w-4 h-4" />
-                          送迎完了（1回消費）
+                          送迎完了（{typeInfo.consume}回消費）
                         </button>
                       )}
                     </div>
@@ -385,7 +386,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
                             )}
                             {ride.status === 'completed' && (
                               <span className="text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full font-bold text-[11px]">
-                                完了済
+                                完了済 (-{typeInfo.consume}回)
                               </span>
                             )}
                             {ride.status === 'cancelled' && (
@@ -486,7 +487,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
                         </a>
                       </div>
                       <div className="flex items-start gap-1">
-                        <MapPin className="w-3 h-3 text-slate-400 shrink-0 mt-0.5" />
+                        <MapPin className="w-3.5 h-3.5 text-slate-400 shrink-0 mt-0.5" />
                         <span className="truncate">{student.address}</span>
                       </div>
                     </div>
@@ -501,7 +502,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
                       チケット追加
                     </button>
                     <button
-                      onClick={onOpenAddRide}
+                      onClick={() => onOpenAddRide(student.id)}
                       className="py-1.5 px-3 rounded-lg border border-slate-200 hover:bg-slate-50 text-slate-700 font-semibold text-xs inline-flex items-center gap-1 transition-colors"
                     >
                       予約登録
