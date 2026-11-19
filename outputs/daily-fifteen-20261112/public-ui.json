@@ -1,0 +1,29 @@
+{
+  "case": "AT-14",
+  "hostingVersion": "6755531e1441c5d6",
+  "checkedAt": "2026-11-11T22:02:33.857Z",
+  "url": "https://eigo-taxi-test.web.app/#/admin",
+  "scope": "anonymous admin demo; browser data only",
+  "student": "AT-14 往復確認用",
+  "studentId": "STU-fba34028-efaf-4801-82b4-67030f64ee9e",
+  "date": "2026-11-12",
+  "time": "16:00",
+  "rideType": "往復",
+  "newStudents": 1,
+  "newReservations": 1,
+  "balanceAfterRejection": 1,
+  "scheduledAfterRejection": true,
+  "dashboardVisibleAfterRejection": true,
+  "topUpFromDashboard": true,
+  "ticketsAdded": 6,
+  "syntheticAmount": 0,
+  "balanceBeforeCompletion": 7,
+  "ticketsConsumed": 2,
+  "balanceAfterReload": 5,
+  "completedAfterReload": true,
+  "priorAt13BalanceAfterReload": 6,
+  "images": [
+    "public-insufficient.png",
+    "public-completed.png"
+  ]
+}

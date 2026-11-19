@@ -1,155 +1,68 @@
-# Mauro & Brenda Taxi Link
-# Google連携（スプレッドシート＆カレンダー）手動受入検証 手順書
+# Mauro_Brenda_Taxi_Link_Google連携手動受入検証手順書
 
-> **本書の目的**  
-> 本システムにおけるGoogleスプレッドシートおよびGoogleカレンダーとの自動連携機能について、技術的な知識がない方（先生方・教室スタッフ様）でも迷わず1ステップずつ実施でき、実際の画面でデータが連携されたことを確認して「合格証跡」を残すための公式手順書です。  
-> **本手順を実施し、指定の画面キャプチャー2〜3枚を取得・貼付した時点で、Google連携機能（TC-G01〜G06）の正式合格（Pass）となります。**
+現行正本：[acceptance](../acceptance/06_ACCEPTANCE_TEST_SPEC.md)。旧PDF/XLSXと画面は履歴として扱う。
 
----
+<!-- fact:authentication="google" -->
+<!-- fact:setupOwner="developer" -->
+<!-- fact:dailyAccountOwner="admin" -->
+<!-- fact:consumeAt="completion" -->
+<!-- fact:oneWay=1 -->
+<!-- fact:roundTrip=2 -->
+<!-- fact:calendarPermissionAdded=true -->
+<!-- fact:productionStarted=false -->
+<!-- fact:originalLedgerAutoSync=false -->
+<!-- fact:thirdPartyPassed=0 -->
+<!-- fact:thirdPartyTotal=30 -->
+<!-- fact:thirdPartyRequiredForRelease=false -->
+<!-- fact:customerAcceptancePassed=0 -->
+<!-- fact:customerAcceptanceTotal=6 -->
+<!-- fact:calendarPermissionApprovedForTest=true -->
+<!-- fact:remainingRealAcceptance=["AT-24","AT-25","AT-26","AT-27","AT-28","AT-29","AT-30"] -->
+<!-- fact:release="HOLD" -->
+<!-- fact:restoredAdminRelogin="BOTH_ADMINS_CONFIRMED" -->
+<!-- fact:publicFrontendFilesMatched=7 -->
+<!-- fact:restoredActiveAdmins=2 -->
+<!-- fact:verificationGasVersion=6 -->
+<!-- fact:verificationCalendarReadConfirmed=true -->
+<!-- fact:customerPreparationStatus="SELF_PACED_PREPARED_CUSTOMER_FIRST_LOGIN_PENDING" -->
+<!-- fact:customerExecutionMode="self-paced-test-reviewer" -->
 
-## ▍事前準備（必要なもの）
-
-1. **パソコン（Windows または Mac）**
-2. **インターネットブラウザ（Google Chrome 推奨）**
-3. **検証用 Google アカウント（Gmail / Google Workspace）**
-   * **検証担当者アカウント**: `k-umezawa@ml-mightylink.com`（梅澤様）
-   * ※ブラウザの右上に表示されるログイン中アカウントが上記アドレスになっていることをご確認ください。
-4. **送迎チケット管理WebアプリのURL**
-   * [https://kanta13jp1.github.io/eigo-taxi-management/](https://kanta13jp1.github.io/eigo-taxi-management/)
-
----
-
-## ▍作業の流れ（全体で約10〜15分）
-
-```mermaid
-flowchart TD
-    Step1["【Step 1】Googleスプレッドシートを作成し、コードを貼り付ける"] --> Step2["【Step 2】初期化を実行してGoogleのアクセス権を承認する"]
-    Step2 --> Step3["【Step 3】Webアプリとして公開（デプロイ）し、URLをWebアプリに登録"]
-    Step3 --> Step4["【Step 4】Webアプリからテスト予約を1件登録してみる"]
-    Step4 --> Step5["【Step 5】スプレッドシートとカレンダーを確認し、証跡キャプチャーを保存"]
-    Step5 --> Step6["【Step 6】キャンセル操作を実施し、カレンダー予定の自動削除を確認"]
-```
-
----
-
-## ▍詳細手順（ステップ・バイ・ステップ）
-
-### 【Step 1】Googleスプレッドシートの新規作成とコードの貼り付け
-
-1. お使いのパソコンで **Google Chrome** を開き、連携させたい Google アカウントにログインします。
-2. [Google ドライブ](https://drive.google.com/) または [Google スプレッドシート](https://sheets.new) を開きます。
-3. 画面左上の「**+ 空白のスプレッドシート**」をクリックして新しいシートを作成します。
-4. 画面左上のタイトル「無題のスプレッドシート」をクリックし、わかりやすい名前を入力します。  
-   * 例: `英語教室_送迎チケット管理データベース`
-5. 画面上部のメニューバーから **「拡張機能」 ➜ 「Apps Script」** をクリックします。
-   * 新しいタブで「無題のプロジェクト」というスクリプト編集画面が開きます。
-6. [送迎チケット管理Webアプリ](https://kanta13jp1.github.io/eigo-taxi-management/) を別のタブで開き、上部タブの **「Google連携」** をクリックします。
-7. 画面右上の緑色ボタン **「📋 スクリプトをコピー」** をクリックします（「コピー完了！」と表示されます）。
-8. 先ほどの Apps Script 画面に戻り、最初から書かれている `function myFunction() { ... }` をすべて削除（BackSpace）して空にします。
-9. コピーした内容を貼り付けます（Windows: `Ctrl + V` / Mac: `Cmd + V`）。
-10. 画面上部にある **フロッピーディスクのアイコン（プロジェクトを保存）** をクリックします。
-
----
-
-### 【Step 2】3つのシートの自動生成と、Googleのアクセス承認
-
-このステップを行うと、スプレッドシートに「生徒台帳」「送迎予定履歴」「チケット購入履歴」の3つの専用シートが色付きで一瞬で自動作成されます。
-
-1. Apps Script 画面の上部にある実行関数の選択プルダウン（現在は `doGet` や空欄になっている部分）をクリックし、**`initSpreadsheet`** を選択します。
-2. その左隣にある **「▷ 実行」** ボタンをクリックします。
-3. 画面に **「承認が必要です」** というポップアップが表示されますので、青色の **「権限を確認」** ボタンをクリックします。
-4. ご利用の Google アカウントを選択します。
-5. **【最重要ポイント】「Google で確認されていないアプリ」という警告画面が出ます（これは自作スクリプトを初回実行する際にGoogleが必ず表示する安全確認です。不具合ではありません）。**
-   * 画面左下にある小さな文字 **「詳細」**（または「Advanced」）をクリックします。
-   * 下部に現れる **「無題のプロジェクト（安全ではないページ）に移動」** をクリックします。
-6. 次の画面で右下の青色ボタン **「許可」** をクリックします。
-7. 画面下の実行ログに「実行完了」と表示されます。
-8. スプレッドシートのタブに戻ってみてください。画面下に **「生徒台帳（緑色）」「送迎予定履歴（青色）」「チケット購入履歴（紫色）」** の3枚のシートが自動作成されていることが確認できます！
-
-> 📸 **【証跡 1 の撮影ポイント】**  
-> スプレッドシートに3つのシート（生徒台帳、送迎予定履歴、チケット購入履歴）が生成された画面全体のスクリーンショットを撮影してください。
-
----
-
-### 【Step 3】Webアプリとして公開（デプロイ）し、URLを連携
-
-1. Apps Script の画面に戻り、画面右上にある青い **「デプロイ」 ➜ 「新しいデプロイ」** をクリックします。
-2. 開いた画面の左上にある歯車アイコン（種類の選択）をクリックし、**「ウェブアプリ」** を選択します。
-3. 以下の通り設定します（**「アクセスできるユーザー」を全員にすることが最大のポイントです**）：
-   * **説明**: `送迎チケット管理連携 v1`（任意でOK）
-   * **次のユーザーとして実行**: `自分 (your-email@gmail.com)`（初期値のままでOK）
-   * **アクセスできるユーザー**: **「全員 (Anyone)」** を選択してください。
-4. 右下の青色ボタン **「デプロイ」** をクリックします。
-5. 画面に **「ウェブアプリ」** のURL（`https://script.google.com/macros/s/.../exec`）が表示されます。
-   * 「**コピー**」ボタンをクリックしてこのURLをコピーします。
-6. [送迎チケット管理Webアプリ](https://kanta13jp1.github.io/eigo-taxi-management/) の「Google連携」タブに戻ります。
-7. 「**2. GAS WebアプリURLの入力**」の枠内に、コピーしたURLを貼り付けます。
-8. 青色の **「💾 接続設定を保存」** ボタンをクリックします（「設定を保存しました！」と緑色で表示されます）。
-
----
-
-### 【Step 4】Webアプリからテスト予約を1件登録してみる
-
-1. Webアプリの画面上部タブで **「送迎利用者用（保護者）」** をクリックします。
-2. 生徒選択で「**山本 颯太 (そうた)**」を選択します。
-3. 青色の **「＋ 送迎の予約を申し込む」** ボタンをクリックします。
-4. 以下の内容で入力して登録します：
-   * **送迎日**: 明日または来週の日付
-   * **お迎え時間**: `16:30`
-   * **送迎区分**: `行き（お迎え）`
-   * **メモ**: `Google連携テスト予約`
-5. 緑色の **「送迎予定を登録する」** ボタンをクリックします。
-6. 「予約が完了しました！」と表示され、予約中一覧に登録されます。
-
----
-
-### 【Step 5】スプレッドシートとカレンダーを確認し、合格証跡を保存
-
-#### A. Googleスプレッドシートの確認
-1. 先ほどの Google スプレッドシートを開き、下のタブから **「送迎予定履歴」** を開きます。
-2. **Step 4 で登録した「山本 颯太」くんの予約データ（日付、16:30、行き、scheduled 等）が1行追加されていることを確認します。**
-
-> 📸 **【証跡 2 の撮影ポイント】**  
-> スプレッドシートの「送迎予定履歴」に、Webアプリから登録したデータが正しく書き込まれている行が見えるようにスクリーンショットを撮影してください。
-
-#### B. Googleカレンダーの確認
-1. ブラウザで [Google カレンダー](https://calendar.google.com/) を開きます。
-2. Step 4 で指定した日付・時間（16:30）の枠を確認します。
-3. **『🚗【送迎】山本 颯太 (そうた) (pickup)』というタイトルの予定が自動登録されていることを確認します。**
-4. 予定をクリックすると、メモ欄に送迎先住所や「Google連携テスト予約」が記載されていることを確認します。
-
-> 📸 **【証跡 3 の撮影ポイント】**  
-> Googleカレンダーの週表示または月表示で、『🚗【送迎】山本 颯太』の予定が表示されている画面のスクリーンショットを撮影してください。
-
----
-
-### 【Step 6】キャンセル操作と、カレンダー予定の自動削除の確認
-
-1. Webアプリの「送迎利用者用」画面に戻ります。
-2. 先ほど登録した予約カードにある **「キャンセル」** ボタンをクリックします。
-3. 「この送迎予約をキャンセルしますか？（先生のカレンダーからも自動で削除されます）」と表示されるので「**OK**」をクリックします。
-4. Google カレンダーを開いて画面を再読み込み（F5）します。
-   * 先ほど登録されていた **『🚗【送迎】山本 颯太』の予定が綺麗に消えていることを確認します。**
-5. Google スプレッドシートの「送迎予定履歴」を確認します。
-   * 該当の行のステータス列が `scheduled` から **`cancelled`** に自動更新されていることを確認します。
-
-> 📸 **【証跡 4 の撮影ポイント】**  
-> カレンダーから予定が自動消去され、スプレッドシートのステータスが `cancelled` に更新された画面のスクリーンショットを撮影してください。
-
----
-
-## ▍手動受入検証 チェックシート & 判定表
-
-以下の4つの証跡画像が揃った時点で、Google連携機能（TC-G01〜G06）の**【正式合格（Pass）】**となります。
-
-| 検証項目 | 確認内容 | 必要な証跡キャプチャー | 判定欄 |
-| :--- | :--- | :--- | :---: |
-| **① シート自動生成** | `initSpreadsheet` 実行後、生徒台帳・送迎予定履歴・購入履歴の3シートが作成されたか | スプレッドシート画面の全景（下部タブ3つが見える状態） | [ ] 合格 |
-| **② 予約連動（シート）** | Webアプリから予約登録後、「送迎予定履歴」に即座に1行追加されたか | 「送迎予定履歴」シートの追加行キャプチャー | [ ] 合格 |
-| **③ 予約連動（カレンダー）** | Webアプリから予約登録後、Googleカレンダーに『🚗【送迎】生徒名』が登録されたか | Googleカレンダーの予定枠キャプチャー | [ ] 合格 |
-| **④ キャンセル連動** | Webアプリでキャンセル後、カレンダーから予定が消え、シートが `cancelled` になったか | 予定削除後のカレンダー／シート更新画面 | [ ] 合格 |
-
-* **検証実施日**: 2026年 _____月 _____日
-* **検証実施者（ご署名）**: 梅澤 研太 様 (または検証ご担当者様)
-* **検証に使用したGoogleアカウント**: `k-umezawa@ml-mightylink.com`
-* **総合判定**: [  ] 合格 (Pass)  /  [  ] 再確認要 (Fail)
+- [AT-01 開発者設定とGoogleログイン](../acceptance/06_ACCEPTANCE_TEST_SPEC.md#AT-01)
+- [AT-02 生徒登録](../acceptance/06_ACCEPTANCE_TEST_SPEC.md#AT-02)
+- [AT-03 保護者の残数確認](../acceptance/06_ACCEPTANCE_TEST_SPEC.md#AT-03)
+- [AT-04 残少・ゼロ案内](../acceptance/06_ACCEPTANCE_TEST_SPEC.md#AT-04)
+- [AT-05 チケット追加](../acceptance/06_ACCEPTANCE_TEST_SPEC.md#AT-05)
+- [AT-06 保護者のお迎え予約](../acceptance/06_ACCEPTANCE_TEST_SPEC.md#AT-06)
+- [AT-07 送り予約](../acceptance/06_ACCEPTANCE_TEST_SPEC.md#AT-07)
+- [AT-08 往復予約](../acceptance/06_ACCEPTANCE_TEST_SPEC.md#AT-08)
+- [AT-09 管理者の代理予約](../acceptance/06_ACCEPTANCE_TEST_SPEC.md#AT-09)
+- [AT-10 保護者の予約取消](../acceptance/06_ACCEPTANCE_TEST_SPEC.md#AT-10)
+- [AT-11 管理者の予約取消](../acceptance/06_ACCEPTANCE_TEST_SPEC.md#AT-11)
+- [AT-12 当日一覧・地図リンク](../acceptance/06_ACCEPTANCE_TEST_SPEC.md#AT-12)
+- [AT-13 片道完了](../acceptance/06_ACCEPTANCE_TEST_SPEC.md#AT-13)
+- [AT-14 往復完了](../acceptance/06_ACCEPTANCE_TEST_SPEC.md#AT-14)
+- [AT-15 完了の二重処理防止](../acceptance/06_ACCEPTANCE_TEST_SPEC.md#AT-15)
+- [AT-16 取消済みの完了拒否](../acceptance/06_ACCEPTANCE_TEST_SPEC.md#AT-16)
+- [AT-17 不正なチケット追加拒否](../acceptance/06_ACCEPTANCE_TEST_SPEC.md#AT-17)
+- [AT-18 通信障害時に成功扱いしない](../acceptance/06_ACCEPTANCE_TEST_SPEC.md#AT-18)
+- [AT-19 未認証の管理操作を拒否](../acceptance/06_ACCEPTANCE_TEST_SPEC.md#AT-19)
+- [AT-20 保護者の家庭別アクセス制限](../acceptance/06_ACCEPTANCE_TEST_SPEC.md#AT-20)
+- [AT-21 モバイル表示](../acceptance/06_ACCEPTANCE_TEST_SPEC.md#AT-21)
+- [AT-22 再読込後の永続化](../acceptance/06_ACCEPTANCE_TEST_SPEC.md#AT-22)
+- [AT-23 Google初期化・永続化](../acceptance/06_ACCEPTANCE_TEST_SPEC.md#AT-23)
+- [AT-24 実カレンダー予約同期](../acceptance/06_ACCEPTANCE_TEST_SPEC.md#AT-24)
+- [AT-25 実カレンダー取消同期](../acceptance/06_ACCEPTANCE_TEST_SPEC.md#AT-25)
+- [AT-26 管理者2名・保護者の端末共有](../acceptance/06_ACCEPTANCE_TEST_SPEC.md#AT-26)
+- [AT-27 同時完了の排他制御](../acceptance/06_ACCEPTANCE_TEST_SPEC.md#AT-27)
+- [AT-28 バックアップから復旧](../acceptance/06_ACCEPTANCE_TEST_SPEC.md#AT-28)
+- [AT-29 実機受入](../acceptance/06_ACCEPTANCE_TEST_SPEC.md#AT-29)
+- [AT-30 リリース後スモークテスト](../acceptance/06_ACCEPTANCE_TEST_SPEC.md#AT-30)
+- [SAT-31 管理者による利用登録・停止・削除](../acceptance/06_ACCEPTANCE_TEST_SPEC.md#SAT-31)
+- [SAT-32 初回Google本人紐付け](../acceptance/06_ACCEPTANCE_TEST_SPEC.md#SAT-32)
+- [SAT-33 家庭URL・QRの配布と再発行](../acceptance/06_ACCEPTANCE_TEST_SPEC.md#SAT-33)
+- [SAT-34 Google認証・再読込・ログアウト](../acceptance/06_ACCEPTANCE_TEST_SPEC.md#SAT-34)
+- [SAT-35 台帳直接編集と反映](../acceptance/06_ACCEPTANCE_TEST_SPEC.md#SAT-35)
+- [SAT-36 カレンダー確認・実送迎・実績確認](../acceptance/06_ACCEPTANCE_TEST_SPEC.md#SAT-36)
+- [SAT-37 日時・場所変更と直前連絡](../acceptance/06_ACCEPTANCE_TEST_SPEC.md#SAT-37)
+- [SAT-38 工程横断のID・整合検査・共通デザイン](../acceptance/06_ACCEPTANCE_TEST_SPEC.md#SAT-38)
+- [SAT-39 随時実施できる顧客確認と検証専用の両画面アクセス](../acceptance/06_ACCEPTANCE_TEST_SPEC.md#SAT-39)

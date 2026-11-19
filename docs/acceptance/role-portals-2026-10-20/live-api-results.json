@@ -1,0 +1,53 @@
+{
+  "verifiedAt": "2026-10-20T13:36:25.6759706Z",
+  "environment": "Mighty verification GAS v2",
+  "readOnly": true,
+  "passed": 11,
+  "total": 11,
+  "checks": [
+    {
+      "id": "admin-login",
+      "passed": true
+    },
+    {
+      "id": "second-admin-login",
+      "passed": true
+    },
+    {
+      "id": "admin-refused-parent-entry",
+      "passed": true
+    },
+    {
+      "id": "admin-invitation-directory-safe",
+      "passed": true
+    },
+    {
+      "id": "parent-a-personal-entry-login",
+      "passed": true
+    },
+    {
+      "id": "parent-b-personal-entry-login",
+      "passed": true
+    },
+    {
+      "id": "parent-a-students-isolated",
+      "passed": true
+    },
+    {
+      "id": "parent-b-students-isolated",
+      "passed": true
+    },
+    {
+      "id": "wrong-family-key-refused",
+      "passed": true
+    },
+    {
+      "id": "parent-directory-refused",
+      "passed": true
+    },
+    {
+      "id": "parent-refused-admin-entry",
+      "passed": true
+    }
+  ]
+}

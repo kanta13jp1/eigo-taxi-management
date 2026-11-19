@@ -1,0 +1,16 @@
+{
+  "case": "AT-14",
+  "checkedAt": "2026-11-11T21:58:47.522Z",
+  "scope": "React App + anonymous demo service in jsdom",
+  "insufficientBalance": 1,
+  "insufficientStatePreserved": true,
+  "dashboardAndTopUpVisible": true,
+  "globalRetryShown": false,
+  "balanceBeforeCompletion": 7,
+  "balanceAfterCompletion": 5,
+  "status": "completed",
+  "completedAt": "2026/11/12 6:58:47",
+  "otherDataPreserved": true,
+  "simulatedMutationRejectionInline": true,
+  "fatalLoadStillRequiresRetry": true
+}

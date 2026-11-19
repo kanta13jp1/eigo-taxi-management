@@ -1,0 +1,16 @@
+{
+  "verifiedAt": "2026-10-20T13:45:02.413Z",
+  "url": "https://eigo-taxi-test.web.app/",
+  "release": {
+    "environment": "mighty-test",
+    "projectId": "eigo-taxi-app",
+    "siteId": "eigo-taxi-test",
+    "builtAt": "2026-10-20T13:44:11.286Z",
+    "baseCommit": "2fa6127715017d52ae0c9bd80be39c4db90a47c3",
+    "sourceDigest": "37d6c05bd0a592ed7feaa3f3d852ca75a61bb539678739e0e6b6e09da143fb9a"
+  },
+  "asset": "/assets/index-DDJ43gjW.js",
+  "assetMatches": true,
+  "sha256": "7a77396ffe6d4c8567f38286ce5f13d3b205006e03180edf1ee4349cc576e92c",
+  "scope": "existing test Firebase hosting only"
+}

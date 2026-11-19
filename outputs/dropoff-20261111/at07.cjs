@@ -1,0 +1,51 @@
+const fs = require('node:fs');
+const path = require('node:path');
+const assert = require('node:assert/strict');
+const ts = require('typescript');
+const {JSDOM} = require(path.join(require('node:os').tmpdir(),'at02-react-dom-test/node_modules/jsdom'));
+const before = process.argv.includes('--before');
+const base = before ? '../../docs/acceptance/deployment/releases/aeb3c6dc735ff84d/source' : './stage';
+const dom = new JSDOM('<div id="app"></div>',{url:'https://example.test'});
+Object.assign(global,{window:dom.window,document:dom.window.document,localStorage:dom.window.localStorage,sessionStorage:dom.window.sessionStorage,IS_REACT_ACT_ENVIRONMENT:true});
+const React = require('react');
+const {createRoot} = require('react-dom/client');
+for (const ext of ['.ts','.tsx']) require.extensions[ext] = (module,file) => module._compile(ts.transpileModule(fs.readFileSync(file,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,jsx:ts.JsxEmit.ReactJSX,target:ts.ScriptTarget.ES2022}}).outputText,file);
+const {AddRideModal} = require(base+'/src/components/AddRideModal.tsx');
+const {ParentPortal} = require(base+'/src/components/ParentPortal.tsx');
+const {ApiService} = require(base+'/src/services/api.ts');
+(async()=>{
+  ApiService.enterDemo('parent');
+  const students = await ApiService.getStudents();
+  const prior = await ApiService.getRides();
+  assert.equal(students[0].ticketBalance,7);
+  const root = createRoot(document.querySelector('#app'));
+  let saved;
+  await React.act(()=>root.render(React.createElement(AddRideModal,{students,isOpen:true,initialStudentId:students[0].id,onClose:()=>{},onSubmit:async data=>{saved=await ApiService.createReservation(data)}})));
+  const time = document.querySelector('input[type=time]');
+  const label = ()=>time.previousElementSibling.textContent.trim();
+  const observed = {};
+  for (const type of ['pickup','dropoff','roundtrip','dropoff']) {
+    await React.act(()=>document.querySelector('input[value='+type+']').click());
+    observed[type] = label();
+    assert.equal(label(),(!before && type==='dropoff')?'お送り時間':'お迎え時間');
+  }
+  await React.act(()=>{
+    Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype,'value').set.call(time,'17:30');
+    time.dispatchEvent(new window.Event('input',{bubbles:true}));
+  });
+  await React.act(()=>document.querySelector('form').requestSubmit());
+  assert.equal(saved.rideType,'dropoff');
+  assert.equal(saved.rideTime,'17:30');
+  assert.equal(saved.reservedBy,'parent');
+  const rides = await ApiService.getRides();
+  const readStudents = await ApiService.getStudents();
+  assert.equal(rides.length,prior.length+1);
+  assert.equal(readStudents[0].ticketBalance,7);
+  assert.ok(rides.find(ride=>ride.id===saved.id));
+  await React.act(()=>root.render(React.createElement(ParentPortal,{students:readStudents,rides,isDemo:true,onOpenAddRide:()=>{},onCancelRide:async()=>{}})));
+  assert.match(document.body.textContent,/17:30送り（ご自宅へ）/);
+  const result={checkedAt:new Date().toISOString(),case:'AT-07',before,scope:'React form, demo service, parent screen, JSDOM',labels:observed,rideType:saved.rideType,rideTime:saved.rideTime,role:saved.reservedBy,priorRides:prior.length,afterRides:rides.length,beforeBalance:7,afterBalance:readStudents[0].ticketBalance,screen:'17:30 送り（ご自宅へ）'};
+  fs.writeFileSync(path.join(__dirname,before?'before.json':'at07.json'),JSON.stringify(result,null,2));
+  await React.act(()=>root.unmount());
+  console.log(result);
+})().catch(error=>{console.error(error);process.exitCode=1});

@@ -1,0 +1,55 @@
+{
+  "dateJst": "2026-11-10",
+  "status": "COMPLETE_DAILY_FIX_AND_DOCUMENTS",
+  "dailyMeaningfulFixesDeployedAndPubliclyVerified": 1,
+  "change": "Clarify that booking does not consume tickets and explicit teacher/admin completion consumes 1 one-way or 2 roundtrip; explanation remains visible with low-balance notice",
+  "hostingVersion": "0b830b69152e45a3",
+  "sourceDigest": "b80b9e2a7c0b0fc4b51c08bab18a77184309f72dcbbf932084ab5779a95bc81f",
+  "publicHashResponsesMatched": 7,
+  "publicUiChecksPassed": 7,
+  "publicUiReport": "outputs/consumption-timing-20261110/public-ui/results.json",
+  "sourceReview": "outputs/consumption-timing-20261110/independent-review.json",
+  "scope": "Anonymous public frontend demo using browser-local synthetic fixtures only",
+  "customerFixtureWrites": 0,
+  "customerAcceptancePassed": 0,
+  "customerAcceptanceTotal": 6,
+  "googleBackendChanged": false,
+  "gasVersion": 6,
+  "productionStarted": false,
+  "meeting": {
+    "dateJst": "2026-11-11",
+    "timeJst": "16:00",
+    "status": "AGREED_IN_USER_SUPPLIED_CHAT",
+    "calendarCreated": false,
+    "messagesSentByAgent": 0
+  },
+  "remaining": [],
+  "registryVersion": "2026-11-10-r18",
+  "registrySha256": "0f6b53a352a8549cc4a66a34af7932c8e692f4dbe0280f0b13920a4eede35719",
+  "canonicalPowerPoint": {
+    "independentReview": "PASS",
+    "oldPagesPreserved": 160,
+    "pages": 184,
+    "version": "v34",
+    "decks": 12
+  },
+  "meetingPowerPoint": {
+    "sha256": "590cf407be6f7428b0eb89a7dfaf3dbb6869d6dca54d1a3c8209ed3c16bfd2d3",
+    "file": "docs/deliverables/2026-11-10-premeeting/premeeting-2026-11-11-v1.pptx",
+    "independentReview": "PASS",
+    "pages": 4
+  },
+  "strictValidation": "PASS errors0 coverageGaps0 requirements39 flows11 tests206 screens20 interfaces16; actual release HOLD",
+  "sharedHistoryRows": [
+    62,
+    63,
+    64
+  ],
+  "sharedReadback": "PASS",
+  "globalPending": [
+    "Customer personal6checks0/6",
+    "Remaining realGoogleAT24-30 scope",
+    "Isolatedmulti-sheetbackuprestoreverification",
+    "School-ownedoperatingGoogleaccount and agreedoperationrules"
+  ]
+}

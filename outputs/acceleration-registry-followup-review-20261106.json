@@ -1,0 +1,23 @@
+{
+  "reviewer": "independent AI worker /root/modern_runner_1106",
+  "scope": "Delta from independently reviewed registry to final CSS locator registration only",
+  "status": "PASS",
+  "reviewedRegistryHash": "b5cecc60c54434e4eff879142610d313763d28dbdc5adf5106b29e977e30c541",
+  "currentRegistryHash": "4ed4441d2e6c1ee792955450f96b3579167031f5cedfda2d25ae2ea4b045482b",
+  "checks": {
+    "exactReviewedBytesReconstructedByRemovingOneReference": true,
+    "onlyReq21ImplementationReferenceAdded": true,
+    "addedReference": {
+      "path": "src/components/AddRideModal.tsx",
+      "locator": "max-h-[calc(100dvh-2rem)] overflow-y-auto"
+    },
+    "locatorMatchesCurrentSource": true,
+    "sourceSha256": "b4a3001504d344c099c89064681ec80c21a0f5d8a69520e3a73954e094ab563f",
+    "factsUnchanged": true,
+    "allOtherFieldsAndAcceptanceDefinitionsUnchanged": true
+  },
+  "limits": [
+    "Local source locator registration does not attest public deployment, real Google acceptance, or production approval"
+  ],
+  "findings": []
+}

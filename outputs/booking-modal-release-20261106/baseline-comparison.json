@@ -1,0 +1,38 @@
+{
+  "sourceMatch": true,
+  "sourceDigestMatch": true,
+  "payload": [
+    {
+      "file": "dist/assets/index-BfV7saVz.js",
+      "expected": "ce5af3793deac0e9c1c3ecd88d9887a4b541412b95ba241739b0d3a9c723067b",
+      "actual": "ce5af3793deac0e9c1c3ecd88d9887a4b541412b95ba241739b0d3a9c723067b",
+      "match": true
+    },
+    {
+      "file": "dist/assets/index-CTgwtZfu.css",
+      "expected": "a469181df6b3c5585580d196bed093e800e87e5209641fddaca2aa440749193e",
+      "actual": "a469181df6b3c5585580d196bed093e800e87e5209641fddaca2aa440749193e",
+      "match": true
+    },
+    {
+      "file": "dist/favicon.svg",
+      "expected": "61bc9a161de58248288e6905425d7180f0624c2865007b97d763fdac12043a66",
+      "actual": "61bc9a161de58248288e6905425d7180f0624c2865007b97d763fdac12043a66",
+      "match": true
+    },
+    {
+      "file": "dist/icons.svg",
+      "expected": "b45fa506195cfcdef406ba9f0c77b36ddc1a7c224040926ec70abc2fdea7b93a",
+      "actual": "b45fa506195cfcdef406ba9f0c77b36ddc1a7c224040926ec70abc2fdea7b93a",
+      "match": true
+    },
+    {
+      "file": "dist/index.html",
+      "expected": "36978b75ea452b9ecea36949f029a5ee48dcf57e47aff2b99f355d18e316a114",
+      "actual": "36978b75ea452b9ecea36949f029a5ee48dcf57e47aff2b99f355d18e316a114",
+      "match": true
+    }
+  ],
+  "extraPayload": [],
+  "releaseJsonExcludedReason": "builtAt is generated afresh; sourceDigest and other release target fields are checked separately"
+}

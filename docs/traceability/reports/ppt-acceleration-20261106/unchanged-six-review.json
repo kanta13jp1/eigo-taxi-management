@@ -1,0 +1,62 @@
+[
+  {
+    "id": "PKG-01",
+    "source": "docs/acceptance/01_BUSINESS_FLOWS.md",
+    "sourceSha256Before": "ab5a0294fc9dd622a2d8bec2676548812e7759f6fe65b0a74204fe1cede3ac4e",
+    "sourceSha256Current": "ab5a0294fc9dd622a2d8bec2676548812e7759f6fe65b0a74204fe1cede3ac4e",
+    "sourceContentUnchanged": true,
+    "presentationSha256Before": "939abfe6124039571e1f220d69c17116bd7973e20b1f5d1677928949ecbbd570",
+    "presentationSha256Current": "939abfe6124039571e1f220d69c17116bd7973e20b1f5d1677928949ecbbd570",
+    "presentationUnchanged": true
+  },
+  {
+    "id": "PKG-02",
+    "source": "docs/acceptance/03_REQUIREMENTS.md",
+    "sourceSha256Before": "bf778167f1698aaa217b9f9990cbbbd0891ba01c48cd11a41df408f8c872439b",
+    "sourceSha256Current": "bf778167f1698aaa217b9f9990cbbbd0891ba01c48cd11a41df408f8c872439b",
+    "sourceContentUnchanged": true,
+    "presentationSha256Before": "ed48f883f41da2df9e9b735ee2098ab6449057b5d3ef082f83179e637c7d4761",
+    "presentationSha256Current": "ed48f883f41da2df9e9b735ee2098ab6449057b5d3ef082f83179e637c7d4761",
+    "presentationUnchanged": true
+  },
+  {
+    "id": "PKG-08",
+    "source": "docs/acceptance/06_ACCEPTANCE_TEST_SPEC.md",
+    "sourceSha256Before": "b680bb2fe6a78027747532ce713ea866548466ad6f577418d52fe53f1fda7130",
+    "sourceSha256Current": "b680bb2fe6a78027747532ce713ea866548466ad6f577418d52fe53f1fda7130",
+    "sourceContentUnchanged": true,
+    "presentationSha256Before": "2e9283b0d7995581aace4b788830c8a2253692ee9f4a3a041768232f9a11be81",
+    "presentationSha256Current": "2e9283b0d7995581aace4b788830c8a2253692ee9f4a3a041768232f9a11be81",
+    "presentationUnchanged": true
+  },
+  {
+    "id": "PKG-09",
+    "source": "docs/acceptance/20_OPERATIONS.md",
+    "sourceSha256Before": "3a71f06093f05f8beb4545541c04a5c8b2064cbd43351e8bbf76258680a53b9f",
+    "sourceSha256Current": "3a71f06093f05f8beb4545541c04a5c8b2064cbd43351e8bbf76258680a53b9f",
+    "sourceContentUnchanged": true,
+    "presentationSha256Before": "ccbbe157383f60fa963ff1f1b696dcce14db20641b4a8627dd65e6682edfa4e5",
+    "presentationSha256Current": "ccbbe157383f60fa963ff1f1b696dcce14db20641b4a8627dd65e6682edfa4e5",
+    "presentationUnchanged": true
+  },
+  {
+    "id": "PKG-10",
+    "source": "docs/acceptance/21_USER_MANUAL.md",
+    "sourceSha256Before": "1c6fae0688fd32b7845eaf087a312905b87c1e168bf6f0e3407c12d8788ee56d",
+    "sourceSha256Current": "1c6fae0688fd32b7845eaf087a312905b87c1e168bf6f0e3407c12d8788ee56d",
+    "sourceContentUnchanged": true,
+    "presentationSha256Before": "f1a55746f3ce3d2bb512ad6b33c20db351b051829283cee27ccb0928e061773e",
+    "presentationSha256Current": "f1a55746f3ce3d2bb512ad6b33c20db351b051829283cee27ccb0928e061773e",
+    "presentationUnchanged": true
+  },
+  {
+    "id": "PKG-11",
+    "source": "docs/acceptance/07_TRACEABILITY_MATRIX.md",
+    "sourceSha256Before": "846bdd1a6fbc6007f235cd87448d31585d0dd37e169b889ead8a666554906bca",
+    "sourceSha256Current": "846bdd1a6fbc6007f235cd87448d31585d0dd37e169b889ead8a666554906bca",
+    "sourceContentUnchanged": true,
+    "presentationSha256Before": "78730e7d3a51da250fda3cc73bfd3385ad0cfbb30b7e752e3c7a08217047f85c",
+    "presentationSha256Current": "78730e7d3a51da250fda3cc73bfd3385ad0cfbb30b7e752e3c7a08217047f85c",
+    "presentationUnchanged": true
+  }
+]

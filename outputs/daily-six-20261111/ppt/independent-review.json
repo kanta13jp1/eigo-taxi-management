@@ -1,0 +1,32 @@
+{
+  "dateJst": "2026-11-11",
+  "reviewer": "/root/finish_six_receipt",
+  "author": "parent lead",
+  "status": "PASS",
+  "adoption": "SUPPLEMENT_ADOPTABLE_NOT_FULL_ACCEPTANCE_PASS",
+  "file": "docs/deliverables/2026-11-10-premeeting/progress-2026-11-11-cumulative-six.pptx",
+  "sha256": "d6b849d05ae27e5bdf93f5b0d1fd18a0bc932d353c10e8abf2bf8d3bc8060702",
+  "checks": {
+    "finalBytesMatchFinalizationReceipt": true,
+    "finalPptxReimportedAndRendered": true,
+    "onePageIndividuallyVisuallyReviewed": true,
+    "readableNoClippingObserved": true,
+    "sixDistinctFixesAndSixExecutedTests": true,
+    "nov10FourNov11TwoBoundaryVisible": true,
+    "at28PartialVisible": true,
+    "customerZeroOfSixAndProductionNotStartedVisible": true,
+    "sourceNoteSeparatesMockDateBoundaryAndPublicDemo": true,
+    "sourceNoteAttributionFirstTwoClaudeAdditionalFourCodex": true,
+    "at05BeforeAfterSupportsTicketAmountFix": true,
+    "at05LocalHistoryAndPublicBalanceScopesSeparatedInCumulativeRecord": true,
+    "sevenPublicFileHashesMatchArchivedRelease": true,
+    "sharedRow72ReadbackPreservesCustomerFieldsAndFormula": true
+  },
+  "imageBoundary": "The cropped public image is the prior AT-12 display example and is not evidence of AT-05. AT-05 has separate input/result screenshots and browser observation.",
+  "packageLayoutReceipt": "outputs/daily-six-20261111/ppt/validation.json",
+  "observedPackageFindings": 0,
+  "observedLayoutFindings": 0,
+  "nativePowerPointExecution": "NOT_RUN",
+  "scope": "Independent presentation/record review only; no live Google writes, deployment, retesting or source changes performed by this reviewer",
+  "globalStrictState": "Prior stale evidence and source baseline adoption remain unresolved; this review does not adopt r19 or declare global PASS"
+}

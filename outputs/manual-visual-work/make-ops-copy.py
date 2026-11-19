@@ -1,0 +1,11 @@
+from pathlib import Path
+s=Path('outputs/manual-visual-work/build.mjs').read_text(encoding='utf8')
+s=s.replace("const work=path.join(root,'outputs/manual-visual-work');", "const work=path.join(root,'outputs/ops-matrix-visual-work/ops');\nconst old=JSON.parse(await fs.readFile(path.join(root,'outputs/manual-visual-work/ops-matrix-source.json'),'utf8')); ")
+s=s.replace("const src='docs/USER_GUIDE.md';", "const src='docs/OPERATION_RUNBOOK.md';")
+s=s.replace('ユーザーマニュアル','運用手順書').replace('USR-','OPS-').replace('docs/acceptance/21_USER_MANUAL.md','docs/acceptance/20_OPERATIONS.md')
+s=s.replace('const s=base(item.title,i+1,note);', "const s=base(item.title,i+1,'最新補足: 主要3シートの一部189セルの値・型・対象書式を比較し差なし。数式0件、Google固有設定・全体復元・Calendar整合は未確認。'+note+'\\n\\n元資料ノート（履歴を含む）:\\n'+old.ops[i].notes.join('\\n')); ")
+s=s.replace('2026年11月5日時点','2026年11月6日時点')
+s=s.replace("['OPS-24','カレンダーへの予約','実カレンダー連携は受入未完了です。検証は担当者が行います。']", "['OPS-24','カレンダーへの予約','実連携は未受入。予定本文への予約ID表示はローカルのみ・未配備です。']")
+s=s.replace("['OPS-28','バックアップ・復元','一部を照合済み。数式や設定を含む全体復元は未確認です。']", "['OPS-28','バックアップ・復元','一部照合済み。数式・Google固有設定を含む復元は未確認です。']")
+s=s.replace("['OPS-36','予定を確認し送迎','日時・生徒・場所を確認して送迎し、管理者が完了を登録します。']", "['OPS-36','予定を確認し送迎','日時・生徒・場所を確認し送迎。管理者が完了登録。実カレンダー連携は未受入です。']")
+Path('outputs/manual-visual-work/build-ops-nov6.mjs').write_text(s,encoding='utf8')

@@ -1,0 +1,30 @@
+{
+  "requestedCumulative": {
+    "fixes": 21,
+    "developerAcceptanceItems": 21
+  },
+  "reportDateJST": "2026-11-13",
+  "todayNew": 1,
+  "attribution": {
+    "Claude Code Fable 5.2": 2,
+    "Codex": 19
+  },
+  "candidate": "AT-22: prevent unreadable anonymous-demo collection data from being replaced by initial examples",
+  "reviewedSourceFile": "src/services/api.ts",
+  "reviewedSourceSha256": "8b6cd31a746a0015764025814df2b750d3cda210151f2d8fb8292fc3311fd103",
+  "candidateSourceDigest": "b531e64e461b8a28e918b3a6c338685a8d14c537cd8d3f11a7f220ba4677021f",
+  "localBrowserRegression": "pass",
+  "storageControls": "21 rejected malformed writes; 3 missing-key and 3 valid-empty-array creation controls pass",
+  "independentCodeReview": "pass",
+  "publicBaselineRelease": "c9cd711d551ccc77",
+  "publicCandidateDeployed": true,
+  "blocker": null,
+  "customerDataChanged": false,
+  "productionStarted": false,
+  "canonicalDocsStillReportCumulative": 21,
+  "pendingWork": [],
+  "publicRelease": "5b9271233ac9309f",
+  "authenticationSucceeded": true,
+  "sharedSheetVerified": true,
+  "presentationVerified": true
+}

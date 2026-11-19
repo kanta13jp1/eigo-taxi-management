@@ -1,0 +1,22 @@
+{
+  "checkedAt": "2026-11-11T06:46:16.920Z",
+  "scope": "検証サイトの公開管理者デモ。架空データ、ブラウザー内保存、Google連携なし。",
+  "source": "CUA browser accessibility and screenshot",
+  "url": "https://eigo-taxi-test.web.app/#/admin",
+  "release": "5b8000b179c3f5f1",
+  "initialCount": 3,
+  "defaultTickets": 10,
+  "fractionalInput": "1.5",
+  "fractionalRejected": true,
+  "nativeValidationMessage": "有効な値を入力してください。有効な値として最も近いのは 1 と 2 です。",
+  "integerRegistered": true,
+  "registeredTickets": 10,
+  "finalCount": 4,
+  "displayedStudent": "AT02 公開確認用の架空生徒",
+  "displayedParent": "AT02 架空保護者",
+  "displayedLocation": "AT02 架空の送迎場所",
+  "screenshots": [
+    "public-fractional.png",
+    "public-registered.png"
+  ]
+}

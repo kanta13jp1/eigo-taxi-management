@@ -1,0 +1,16 @@
+{
+  "reviewer": "lead agent independent of implementation worker",
+  "baselineRelease": "5424438ebd36deb1",
+  "file": "src/components/ParentPortal.tsx",
+  "sha256": "498b02b9b23f77e2d6101636ac6380e81ac031300f82763e5ef91c0b42cbf339",
+  "checks": [
+    "Replaces one-line hidden ellipsis with min-width zero and overflow-wrap anywhere on the pickup-location span only",
+    "Long unspaced text can wrap inside flex layout without changing reservation content or actions",
+    "Actual React browser tests reproduce clipping before and full wrapped text after at 375px and 1280px",
+    "Visible/enabled cancellation hit target remains reachable and page width equals viewport for parent, form and admin",
+    "One new synthetic reservation, prior rows and balances unchanged, no outbound mutation requests",
+    "No authentication, API, GAS, ticket or customer-data code changed"
+  ],
+  "pass": true,
+  "scope": "Chromium browser viewport and anonymous demo QA; physical smartphone and real Google integration are not covered"
+}

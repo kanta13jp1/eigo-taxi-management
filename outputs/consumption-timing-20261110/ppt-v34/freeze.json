@@ -1,0 +1,63 @@
+{
+  "status": "ROOT_LOCK",
+  "date": "2026-11-10",
+  "registryVersion": "2026-11-10-r18",
+  "registrySha256": "0f6b53a352a8549cc4a66a34af7932c8e692f4dbe0280f0b13920a4eede35719",
+  "publicStatus": "PASS",
+  "hostingVersion": "0b830b69152e45a3",
+  "sourceDigest": "b80b9e2a7c0b0fc4b51c08bab18a77184309f72dcbbf932084ab5779a95bc81f",
+  "customerPassed": 0,
+  "customerTotal": 6,
+  "productionStarted": false,
+  "customerFixtureWrites": 0,
+  "publicUiSummary": "375px幅で通常時・残り2回・予約フォームを確認",
+  "balanceSummary": "予約7→7、完了で7→6→4→2、再読込後も2",
+  "observationSummary": "残数の減る時点を保護者画面と予約フォームに常時表示する改善を検証Hostingへ反映。公開7応答が一致し、375×812の公開匿名デモで7件の確認が成功した。顧客・Google台帳への書込なし。",
+  "contentReview": "公開フロント匿名デモ、実Google受入、実機、顧客確認を分離。予約の再送ID保持・一覧1行への集約はNode模擬試験で確認し、実Googleでの障害応答注入は未実施。Nov9実施のフロント契約33件は現行ソースと一致して保持。Nov10は新しい画面・小画面の回帰30件を実施し、失敗した初回スクリーンショット試行は履歴に残した。顧客0/6、本番HOLD。11月7日のv5汎用エラーとの因果関係は未確定。",
+  "evidenceFiles": [
+    {
+      "path": "outputs/consumption-timing-20261110/public-ui/results.json",
+      "sha256": "897e3bcaee3659e68ee2e7893bea3cbd791014407c89a6165af23935cfae5b9c"
+    },
+    {
+      "path": "docs/acceptance/deployment/releases/0b830b69152e45a3/public-verification.json",
+      "sha256": "671524c00bdd8502dc12c37dff28d2706755525cd5a2ac35947a624c14406f69"
+    },
+    {
+      "path": "docs/acceptance/deployment/releases/0b830b69152e45a3/build-manifest.json",
+      "sha256": "6fcd2cc96dd2da9f30a52c68bf6c7cd1fae3b069a2ce702f4c4e05f5875a6b2b"
+    },
+    {
+      "path": "outputs/consumption-timing-20261110/independent-review.json",
+      "sha256": "4fb290cbe68961f3eafbd0c40708a45afcc634f4402ddaeca7bf6e39aebb6854"
+    },
+    {
+      "path": "outputs/reservation-retry-20261109/independent-review.json",
+      "sha256": "40f3add9d7313b9e0357388cf3f8d83f78beebd23fa24e644c41649a3f253ba3"
+    },
+    {
+      "path": "outputs/consumption-timing-20261110/regression/trace-ui-serial/results.json",
+      "sha256": "73a01971d0c2437c21252e44d95abb2a15e49bd4a46d1c63917daab1e95a5f10"
+    },
+    {
+      "path": "outputs/consumption-timing-20261110/regression/local/results.json",
+      "sha256": "c776ea04394de370fc8eb174e3526e9d7c5659adabd1e67bcb5f22c602f52f90"
+    },
+    {
+      "path": "outputs/consumption-timing-20261110/regression/reviewer/results.json",
+      "sha256": "1cb39ba4126ca9cf5159e2d4a6d885e8ccde94b42255869df5018529cc342757"
+    },
+    {
+      "path": "outputs/consumption-timing-20261110/regression/modal-scroll/results.json",
+      "sha256": "22cf3f9b6d2fecee959e243cc959f3594ce06c3cf73eeec433e2713d7742d736"
+    },
+    {
+      "path": "outputs/consumption-timing-20261110/adoption/frontend-contract-normalized.json",
+      "sha256": "8a17e418404289f5e372ecf0d6df04ed27b5c31118787f00010a0ec567daa5e8"
+    },
+    {
+      "path": "outputs/consumption-timing-20261110/adoption/reservation-retry-ui.json",
+      "sha256": "0dc5419bc887a70357da5614dc9234ed6425dc8b83f01dd225d227c0fa09ea8e"
+    }
+  ]
+}

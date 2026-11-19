@@ -1,0 +1,239 @@
+--- a/gas/Code.gs
++++ b/gas/Code.gs
+@@ -2,6 +2,7 @@
+  * 英語教室 送迎チケット管理 API
+  * Data API: POST JSON { action, idToken, ...parameters }. GET is health only.
+  * Configure AUTH_GOOGLE_JSON + AUTH_GOOGLE_USERS_JSON in Script Properties.
++ * TEST_CALENDAR_ID selects the deploying user's dedicated verification subcalendar.
+  * Legacy key requests require an explicit AUTH_LEGACY_KEYS_ENABLED=true migration flag.
+  * See docs/DEVELOPER_SETUP_AUTH.md. Credentials never belong in public URLs/config.
+  * This source is authoritative. Existing sheet columns remain 8 / 12 / 7.
+@@ -372,6 +373,20 @@
+   });
+ }
+ 
++function verificationCalendar_() {
++  const id = (PropertiesService.getScriptProperties().getProperty("TEST_CALENDAR_ID") || "").trim();
++  if (!id) fail_("CALENDAR_NOT_CONFIGURED", "検証カレンダーが設定されていません。管理者にお問い合わせください");
++  const auth = ScriptApp.getAuthorizationInfo(ScriptApp.AuthMode.FULL, ["https://www.googleapis.com/auth/calendar"]);
++  if (auth.getAuthorizationStatus() !== ScriptApp.AuthorizationStatus.NOT_REQUIRED) {
++    fail_("CALENDAR_AUTH_REQUIRED", "検証カレンダーを利用するには管理者の権限設定が必要です");
++  }
++  const calendar = CalendarApp.getCalendarById(id);
++  if (!calendar || calendar.getId() !== id || calendar.isMyPrimaryCalendar() || !calendar.isOwnedByMe()) {
++    fail_("CALENDAR_UNAVAILABLE", "管理者が所有する検証用サブカレンダーを確認してください");
++  }
++  return calendar;
++}
++
+ // @trace CODE-06 REQ-06
+ // @trace CODE-07 REQ-07
+ // @trace CODE-08 REQ-08
+@@ -397,8 +412,8 @@
+     }
+     return { success: true, replayed: true, data: old };
+   }
++  const cal = verificationCalendar_();
+   return mutate_("createReservation", id, function (tx) {
+-    const cal = CalendarApp.getDefaultCalendar();
+     const name = String(student.values[1]);
+     const reservedBy = user.role === "parent" ? "parent" : "teacher";
+     const label = type === "pickup" ? "お迎え" : (type === "dropoff" ? "送り" : "往復");
+@@ -430,18 +445,18 @@
+   const status = String(target.values[7]);
+   if (status === "cancelled") return { success: true, replayed: true };
+   if (status !== "scheduled") fail_("INVALID_STATE", "予約中の送迎だけキャンセルできます");
+-  const eventId = String(target.values[8] || "");
++  const calendar = verificationCalendar_();
++  const eventId = String(target.values[8] || "").trim();
+   // Only the server's stored event ID is used; no date/time fallback or supplied ID.
+-  const event = eventId ? CalendarApp.getDefaultCalendar().getEventById(eventId) : null;
++  const event = eventId ? calendar.getEventById(eventId) : null;
++  if (!event) fail_("CALENDAR_EVENT_MISMATCH", "検証カレンダーの予定を特定できません。管理者が予約と台帳を照合してください");
+   return mutate_("cancelReservation", id, function (tx) {
+     replace_(tx, sheet, target.row, 8, "cancelled", target.values[7]);
+     SpreadsheetApp.flush();
+-    if (event) {
+-      // Deletion cannot be reversed with the same event ID. Retain the guard if an
+-      // exception/timeout occurs during or after deletion, even after sheet rollback.
+-      tx.uncertain = true;
+-      event.deleteEvent();
+-    }
++    // Deletion cannot be reversed with the same event ID. Retain the guard if an
++    // exception/timeout occurs during or after deletion, even after sheet rollback.
++    tx.uncertain = true;
++    event.deleteEvent();
+     return { success: true };
+   });
+ }
+--- a/gas/appsscript.json
++++ b/gas/appsscript.json
+@@ -9,6 +9,7 @@
+   "runtimeVersion": "V8",
+   "oauthScopes": [
+     "https://www.googleapis.com/auth/spreadsheets.currentonly",
+-    "https://www.googleapis.com/auth/script.external_request"
++    "https://www.googleapis.com/auth/script.external_request",
++    "https://www.googleapis.com/auth/calendar"
+   ]
+ }
+--- a/scripts/test_gas.cjs
++++ b/scripts/test_gas.cjs
+@@ -10,6 +10,9 @@
+ const hash = text => crypto.createHash('sha256').update(text).digest('hex');
+ const S = '生徒台帳', R = '送迎予定履歴', P = 'チケット購入履歴';
+ const pending = 'PENDING_MUTATION_JSON';
++const calendarScope = 'https://www.googleapis.com/auth/calendar';
++const testCalendarId = 'taxi-verification@group.calendar.google.com';
++const primaryCalendarId = 'synthetic-owner@example.invalid';
+ const adminKey = 'test-only-admin-key-00000000000000000001';
+ const parentKey = 'test-only-parent-key-0000000000000000001';
+ const otherKey = 'test-only-other-key-00000000000000000001';
+@@ -18,6 +21,12 @@
+ 
+ function fixture({ empty = false } = {}) {
+   const state = { locked: false, acquisitions: 0, releases: 0, calls: [], rules: [], hooks: {}, sequence: 10, events: {}, sheets: {}, props: {} };
++  state.props.TEST_CALENDAR_ID = testCalendarId;
++  state.calendarAuthorized = true;
++  state.calendars = new Map([
++    [testCalendarId, { id: testCalendarId, primary: false, owned: true, events: state.events }],
++    [primaryCalendarId, { id: primaryCalendarId, primary: true, owned: true, events: {} }],
++  ]);
+   state.props.AUTH_LEGACY_KEYS_ENABLED = 'true'; // Explicit migration fixture; production default is disabled.
+   state.props.AUTH_USERS_JSON = JSON.stringify({
+     [hash(adminKey)]: { id: 'admin-1', name: 'Test Admin', role: 'admin', studentIds: [] },
+@@ -55,23 +64,37 @@
+     getSheetByName: name => op(`sheet:${name}`, () => state.sheets[name] ? sheet(name) : null),
+     insertSheet: name => op(`insert:${name}`, () => { state.sheets[name] = []; return sheet(name); }, true),
+   };
+-  function event(id) {
++  function event(events, id) {
+     return {
+       getId: () => op(`calendar.id:${id}`, () => id),
+-      deleteEvent: () => op(`calendar.delete:${id}`, () => { delete state.events[id]; }, true),
++      deleteEvent: () => op(`calendar.delete:${id}`, () => { delete events[id]; }, true),
+     };
+   }
+   const context = vm.createContext({
+     Date, console,
+     SpreadsheetApp: { getActiveSpreadsheet: () => spreadsheet, flush: () => op('flush', () => undefined, true) },
+-    CalendarApp: { getDefaultCalendar: () => op('calendar.default', () => ({
+-      createEvent: (title, start, end, options) => op('calendar.create', () => {
+-        const id = `CAL-${++state.sequence}`;
+-        state.events[id] = { title, start: start.toISOString(), end: end.toISOString(), options: copy(options) };
+-        return event(id);
+-      }, true),
+-      getEventById: id => op(`calendar.get:${id}`, () => state.events[id] ? event(id) : null),
+-    })) },
++    ScriptApp: {
++      AuthMode: { FULL: 'FULL' }, AuthorizationStatus: { REQUIRED: 'REQUIRED', NOT_REQUIRED: 'NOT_REQUIRED' },
++      getAuthorizationInfo: (mode, scopes) => {
++        assert.equal(mode, 'FULL'); assert.deepEqual(Array.from(scopes), [calendarScope]);
++        return { getAuthorizationStatus: () => state.calendarAuthorized ? 'NOT_REQUIRED' : 'REQUIRED' };
++      },
++    },
++    CalendarApp: { getCalendarById: calendarId => op(`calendar.lookup:${calendarId}`, () => {
++      const calendar = state.calendars.get(calendarId);
++      if (!calendar) return null;
++      return {
++        getId: () => calendar.id,
++        isMyPrimaryCalendar: () => calendar.primary,
++        isOwnedByMe: () => calendar.owned,
++        createEvent: (title, start, end, options) => op('calendar.create', () => {
++          const id = `CAL-${++state.sequence}`;
++          calendar.events[id] = { title, start: start.toISOString(), end: end.toISOString(), options: copy(options) };
++          return event(calendar.events, id);
++        }, true),
++        getEventById: id => op(`calendar.get:${id}`, () => calendar.events[id] ? event(calendar.events, id) : null),
++      };
++    }) },
+     LockService: { getScriptLock: () => {
+       let acquired = false;
+       return {
+@@ -562,7 +585,7 @@
+ check('GAS-56','account-management',[], 'Admin pre-registers a parent email, generates opaque URL, returns no UID',()=>{
+   const f=manager();const r=f.googlePost('saveManagedUser',{expectedRevision:f.revision(),name:'Family B',email:' Family.B@example.com ',role:'parent',active:true,studentIds:['STU-2']});
+   assert.equal(r.success,true);const u=r.data.users.find(u=>u.email==='family.b@example.com');assert.equal(u.linked,false);assert.match(u.publicEntryId,/^[0-9a-f-]{36}$/);assert.ok(!JSON.stringify(r).includes('google-admin-uid'));
+-  assert.ok(!f.state.calls.includes('calendar.default'));
++  assert.ok(!f.state.calls.some(call => call.startsWith('calendar.')));
+ });
+ check('GAS-57','account-management',[], 'First verified Google sign-in binds pending email to UID once; role cannot be self-selected',()=>{
+   const f=manager();assert.equal(f.googlePost('saveManagedUser',{expectedRevision:f.revision(),name:'New Family',email:'new@example.com',role:'parent',active:true,studentIds:['STU-2']}).success,true);
+@@ -641,13 +664,76 @@
+  const f=fixture();assert.equal(f.post('cancelReservation',{rideId:'RIDE-1'}).success,true);f.fail('calendar.create');const changed={...reservation,rideDate:'2026-10-24',pickupLocation:'Corrected location'};rejected(f.post('createReservation',changed),'RECONCILIATION_REQUIRED');assert.equal(f.ride()[7],'cancelled');assert.ok(!f.state.sheets[R].some(x=>x[0]===changed.rideId));const calls=f.state.calls.length;rejected(f.post('createReservation',changed),'RECONCILIATION_REQUIRED');assert.ok(!f.state.calls.slice(calls).includes('calendar.create'));assert.equal(f.balance(),7);const g=fixture();assert.equal(g.post('cancelReservation',{rideId:'RIDE-1'}).success,true);assert.equal(g.post('createReservation',changed).success,true);const snap=g.snapshot();assert.equal(g.post('createReservation',changed).replayed,true);assert.equal(g.snapshot(),snap);assert.equal(g.state.sheets[R].filter(x=>x[0]===changed.rideId).length,1);
+ });
+ 
++function rejectedBeforeCalendarWrite(f, action, params, code) {
++  const callStart = f.state.calls.length;
++  unchanged(f, () => f.post(action, params), code);
++  const calls = f.state.calls.slice(callStart);
++  assert.ok(!calls.includes(`property.set:${pending}`));
++  assert.ok(!calls.some(call => call === 'calendar.create' || call.startsWith('calendar.delete:')));
++  released(f);
++}
++
++check('GAS-71', 'calendar-target', [], 'Absent or blank target ID rejects reservation and cancellation before calendar lookup', () => {
++  for (const id of [undefined, '  ']) {
++    const f = fixture(); f.state.props.TEST_CALENDAR_ID = id;
++    rejectedBeforeCalendarWrite(f, 'createReservation', reservation, 'CALENDAR_NOT_CONFIGURED');
++    rejectedBeforeCalendarWrite(f, 'cancelReservation', { rideId: 'RIDE-1' }, 'CALENDAR_NOT_CONFIGURED');
++    assert.ok(!f.state.calls.some(call => call.startsWith('calendar.')));
++  }
++});
++check('GAS-72', 'calendar-target', [], 'Missing scope consent, inaccessible calendar, primary, foreign owner and ID mismatch stop writes', () => {
++  const manifest = JSON.parse(fs.readFileSync(path.join(root, 'gas/appsscript.json'), 'utf8'));
++  assert.ok(manifest.oauthScopes.includes(calendarScope));
++  const cases = [
++    { configure: f => { f.state.calendarAuthorized = false; }, code: 'CALENDAR_AUTH_REQUIRED' },
++    { configure: f => { f.state.calendars.delete(testCalendarId); }, code: 'CALENDAR_UNAVAILABLE' },
++    { configure: f => { f.state.props.TEST_CALENDAR_ID = primaryCalendarId; }, code: 'CALENDAR_UNAVAILABLE' },
++    { configure: f => { f.state.calendars.get(testCalendarId).owned = false; }, code: 'CALENDAR_UNAVAILABLE' },
++    { configure: f => { f.state.calendars.get(testCalendarId).id = 'different'; }, code: 'CALENDAR_UNAVAILABLE' },
++    { configure: f => { f.fail(`calendar.lookup:${testCalendarId}`, false, 2); }, code: 'SERVICE_ERROR' },
++  ];
++  for (const { configure, code } of cases) {
++    const f = fixture(); configure(f);
++    rejectedBeforeCalendarWrite(f, 'createReservation', reservation, code);
++    rejectedBeforeCalendarWrite(f, 'cancelReservation', { rideId: 'RIDE-1' }, code);
++  }
++});
++check('GAS-73', 'calendar-target', [], 'Stored event ID is mandatory and must resolve within the configured calendar', () => {
++  const f = fixture();
++  f.state.calendars.get(primaryCalendarId).events['CAL-1'] = { title: 'Other calendar event' };
++  delete f.state.events['CAL-1'];
++  rejectedBeforeCalendarWrite(f, 'cancelReservation', { rideId: 'RIDE-1', calendarEventId: 'CAL-2' }, 'CALENDAR_EVENT_MISMATCH');
++  f.ride()[8] = '';
++  rejectedBeforeCalendarWrite(f, 'cancelReservation', { rideId: 'RIDE-1' }, 'CALENDAR_EVENT_MISMATCH');
++  assert.equal(f.state.calendars.get(primaryCalendarId).events['CAL-1'].title, 'Other calendar event');
++});
++check('GAS-74', 'calendar-target', [], 'Normal create/replay/cancel/replay touches only the configured calendar despite request overrides', () => {
++  const f = fixture();
++  const userInput = { calendarId: primaryCalendarId, calendarEventId: 'CAL-2', TEST_CALENDAR_ID: primaryCalendarId };
++  const reserved = f.post('createReservation', { ...reservation, ...userInput }, parentKey);
++  assert.equal(reserved.success, true);
++  const eventId = reserved.data.calendarEventId;
++  assert.ok(f.state.events[eventId]); assert.deepEqual(f.state.calendars.get(primaryCalendarId).events, {});
++  f.state.calendars.get(primaryCalendarId).events[eventId] = { title: 'Independent copy' };
++  assert.equal(f.post('createReservation', reservation, parentKey).replayed, true);
++  assert.equal(f.post('cancelReservation', { rideId: reservation.rideId, ...userInput }, parentKey).success, true);
++  delete f.state.props.TEST_CALENDAR_ID;
++  assert.equal(f.post('cancelReservation', { rideId: reservation.rideId }, parentKey).replayed, true);
++  assert.equal(f.state.events[eventId], undefined); assert.ok(f.state.events['CAL-2']);
++  assert.equal(f.state.calendars.get(primaryCalendarId).events[eventId].title, 'Independent copy');
++  assert.deepEqual(f.state.calls.filter(call => call.startsWith('calendar.lookup:')), Array(2).fill(`calendar.lookup:${testCalendarId}`));
++  assert.equal(f.state.calls.filter(call => call === 'calendar.create').length, 1);
++  assert.equal(f.state.calls.filter(call => call === `calendar.delete:${eventId}`).length, 1);
++  released(f);
++});
++
+ const passed = results.filter(x => x.status === 'PASS').length;
+ const report = {
+   suite: 'gas-vm-contract-and-fault-injection', generatedAt: timestamp, execution: 'offline Node VM; Google services stubbed; no network/deployment',
+   executedAt: timestamp, mode: 'GAS VM stubs, no real Google',
+   counts: { total: results.length, passed, failed: results.length - passed },
+   categoryCounts: Object.fromEntries([...new Set(results.map(x => x.category))].map(category => [category, results.filter(x => x.category === category).length])),
+-  sourceHashes: { 'gas/Code.gs': hash(fs.readFileSync(gasPath)), 'scripts/test_gas.cjs': hash(fs.readFileSync(__filename)) },
++  sourceHashes: { 'gas/Code.gs': hash(fs.readFileSync(gasPath)), 'gas/appsscript.json': hash(fs.readFileSync(path.join(root, 'gas/appsscript.json'))), 'scripts/test_gas.cjs': hash(fs.readFileSync(__filename)) },
+   limitations: ['Script lock contention is simulated, not a live concurrent GAS execution.', 'Real deployment identity, permissions, Calendar/Sheets behavior, network timeouts and cross-device parent isolation remain unverified.'],
+   results,
+ };

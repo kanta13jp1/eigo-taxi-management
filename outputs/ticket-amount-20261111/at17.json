@@ -1,0 +1,79 @@
+{
+  "checkedAt": "2026-11-11T07:03:18.446Z",
+  "before": false,
+  "case": "AT-17",
+  "scope": "React + actual demo API in JSDOM with synthetic storage",
+  "invalid": [
+    {
+      "field": "ticketCount",
+      "value": "-1",
+      "balance": 7,
+      "historyUnchanged": true
+    },
+    {
+      "field": "ticketCount",
+      "value": "0",
+      "balance": 7,
+      "historyUnchanged": true
+    },
+    {
+      "field": "ticketCount",
+      "value": "1.5",
+      "balance": 7,
+      "historyUnchanged": true
+    },
+    {
+      "field": "ticketCount",
+      "value": "NaN",
+      "balance": 7,
+      "historyUnchanged": true
+    },
+    {
+      "field": "ticketCount",
+      "value": "Infinity",
+      "balance": 7,
+      "historyUnchanged": true
+    },
+    {
+      "field": "ticketCount",
+      "value": "101",
+      "balance": 7,
+      "historyUnchanged": true
+    },
+    {
+      "field": "amount",
+      "value": "-1",
+      "balance": 7,
+      "historyUnchanged": true
+    },
+    {
+      "field": "amount",
+      "value": "1.5",
+      "balance": 7,
+      "historyUnchanged": true
+    },
+    {
+      "field": "amount",
+      "value": "NaN",
+      "balance": 7,
+      "historyUnchanged": true
+    },
+    {
+      "field": "amount",
+      "value": "Infinity",
+      "balance": 7,
+      "historyUnchanged": true
+    }
+  ],
+  "displayed": "",
+  "afterInvalid": 7,
+  "historyAfterInvalid": [
+    {
+      "id": "prior"
+    }
+  ],
+  "calls": [
+    0,
+    4980
+  ]
+}

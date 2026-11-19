@@ -1,0 +1,14 @@
+{
+  "mode": "public",
+  "at": "2026-11-14T10:45:34.277Z",
+  "externalPostRequestsSent": 0,
+  "checks": [
+    "AT-19 fresh admin entry, no ledger/session or reauthentication notice",
+    "AT-19 public bundle rejected an unrestorable synthetic saved session; notice visible, session cleared; no real identity",
+    "AT-19 voluntary demo logout does not show the recovery notice",
+    "AT-20 parent demo has only STU-001, no other family name, ride location or admin controls"
+  ],
+  "mockActions": [],
+  "base": "https://eigo-taxi-test.web.app",
+  "pass": true
+}

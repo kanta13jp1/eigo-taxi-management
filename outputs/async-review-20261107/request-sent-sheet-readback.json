@@ -1,0 +1,48 @@
+{
+  "checkedAt": "2026-11-07T10:22:49.444Z",
+  "updatedCellsMatched": true,
+  "customerResultsAndValidationPreserved": true,
+  "customerPassed": 0,
+  "customerTotal": 6,
+  "formulaPreserved": true,
+  "historyId": "VR-20261107-14",
+  "historyRow": 59,
+  "plannedUpdates": [
+    {
+      "sheetId": 2012604155,
+      "row": 11,
+      "col": 2,
+      "values": [
+        "11/7、ユーザーがGoogle Chatで随時実施の6件を依頼済み。本人が都合のよい時に実施し、判定・日時・実測値を記録する段階。事前の日程調整や実施中の役割切替は不要。"
+      ]
+    },
+    {
+      "sheetId": 1014039656,
+      "row": 13,
+      "col": 5,
+      "values": [
+        "随時実施の準備完了。11/7にユーザーがGoogle Chatで6件を依頼済み。本人の顧客確認は未実施0/6。",
+        "本人が6件を順番に実施し判定・日時・実測値を記録。中断後は未実施だけ再開。Calendar共有通知の受領・表示と初回本人Googleログインも本人が確認。",
+        "小林さん／開発担当",
+        "依頼送付済み・本人の随時実施結果待ち。立会い・当日の準備不要。",
+        "日付指定なし"
+      ]
+    },
+    {
+      "sheetId": 1920826968,
+      "row": 59,
+      "col": 1,
+      "values": [
+        "VR-20261107-14",
+        "2026-11-07",
+        "CUST-01〜06／依頼送付",
+        "ユーザーによる顧客確認依頼の送信を確認",
+        "依頼送付のみ・受入結果ではない",
+        "ユーザー提示のGoogle Chat本文・送信済み画像で、固定2URL・6件・中断再開の依頼を送付済みと確認。相対表示は「10分」のため正確な送信時刻は未確定。",
+        "outputs/async-review-20261107/request-sent-receipt.json",
+        "受信者の既読・初回Googleログイン・Calendar表示・6件の結果は未確認。全件未実施0/6、本番HOLD。Codexによる送信なし。",
+        "本人の随時実施結果を待つ。結果到着まで固定2予約・開始残数を維持。"
+      ]
+    }
+  ]
+}

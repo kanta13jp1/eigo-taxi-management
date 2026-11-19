@@ -1,0 +1,6497 @@
+{
+  "schemaVersion": 1,
+  "version": "2026-11-07-r17",
+  "facts": {
+    "authentication": "google",
+    "setupOwner": "developer",
+    "dailyAccountOwner": "admin",
+    "consumeAt": "completion",
+    "oneWay": 1,
+    "roundTrip": 2,
+    "calendarPermissionAdded": true,
+    "productionStarted": false,
+    "originalLedgerAutoSync": false,
+    "thirdPartyPassed": 0,
+    "thirdPartyTotal": 30,
+    "thirdPartyRequiredForRelease": false,
+    "customerAcceptancePassed": 0,
+    "customerAcceptanceTotal": 6,
+    "calendarPermissionApprovedForTest": true,
+    "remainingRealAcceptance": [
+      "AT-24",
+      "AT-25",
+      "AT-26",
+      "AT-27",
+      "AT-28",
+      "AT-29",
+      "AT-30"
+    ],
+    "release": "HOLD",
+    "restoredAdminRelogin": "BOTH_ADMINS_CONFIRMED",
+    "publicFrontendFilesMatched": 7,
+    "restoredActiveAdmins": 2,
+    "verificationGasVersion": 6,
+    "verificationCalendarReadConfirmed": true,
+    "customerPreparationStatus": "SELF_PACED_PREPARED_CUSTOMER_FIRST_LOGIN_PENDING",
+    "customerExecutionMode": "self-paced-test-reviewer"
+  },
+  "customerAcceptance": {
+    "effectiveDate": "2026-11-07",
+    "reviewer": "小林さん",
+    "cases": [
+      {
+        "id": "CUST-01",
+        "title": "本人のGoogleログインと家庭の残数",
+        "role": "保護者",
+        "technicalRefs": [
+          "AT-01",
+          "AT-03",
+          "AT-20"
+        ],
+        "steps": "家庭専用の固定検証URLを開き、「Googleでログイン」で登録済みの本人アカウントを選ぶ。子どもの選択欄とチケット残高を見る。初めての開始時は5枚、途中再開時は共有表に記録した最後の残数と照合する。",
+        "expected": "表示されるのは割り当てた検証生徒だけで、初期状態は5枚。別の家庭のお子様は選択肢に出ない。",
+        "evidenceToRecord": "表示されたテスト用のお子様名と残数、ほかの家庭名の有無。",
+        "status": "NOT_RUN"
+      },
+      {
+        "id": "CUST-02",
+        "title": "1回分の予約と検証カレンダーの照合",
+        "role": "保護者・検証カレンダー閲覧",
+        "technicalRefs": [
+          "AT-06",
+          "AT-24"
+        ],
+        "steps": "「送迎の予約を申し込む」から、実施日または翌日の任意の時刻、「お迎え」、登録済みの架空の乗車場所、メモ「CUST-02 取消確認用」を指定し「送迎予定を登録する」を1回押す。「現在予約中の送迎」と検証カレンダーの同日の予定を開く。CUST-04の事前準備した2件には触れない。",
+        "expected": "事前準備した完了確認用2件とは別に、取消確認用が1件増える（初期2件→3件）。生徒・日付・時刻・場所がカレンダーと一致する。繰返しのない1回分の予約で、チケットは5枚のまま。",
+        "evidenceToRecord": "テスト名・日時・場所、予約件数、カレンダーの予定説明にある予約ID、残数。",
+        "status": "NOT_RUN"
+      },
+      {
+        "id": "CUST-03",
+        "title": "予約を取り消して残数を確認",
+        "role": "保護者・検証カレンダー閲覧",
+        "technicalRefs": [
+          "AT-10",
+          "AT-25"
+        ],
+        "steps": "CUST-02で自分が作成した取消確認用の予約だけを選び、「キャンセル」を押して確認する。家庭画面と検証カレンダーを再読込する。事前準備したCUST-04の2件は取り消さない。",
+        "expected": "自分で作成した取消確認用だけが「現在予約中の送迎」とカレンダーから消える（3件→2件）。完了確認用の2件は残る。取消前も取消後もチケットは5枚。",
+        "evidenceToRecord": "取り消した予約の日時、両画面で確認した結果、前後の残数。",
+        "status": "NOT_RUN"
+      },
+      {
+        "id": "CUST-04",
+        "title": "送迎完了で片道1枚・往復2枚を消費",
+        "role": "管理者",
+        "technicalRefs": [
+          "AT-13",
+          "AT-14"
+        ],
+        "steps": "家庭画面からログアウトし、固定の管理者URLに同じGoogleアカウントでログインする。「送迎スケジュール一覧」で、固定日の模擬実績表に対応する乗車場所に「CUST-04 完了用A・片道」「CUST-04 完了用B・往復」と表示された予約の2件を特定する。日付が過ぎていても同じ一覧を使う。未完了の片道を「完了」にして残数を確認し、次に未完了の往復を同じように完了する。途中再開時は完了済みを繰り返さない。",
+        "expected": "準備時に残数5枚。片道の完了後は4枚、往復の完了後は2枚。2件とも完了として表示される。",
+        "evidenceToRecord": "片道・往復のテスト用の日時、各完了表示と5→4→2の実測値。",
+        "status": "NOT_RUN"
+      },
+      {
+        "id": "CUST-05",
+        "title": "残少のお知らせとチケット追加",
+        "role": "保護者・管理者",
+        "technicalRefs": [
+          "AT-04",
+          "AT-05"
+        ],
+        "steps": "管理者画面からログアウトし、家庭用の同じ固定URLで残り2枚の案内文を読む。ログアウトして管理者用の固定URLへ入り、同じ検証生徒の「チケット追加」で10枚・受取金額0円を1回だけ登録する。ログアウト・再読込後に管理者の台帳が非表示であることをCUST-06の管理者分へ記録する。家庭用固定URLへ入り直して12枚と案内の消失を確認する。追加済みなら再追加しない。",
+        "expected": "残り2枚でMauro・Brendaに連絡する案内が表示される。追加後は両方の画面で12枚となり、家庭画面の残少案内が消える。",
+        "evidenceToRecord": "連絡先の表示、追加した枚数・検証用金額、追加前後の残数。実際の支払いと連絡は不要。",
+        "status": "NOT_RUN"
+      },
+      {
+        "id": "CUST-06",
+        "title": "ログアウト後に台帳が見えないことを確認",
+        "role": "保護者・管理者",
+        "technicalRefs": [
+          "AT-01",
+          "AT-19",
+          "AT-26"
+        ],
+        "steps": "今回使った家庭画面・管理者画面で、それぞれログアウトする。同じURLを開き直すか再読込し、ログイン前の表示を確かめる。",
+        "expected": "両方ともログイン画面に戻り、氏名・チケット残数・予約履歴・生徒台帳が表示されない。",
+        "evidenceToRecord": "両方の役割について、再読込後に表示された画面名と台帳の表示有無。",
+        "status": "NOT_RUN"
+      }
+    ],
+    "preparation": {
+      "mode": "single-account-self-paced",
+      "accountRegistrationStatus": "REVIEWER_ACTIVE_WAITING_FIRST_GOOGLE_LOGIN",
+      "fixture": {
+        "studentId": "STU-CUST-20261107",
+        "name": "顧客確認_架空生徒",
+        "initialBalance": 5,
+        "persistedReadbackConfirmed": true,
+        "existingThreeStudentsUnchanged": true
+      },
+      "calendarReadEvidence": "outputs/customer-ready-20261107/calendar-read-result.json",
+      "gasDeploymentEvidence": "outputs/async-review-20261107/live/gas-deployment-v6.json",
+      "bookingCancellationReadiness": "CANCELLED_LEDGER_CALENDAR_SITE_BALANCE_CONFIRMED_CREATE_RESPONSE_REVIEW",
+      "completionFixturesReadiness": "FIXED_TWO_SCHEDULED_LEDGER_CALENDAR_SITE_BALANCE_CONFIRMED",
+      "productionStarted": false,
+      "accountRegistrationEvidence": "outputs/async-review-20261107/live/reviewer-registration.json",
+      "bookingCancellationEvidence": "outputs/customer-ready-20261107/booking-smoke-result.json",
+      "calendarCustomerReadAccess": "SHARED_READER_PERSISTED_RECIPIENT_OPEN_PENDING",
+      "customerDateStatus": "NOT_REQUIRED",
+      "originalTwoAdministratorsRetained": true,
+      "calendarCustomerShareEvidence": "outputs/customer-ready-20261107/calendar-sharing.json",
+      "storedRole": "reviewer",
+      "portalRoles": [
+        "parent",
+        "admin"
+      ],
+      "requiresDeveloperDuringExecution": false,
+      "completionView": "A03",
+      "completionDatePolicy": "fixed-fixture-date",
+      "pauseResume": "resume-only-unfinished-steps",
+      "reviewEnvironmentGate": "ACCEPTANCE_REVIEW_SPREADSHEET_ID",
+      "reviewEnvironmentGatePolicy": "exact-bound-test-ledger-only",
+      "reviewerConfigurationStatus": "GATE_AND_REVIEWER_PERSISTED_READBACK_CONFIRMED",
+      "completionFixturesEvidence": "outputs/async-review-20261107/live/fixed-fixtures.json",
+      "hostingDeploymentEvidence": "outputs/async-review-20261107/live/hosted-delivery.json",
+      "bookingResponseRetest": "TWO_SUBSEQUENT_CREATIONS_NORMAL_EARLIER_CAUSE_UNRESOLVED",
+      "fixedCompletionDate": "2026-11-07",
+      "fixedCompletionTime": "16:00",
+      "customerFirstLoginStatus": "NOT_RUN",
+      "customerExecutionWindow": "ANY_TIME_AFTER_PREPARATION"
+    }
+  },
+  "flows": [
+    {
+      "id": "BF-01",
+      "title": "導入・接続設定",
+      "actor": "導入担当",
+      "steps": "検証用Google資源を準備 → 接続 → 端末間確認",
+      "expected": "接続・所有者・権限が確認できる"
+    },
+    {
+      "id": "BF-02",
+      "title": "生徒利用開始",
+      "actor": "管理者",
+      "steps": "生徒情報を受領 → 台帳登録 → 利用者に案内",
+      "expected": "予約対象として選択できる"
+    },
+    {
+      "id": "BF-03",
+      "title": "残数確認・チケット購入",
+      "actor": "保護者・管理者",
+      "steps": "残数確認 → 残少案内 → 代金受領確認 → 回数追加",
+      "expected": "残高と購入履歴が整合する"
+    },
+    {
+      "id": "BF-04",
+      "title": "都度送迎予約",
+      "actor": "保護者・管理者",
+      "steps": "生徒・日時・区分・場所を指定 → 登録 → 予定確認",
+      "expected": "残数を減らさず予約・カレンダーに記録し、予定説明欄に予約IDを表示"
+    },
+    {
+      "id": "BF-05",
+      "title": "送迎取消",
+      "actor": "保護者・管理者",
+      "steps": "対象予約を確認 → 取消確認 → 履歴確認",
+      "expected": "予定取消・カレンダー削除・残高維持"
+    },
+    {
+      "id": "BF-06",
+      "title": "当日運行・実績処理",
+      "actor": "管理者",
+      "steps": "当日予定確認 → 地図確認 → 送迎実施 → 完了登録",
+      "expected": "片道1回・往復2回を一度だけ消費"
+    },
+    {
+      "id": "BF-07",
+      "title": "アクセス管理・障害対応",
+      "actor": "運用担当",
+      "steps": "本人確認 → 権限判定 → 操作 → 障害検知・復旧",
+      "expected": "他家庭の情報を保護し記録を失わない"
+    },
+    {
+      "id": "BF-08",
+      "title": "受入・リリース・保守",
+      "actor": "導入担当・受入担当",
+      "steps": "仕様確認 → テスト → 不具合修正 → 再試験 → 受入 → リリース",
+      "expected": "合格証跡・復旧手順・担当者を残す"
+    },
+    {
+      "id": "BF-09",
+      "title": "利用者登録・停止・退会",
+      "actor": "管理者・本人",
+      "steps": "本人情報受領→利用登録→初回紐付け→変更・停止・退会",
+      "expected": "管理者が日常運用し家庭範囲を維持"
+    },
+    {
+      "id": "BF-10",
+      "title": "台帳の保守修正",
+      "actor": "管理者・保守",
+      "steps": "対象確認→保全・操作停止→修正→関連照合→画面再取得",
+      "expected": "検証と元台帳を混同せず関連値を維持"
+    },
+    {
+      "id": "BF-11",
+      "title": "文書・実装・検証の変更管理",
+      "actor": "開発・レビュー担当",
+      "steps": "ID登録→変更→自動生成→機械検査→差分レビュー",
+      "expected": "工程間の参照と欠落を検知し受入と区別"
+    }
+  ],
+  "capabilities": [
+    {
+      "number": 1,
+      "title": "開発者設定とGoogleログイン",
+      "bf": "BF-01",
+      "requirement": "許可された管理者だけが管理画面・検証台帳へ接続。再読込で本人を再確認し、ログアウト後は台帳を表示しない。",
+      "precondition": "顧客がGoogle方式を了承し、検証用会社管理者を事前登録。",
+      "steps": "管理者URLを開く。接続先URL・キー入力欄がないことを確認しGoogleで本人を選択。台帳取得後に再読込し、ログアウトする。",
+      "expected": "許可された管理者だけが管理画面・検証台帳へ接続。再読込で本人を再確認し、ログアウト後は台帳を表示しない。",
+      "origin": "チャット要望から具体化",
+      "req": "REQ-01",
+      "design": "FS-01",
+      "testSpec": "TS-01",
+      "task": "TASK-01",
+      "code": "CODE-01",
+      "testCode": "TEST-01",
+      "operation": "OPS-01",
+      "user": "USR-01",
+      "acceptance": "AT-01",
+      "screens": [
+        "A01",
+        "E01",
+        "E04"
+      ],
+      "interfaces": [
+        "IF-01",
+        "IF-15"
+      ],
+      "implementation": [
+        {
+          "path": "src/services/google-auth.ts",
+          "locator": "signInGoogle"
+        },
+        {
+          "path": "src/components/LoginScreen.tsx",
+          "locator": "LoginScreen"
+        }
+      ],
+      "tests": [
+        "GAS-02",
+        "GAS-03",
+        "GAS-04",
+        "GAS-05",
+        "GAS-12",
+        "GAS-43",
+        "GAS-44",
+        "GAS-45",
+        "GAS-46",
+        "GAS-47",
+        "GAS-48",
+        "GAS-49",
+        "GAS-50",
+        "GAS-51",
+        "GAS-52",
+        "GAS-53",
+        "GAS-54",
+        "PT-01",
+        "PT-02",
+        "PT-03",
+        "PT-04",
+        "PT-05",
+        "PT-06",
+        "PT-07",
+        "PT-08",
+        "PT-09",
+        "PT-10",
+        "PT-11",
+        "PT-12",
+        "PT-13",
+        "PT-14",
+        "PT-15",
+        "PT-16",
+        "PT-17",
+        "PT-18",
+        "PT-19",
+        "PT-20",
+        "SDK-01",
+        "SDK-02",
+        "SDK-03",
+        "SDK-04",
+        "SDK-05",
+        "SDK-06",
+        "SDK-07",
+        "UI-07",
+        "SDK-08",
+        "SDK-09",
+        "SDK-10",
+        "SDK-11",
+        "SDK-12",
+        "SDK-13",
+        "SDK-14",
+        "SDK-15",
+        "SDK-16",
+        "UI-08",
+        "LOCAL-UI-01",
+        "LOCAL-UI-13"
+      ],
+      "manualReason": "",
+      "testGap": "",
+      "testScope": "既存の関連テスト群に加え、未配備の認証準備再試行をFirebase SDKスタブおよび疑似Reactフックで限定確認。実ブラウザー・実Googleログイン・iPhone認証エラーの再現や解消は未検証。",
+      "status": "PENDING_ACCEPTANCE",
+      "acceptanceStatus": "NOT_RUN",
+      "designText": "画面 A01, E01, E04。I/F IF-01, IF-15。許可された管理者だけが管理画面・検証台帳へ接続。再読込で本人を再確認し、ログアウト後は台帳を表示しない。 検証専用の同一アカウント両画面確認はREQ-39に従い、通常の管理者・保護者の役割分離を変更しない。",
+      "operationText": "担当者が前提を確認し、管理者URLを開く。接続先URL・キー入力欄がないことを確認しGoogleで本人を選択。台帳取得後に再読込し、ログアウトする。 結果不明時は同一対象と履歴を照合してから判断する。",
+      "userText": "開発者設定とGoogleログイン：管理者URLを開く。接続先URL・キー入力欄がないことを確認しGoogleで本人を選択。台帳取得後に再読込し、ログアウトする。",
+      "latestObservation": "RA-01/02：復元後の管理者2名それぞれの新規Googleログイン、本人名義・生徒3名・送迎履歴3件、再読込保持、ログアウト後の再読込で台帳非表示を確認。"
+    },
+    {
+      "number": 2,
+      "title": "生徒登録",
+      "bf": "BF-02",
+      "requirement": "生徒が1件増え全入力値と初期残高10が保存される。",
+      "precondition": "ダミー台帳。",
+      "steps": "生徒登録画面で氏名・保護者・住所・連絡先・初期10回を登録。",
+      "expected": "生徒が1件増え全入力値と初期残高10が保存される。",
+      "origin": "チャット要望から具体化",
+      "req": "REQ-02",
+      "design": "FS-02",
+      "testSpec": "TS-02",
+      "task": "TASK-02",
+      "code": "CODE-02",
+      "testCode": "TEST-02",
+      "operation": "OPS-02",
+      "user": "USR-02",
+      "acceptance": "AT-02",
+      "screens": [
+        "A04",
+        "D03"
+      ],
+      "interfaces": [
+        "IF-04",
+        "IF-11"
+      ],
+      "implementation": [
+        {
+          "path": "gas/Code.gs",
+          "locator": "createStudent_"
+        }
+      ],
+      "tests": [
+        "GAS-01",
+        "GAS-18",
+        "GAS-19",
+        "GAS-20",
+        "GAS-21",
+        "GAS-36",
+        "GAS-37",
+        "GAS-38"
+      ],
+      "manualReason": "",
+      "testGap": "",
+      "status": "PENDING_ACCEPTANCE",
+      "acceptanceStatus": "NOT_RUN",
+      "designText": "画面 A04, D03。I/F IF-04, IF-11。生徒が1件増え全入力値と初期残高10が保存される。",
+      "operationText": "担当者が前提を確認し、生徒登録画面で氏名・保護者・住所・連絡先・初期10回を登録。 結果不明時は同一対象と履歴を照合してから判断する。",
+      "userText": "生徒登録：生徒登録画面で氏名・保護者・住所・連絡先・初期10回を登録。"
+    },
+    {
+      "number": 3,
+      "title": "保護者の残数確認",
+      "bf": "BF-03",
+      "requirement": "氏名と7回分・片道1枚の説明が表示される。",
+      "precondition": "初期生徒STU-001が7回。",
+      "steps": "登録済み保護者が家庭専用URLからGoogleで入り、自家庭のお子様の氏名・残高・説明を確認。他家庭が選べないことを確認。",
+      "expected": "氏名と7回分・片道1枚の説明が表示される。",
+      "origin": "チャット要望から具体化",
+      "req": "REQ-03",
+      "design": "FS-03",
+      "testSpec": "TS-03",
+      "task": "TASK-03",
+      "code": "CODE-03",
+      "testCode": "TEST-03",
+      "operation": "OPS-03",
+      "user": "USR-03",
+      "acceptance": "AT-03",
+      "screens": [
+        "P02"
+      ],
+      "interfaces": [
+        "IF-03"
+      ],
+      "implementation": [
+        {
+          "path": "src/components/ParentPortal.tsx",
+          "locator": "ParentPortal"
+        }
+      ],
+      "tests": [
+        "UI-01",
+        "GAS-06",
+        "LOCAL-UI-02"
+      ],
+      "manualReason": "",
+      "testGap": "",
+      "status": "PENDING_ACCEPTANCE",
+      "acceptanceStatus": "NOT_RUN",
+      "designText": "画面 P02。I/F IF-03。氏名と7回分・片道1枚の説明が表示される。",
+      "operationText": "担当者が前提を確認し、登録済み保護者が家庭専用URLからGoogleで入り、自家庭のお子様の氏名・残高・説明を確認。他家庭が選べないことを確認。 結果不明時は同一対象と履歴を照合してから判断する。",
+      "userText": "保護者の残数確認：登録済み保護者が家庭専用URLからGoogleで入り、自家庭のお子様の氏名・残高・説明を確認。他家庭が選べないことを確認。",
+      "testScope": "ローカルのコンポーネントまたはGAS処理契約の自動検査。本人操作の実受入合格は別。"
+    },
+    {
+      "number": 4,
+      "title": "残少・ゼロ案内",
+      "bf": "BF-03",
+      "requirement": "各値でMauro・Brendaへの連絡案内が表示される。",
+      "precondition": "残高2・1・0の各生徒。",
+      "steps": "各残高で利用者画面を開く。",
+      "expected": "各値でMauro・Brendaへの連絡案内が表示される。",
+      "origin": "チャット要望から具体化",
+      "req": "REQ-04",
+      "design": "FS-04",
+      "testSpec": "TS-04",
+      "task": "TASK-04",
+      "code": "CODE-04",
+      "testCode": "TEST-04",
+      "operation": "OPS-04",
+      "user": "USR-04",
+      "acceptance": "AT-04",
+      "screens": [
+        "P02"
+      ],
+      "interfaces": [
+        "IF-03"
+      ],
+      "implementation": [
+        {
+          "path": "src/components/ParentPortal.tsx",
+          "locator": "ParentPortal"
+        }
+      ],
+      "tests": [
+        "UI-02",
+        "LOCAL-UI-14"
+      ],
+      "manualReason": "",
+      "testGap": "",
+      "status": "PENDING_ACCEPTANCE",
+      "acceptanceStatus": "NOT_RUN",
+      "designText": "画面 P02。I/F IF-03。各値でMauro・Brendaへの連絡案内が表示される。",
+      "operationText": "担当者が前提を確認し、各残高で利用者画面を開く。 結果不明時は同一対象と履歴を照合してから判断する。",
+      "userText": "残少・ゼロ案内：各残高で利用者画面を開く。",
+      "testScope": "ローカルのコンポーネントまたはGAS処理契約の自動検査。本人操作の実受入合格は別。"
+    },
+    {
+      "number": 5,
+      "title": "チケット追加",
+      "bf": "BF-03",
+      "requirement": "残高17、履歴1件増、枚数10・金額・備考一致。",
+      "precondition": "初期残高7。",
+      "steps": "10回を追加し台帳・購入履歴を確認。",
+      "expected": "残高17、履歴1件増、枚数10・金額・備考一致。",
+      "origin": "チャット要望から具体化",
+      "req": "REQ-05",
+      "design": "FS-05",
+      "testSpec": "TS-05",
+      "task": "TASK-05",
+      "code": "CODE-05",
+      "testCode": "TEST-05",
+      "operation": "OPS-05",
+      "user": "USR-05",
+      "acceptance": "AT-05",
+      "screens": [
+        "D02"
+      ],
+      "interfaces": [
+        "IF-10",
+        "IF-11"
+      ],
+      "implementation": [
+        {
+          "path": "gas/Code.gs",
+          "locator": "addTickets_"
+        }
+      ],
+      "tests": [
+        "GAS-63"
+      ],
+      "manualReason": "",
+      "testGap": "",
+      "status": "PENDING_ACCEPTANCE",
+      "acceptanceStatus": "NOT_RUN",
+      "designText": "画面 D02。I/F IF-10, IF-11。残高17、履歴1件増、枚数10・金額・備考一致。",
+      "operationText": "担当者が前提を確認し、10回を追加し台帳・購入履歴を確認。 結果不明時は同一対象と履歴を照合してから判断する。",
+      "userText": "チケット追加：10回を追加し台帳・購入履歴を確認。",
+      "testScope": "ローカルのコンポーネントまたはGAS処理契約の自動検査。本人操作の実受入合格は別。"
+    },
+    {
+      "number": 6,
+      "title": "保護者のお迎え予約",
+      "bf": "BF-04",
+      "requirement": "新規予約1件、scheduled、parent、残高7のまま。",
+      "precondition": "残高7・明示選択したデモ。",
+      "steps": "利用者画面から2026-10-20 16:30・お迎え・登録済み住所を使って予約。",
+      "expected": "新規予約1件、scheduled、parent、残高7のまま。",
+      "origin": "チャット要望から具体化",
+      "req": "REQ-06",
+      "design": "FS-06",
+      "testSpec": "TS-06",
+      "task": "TASK-06",
+      "code": "CODE-06",
+      "testCode": "TEST-06",
+      "operation": "OPS-06",
+      "user": "USR-06",
+      "acceptance": "AT-06",
+      "screens": [
+        "D01",
+        "P02"
+      ],
+      "interfaces": [
+        "IF-02",
+        "IF-13"
+      ],
+      "implementation": [
+        {
+          "path": "gas/Code.gs",
+          "locator": "createReservation_"
+        }
+      ],
+      "tests": [
+        "GAS-06",
+        "GAS-07",
+        "GAS-08",
+        "GAS-09",
+        "GAS-10",
+        "GAS-11",
+        "LOCAL-UI-03",
+        "GAS-71",
+        "GAS-72",
+        "GAS-74"
+      ],
+      "manualReason": "",
+      "testGap": "",
+      "status": "PENDING_ACCEPTANCE",
+      "acceptanceStatus": "NOT_RUN",
+      "designText": "画面 D01, P02。I/F IF-02, IF-13。新規予約1件、scheduled、parent、残高7のまま。",
+      "operationText": "担当者が前提を確認し、利用者画面から2026-10-20 16:30・お迎え・登録済み住所を使って予約。 結果不明時は同一対象と履歴を照合してから判断する。",
+      "userText": "保護者のお迎え予約：利用者画面から2026-10-20 16:30・お迎え・登録済み住所を使って予約。"
+    },
+    {
+      "number": 7,
+      "title": "送り予約",
+      "bf": "BF-04",
+      "requirement": "dropoffの予約が1件増え、残高7のまま。",
+      "precondition": "残高7・未接続デモ。",
+      "steps": "サービス経由で送り17:30を登録し画面を再表示。",
+      "expected": "dropoffの予約が1件増え、残高7のまま。",
+      "origin": "チャット要望から具体化",
+      "req": "REQ-07",
+      "design": "FS-07",
+      "testSpec": "TS-07",
+      "task": "TASK-07",
+      "code": "CODE-07",
+      "testCode": "TEST-07",
+      "operation": "OPS-07",
+      "user": "USR-07",
+      "acceptance": "AT-07",
+      "screens": [
+        "D01"
+      ],
+      "interfaces": [
+        "IF-02",
+        "IF-13"
+      ],
+      "implementation": [
+        {
+          "path": "gas/Code.gs",
+          "locator": "createReservation_"
+        }
+      ],
+      "tests": [
+        "GAS-64",
+        "LOCAL-UI-04"
+      ],
+      "manualReason": "",
+      "testGap": "",
+      "status": "PENDING_ACCEPTANCE",
+      "acceptanceStatus": "NOT_RUN",
+      "designText": "画面 D01。I/F IF-02, IF-13。dropoffの予約が1件増え、残高7のまま。",
+      "operationText": "担当者が前提を確認し、サービス経由で送り17:30を登録し画面を再表示。 結果不明時は同一対象と履歴を照合してから判断する。",
+      "userText": "送り予約：サービス経由で送り17:30を登録し画面を再表示。",
+      "testScope": "ローカルのコンポーネントまたはGAS処理契約の自動検査。本人操作の実受入合格は別。"
+    },
+    {
+      "number": 8,
+      "title": "往復予約",
+      "bf": "BF-04",
+      "requirement": "roundtripの予約が1件増え、予約時残高7のまま。",
+      "precondition": "残高7・未接続デモ。",
+      "steps": "サービス経由で往復を登録し画面を再表示。",
+      "expected": "roundtripの予約が1件増え、予約時残高7のまま。",
+      "origin": "チャット要望から具体化",
+      "req": "REQ-08",
+      "design": "FS-08",
+      "testSpec": "TS-08",
+      "task": "TASK-08",
+      "code": "CODE-08",
+      "testCode": "TEST-08",
+      "operation": "OPS-08",
+      "user": "USR-08",
+      "acceptance": "AT-08",
+      "screens": [
+        "D01"
+      ],
+      "interfaces": [
+        "IF-02",
+        "IF-13"
+      ],
+      "implementation": [
+        {
+          "path": "gas/Code.gs",
+          "locator": "createReservation_"
+        }
+      ],
+      "tests": [
+        "GAS-65",
+        "LOCAL-UI-05"
+      ],
+      "manualReason": "",
+      "testGap": "",
+      "status": "PENDING_ACCEPTANCE",
+      "acceptanceStatus": "NOT_RUN",
+      "designText": "画面 D01。I/F IF-02, IF-13。roundtripの予約が1件増え、予約時残高7のまま。",
+      "operationText": "担当者が前提を確認し、サービス経由で往復を登録し画面を再表示。 結果不明時は同一対象と履歴を照合してから判断する。",
+      "userText": "往復予約：サービス経由で往復を登録し画面を再表示。",
+      "testScope": "ローカルのコンポーネントまたはGAS処理契約の自動検査。本人操作の実受入合格は別。"
+    },
+    {
+      "number": 9,
+      "title": "管理者の代理予約",
+      "bf": "BF-04",
+      "requirement": "新規予約1件、reservedBy=teacher。",
+      "precondition": "初期台帳。",
+      "steps": "管理者画面から日時・生徒・場所を指定して予約。",
+      "expected": "新規予約1件、reservedBy=teacher。",
+      "origin": "チャット要望から具体化",
+      "req": "REQ-09",
+      "design": "FS-09",
+      "testSpec": "TS-09",
+      "task": "TASK-09",
+      "code": "CODE-09",
+      "testCode": "TEST-09",
+      "operation": "OPS-09",
+      "user": "USR-09",
+      "acceptance": "AT-09",
+      "screens": [
+        "A02",
+        "D01"
+      ],
+      "interfaces": [
+        "IF-02"
+      ],
+      "implementation": [
+        {
+          "path": "src/components/AddRideModal.tsx",
+          "locator": "AddRideModal"
+        }
+      ],
+      "tests": [
+        "UI-03",
+        "LOCAL-UI-06"
+      ],
+      "manualReason": "",
+      "testGap": "",
+      "status": "PENDING_ACCEPTANCE",
+      "acceptanceStatus": "NOT_RUN",
+      "designText": "画面 A02, D01。I/F IF-02。新規予約1件、reservedBy=teacher。",
+      "operationText": "担当者が前提を確認し、管理者画面から日時・生徒・場所を指定して予約。 結果不明時は同一対象と履歴を照合してから判断する。",
+      "userText": "管理者の代理予約：管理者画面から日時・生徒・場所を指定して予約。",
+      "testScope": "ローカルのコンポーネントまたはGAS処理契約の自動検査。本人操作の実受入合格は別。"
+    },
+    {
+      "number": 10,
+      "title": "保護者の予約取消",
+      "bf": "BF-05",
+      "requirement": "対象IDがcancelled、残高7のまま。",
+      "precondition": "保護者予約1件・残高7。",
+      "steps": "利用者画面で対象予約をキャンセルし確認を承諾。",
+      "expected": "対象IDがcancelled、残高7のまま。",
+      "origin": "チャット要望から具体化",
+      "req": "REQ-10",
+      "design": "FS-10",
+      "testSpec": "TS-10",
+      "task": "TASK-10",
+      "code": "CODE-10",
+      "testCode": "TEST-10",
+      "operation": "OPS-10",
+      "user": "USR-10",
+      "acceptance": "AT-10",
+      "screens": [
+        "P02",
+        "D05"
+      ],
+      "interfaces": [
+        "IF-05",
+        "IF-13"
+      ],
+      "implementation": [
+        {
+          "path": "gas/Code.gs",
+          "locator": "cancelReservation_"
+        }
+      ],
+      "tests": [
+        "GAS-06",
+        "GAS-07",
+        "GAS-08",
+        "GAS-09",
+        "GAS-10",
+        "GAS-11",
+        "LOCAL-UI-07",
+        "GAS-71",
+        "GAS-72",
+        "GAS-73",
+        "GAS-74"
+      ],
+      "manualReason": "",
+      "testGap": "",
+      "status": "PENDING_ACCEPTANCE",
+      "acceptanceStatus": "NOT_RUN",
+      "designText": "画面 P02, D05。I/F IF-05, IF-13。対象IDがcancelled、残高7のまま。",
+      "operationText": "担当者が前提を確認し、利用者画面で対象予約をキャンセルし確認を承諾。 結果不明時は同一対象と履歴を照合してから判断する。",
+      "userText": "保護者の予約取消：利用者画面で対象予約をキャンセルし確認を承諾。"
+    },
+    {
+      "number": 11,
+      "title": "管理者の予約取消",
+      "bf": "BF-05",
+      "requirement": "対象IDがcancelled、残数不変。",
+      "precondition": "予約1件。",
+      "steps": "サービス経由で取消後に管理画面を再表示。",
+      "expected": "対象IDがcancelled、残数不変。",
+      "origin": "チャット要望から具体化",
+      "req": "REQ-11",
+      "design": "FS-11",
+      "testSpec": "TS-11",
+      "task": "TASK-11",
+      "code": "CODE-11",
+      "testCode": "TEST-11",
+      "operation": "OPS-11",
+      "user": "USR-11",
+      "acceptance": "AT-11",
+      "screens": [
+        "A03",
+        "D05"
+      ],
+      "interfaces": [
+        "IF-05",
+        "IF-13"
+      ],
+      "implementation": [
+        {
+          "path": "gas/Code.gs",
+          "locator": "cancelReservation_"
+        }
+      ],
+      "tests": [
+        "GAS-66",
+        "GAS-73"
+      ],
+      "manualReason": "",
+      "testGap": "",
+      "status": "PENDING_ACCEPTANCE",
+      "acceptanceStatus": "NOT_RUN",
+      "designText": "画面 A03, D05。I/F IF-05, IF-13。対象IDがcancelled、残数不変。",
+      "operationText": "担当者が前提を確認し、サービス経由で取消後に管理画面を再表示。 結果不明時は同一対象と履歴を照合してから判断する。",
+      "userText": "管理者の予約取消：サービス経由で取消後に管理画面を再表示。",
+      "testScope": "ローカルのコンポーネントまたはGAS処理契約の自動検査。本人操作の実受入合格は別。"
+    },
+    {
+      "number": 12,
+      "title": "当日一覧・地図リンク",
+      "bf": "BF-06",
+      "requirement": "当日予約とGoogle Maps検索URLが表示される（地図先の動作は対象外）。",
+      "precondition": "初期当日予約。",
+      "steps": "管理者画面を開き地図リンクを調べる。",
+      "expected": "当日予約とGoogle Maps検索URLが表示される（地図先の動作は対象外）。",
+      "origin": "チャット要望から具体化",
+      "req": "REQ-12",
+      "design": "FS-12",
+      "testSpec": "TS-12",
+      "task": "TASK-12",
+      "code": "CODE-12",
+      "testCode": "TEST-12",
+      "operation": "OPS-12",
+      "user": "USR-12",
+      "acceptance": "AT-12",
+      "screens": [
+        "A02",
+        "E02"
+      ],
+      "interfaces": [
+        "IF-03",
+        "IF-16"
+      ],
+      "implementation": [
+        {
+          "path": "src/components/TeacherDashboard.tsx",
+          "locator": "TeacherDashboard"
+        }
+      ],
+      "tests": [
+        "UI-04"
+      ],
+      "manualReason": "",
+      "testGap": "",
+      "status": "PENDING_ACCEPTANCE",
+      "acceptanceStatus": "NOT_RUN",
+      "designText": "画面 A02, E02。I/F IF-03, IF-16。当日予約とGoogle Maps検索URLが表示される（地図先の動作は対象外）。",
+      "operationText": "担当者が前提を確認し、管理者画面を開き地図リンクを調べる。 結果不明時は同一対象と履歴を照合してから判断する。",
+      "userText": "当日一覧・地図リンク：管理者画面を開き地図リンクを調べる。",
+      "testScope": "ローカルのコンポーネントまたはGAS処理契約の自動検査。本人操作の実受入合格は別。"
+    },
+    {
+      "number": 13,
+      "title": "片道完了",
+      "bf": "BF-06",
+      "requirement": "completed・完了日時あり・残高6。",
+      "precondition": "残高7・お迎え予約。",
+      "steps": "サービス経由で完了後に画面を再表示。",
+      "expected": "completed・完了日時あり・残高6。",
+      "origin": "チャット要望から具体化",
+      "req": "REQ-13",
+      "design": "FS-13",
+      "testSpec": "TS-13",
+      "task": "TASK-13",
+      "code": "CODE-13",
+      "testCode": "TEST-13",
+      "operation": "OPS-13",
+      "user": "USR-13",
+      "acceptance": "AT-13",
+      "screens": [
+        "A02",
+        "A03"
+      ],
+      "interfaces": [
+        "IF-06",
+        "IF-11"
+      ],
+      "implementation": [
+        {
+          "path": "gas/Code.gs",
+          "locator": "completeRide_"
+        }
+      ],
+      "tests": [
+        "GAS-13",
+        "GAS-14",
+        "GAS-15",
+        "GAS-16",
+        "LOCAL-UI-08"
+      ],
+      "manualReason": "",
+      "testGap": "",
+      "status": "PENDING_ACCEPTANCE",
+      "acceptanceStatus": "NOT_RUN",
+      "designText": "画面 A02, A03。I/F IF-06, IF-11。completed・完了日時あり・残高6。",
+      "operationText": "担当者が前提を確認し、サービス経由で完了後に画面を再表示。 結果不明時は同一対象と履歴を照合してから判断する。",
+      "userText": "片道完了：サービス経由で完了後に画面を再表示。"
+    },
+    {
+      "number": 14,
+      "title": "往復完了",
+      "bf": "BF-06",
+      "requirement": "completed・残高5・消費2。",
+      "precondition": "残高7・往復予約。",
+      "steps": "サービス経由で往復完了後に画面を再表示。",
+      "expected": "completed・残高5・消費2。",
+      "origin": "チャット要望から具体化",
+      "req": "REQ-14",
+      "design": "FS-14",
+      "testSpec": "TS-14",
+      "task": "TASK-14",
+      "code": "CODE-14",
+      "testCode": "TEST-14",
+      "operation": "OPS-14",
+      "user": "USR-14",
+      "acceptance": "AT-14",
+      "screens": [
+        "A02",
+        "A03"
+      ],
+      "interfaces": [
+        "IF-06",
+        "IF-11"
+      ],
+      "implementation": [
+        {
+          "path": "gas/Code.gs",
+          "locator": "completeRide_"
+        }
+      ],
+      "tests": [
+        "GAS-13",
+        "GAS-14",
+        "GAS-15",
+        "GAS-16",
+        "LOCAL-UI-09"
+      ],
+      "manualReason": "",
+      "testGap": "",
+      "status": "PENDING_ACCEPTANCE",
+      "acceptanceStatus": "NOT_RUN",
+      "designText": "画面 A02, A03。I/F IF-06, IF-11。completed・残高5・消費2。",
+      "operationText": "担当者が前提を確認し、サービス経由で往復完了後に画面を再表示。 結果不明時は同一対象と履歴を照合してから判断する。",
+      "userText": "往復完了：サービス経由で往復完了後に画面を再表示。"
+    },
+    {
+      "number": 15,
+      "title": "完了の二重処理防止",
+      "bf": "BF-06",
+      "requirement": "最終残高6、completedを保持、再処理の消費枚数0。",
+      "precondition": "管理者デモ・残高7・片道予約。",
+      "steps": "同じ予約IDに完了を2回要求。",
+      "expected": "最終残高6、completedを保持、再処理の消費枚数0。",
+      "origin": "ユーザーによる不合格6件の修正依頼（実装対象確定）",
+      "req": "REQ-15",
+      "design": "FS-15",
+      "testSpec": "TS-15",
+      "task": "TASK-15",
+      "code": "CODE-15",
+      "testCode": "TEST-15",
+      "operation": "OPS-15",
+      "user": "USR-15",
+      "acceptance": "AT-15",
+      "screens": [
+        "A02",
+        "A03"
+      ],
+      "interfaces": [
+        "IF-06"
+      ],
+      "implementation": [
+        {
+          "path": "gas/Code.gs",
+          "locator": "completeRide_"
+        }
+      ],
+      "tests": [
+        "GAS-13",
+        "GAS-14",
+        "GAS-15",
+        "GAS-16",
+        "LOCAL-UI-08",
+        "LOCAL-UI-09"
+      ],
+      "manualReason": "",
+      "testGap": "",
+      "status": "PENDING_ACCEPTANCE",
+      "acceptanceStatus": "NOT_RUN",
+      "designText": "画面 A02, A03。I/F IF-06。最終残高6、completedを保持、再処理の消費枚数0。",
+      "operationText": "担当者が前提を確認し、同じ予約IDに完了を2回要求。 結果不明時は同一対象と履歴を照合してから判断する。",
+      "userText": "完了の二重処理防止：同じ予約IDに完了を2回要求。"
+    },
+    {
+      "number": 16,
+      "title": "取消済みの完了拒否",
+      "bf": "BF-06",
+      "requirement": "cancelledを保持し残高7のまま。",
+      "precondition": "残高7・取消済み予約。",
+      "steps": "取消済みIDを完了要求。",
+      "expected": "cancelledを保持し残高7のまま。",
+      "origin": "ユーザーによる不合格6件の修正依頼（実装対象確定）",
+      "req": "REQ-16",
+      "design": "FS-16",
+      "testSpec": "TS-16",
+      "task": "TASK-16",
+      "code": "CODE-16",
+      "testCode": "TEST-16",
+      "operation": "OPS-16",
+      "user": "USR-16",
+      "acceptance": "AT-16",
+      "screens": [
+        "A03"
+      ],
+      "interfaces": [
+        "IF-06"
+      ],
+      "implementation": [
+        {
+          "path": "gas/Code.gs",
+          "locator": "completeRide_"
+        }
+      ],
+      "tests": [
+        "GAS-13",
+        "GAS-14",
+        "GAS-15",
+        "GAS-16",
+        "LOCAL-UI-10"
+      ],
+      "manualReason": "",
+      "testGap": "",
+      "status": "PENDING_ACCEPTANCE",
+      "acceptanceStatus": "NOT_RUN",
+      "designText": "画面 A03。I/F IF-06。cancelledを保持し残高7のまま。",
+      "operationText": "担当者が前提を確認し、取消済みIDを完了要求。 結果不明時は同一対象と履歴を照合してから判断する。",
+      "userText": "取消済みの完了拒否：取消済みIDを完了要求。"
+    },
+    {
+      "number": 17,
+      "title": "不正なチケット追加拒否",
+      "bf": "BF-03",
+      "requirement": "全要求が拒否され残高7・購入履歴が不変。",
+      "precondition": "管理者デモ・残高7。",
+      "steps": "枚数に-1/0/小数/NaN/Infinity/101、金額に負数/小数/NaN/Infinityを渡す。",
+      "expected": "全要求が拒否され残高7・購入履歴が不変。",
+      "origin": "ユーザーによる不合格6件の修正依頼（実装対象確定）",
+      "req": "REQ-17",
+      "design": "FS-17",
+      "testSpec": "TS-17",
+      "task": "TASK-17",
+      "code": "CODE-17",
+      "testCode": "TEST-17",
+      "operation": "OPS-17",
+      "user": "USR-17",
+      "acceptance": "AT-17",
+      "screens": [
+        "D02"
+      ],
+      "interfaces": [
+        "IF-10"
+      ],
+      "implementation": [
+        {
+          "path": "gas/Code.gs",
+          "locator": "addTickets_"
+        }
+      ],
+      "tests": [
+        "GAS-18",
+        "GAS-19",
+        "GAS-20",
+        "GAS-21",
+        "GAS-36",
+        "GAS-37",
+        "GAS-38",
+        "LOCAL-UI-11"
+      ],
+      "manualReason": "",
+      "testGap": "",
+      "status": "PENDING_ACCEPTANCE",
+      "acceptanceStatus": "NOT_RUN",
+      "designText": "画面 D02。I/F IF-10。全要求が拒否され残高7・購入履歴が不変。",
+      "operationText": "担当者が前提を確認し、枚数に-1/0/小数/NaN/Infinity/101、金額に負数/小数/NaN/Infinityを渡す。 結果不明時は同一対象と履歴を照合してから判断する。",
+      "userText": "不正なチケット追加拒否：枚数に-1/0/小数/NaN/Infinity/101、金額に負数/小数/NaN/Infinityを渡す。"
+    },
+    {
+      "number": 18,
+      "title": "通信障害時に成功扱いしない",
+      "bf": "BF-07",
+      "requirement": "すべて拒否、ローカル台帳不変、同一内容再試行の予約ID不変、UIにエラー表示してフォーム維持。",
+      "precondition": "ローカル模擬APIへのログイン・通信障害注入。",
+      "steps": "全5更新POSTを通信失敗させる。業務エラー/HTTP503/不正JSONも拒否確認。同一予約を再試行しUIでも予約する。",
+      "expected": "すべて拒否、ローカル台帳不変、同一内容再試行の予約ID不変、UIにエラー表示してフォーム維持。",
+      "origin": "ユーザーによる不合格6件の修正依頼（実装対象確定）",
+      "req": "REQ-18",
+      "design": "FS-18",
+      "testSpec": "TS-18",
+      "task": "TASK-18",
+      "code": "CODE-18",
+      "testCode": "TEST-18",
+      "operation": "OPS-18",
+      "user": "USR-18",
+      "acceptance": "AT-18",
+      "screens": [
+        "D01"
+      ],
+      "interfaces": [
+        "IF-02",
+        "IF-09"
+      ],
+      "implementation": [
+        {
+          "path": "gas/Code.gs",
+          "locator": "mutate_"
+        },
+        {
+          "path": "src/services/api.ts",
+          "locator": "request"
+        }
+      ],
+      "tests": [
+        "GAS-18",
+        "GAS-19",
+        "GAS-20",
+        "GAS-21",
+        "GAS-22",
+        "GAS-23",
+        "GAS-24",
+        "GAS-25",
+        "GAS-26",
+        "GAS-27",
+        "GAS-28",
+        "GAS-29",
+        "GAS-30",
+        "GAS-31",
+        "GAS-32",
+        "GAS-33",
+        "GAS-34",
+        "GAS-35",
+        "GAS-36",
+        "GAS-37",
+        "GAS-38"
+      ],
+      "manualReason": "",
+      "testGap": "",
+      "status": "PENDING_ACCEPTANCE",
+      "acceptanceStatus": "NOT_RUN",
+      "designText": "画面 D01。I/F IF-02, IF-09。すべて拒否、ローカル台帳不変、同一内容再試行の予約ID不変、UIにエラー表示してフォーム維持。",
+      "operationText": "担当者が前提を確認し、全5更新POSTを通信失敗させる。業務エラー/HTTP503/不正JSONも拒否確認。同一予約を再試行しUIでも予約する。 結果不明時は同一対象と履歴を照合してから判断する。",
+      "userText": "通信障害時に成功扱いしない：全5更新POSTを通信失敗させる。業務エラー/HTTP503/不正JSONも拒否確認。同一予約を再試行しUIでも予約する。"
+    },
+    {
+      "number": 19,
+      "title": "未認証の管理操作を拒否",
+      "bf": "BF-07",
+      "requirement": "認証前はログイン画面のみ・台帳未生成。キー失効応答後はセッションと画面の個人情報を消しログイン画面に戻る。",
+      "precondition": "セッション・保存データなしの新規画面。",
+      "steps": "未認証の画面とAPI拒否を確認。その後ローカル模擬APIでログインし、キー失効応答を注入する。",
+      "expected": "認証前はログイン画面のみ・台帳未生成。キー失効応答後はセッションと画面の個人情報を消しログイン画面に戻る。",
+      "origin": "ユーザーによる不合格6件の修正依頼（実装対象確定）",
+      "req": "REQ-19",
+      "design": "FS-19",
+      "testSpec": "TS-19",
+      "task": "TASK-19",
+      "code": "CODE-19",
+      "testCode": "TEST-19",
+      "operation": "OPS-19",
+      "user": "USR-19",
+      "acceptance": "AT-19",
+      "screens": [
+        "A01",
+        "P01"
+      ],
+      "interfaces": [
+        "IF-01"
+      ],
+      "implementation": [
+        {
+          "path": "gas/Code.gs",
+          "locator": "authenticateGoogle_"
+        }
+      ],
+      "tests": [
+        "GAS-02",
+        "GAS-03",
+        "GAS-04",
+        "GAS-05",
+        "GAS-12",
+        "GAS-43",
+        "GAS-44",
+        "GAS-45",
+        "GAS-46",
+        "GAS-47",
+        "GAS-48",
+        "GAS-49",
+        "GAS-50",
+        "GAS-51",
+        "GAS-52",
+        "GAS-53",
+        "GAS-54",
+        "PT-01",
+        "PT-02",
+        "PT-03",
+        "PT-04",
+        "PT-05",
+        "PT-06",
+        "PT-07",
+        "PT-08",
+        "PT-09",
+        "PT-10",
+        "PT-11",
+        "PT-12",
+        "PT-13",
+        "PT-14",
+        "PT-15",
+        "PT-16",
+        "PT-17",
+        "PT-18",
+        "PT-19",
+        "PT-20",
+        "LOCAL-UI-01",
+        "GAS-72"
+      ],
+      "manualReason": "",
+      "testGap": "",
+      "status": "PENDING_ACCEPTANCE",
+      "acceptanceStatus": "NOT_RUN",
+      "designText": "画面 A01, P01。I/F IF-01。認証前はログイン画面のみ・台帳未生成。キー失効応答後はセッションと画面の個人情報を消しログイン画面に戻る。 検証専用の同一アカウント両画面確認はREQ-39に従い、通常の管理者・保護者の役割分離を変更しない。",
+      "operationText": "担当者が前提を確認し、未認証の画面とAPI拒否を確認。その後ローカル模擬APIでログインし、キー失効応答を注入する。 結果不明時は同一対象と履歴を照合してから判断する。",
+      "userText": "未認証の管理操作を拒否：未認証の画面とAPI拒否を確認。その後ローカル模擬APIでログインし、キー失効応答を注入する。",
+      "latestObservation": "RA-03：公開管理者入口で未認証時に台帳非表示を確認。未認証API拒否を含むAT-19全体の再合格ではない。"
+    },
+    {
+      "number": 20,
+      "title": "保護者の家庭別アクセス制限",
+      "bf": "BF-07",
+      "requirement": "STU-001だけを表示。別家庭の参照/予約/取消と完了/チケット追加を拒否。",
+      "precondition": "STU-001だけに紐付いた保護者デモ。",
+      "steps": "生徒一覧・予約一覧・STU-002への参照/予約/取消・管理者操作の直接呼出を確認。",
+      "expected": "STU-001だけを表示。別家庭の参照/予約/取消と完了/チケット追加を拒否。",
+      "origin": "ユーザーによる不合格6件の修正依頼（実装対象確定）",
+      "req": "REQ-20",
+      "design": "FS-20",
+      "testSpec": "TS-20",
+      "task": "TASK-20",
+      "code": "CODE-20",
+      "testCode": "TEST-20",
+      "operation": "OPS-20",
+      "user": "USR-20",
+      "acceptance": "AT-20",
+      "screens": [
+        "P02"
+      ],
+      "interfaces": [
+        "IF-01",
+        "IF-03"
+      ],
+      "implementation": [
+        {
+          "path": "gas/Code.gs",
+          "locator": "requireAccess_"
+        },
+        {
+          "path": "src/portal.ts",
+          "locator": "assertPortal"
+        }
+      ],
+      "tests": [
+        "GAS-02",
+        "GAS-03",
+        "GAS-04",
+        "GAS-05",
+        "GAS-06",
+        "GAS-07",
+        "GAS-08",
+        "GAS-09",
+        "GAS-10",
+        "GAS-11",
+        "GAS-12",
+        "GAS-39",
+        "GAS-40",
+        "GAS-41",
+        "GAS-42",
+        "GAS-43",
+        "GAS-44",
+        "GAS-45",
+        "GAS-46",
+        "GAS-47",
+        "GAS-48",
+        "GAS-49",
+        "GAS-50",
+        "GAS-51",
+        "GAS-52",
+        "GAS-53",
+        "GAS-54",
+        "PT-01",
+        "PT-02",
+        "PT-03",
+        "PT-04",
+        "PT-05",
+        "PT-06",
+        "PT-07",
+        "PT-08",
+        "PT-09",
+        "PT-10",
+        "PT-11",
+        "PT-12",
+        "PT-13",
+        "PT-14",
+        "PT-15",
+        "PT-16",
+        "PT-17",
+        "PT-18",
+        "PT-19",
+        "PT-20",
+        "LOCAL-UI-02",
+        "LOCAL-UI-11"
+      ],
+      "manualReason": "",
+      "testGap": "",
+      "status": "PENDING_ACCEPTANCE",
+      "acceptanceStatus": "NOT_RUN",
+      "designText": "画面 P02。I/F IF-01, IF-03。STU-001だけを表示。別家庭の参照/予約/取消と完了/チケット追加を拒否。 検証専用の同一アカウント両画面確認はREQ-39に従い、通常の管理者・保護者の役割分離を変更しない。",
+      "operationText": "担当者が前提を確認し、生徒一覧・予約一覧・STU-002への参照/予約/取消・管理者操作の直接呼出を確認。 結果不明時は同一対象と履歴を照合してから判断する。",
+      "userText": "保護者の家庭別アクセス制限：生徒一覧・予約一覧・STU-002への参照/予約/取消・管理者操作の直接呼出を確認。"
+    },
+    {
+      "number": 21,
+      "title": "モバイル表示",
+      "bf": "BF-08",
+      "requirement": "各画面でscrollWidthとinnerWidthが375px以下。保護者の予約・取消行も画面内に収まる。",
+      "precondition": "375×812のエミュレーション。",
+      "steps": "管理・利用者・予約フォームを順に表示し、指定幅375pxと実際の描画幅を照合。",
+      "expected": "各画面でscrollWidthとinnerWidthが375px以下。保護者の予約・取消行も画面内に収まる。",
+      "origin": "チャット要望から具体化",
+      "req": "REQ-21",
+      "design": "FS-21",
+      "testSpec": "TS-21",
+      "task": "TASK-21",
+      "code": "CODE-21",
+      "testCode": "TEST-21",
+      "operation": "OPS-21",
+      "user": "USR-21",
+      "acceptance": "AT-21",
+      "screens": [
+        "A02",
+        "P02",
+        "D01"
+      ],
+      "interfaces": [
+        "IF-03"
+      ],
+      "implementation": [
+        {
+          "path": "src/components/ParentPortal.tsx",
+          "locator": "ParentPortal"
+        },
+        {
+          "path": "src/components/AddRideModal.tsx",
+          "locator": "max-h-[calc(100dvh-2rem)] overflow-y-auto"
+        }
+      ],
+      "tests": [
+        "UI-05",
+        "UI-SCROLL-01",
+        "UI-SCROLL-02",
+        "LOCAL-UI-12"
+      ],
+      "manualReason": "",
+      "testGap": "",
+      "status": "PENDING_ACCEPTANCE",
+      "acceptanceStatus": "NOT_RUN",
+      "designText": "画面 A02, P02, D01。I/F IF-03。各画面でscrollWidthとinnerWidthが375px以下。保護者の予約・取消行も画面内に収まる。",
+      "operationText": "担当者が前提を確認し、管理・利用者・予約フォームを順に表示し、指定幅375pxと実際の描画幅を照合。 結果不明時は同一対象と履歴を照合してから判断する。",
+      "userText": "モバイル表示：管理・利用者・予約フォームを順に表示し、指定幅375pxと実際の描画幅を照合。",
+      "testScope": "375pxのローカルChromium実測。スマートフォン実機では未確認。"
+    },
+    {
+      "number": 22,
+      "title": "再読込後の永続化",
+      "bf": "BF-07",
+      "requirement": "追加した生徒・予約のIDと値が維持される。",
+      "precondition": "ダミー台帳。",
+      "steps": "生徒追加と予約登録後に再読込。",
+      "expected": "追加した生徒・予約のIDと値が維持される。",
+      "origin": "チャット要望から具体化",
+      "req": "REQ-22",
+      "design": "FS-22",
+      "testSpec": "TS-22",
+      "task": "TASK-22",
+      "code": "CODE-22",
+      "testCode": "TEST-22",
+      "operation": "OPS-22",
+      "user": "USR-22",
+      "acceptance": "AT-22",
+      "screens": [
+        "A02",
+        "P02"
+      ],
+      "interfaces": [
+        "IF-03"
+      ],
+      "implementation": [
+        {
+          "path": "src/App.tsx",
+          "locator": "App"
+        }
+      ],
+      "tests": [
+        "PT-21",
+        "LOCAL-UI-07"
+      ],
+      "manualReason": "",
+      "testGap": "",
+      "status": "PENDING_ACCEPTANCE",
+      "acceptanceStatus": "NOT_RUN",
+      "designText": "画面 A02, P02。I/F IF-03。追加した生徒・予約のIDと値が維持される。",
+      "operationText": "担当者が前提を確認し、生徒追加と予約登録後に再読込。 結果不明時は同一対象と履歴を照合してから判断する。",
+      "userText": "再読込後の永続化：生徒追加と予約登録後に再読込。",
+      "testScope": "実ApiServiceのデモ保存と新インスタンス再取得を検証。実Google台帳の永続化受入は別。"
+    },
+    {
+      "number": 23,
+      "title": "Google初期化・永続化",
+      "bf": "BF-01",
+      "requirement": "3シート生成・再実行で既存値不変・新規生徒1行。",
+      "precondition": "専用シート・GAS配備・権限が必要。",
+      "steps": "initSpreadsheetを2回実行し生徒をWeb登録、シートを開く。",
+      "expected": "3シート生成・再実行で既存値不変・新規生徒1行。",
+      "origin": "チャット要望から具体化",
+      "req": "REQ-23",
+      "design": "FS-23",
+      "testSpec": "TS-23",
+      "task": "TASK-23",
+      "code": "CODE-23",
+      "testCode": "TEST-23",
+      "operation": "OPS-23",
+      "user": "USR-23",
+      "acceptance": "AT-23",
+      "screens": [
+        "E04"
+      ],
+      "interfaces": [
+        "IF-15",
+        "IF-11"
+      ],
+      "implementation": [
+        {
+          "path": "gas/Code.gs",
+          "locator": "initSpreadsheet"
+        }
+      ],
+      "tests": [
+        "GAS-01"
+      ],
+      "manualReason": "",
+      "testGap": "",
+      "status": "PENDING_ACCEPTANCE",
+      "acceptanceStatus": "NOT_RUN",
+      "designText": "画面 E04。I/F IF-15, IF-11。3シート生成・再実行で既存値不変・新規生徒1行。",
+      "operationText": "担当者が前提を確認し、initSpreadsheetを2回実行し生徒をWeb登録、シートを開く。 結果不明時は同一対象と履歴を照合してから判断する。",
+      "userText": "開発・運用担当向け。利用者の直接操作は対象外。"
+    },
+    {
+      "number": 24,
+      "title": "実カレンダー予約同期",
+      "bf": "BF-04",
+      "requirement": "カレンダー予定の説明欄に予約IDを表示し、台帳の予約IDと一致させる。台帳のイベントIDで予定を特定し、日時・場所も一致させる。",
+      "precondition": "会社アカウントの検証GASと、配備者所有の非公開サブカレンダーをTEST_CALENDAR_IDに設定し、Calendarの実同意が必要。",
+      "steps": "Webから予約し、シート行のイベントIDで実カレンダー予定を特定して説明欄・日時・場所を照合する。",
+      "expected": "予定説明欄の予約IDが台帳の予約IDと一致し、台帳イベントIDで特定した予定の日時・場所も一致。",
+      "origin": "2026-11-03のユーザー回答：予定にも予約IDを表示。",
+      "req": "REQ-24",
+      "design": "FS-24",
+      "testSpec": "TS-24",
+      "task": "TASK-24",
+      "code": "CODE-24",
+      "testCode": "TEST-24",
+      "operation": "OPS-24",
+      "user": "USR-24",
+      "acceptance": "AT-24",
+      "screens": [
+        "D01",
+        "E02",
+        "E03"
+      ],
+      "interfaces": [
+        "IF-02",
+        "IF-13"
+      ],
+      "implementation": [
+        {
+          "path": "gas/Code.gs",
+          "locator": "createReservation_"
+        },
+        {
+          "path": "gas/Code.gs",
+          "locator": "verificationCalendar_"
+        },
+        {
+          "path": "gas/appsscript.json",
+          "locator": "https://www.googleapis.com/auth/calendar"
+        }
+      ],
+      "tests": [
+        "GAS-67",
+        "GAS-71",
+        "GAS-72",
+        "GAS-74"
+      ],
+      "manualReason": "",
+      "testGap": "",
+      "status": "HOLD",
+      "acceptanceStatus": "BLOCKED",
+      "designText": "画面 D01, E02, E03。I/F IF-02, IF-13。作成予定の説明欄に予約IDを記載し、台帳のイベントIDで予定を特定する。 検証先はScript PropertiesのTEST_CALENDAR_IDで固定し、未設定・認可不足・primary・非所有・ID不一致は書込み前に拒否する。取消予定が指定先で特定できない場合も台帳を変更しない。",
+      "operationText": "担当者が前提を確認し、Webから予約して台帳のイベントIDでカレンダー予定を特定し、予定説明欄の予約IDと台帳の予約ID、日時・場所を照合する。結果不明時は同一対象と履歴を照合してから判断する。",
+      "userText": "開発・運用担当向け。利用者の直接操作は対象外。",
+      "testScope": "GASのCalendarアダプタ契約と予定説明欄への予約ID記載をスタブで検証。実Calendar同期の受入AT-24は未完。 GAS-71〜74は接続先・認可・所有権・取消イベントの制限をオフライン確認。Googleでの同意と検証GAS反映は未了。"
+    },
+    {
+      "number": 25,
+      "title": "実カレンダー取消同期",
+      "bf": "BF-05",
+      "requirement": "cancelled・対象イベント削除・残高不変。",
+      "precondition": "会社アカウントの検証GASと、配備者所有の非公開サブカレンダーをTEST_CALENDAR_IDに設定し、Calendarの実同意が必要。",
+      "steps": "予約取消後にシートとカレンダーを開く。",
+      "expected": "cancelled・対象イベント削除・残高不変。",
+      "origin": "チャット要望から具体化",
+      "req": "REQ-25",
+      "design": "FS-25",
+      "testSpec": "TS-25",
+      "task": "TASK-25",
+      "code": "CODE-25",
+      "testCode": "TEST-25",
+      "operation": "OPS-25",
+      "user": "USR-25",
+      "acceptance": "AT-25",
+      "screens": [
+        "D05",
+        "E02",
+        "E03"
+      ],
+      "interfaces": [
+        "IF-05",
+        "IF-13"
+      ],
+      "implementation": [
+        {
+          "path": "gas/Code.gs",
+          "locator": "cancelReservation_"
+        },
+        {
+          "path": "gas/Code.gs",
+          "locator": "verificationCalendar_"
+        },
+        {
+          "path": "gas/appsscript.json",
+          "locator": "https://www.googleapis.com/auth/calendar"
+        }
+      ],
+      "tests": [
+        "GAS-68",
+        "GAS-71",
+        "GAS-72",
+        "GAS-73",
+        "GAS-74"
+      ],
+      "manualReason": "",
+      "testGap": "",
+      "status": "HOLD",
+      "acceptanceStatus": "BLOCKED",
+      "designText": "画面 D05, E02, E03。I/F IF-05, IF-13。cancelled・対象イベント削除・残高不変。 検証先はScript PropertiesのTEST_CALENDAR_IDで固定し、未設定・認可不足・primary・非所有・ID不一致は書込み前に拒否する。取消予定が指定先で特定できない場合も台帳を変更しない。",
+      "operationText": "担当者が前提を確認し、予約取消後にシートとカレンダーを開く。 結果不明時は同一対象と履歴を照合してから判断する。",
+      "userText": "開発・運用担当向け。利用者の直接操作は対象外。",
+      "testScope": "GASの取消アダプタ契約をスタブで検証。実Calendar削除の受入AT-25は未完。 GAS-71〜74は接続先・認可・所有権・取消イベントの制限をオフライン確認。Googleでの同意と検証GAS反映は未了。"
+    },
+    {
+      "number": 26,
+      "title": "管理者2名・保護者の端末共有",
+      "bf": "BF-07",
+      "requirement": "同一予約・残高を確認し家庭の範囲を維持。",
+      "precondition": "別セッション3台・権限分離・専用GAS。",
+      "steps": "保護者予約 → 管理者A確認・完了 → 管理者Bと保護者が再取得。",
+      "expected": "同一予約・残高を確認し家庭の範囲を維持。",
+      "origin": "チャット要望から具体化",
+      "req": "REQ-26",
+      "design": "FS-26",
+      "testSpec": "TS-26",
+      "task": "TASK-26",
+      "code": "CODE-26",
+      "testCode": "TEST-26",
+      "operation": "OPS-26",
+      "user": "USR-26",
+      "acceptance": "AT-26",
+      "screens": [
+        "A02",
+        "P02"
+      ],
+      "interfaces": [
+        "IF-03",
+        "IF-06"
+      ],
+      "implementation": [
+        {
+          "path": "gas/Code.gs",
+          "locator": "withLock_"
+        }
+      ],
+      "tests": [
+        "GAS-17"
+      ],
+      "manualReason": "",
+      "testGap": "",
+      "status": "PENDING_ACCEPTANCE",
+      "acceptanceStatus": "NOT_RUN",
+      "designText": "画面 A02, P02。I/F IF-03, IF-06。同一予約・残高を確認し家庭の範囲を維持。 検証専用の同一アカウント両画面確認はREQ-39に従い、通常の管理者・保護者の役割分離を変更しない。",
+      "operationText": "担当者が前提を確認し、保護者予約 → 管理者A確認・完了 → 管理者Bと保護者が再取得。 結果不明時は同一対象と履歴を照合してから判断する。",
+      "userText": "管理者2名・保護者の端末共有：保護者予約 → 管理者A確認・完了 → 管理者Bと保護者が再取得。",
+      "latestObservation": "RA-01/02/07/08：復元後の管理者2名の本人ログイン・再読込・ログアウトを確認。両管理者から有効・本人確認済み2名と一時家庭なしを読取り照合。予約・完了・他端末の更新共有を含むAT-26全体は未完。"
+    },
+    {
+      "number": 27,
+      "title": "同時完了の排他制御",
+      "bf": "BF-06",
+      "requirement": "完了1件・片道1枚だけ消費、再試行でも不変。",
+      "precondition": "独立管理者2セッション・専用GAS。",
+      "steps": "同じ予約を両管理者から同時に完了。",
+      "expected": "完了1件・片道1枚だけ消費、再試行でも不変。",
+      "origin": "運用開始に向けた追加提案（受入基準案）",
+      "req": "REQ-27",
+      "design": "FS-27",
+      "testSpec": "TS-27",
+      "task": "TASK-27",
+      "code": "CODE-27",
+      "testCode": "TEST-27",
+      "operation": "OPS-27",
+      "user": "USR-27",
+      "acceptance": "AT-27",
+      "screens": [
+        "A02",
+        "A03"
+      ],
+      "interfaces": [
+        "IF-06"
+      ],
+      "implementation": [
+        {
+          "path": "gas/Code.gs",
+          "locator": "withLock_"
+        }
+      ],
+      "tests": [
+        "GAS-17"
+      ],
+      "manualReason": "",
+      "testGap": "",
+      "status": "PENDING_ACCEPTANCE",
+      "acceptanceStatus": "NOT_RUN",
+      "designText": "画面 A02, A03。I/F IF-06。完了1件・片道1枚だけ消費、再試行でも不変。",
+      "operationText": "担当者が前提を確認し、同じ予約を両管理者から同時に完了。 結果不明時は同一対象と履歴を照合してから判断する。",
+      "userText": "開発・運用担当向け。利用者の直接操作は対象外。",
+      "latestObservation": "AT27-LIVE-01/02：2管理者の同時完了で3枚→2枚。別の専用送迎を管理者1で完了確定後、完了前の管理者2画面から明示再試行して追加0枚・残数2枚・送迎行と完了日時不変を確認。試験行除去後に主要3シートの実行前範囲一致。開発側の期待値確認は完了、独立した第三者受入は未実施。",
+      "observationRecord": "concurrent-completion-plan-2026-10-23/README.md",
+      "developerVerification": "CONFIRMED",
+      "developerEvidence": "docs/acceptance/concurrent-completion-plan-2026-10-23/replay-results.json"
+    },
+    {
+      "number": 28,
+      "title": "バックアップから復旧",
+      "bf": "BF-08",
+      "requirement": "生徒・予約・購入履歴・カレンダーの整合を回復。",
+      "precondition": "専用テスト資源・保存先・担当者。",
+      "steps": "バックアップ → テスト行変更 → 復元 → Web再取得。",
+      "expected": "生徒・予約・購入履歴・カレンダーの整合を回復。",
+      "origin": "運用開始に向けた追加提案（受入基準案）",
+      "req": "REQ-28",
+      "design": "FS-28",
+      "testSpec": "TS-28",
+      "task": "TASK-28",
+      "code": "CODE-28",
+      "testCode": "TEST-28",
+      "operation": "OPS-28",
+      "user": "USR-28",
+      "acceptance": "AT-28",
+      "screens": [
+        "E03",
+        "E04"
+      ],
+      "interfaces": [
+        "IF-14",
+        "IF-15"
+      ],
+      "implementation": [],
+      "tests": [
+        "GAS-25",
+        "GAS-26",
+        "GAS-27",
+        "GAS-28",
+        "GAS-29",
+        "GAS-30",
+        "GAS-31",
+        "GAS-32",
+        "GAS-33",
+        "GAS-34",
+        "GAS-35"
+      ],
+      "manualReason": "バックアップ復元は担当者が外部画面で行う。自動復元APIはない。",
+      "testGap": "",
+      "status": "PENDING_ACCEPTANCE",
+      "acceptanceStatus": "NOT_RUN",
+      "designText": "画面 E03, E04。I/F IF-14, IF-15。生徒・予約・購入履歴・カレンダーの整合を回復。",
+      "operationText": "担当者が前提を確認し、バックアップ → テスト行変更 → 復元 → Web再取得。 結果不明時は同一対象と履歴を照合してから判断する。",
+      "userText": "開発・運用担当向け。利用者の直接操作は対象外。",
+      "latestObservation": "AT28-LIVE-01〜08：専用生徒・送迎・購入の3行をコピーから値復元して一致。会社Googleログイン後にWeb再取得で残数3・時刻16:30を確認。購入3枚は台帳で照合。IDガードした3行を除去し主要3シート先頭8行のSHA-256が実行前と一致、Webも元の生徒3名・履歴3件。台帳部分確認完了、Calendar整合・全体合格は未確認。",
+      "observationRecord": "backup-restore-2026-10-23/README.md",
+      "developerVerification": "CONFIRMED_SHEET_VALUE_SCOPE",
+      "developerEvidence": "docs/acceptance/backup-restore-2026-10-23/results.json"
+    },
+    {
+      "number": 29,
+      "title": "実機受入",
+      "bf": "BF-08",
+      "requirement": "入力・確認・操作が可能、受入担当の確認記録あり。",
+      "precondition": "iPhone Safari・Android Chromeと受入担当者。",
+      "steps": "予約・取消・残高確認を各実機で実施。",
+      "expected": "入力・確認・操作が可能、受入担当の確認記録あり。",
+      "origin": "運用開始に向けた追加提案（受入基準案）",
+      "req": "REQ-29",
+      "design": "FS-29",
+      "testSpec": "TS-29",
+      "task": "TASK-29",
+      "code": "CODE-29",
+      "testCode": "TEST-29",
+      "operation": "OPS-29",
+      "user": "USR-29",
+      "acceptance": "AT-29",
+      "screens": [
+        "P02",
+        "D01"
+      ],
+      "interfaces": [
+        "IF-02",
+        "IF-05"
+      ],
+      "implementation": [
+        {
+          "path": "src/App.tsx",
+          "locator": "App"
+        }
+      ],
+      "tests": [
+        "UI-06",
+        "UI-SCROLL-01",
+        "UI-SCROLL-02",
+        "LOCAL-UI-12"
+      ],
+      "manualReason": "",
+      "testGap": "",
+      "status": "PENDING_ACCEPTANCE",
+      "acceptanceStatus": "NOT_RUN",
+      "designText": "画面 P02, D01。I/F IF-02, IF-05。入力・確認・操作が可能、受入担当の確認記録あり。",
+      "operationText": "担当者が前提を確認し、予約・取消・残高確認を各実機で実施。 結果不明時は同一対象と履歴を照合してから判断する。",
+      "userText": "実機受入：予約・取消・残高確認を各実機で実施。",
+      "testScope": "Chromiumタッチエミュレーション。物理端末と全操作の実機受入AT-29は未完。",
+      "latestObservation": "DEV29-IOS-OBS-01〜04：iPhone 16 Pro Max・iOS26.6.2・Safariで管理者2、生徒3名・履歴3件・残数7/1/10・一覧右端列を画像確認。ログアウト後再読込でもログイン画面のみ・台帳非表示と本人が明示回答。iPhone管理者読取範囲は確認済み。Android・保護者本人・予約取消は未実施、AT-29全体未合格。",
+      "observationRecord": "device-readonly-2026-10-24/README.md",
+      "developerVerification": "CONFIRMED_IPHONE_ADMIN_READONLY_USER_REPORTED",
+      "developerEvidence": "docs/acceptance/device-readonly-2026-10-24/iphone-observations.json"
+    },
+    {
+      "number": 30,
+      "title": "リリース後スモークテスト",
+      "bf": "BF-08",
+      "requirement": "対象コミットと公開版一致、重大不具合なし、戻し手順あり。",
+      "precondition": "全必須合格・受入確認・対象環境確定。",
+      "steps": "将来本番開始が承認され、配備された後に、開発担当が本番URLで権限・予約・取消・連携・版を確認する。現在は本番開始を保留中。",
+      "expected": "対象コミットと公開版一致、重大不具合なし、戻し手順あり。",
+      "origin": "運用開始に向けた追加提案（受入基準案）",
+      "req": "REQ-30",
+      "design": "FS-30",
+      "testSpec": "TS-30",
+      "task": "TASK-30",
+      "code": "CODE-30",
+      "testCode": "TEST-30",
+      "operation": "OPS-30",
+      "user": "USR-30",
+      "acceptance": "AT-30",
+      "screens": [
+        "A01",
+        "P01"
+      ],
+      "interfaces": [
+        "IF-15"
+      ],
+      "implementation": [
+        {
+          "path": "scripts/prepare_test_release.cjs",
+          "locator": "sourceDigest"
+        }
+      ],
+      "tests": [
+        "REL-01"
+      ],
+      "manualReason": "",
+      "testGap": "",
+      "status": "HOLD",
+      "acceptanceStatus": "BLOCKED",
+      "designText": "画面 A01, P01。I/F IF-15。対象コミットと公開版一致、重大不具合なし、戻し手順あり。",
+      "operationText": "本番開始の承認・配備後に開発担当が本番URLで権限・予約・取消・連携・版を検証する。対象と履歴を照合して結果を記録する。",
+      "userText": "開発・運用担当向け。利用者の直接操作は対象外。",
+      "testScope": "配布マニフェスト作成を隔離VMで検証。本番公開後の疎通・復旧確認AT-30は未実施。",
+      "latestObservation": "RA-06：現行配布記録の公開7ファイルとSHA-256一致。古い固定版との比較失敗は棄却記録として保持。本番AT-30・実Google受入の合格ではない。"
+    },
+    {
+      "number": 31,
+      "title": "管理者による利用登録・停止・削除",
+      "bf": "BF-09",
+      "requirement": "管理者が本人メール・役割・対象生徒を登録し、変更・停止・削除する。",
+      "precondition": "架空データと許可された検証環境。必要な本人と担当者を準備。",
+      "steps": "A06で登録・停止・再有効化・削除を行い次の通信の権限を確認。",
+      "expected": "許可リストだけを変更。業務履歴・Google本人は削除せず、自分の停止削除・最後の管理者喪失を拒否。",
+      "origin": "ユーザーの追加要望・実装確認",
+      "req": "REQ-31",
+      "design": "FS-31",
+      "testSpec": "TS-31",
+      "task": "TASK-31",
+      "code": "CODE-31",
+      "testCode": "TEST-31",
+      "operation": "OPS-31",
+      "user": "USR-31",
+      "acceptance": "SAT-31",
+      "screens": [
+        "A06",
+        "D04"
+      ],
+      "interfaces": [
+        "IF-08",
+        "IF-09"
+      ],
+      "implementation": [
+        {
+          "path": "gas/Code.gs",
+          "locator": "saveManagedUser_"
+        },
+        {
+          "path": "gas/Code.gs",
+          "locator": "deleteManagedUser_"
+        }
+      ],
+      "tests": [
+        "GAS-55",
+        "GAS-56",
+        "GAS-57",
+        "GAS-58",
+        "GAS-59",
+        "GAS-60",
+        "GAS-61",
+        "GAS-62",
+        "PT-01",
+        "PT-02",
+        "PT-03",
+        "PT-04",
+        "PT-05",
+        "PT-06",
+        "PT-07",
+        "PT-08",
+        "PT-09",
+        "PT-10",
+        "PT-11",
+        "PT-12",
+        "PT-13",
+        "PT-14",
+        "PT-15",
+        "PT-16",
+        "PT-17",
+        "PT-18",
+        "PT-19",
+        "PT-20"
+      ],
+      "manualReason": "",
+      "testGap": "",
+      "status": "PENDING_ACCEPTANCE",
+      "acceptanceStatus": "NOT_RUN",
+      "designText": "画面 A06, D04。I/F IF-08, IF-09。管理者が本人メール・役割・対象生徒を登録し、変更・停止・削除する。 検証専用の同一アカウント両画面確認はREQ-39に従い、通常の管理者・保護者の役割分離を変更しない。",
+      "operationText": "担当者が前提を確認し、A06で登録・停止・再有効化・削除を行い次の通信の権限を確認。 結果不明時は同一対象と履歴を照合してから判断する。",
+      "userText": "管理者による利用登録・停止・削除：A06で登録・停止・再有効化・削除を行い次の通信の権限を確認。",
+      "latestObservation": "RA-07/08：両管理者の公開管理画面で、有効・本人確認済みの管理者2名、一時検証家庭なしを確認。許可設定の書込は実施していない。"
+    },
+    {
+      "number": 32,
+      "title": "初回Google本人紐付け",
+      "bf": "BF-09",
+      "requirement": "本人確認済みGoogleメールだけを事前登録と紐付ける。",
+      "precondition": "架空データと許可された検証環境。必要な本人と担当者を準備。",
+      "steps": "事前登録した本人で初回ログイン。未確認メール・停止済み・他人で試す。",
+      "expected": "正しい本人だけ一度UIDへ移行し、役割を自己選択できない。",
+      "origin": "ユーザーの追加要望・実装確認",
+      "req": "REQ-32",
+      "design": "FS-32",
+      "testSpec": "TS-32",
+      "task": "TASK-32",
+      "code": "CODE-32",
+      "testCode": "TEST-32",
+      "operation": "OPS-32",
+      "user": "USR-32",
+      "acceptance": "SAT-32",
+      "screens": [
+        "A01",
+        "P01",
+        "E01"
+      ],
+      "interfaces": [
+        "IF-01",
+        "IF-09"
+      ],
+      "implementation": [
+        {
+          "path": "gas/Code.gs",
+          "locator": "authenticateGoogle_"
+        }
+      ],
+      "tests": [
+        "GAS-43",
+        "GAS-44",
+        "GAS-45",
+        "GAS-46",
+        "GAS-47",
+        "GAS-48",
+        "GAS-49",
+        "GAS-50",
+        "GAS-51",
+        "GAS-52",
+        "GAS-53",
+        "GAS-54",
+        "GAS-55",
+        "GAS-56",
+        "GAS-57",
+        "GAS-58",
+        "GAS-59",
+        "GAS-60",
+        "GAS-61",
+        "GAS-62"
+      ],
+      "manualReason": "",
+      "testGap": "",
+      "status": "PENDING_ACCEPTANCE",
+      "acceptanceStatus": "NOT_RUN",
+      "designText": "画面 A01, P01, E01。I/F IF-01, IF-09。本人確認済みGoogleメールだけを事前登録と紐付ける。",
+      "operationText": "担当者が前提を確認し、事前登録した本人で初回ログイン。未確認メール・停止済み・他人で試す。 結果不明時は同一対象と履歴を照合してから判断する。",
+      "userText": "初回Google本人紐付け：事前登録した本人で初回ログイン。未確認メール・停止済み・他人で試す。",
+      "latestObservation": "RA-04：公開保護者入口の入力欄0・管理者メニューなし・台帳なしを確認。家庭本人での実ログインは今回未実施。"
+    },
+    {
+      "number": 33,
+      "title": "家庭URL・QRの配布と再発行",
+      "bf": "BF-09",
+      "requirement": "個別URLとQRは管理者が本人へ配布し紛失時再発行する。",
+      "precondition": "架空データと許可された検証環境。必要な本人と担当者を準備。",
+      "steps": "A05で表示・コピー。A06で再発行後、新旧URLで本人ログイン。",
+      "expected": "URLにキー・メールを含めず、旧URLは次の通信から拒否。",
+      "origin": "ユーザーの追加要望・実装確認",
+      "req": "REQ-33",
+      "design": "FS-33",
+      "testSpec": "TS-33",
+      "task": "TASK-33",
+      "code": "CODE-33",
+      "testCode": "TEST-33",
+      "operation": "OPS-33",
+      "user": "USR-33",
+      "acceptance": "SAT-33",
+      "screens": [
+        "A05",
+        "A06"
+      ],
+      "interfaces": [
+        "IF-07",
+        "IF-08"
+      ],
+      "implementation": [
+        {
+          "path": "src/components/PortalInvitations.tsx",
+          "locator": "PortalInvitations"
+        },
+        {
+          "path": "gas/Code.gs",
+          "locator": "getPortalInvitations_"
+        }
+      ],
+      "tests": [
+        "GAS-39",
+        "GAS-40",
+        "GAS-41",
+        "GAS-42",
+        "GAS-55",
+        "GAS-56",
+        "GAS-57",
+        "GAS-58",
+        "GAS-59",
+        "GAS-60",
+        "GAS-61",
+        "GAS-62",
+        "PT-01",
+        "PT-02",
+        "PT-03",
+        "PT-04",
+        "PT-05",
+        "PT-06",
+        "PT-07",
+        "PT-08",
+        "PT-09",
+        "PT-10",
+        "PT-11",
+        "PT-12",
+        "PT-13",
+        "PT-14",
+        "PT-15",
+        "PT-16",
+        "PT-17",
+        "PT-18",
+        "PT-19",
+        "PT-20"
+      ],
+      "manualReason": "",
+      "testGap": "",
+      "status": "PENDING_ACCEPTANCE",
+      "acceptanceStatus": "NOT_RUN",
+      "designText": "画面 A05, A06。I/F IF-07, IF-08。個別URLとQRは管理者が本人へ配布し紛失時再発行する。 検証専用の同一アカウント両画面確認はREQ-39に従い、通常の管理者・保護者の役割分離を変更しない。",
+      "operationText": "担当者が前提を確認し、A05で表示・コピー。A06で再発行後、新旧URLで本人ログイン。 結果不明時は同一対象と履歴を照合してから判断する。",
+      "userText": "家庭URL・QRの配布と再発行：A05で表示・コピー。A06で再発行後、新旧URLで本人ログイン。",
+      "latestObservation": "RA-05：不正形式の家庭URLはURL確認画面、家庭データ非表示。発行・失効を含むSAT-33全体の合格ではない。"
+    },
+    {
+      "number": 34,
+      "title": "Google認証・再読込・ログアウト",
+      "bf": "BF-07",
+      "requirement": "本人Googleでログインし毎通信で権限を確認。ログアウトで業務表示を消す。",
+      "precondition": "架空データと許可された検証環境。必要な本人と担当者を準備。",
+      "steps": "管理者2名・家庭2つを別セッションでログイン・再取得・終了。",
+      "expected": "本人の役割と家庭を維持し、無効化・入口不一致・ログアウト後の業務アクセスを拒否。",
+      "origin": "ユーザーの追加要望・実装確認",
+      "req": "REQ-34",
+      "design": "FS-34",
+      "testSpec": "TS-34",
+      "task": "TASK-34",
+      "code": "CODE-34",
+      "testCode": "TEST-34",
+      "operation": "OPS-34",
+      "user": "USR-34",
+      "acceptance": "SAT-34",
+      "screens": [
+        "A01",
+        "P01",
+        "A02",
+        "P02"
+      ],
+      "interfaces": [
+        "IF-01",
+        "IF-12"
+      ],
+      "implementation": [
+        {
+          "path": "src/services/google-auth.ts",
+          "locator": "signOutGoogle"
+        },
+        {
+          "path": "src/services/api.ts",
+          "locator": "endSession"
+        }
+      ],
+      "tests": [
+        "GAS-02",
+        "GAS-03",
+        "GAS-04",
+        "GAS-05",
+        "GAS-12",
+        "GAS-43",
+        "GAS-44",
+        "GAS-45",
+        "GAS-46",
+        "GAS-47",
+        "GAS-48",
+        "GAS-49",
+        "GAS-50",
+        "GAS-51",
+        "GAS-52",
+        "GAS-53",
+        "GAS-54",
+        "PT-01",
+        "PT-02",
+        "PT-03",
+        "PT-04",
+        "PT-05",
+        "PT-06",
+        "PT-07",
+        "PT-08",
+        "PT-09",
+        "PT-10",
+        "PT-11",
+        "PT-12",
+        "PT-13",
+        "PT-14",
+        "PT-15",
+        "PT-16",
+        "PT-17",
+        "PT-18",
+        "PT-19",
+        "PT-20",
+        "SDK-01",
+        "SDK-02",
+        "SDK-03",
+        "SDK-04",
+        "SDK-05",
+        "SDK-06",
+        "SDK-08",
+        "SDK-09",
+        "SDK-10",
+        "SDK-11",
+        "SDK-12",
+        "SDK-13",
+        "SDK-14",
+        "SDK-15",
+        "SDK-16",
+        "UI-08",
+        "LOCAL-UI-13"
+      ],
+      "manualReason": "",
+      "testGap": "",
+      "status": "PENDING_ACCEPTANCE",
+      "acceptanceStatus": "NOT_RUN",
+      "designText": "画面 A01, P01, A02, P02。I/F IF-01, IF-12。本人Googleでログインし毎通信で権限を確認。ログアウトで業務表示を消す。 検証専用の同一アカウント両画面確認はREQ-39に従い、通常の管理者・保護者の役割分離を変更しない。",
+      "operationText": "担当者が前提を確認し、管理者2名・家庭2つを別セッションでログイン・再取得・終了。 結果不明時は同一対象と履歴を照合してから判断する。",
+      "userText": "Google認証・再読込・ログアウト：管理者2名・家庭2つを別セッションでログイン・再取得・終了。",
+      "latestObservation": "RA-01/02-LOGOUT：復元後の両管理者についてログアウト直後・再読込後とも管理者ログイン画面だけとなり、台帳非表示を確認。"
+    },
+    {
+      "number": 35,
+      "title": "台帳直接編集と反映",
+      "bf": "BF-10",
+      "requirement": "保守担当が対象を保全し接続先台帳を修正、再読込と関連値を照合する。",
+      "precondition": "架空データと許可された検証環境。必要な本人と担当者を準備。",
+      "steps": "同時操作停止・バックアップ後、検証台帳の対象値を修正しサイト再取得。",
+      "expected": "検証コピーと元台帳は非同期。直接修正で予定同期・消費計算・関連履歴更新を自動実行しない。",
+      "origin": "ユーザーの追加要望・実装確認",
+      "req": "REQ-35",
+      "design": "FS-35",
+      "testSpec": "TS-35",
+      "task": "TASK-35",
+      "code": "CODE-35",
+      "testCode": "TEST-35",
+      "operation": "OPS-35",
+      "user": "USR-35",
+      "acceptance": "SAT-35",
+      "screens": [
+        "E03",
+        "P02"
+      ],
+      "interfaces": [
+        "IF-14",
+        "IF-03"
+      ],
+      "implementation": [],
+      "tests": [
+        "GAS-69"
+      ],
+      "manualReason": "手動の保全・外部台帳操作／実送迎。業務処理の自動コードはない。",
+      "testGap": "",
+      "status": "PENDING_ACCEPTANCE",
+      "acceptanceStatus": "NOT_RUN",
+      "designText": "画面 E03, P02。I/F IF-14, IF-03。保守担当が対象を保全し接続先台帳を修正、再読込と関連値を照合する。",
+      "operationText": "担当者が前提を確認し、同時操作停止・バックアップ後、検証台帳の対象値を修正しサイト再取得。 結果不明時は同一対象と履歴を照合してから判断する。",
+      "userText": "台帳直接編集と反映：同時操作停止・バックアップ後、検証台帳の対象値を修正しサイト再取得。",
+      "testScope": "分離したメモリ台帳で次回取得・非連動を検証。実Google資源の手修正手順と保全は別。"
+    },
+    {
+      "number": 36,
+      "title": "カレンダー確認・実送迎・実績確認",
+      "bf": "BF-06",
+      "requirement": "先生が当日の予定と変更取消を照合し送迎を行い実績を確認する。",
+      "precondition": "架空データと許可された検証環境。必要な本人と担当者を準備。",
+      "steps": "時刻・生徒・場所を確認し、お迎え／送り／往復を実施した記録を確認後に完了登録。",
+      "expected": "実移動やカレンダー閲覧だけで自動消費しない。未実施・取消を完了にしない。",
+      "origin": "ユーザーの追加要望・実装確認",
+      "req": "REQ-36",
+      "design": "FS-36",
+      "testSpec": "TS-36",
+      "task": "TASK-36",
+      "code": "CODE-36",
+      "testCode": "TEST-36",
+      "operation": "OPS-36",
+      "user": "USR-36",
+      "acceptance": "SAT-36",
+      "screens": [
+        "E02",
+        "A02",
+        "P02"
+      ],
+      "interfaces": [
+        "IF-16",
+        "IF-06"
+      ],
+      "implementation": [],
+      "tests": [
+        "GAS-13",
+        "GAS-14",
+        "GAS-15",
+        "GAS-16"
+      ],
+      "manualReason": "手動の保全・外部台帳操作／実送迎。業務処理の自動コードはない。",
+      "testGap": "",
+      "status": "PENDING_ACCEPTANCE",
+      "acceptanceStatus": "NOT_RUN",
+      "designText": "画面 E02, A02, P02。I/F IF-16, IF-06。先生が当日の予定と変更取消を照合し送迎を行い実績を確認する。",
+      "operationText": "担当者が前提を確認し、時刻・生徒・場所を確認し、お迎え／送り／往復を実施した記録を確認後に完了登録。 結果不明時は同一対象と履歴を照合してから判断する。",
+      "userText": "カレンダー確認・実送迎・実績確認：時刻・生徒・場所を確認し、お迎え／送り／往復を実施した記録を確認後に完了登録。"
+    },
+    {
+      "number": 37,
+      "title": "日時・場所変更と直前連絡",
+      "bf": "BF-05",
+      "requirement": "変更は教室へ連絡し、直接変更APIがないため取消後に新規予約する。",
+      "precondition": "架空データと許可された検証環境。必要な本人と担当者を準備。",
+      "steps": "旧予約取消の成功を照合して新しい内容を登録し二重予約がないか確認。",
+      "expected": "取消と新規は別処理。片方だけ成功した場合は結果照合し盲目的に再送しない。",
+      "origin": "ユーザーの追加要望・実装確認",
+      "req": "REQ-37",
+      "design": "FS-37",
+      "testSpec": "TS-37",
+      "task": "TASK-37",
+      "code": "CODE-37",
+      "testCode": "TEST-37",
+      "operation": "OPS-37",
+      "user": "USR-37",
+      "acceptance": "SAT-37",
+      "screens": [
+        "A03",
+        "D05",
+        "D01"
+      ],
+      "interfaces": [
+        "IF-05",
+        "IF-02"
+      ],
+      "implementation": [
+        {
+          "path": "gas/Code.gs",
+          "locator": "cancelReservation_"
+        },
+        {
+          "path": "gas/Code.gs",
+          "locator": "createReservation_"
+        }
+      ],
+      "tests": [
+        "GAS-70"
+      ],
+      "manualReason": "",
+      "testGap": "",
+      "status": "PENDING_ACCEPTANCE",
+      "acceptanceStatus": "NOT_RUN",
+      "designText": "画面 A03, D05, D01。I/F IF-05, IF-02。変更は教室へ連絡し、直接変更APIがないため取消後に新規予約する。",
+      "operationText": "担当者が前提を確認し、旧予約取消の成功を照合して新しい内容を登録し二重予約がないか確認。 結果不明時は同一対象と履歴を照合してから判断する。",
+      "userText": "日時・場所変更と直前連絡：旧予約取消の成功を照合して新しい内容を登録し二重予約がないか確認。",
+      "testScope": "正常な取消→新規と、Calendar結果不明時の再送禁止・照合待ちを検証。日時・場所の原子的編集ではない。"
+    },
+    {
+      "number": 38,
+      "title": "工程横断のID・整合検査・共通デザイン",
+      "bf": "BF-11",
+      "requirement": "全工程のID・参照・定義値・対応漏れと成果物改変を機械検査する。",
+      "precondition": "架空データと許可された検証環境。必要な本人と担当者を準備。",
+      "steps": "正本変更→生成→検査。重複ID・欠落・参照切れ・仕様値相違の異常系も確認。",
+      "expected": "異常時に非ゼロ終了。履歴と現行・自動試験と実受入を分離し、現行PPTは共通テーマ。",
+      "origin": "ユーザーの追加要望・実装確認",
+      "req": "REQ-38",
+      "design": "FS-38",
+      "testSpec": "TS-38",
+      "task": "TASK-38",
+      "code": "CODE-38",
+      "testCode": "TEST-38",
+      "operation": "OPS-38",
+      "user": "USR-38",
+      "acceptance": "SAT-38",
+      "screens": [],
+      "interfaces": [],
+      "implementation": [
+        {
+          "path": "scripts/traceability.py",
+          "locator": "validate"
+        }
+      ],
+      "tests": [
+        "TRACE-01",
+        "TRACE-02",
+        "TRACE-03",
+        "TRACE-04",
+        "TRACE-05",
+        "TRACE-06",
+        "TRACE-07",
+        "TRACE-08",
+        "TRACE-09",
+        "TRACE-10",
+        "TRACE-11",
+        "TRACE-12",
+        "TRACE-13",
+        "TRACE-14",
+        "TRACE-15",
+        "TRACE-16",
+        "TRACE-17",
+        "TRACE-18",
+        "TRACE-19",
+        "TRACE-20",
+        "TRACE-21",
+        "TRACE-22",
+        "RUN-SAFE-01",
+        "RUN-SAFE-02",
+        "RUN-SAFE-03",
+        "RUN-SAFE-04",
+        "TRACE-23",
+        "TRACE-24",
+        "TRACE-25",
+        "TRACE-26",
+        "TRACE-27",
+        "TRACE-28",
+        "TRACE-29",
+        "TRACE-30",
+        "TRACE-31",
+        "TRACE-32",
+        "TRACE-33",
+        "TRACE-34"
+      ],
+      "manualReason": "",
+      "testGap": "",
+      "status": "PENDING_ACCEPTANCE",
+      "acceptanceStatus": "NOT_RUN",
+      "designText": "画面 画面なし・文書検査。I/F ローカル検査。全工程のID・参照・定義値・対応漏れと成果物改変を機械検査する。",
+      "operationText": "担当者が前提を確認し、正本変更→生成→検査。重複ID・欠落・参照切れ・仕様値相違の異常系も確認。 結果不明時は同一対象と履歴を照合してから判断する。",
+      "userText": "開発・運用担当向け。利用者の直接操作は対象外。"
+    },
+    {
+      "number": 39,
+      "title": "随時実施できる顧客確認と検証専用の両画面アクセス",
+      "bf": "BF-08",
+      "requirement": "顧客は同じ本人Googleアカウントと固定した管理者・家庭用URLで、開発担当の役割切替や日程調整を待たずに6件を実施・中断・再開できる。通常利用者の権限分離を維持する。",
+      "precondition": "実データを混在させない指定検証台帳、確認用の検証生徒・開始5枚・片道と往復の固定日2予約。検証専用Calendarと閲覧共有。本人確認済みGoogleアカウントを管理者がreviewerとして登録する。",
+      "steps": "家庭用固定URLでCUST-01〜03→ログアウト→管理者用固定URLのA03でCUST-04→家庭用URLで残少案内→管理者用URLで10枚0円を追加→家庭用URLで12枚を確認。両画面でログアウト後非表示を確認。中断時は共有表に記録し未実施だけ再開。",
+      "expected": "検証担当の読み書きは割当生徒だけ。設定と結合台帳IDが一致しない場合は拒否。生徒新規・利用者管理・他家庭一覧を拒否し、画面ごとの権限をサーバーで毎回再判定。固定日の予約を一覧で完了できる。顧客本人の未実施を合格にしない。",
+      "origin": "2026-11-07 ユーザーの非同期・立会い不要の確認手順の要望",
+      "req": "REQ-39",
+      "design": "FS-39",
+      "testSpec": "TS-39",
+      "task": "TASK-39",
+      "code": "CODE-39",
+      "testCode": "TEST-39",
+      "operation": "OPS-39",
+      "user": "USR-39",
+      "acceptance": "SAT-39",
+      "screens": [
+        "A01",
+        "A03",
+        "A04",
+        "A06",
+        "P01",
+        "P02",
+        "D01",
+        "D02"
+      ],
+      "interfaces": [
+        "IF-01",
+        "IF-02",
+        "IF-03",
+        "IF-05",
+        "IF-06",
+        "IF-08",
+        "IF-10",
+        "IF-12"
+      ],
+      "implementation": [
+        {
+          "path": "gas/Code.gs",
+          "locator": "reviewModeAvailable_"
+        },
+        {
+          "path": "src/services/api.ts",
+          "locator": "reviewOnly"
+        },
+        {
+          "path": "src/components/AccountManagement.tsx",
+          "locator": "reviewModeAvailable"
+        },
+        {
+          "path": "src/App.tsx",
+          "locator": "reviewOnly"
+        },
+        {
+          "path": "src/components/Navbar.tsx",
+          "locator": "reviewOnly"
+        },
+        {
+          "path": "src/components/TeacherDashboard.tsx",
+          "locator": "reviewOnly"
+        }
+      ],
+      "tests": [
+        "GAS-75",
+        "GAS-76",
+        "GAS-77",
+        "GAS-78",
+        "GAS-79",
+        "GAS-80",
+        "GAS-81",
+        "GAS-82",
+        "GAS-83",
+        "GAS-84",
+        "GAS-85",
+        "PT-22",
+        "PT-23",
+        "PT-24",
+        "PT-25",
+        "PT-26",
+        "PT-27",
+        "PT-28",
+        "PT-29",
+        "PT-30",
+        "PT-31",
+        "REVIEW-UI-01",
+        "REVIEW-UI-02",
+        "REVIEW-UI-03",
+        "REVIEW-UI-04",
+        "REVIEW-UI-05",
+        "REVIEW-UI-06",
+        "REVIEW-UI-07",
+        "REVIEW-UI-08"
+      ],
+      "manualReason": "",
+      "testGap": "",
+      "status": "PENDING_ACCEPTANCE",
+      "acceptanceStatus": "NOT_RUN",
+      "designText": "検証専用の保存role reviewerを、Google本人確認と指定検証台帳IDの一致で有効にする。A01/P01のportalRoleに応じて公開roleをadmin/parentへ決定しreviewOnlyを付す。割当生徒の予約・取消・完了・追加だけを許可し、生徒新規・アカウント管理・招待一覧は拒否。利用停止と検証設定不一致は次の通信・更新ロック内で拒否。通常の管理者・保護者は従来どおり片方の画面だけ。",
+      "operationText": "開発担当は一度だけ検証台帳・固定日2予約・検証専用Calendarを準備し、管理者はA06でreviewer登録と割当生徒を確認する。本人へ2つの固定URLと実績表を案内する。実施中の役割切替や当日用データ作成は不要。中断後は共有表の最後の残数と予約状態を照合し未実施のみ再開。完了済みの予約・チケット追加を繰り返さず、実施しない場合も本番開始の判断をしない。",
+      "userText": "都合のよい時に6件を順番に実施。画面を変える時はログアウトして固定URLへ入り直す。「本日の送迎」ではなく「送迎スケジュール一覧」で印付き2予約を操作する。途中の結果を共有表へ残し、再開時は未実施だけ進める。実際の送迎・支払いは行わない。",
+      "testScope": "ローカルの認証・生徒範囲・更新・管理権限拒否と通常役割の回帰を確認する。実Googleの本人ログイン・検証版・顧客6件は別途実測する。"
+    }
+  ],
+  "tests": [
+    {
+      "id": "GAS-01",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-01'",
+      "requirements": [
+        "REQ-23",
+        "REQ-02"
+      ],
+      "mode": "offline-stub",
+      "category": "schema"
+    },
+    {
+      "id": "GAS-02",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-02'",
+      "requirements": [
+        "REQ-01",
+        "REQ-19",
+        "REQ-20",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "authentication"
+    },
+    {
+      "id": "GAS-03",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-03'",
+      "requirements": [
+        "REQ-01",
+        "REQ-19",
+        "REQ-20",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "authentication"
+    },
+    {
+      "id": "GAS-04",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-04'",
+      "requirements": [
+        "REQ-01",
+        "REQ-19",
+        "REQ-20",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "authentication"
+    },
+    {
+      "id": "GAS-05",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-05'",
+      "requirements": [
+        "REQ-01",
+        "REQ-19",
+        "REQ-20",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "authentication"
+    },
+    {
+      "id": "GAS-06",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-06'",
+      "requirements": [
+        "REQ-06",
+        "REQ-10",
+        "REQ-20",
+        "REQ-03"
+      ],
+      "mode": "offline-stub",
+      "category": "parent-authorization"
+    },
+    {
+      "id": "GAS-07",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-07'",
+      "requirements": [
+        "REQ-06",
+        "REQ-10",
+        "REQ-20"
+      ],
+      "mode": "offline-stub",
+      "category": "parent-authorization"
+    },
+    {
+      "id": "GAS-08",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-08'",
+      "requirements": [
+        "REQ-06",
+        "REQ-10",
+        "REQ-20"
+      ],
+      "mode": "offline-stub",
+      "category": "parent-authorization"
+    },
+    {
+      "id": "GAS-09",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-09'",
+      "requirements": [
+        "REQ-06",
+        "REQ-10",
+        "REQ-20"
+      ],
+      "mode": "offline-stub",
+      "category": "parent-authorization"
+    },
+    {
+      "id": "GAS-10",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-10'",
+      "requirements": [
+        "REQ-06",
+        "REQ-10",
+        "REQ-20"
+      ],
+      "mode": "offline-stub",
+      "category": "parent-authorization"
+    },
+    {
+      "id": "GAS-11",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-11'",
+      "requirements": [
+        "REQ-06",
+        "REQ-10",
+        "REQ-20"
+      ],
+      "mode": "offline-stub",
+      "category": "parent-authorization"
+    },
+    {
+      "id": "GAS-12",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-12'",
+      "requirements": [
+        "REQ-01",
+        "REQ-19",
+        "REQ-20",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "authentication"
+    },
+    {
+      "id": "GAS-13",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-13'",
+      "requirements": [
+        "REQ-13",
+        "REQ-14",
+        "REQ-15",
+        "REQ-16",
+        "REQ-36"
+      ],
+      "mode": "offline-stub",
+      "category": "completion"
+    },
+    {
+      "id": "GAS-14",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-14'",
+      "requirements": [
+        "REQ-13",
+        "REQ-14",
+        "REQ-15",
+        "REQ-16",
+        "REQ-36"
+      ],
+      "mode": "offline-stub",
+      "category": "completion"
+    },
+    {
+      "id": "GAS-15",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-15'",
+      "requirements": [
+        "REQ-13",
+        "REQ-14",
+        "REQ-15",
+        "REQ-16",
+        "REQ-36"
+      ],
+      "mode": "offline-stub",
+      "category": "completion"
+    },
+    {
+      "id": "GAS-16",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-16'",
+      "requirements": [
+        "REQ-13",
+        "REQ-14",
+        "REQ-15",
+        "REQ-16",
+        "REQ-36"
+      ],
+      "mode": "offline-stub",
+      "category": "completion"
+    },
+    {
+      "id": "GAS-17",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-17'",
+      "requirements": [
+        "REQ-26",
+        "REQ-27"
+      ],
+      "mode": "offline-stub",
+      "category": "concurrency"
+    },
+    {
+      "id": "GAS-18",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-18'",
+      "requirements": [
+        "REQ-02",
+        "REQ-17",
+        "REQ-18"
+      ],
+      "mode": "offline-stub",
+      "category": "validation"
+    },
+    {
+      "id": "GAS-19",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-19'",
+      "requirements": [
+        "REQ-02",
+        "REQ-17",
+        "REQ-18"
+      ],
+      "mode": "offline-stub",
+      "category": "validation"
+    },
+    {
+      "id": "GAS-20",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-20'",
+      "requirements": [
+        "REQ-02",
+        "REQ-17",
+        "REQ-18"
+      ],
+      "mode": "offline-stub",
+      "category": "validation"
+    },
+    {
+      "id": "GAS-21",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-21'",
+      "requirements": [
+        "REQ-02",
+        "REQ-17",
+        "REQ-18"
+      ],
+      "mode": "offline-stub",
+      "category": "validation"
+    },
+    {
+      "id": "GAS-22",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-22'",
+      "requirements": [
+        "REQ-18"
+      ],
+      "mode": "offline-stub",
+      "category": "idempotency"
+    },
+    {
+      "id": "GAS-23",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-23'",
+      "requirements": [
+        "REQ-18"
+      ],
+      "mode": "offline-stub",
+      "category": "idempotency"
+    },
+    {
+      "id": "GAS-24",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-24'",
+      "requirements": [
+        "REQ-18"
+      ],
+      "mode": "offline-stub",
+      "category": "idempotency"
+    },
+    {
+      "id": "GAS-25",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-25'",
+      "requirements": [
+        "REQ-18",
+        "REQ-28"
+      ],
+      "mode": "offline-stub",
+      "category": "failures"
+    },
+    {
+      "id": "GAS-26",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-26'",
+      "requirements": [
+        "REQ-18",
+        "REQ-28"
+      ],
+      "mode": "offline-stub",
+      "category": "failures"
+    },
+    {
+      "id": "GAS-27",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-27'",
+      "requirements": [
+        "REQ-18",
+        "REQ-28"
+      ],
+      "mode": "offline-stub",
+      "category": "failures"
+    },
+    {
+      "id": "GAS-28",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-28'",
+      "requirements": [
+        "REQ-18",
+        "REQ-28"
+      ],
+      "mode": "offline-stub",
+      "category": "failures"
+    },
+    {
+      "id": "GAS-29",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-29'",
+      "requirements": [
+        "REQ-18",
+        "REQ-28"
+      ],
+      "mode": "offline-stub",
+      "category": "failures"
+    },
+    {
+      "id": "GAS-30",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-30'",
+      "requirements": [
+        "REQ-18",
+        "REQ-28"
+      ],
+      "mode": "offline-stub",
+      "category": "failures"
+    },
+    {
+      "id": "GAS-31",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-31'",
+      "requirements": [
+        "REQ-18",
+        "REQ-28"
+      ],
+      "mode": "offline-stub",
+      "category": "failures"
+    },
+    {
+      "id": "GAS-32",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-32'",
+      "requirements": [
+        "REQ-18",
+        "REQ-28"
+      ],
+      "mode": "offline-stub",
+      "category": "failures"
+    },
+    {
+      "id": "GAS-33",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-33'",
+      "requirements": [
+        "REQ-18",
+        "REQ-28"
+      ],
+      "mode": "offline-stub",
+      "category": "failures"
+    },
+    {
+      "id": "GAS-34",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-34'",
+      "requirements": [
+        "REQ-18",
+        "REQ-28"
+      ],
+      "mode": "offline-stub",
+      "category": "failures"
+    },
+    {
+      "id": "GAS-35",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-35'",
+      "requirements": [
+        "REQ-18",
+        "REQ-28"
+      ],
+      "mode": "offline-stub",
+      "category": "failures"
+    },
+    {
+      "id": "GAS-36",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-36'",
+      "requirements": [
+        "REQ-02",
+        "REQ-17",
+        "REQ-18"
+      ],
+      "mode": "offline-stub",
+      "category": "validation"
+    },
+    {
+      "id": "GAS-37",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-37'",
+      "requirements": [
+        "REQ-02",
+        "REQ-17",
+        "REQ-18"
+      ],
+      "mode": "offline-stub",
+      "category": "validation"
+    },
+    {
+      "id": "GAS-38",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-38'",
+      "requirements": [
+        "REQ-02",
+        "REQ-17",
+        "REQ-18"
+      ],
+      "mode": "offline-stub",
+      "category": "validation"
+    },
+    {
+      "id": "GAS-39",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-39'",
+      "requirements": [
+        "REQ-20",
+        "REQ-33"
+      ],
+      "mode": "offline-stub",
+      "category": "portal"
+    },
+    {
+      "id": "GAS-40",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-40'",
+      "requirements": [
+        "REQ-20",
+        "REQ-33"
+      ],
+      "mode": "offline-stub",
+      "category": "portal"
+    },
+    {
+      "id": "GAS-41",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-41'",
+      "requirements": [
+        "REQ-20",
+        "REQ-33"
+      ],
+      "mode": "offline-stub",
+      "category": "portal"
+    },
+    {
+      "id": "GAS-42",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-42'",
+      "requirements": [
+        "REQ-20",
+        "REQ-33"
+      ],
+      "mode": "offline-stub",
+      "category": "portal"
+    },
+    {
+      "id": "GAS-43",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-43'",
+      "requirements": [
+        "REQ-01",
+        "REQ-19",
+        "REQ-20",
+        "REQ-32",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "google-auth"
+    },
+    {
+      "id": "GAS-44",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-44'",
+      "requirements": [
+        "REQ-01",
+        "REQ-19",
+        "REQ-20",
+        "REQ-32",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "google-auth"
+    },
+    {
+      "id": "GAS-45",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-45'",
+      "requirements": [
+        "REQ-01",
+        "REQ-19",
+        "REQ-20",
+        "REQ-32",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "google-auth"
+    },
+    {
+      "id": "GAS-46",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-46'",
+      "requirements": [
+        "REQ-01",
+        "REQ-19",
+        "REQ-20",
+        "REQ-32",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "google-auth"
+    },
+    {
+      "id": "GAS-47",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-47'",
+      "requirements": [
+        "REQ-01",
+        "REQ-19",
+        "REQ-20",
+        "REQ-32",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "google-auth"
+    },
+    {
+      "id": "GAS-48",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-48'",
+      "requirements": [
+        "REQ-01",
+        "REQ-19",
+        "REQ-20",
+        "REQ-32",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "google-auth"
+    },
+    {
+      "id": "GAS-49",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-49'",
+      "requirements": [
+        "REQ-01",
+        "REQ-19",
+        "REQ-20",
+        "REQ-32",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "google-auth"
+    },
+    {
+      "id": "GAS-50",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-50'",
+      "requirements": [
+        "REQ-01",
+        "REQ-19",
+        "REQ-20",
+        "REQ-32",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "google-auth"
+    },
+    {
+      "id": "GAS-51",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-51'",
+      "requirements": [
+        "REQ-01",
+        "REQ-19",
+        "REQ-20",
+        "REQ-32",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "google-auth"
+    },
+    {
+      "id": "GAS-52",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-52'",
+      "requirements": [
+        "REQ-01",
+        "REQ-19",
+        "REQ-20",
+        "REQ-32",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "google-auth"
+    },
+    {
+      "id": "GAS-53",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-53'",
+      "requirements": [
+        "REQ-01",
+        "REQ-19",
+        "REQ-20",
+        "REQ-32",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "google-auth"
+    },
+    {
+      "id": "GAS-54",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-54'",
+      "requirements": [
+        "REQ-01",
+        "REQ-19",
+        "REQ-20",
+        "REQ-32",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "google-auth"
+    },
+    {
+      "id": "GAS-55",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-55'",
+      "requirements": [
+        "REQ-31",
+        "REQ-32",
+        "REQ-33"
+      ],
+      "mode": "offline-stub",
+      "category": "account-management"
+    },
+    {
+      "id": "GAS-56",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-56'",
+      "requirements": [
+        "REQ-31",
+        "REQ-32",
+        "REQ-33"
+      ],
+      "mode": "offline-stub",
+      "category": "account-management"
+    },
+    {
+      "id": "GAS-57",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-57'",
+      "requirements": [
+        "REQ-31",
+        "REQ-32",
+        "REQ-33"
+      ],
+      "mode": "offline-stub",
+      "category": "account-management"
+    },
+    {
+      "id": "GAS-58",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-58'",
+      "requirements": [
+        "REQ-31",
+        "REQ-32",
+        "REQ-33"
+      ],
+      "mode": "offline-stub",
+      "category": "account-management"
+    },
+    {
+      "id": "GAS-59",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-59'",
+      "requirements": [
+        "REQ-31",
+        "REQ-32",
+        "REQ-33"
+      ],
+      "mode": "offline-stub",
+      "category": "account-management"
+    },
+    {
+      "id": "GAS-60",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-60'",
+      "requirements": [
+        "REQ-31",
+        "REQ-32",
+        "REQ-33"
+      ],
+      "mode": "offline-stub",
+      "category": "account-management"
+    },
+    {
+      "id": "GAS-61",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-61'",
+      "requirements": [
+        "REQ-31",
+        "REQ-32",
+        "REQ-33"
+      ],
+      "mode": "offline-stub",
+      "category": "account-management"
+    },
+    {
+      "id": "GAS-62",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-62'",
+      "requirements": [
+        "REQ-31",
+        "REQ-32",
+        "REQ-33"
+      ],
+      "mode": "offline-stub",
+      "category": "account-management"
+    },
+    {
+      "id": "PT-01",
+      "path": "scripts/test_portals.cjs",
+      "locator": "test('Strict hash routes, including unknown and malformed entry IDs'",
+      "requirements": [
+        "REQ-01",
+        "REQ-19",
+        "REQ-20",
+        "REQ-31",
+        "REQ-33",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "frontend-contract"
+    },
+    {
+      "id": "PT-02",
+      "path": "scripts/test_portals.cjs",
+      "locator": "test('Roles and personal-link identity mismatch fail closed'",
+      "requirements": [
+        "REQ-01",
+        "REQ-19",
+        "REQ-20",
+        "REQ-31",
+        "REQ-33",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "frontend-contract"
+    },
+    {
+      "id": "PT-03",
+      "path": "scripts/test_portals.cjs",
+      "locator": "test('QR payload has only canonical app URL and opaque ID, preserving GitHub base'",
+      "requirements": [
+        "REQ-01",
+        "REQ-19",
+        "REQ-20",
+        "REQ-31",
+        "REQ-33",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "frontend-contract"
+    },
+    {
+      "id": "PT-04",
+      "path": "scripts/test_portals.cjs",
+      "locator": "test('Admin response refused at parent entry with no saved session'",
+      "requirements": [
+        "REQ-01",
+        "REQ-19",
+        "REQ-20",
+        "REQ-31",
+        "REQ-33",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "frontend-contract"
+    },
+    {
+      "id": "PT-05",
+      "path": "scripts/test_portals.cjs",
+      "locator": "test('Individual ID mismatch refused even against old server without binding'",
+      "requirements": [
+        "REQ-01",
+        "REQ-19",
+        "REQ-20",
+        "REQ-31",
+        "REQ-33",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "frontend-contract"
+    },
+    {
+      "id": "PT-06",
+      "path": "scripts/test_portals.cjs",
+      "locator": "test('Parent request carries ID and role, directory and admin writes are rejected locally'",
+      "requirements": [
+        "REQ-01",
+        "REQ-19",
+        "REQ-20",
+        "REQ-31",
+        "REQ-33",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "frontend-contract"
+    },
+    {
+      "id": "PT-07",
+      "path": "scripts/test_portals.cjs",
+      "locator": "test('Stored role tampering cannot pass server identity validation'",
+      "requirements": [
+        "REQ-01",
+        "REQ-19",
+        "REQ-20",
+        "REQ-31",
+        "REQ-33",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "frontend-contract"
+    },
+    {
+      "id": "PT-08",
+      "path": "scripts/test_portals.cjs",
+      "locator": "test('Rotated individual ID response clears live session'",
+      "requirements": [
+        "REQ-01",
+        "REQ-19",
+        "REQ-20",
+        "REQ-31",
+        "REQ-33",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "frontend-contract"
+    },
+    {
+      "id": "PT-09",
+      "path": "scripts/test_portals.cjs",
+      "locator": "test('Demo parent data limited to assigned family and demo role entry mismatch refused'",
+      "requirements": [
+        "REQ-01",
+        "REQ-19",
+        "REQ-20",
+        "REQ-31",
+        "REQ-33",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "frontend-contract"
+    },
+    {
+      "id": "PT-10",
+      "path": "scripts/test_portals.cjs",
+      "locator": "test('Only a valid developer GAS exec endpoint is accepted'",
+      "requirements": [
+        "REQ-01",
+        "REQ-19",
+        "REQ-20",
+        "REQ-31",
+        "REQ-33",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "frontend-contract"
+    },
+    {
+      "id": "PT-11",
+      "path": "scripts/test_portals.cjs",
+      "locator": "test('Missing Google setup prevents any sign-in request'",
+      "requirements": [
+        "REQ-01",
+        "REQ-19",
+        "REQ-20",
+        "REQ-31",
+        "REQ-33",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "frontend-contract"
+    },
+    {
+      "id": "PT-12",
+      "path": "scripts/test_portals.cjs",
+      "locator": "test('Saved endpoint overrides are ignored and tokens travel only in a POST body'",
+      "requirements": [
+        "REQ-01",
+        "REQ-19",
+        "REQ-20",
+        "REQ-31",
+        "REQ-33",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "frontend-contract"
+    },
+    {
+      "id": "PT-13",
+      "path": "scripts/test_portals.cjs",
+      "locator": "test('Tampered saved endpoint or project cannot send a Google token'",
+      "requirements": [
+        "REQ-01",
+        "REQ-19",
+        "REQ-20",
+        "REQ-31",
+        "REQ-33",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "frontend-contract"
+    },
+    {
+      "id": "PT-14",
+      "path": "scripts/test_portals.cjs",
+      "locator": "test('Each data call obtains a current Google token without persisting it in app session'",
+      "requirements": [
+        "REQ-01",
+        "REQ-19",
+        "REQ-20",
+        "REQ-31",
+        "REQ-33",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "frontend-contract"
+    },
+    {
+      "id": "PT-15",
+      "path": "scripts/test_portals.cjs",
+      "locator": "test('Missing Google user clears the application session before sending data requests'",
+      "requirements": [
+        "REQ-01",
+        "REQ-19",
+        "REQ-20",
+        "REQ-31",
+        "REQ-33",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "frontend-contract"
+    },
+    {
+      "id": "PT-16",
+      "path": "scripts/test_portals.cjs",
+      "locator": "test('Demo-only entry can never start a real Google login'",
+      "requirements": [
+        "REQ-01",
+        "REQ-19",
+        "REQ-20",
+        "REQ-31",
+        "REQ-33",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "frontend-contract"
+    },
+    {
+      "id": "PT-17",
+      "path": "scripts/test_portals.cjs",
+      "locator": "test('Logout invalidates an outstanding login response and signs out Firebase'",
+      "requirements": [
+        "REQ-01",
+        "REQ-19",
+        "REQ-20",
+        "REQ-31",
+        "REQ-33",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "frontend-contract"
+    },
+    {
+      "id": "PT-18",
+      "path": "scripts/test_portals.cjs",
+      "locator": "test('Account management refuses parent and demo admin without sending requests'",
+      "requirements": [
+        "REQ-01",
+        "REQ-19",
+        "REQ-20",
+        "REQ-31",
+        "REQ-33",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "frontend-contract"
+    },
+    {
+      "id": "PT-19",
+      "path": "scripts/test_portals.cjs",
+      "locator": "test('Account management sends revision with each write and rejects malformed directory'",
+      "requirements": [
+        "REQ-01",
+        "REQ-19",
+        "REQ-20",
+        "REQ-31",
+        "REQ-33",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "frontend-contract"
+    },
+    {
+      "id": "PT-20",
+      "path": "scripts/test_portals.cjs",
+      "locator": "test('Malformed successful list responses are rejected, including health-only payloads'",
+      "requirements": [
+        "REQ-01",
+        "REQ-19",
+        "REQ-20",
+        "REQ-31",
+        "REQ-33",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "frontend-contract"
+    },
+    {
+      "id": "SDK-01",
+      "path": "scripts/test_google_auth.cjs",
+      "locator": "test('Popup cannot start before SDK setup completes'",
+      "requirements": [
+        "REQ-01",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "frontend-contract"
+    },
+    {
+      "id": "SDK-02",
+      "path": "scripts/test_google_auth.cjs",
+      "locator": "test('Preparation configures tab/session persistence and Japanese UI'",
+      "requirements": [
+        "REQ-01",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "frontend-contract"
+    },
+    {
+      "id": "SDK-03",
+      "path": "scripts/test_google_auth.cjs",
+      "locator": "test('Prepared sign-in opens popup before yielding the click and selects the user account'",
+      "requirements": [
+        "REQ-01",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "frontend-contract"
+    },
+    {
+      "id": "SDK-04",
+      "path": "scripts/test_google_auth.cjs",
+      "locator": "test('Data request obtains the current SDK token and refuses a different user'",
+      "requirements": [
+        "REQ-01",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "frontend-contract"
+    },
+    {
+      "id": "SDK-05",
+      "path": "scripts/test_google_auth.cjs",
+      "locator": "test('Provider errors are translated without exposing raw credential details'",
+      "requirements": [
+        "REQ-01",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "frontend-contract"
+    },
+    {
+      "id": "SDK-06",
+      "path": "scripts/test_google_auth.cjs",
+      "locator": "test('Logout clears the Firebase SDK user and later data calls cannot use it'",
+      "requirements": [
+        "REQ-01",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "frontend-contract"
+    },
+    {
+      "id": "SDK-07",
+      "path": "scripts/test_google_auth.cjs",
+      "locator": "test('Preparation can recover from a transient persistence failure without reloading'",
+      "requirements": [
+        "REQ-01"
+      ],
+      "mode": "offline-stub",
+      "category": "frontend-contract",
+      "scope": "未配備コード。Firebase SDKスタブで認証準備の一時失敗後に再試行できることを検証。実Google・iPhoneのエラー原因は対象外。",
+      "evidence": {
+        "path": "docs/traceability/reports/signout-retry-20261030-local/google-sdk-contract.json",
+        "key": "Preparation can recover from a transient persistence failure without reloading",
+        "requiredSources": [
+          "src/services/google-auth.ts",
+          "scripts/test_google_auth.cjs"
+        ]
+      }
+    },
+    {
+      "id": "UI-07",
+      "path": "scripts/test_google_auth_retry_ui.cjs",
+      "locator": "Failed initialization can be retried; login requires a separate click",
+      "requirements": [
+        "REQ-01"
+      ],
+      "mode": "offline-synthetic-react-hooks",
+      "category": "frontend-contract",
+      "scope": "未配備コード。疑似Reactフックとスタブで再試行ボタンの状態を検証。実ブラウザー・実機・本人操作ではない。",
+      "evidence": {
+        "path": "docs/traceability/reports/signout-retry-20261030-local/google-auth-retry-ui.json",
+        "key": "UI-07",
+        "requiredSources": [
+          "src/components/LoginScreen.tsx",
+          "scripts/test_google_auth_retry_ui.cjs"
+        ]
+      }
+    },
+    {
+      "id": "TRACE-01",
+      "path": "scripts/test_traceability.py",
+      "locator": "case('TRACE-01'",
+      "requirements": [
+        "REQ-38"
+      ],
+      "mode": "offline-mutation",
+      "category": "trace-checker",
+      "evidence": {
+        "path": "outputs/async-review-20261107/independent-docs/checker-tests.json",
+        "key": "TRACE-01",
+        "requiredSources": [
+          "scripts/traceability.py",
+          "scripts/test_traceability.py"
+        ]
+      }
+    },
+    {
+      "id": "TRACE-02",
+      "path": "scripts/test_traceability.py",
+      "locator": "case('TRACE-02'",
+      "requirements": [
+        "REQ-38"
+      ],
+      "mode": "offline-mutation",
+      "category": "trace-checker",
+      "evidence": {
+        "path": "outputs/async-review-20261107/independent-docs/checker-tests.json",
+        "key": "TRACE-02",
+        "requiredSources": [
+          "scripts/traceability.py",
+          "scripts/test_traceability.py"
+        ]
+      }
+    },
+    {
+      "id": "TRACE-03",
+      "path": "scripts/test_traceability.py",
+      "locator": "case('TRACE-03'",
+      "requirements": [
+        "REQ-38"
+      ],
+      "mode": "offline-mutation",
+      "category": "trace-checker",
+      "evidence": {
+        "path": "outputs/async-review-20261107/independent-docs/checker-tests.json",
+        "key": "TRACE-03",
+        "requiredSources": [
+          "scripts/traceability.py",
+          "scripts/test_traceability.py"
+        ]
+      }
+    },
+    {
+      "id": "TRACE-04",
+      "path": "scripts/test_traceability.py",
+      "locator": "case('TRACE-04'",
+      "requirements": [
+        "REQ-38"
+      ],
+      "mode": "offline-mutation",
+      "category": "trace-checker",
+      "evidence": {
+        "path": "outputs/async-review-20261107/independent-docs/checker-tests.json",
+        "key": "TRACE-04",
+        "requiredSources": [
+          "scripts/traceability.py",
+          "scripts/test_traceability.py"
+        ]
+      }
+    },
+    {
+      "id": "TRACE-05",
+      "path": "scripts/test_traceability.py",
+      "locator": "case('TRACE-05'",
+      "requirements": [
+        "REQ-38"
+      ],
+      "mode": "offline-mutation",
+      "category": "trace-checker",
+      "evidence": {
+        "path": "outputs/async-review-20261107/independent-docs/checker-tests.json",
+        "key": "TRACE-05",
+        "requiredSources": [
+          "scripts/traceability.py",
+          "scripts/test_traceability.py"
+        ]
+      }
+    },
+    {
+      "id": "TRACE-06",
+      "path": "scripts/test_traceability.py",
+      "locator": "case('TRACE-06'",
+      "requirements": [
+        "REQ-38"
+      ],
+      "mode": "offline-mutation",
+      "category": "trace-checker",
+      "evidence": {
+        "path": "outputs/async-review-20261107/independent-docs/checker-tests.json",
+        "key": "TRACE-06",
+        "requiredSources": [
+          "scripts/traceability.py",
+          "scripts/test_traceability.py"
+        ]
+      }
+    },
+    {
+      "id": "TRACE-07",
+      "path": "scripts/test_traceability.py",
+      "locator": "case('TRACE-07'",
+      "requirements": [
+        "REQ-38"
+      ],
+      "mode": "offline-mutation",
+      "category": "trace-checker",
+      "evidence": {
+        "path": "outputs/async-review-20261107/independent-docs/checker-tests.json",
+        "key": "TRACE-07",
+        "requiredSources": [
+          "scripts/traceability.py",
+          "scripts/test_traceability.py"
+        ]
+      }
+    },
+    {
+      "id": "TRACE-08",
+      "path": "scripts/test_traceability.py",
+      "locator": "case('TRACE-08'",
+      "requirements": [
+        "REQ-38"
+      ],
+      "mode": "offline-mutation",
+      "category": "trace-checker",
+      "evidence": {
+        "path": "outputs/async-review-20261107/independent-docs/checker-tests.json",
+        "key": "TRACE-08",
+        "requiredSources": [
+          "scripts/traceability.py",
+          "scripts/test_traceability.py"
+        ]
+      }
+    },
+    {
+      "id": "TRACE-09",
+      "path": "scripts/test_traceability.py",
+      "locator": "case('TRACE-09'",
+      "requirements": [
+        "REQ-38"
+      ],
+      "mode": "offline-mutation",
+      "category": "trace-checker",
+      "evidence": {
+        "path": "outputs/async-review-20261107/independent-docs/checker-tests.json",
+        "key": "TRACE-09",
+        "requiredSources": [
+          "scripts/traceability.py",
+          "scripts/test_traceability.py"
+        ]
+      }
+    },
+    {
+      "id": "TRACE-10",
+      "path": "scripts/test_traceability.py",
+      "locator": "case('TRACE-10'",
+      "requirements": [
+        "REQ-38"
+      ],
+      "mode": "offline-mutation",
+      "category": "trace-checker",
+      "evidence": {
+        "path": "outputs/async-review-20261107/independent-docs/checker-tests.json",
+        "key": "TRACE-10",
+        "requiredSources": [
+          "scripts/traceability.py",
+          "scripts/test_traceability.py"
+        ]
+      }
+    },
+    {
+      "id": "TRACE-11",
+      "path": "scripts/test_traceability.py",
+      "locator": "case('TRACE-11'",
+      "requirements": [
+        "REQ-38"
+      ],
+      "mode": "offline-mutation",
+      "category": "trace-checker",
+      "evidence": {
+        "path": "outputs/async-review-20261107/independent-docs/checker-tests.json",
+        "key": "TRACE-11",
+        "requiredSources": [
+          "scripts/traceability.py",
+          "scripts/test_traceability.py"
+        ]
+      }
+    },
+    {
+      "id": "TRACE-12",
+      "path": "scripts/test_traceability.py",
+      "locator": "case('TRACE-12'",
+      "requirements": [
+        "REQ-38"
+      ],
+      "mode": "offline-mutation",
+      "category": "trace-checker",
+      "evidence": {
+        "path": "outputs/async-review-20261107/independent-docs/checker-tests.json",
+        "key": "TRACE-12",
+        "requiredSources": [
+          "scripts/traceability.py",
+          "scripts/test_traceability.py"
+        ]
+      }
+    },
+    {
+      "id": "UI-01",
+      "path": "scripts/test_trace_ui.mjs",
+      "locator": "check('UI-01'",
+      "requirements": [
+        "REQ-03"
+      ],
+      "scope": "ローカルのコンポーネントまたはGAS処理契約の自動検査。本人操作の実受入合格は別。",
+      "evidence": {
+        "path": "outputs/async-review-20261107/regression/trace-ui-2/results.json",
+        "key": "UI-01",
+        "requiredSources": [
+          "scripts/test_trace_ui.mjs",
+          "scripts/fixtures/trace-ui/harness.tsx",
+          "src/components/ParentPortal.tsx",
+          "src/components/TeacherDashboard.tsx",
+          "src/components/AddRideModal.tsx",
+          "src/services/api.ts",
+          "src/services/google-auth.ts",
+          "src/deployment-config.ts",
+          "src/portal.ts",
+          "src/index.css"
+        ]
+      }
+    },
+    {
+      "id": "UI-02",
+      "path": "scripts/test_trace_ui.mjs",
+      "locator": "check('UI-02'",
+      "requirements": [
+        "REQ-04"
+      ],
+      "scope": "ローカルのコンポーネントまたはGAS処理契約の自動検査。本人操作の実受入合格は別。",
+      "evidence": {
+        "path": "outputs/async-review-20261107/regression/trace-ui-2/results.json",
+        "key": "UI-02",
+        "requiredSources": [
+          "scripts/test_trace_ui.mjs",
+          "scripts/fixtures/trace-ui/harness.tsx",
+          "src/components/ParentPortal.tsx",
+          "src/components/TeacherDashboard.tsx",
+          "src/components/AddRideModal.tsx",
+          "src/services/api.ts",
+          "src/services/google-auth.ts",
+          "src/deployment-config.ts",
+          "src/portal.ts",
+          "src/index.css"
+        ]
+      }
+    },
+    {
+      "id": "GAS-63",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-63'",
+      "requirements": [
+        "REQ-05"
+      ],
+      "scope": "ローカルのコンポーネントまたはGAS処理契約の自動検査。本人操作の実受入合格は別。",
+      "evidence": {
+        "path": "outputs/async-review-20261107/independent-backend/2026-11-07T08-59-32-465Z/gas-results.json",
+        "key": "GAS-63",
+        "requiredSources": [
+          "gas/Code.gs",
+          "scripts/test_gas.cjs"
+        ]
+      }
+    },
+    {
+      "id": "GAS-64",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-64'",
+      "requirements": [
+        "REQ-07"
+      ],
+      "scope": "ローカルのコンポーネントまたはGAS処理契約の自動検査。本人操作の実受入合格は別。",
+      "evidence": {
+        "path": "outputs/async-review-20261107/independent-backend/2026-11-07T08-59-32-465Z/gas-results.json",
+        "key": "GAS-64",
+        "requiredSources": [
+          "gas/Code.gs",
+          "scripts/test_gas.cjs"
+        ]
+      }
+    },
+    {
+      "id": "GAS-65",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-65'",
+      "requirements": [
+        "REQ-08"
+      ],
+      "scope": "ローカルのコンポーネントまたはGAS処理契約の自動検査。本人操作の実受入合格は別。",
+      "evidence": {
+        "path": "outputs/async-review-20261107/independent-backend/2026-11-07T08-59-32-465Z/gas-results.json",
+        "key": "GAS-65",
+        "requiredSources": [
+          "gas/Code.gs",
+          "scripts/test_gas.cjs"
+        ]
+      }
+    },
+    {
+      "id": "UI-03",
+      "path": "scripts/test_trace_ui.mjs",
+      "locator": "check('UI-03'",
+      "requirements": [
+        "REQ-09"
+      ],
+      "scope": "ローカルのコンポーネントまたはGAS処理契約の自動検査。本人操作の実受入合格は別。",
+      "evidence": {
+        "path": "outputs/async-review-20261107/regression/trace-ui-2/results.json",
+        "key": "UI-03",
+        "requiredSources": [
+          "scripts/test_trace_ui.mjs",
+          "scripts/fixtures/trace-ui/harness.tsx",
+          "src/components/ParentPortal.tsx",
+          "src/components/TeacherDashboard.tsx",
+          "src/components/AddRideModal.tsx",
+          "src/services/api.ts",
+          "src/services/google-auth.ts",
+          "src/deployment-config.ts",
+          "src/portal.ts",
+          "src/index.css"
+        ]
+      }
+    },
+    {
+      "id": "GAS-66",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-66'",
+      "requirements": [
+        "REQ-11"
+      ],
+      "scope": "ローカルのコンポーネントまたはGAS処理契約の自動検査。本人操作の実受入合格は別。",
+      "evidence": {
+        "path": "outputs/async-review-20261107/independent-backend/2026-11-07T08-59-32-465Z/gas-results.json",
+        "key": "GAS-66",
+        "requiredSources": [
+          "gas/Code.gs",
+          "scripts/test_gas.cjs"
+        ]
+      }
+    },
+    {
+      "id": "UI-04",
+      "path": "scripts/test_trace_ui.mjs",
+      "locator": "check('UI-04'",
+      "requirements": [
+        "REQ-12"
+      ],
+      "scope": "ローカルのコンポーネントまたはGAS処理契約の自動検査。本人操作の実受入合格は別。",
+      "evidence": {
+        "path": "outputs/async-review-20261107/regression/trace-ui-2/results.json",
+        "key": "UI-04",
+        "requiredSources": [
+          "scripts/test_trace_ui.mjs",
+          "scripts/fixtures/trace-ui/harness.tsx",
+          "src/components/ParentPortal.tsx",
+          "src/components/TeacherDashboard.tsx",
+          "src/components/AddRideModal.tsx",
+          "src/services/api.ts",
+          "src/services/google-auth.ts",
+          "src/deployment-config.ts",
+          "src/portal.ts",
+          "src/index.css"
+        ]
+      }
+    },
+    {
+      "id": "UI-05",
+      "path": "scripts/test_trace_ui.mjs",
+      "locator": "check('UI-05'",
+      "requirements": [
+        "REQ-21"
+      ],
+      "scope": "375pxのローカルChromium実測。スマートフォン実機では未確認。",
+      "evidence": {
+        "path": "outputs/async-review-20261107/regression/trace-ui-2/results.json",
+        "key": "UI-05",
+        "requiredSources": [
+          "scripts/test_trace_ui.mjs",
+          "scripts/fixtures/trace-ui/harness.tsx",
+          "src/components/ParentPortal.tsx",
+          "src/components/TeacherDashboard.tsx",
+          "src/components/AddRideModal.tsx",
+          "src/services/api.ts",
+          "src/services/google-auth.ts",
+          "src/deployment-config.ts",
+          "src/portal.ts",
+          "src/index.css"
+        ]
+      }
+    },
+    {
+      "id": "PT-21",
+      "path": "scripts/test_portals.cjs",
+      "locator": "Fresh service instance reload retains created student and reservation IDs and values in demo storage",
+      "requirements": [
+        "REQ-22"
+      ],
+      "scope": "実ApiServiceのデモ保存と新インスタンス再取得を検証。実Google台帳の永続化受入は別。",
+      "evidence": {
+        "path": "docs/traceability/reports/async-review-20261107/frontend-contract-normalized.json",
+        "key": "Fresh service instance reload retains created student and reservation IDs and values in demo storage",
+        "requiredSources": [
+          "src/deployment-config.ts",
+          "src/services/api.ts",
+          "src/services/google-auth.ts",
+          "src/portal.ts",
+          "scripts/test_portals.cjs"
+        ]
+      }
+    },
+    {
+      "id": "GAS-67",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-67'",
+      "requirements": [
+        "REQ-24"
+      ],
+      "scope": "GASのCalendarアダプタ契約と予定説明欄の予約IDをスタブで検証。実Calendar同期の受入AT-24は未完。",
+      "evidence": {
+        "path": "outputs/async-review-20261107/independent-backend/2026-11-07T08-59-32-465Z/gas-results.json",
+        "key": "GAS-67",
+        "requiredSources": [
+          "gas/Code.gs",
+          "scripts/test_gas.cjs"
+        ]
+      }
+    },
+    {
+      "id": "GAS-68",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-68'",
+      "requirements": [
+        "REQ-25"
+      ],
+      "scope": "GASの取消アダプタ契約をスタブで検証。実Calendar削除の受入AT-25は未完。",
+      "evidence": {
+        "path": "outputs/async-review-20261107/independent-backend/2026-11-07T08-59-32-465Z/gas-results.json",
+        "key": "GAS-68",
+        "requiredSources": [
+          "gas/Code.gs",
+          "scripts/test_gas.cjs"
+        ]
+      }
+    },
+    {
+      "id": "UI-06",
+      "path": "scripts/test_trace_ui.mjs",
+      "locator": "check('UI-06'",
+      "requirements": [
+        "REQ-29"
+      ],
+      "scope": "Chromiumタッチエミュレーション。物理端末と全操作の実機受入AT-29は未完。",
+      "evidence": {
+        "path": "outputs/async-review-20261107/regression/trace-ui-2/results.json",
+        "key": "UI-06",
+        "requiredSources": [
+          "scripts/test_trace_ui.mjs",
+          "scripts/fixtures/trace-ui/harness.tsx",
+          "src/components/ParentPortal.tsx",
+          "src/components/TeacherDashboard.tsx",
+          "src/components/AddRideModal.tsx",
+          "src/services/api.ts",
+          "src/services/google-auth.ts",
+          "src/deployment-config.ts",
+          "src/portal.ts",
+          "src/index.css"
+        ]
+      }
+    },
+    {
+      "id": "REL-01",
+      "path": "scripts/test_release_contract.cjs",
+      "locator": "REL-01",
+      "requirements": [
+        "REQ-30"
+      ],
+      "scope": "配布マニフェスト作成を隔離VMで検証。本番公開後の疎通・復旧確認AT-30は未実施。",
+      "evidence": {
+        "path": "docs/traceability/reports/r2/offline/release-contract.json",
+        "key": "REL-01",
+        "requiredSources": [
+          "scripts/prepare_test_release.cjs",
+          "scripts/test_release_contract.cjs"
+        ]
+      }
+    },
+    {
+      "id": "GAS-69",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-69'",
+      "requirements": [
+        "REQ-35"
+      ],
+      "scope": "分離したメモリ台帳で次回取得・非連動を検証。実Google資源の手修正手順と保全は別。",
+      "evidence": {
+        "path": "outputs/async-review-20261107/independent-backend/2026-11-07T08-59-32-465Z/gas-results.json",
+        "key": "GAS-69",
+        "requiredSources": [
+          "gas/Code.gs",
+          "scripts/test_gas.cjs"
+        ]
+      }
+    },
+    {
+      "id": "GAS-70",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-70'",
+      "requirements": [
+        "REQ-37"
+      ],
+      "scope": "正常な取消→新規と、Calendar結果不明時の再送禁止・照合待ちを検証。日時・場所の原子的編集ではない。",
+      "evidence": {
+        "path": "outputs/async-review-20261107/independent-backend/2026-11-07T08-59-32-465Z/gas-results.json",
+        "key": "GAS-70",
+        "requiredSources": [
+          "gas/Code.gs",
+          "scripts/test_gas.cjs"
+        ]
+      }
+    },
+    {
+      "id": "TRACE-13",
+      "path": "scripts/test_traceability.py",
+      "locator": "case('TRACE-13'",
+      "requirements": [
+        "REQ-38"
+      ],
+      "evidence": {
+        "path": "outputs/async-review-20261107/independent-docs/checker-tests.json",
+        "key": "TRACE-13",
+        "requiredSources": [
+          "scripts/traceability.py",
+          "scripts/test_traceability.py"
+        ]
+      }
+    },
+    {
+      "id": "TRACE-14",
+      "path": "scripts/test_traceability.py",
+      "locator": "case('TRACE-14'",
+      "requirements": [
+        "REQ-38"
+      ],
+      "evidence": {
+        "path": "outputs/async-review-20261107/independent-docs/checker-tests.json",
+        "key": "TRACE-14",
+        "requiredSources": [
+          "scripts/traceability.py",
+          "scripts/test_traceability.py"
+        ]
+      }
+    },
+    {
+      "id": "SDK-08",
+      "path": "scripts/test_google_signout_retry.cjs",
+      "locator": "Failure keeps previous user blocked until a real sign-out retry succeeds",
+      "requirements": [
+        "REQ-01",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "frontend-contract",
+      "scope": "未配備のローカル認証変更をFirebase SDKスタブで検証。実Google・iPhoneの認証エラーの原因や解消を証明しない。",
+      "evidence": {
+        "path": "docs/traceability/reports/signout-retry-20261030-local/google-signout-retry.json",
+        "key": "Failure keeps previous user blocked until a real sign-out retry succeeds",
+        "requiredSources": [
+          "src/services/google-auth.ts",
+          "scripts/test_google_signout_retry.cjs"
+        ]
+      }
+    },
+    {
+      "id": "SDK-09",
+      "path": "scripts/test_google_signout_retry.cjs",
+      "locator": "A pending logout blocks popup and token and concurrent preparation shares it",
+      "requirements": [
+        "REQ-01",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "frontend-contract",
+      "scope": "未配備のローカル認証変更をFirebase SDKスタブで検証。実Google・iPhoneの認証エラーの原因や解消を証明しない。",
+      "evidence": {
+        "path": "docs/traceability/reports/signout-retry-20261030-local/google-signout-retry.json",
+        "key": "A pending logout blocks popup and token and concurrent preparation shares it",
+        "requiredSources": [
+          "src/services/google-auth.ts",
+          "scripts/test_google_signout_retry.cjs"
+        ]
+      }
+    },
+    {
+      "id": "SDK-10",
+      "path": "scripts/test_google_signout_retry.cjs",
+      "locator": "Concurrent preparations after a failed logout share one real retry",
+      "requirements": [
+        "REQ-01",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "frontend-contract",
+      "scope": "未配備のローカル認証変更をFirebase SDKスタブで検証。実Google・iPhoneの認証エラーの原因や解消を証明しない。",
+      "evidence": {
+        "path": "docs/traceability/reports/signout-retry-20261030-local/google-signout-retry.json",
+        "key": "Concurrent preparations after a failed logout share one real retry",
+        "requiredSources": [
+          "src/services/google-auth.ts",
+          "scripts/test_google_signout_retry.cjs"
+        ]
+      }
+    },
+    {
+      "id": "SDK-11",
+      "path": "scripts/test_google_signout_retry.cjs",
+      "locator": "Logout during initialization does not reopen the popup before logout finishes",
+      "requirements": [
+        "REQ-01",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "frontend-contract",
+      "scope": "未配備のローカル認証変更をFirebase SDKスタブで検証。実Google・iPhoneの認証エラーの原因や解消を証明しない。",
+      "evidence": {
+        "path": "docs/traceability/reports/signout-retry-20261030-local/google-signout-retry.json",
+        "key": "Logout during initialization does not reopen the popup before logout finishes",
+        "requiredSources": [
+          "src/services/google-auth.ts",
+          "scripts/test_google_signout_retry.cjs"
+        ]
+      }
+    },
+    {
+      "id": "SDK-12",
+      "path": "scripts/test_google_signout_retry.cjs",
+      "locator": "A failed initialization does not discard the SDK instance needed for logout",
+      "requirements": [
+        "REQ-01",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "frontend-contract",
+      "scope": "未配備のローカル認証変更をFirebase SDKスタブで検証。実Google・iPhoneの認証エラーの原因や解消を証明しない。",
+      "evidence": {
+        "path": "docs/traceability/reports/signout-retry-20261030-local/google-signout-retry.json",
+        "key": "A failed initialization does not discard the SDK instance needed for logout",
+        "requiredSources": [
+          "src/services/google-auth.ts",
+          "scripts/test_google_signout_retry.cjs"
+        ]
+      }
+    },
+    {
+      "id": "SDK-13",
+      "path": "scripts/test_google_signout_retry.cjs",
+      "locator": "A popup completing after logout is cleared before login can resume",
+      "requirements": [
+        "REQ-01",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "frontend-contract",
+      "scope": "未配備のローカル認証変更をFirebase SDKスタブで検証。実Google・iPhoneの認証エラーの原因や解消を証明しない。",
+      "evidence": {
+        "path": "docs/traceability/reports/signout-retry-20261030-local/google-signout-retry.json",
+        "key": "A popup completing after logout is cleared before login can resume",
+        "requiredSources": [
+          "src/services/google-auth.ts",
+          "scripts/test_google_signout_retry.cjs"
+        ]
+      }
+    },
+    {
+      "id": "SDK-14",
+      "path": "scripts/test_google_signout_retry.cjs",
+      "locator": "A later queued logout keeps the gate closed even if an earlier logout fails",
+      "requirements": [
+        "REQ-01",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "frontend-contract",
+      "scope": "未配備のローカル認証変更をFirebase SDKスタブで検証。実Google・iPhoneの認証エラーの原因や解消を証明しない。",
+      "evidence": {
+        "path": "docs/traceability/reports/signout-retry-20261030-local/google-signout-retry.json",
+        "key": "A later queued logout keeps the gate closed even if an earlier logout fails",
+        "requiredSources": [
+          "src/services/google-auth.ts",
+          "scripts/test_google_signout_retry.cjs"
+        ]
+      }
+    },
+    {
+      "id": "SDK-15",
+      "path": "scripts/test_google_signout_retry.cjs",
+      "locator": "A late login token is rejected even after logout has completed",
+      "requirements": [
+        "REQ-01",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "frontend-contract",
+      "scope": "未配備のローカル認証変更をFirebase SDKスタブで検証。実Google・iPhoneの認証エラーの原因や解消を証明しない。",
+      "evidence": {
+        "path": "docs/traceability/reports/signout-retry-20261030-local/google-signout-retry.json",
+        "key": "A late login token is rejected even after logout has completed",
+        "requiredSources": [
+          "src/services/google-auth.ts",
+          "scripts/test_google_signout_retry.cjs"
+        ]
+      }
+    },
+    {
+      "id": "SDK-16",
+      "path": "scripts/test_google_signout_retry.cjs",
+      "locator": "An in-flight data token is rejected if logout completes first",
+      "requirements": [
+        "REQ-01",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "frontend-contract",
+      "scope": "未配備のローカル認証変更をFirebase SDKスタブで検証。実Google・iPhoneの認証エラーの原因や解消を証明しない。",
+      "evidence": {
+        "path": "docs/traceability/reports/signout-retry-20261030-local/google-signout-retry.json",
+        "key": "An in-flight data token is rejected if logout completes first",
+        "requiredSources": [
+          "src/services/google-auth.ts",
+          "scripts/test_google_signout_retry.cjs"
+        ]
+      }
+    },
+    {
+      "id": "UI-08",
+      "path": "scripts/test_google_auth_retry_ui.cjs",
+      "locator": "Failed login requires new preparation before a separate login click",
+      "requirements": [
+        "REQ-01",
+        "REQ-34"
+      ],
+      "mode": "offline-synthetic-react-hooks",
+      "category": "frontend-contract",
+      "scope": "未配備コード。疑似Reactフックでログイン失敗後の再準備を確認。実Google・実機は未検証。",
+      "evidence": {
+        "path": "docs/traceability/reports/signout-retry-20261030-local/google-auth-retry-ui.json",
+        "key": "Prepare again after a failed login before the next popup click",
+        "requiredSources": [
+          "src/components/LoginScreen.tsx",
+          "scripts/test_google_auth_retry_ui.cjs"
+        ]
+      }
+    },
+    {
+      "id": "TRACE-15",
+      "path": "scripts/test_traceability.py",
+      "locator": "case('TRACE-15'",
+      "requirements": [
+        "REQ-38"
+      ],
+      "mode": "offline-mutation",
+      "category": "trace-checker",
+      "scope": "ローカル一時ディレクトリでレビュー基準未登録・登録からの削除・変更または欠落を検証。人のレビューと実環境受入は別。",
+      "evidence": {
+        "path": "outputs/async-review-20261107/independent-docs/checker-tests.json",
+        "key": "TRACE-15",
+        "requiredSources": [
+          "scripts/traceability.py",
+          "scripts/test_traceability.py"
+        ]
+      }
+    },
+    {
+      "id": "TRACE-16",
+      "path": "scripts/test_traceability.py",
+      "locator": "case('TRACE-16'",
+      "requirements": [
+        "REQ-38"
+      ],
+      "mode": "offline-mutation",
+      "category": "trace-checker",
+      "scope": "ローカル一時ディレクトリでレビュー基準未登録・登録からの削除・変更または欠落を検証。人のレビューと実環境受入は別。",
+      "evidence": {
+        "path": "outputs/async-review-20261107/independent-docs/checker-tests.json",
+        "key": "TRACE-16",
+        "requiredSources": [
+          "scripts/traceability.py",
+          "scripts/test_traceability.py"
+        ]
+      }
+    },
+    {
+      "id": "TRACE-17",
+      "path": "scripts/test_traceability.py",
+      "locator": "case('TRACE-17'",
+      "requirements": [
+        "REQ-38"
+      ],
+      "mode": "offline-mutation",
+      "category": "trace-checker",
+      "scope": "ローカル一時ディレクトリでレビュー基準未登録・登録からの削除・変更または欠落を検証。人のレビューと実環境受入は別。",
+      "evidence": {
+        "path": "outputs/async-review-20261107/independent-docs/checker-tests.json",
+        "key": "TRACE-17",
+        "requiredSources": [
+          "scripts/traceability.py",
+          "scripts/test_traceability.py"
+        ]
+      }
+    },
+    {
+      "id": "TRACE-18",
+      "path": "scripts/test_traceability.py",
+      "locator": "case('TRACE-18'",
+      "requirements": [
+        "REQ-38"
+      ],
+      "mode": "offline-mutation",
+      "category": "trace-checker",
+      "scope": "ローカル一時ディレクトリでレビュー基準ファイルの不在・破損を検証。人のレビューと実環境受入は別。",
+      "evidence": {
+        "path": "outputs/async-review-20261107/independent-docs/checker-tests.json",
+        "key": "TRACE-18",
+        "requiredSources": [
+          "scripts/traceability.py",
+          "scripts/test_traceability.py"
+        ]
+      }
+    },
+    {
+      "id": "TRACE-19",
+      "path": "scripts/test_traceability.py",
+      "locator": "case('TRACE-19'",
+      "requirements": [
+        "REQ-38"
+      ],
+      "mode": "offline-mutation",
+      "category": "trace-checker",
+      "scope": "ローカル一時ディレクトリでレビュー基準ファイルの不在・破損を検証。人のレビューと実環境受入は別。",
+      "evidence": {
+        "path": "outputs/async-review-20261107/independent-docs/checker-tests.json",
+        "key": "TRACE-19",
+        "requiredSources": [
+          "scripts/traceability.py",
+          "scripts/test_traceability.py"
+        ]
+      }
+    },
+    {
+      "id": "TRACE-20",
+      "path": "scripts/test_traceability.py",
+      "locator": "case('TRACE-20'",
+      "requirements": [
+        "REQ-38"
+      ],
+      "mode": "offline-mutation",
+      "category": "trace-checker",
+      "scope": "合格証跡のソースハッシュ欄全体・試験対象の必須ハッシュ・不正値や無効契約を模擬し、欠落を拒否する。人のレビューと実環境受入は別。",
+      "evidence": {
+        "path": "outputs/async-review-20261107/independent-docs/checker-tests.json",
+        "key": "TRACE-20",
+        "requiredSources": [
+          "scripts/traceability.py",
+          "scripts/test_traceability.py"
+        ]
+      }
+    },
+    {
+      "id": "TRACE-21",
+      "path": "scripts/test_traceability.py",
+      "locator": "case('TRACE-21'",
+      "requirements": [
+        "REQ-38"
+      ],
+      "mode": "offline-mutation",
+      "category": "trace-checker",
+      "scope": "合格証跡のソースハッシュ欄全体・試験対象の必須ハッシュ・不正値や無効契約を模擬し、欠落を拒否する。人のレビューと実環境受入は別。",
+      "evidence": {
+        "path": "outputs/async-review-20261107/independent-docs/checker-tests.json",
+        "key": "TRACE-21",
+        "requiredSources": [
+          "scripts/traceability.py",
+          "scripts/test_traceability.py"
+        ]
+      }
+    },
+    {
+      "id": "TRACE-22",
+      "path": "scripts/test_traceability.py",
+      "locator": "case('TRACE-22'",
+      "requirements": [
+        "REQ-38"
+      ],
+      "mode": "offline-mutation",
+      "category": "trace-checker",
+      "scope": "合格証跡のソースハッシュ欄全体・試験対象の必須ハッシュ・不正値や無効契約を模擬し、欠落を拒否する。人のレビューと実環境受入は別。",
+      "evidence": {
+        "path": "outputs/async-review-20261107/independent-docs/checker-tests.json",
+        "key": "TRACE-22",
+        "requiredSources": [
+          "scripts/traceability.py",
+          "scripts/test_traceability.py"
+        ]
+      }
+    },
+    {
+      "id": "UI-SCROLL-01",
+      "path": "scripts/test_booking_modal_scroll.mjs",
+      "locator": "for (const viewport of",
+      "requirements": [
+        "REQ-21",
+        "REQ-29"
+      ],
+      "scope": "ローカルChromiumの小画面・横向き模擬。登録ボタンのタップと閉じるボタンへの到達を確認。閉じるイベント、実機・実Googleは未確認。",
+      "evidence": {
+        "path": "outputs/booking-modal-scroll-20261106-green/results.json",
+        "key": "375x500",
+        "requiredSources": [
+          "src/components/AddRideModal.tsx",
+          "scripts/fixtures/trace-ui/harness.tsx",
+          "scripts/test_booking_modal_scroll.mjs"
+        ]
+      }
+    },
+    {
+      "id": "UI-SCROLL-02",
+      "path": "scripts/test_booking_modal_scroll.mjs",
+      "locator": "for (const viewport of",
+      "requirements": [
+        "REQ-21",
+        "REQ-29"
+      ],
+      "scope": "ローカルChromiumの小画面・横向き模擬。登録ボタンのタップと閉じるボタンへの到達を確認。閉じるイベント、実機・実Googleは未確認。",
+      "evidence": {
+        "path": "outputs/booking-modal-scroll-20261106-green/results.json",
+        "key": "812x375",
+        "requiredSources": [
+          "src/components/AddRideModal.tsx",
+          "scripts/fixtures/trace-ui/harness.tsx",
+          "scripts/test_booking_modal_scroll.mjs"
+        ]
+      }
+    },
+    {
+      "id": "LOCAL-UI-01",
+      "path": "scripts/run_local_acceptance.mjs",
+      "locator": "await check('LOCAL-UI-01'",
+      "requirements": [
+        "REQ-01",
+        "REQ-19"
+      ],
+      "scope": "実App・ApiServiceのデモ経路を使う外部通信遮断ローカル模擬。実Google・実機・第三者受入は別。",
+      "evidence": {
+        "path": "outputs/async-review-20261107/regression/local-ui-2/results.json",
+        "key": "LOCAL-UI-01",
+        "requiredSources": [
+          "src/App.css",
+          "src/App.tsx",
+          "src/assets/hero.png",
+          "src/assets/react.svg",
+          "src/assets/vite.svg",
+          "src/components/AccountManagement.tsx",
+          "src/components/AddRideModal.tsx",
+          "src/components/AddStudentModal.tsx",
+          "src/components/AddTicketModal.tsx",
+          "src/components/GoogleSettings.tsx",
+          "src/components/LoginScreen.tsx",
+          "src/components/Navbar.tsx",
+          "src/components/ParentPortal.tsx",
+          "src/components/PortalInvitations.tsx",
+          "src/components/TeacherDashboard.tsx",
+          "src/components/TermsModal.tsx",
+          "src/deployment-config.ts",
+          "src/index.css",
+          "src/main.tsx",
+          "src/portal.ts",
+          "src/services/api.ts",
+          "src/services/google-auth.ts",
+          "src/types/index.ts",
+          "package.json",
+          "package-lock.json",
+          "scripts/run_local_acceptance.mjs",
+          "scripts/local_acceptance_safety.mjs",
+          "scripts/fixtures/local-acceptance/harness.tsx",
+          "scripts/fixtures/local-acceptance/google-auth.ts",
+          "scripts/fixtures/local-acceptance/index.html"
+        ]
+      }
+    },
+    {
+      "id": "LOCAL-UI-02",
+      "path": "scripts/run_local_acceptance.mjs",
+      "locator": "await check('LOCAL-UI-02'",
+      "requirements": [
+        "REQ-03",
+        "REQ-20"
+      ],
+      "scope": "実App・ApiServiceのデモ経路を使う外部通信遮断ローカル模擬。実Google・実機・第三者受入は別。",
+      "evidence": {
+        "path": "outputs/async-review-20261107/regression/local-ui-2/results.json",
+        "key": "LOCAL-UI-02",
+        "requiredSources": [
+          "src/App.css",
+          "src/App.tsx",
+          "src/assets/hero.png",
+          "src/assets/react.svg",
+          "src/assets/vite.svg",
+          "src/components/AccountManagement.tsx",
+          "src/components/AddRideModal.tsx",
+          "src/components/AddStudentModal.tsx",
+          "src/components/AddTicketModal.tsx",
+          "src/components/GoogleSettings.tsx",
+          "src/components/LoginScreen.tsx",
+          "src/components/Navbar.tsx",
+          "src/components/ParentPortal.tsx",
+          "src/components/PortalInvitations.tsx",
+          "src/components/TeacherDashboard.tsx",
+          "src/components/TermsModal.tsx",
+          "src/deployment-config.ts",
+          "src/index.css",
+          "src/main.tsx",
+          "src/portal.ts",
+          "src/services/api.ts",
+          "src/services/google-auth.ts",
+          "src/types/index.ts",
+          "package.json",
+          "package-lock.json",
+          "scripts/run_local_acceptance.mjs",
+          "scripts/local_acceptance_safety.mjs",
+          "scripts/fixtures/local-acceptance/harness.tsx",
+          "scripts/fixtures/local-acceptance/google-auth.ts",
+          "scripts/fixtures/local-acceptance/index.html"
+        ]
+      }
+    },
+    {
+      "id": "LOCAL-UI-03",
+      "path": "scripts/run_local_acceptance.mjs",
+      "locator": "for (const [type, related]",
+      "requirements": [
+        "REQ-06"
+      ],
+      "scope": "実App・ApiServiceのデモ経路を使う外部通信遮断ローカル模擬。実Google・実機・第三者受入は別。",
+      "evidence": {
+        "path": "outputs/async-review-20261107/regression/local-ui-2/results.json",
+        "key": "LOCAL-UI-03",
+        "requiredSources": [
+          "src/App.css",
+          "src/App.tsx",
+          "src/assets/hero.png",
+          "src/assets/react.svg",
+          "src/assets/vite.svg",
+          "src/components/AccountManagement.tsx",
+          "src/components/AddRideModal.tsx",
+          "src/components/AddStudentModal.tsx",
+          "src/components/AddTicketModal.tsx",
+          "src/components/GoogleSettings.tsx",
+          "src/components/LoginScreen.tsx",
+          "src/components/Navbar.tsx",
+          "src/components/ParentPortal.tsx",
+          "src/components/PortalInvitations.tsx",
+          "src/components/TeacherDashboard.tsx",
+          "src/components/TermsModal.tsx",
+          "src/deployment-config.ts",
+          "src/index.css",
+          "src/main.tsx",
+          "src/portal.ts",
+          "src/services/api.ts",
+          "src/services/google-auth.ts",
+          "src/types/index.ts",
+          "package.json",
+          "package-lock.json",
+          "scripts/run_local_acceptance.mjs",
+          "scripts/local_acceptance_safety.mjs",
+          "scripts/fixtures/local-acceptance/harness.tsx",
+          "scripts/fixtures/local-acceptance/google-auth.ts",
+          "scripts/fixtures/local-acceptance/index.html"
+        ]
+      }
+    },
+    {
+      "id": "LOCAL-UI-04",
+      "path": "scripts/run_local_acceptance.mjs",
+      "locator": "for (const [type, related]",
+      "requirements": [
+        "REQ-07"
+      ],
+      "scope": "実App・ApiServiceのデモ経路を使う外部通信遮断ローカル模擬。実Google・実機・第三者受入は別。",
+      "evidence": {
+        "path": "outputs/async-review-20261107/regression/local-ui-2/results.json",
+        "key": "LOCAL-UI-04",
+        "requiredSources": [
+          "src/App.css",
+          "src/App.tsx",
+          "src/assets/hero.png",
+          "src/assets/react.svg",
+          "src/assets/vite.svg",
+          "src/components/AccountManagement.tsx",
+          "src/components/AddRideModal.tsx",
+          "src/components/AddStudentModal.tsx",
+          "src/components/AddTicketModal.tsx",
+          "src/components/GoogleSettings.tsx",
+          "src/components/LoginScreen.tsx",
+          "src/components/Navbar.tsx",
+          "src/components/ParentPortal.tsx",
+          "src/components/PortalInvitations.tsx",
+          "src/components/TeacherDashboard.tsx",
+          "src/components/TermsModal.tsx",
+          "src/deployment-config.ts",
+          "src/index.css",
+          "src/main.tsx",
+          "src/portal.ts",
+          "src/services/api.ts",
+          "src/services/google-auth.ts",
+          "src/types/index.ts",
+          "package.json",
+          "package-lock.json",
+          "scripts/run_local_acceptance.mjs",
+          "scripts/local_acceptance_safety.mjs",
+          "scripts/fixtures/local-acceptance/harness.tsx",
+          "scripts/fixtures/local-acceptance/google-auth.ts",
+          "scripts/fixtures/local-acceptance/index.html"
+        ]
+      }
+    },
+    {
+      "id": "LOCAL-UI-05",
+      "path": "scripts/run_local_acceptance.mjs",
+      "locator": "for (const [type, related]",
+      "requirements": [
+        "REQ-08"
+      ],
+      "scope": "実App・ApiServiceのデモ経路を使う外部通信遮断ローカル模擬。実Google・実機・第三者受入は別。",
+      "evidence": {
+        "path": "outputs/async-review-20261107/regression/local-ui-2/results.json",
+        "key": "LOCAL-UI-05",
+        "requiredSources": [
+          "src/App.css",
+          "src/App.tsx",
+          "src/assets/hero.png",
+          "src/assets/react.svg",
+          "src/assets/vite.svg",
+          "src/components/AccountManagement.tsx",
+          "src/components/AddRideModal.tsx",
+          "src/components/AddStudentModal.tsx",
+          "src/components/AddTicketModal.tsx",
+          "src/components/GoogleSettings.tsx",
+          "src/components/LoginScreen.tsx",
+          "src/components/Navbar.tsx",
+          "src/components/ParentPortal.tsx",
+          "src/components/PortalInvitations.tsx",
+          "src/components/TeacherDashboard.tsx",
+          "src/components/TermsModal.tsx",
+          "src/deployment-config.ts",
+          "src/index.css",
+          "src/main.tsx",
+          "src/portal.ts",
+          "src/services/api.ts",
+          "src/services/google-auth.ts",
+          "src/types/index.ts",
+          "package.json",
+          "package-lock.json",
+          "scripts/run_local_acceptance.mjs",
+          "scripts/local_acceptance_safety.mjs",
+          "scripts/fixtures/local-acceptance/harness.tsx",
+          "scripts/fixtures/local-acceptance/google-auth.ts",
+          "scripts/fixtures/local-acceptance/index.html"
+        ]
+      }
+    },
+    {
+      "id": "LOCAL-UI-06",
+      "path": "scripts/run_local_acceptance.mjs",
+      "locator": "await check('LOCAL-UI-06'",
+      "requirements": [
+        "REQ-09"
+      ],
+      "scope": "実App・ApiServiceのデモ経路を使う外部通信遮断ローカル模擬。実Google・実機・第三者受入は別。",
+      "evidence": {
+        "path": "outputs/async-review-20261107/regression/local-ui-2/results.json",
+        "key": "LOCAL-UI-06",
+        "requiredSources": [
+          "src/App.css",
+          "src/App.tsx",
+          "src/assets/hero.png",
+          "src/assets/react.svg",
+          "src/assets/vite.svg",
+          "src/components/AccountManagement.tsx",
+          "src/components/AddRideModal.tsx",
+          "src/components/AddStudentModal.tsx",
+          "src/components/AddTicketModal.tsx",
+          "src/components/GoogleSettings.tsx",
+          "src/components/LoginScreen.tsx",
+          "src/components/Navbar.tsx",
+          "src/components/ParentPortal.tsx",
+          "src/components/PortalInvitations.tsx",
+          "src/components/TeacherDashboard.tsx",
+          "src/components/TermsModal.tsx",
+          "src/deployment-config.ts",
+          "src/index.css",
+          "src/main.tsx",
+          "src/portal.ts",
+          "src/services/api.ts",
+          "src/services/google-auth.ts",
+          "src/types/index.ts",
+          "package.json",
+          "package-lock.json",
+          "scripts/run_local_acceptance.mjs",
+          "scripts/local_acceptance_safety.mjs",
+          "scripts/fixtures/local-acceptance/harness.tsx",
+          "scripts/fixtures/local-acceptance/google-auth.ts",
+          "scripts/fixtures/local-acceptance/index.html"
+        ]
+      }
+    },
+    {
+      "id": "LOCAL-UI-07",
+      "path": "scripts/run_local_acceptance.mjs",
+      "locator": "await check('LOCAL-UI-07'",
+      "requirements": [
+        "REQ-10",
+        "REQ-22"
+      ],
+      "scope": "実App・ApiServiceのデモ経路を使う外部通信遮断ローカル模擬。実Google・実機・第三者受入は別。",
+      "evidence": {
+        "path": "outputs/async-review-20261107/regression/local-ui-2/results.json",
+        "key": "LOCAL-UI-07",
+        "requiredSources": [
+          "src/App.css",
+          "src/App.tsx",
+          "src/assets/hero.png",
+          "src/assets/react.svg",
+          "src/assets/vite.svg",
+          "src/components/AccountManagement.tsx",
+          "src/components/AddRideModal.tsx",
+          "src/components/AddStudentModal.tsx",
+          "src/components/AddTicketModal.tsx",
+          "src/components/GoogleSettings.tsx",
+          "src/components/LoginScreen.tsx",
+          "src/components/Navbar.tsx",
+          "src/components/ParentPortal.tsx",
+          "src/components/PortalInvitations.tsx",
+          "src/components/TeacherDashboard.tsx",
+          "src/components/TermsModal.tsx",
+          "src/deployment-config.ts",
+          "src/index.css",
+          "src/main.tsx",
+          "src/portal.ts",
+          "src/services/api.ts",
+          "src/services/google-auth.ts",
+          "src/types/index.ts",
+          "package.json",
+          "package-lock.json",
+          "scripts/run_local_acceptance.mjs",
+          "scripts/local_acceptance_safety.mjs",
+          "scripts/fixtures/local-acceptance/harness.tsx",
+          "scripts/fixtures/local-acceptance/google-auth.ts",
+          "scripts/fixtures/local-acceptance/index.html"
+        ]
+      }
+    },
+    {
+      "id": "LOCAL-UI-08",
+      "path": "scripts/run_local_acceptance.mjs",
+      "locator": "for (const [type, consume, id]",
+      "requirements": [
+        "REQ-13",
+        "REQ-15"
+      ],
+      "scope": "実App・ApiServiceのデモ経路を使う外部通信遮断ローカル模擬。実Google・実機・第三者受入は別。一部はApiService直接呼出で、完了ボタンのクリックやサーバー排他の試験ではない。",
+      "evidence": {
+        "path": "outputs/async-review-20261107/regression/local-ui-2/results.json",
+        "key": "LOCAL-UI-08",
+        "requiredSources": [
+          "src/App.css",
+          "src/App.tsx",
+          "src/assets/hero.png",
+          "src/assets/react.svg",
+          "src/assets/vite.svg",
+          "src/components/AccountManagement.tsx",
+          "src/components/AddRideModal.tsx",
+          "src/components/AddStudentModal.tsx",
+          "src/components/AddTicketModal.tsx",
+          "src/components/GoogleSettings.tsx",
+          "src/components/LoginScreen.tsx",
+          "src/components/Navbar.tsx",
+          "src/components/ParentPortal.tsx",
+          "src/components/PortalInvitations.tsx",
+          "src/components/TeacherDashboard.tsx",
+          "src/components/TermsModal.tsx",
+          "src/deployment-config.ts",
+          "src/index.css",
+          "src/main.tsx",
+          "src/portal.ts",
+          "src/services/api.ts",
+          "src/services/google-auth.ts",
+          "src/types/index.ts",
+          "package.json",
+          "package-lock.json",
+          "scripts/run_local_acceptance.mjs",
+          "scripts/local_acceptance_safety.mjs",
+          "scripts/fixtures/local-acceptance/harness.tsx",
+          "scripts/fixtures/local-acceptance/google-auth.ts",
+          "scripts/fixtures/local-acceptance/index.html"
+        ]
+      }
+    },
+    {
+      "id": "LOCAL-UI-09",
+      "path": "scripts/run_local_acceptance.mjs",
+      "locator": "for (const [type, consume, id]",
+      "requirements": [
+        "REQ-14",
+        "REQ-15"
+      ],
+      "scope": "実App・ApiServiceのデモ経路を使う外部通信遮断ローカル模擬。実Google・実機・第三者受入は別。一部はApiService直接呼出で、完了ボタンのクリックやサーバー排他の試験ではない。",
+      "evidence": {
+        "path": "outputs/async-review-20261107/regression/local-ui-2/results.json",
+        "key": "LOCAL-UI-09",
+        "requiredSources": [
+          "src/App.css",
+          "src/App.tsx",
+          "src/assets/hero.png",
+          "src/assets/react.svg",
+          "src/assets/vite.svg",
+          "src/components/AccountManagement.tsx",
+          "src/components/AddRideModal.tsx",
+          "src/components/AddStudentModal.tsx",
+          "src/components/AddTicketModal.tsx",
+          "src/components/GoogleSettings.tsx",
+          "src/components/LoginScreen.tsx",
+          "src/components/Navbar.tsx",
+          "src/components/ParentPortal.tsx",
+          "src/components/PortalInvitations.tsx",
+          "src/components/TeacherDashboard.tsx",
+          "src/components/TermsModal.tsx",
+          "src/deployment-config.ts",
+          "src/index.css",
+          "src/main.tsx",
+          "src/portal.ts",
+          "src/services/api.ts",
+          "src/services/google-auth.ts",
+          "src/types/index.ts",
+          "package.json",
+          "package-lock.json",
+          "scripts/run_local_acceptance.mjs",
+          "scripts/local_acceptance_safety.mjs",
+          "scripts/fixtures/local-acceptance/harness.tsx",
+          "scripts/fixtures/local-acceptance/google-auth.ts",
+          "scripts/fixtures/local-acceptance/index.html"
+        ]
+      }
+    },
+    {
+      "id": "LOCAL-UI-10",
+      "path": "scripts/run_local_acceptance.mjs",
+      "locator": "await check('LOCAL-UI-10'",
+      "requirements": [
+        "REQ-16"
+      ],
+      "scope": "実App・ApiServiceのデモ経路を使う外部通信遮断ローカル模擬。実Google・実機・第三者受入は別。一部はApiService直接呼出で、完了ボタンのクリックやサーバー排他の試験ではない。",
+      "evidence": {
+        "path": "outputs/async-review-20261107/regression/local-ui-2/results.json",
+        "key": "LOCAL-UI-10",
+        "requiredSources": [
+          "src/App.css",
+          "src/App.tsx",
+          "src/assets/hero.png",
+          "src/assets/react.svg",
+          "src/assets/vite.svg",
+          "src/components/AccountManagement.tsx",
+          "src/components/AddRideModal.tsx",
+          "src/components/AddStudentModal.tsx",
+          "src/components/AddTicketModal.tsx",
+          "src/components/GoogleSettings.tsx",
+          "src/components/LoginScreen.tsx",
+          "src/components/Navbar.tsx",
+          "src/components/ParentPortal.tsx",
+          "src/components/PortalInvitations.tsx",
+          "src/components/TeacherDashboard.tsx",
+          "src/components/TermsModal.tsx",
+          "src/deployment-config.ts",
+          "src/index.css",
+          "src/main.tsx",
+          "src/portal.ts",
+          "src/services/api.ts",
+          "src/services/google-auth.ts",
+          "src/types/index.ts",
+          "package.json",
+          "package-lock.json",
+          "scripts/run_local_acceptance.mjs",
+          "scripts/local_acceptance_safety.mjs",
+          "scripts/fixtures/local-acceptance/harness.tsx",
+          "scripts/fixtures/local-acceptance/google-auth.ts",
+          "scripts/fixtures/local-acceptance/index.html"
+        ]
+      }
+    },
+    {
+      "id": "LOCAL-UI-11",
+      "path": "scripts/run_local_acceptance.mjs",
+      "locator": "await check('LOCAL-UI-11'",
+      "requirements": [
+        "REQ-17",
+        "REQ-20"
+      ],
+      "scope": "実App・ApiServiceのデモ経路を使う外部通信遮断ローカル模擬。実Google・実機・第三者受入は別。一部はApiService直接呼出で、完了ボタンのクリックやサーバー排他の試験ではない。",
+      "evidence": {
+        "path": "outputs/async-review-20261107/regression/local-ui-2/results.json",
+        "key": "LOCAL-UI-11",
+        "requiredSources": [
+          "src/App.css",
+          "src/App.tsx",
+          "src/assets/hero.png",
+          "src/assets/react.svg",
+          "src/assets/vite.svg",
+          "src/components/AccountManagement.tsx",
+          "src/components/AddRideModal.tsx",
+          "src/components/AddStudentModal.tsx",
+          "src/components/AddTicketModal.tsx",
+          "src/components/GoogleSettings.tsx",
+          "src/components/LoginScreen.tsx",
+          "src/components/Navbar.tsx",
+          "src/components/ParentPortal.tsx",
+          "src/components/PortalInvitations.tsx",
+          "src/components/TeacherDashboard.tsx",
+          "src/components/TermsModal.tsx",
+          "src/deployment-config.ts",
+          "src/index.css",
+          "src/main.tsx",
+          "src/portal.ts",
+          "src/services/api.ts",
+          "src/services/google-auth.ts",
+          "src/types/index.ts",
+          "package.json",
+          "package-lock.json",
+          "scripts/run_local_acceptance.mjs",
+          "scripts/local_acceptance_safety.mjs",
+          "scripts/fixtures/local-acceptance/harness.tsx",
+          "scripts/fixtures/local-acceptance/google-auth.ts",
+          "scripts/fixtures/local-acceptance/index.html"
+        ]
+      }
+    },
+    {
+      "id": "LOCAL-UI-12",
+      "path": "scripts/run_local_acceptance.mjs",
+      "locator": "await check('LOCAL-UI-12'",
+      "requirements": [
+        "REQ-21",
+        "REQ-29"
+      ],
+      "scope": "実App・ApiServiceのデモ経路を使う外部通信遮断ローカル模擬。実Google・実機・第三者受入は別。",
+      "evidence": {
+        "path": "outputs/async-review-20261107/regression/local-ui-2/results.json",
+        "key": "LOCAL-UI-12",
+        "requiredSources": [
+          "src/App.css",
+          "src/App.tsx",
+          "src/assets/hero.png",
+          "src/assets/react.svg",
+          "src/assets/vite.svg",
+          "src/components/AccountManagement.tsx",
+          "src/components/AddRideModal.tsx",
+          "src/components/AddStudentModal.tsx",
+          "src/components/AddTicketModal.tsx",
+          "src/components/GoogleSettings.tsx",
+          "src/components/LoginScreen.tsx",
+          "src/components/Navbar.tsx",
+          "src/components/ParentPortal.tsx",
+          "src/components/PortalInvitations.tsx",
+          "src/components/TeacherDashboard.tsx",
+          "src/components/TermsModal.tsx",
+          "src/deployment-config.ts",
+          "src/index.css",
+          "src/main.tsx",
+          "src/portal.ts",
+          "src/services/api.ts",
+          "src/services/google-auth.ts",
+          "src/types/index.ts",
+          "package.json",
+          "package-lock.json",
+          "scripts/run_local_acceptance.mjs",
+          "scripts/local_acceptance_safety.mjs",
+          "scripts/fixtures/local-acceptance/harness.tsx",
+          "scripts/fixtures/local-acceptance/google-auth.ts",
+          "scripts/fixtures/local-acceptance/index.html"
+        ]
+      }
+    },
+    {
+      "id": "LOCAL-UI-13",
+      "path": "scripts/run_local_acceptance.mjs",
+      "locator": "await check('LOCAL-UI-13'",
+      "requirements": [
+        "REQ-01",
+        "REQ-34"
+      ],
+      "scope": "実App・ApiServiceのデモ経路を使う外部通信遮断ローカル模擬。実Google・実機・第三者受入は別。",
+      "evidence": {
+        "path": "outputs/async-review-20261107/regression/local-ui-2/results.json",
+        "key": "LOCAL-UI-13",
+        "requiredSources": [
+          "src/App.css",
+          "src/App.tsx",
+          "src/assets/hero.png",
+          "src/assets/react.svg",
+          "src/assets/vite.svg",
+          "src/components/AccountManagement.tsx",
+          "src/components/AddRideModal.tsx",
+          "src/components/AddStudentModal.tsx",
+          "src/components/AddTicketModal.tsx",
+          "src/components/GoogleSettings.tsx",
+          "src/components/LoginScreen.tsx",
+          "src/components/Navbar.tsx",
+          "src/components/ParentPortal.tsx",
+          "src/components/PortalInvitations.tsx",
+          "src/components/TeacherDashboard.tsx",
+          "src/components/TermsModal.tsx",
+          "src/deployment-config.ts",
+          "src/index.css",
+          "src/main.tsx",
+          "src/portal.ts",
+          "src/services/api.ts",
+          "src/services/google-auth.ts",
+          "src/types/index.ts",
+          "package.json",
+          "package-lock.json",
+          "scripts/run_local_acceptance.mjs",
+          "scripts/local_acceptance_safety.mjs",
+          "scripts/fixtures/local-acceptance/harness.tsx",
+          "scripts/fixtures/local-acceptance/google-auth.ts",
+          "scripts/fixtures/local-acceptance/index.html"
+        ]
+      }
+    },
+    {
+      "id": "LOCAL-UI-14",
+      "path": "scripts/run_local_acceptance.mjs",
+      "locator": "await check('LOCAL-UI-14'",
+      "requirements": [
+        "REQ-04"
+      ],
+      "scope": "実App・ApiServiceのデモ経路を使う外部通信遮断ローカル模擬。実Google・実機・第三者受入は別。",
+      "evidence": {
+        "path": "outputs/async-review-20261107/regression/local-ui-2/results.json",
+        "key": "LOCAL-UI-14",
+        "requiredSources": [
+          "src/App.css",
+          "src/App.tsx",
+          "src/assets/hero.png",
+          "src/assets/react.svg",
+          "src/assets/vite.svg",
+          "src/components/AccountManagement.tsx",
+          "src/components/AddRideModal.tsx",
+          "src/components/AddStudentModal.tsx",
+          "src/components/AddTicketModal.tsx",
+          "src/components/GoogleSettings.tsx",
+          "src/components/LoginScreen.tsx",
+          "src/components/Navbar.tsx",
+          "src/components/ParentPortal.tsx",
+          "src/components/PortalInvitations.tsx",
+          "src/components/TeacherDashboard.tsx",
+          "src/components/TermsModal.tsx",
+          "src/deployment-config.ts",
+          "src/index.css",
+          "src/main.tsx",
+          "src/portal.ts",
+          "src/services/api.ts",
+          "src/services/google-auth.ts",
+          "src/types/index.ts",
+          "package.json",
+          "package-lock.json",
+          "scripts/run_local_acceptance.mjs",
+          "scripts/local_acceptance_safety.mjs",
+          "scripts/fixtures/local-acceptance/harness.tsx",
+          "scripts/fixtures/local-acceptance/google-auth.ts",
+          "scripts/fixtures/local-acceptance/index.html"
+        ]
+      }
+    },
+    {
+      "id": "RUN-SAFE-01",
+      "path": "tests/local_acceptance_safety.test.mjs",
+      "locator": "test('runtime and arguments reject an old runtime, missing output and supplied URLs'",
+      "requirements": [
+        "REQ-38"
+      ],
+      "scope": "ローカル実行ツールの出力保全・引数・HTTP許可範囲・JST日時の単体確認。実受入とは別。",
+      "evidence": {
+        "path": "outputs/local-ui-safety-20261106-final/results.json",
+        "key": "RUN-SAFE-01",
+        "requiredSources": [
+          "scripts/local_acceptance_safety.mjs",
+          "tests/local_acceptance_safety.test.mjs",
+          "scripts/run_local_acceptance.mjs"
+        ]
+      }
+    },
+    {
+      "id": "RUN-SAFE-02",
+      "path": "tests/local_acceptance_safety.test.mjs",
+      "locator": "test('an existing evidence directory and sentinel are never overwritten'",
+      "requirements": [
+        "REQ-38"
+      ],
+      "scope": "ローカル実行ツールの出力保全・引数・HTTP許可範囲・JST日時の単体確認。実受入とは別。",
+      "evidence": {
+        "path": "outputs/local-ui-safety-20261106-final/results.json",
+        "key": "RUN-SAFE-02",
+        "requiredSources": [
+          "scripts/local_acceptance_safety.mjs",
+          "tests/local_acceptance_safety.test.mjs",
+          "scripts/run_local_acceptance.mjs"
+        ]
+      }
+    },
+    {
+      "id": "RUN-SAFE-03",
+      "path": "tests/local_acceptance_safety.test.mjs",
+      "locator": "test('only the selected localhost origin is allowed'",
+      "requirements": [
+        "REQ-38"
+      ],
+      "scope": "ローカル実行ツールの出力保全・引数・HTTP許可範囲・JST日時の単体確認。実受入とは別。",
+      "evidence": {
+        "path": "outputs/local-ui-safety-20261106-final/results.json",
+        "key": "RUN-SAFE-03",
+        "requiredSources": [
+          "scripts/local_acceptance_safety.mjs",
+          "tests/local_acceptance_safety.test.mjs",
+          "scripts/run_local_acceptance.mjs"
+        ]
+      }
+    },
+    {
+      "id": "RUN-SAFE-04",
+      "path": "tests/local_acceptance_safety.test.mjs",
+      "locator": "test('test date follows JST rather than a fixed past date or host timezone'",
+      "requirements": [
+        "REQ-38"
+      ],
+      "scope": "ローカル実行ツールの出力保全・引数・HTTP許可範囲・JST日時の単体確認。実受入とは別。",
+      "evidence": {
+        "path": "outputs/local-ui-safety-20261106-final/results.json",
+        "key": "RUN-SAFE-04",
+        "requiredSources": [
+          "scripts/local_acceptance_safety.mjs",
+          "tests/local_acceptance_safety.test.mjs",
+          "scripts/run_local_acceptance.mjs"
+        ]
+      }
+    },
+    {
+      "id": "GAS-71",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-71'",
+      "requirements": [
+        "REQ-06",
+        "REQ-10",
+        "REQ-24",
+        "REQ-25"
+      ],
+      "mode": "offline-stub",
+      "category": "calendar-target",
+      "scope": "接続先未設定なら予約・取消を書込み前に拒否。Node VMの模擬確認であり実Google同意・配備・受入は別。",
+      "evidence": {
+        "path": "outputs/async-review-20261107/independent-backend/2026-11-07T08-59-32-465Z/gas-results.json",
+        "key": "GAS-71",
+        "requiredSources": [
+          "gas/Code.gs",
+          "gas/appsscript.json",
+          "scripts/test_gas.cjs"
+        ]
+      }
+    },
+    {
+      "id": "GAS-72",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-72'",
+      "requirements": [
+        "REQ-06",
+        "REQ-10",
+        "REQ-19",
+        "REQ-24",
+        "REQ-25"
+      ],
+      "mode": "offline-stub",
+      "category": "calendar-target",
+      "scope": "認可不足・取得失敗・既定・非所有・ID不一致の対象を拒否。Node VMの模擬確認であり実Google同意・配備・受入は別。",
+      "evidence": {
+        "path": "outputs/async-review-20261107/independent-backend/2026-11-07T08-59-32-465Z/gas-results.json",
+        "key": "GAS-72",
+        "requiredSources": [
+          "gas/Code.gs",
+          "gas/appsscript.json",
+          "scripts/test_gas.cjs"
+        ]
+      }
+    },
+    {
+      "id": "GAS-73",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-73'",
+      "requirements": [
+        "REQ-10",
+        "REQ-11",
+        "REQ-25"
+      ],
+      "mode": "offline-stub",
+      "category": "calendar-target",
+      "scope": "取消イベントIDが指定した検証カレンダー内に存在することを要求。Node VMの模擬確認であり実Google同意・配備・受入は別。",
+      "evidence": {
+        "path": "outputs/async-review-20261107/independent-backend/2026-11-07T08-59-32-465Z/gas-results.json",
+        "key": "GAS-73",
+        "requiredSources": [
+          "gas/Code.gs",
+          "gas/appsscript.json",
+          "scripts/test_gas.cjs"
+        ]
+      }
+    },
+    {
+      "id": "GAS-74",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-74'",
+      "requirements": [
+        "REQ-06",
+        "REQ-10",
+        "REQ-24",
+        "REQ-25"
+      ],
+      "mode": "offline-stub",
+      "category": "calendar-target",
+      "scope": "指定先だけで作成・取消・再送しリクエストから上書きさせない。Node VMの模擬確認であり実Google同意・配備・受入は別。",
+      "evidence": {
+        "path": "outputs/async-review-20261107/independent-backend/2026-11-07T08-59-32-465Z/gas-results.json",
+        "key": "GAS-74",
+        "requiredSources": [
+          "gas/Code.gs",
+          "gas/appsscript.json",
+          "scripts/test_gas.cjs"
+        ]
+      }
+    },
+    {
+      "id": "TRACE-23",
+      "path": "scripts/test_traceability.py",
+      "locator": "case('TRACE-23'",
+      "requirements": [
+        "REQ-38"
+      ],
+      "mode": "offline-mutation",
+      "category": "customer-evidence-validation",
+      "scope": "顧客6件の実測記録の欠落・不整合・模擬経路の誤計上をローカル一時コピーで検出。本人の顧客確認とは別。",
+      "evidence": {
+        "path": "outputs/async-review-20261107/independent-docs/checker-tests.json",
+        "key": "TRACE-23",
+        "requiredSources": [
+          "scripts/traceability.py",
+          "scripts/test_traceability.py"
+        ]
+      }
+    },
+    {
+      "id": "TRACE-24",
+      "path": "scripts/test_traceability.py",
+      "locator": "case('TRACE-24'",
+      "requirements": [
+        "REQ-38"
+      ],
+      "mode": "offline-mutation",
+      "category": "customer-evidence-validation",
+      "scope": "顧客6件の実測記録の欠落・不整合・模擬経路の誤計上をローカル一時コピーで検出。本人の顧客確認とは別。",
+      "evidence": {
+        "path": "outputs/async-review-20261107/independent-docs/checker-tests.json",
+        "key": "TRACE-24",
+        "requiredSources": [
+          "scripts/traceability.py",
+          "scripts/test_traceability.py"
+        ]
+      }
+    },
+    {
+      "id": "TRACE-25",
+      "path": "scripts/test_traceability.py",
+      "locator": "case('TRACE-25'",
+      "requirements": [
+        "REQ-38"
+      ],
+      "mode": "offline-mutation",
+      "category": "customer-evidence-validation",
+      "scope": "顧客6件の実測記録の欠落・不整合・模擬経路の誤計上をローカル一時コピーで検出。本人の顧客確認とは別。",
+      "evidence": {
+        "path": "outputs/async-review-20261107/independent-docs/checker-tests.json",
+        "key": "TRACE-25",
+        "requiredSources": [
+          "scripts/traceability.py",
+          "scripts/test_traceability.py"
+        ]
+      }
+    },
+    {
+      "id": "TRACE-26",
+      "path": "scripts/test_traceability.py",
+      "locator": "case('TRACE-26'",
+      "requirements": [
+        "REQ-38"
+      ],
+      "mode": "offline-mutation",
+      "category": "customer-evidence-validation",
+      "scope": "顧客6件の実測記録の欠落・不整合・模擬経路の誤計上をローカル一時コピーで検出。本人の顧客確認とは別。",
+      "evidence": {
+        "path": "outputs/async-review-20261107/independent-docs/checker-tests.json",
+        "key": "TRACE-26",
+        "requiredSources": [
+          "scripts/traceability.py",
+          "scripts/test_traceability.py"
+        ]
+      }
+    },
+    {
+      "id": "TRACE-27",
+      "path": "scripts/test_traceability.py",
+      "locator": "case('TRACE-27'",
+      "requirements": [
+        "REQ-38"
+      ],
+      "mode": "offline-mutation",
+      "category": "customer-evidence-validation",
+      "scope": "顧客6件の実測記録の欠落・不整合・模擬経路の誤計上をローカル一時コピーで検出。本人の顧客確認とは別。",
+      "evidence": {
+        "path": "outputs/async-review-20261107/independent-docs/checker-tests.json",
+        "key": "TRACE-27",
+        "requiredSources": [
+          "scripts/traceability.py",
+          "scripts/test_traceability.py"
+        ]
+      }
+    },
+    {
+      "id": "TRACE-28",
+      "path": "scripts/test_traceability.py",
+      "locator": "case('TRACE-28'",
+      "requirements": [
+        "REQ-38"
+      ],
+      "mode": "offline-mutation",
+      "category": "customer-evidence-validation",
+      "scope": "顧客6件の実測記録の欠落・不整合・模擬経路の誤計上をローカル一時コピーで検出。本人の顧客確認とは別。",
+      "evidence": {
+        "path": "outputs/async-review-20261107/independent-docs/checker-tests.json",
+        "key": "TRACE-28",
+        "requiredSources": [
+          "scripts/traceability.py",
+          "scripts/test_traceability.py"
+        ]
+      }
+    },
+    {
+      "id": "TRACE-29",
+      "path": "scripts/test_traceability.py",
+      "locator": "case('TRACE-29'",
+      "requirements": [
+        "REQ-38"
+      ],
+      "mode": "offline-mutation",
+      "category": "customer-evidence-validation",
+      "scope": "顧客6件の実測記録の欠落・不整合・模擬経路の誤計上をローカル一時コピーで検出。本人の顧客確認とは別。",
+      "evidence": {
+        "path": "outputs/async-review-20261107/independent-docs/checker-tests.json",
+        "key": "TRACE-29",
+        "requiredSources": [
+          "scripts/traceability.py",
+          "scripts/test_traceability.py"
+        ]
+      }
+    },
+    {
+      "id": "TRACE-30",
+      "path": "scripts/test_traceability.py",
+      "locator": "case('TRACE-30'",
+      "requirements": [
+        "REQ-38"
+      ],
+      "mode": "offline-mutation",
+      "category": "customer-evidence-validation",
+      "scope": "顧客6件の実測記録の欠落・不整合・模擬経路の誤計上をローカル一時コピーで検出。本人の顧客確認とは別。",
+      "evidence": {
+        "path": "outputs/async-review-20261107/independent-docs/checker-tests.json",
+        "key": "TRACE-30",
+        "requiredSources": [
+          "scripts/traceability.py",
+          "scripts/test_traceability.py"
+        ]
+      }
+    },
+    {
+      "id": "TRACE-31",
+      "path": "scripts/test_traceability.py",
+      "locator": "case('TRACE-31'",
+      "requirements": [
+        "REQ-38"
+      ],
+      "mode": "offline-mutation",
+      "category": "customer-evidence-validation",
+      "scope": "顧客6件の実測記録の欠落・不整合・模擬経路の誤計上をローカル一時コピーで検出。本人の顧客確認とは別。",
+      "evidence": {
+        "path": "outputs/async-review-20261107/independent-docs/checker-tests.json",
+        "key": "TRACE-31",
+        "requiredSources": [
+          "scripts/traceability.py",
+          "scripts/test_traceability.py"
+        ]
+      }
+    },
+    {
+      "id": "TRACE-32",
+      "path": "scripts/test_traceability.py",
+      "locator": "case('TRACE-32'",
+      "requirements": [
+        "REQ-38"
+      ],
+      "mode": "offline-mutation",
+      "category": "trace-checker",
+      "scope": "検証用Calendarの実権限を未確認へ戻した正本コピーを拒否する。",
+      "evidence": {
+        "path": "outputs/async-review-20261107/independent-docs/checker-tests.json",
+        "key": "TRACE-32",
+        "requiredSources": [
+          "scripts/traceability.py",
+          "scripts/test_traceability.py"
+        ]
+      }
+    },
+    {
+      "id": "TRACE-33",
+      "path": "scripts/test_traceability.py",
+      "locator": "case('TRACE-33'",
+      "requirements": [
+        "REQ-38"
+      ],
+      "mode": "offline-mutation",
+      "category": "asynchronous-customer-procedure",
+      "scope": "立会い・当日依存への逆戻りと検証台帳制約欠落をローカルコピーで検出。本人の6件確認とは別。",
+      "evidence": {
+        "path": "outputs/async-review-20261107/independent-docs/checker-tests.json",
+        "key": "TRACE-33",
+        "requiredSources": [
+          "scripts/traceability.py",
+          "scripts/test_traceability.py"
+        ]
+      }
+    },
+    {
+      "id": "TRACE-34",
+      "path": "scripts/test_traceability.py",
+      "locator": "case('TRACE-34'",
+      "requirements": [
+        "REQ-38"
+      ],
+      "mode": "offline-mutation",
+      "category": "asynchronous-customer-procedure",
+      "scope": "立会い・当日依存への逆戻りと検証台帳制約欠落をローカルコピーで検出。本人の6件確認とは別。",
+      "evidence": {
+        "path": "outputs/async-review-20261107/independent-docs/checker-tests.json",
+        "key": "TRACE-34",
+        "requiredSources": [
+          "scripts/traceability.py",
+          "scripts/test_traceability.py"
+        ]
+      }
+    },
+    {
+      "id": "GAS-75",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-75'",
+      "requirements": [
+        "REQ-39"
+      ],
+      "mode": "offline-stub",
+      "category": "scoped-reviewer",
+      "scope": "Google本人応答を模擬したVMで指定検証台帳・両入口・生徒範囲・権限失効・更新の制約を確認。実Google本人・顧客6件は別。",
+      "evidence": {
+        "path": "outputs/async-review-20261107/independent-backend/2026-11-07T08-59-32-465Z/gas-results.json",
+        "key": "GAS-75",
+        "requiredSources": [
+          "gas/Code.gs",
+          "scripts/test_gas.cjs"
+        ]
+      }
+    },
+    {
+      "id": "GAS-76",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-76'",
+      "requirements": [
+        "REQ-39"
+      ],
+      "mode": "offline-stub",
+      "category": "scoped-reviewer",
+      "scope": "Google本人応答を模擬したVMで指定検証台帳・両入口・生徒範囲・権限失効・更新の制約を確認。実Google本人・顧客6件は別。",
+      "evidence": {
+        "path": "outputs/async-review-20261107/independent-backend/2026-11-07T08-59-32-465Z/gas-results.json",
+        "key": "GAS-76",
+        "requiredSources": [
+          "gas/Code.gs",
+          "scripts/test_gas.cjs"
+        ]
+      }
+    },
+    {
+      "id": "GAS-77",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-77'",
+      "requirements": [
+        "REQ-39"
+      ],
+      "mode": "offline-stub",
+      "category": "scoped-reviewer",
+      "scope": "Google本人応答を模擬したVMで指定検証台帳・両入口・生徒範囲・権限失効・更新の制約を確認。実Google本人・顧客6件は別。",
+      "evidence": {
+        "path": "outputs/async-review-20261107/independent-backend/2026-11-07T08-59-32-465Z/gas-results.json",
+        "key": "GAS-77",
+        "requiredSources": [
+          "gas/Code.gs",
+          "scripts/test_gas.cjs"
+        ]
+      }
+    },
+    {
+      "id": "GAS-78",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-78'",
+      "requirements": [
+        "REQ-39"
+      ],
+      "mode": "offline-stub",
+      "category": "scoped-reviewer",
+      "scope": "Google本人応答を模擬したVMで指定検証台帳・両入口・生徒範囲・権限失効・更新の制約を確認。実Google本人・顧客6件は別。",
+      "evidence": {
+        "path": "outputs/async-review-20261107/independent-backend/2026-11-07T08-59-32-465Z/gas-results.json",
+        "key": "GAS-78",
+        "requiredSources": [
+          "gas/Code.gs",
+          "scripts/test_gas.cjs"
+        ]
+      }
+    },
+    {
+      "id": "GAS-79",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-79'",
+      "requirements": [
+        "REQ-39"
+      ],
+      "mode": "offline-stub",
+      "category": "scoped-reviewer",
+      "scope": "Google本人応答を模擬したVMで指定検証台帳・両入口・生徒範囲・権限失効・更新の制約を確認。実Google本人・顧客6件は別。",
+      "evidence": {
+        "path": "outputs/async-review-20261107/independent-backend/2026-11-07T08-59-32-465Z/gas-results.json",
+        "key": "GAS-79",
+        "requiredSources": [
+          "gas/Code.gs",
+          "scripts/test_gas.cjs"
+        ]
+      }
+    },
+    {
+      "id": "GAS-80",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-80'",
+      "requirements": [
+        "REQ-39"
+      ],
+      "mode": "offline-stub",
+      "category": "scoped-reviewer",
+      "scope": "Google本人応答を模擬したVMで指定検証台帳・両入口・生徒範囲・権限失効・更新の制約を確認。実Google本人・顧客6件は別。",
+      "evidence": {
+        "path": "outputs/async-review-20261107/independent-backend/2026-11-07T08-59-32-465Z/gas-results.json",
+        "key": "GAS-80",
+        "requiredSources": [
+          "gas/Code.gs",
+          "scripts/test_gas.cjs"
+        ]
+      }
+    },
+    {
+      "id": "GAS-81",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-81'",
+      "requirements": [
+        "REQ-39"
+      ],
+      "mode": "offline-stub",
+      "category": "scoped-reviewer",
+      "scope": "Google本人応答を模擬したVMで指定検証台帳・両入口・生徒範囲・権限失効・更新の制約を確認。実Google本人・顧客6件は別。",
+      "evidence": {
+        "path": "outputs/async-review-20261107/independent-backend/2026-11-07T08-59-32-465Z/gas-results.json",
+        "key": "GAS-81",
+        "requiredSources": [
+          "gas/Code.gs",
+          "scripts/test_gas.cjs"
+        ]
+      }
+    },
+    {
+      "id": "GAS-82",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-82'",
+      "requirements": [
+        "REQ-39"
+      ],
+      "mode": "offline-stub",
+      "category": "scoped-reviewer",
+      "scope": "Google本人応答を模擬したVMで指定検証台帳・両入口・生徒範囲・権限失効・更新の制約を確認。実Google本人・顧客6件は別。",
+      "evidence": {
+        "path": "outputs/async-review-20261107/independent-backend/2026-11-07T08-59-32-465Z/gas-results.json",
+        "key": "GAS-82",
+        "requiredSources": [
+          "gas/Code.gs",
+          "scripts/test_gas.cjs"
+        ]
+      }
+    },
+    {
+      "id": "GAS-83",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-83'",
+      "requirements": [
+        "REQ-39"
+      ],
+      "mode": "offline-stub",
+      "category": "scoped-reviewer",
+      "scope": "Google本人応答を模擬したVMで指定検証台帳・両入口・生徒範囲・権限失効・更新の制約を確認。実Google本人・顧客6件は別。",
+      "evidence": {
+        "path": "outputs/async-review-20261107/independent-backend/2026-11-07T08-59-32-465Z/gas-results.json",
+        "key": "GAS-83",
+        "requiredSources": [
+          "gas/Code.gs",
+          "scripts/test_gas.cjs"
+        ]
+      }
+    },
+    {
+      "id": "GAS-84",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-84'",
+      "requirements": [
+        "REQ-39"
+      ],
+      "mode": "offline-stub",
+      "category": "scoped-reviewer",
+      "scope": "Google本人応答を模擬したVMで指定検証台帳・両入口・生徒範囲・権限失効・更新の制約を確認。実Google本人・顧客6件は別。",
+      "evidence": {
+        "path": "outputs/async-review-20261107/independent-backend/2026-11-07T08-59-32-465Z/gas-results.json",
+        "key": "GAS-84",
+        "requiredSources": [
+          "gas/Code.gs",
+          "scripts/test_gas.cjs"
+        ]
+      }
+    },
+    {
+      "id": "GAS-85",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-85'",
+      "requirements": [
+        "REQ-39"
+      ],
+      "mode": "offline-stub",
+      "category": "scoped-reviewer",
+      "scope": "Google本人応答を模擬したVMで指定検証台帳・両入口・生徒範囲・権限失効・更新の制約を確認。実Google本人・顧客6件は別。",
+      "evidence": {
+        "path": "outputs/async-review-20261107/independent-backend/2026-11-07T08-59-32-465Z/gas-results.json",
+        "key": "GAS-85",
+        "requiredSources": [
+          "gas/Code.gs",
+          "scripts/test_gas.cjs"
+        ]
+      }
+    },
+    {
+      "id": "PT-22",
+      "path": "scripts/test_portals.cjs",
+      "locator": "Reviewer logs in at either separate portal with its current public role and verifies on reload",
+      "requirements": [
+        "REQ-39"
+      ],
+      "mode": "offline-stub",
+      "category": "scoped-reviewer-frontend",
+      "scope": "API・入口の合成契約。実Googleの本人ログイン・顧客確認ではない。",
+      "evidence": {
+        "path": "docs/traceability/reports/async-review-20261107/frontend-contract-normalized.json",
+        "key": "Reviewer logs in at either separate portal with its current public role and verifies on reload",
+        "requiredSources": [
+          "src/deployment-config.ts",
+          "src/services/api.ts",
+          "src/services/google-auth.ts",
+          "src/portal.ts",
+          "scripts/test_portals.cjs"
+        ]
+      }
+    },
+    {
+      "id": "PT-23",
+      "path": "scripts/test_portals.cjs",
+      "locator": "Reviewer rejects wrong portal, wrong personal link and missing allowlist",
+      "requirements": [
+        "REQ-39"
+      ],
+      "mode": "offline-stub",
+      "category": "scoped-reviewer-frontend",
+      "scope": "API・入口の合成契約。実Googleの本人ログイン・顧客確認ではない。",
+      "evidence": {
+        "path": "docs/traceability/reports/async-review-20261107/frontend-contract-normalized.json",
+        "key": "Reviewer rejects wrong portal, wrong personal link and missing allowlist",
+        "requiredSources": [
+          "src/deployment-config.ts",
+          "src/services/api.ts",
+          "src/services/google-auth.ts",
+          "src/portal.ts",
+          "scripts/test_portals.cjs"
+        ]
+      }
+    },
+    {
+      "id": "PT-24",
+      "path": "scripts/test_portals.cjs",
+      "locator": "Reviewer admin filters overbroad student and ride responses by explicit fixture allowlist",
+      "requirements": [
+        "REQ-39"
+      ],
+      "mode": "offline-stub",
+      "category": "scoped-reviewer-frontend",
+      "scope": "API・入口の合成契約。実Googleの本人ログイン・顧客確認ではない。",
+      "evidence": {
+        "path": "docs/traceability/reports/async-review-20261107/frontend-contract-normalized.json",
+        "key": "Reviewer admin filters overbroad student and ride responses by explicit fixture allowlist",
+        "requiredSources": [
+          "src/deployment-config.ts",
+          "src/services/api.ts",
+          "src/services/google-auth.ts",
+          "src/portal.ts",
+          "scripts/test_portals.cjs"
+        ]
+      }
+    },
+    {
+      "id": "PT-25",
+      "path": "scripts/test_portals.cjs",
+      "locator": "Reviewer cannot call account management, invitation directory or create a student",
+      "requirements": [
+        "REQ-39"
+      ],
+      "mode": "offline-stub",
+      "category": "scoped-reviewer-frontend",
+      "scope": "API・入口の合成契約。実Googleの本人ログイン・顧客確認ではない。",
+      "evidence": {
+        "path": "docs/traceability/reports/async-review-20261107/frontend-contract-normalized.json",
+        "key": "Reviewer cannot call account management, invitation directory or create a student",
+        "requiredSources": [
+          "src/deployment-config.ts",
+          "src/services/api.ts",
+          "src/services/google-auth.ts",
+          "src/portal.ts",
+          "scripts/test_portals.cjs"
+        ]
+      }
+    },
+    {
+      "id": "PT-26",
+      "path": "scripts/test_portals.cjs",
+      "locator": "Reviewer admin rejects bookings and ticket writes for other students before a request",
+      "requirements": [
+        "REQ-39"
+      ],
+      "mode": "offline-stub",
+      "category": "scoped-reviewer-frontend",
+      "scope": "API・入口の合成契約。実Googleの本人ログイン・顧客確認ではない。",
+      "evidence": {
+        "path": "docs/traceability/reports/async-review-20261107/frontend-contract-normalized.json",
+        "key": "Reviewer admin rejects bookings and ticket writes for other students before a request",
+        "requiredSources": [
+          "src/deployment-config.ts",
+          "src/services/api.ts",
+          "src/services/google-auth.ts",
+          "src/portal.ts",
+          "scripts/test_portals.cjs"
+        ]
+      }
+    },
+    {
+      "id": "PT-27",
+      "path": "scripts/test_portals.cjs",
+      "locator": "Reviewer rejects other ride cancellation and completion even if an overbroad response leaks it",
+      "requirements": [
+        "REQ-39"
+      ],
+      "mode": "offline-stub",
+      "category": "scoped-reviewer-frontend",
+      "scope": "API・入口の合成契約。実Googleの本人ログイン・顧客確認ではない。",
+      "evidence": {
+        "path": "docs/traceability/reports/async-review-20261107/frontend-contract-normalized.json",
+        "key": "Reviewer rejects other ride cancellation and completion even if an overbroad response leaks it",
+        "requiredSources": [
+          "src/deployment-config.ts",
+          "src/services/api.ts",
+          "src/services/google-auth.ts",
+          "src/portal.ts",
+          "scripts/test_portals.cjs"
+        ]
+      }
+    },
+    {
+      "id": "PT-28",
+      "path": "scripts/test_portals.cjs",
+      "locator": "Reviewer fixture mutations keep portal role, operation ID retry and fixed old-date completion",
+      "requirements": [
+        "REQ-39"
+      ],
+      "mode": "offline-stub",
+      "category": "scoped-reviewer-frontend",
+      "scope": "API・入口の合成契約。実Googleの本人ログイン・顧客確認ではない。",
+      "evidence": {
+        "path": "docs/traceability/reports/async-review-20261107/frontend-contract-normalized.json",
+        "key": "Reviewer fixture mutations keep portal role, operation ID retry and fixed old-date completion",
+        "requiredSources": [
+          "src/deployment-config.ts",
+          "src/services/api.ts",
+          "src/services/google-auth.ts",
+          "src/portal.ts",
+          "scripts/test_portals.cjs"
+        ]
+      }
+    },
+    {
+      "id": "PT-29",
+      "path": "scripts/test_portals.cjs",
+      "locator": "Reviewer parent cannot use admin mutations and cancellation still carries its personal entry",
+      "requirements": [
+        "REQ-39"
+      ],
+      "mode": "offline-stub",
+      "category": "scoped-reviewer-frontend",
+      "scope": "API・入口の合成契約。実Googleの本人ログイン・顧客確認ではない。",
+      "evidence": {
+        "path": "docs/traceability/reports/async-review-20261107/frontend-contract-normalized.json",
+        "key": "Reviewer parent cannot use admin mutations and cancellation still carries its personal entry",
+        "requiredSources": [
+          "src/deployment-config.ts",
+          "src/services/api.ts",
+          "src/services/google-auth.ts",
+          "src/portal.ts",
+          "scripts/test_portals.cjs"
+        ]
+      }
+    },
+    {
+      "id": "PT-30",
+      "path": "scripts/test_portals.cjs",
+      "locator": "Review unavailable response ends the restricted session and prevents subsequent requests",
+      "requirements": [
+        "REQ-39"
+      ],
+      "mode": "offline-stub",
+      "category": "scoped-reviewer-frontend",
+      "scope": "API・入口の合成契約。実Googleの本人ログイン・顧客確認ではない。",
+      "evidence": {
+        "path": "docs/traceability/reports/async-review-20261107/frontend-contract-normalized.json",
+        "key": "Review unavailable response ends the restricted session and prevents subsequent requests",
+        "requiredSources": [
+          "src/deployment-config.ts",
+          "src/services/api.ts",
+          "src/services/google-auth.ts",
+          "src/portal.ts",
+          "scripts/test_portals.cjs"
+        ]
+      }
+    },
+    {
+      "id": "PT-31",
+      "path": "scripts/test_portals.cjs",
+      "locator": "Full admin directory preserves stored reviewer role and exact server capability",
+      "requirements": [
+        "REQ-39"
+      ],
+      "mode": "offline-stub",
+      "category": "scoped-reviewer-frontend",
+      "scope": "API・入口の合成契約。実Googleの本人ログイン・顧客確認ではない。",
+      "evidence": {
+        "path": "docs/traceability/reports/async-review-20261107/frontend-contract-normalized.json",
+        "key": "Full admin directory preserves stored reviewer role and exact server capability",
+        "requiredSources": [
+          "src/deployment-config.ts",
+          "src/services/api.ts",
+          "src/services/google-auth.ts",
+          "src/portal.ts",
+          "scripts/test_portals.cjs"
+        ]
+      }
+    },
+    {
+      "id": "REVIEW-UI-01",
+      "path": "tests/reviewer-ui/run.mjs",
+      "locator": "REVIEW-UI-01",
+      "requirements": [
+        "REQ-39"
+      ],
+      "mode": "offline-browser",
+      "category": "scoped-reviewer-ui",
+      "scope": "実Appをlocalhost・合成Google/GASで操作。固定過去日完了・再読込・権限制御、外部通信0。実環境受入ではない。",
+      "evidence": {
+        "path": "outputs/async-review-20261107/independent-frontend/ui/results.json",
+        "key": "REVIEW-UI-01",
+        "requiredSources": [
+          "src/services/api.ts",
+          "src/App.tsx",
+          "src/components/Navbar.tsx",
+          "src/components/TeacherDashboard.tsx",
+          "src/components/AccountManagement.tsx",
+          "tests/reviewer-ui/main.tsx",
+          "tests/reviewer-ui/google-auth.ts",
+          "tests/reviewer-ui/run.mjs"
+        ]
+      }
+    },
+    {
+      "id": "REVIEW-UI-02",
+      "path": "tests/reviewer-ui/run.mjs",
+      "locator": "REVIEW-UI-02",
+      "requirements": [
+        "REQ-39"
+      ],
+      "mode": "offline-browser",
+      "category": "scoped-reviewer-ui",
+      "scope": "実Appをlocalhost・合成Google/GASで操作。固定過去日完了・再読込・権限制御、外部通信0。実環境受入ではない。",
+      "evidence": {
+        "path": "outputs/async-review-20261107/independent-frontend/ui/results.json",
+        "key": "REVIEW-UI-02",
+        "requiredSources": [
+          "src/services/api.ts",
+          "src/App.tsx",
+          "src/components/Navbar.tsx",
+          "src/components/TeacherDashboard.tsx",
+          "src/components/AccountManagement.tsx",
+          "tests/reviewer-ui/main.tsx",
+          "tests/reviewer-ui/google-auth.ts",
+          "tests/reviewer-ui/run.mjs"
+        ]
+      }
+    },
+    {
+      "id": "REVIEW-UI-03",
+      "path": "tests/reviewer-ui/run.mjs",
+      "locator": "REVIEW-UI-03",
+      "requirements": [
+        "REQ-39"
+      ],
+      "mode": "offline-browser",
+      "category": "scoped-reviewer-ui",
+      "scope": "実Appをlocalhost・合成Google/GASで操作。固定過去日完了・再読込・権限制御、外部通信0。実環境受入ではない。",
+      "evidence": {
+        "path": "outputs/async-review-20261107/independent-frontend/ui/results.json",
+        "key": "REVIEW-UI-03",
+        "requiredSources": [
+          "src/services/api.ts",
+          "src/App.tsx",
+          "src/components/Navbar.tsx",
+          "src/components/TeacherDashboard.tsx",
+          "src/components/AccountManagement.tsx",
+          "tests/reviewer-ui/main.tsx",
+          "tests/reviewer-ui/google-auth.ts",
+          "tests/reviewer-ui/run.mjs"
+        ]
+      }
+    },
+    {
+      "id": "REVIEW-UI-04",
+      "path": "tests/reviewer-ui/run.mjs",
+      "locator": "REVIEW-UI-04",
+      "requirements": [
+        "REQ-39"
+      ],
+      "mode": "offline-browser",
+      "category": "scoped-reviewer-ui",
+      "scope": "実Appをlocalhost・合成Google/GASで操作。固定過去日完了・再読込・権限制御、外部通信0。実環境受入ではない。",
+      "evidence": {
+        "path": "outputs/async-review-20261107/independent-frontend/ui/results.json",
+        "key": "REVIEW-UI-04",
+        "requiredSources": [
+          "src/services/api.ts",
+          "src/App.tsx",
+          "src/components/Navbar.tsx",
+          "src/components/TeacherDashboard.tsx",
+          "src/components/AccountManagement.tsx",
+          "tests/reviewer-ui/main.tsx",
+          "tests/reviewer-ui/google-auth.ts",
+          "tests/reviewer-ui/run.mjs"
+        ]
+      }
+    },
+    {
+      "id": "REVIEW-UI-05",
+      "path": "tests/reviewer-ui/run.mjs",
+      "locator": "REVIEW-UI-05",
+      "requirements": [
+        "REQ-39"
+      ],
+      "mode": "offline-browser",
+      "category": "scoped-reviewer-ui",
+      "scope": "実Appをlocalhost・合成Google/GASで操作。固定過去日完了・再読込・権限制御、外部通信0。実環境受入ではない。",
+      "evidence": {
+        "path": "outputs/async-review-20261107/independent-frontend/ui/results.json",
+        "key": "REVIEW-UI-05",
+        "requiredSources": [
+          "src/services/api.ts",
+          "src/App.tsx",
+          "src/components/Navbar.tsx",
+          "src/components/TeacherDashboard.tsx",
+          "src/components/AccountManagement.tsx",
+          "tests/reviewer-ui/main.tsx",
+          "tests/reviewer-ui/google-auth.ts",
+          "tests/reviewer-ui/run.mjs"
+        ]
+      }
+    },
+    {
+      "id": "REVIEW-UI-06",
+      "path": "tests/reviewer-ui/run.mjs",
+      "locator": "REVIEW-UI-06",
+      "requirements": [
+        "REQ-39"
+      ],
+      "mode": "offline-browser",
+      "category": "scoped-reviewer-ui",
+      "scope": "実Appをlocalhost・合成Google/GASで操作。固定過去日完了・再読込・権限制御、外部通信0。実環境受入ではない。",
+      "evidence": {
+        "path": "outputs/async-review-20261107/independent-frontend/ui/results.json",
+        "key": "REVIEW-UI-06",
+        "requiredSources": [
+          "src/services/api.ts",
+          "src/App.tsx",
+          "src/components/Navbar.tsx",
+          "src/components/TeacherDashboard.tsx",
+          "src/components/AccountManagement.tsx",
+          "tests/reviewer-ui/main.tsx",
+          "tests/reviewer-ui/google-auth.ts",
+          "tests/reviewer-ui/run.mjs"
+        ]
+      }
+    },
+    {
+      "id": "REVIEW-UI-07",
+      "path": "tests/reviewer-ui/run.mjs",
+      "locator": "REVIEW-UI-07",
+      "requirements": [
+        "REQ-39"
+      ],
+      "mode": "offline-browser",
+      "category": "scoped-reviewer-ui",
+      "scope": "実Appをlocalhost・合成Google/GASで操作。固定過去日完了・再読込・権限制御、外部通信0。実環境受入ではない。",
+      "evidence": {
+        "path": "outputs/async-review-20261107/independent-frontend/ui/results.json",
+        "key": "REVIEW-UI-07",
+        "requiredSources": [
+          "src/services/api.ts",
+          "src/App.tsx",
+          "src/components/Navbar.tsx",
+          "src/components/TeacherDashboard.tsx",
+          "src/components/AccountManagement.tsx",
+          "tests/reviewer-ui/main.tsx",
+          "tests/reviewer-ui/google-auth.ts",
+          "tests/reviewer-ui/run.mjs"
+        ]
+      }
+    },
+    {
+      "id": "REVIEW-UI-08",
+      "path": "tests/reviewer-ui/run.mjs",
+      "locator": "REVIEW-UI-08",
+      "requirements": [
+        "REQ-39"
+      ],
+      "mode": "offline-browser",
+      "category": "scoped-reviewer-ui",
+      "scope": "実Appをlocalhost・合成Google/GASで操作。固定過去日完了・再読込・権限制御、外部通信0。実環境受入ではない。",
+      "evidence": {
+        "path": "outputs/async-review-20261107/independent-frontend/ui/results.json",
+        "key": "REVIEW-UI-08",
+        "requiredSources": [
+          "src/services/api.ts",
+          "src/App.tsx",
+          "src/components/Navbar.tsx",
+          "src/components/TeacherDashboard.tsx",
+          "src/components/AccountManagement.tsx",
+          "tests/reviewer-ui/main.tsx",
+          "tests/reviewer-ui/google-auth.ts",
+          "tests/reviewer-ui/run.mjs"
+        ]
+      }
+    }
+  ],
+  "screens": [
+    {
+      "id": "C01",
+      "name": "入口案内",
+      "role": "未ログイン",
+      "implementation": "#/ ／ 不正URL",
+      "operation": "管理者・保護者入口へ"
+    },
+    {
+      "id": "C02",
+      "name": "利用規約・個人情報・免責",
+      "role": "共通",
+      "implementation": "TermsModal内タブ",
+      "operation": "元画面へ閉じる"
+    },
+    {
+      "id": "A01",
+      "name": "管理者ログイン",
+      "role": "管理者",
+      "implementation": "#/admin",
+      "operation": "Google認証後A02"
+    },
+    {
+      "id": "A02",
+      "name": "本日の送迎",
+      "role": "管理者",
+      "implementation": "TeacherDashboard today",
+      "operation": "完了・予約・購入"
+    },
+    {
+      "id": "A03",
+      "name": "送迎予定・履歴一覧",
+      "role": "管理者",
+      "implementation": "同allRidesタブ",
+      "operation": "一覧・完了・取消"
+    },
+    {
+      "id": "A04",
+      "name": "生徒・チケット管理",
+      "role": "管理者",
+      "implementation": "同studentsタブ",
+      "operation": "生徒登録・追加購入"
+    },
+    {
+      "id": "A05",
+      "name": "個別URL・QR",
+      "role": "管理者",
+      "implementation": "PortalInvitations",
+      "operation": "コピー・QR表示"
+    },
+    {
+      "id": "A06",
+      "name": "アカウント一覧・編集",
+      "role": "管理者",
+      "implementation": "AccountManagement",
+      "operation": "追加・停止・削除・再発行"
+    },
+    {
+      "id": "A07",
+      "name": "Google連携情報",
+      "role": "管理者",
+      "implementation": "GoogleSettings",
+      "operation": "接続情報表示／デモ初期化"
+    },
+    {
+      "id": "P01",
+      "name": "保護者ログイン",
+      "role": "保護者",
+      "implementation": "#/parent[/個別ID]",
+      "operation": "Google認証後P02"
+    },
+    {
+      "id": "P02",
+      "name": "家庭専用ページ",
+      "role": "保護者",
+      "implementation": "ParentPortal",
+      "operation": "兄弟選択・予約・残数・取消"
+    },
+    {
+      "id": "D01",
+      "name": "送迎予約入力",
+      "role": "両者",
+      "implementation": "AddRideModal",
+      "operation": "送信後、呼出元へ"
+    },
+    {
+      "id": "D02",
+      "name": "チケット追加入力",
+      "role": "管理者",
+      "implementation": "AddTicketModal",
+      "operation": "送信後、呼出元へ"
+    },
+    {
+      "id": "D03",
+      "name": "生徒新規入力",
+      "role": "管理者",
+      "implementation": "AddStudentModal",
+      "operation": "送信後、呼出元へ"
+    },
+    {
+      "id": "D04",
+      "name": "アカウント変更確認",
+      "role": "管理者",
+      "implementation": "A06内の確認dialog",
+      "operation": "保存／削除→A06"
+    },
+    {
+      "id": "D05",
+      "name": "取消確認",
+      "role": "両者",
+      "implementation": "window.confirm",
+      "operation": "OK→取消、戻る→元画面"
+    },
+    {
+      "id": "E01",
+      "name": "Googleアカウント選択",
+      "role": "外部",
+      "implementation": "Firebase Auth popup",
+      "operation": "認証成功／中止を返す"
+    },
+    {
+      "id": "E02",
+      "name": "Googleカレンダー",
+      "role": "外部",
+      "implementation": "Google Calendar",
+      "operation": "当日の予定を人が確認"
+    },
+    {
+      "id": "E03",
+      "name": "Googleスプレッドシート",
+      "role": "外部",
+      "implementation": "Google Sheets",
+      "operation": "保守修正・保全・照合"
+    },
+    {
+      "id": "E04",
+      "name": "導入・保守設定",
+      "role": "外部",
+      "implementation": "Firebase Console／GAS",
+      "operation": "初期設定・緊急復旧"
+    }
+  ],
+  "interfaces": [
+    {
+      "id": "IF-01",
+      "endpoints": "A01/P01→E01→GAS",
+      "action": "Firebase認証＋login",
+      "description": "Google本人確認、役割・家庭・有効状態照合"
+    },
+    {
+      "id": "IF-02",
+      "endpoints": "D01→GAS",
+      "action": "createReservation",
+      "description": "生徒・日時・区分・場所・メモ→予定／結果"
+    },
+    {
+      "id": "IF-03",
+      "endpoints": "A02〜04/P02→GAS",
+      "action": "getStudents / getRides",
+      "description": "権限に応じた生徒・送迎一覧を取得"
+    },
+    {
+      "id": "IF-04",
+      "endpoints": "D03→GAS",
+      "action": "createStudent",
+      "description": "生徒情報・初期残数→生徒台帳"
+    },
+    {
+      "id": "IF-05",
+      "endpoints": "D05→GAS",
+      "action": "cancelReservation",
+      "description": "送迎ID→取消状態・予定削除"
+    },
+    {
+      "id": "IF-06",
+      "endpoints": "A02/A03→GAS",
+      "action": "completeRide",
+      "description": "送迎ID→片道1／往復2消費・完了履歴"
+    },
+    {
+      "id": "IF-07",
+      "endpoints": "A05→GAS／端末内",
+      "action": "getPortalInvitations",
+      "description": "専用URL取得。QRは端末内生成・コピー"
+    },
+    {
+      "id": "IF-08",
+      "endpoints": "A06/D04→GAS",
+      "action": "getManagedUsers / saveManagedUser / deleteManagedUser",
+      "description": "一覧取得・保存・削除・再発行（管理者限定）"
+    },
+    {
+      "id": "IF-09",
+      "endpoints": "GAS→Script Properties",
+      "action": "PropertiesService",
+      "description": "Google許可設定・更新ガードを保存"
+    },
+    {
+      "id": "IF-10",
+      "endpoints": "D02→GAS",
+      "action": "addTickets",
+      "description": "生徒・枚数・金額→残数・購入履歴更新"
+    },
+    {
+      "id": "IF-11",
+      "endpoints": "GAS→台帳",
+      "action": "SpreadsheetApp",
+      "description": "生徒・送迎・購入の各シートを読書き"
+    },
+    {
+      "id": "IF-12",
+      "endpoints": "ログアウト操作→SDK",
+      "action": "session消去＋signOut",
+      "description": "アプリ状態消去・Firebaseログアウト"
+    },
+    {
+      "id": "IF-13",
+      "endpoints": "GAS⇄Google Calendar",
+      "action": "CalendarApp",
+      "description": "予定説明欄に予約IDを記載して作成し、台帳にイベントIDを保持。イベントIDで削除。実受入未完了"
+    },
+    {
+      "id": "IF-14",
+      "endpoints": "人→E03→サイト再読込",
+      "action": "外部画面で直接編集",
+      "description": "保守修正。自動計算・予定同期は実行しない"
+    },
+    {
+      "id": "IF-15",
+      "endpoints": "人→E04",
+      "action": "導入担当の外部画面操作",
+      "description": "初期Google接続・認証・初期管理者設定"
+    },
+    {
+      "id": "IF-16",
+      "endpoints": "送迎担当→E02",
+      "action": "Google Calendarの画面",
+      "description": "予定を人が閲覧。当アプリのAPI呼出しなし"
+    }
+  ],
+  "exceptions": [
+    {
+      "id": "OPEN-01",
+      "title": "取消期限・当日変更・返金・片道だけ実施の精算",
+      "status": "CUSTOMER_CONFIRMATION"
+    },
+    {
+      "id": "OPEN-02",
+      "title": "バックアップ担当・頻度・保管先",
+      "status": "CUSTOMER_CONFIRMATION"
+    },
+    {
+      "id": "OPEN-03",
+      "title": "旧方針の本番前第三者30件は廃止。AT-30は本番配備後の開発側確認",
+      "status": "RESOLVED"
+    },
+    {
+      "id": "OPEN-04",
+      "title": "復元後の管理者2名の再ログイン確認",
+      "status": "RESOLVED"
+    }
+  ],
+  "evidenceRevision": "2026-11-07-r17"
+}

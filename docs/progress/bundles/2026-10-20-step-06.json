@@ -1,0 +1,107 @@
+{
+  "id": "2026-10-20-step-06",
+  "date": "2026-10-20",
+  "timezone": "Asia/Tokyo",
+  "audience": "小林雅水さん",
+  "status": "draft-not-sent",
+  "result": "Portal change verified in test environment; overall acceptance pending",
+  "report": "docs/progress/2026-10-20-step-06.md",
+  "spec": "docs/PORTAL_SEPARATION.md",
+  "attachments": [
+    {
+      "path": "docs/deliverables/2026-10-20-manuals/operation-manual-2026-10-20-v10.pptx",
+      "changed": true,
+      "slides": 28,
+      "sha256": "e6346dcd7da4001f3d2ae6144dee9e18eb691a19eb08f2b0a301a7eaccf73811",
+      "validation": ".manual-build-20261020/v10-release/operation-manual/validation.json"
+    },
+    {
+      "path": "docs/deliverables/2026-10-20-manuals/user-manual-2026-10-20-v10.pptx",
+      "changed": true,
+      "slides": 14,
+      "sha256": "65f7dcb34ce5762554e46e21a184c52541b64f390c1d2db7618a3955c69b26e2",
+      "validation": ".manual-build-20261020/v10-release/user-manual/validation.json"
+    },
+    {
+      "path": "docs/deliverables/2026-10-20-manuals/remaining-tasks-2026-10-20-v10.pptx",
+      "changed": true,
+      "slides": 11,
+      "sha256": "fe76b95964a69108bc65746afd90c7a7e3beb4e1d330dfb1073e8076bcf23dd3",
+      "validation": ".manual-build-20261020/v10-release/remaining-tasks/validation.json"
+    },
+    {
+      "path": "docs/deliverables/2026-10-20-manuals/progress-report-role-portals-2026-10-20-v10.pptx",
+      "changed": true,
+      "slides": 6,
+      "sha256": "775d65697720305015d3f677be150ad0ecd3e7661d077103f0cd78bcf004d922",
+      "validation": ".manual-build-20261020/v10-release/progress-report-role-portals/validation.json"
+    },
+    {
+      "path": "docs/deliverables/2026-10-20-manuals/portal-spec-supplement-2026-10-20-v10.pptx",
+      "changed": true,
+      "slides": 6,
+      "sha256": "1871a21af00210136688f6162c86fd9c920a990883bef9d794630dbadc545fde",
+      "validation": ".manual-build-20261020/v10-release/portal-spec-supplement/validation.json"
+    }
+  ],
+  "evidence": [
+    "docs/acceptance/role-portals-2026-10-20/frontend-deployment.json",
+    "docs/acceptance/role-portals-2026-10-20/gas-deployment.json",
+    "docs/acceptance/role-portals-2026-10-20/frontend-contract.json",
+    "docs/acceptance/role-portals-2026-10-20/live-api-results.json",
+    "docs/acceptance/role-portals-2026-10-20/live-ui-results.json",
+    "docs/acceptance/role-portals-2026-10-20/live-qr-results.json",
+    "docs/acceptance/role-portals-2026-10-20/browser-demo-results.json",
+    "docs/acceptance/role-portals-2026-10-20/release-archive.json"
+  ],
+  "screenshots": [
+    "docs/acceptance/role-portals-2026-10-20/admin-hosted.png",
+    "docs/acceptance/role-portals-2026-10-20/parent-hosted.png",
+    "docs/acceptance/role-portals-2026-10-20/qr-live-family-b.png"
+  ],
+  "checks": {
+    "gasRegression": {
+      "passed": 42,
+      "total": 42,
+      "mode": "local stubs"
+    },
+    "frontendContract": {
+      "passed": 9,
+      "total": 9,
+      "mode": "local synthetic"
+    },
+    "liveApi": {
+      "passed": 11,
+      "total": 11,
+      "mode": "read-only real GAS"
+    },
+    "liveQrDecode": {
+      "passed": 2,
+      "total": 2
+    },
+    "pptSlides": 65,
+    "pptNativePowerPointVerified": false,
+    "downloadCompletionVerified": false
+  },
+  "remainingAcceptance": [
+    "AT-24",
+    "AT-25",
+    "AT-26",
+    "AT-27",
+    "AT-28",
+    "AT-29",
+    "AT-30"
+  ],
+  "next": "AT-24: confirm verification calendar isolation and Calendar permission before real booking test.",
+  "requests": [
+    "教室側の運用用Googleアカウント準備",
+    "実機受入・QR保存/読取確認の担当者"
+  ],
+  "sentAt": null,
+  "validation": "All 5 delivered PPT hashes match finalizer receipts; package/layout/font/import checked. Agent visually reviewed 65 rendered pages. Active manual links and 270 text files checked for raw-key leakage. Final source/payload snapshot preserved; all 6 public payload files match archived hashes.",
+  "limitations": [
+    "Previous AT-01..22 records were retained, not claimed as re-run after portal changes.",
+    "Read-only auth checks do not pass real calendar or concurrent completion tests.",
+    "QR PNG payload and decoding verified; device download completion and camera scan await AT-29."
+  ]
+}

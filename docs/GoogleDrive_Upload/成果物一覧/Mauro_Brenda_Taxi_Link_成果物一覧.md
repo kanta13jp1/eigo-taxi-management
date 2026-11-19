@@ -1,54 +1,68 @@
-# Mauro & Brenda Taxi Link プロジェクト成果物一覧（Deliverables Inventory）
+# Mauro_Brenda_Taxi_Link_成果物一覧
 
-英語教室 送迎チケット管理Webアプリケーション「**Mauro & Brenda Taxi Link**」の納品・運用対象となる全成果物の一覧です。
+現行正本：[task](../../acceptance/05_TASKS.md)。旧PDF/XLSXと画面は履歴として扱う。
 
----
+<!-- fact:authentication="google" -->
+<!-- fact:setupOwner="developer" -->
+<!-- fact:dailyAccountOwner="admin" -->
+<!-- fact:consumeAt="completion" -->
+<!-- fact:oneWay=1 -->
+<!-- fact:roundTrip=2 -->
+<!-- fact:calendarPermissionAdded=true -->
+<!-- fact:productionStarted=false -->
+<!-- fact:originalLedgerAutoSync=false -->
+<!-- fact:thirdPartyPassed=0 -->
+<!-- fact:thirdPartyTotal=30 -->
+<!-- fact:thirdPartyRequiredForRelease=false -->
+<!-- fact:customerAcceptancePassed=0 -->
+<!-- fact:customerAcceptanceTotal=6 -->
+<!-- fact:calendarPermissionApprovedForTest=true -->
+<!-- fact:remainingRealAcceptance=["AT-24","AT-25","AT-26","AT-27","AT-28","AT-29","AT-30"] -->
+<!-- fact:release="HOLD" -->
+<!-- fact:restoredAdminRelogin="BOTH_ADMINS_CONFIRMED" -->
+<!-- fact:publicFrontendFilesMatched=7 -->
+<!-- fact:restoredActiveAdmins=2 -->
+<!-- fact:verificationGasVersion=6 -->
+<!-- fact:verificationCalendarReadConfirmed=true -->
+<!-- fact:customerPreparationStatus="SELF_PACED_PREPARED_CUSTOMER_FIRST_LOGIN_PENDING" -->
+<!-- fact:customerExecutionMode="self-paced-test-reviewer" -->
 
-## 1. プロジェクト基本情報
-
-- **プロジェクト名**: Mauro & Brenda Taxi Link（英語教室 送迎チケット管理）
-- **本番公開URL**: [https://kanta13jp1.github.io/eigo-taxi-management/](https://kanta13jp1.github.io/eigo-taxi-management/)
-- **ソースコードリポジトリ**: [https://github.com/kanta13jp1/eigo-taxi-management](https://github.com/kanta13jp1/eigo-taxi-management)
-- **主要関係者**:
-  - 管理者: Mauro 先生 & Brenda 先生
-  - コーディネーター: 小林雅水 様
-  - 利用者: 英語教室の生徒・保護者の皆様
-- **納品日 / バージョン**: 2026年10月08日 / v1.0.0 (Production Release)
-- **技術スタック**: React 19, TypeScript, Tailwind CSS, Vite, GitHub Pages, Google Apps Script (GAS)
-
----
-
-## 2. 納品成果物一覧
-
-| No | 成果物分類 | 成果物名称 | 形式 / 所在 | 概要・詳細説明 | 主な利用者 | ステータス |
-| :-: | :--- | :--- | :--- | :--- | :--- | :-: |
-| **1** | システム本体 | **送迎チケット管理Webアプリ** | Web (GitHub Pages) | 本番稼働URL。管理者（Mauro・Brenda）と送迎利用者（保護者）の2軸切り替え、完全予約制（フレックス都度予約）、送迎完了時のチケット自動消化処理を完備。 | 先生、保護者、生徒 | **稼働中** |
-| **2** | システム本体 | **フロントエンド ソースコード一式** | Git (GitHub) | TypeScript + React 19 + Tailwind CSS による型安全な実装。コンポーネント指向・レスポンシブ完全対応。 | 開発・保守担当 | **公開済** |
-| **3** | システム本体 | **自動デプロイ CI/CD パイプライン** | GitHub Actions | mainブランチ更新時に自動ビルド・検証・GitHub Pages本番デプロイを実行するワークフロー (.github/workflows/deploy.yml)。 | 運用保守担当 | **稼働中** |
-| **4** | バックエンド | **Google Apps Script (GAS) コード** | JavaScript / GAS | Googleスプレッドシート（3シート自動初期化）およびGoogleカレンダーへの送迎予定自動作成・削除バックエンドスクリプト。 | 先生、運用担当 | **完了** |
-| **5** | バックエンド | **Googleスプレッドシート連携仕様** | GSS 定義 | 「生徒台帳」「送迎履歴」「チケット購入履歴」の3テーブルスキーマ定義および自動データ同期設計。 | 先生、小林様 | **完了** |
-| **6** | バックエンド | **Googleカレンダー連動機能** | Calendar API | 予約確定時に「🚗【送迎】生徒名」の予定を自動作成、キャンセル時に自動削除する連動ロジック。 | Mauro・Brenda先生 | **完了** |
-| **7** | 設計仕様書 | **画面デザイン仕様書 (PDF版)** | PDF (A4横) | 全10画面×PC版・スマホ版の【実機スクリーンショット計20枚】を収録したビジュアルUI/UXデザイン仕様書。 | 全関係者 | **完了** |
-| **8** | 設計仕様書 | **画面デザイン仕様書 (Markdown版)** | Markdown (.md) | デザインコンセプト、カラーパレット、レスポンシブ設計要件、ヒアリング要件反映一覧の原本ドキュメント。 | 開発・保守担当 | **完了** |
-| **9** | テスト検証 | **受入シナリオテスト仕様書 (Excel版)** | Excel (.xlsx) | 保護者ポータル・先生画面・Google連携・レスポンシブの全28項目テストマトリクス（Web自動22件合格 / Google手動管理シート付）。 | 小林様、開発者 | **Web合格/手動中** |
-| **10**| テスト検証 | **受入シナリオテスト仕様書 (PDF版)** | PDF (A4横) | 全28テストケースの手順・判定基準・証跡画像・ログをA4横形式で美麗にまとめた受入報告PDF。 | 全関係者 | **Web合格/手動中** |
-| **11**| テスト検証 | **Google連携手動受入検証手順書 (PDF/MD版)**| PDF / Markdown | 技術的知識のない方でも迷わず実施できる、スプレッドシート・カレンダー連携の完全ステップバイステップ手動受入マニュアル。 | 先生、小林様 | **受入準備済** |
-| **12**| テスト検証 | **受入テスト客観的証跡一式 (キャプチャー＆ログ)** | PNG 28枚 + TXT | 全28項目ブラウザ実行時の実機画面キャプチャー（TC-xxx.png）およびDOMアサーションログ（test_execution_log.txt）。 | 全関係者・受入担当 | **全28件完備** |
-| **13**| テスト検証 | **全自動E2E証跡取得テストスイート** | Puppeteer | Web機能22ケースを自動実行し、画面キャプチャーと実行ログをリアルタイム採取する検証エンジン。 | 開発・品質保証 | **検証済** |
-| **14**| 運用マニュアル | **Google連携 導入4ステップガイド** | Web内蔵ガイド | スプレッドシート作成からGASデプロイ、WebアプリURL貼り付けまでの手順を画面内に完備。 | 先生、小林様 | **完了** |
-| **15**| 運用マニュアル | **システム管理者・利用者運用手引書** | Markdown / Docs | 日常の送迎受付、チケット追加チャージ、急な予定変更・キャンセル、トラブル対応手順。 | 先生、保護者 | **完了** |
-
----
-
-## 3. ヒアリング反映仕様の確認ポイント
-
-1. **管理者2名体制への対応**:
-   - サービス名を「Mauro & Brenda Taxi Link」とし、ヘッダーおよびダッシュボードに管理者名を明記。
-2. **チケット消費ルール**:
-   - 「片道1回（お迎えで1回、送りで1回、往復で2回）」の消費ルールをUI各所に明記。送迎完了ボタン（「送迎完了（1回消費）」）で自動消化。
-3. **完全予約制（フレックス予約）対応**:
-   - 前日や当日でも保護者・先生の双方から随時送迎予約を追加・キャンセル可能。
-4. **チケット残少アラート**:
-   - 残チケットが2回以下になった際、保護者画面の最前面に「⚠️ チケットが無くなりそうです。Mauro・Brenda に連絡してね！」を表示。
-5. **シンプル運用の徹底（KISS原則）**:
-   - LINE連携やオンライン決済、定期予約などの不要な複雑機能をあえて排除し、Googleスプレッドシートとカレンダー連携で誰でもすぐ使える直感性を実現。
+- [TASK-01 開発者設定とGoogleログイン](../../acceptance/05_TASKS.md#TASK-01)
+- [TASK-02 生徒登録](../../acceptance/05_TASKS.md#TASK-02)
+- [TASK-03 保護者の残数確認](../../acceptance/05_TASKS.md#TASK-03)
+- [TASK-04 残少・ゼロ案内](../../acceptance/05_TASKS.md#TASK-04)
+- [TASK-05 チケット追加](../../acceptance/05_TASKS.md#TASK-05)
+- [TASK-06 保護者のお迎え予約](../../acceptance/05_TASKS.md#TASK-06)
+- [TASK-07 送り予約](../../acceptance/05_TASKS.md#TASK-07)
+- [TASK-08 往復予約](../../acceptance/05_TASKS.md#TASK-08)
+- [TASK-09 管理者の代理予約](../../acceptance/05_TASKS.md#TASK-09)
+- [TASK-10 保護者の予約取消](../../acceptance/05_TASKS.md#TASK-10)
+- [TASK-11 管理者の予約取消](../../acceptance/05_TASKS.md#TASK-11)
+- [TASK-12 当日一覧・地図リンク](../../acceptance/05_TASKS.md#TASK-12)
+- [TASK-13 片道完了](../../acceptance/05_TASKS.md#TASK-13)
+- [TASK-14 往復完了](../../acceptance/05_TASKS.md#TASK-14)
+- [TASK-15 完了の二重処理防止](../../acceptance/05_TASKS.md#TASK-15)
+- [TASK-16 取消済みの完了拒否](../../acceptance/05_TASKS.md#TASK-16)
+- [TASK-17 不正なチケット追加拒否](../../acceptance/05_TASKS.md#TASK-17)
+- [TASK-18 通信障害時に成功扱いしない](../../acceptance/05_TASKS.md#TASK-18)
+- [TASK-19 未認証の管理操作を拒否](../../acceptance/05_TASKS.md#TASK-19)
+- [TASK-20 保護者の家庭別アクセス制限](../../acceptance/05_TASKS.md#TASK-20)
+- [TASK-21 モバイル表示](../../acceptance/05_TASKS.md#TASK-21)
+- [TASK-22 再読込後の永続化](../../acceptance/05_TASKS.md#TASK-22)
+- [TASK-23 Google初期化・永続化](../../acceptance/05_TASKS.md#TASK-23)
+- [TASK-24 実カレンダー予約同期](../../acceptance/05_TASKS.md#TASK-24)
+- [TASK-25 実カレンダー取消同期](../../acceptance/05_TASKS.md#TASK-25)
+- [TASK-26 管理者2名・保護者の端末共有](../../acceptance/05_TASKS.md#TASK-26)
+- [TASK-27 同時完了の排他制御](../../acceptance/05_TASKS.md#TASK-27)
+- [TASK-28 バックアップから復旧](../../acceptance/05_TASKS.md#TASK-28)
+- [TASK-29 実機受入](../../acceptance/05_TASKS.md#TASK-29)
+- [TASK-30 リリース後スモークテスト](../../acceptance/05_TASKS.md#TASK-30)
+- [TASK-31 管理者による利用登録・停止・削除](../../acceptance/05_TASKS.md#TASK-31)
+- [TASK-32 初回Google本人紐付け](../../acceptance/05_TASKS.md#TASK-32)
+- [TASK-33 家庭URL・QRの配布と再発行](../../acceptance/05_TASKS.md#TASK-33)
+- [TASK-34 Google認証・再読込・ログアウト](../../acceptance/05_TASKS.md#TASK-34)
+- [TASK-35 台帳直接編集と反映](../../acceptance/05_TASKS.md#TASK-35)
+- [TASK-36 カレンダー確認・実送迎・実績確認](../../acceptance/05_TASKS.md#TASK-36)
+- [TASK-37 日時・場所変更と直前連絡](../../acceptance/05_TASKS.md#TASK-37)
+- [TASK-38 工程横断のID・整合検査・共通デザイン](../../acceptance/05_TASKS.md#TASK-38)
+- [TASK-39 随時実施できる顧客確認と検証専用の両画面アクセス](../../acceptance/05_TASKS.md#TASK-39)

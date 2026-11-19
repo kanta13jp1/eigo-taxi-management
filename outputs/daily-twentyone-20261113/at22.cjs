@@ -1,0 +1,29 @@
+const fs=require('node:fs'), path=require('node:path'), assert=require('node:assert/strict'), http=require('node:http');
+const {chromium}=require('../../.manual-build-20261020/node_modules/playwright');
+const mode=process.argv[2], old=mode==='before', publicSite=mode==='public';
+assert.ok(['before','after','public'].includes(mode));
+const dir=path.resolve(__dirname,old?'../../docs/acceptance/deployment/releases/c9cd711d551ccc77/payload/dist':'stage/dist');
+const site='https://eigo-taxi-test.web.app', name='架空生徒 AT22', address='架空の送迎場所 AT22', key='eigo_taxi_rides';
+(async()=>{let server,browser;try{
+let base=site;if(!publicSite){server=http.createServer((req,res)=>{const u=new URL(req.url,'http://localhost').pathname;const file=path.join(dir,u==='/'?'index.html':u);if(!file.startsWith(dir)||!fs.existsSync(file)){res.writeHead(404).end();return;}res.setHeader('content-type',({'.js':'application/javascript','.css':'text/css','.html':'text/html','.json':'application/json','.svg':'image/svg+xml'})[path.extname(file)]||'application/octet-stream');fs.createReadStream(file).pipe(res);});await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));base='http://127.0.0.1:'+server.address().port;}
+browser=await chromium.launch({headless:true,executablePath:'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe'});
+const ctx=await browser.newContext({serviceWorkers:'block',locale:'ja-JP',timezoneId:'Asia/Tokyo',viewport:{width:1230,height:980}});const blocked=[];
+await ctx.route('**/*',r=>{if(!['GET','HEAD'].includes(r.request().method()) || new URL(r.request().url()).origin!==new URL(base).origin){blocked.push(r.request().method());return r.abort();} return r.continue();});
+const p=await ctx.newPage(), button=(name)=>p.getByRole('button',{name,exact:typeof name==='string'}), shot=(f)=>p.screenshot({path:path.join(__dirname,mode+'-'+f+'.png')});
+const records=()=>p.evaluate(()=>({students:JSON.parse(localStorage.getItem('eigo_taxi_students')),rides:JSON.parse(localStorage.getItem('eigo_taxi_rides'))}));
+await p.goto(base+'/#/admin');await button('管理者デモを開く').click();await button(/生徒・チケット管理/).click();await button('新規生徒を登録').click();
+await p.getByPlaceholder('例: 佐藤 陽菜 (ひな)').fill(name);await p.getByPlaceholder(/東京都世田谷区桜新町/).fill(address);await p.getByRole('spinbutton').fill('7');await button('登録を完了する').click();await p.locator('form').waitFor({state:'detached'});
+const student=(await records()).students.find(s=>s.name===name);assert.ok(student.id.startsWith('STU-'));assert.equal(student.ticketBalance,7);assert.equal(student.address,address);
+async function fillRide(note){await button('送迎予定を追加').click();await p.locator('#ride-student').selectOption(student.id);await p.locator('#ride-date').fill('2026-11-23');await p.locator('#ride-time').fill('15:22');await p.locator('#ride-location').fill(address);await p.locator('#ride-note').fill(note);}
+await fillRide('AT22永続化');await button('送迎予定を登録する').click();await p.locator('form').waitFor({state:'detached'});
+const data=await records(),ride=data.rides.find(r=>r.note==='AT22永続化');assert.ok(ride.id.startsWith('RIDE-'));assert.equal(ride.studentId,student.id);assert.equal(ride.rideDate,'2026-11-23');assert.equal(ride.rideTime,'15:22');assert.equal(ride.pickupLocation,address);
+await p.reload();await button(/送迎スケジュール一覧/).click();await p.getByText(name,{exact:true}).first().waitFor();assert.deepEqual(await records(),data);await shot('reloaded');
+const bytes=await p.evaluate(k=>localStorage.getItem(k),key);const malformed=bytes.slice(0,-1);
+await fillRide('AT22破損後の入力');await p.evaluate(([k,v])=>localStorage.setItem(k,v),[key,malformed]);await button('送迎予定を登録する').click();
+let errorVisible=false,formRetained=false;if(old){await p.locator('form').waitFor({state:'detached'});}else{await p.getByText('このブラウザーのデモ保存データを読み取れません。上書きせず処理を中止しました。担当者に確認してください。',{exact:true}).waitFor();errorVisible=true;formRetained=await p.locator('#ride-note').inputValue()==='AT22破損後の入力' && await p.locator('#ride-student').inputValue()===student.id && await p.locator('#ride-location').inputValue()===address;assert.ok(formRetained);}
+const readback=await p.evaluate(k=>localStorage.getItem(k),key),preserved=readback===malformed;assert.equal(preserved,!old);if(old){assert.ok(!JSON.parse(readback).some(r=>r.id===ride.id));assert.ok(JSON.parse(readback).some(r=>r.note==='AT22破損後の入力'));}
+await shot('fault');if(!old){assert.equal(await p.locator('#ride-date').inputValue(),'2026-11-23');assert.equal(await p.locator('#ride-time').inputValue(),'15:22');await p.locator('form').locator('..').screenshot({path:path.join(__dirname,mode+'-fault-form.png')});}await p.reload();let reloadError=false;if(!old){await p.getByText('このブラウザーのデモ保存データを読み取れません。上書きせず処理を中止しました。担当者に確認してください。',{exact:true}).waitFor();reloadError=true;assert.equal(await p.evaluate(k=>localStorage.getItem(k),key),malformed);}
+await p.evaluate(([k,v])=>localStorage.setItem(k,v),[key,bytes]);await p.reload();await button(/送迎スケジュール一覧/).click();await p.getByText(name,{exact:true}).first().waitFor();assert.deepEqual(await records(),data);assert.deepEqual(blocked,[]);
+const report={mode,checkedAt:new Date().toISOString(),test:'AT-22',freshAnonymousAdminDemo:true,base,student,ride,normalReloadExact:true,malformedInjectedInIsolatedProfile:true,malformedBytesUnchanged:preserved,errorVisible,formRetained,reloadError,recoveryExact:true,oldLostPreviouslySavedReservation:old,blockedRequests:blocked,scope:'This browser only. No Google/customer/account/ledger writes; no physical device or customer acceptance.'};
+fs.writeFileSync(path.join(__dirname,mode+'.json'),JSON.stringify(report,null,2));console.log(JSON.stringify(report));
+}finally{if(browser)await browser.close();if(server)await new Promise(r=>server.close(r));}})().catch(e=>{console.error(e);process.exitCode=1});

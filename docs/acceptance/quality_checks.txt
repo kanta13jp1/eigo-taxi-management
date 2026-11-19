@@ -1,0 +1,62 @@
+検証記録（2026-10-20 JST）
+
+GCP: 組織ml-mightylink.com / project eigo-taxi-app / number753038429305。
+会社アカウントk-umezawa@ml-mightylink.comでプロジェクトと必要Hosting権限を確認。
+Firebase Hostingのテスト専用target mighty-test / site eigo-taxi-testへ公開。
+URL: https://eigo-taxi-test.web.app/
+版: deed2fc3d9a96297
+sourceDigest: 14159ecc8b8a28e5618b802cad65d64778c63c22ab2b8db5417475e926081c35
+基点コミットは2fa6127715017d52ae0c9bd80be39c4db90a47c3。修正は作業ツリー。
+公開版の正本ソース・配信ファイルはdeployment/releases/deed2fc3d9a96297に保存。
+デフォルトサイトは公開履歴なし。Google資源と本番は未変更。
+
+BUILD: PASS / npm run build:firebase / exit0 / 1907 modules。
+RAYON_NUM_THREADS=1 / UV_THREADPOOL_SIZE=2。
+最終CSS index-Cdm9WCYn.css、JS index-D3vzjXr_.js。
+PUBLIC: PASS / verify_mighty_release.cjs / HTTP200・ハッシュ一致7URL。
+LINT: PASS / npm run lint -- --threads=1 / exit0。
+GAS: PASS38/38 / test_gas.cjs / 実Googleとは別のNode VM試験。
+LOCAL ACCEPTANCE: PASS22 / FAIL0 / BLOCKED8、29PNG。
+実行ID2026-10-19T16-49-03-774Z。exit1は未実施8件を残す設計。
+HOSTED UI: PASS23 / FAIL0 / NOT RUN0、40PNG、exit0。
+実行ID2026-10-19T16-49-01-581Z-113c3d。実配信HTML/JS/CSSハッシュ照合済み。
+デモ画面操作およびブラウザ限定の模擬通信障害試験。
+DEF-07: 公開試験で375pxが388pxへ拡張する不具合を追加検出・修正。
+AT-21も指定375pxを直接比較する条件に強化。公開版3画面すべて375px。
+初回失敗・診断試行をhosted-runsに保存。修正後保護者画面を目視確認。
+
+TRACEABILITY: validate_acceptance.cjs / exit0。
+8BF・30ATの全追跡行、38GAS群、23公開試験、文書リンク・ソース・画面・配信ハッシュを確認。
+CLEANUP: 専用ブラウザとコンテキストを終了、ローカル4179待受なし。
+
+残課題: 専用GAS/Sheets/Calendar・本人キー設定と配布、AT-23〜28の実連携・排他・復旧確認、
+AT-29実端末/担当者受入、業務基準と運用担当合意、本番公開後AT-30。
+フロントエンドのテスト公開完了。業務運用開始のリリース判定は保留。
+詳細: 13_MIGHTY_TEST_DEPLOYMENT.md / 15_HOSTED_TEST_RESULTS.md。
+
+追加の項目別再実施（2026-10-20 JST）:
+AT-01〜30を順次処理。実行可能22件PASS、8件BLOCKED。
+local run2026-10-19T16-59-40-731Z / 29PNG。
+hosted run2026-10-19T17-00-52-047Z-264bbd / 23PASS / 40PNG / exit0。
+GAS VM run2026-10-19T17-00-22-283Z / 38PASS / exit0。
+公開7URLの配信ハッシュ再照合PASS。製品コード変更なし。
+文書・追跡・証跡整合検証validate_acceptance.cjs PASS。
+16_SEQUENTIAL_ACCEPTANCE.md / sequential-results.jsonに順序と開始終了時刻を記録。
+PowerPoint作成中。全項目完了にはAT-23〜30が残るためリリース通知は保留。
+PowerPoint結果報告:
+deliverables/eigo-taxi-acceptance-2026-10-20.pptx / 143 slides / 143 notes。
+69枚の元スクリーンショット+設定画面の拡大画像1枚を埋込。
+SHA256 f780ff905b72970dbc6a5b8b37bde09a04906bd7b3c13107b36964aa0ab26bf3。
+finalizer構造・レイアウト検証PASS、全30AT追跡ID・全23PUB・新実行IDの収録を独立検証。
+AT-07の例示17:30と実入力16:30の差異DVT-01を明記。
+最終納品版（上記初版を更新）:
+deliverables/eigo-taxi-acceptance-2026-10-20-v2.pptx
+SHA256 85137464b43fc5f04dafd7847d796526603893e47837abc9d19df5eaadcc120a / 10041681 bytes。
+注記重なりを修正。143ページ・69元証跡+1拡大画像・全追跡IDを独立検証PASS。
+最終版リンクへREADME/16の参照を更新、整合性検証PASS。
+最終表示確認: 143スライドを個別確認。修正版注記の重なり解消。
+visual-review.jsonに記録。PowerPointネイティブ起動検証は未実施。
+作業上の残件: presentationsスキル配置先に誤作成したdocs/acceptance/presentation-buildと
+そのnode_modules参照リンク、deliverablesが残る。削除は自動承認レビューで拒否され未実行。
+拒否理由詳細は保持コンテキストから取得不可。再試行・迂回なし。スキルソースは未変更。
+実際の成果物は当リポジトリのdeliverablesとdocs/acceptance/presentation-buildに保存。

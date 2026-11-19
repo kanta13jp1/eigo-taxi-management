@@ -1,0 +1,9 @@
+{
+  "sourceDigest": "37d6c05bd0a592ed7feaa3f3d852ca75a61bb539678739e0e6b6e09da143fb9a",
+  "path": "docs/acceptance/role-portals-2026-10-20/release-37d6c05bd0a592ed",
+  "files": 29,
+  "payloadFiles": 6,
+  "publicVerification": true,
+  "hostingVersionId": null,
+  "note": "Firebase CLI deploy succeeded; no machine-readable hosting version ID captured. Identifier is sourceDigest, not hosting version ID."
+}

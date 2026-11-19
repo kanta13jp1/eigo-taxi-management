@@ -1,0 +1,42 @@
+{
+  "file": "docs/deliverables/2026-11-10-premeeting/progress-2026-11-12-cumulative-twenty.pptx",
+  "sha256": "73486de5981cce858f5213b7b600747743c45c46c74f833f9ecf30f5e43dcedc",
+  "checkedAt": "2026-11-12T13:29:35.5105303Z",
+  "reviewer": "Delegated independent reviewer of lead-authored presentation",
+  "reviewedRenderPages": [
+    1,
+    2,
+    13
+  ],
+  "nativePowerPointViewed": false,
+  "pass": true,
+  "findings": [],
+  "checks": [
+    "Page 1 has 20 implementation items in two columns, numbers 1–20 exactly once, Claude Code Fable 5.2 2 and Codex 18, dates 4/8/8.",
+    "Page 2 has 20 distinct AT rows in two columns. Each number appears once. Partial AT-28/03 and AT-10 scope retained. Customer confirmation 0/6 and production pending are visible.",
+    "Reviewed pages fit their 1280×720 renders with legible headers, lists and footers, without overlap or clipping.",
+    "Page 13 identifies local before and public after at 375 px. 2026-11-19 15:21 fictional destination reaches the final gate label after wrapping; cancellation control visible; 7 tickets after reload and physical-device verification pending are explicit."
+  ],
+  "checkedAtIDs": [
+    24,
+    25,
+    28,
+    4,
+    12,
+    5,
+    2,
+    17,
+    7,
+    9,
+    10,
+    8,
+    3,
+    13,
+    14,
+    15,
+    11,
+    16,
+    6,
+    21
+  ]
+}

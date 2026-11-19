@@ -1,0 +1,43 @@
+{
+  "mode": "public",
+  "checkedAt": "2026-11-13T08:40:35.319Z",
+  "test": "AT-22",
+  "freshAnonymousAdminDemo": true,
+  "base": "https://eigo-taxi-test.web.app",
+  "student": {
+    "name": "架空生徒 AT22",
+    "parentName": "",
+    "phone": "",
+    "address": "架空の送迎場所 AT22",
+    "pickupNote": "",
+    "ticketBalance": 7,
+    "id": "STU-4ece6630-2679-41e1-808a-58b4b2c580b7",
+    "createdAt": "2026-11-13"
+  },
+  "ride": {
+    "studentId": "STU-4ece6630-2679-41e1-808a-58b4b2c580b7",
+    "rideDate": "2026-11-23",
+    "rideTime": "15:22",
+    "rideType": "pickup",
+    "pickupLocation": "架空の送迎場所 AT22",
+    "note": "AT22永続化",
+    "reservedBy": "teacher",
+    "id": "RIDE-9eb6adde-2163-4e41-8310-d1cf67481c47",
+    "studentName": "架空生徒 AT22",
+    "status": "scheduled",
+    "calendarEventId": ""
+  },
+  "normalReloadExact": true,
+  "malformedInjectedInIsolatedProfile": true,
+  "malformedBytesUnchanged": true,
+  "errorVisible": true,
+  "formRetained": true,
+  "reloadError": true,
+  "recoveryExact": true,
+  "oldLostPreviouslySavedReservation": false,
+  "blockedRequests": [],
+  "scope": "This browser only. No Google/customer/account/ledger writes; no physical device or customer acceptance.",
+  "release": "5b9271233ac9309f",
+  "pass": true,
+  "physicalDevice": false
+}

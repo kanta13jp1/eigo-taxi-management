@@ -1,0 +1,38 @@
+{
+  "mode": "before",
+  "at": "2026-11-14T10:42:59.724Z",
+  "externalPostRequestsSent": 0,
+  "checks": [
+    "AT-19 fresh admin entry, no ledger/session or reauthentication notice",
+    "AT-19 unauthenticated local service rejects both reads and admin operation without seed or backend call",
+    "AT-19 mock UNAUTHORIZED cleared session and previously visible fixture; recovery notice missing (baseline regression)",
+    "AT-19 voluntary demo logout does not show the recovery notice",
+    "AT-20 parent demo has only STU-001, no other family name, ride location or admin controls",
+    "AT-20 local demo service denied getStudentById",
+    "AT-20 local demo service denied createReservation",
+    "AT-20 local demo service denied cancelReservation",
+    "AT-20 local demo service denied completeRide",
+    "AT-20 local demo service denied addTickets",
+    "AT-20 stored synthetic ledger and session unchanged"
+  ],
+  "mockActions": [
+    {
+      "action": "login",
+      "revoked": false
+    },
+    {
+      "action": "getStudents",
+      "revoked": false
+    },
+    {
+      "action": "getRides",
+      "revoked": false
+    },
+    {
+      "action": "getStudents",
+      "revoked": true
+    }
+  ],
+  "base": "http://127.0.0.1:51713",
+  "pass": true
+}

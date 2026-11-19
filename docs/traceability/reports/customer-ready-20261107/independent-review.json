@@ -1,0 +1,73 @@
+{
+  "reviewedAt": "2026-11-07T08:21:48.759972+00:00",
+  "reviewer": "independent code and preparation evidence reviewer",
+  "sourceReviewPass": true,
+  "blockingCodeFindings": [],
+  "checks": {
+    "specifiedSourceHashesMatch": true,
+    "independent32Pass": true,
+    "independentTestSourceHashesMatch": true,
+    "currentRegistryMemoryValidationPass": true,
+    "calendarGrantMetadataPass": true,
+    "readProbeNoCalendarSheetMutation": true,
+    "readProbeHelperAndWrapperHashesMatch": true,
+    "verificationDeploymentV5Recorded": true,
+    "deployedHashesMatchReviewedGAS": true,
+    "scopeFactNowTrue": true,
+    "productionStillFalseAndHeld": true,
+    "ticketRulesStillCompletionOneTwo": true,
+    "customerSixNotRun": true,
+    "old30TechnicalIdsRemain": true,
+    "singleIdentityFivePhasesMatch": true,
+    "separateDeveloperAdminRoleSwitch": true,
+    "cust05BothBalancesAndNoticeCollected": true,
+    "cust06BothRolesLogoutReloadCollected": true,
+    "bookingAndCustomerResultsStillNotPromoted": true
+  },
+  "sourceHashes": {
+    "scripts/traceability.py": "afb3801da75b019e50eff6958ee89b6f020f4f9fdb02b6234fe47f69c7e81eea",
+    "scripts/test_traceability.py": "fd00aa7c107b3e697f62748328dfb942dd8797921c05d57fccb36ab1186924a4"
+  },
+  "reviewedFileHashes": {
+    "scripts/traceability.py": "afb3801da75b019e50eff6958ee89b6f020f4f9fdb02b6234fe47f69c7e81eea",
+    "scripts/test_traceability.py": "fd00aa7c107b3e697f62748328dfb942dd8797921c05d57fccb36ab1186924a4",
+    "docs/traceability/registry.json": "5c6eb41aafb6367cac06f1059678229957e209cc3fa77f5388d532a0c9d4c5d4",
+    "gas/Code.gs": "e39555d3540a22e1db6b20bf7885d6ee95a4e0ae11eace6e3fb29bccd3f6fef6",
+    "gas/appsscript.json": "86919604f8083bcfad5433147d46a41dba5653f190b29f6b560255628e2b9006",
+    "outputs/customer-ready-20261107/calendar-read-result.json": "84e69f48bab9c43fa0399abc93a60e9e2f60f72e6dc882e4864dcf3e8860d20c",
+    "outputs/customer-ready-20261107/calendar-read-pass.png": "f230eafc3cb0a117f32f0a429ea22d445d49e7f5ae79b25ab89741f379b11d8c",
+    "outputs/customer-ready-20261107/gas-deployment-v5.json": "a6ea0b81c2a6038e232861a13bf49c979412ccfb183494ef0f96714fdf2d625e",
+    "outputs/customer-ready-20261107/gas-deployment-v5.png": "5a73c9da54c45b100b7c5855ff7852e0ae7278396909492dec4d727018123740",
+    "outputs/customer-ready-20261107/verify-calendar.gs": "0fd947590b561f36b93ad1b61d950b1ce685d1d1a8a1d1792e4a1ff5b901e1f9",
+    "docs/traceability/reports/customer-ready-20261107/independent/checker-tests.json": "6f3801c15f0c97e7b7bd97af2a5757ce226f728b5e7172e9f636c3ed498e8847",
+    "docs/acceptance/CUSTOMER_ACCEPTANCE_MINIMUM_20261107.md": "643b20dcd32913bf6aabe27be0a6f0ac00ca972028eff19105c2b8753b06502e"
+  },
+  "registryVersion": "2026-11-07-r16",
+  "registrySha256": "5c6eb41aafb6367cac06f1059678229957e209cc3fa77f5388d532a0c9d4c5d4",
+  "visualEvidenceReview": {
+    "calendarReadPassImage": "Observed company verification project, verifyAcceptanceCalendarReadOnly source and PASS log at17:11:51 JST with calendarMatches/timeZoneMatches true. Scope/owner/nonprimary conclusions additionally rely on reviewed verificationCalendar_ helper semantics and its matching source hash.",
+    "deploymentImage": "Observed deployment updated to version5 at17:15 JST, same verification deployment ID and manifest context. No live action performed by this reviewer."
+  },
+  "findings": [
+    {
+      "priority": "P2",
+      "kind": "pending-integration",
+      "title": "Generated customer guide still has old setup instructions",
+      "detail": "Source customer_guide has the approved single-identity five-phase sequence, but current generated Markdown still has the old two-profile/two-role-unconfirmed instructions. Regenerate canonical documents and index before distributing. No source correction needed."
+    }
+  ],
+  "generatedCustomerGuideMatchesSource": false,
+  "semanticReview": {
+    "calendarPermissionAdded": "Actual successful read through verificationCalendar_ supports changing recorded actual Calendar grant from false to true. Grant and metadata reading do not establish booking/cancellation success.",
+    "rolePhases": "Parent1 CUST01–03; Admin1 CUST04(5→4→2); Parent2 CUST05 low-balance; Admin2 CUST05+10 to12 and CUST06 admin logout/reload; Parent3 CUST05 household12/no notice and CUST06 household logout/reload. Developer changes the same identity using a separate linked admin; new household entry is supplied each return to parent.",
+    "evidenceGuard": "Current reviewer/date/release/observed/resultRecord existence, typed real-customer mode, unique case ID and Google verification checks remain present. Existing negative tests24–30 pass; TRACE32 rejects returning actualCalendar flag to false.",
+    "accountRegistration": "Not complete. Initial parent role, synthetic student mapping, separate operator login, future role transitions and household URL delivery require actual operator observations before readiness is promoted."
+  },
+  "limits": [
+    "This review executed32 offline checker cases and inspected saved JSON/images; it did not independently operate Google UI, authenticate customers or deploy.",
+    "Evidence mode and metadata checks prevent inconsistent local reports; they do not independently prove the truth of manually written customer observations.",
+    "Calendar read and v5 deployment do not imply AT24/25, customer0/6, physical-device or production acceptance.",
+    "Source-baseline, generated documents, indexes and PowerPoints were not changed by this reviewer."
+  ],
+  "writeBoundary": "Only the requested independent checker evidence and this independent-review.json were written."
+}

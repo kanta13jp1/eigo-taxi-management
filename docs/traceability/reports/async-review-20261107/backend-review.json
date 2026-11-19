@@ -1,0 +1,62 @@
+{
+  "reviewedDateJst": "2026-11-07",
+  "reviewer": "independent backend reviewer; no source edits",
+  "pass": true,
+  "findings": [],
+  "sourceHashes": {
+    "gas/Code.gs": "3a2bce6188a99daf331cad60a01759d6414c99f07e9d8f47a43ad28102ec336c",
+    "scripts/test_gas.cjs": "a4cfb2af81b0edc926ae10a1bd0179808a4c0ccb1076460dca1b84add90e2291",
+    "gas/appsscript.json": "86919604f8083bcfad5433147d46a41dba5653f190b29f6b560255628e2b9006"
+  },
+  "sourceHashesRecheckedAfterReview": true,
+  "testEvidence": {
+    "path": "outputs/async-review-20261107/independent-backend/2026-11-07T08-59-32-465Z/gas-results.json",
+    "sha256": "12e621a21f59c1907b8db731d7f2ed78c625d6e2874f5d8e8e3aa73b594bd464",
+    "latest": "outputs/async-review-20261107/independent-backend/latest.json",
+    "counts": { "total": 85, "passed": 85, "failed": 0 },
+    "originalCases": 74,
+    "newScopedReviewerCases": 11,
+    "mode": "offline Node VM; Google services stubbed; no network/deployment"
+  },
+  "reviewConclusions": {
+    "principal": "Only the server-stored reviewer role maps portalRole admin or parent to the public view with reviewOnly=true and assigned studentIds. Client role, reviewOnly, googleUid and studentIds overrides do not grant authority. Invalid or missing reviewer portal roles fail closed.",
+    "identity": "Google credentials still require fixed accounts:lookup verification. Pending email binds to the verified UID only after valid route, entry, scope and workbook checks. email:-prefixed UIDs and reviewer legacy-key authentication are refused.",
+    "environment": "Reviewer authentication and provisioning require ACCEPTANCE_REVIEW_SPREADSHEET_ID from Script Properties to exactly equal the bound Spreadsheet.getId(). Missing, blank, wrong or padded values fail closed. Request parameters cannot enable this gate.",
+    "readScope": "Both reviewer views filter students and rides using authoritative assigned studentIds. The public admin view does not receive the ordinary full-admin bypass in canAccess_.",
+    "mutationScope": "Booking, cancellation, completion and ticket addition check authoritative student IDs. Booking and purchase ID collisions/replays also check the stored target's scope. Only the admin view can complete rides or add tickets.",
+    "fullAdminSeparation": "Reviewer views cannot create students, list invitations, read managed users, change users or delete users. These handlers require full admin and reject reviewOnly.",
+    "lockRecheck": "After acquiring the script lock, nonlogin actions reread the allowlist and reconstruct the current principal from the verified Google UID. Moving the same internal ID to another UID, reassigning scope, demoting the role or disabling the workbook gate cannot preserve previous write authority.",
+    "replayAndTransactions": "Stable booking/purchase IDs, completion/cancellation replay, dedicated Calendar checks, write-ahead pending guard, rollback and uncertain-result retention remain covered by the passing original74 cases.",
+    "provisioning": "Full admin reviewer registration validates workbook gate, existing assigned students and entry IDs. Revision checks, duplicate email/scope checks, self-protection and retention of a linked real administrator remain. Parent/reviewer conversion preserves a valid entry unless explicitly rotated.",
+    "unattendedTwoViews": "GAS-75 and GAS-79 exercise both portal views with one verified UID and unchanged registration, without an administrator changing its role during the sequence. No date scheduling requirement is introduced by this backend change. Actual frontend and live fixed-URL behavior remain separate validation."
+  },
+  "newCaseCoverage": {
+    "GAS-75": "Same UID enters both views; login does not access Calendar or mutate registry",
+    "GAS-76": "Unsupported role/type and mismatched entry fail closed",
+    "GAS-77": "Read isolation and foreign mutation/replay collision refusal",
+    "GAS-78": "Full-admin APIs and parent teacher mutations refused",
+    "GAS-79": "Both-view booking/cancel/purchase/one-way and roundtrip completion with idempotent retries",
+    "GAS-80": "Exact server-only bound-workbook activation",
+    "GAS-81": "Bounded valid assigned scope and unique valid personal entry",
+    "GAS-82": "Verified pending email binding and reserved UID namespace",
+    "GAS-83": "Full-admin reviewer provisioning/rotation and account protections",
+    "GAS-84": "Regular Google and legacy users cannot self-select reviewer permissions",
+    "GAS-85": "Under-lock UID, scope, role and workbook revalidation"
+  },
+  "operationalPreconditions": [
+    "Before controlled deployment, match the actual bound verification workbook to ACCEPTANCE_REVIEW_SPREADSHEET_ID and assign only the intended synthetic student ID(s). The code relies on trusted server configuration to identify which students are synthetic.",
+    "Keep the two existing full administrators and the dedicated verification Calendar configuration. Reviewer availability does not authorize production use.",
+    "Deploy and verify the matching frontend before describing the fixed two-URL flow as ready. Verify ordinary success/error responses and actual Calendar/ledger results without resending an uncertain operation."
+  ],
+  "officialReference": {
+    "url": "https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet#getId()",
+    "supports": "Spreadsheet.getId is the documented identifier used in the bound-workbook comparison."
+  },
+  "limits": [
+    "Google services, token lookup responses and lock contention are stubbed. These85 cases do not establish live Google signatures, actual concurrency, deployed source/configuration, physical-device behavior or customer acceptance.",
+    "The workbook pin is a trusted server property, not a hardcoded production/environment identifier. An authorized operator must configure the intended verification workbook and synthetic students.",
+    "This PASS applies to independent source review and offline regression results for the exact hashes above. It is not a live deployment result, customer6 PASS, all technicalAT PASS or production approval.",
+    "No source, registry, baseline, browser or live state was changed. Only the allowed independent test evidence and this review JSON were written."
+  ],
+  "deploymentPerformed": false
+}

@@ -1,0 +1,54 @@
+{
+  "id": "2026-10-20-step-03",
+  "date": "2026-10-20",
+  "timezone": "Asia/Tokyo",
+  "audience": "小林さん",
+  "status": "draft-not-sent",
+  "acceptanceId": "AT-23",
+  "result": "BLOCKED",
+  "report": "docs/progress/2026-10-20-step-03.md",
+  "evidence": [
+    "docs/acceptance/at23-2026-10-20/step03/scope-selection.txt",
+    "docs/acceptance/at23-2026-10-20/step03/init-1.png",
+    "docs/acceptance/at23-2026-10-20/step03/init-2.png",
+    "docs/acceptance/at23-2026-10-20/step03/cell-preservation.json"
+  ],
+  "evidenceLimit": "Sheetsのみ選択はAX記録。2回の実行完了画像と全74セル保持のJSONあり。欠落3シート生成とWeb保存は未実測。比較xlsxや認証情報は外部添付しない。",
+  "attachments": [
+    {
+      "path": "docs/deliverables/2026-10-20-manuals/operation-manual-2026-10-20-v4.pptx",
+      "changed": false,
+      "sha256": "d239f03ce9f23588975b4aa2902b1ce152d40775458fd0bc4a47de15bae20b6e"
+    },
+    {
+      "path": "docs/deliverables/2026-10-20-manuals/user-manual-2026-10-20-v4.pptx",
+      "changed": false,
+      "sha256": "e9b0ec1889a7a188c68ed486581c044f56b573b8680e19a61695f8b03e2da250"
+    },
+    {
+      "path": "docs/deliverables/2026-10-20-manuals/remaining-tasks-2026-10-20-v6.pptx",
+      "changed": true,
+      "sha256": "1a6bc906bac4c229f2dae5176b997f480e3e20e9d16b324ee89151efaadab437"
+    },
+    {
+      "path": "docs/deliverables/2026-10-20-manuals/progress-report-step-03-2026-10-20-v6.pptx",
+      "changed": true,
+      "sha256": "b2009725c1bfd18c92f2433de8a348479821c41424718c5515b95973a0f74fa8"
+    }
+  ],
+  "changes": [
+    "Sheetsのみ付与、Calendar未付与を記録",
+    "初期化2回と3シート74セル保持を実測",
+    "AUTH_USERS_JSONのユーザー入力待ちへ更新",
+    "進捗4枚・残作業13枚をv6、操作マニュアル2冊はv4継続"
+  ],
+  "next": "ユーザーがローカル補助スクリプトを実行しAUTH_USERS_JSONを貼付保存。Web配備・生徒1行保存と欠落3シート生成の検証へ進む。",
+  "requests": [
+    "AUTH_USERS_JSONの値をユーザーが入力・保存。Calendar権限は未付与のまま。",
+    "教室側で本番運用Googleアカウントと所有者・管理者・共有方法を準備"
+  ],
+  "owner": null,
+  "dueDate": null,
+  "sentAt": null,
+  "validation": "2 PPTX passed package/layout/font/slide-count/import checks. 17 slides rendered. 8 new/changed slides visually inspected; 9 unchanged slide PNGs byte-identical to visually reviewed v5. PowerPoint application not opened."
+}

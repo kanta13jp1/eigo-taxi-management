@@ -1,0 +1,136 @@
+{
+  "status": "PASS",
+  "contactSheetsReviewed": 12,
+  "allRenderedSlides": 160,
+  "representativeFullSizeReview": [
+    "business/roundtrip/1.png",
+    "business/roundtrip/22.png",
+    "business/roundtrip/23.png",
+    "progress/roundtrip/11.png",
+    "progress/roundtrip/12.png"
+  ],
+  "commonNewBodyPixelEquivalence": [
+    {
+      "name": "business",
+      "diagram": "public-delivery",
+      "sameReviewedCommonBodyPixels": true
+    },
+    {
+      "name": "business",
+      "diagram": "customer-six",
+      "sameReviewedCommonBodyPixels": true
+    },
+    {
+      "name": "requirements",
+      "diagram": "public-delivery",
+      "sameReviewedCommonBodyPixels": true
+    },
+    {
+      "name": "requirements",
+      "diagram": "customer-six",
+      "sameReviewedCommonBodyPixels": true
+    },
+    {
+      "name": "design",
+      "diagram": "public-delivery",
+      "sameReviewedCommonBodyPixels": true
+    },
+    {
+      "name": "design",
+      "diagram": "customer-six",
+      "sameReviewedCommonBodyPixels": true
+    },
+    {
+      "name": "test-spec",
+      "diagram": "public-delivery",
+      "sameReviewedCommonBodyPixels": true
+    },
+    {
+      "name": "test-spec",
+      "diagram": "customer-six",
+      "sameReviewedCommonBodyPixels": true
+    },
+    {
+      "name": "tasks",
+      "diagram": "public-delivery",
+      "sameReviewedCommonBodyPixels": true
+    },
+    {
+      "name": "tasks",
+      "diagram": "customer-six",
+      "sameReviewedCommonBodyPixels": true
+    },
+    {
+      "name": "implementation",
+      "diagram": "public-delivery",
+      "sameReviewedCommonBodyPixels": true
+    },
+    {
+      "name": "implementation",
+      "diagram": "customer-six",
+      "sameReviewedCommonBodyPixels": true
+    },
+    {
+      "name": "test-code",
+      "diagram": "public-delivery",
+      "sameReviewedCommonBodyPixels": true
+    },
+    {
+      "name": "test-code",
+      "diagram": "customer-six",
+      "sameReviewedCommonBodyPixels": true
+    },
+    {
+      "name": "acceptance",
+      "diagram": "public-delivery",
+      "sameReviewedCommonBodyPixels": true
+    },
+    {
+      "name": "acceptance",
+      "diagram": "customer-six",
+      "sameReviewedCommonBodyPixels": true
+    },
+    {
+      "name": "operations",
+      "diagram": "public-delivery",
+      "sameReviewedCommonBodyPixels": true
+    },
+    {
+      "name": "operations",
+      "diagram": "customer-six",
+      "sameReviewedCommonBodyPixels": true
+    },
+    {
+      "name": "user",
+      "diagram": "public-delivery",
+      "sameReviewedCommonBodyPixels": true
+    },
+    {
+      "name": "user",
+      "diagram": "customer-six",
+      "sameReviewedCommonBodyPixels": true
+    },
+    {
+      "name": "matrix",
+      "diagram": "public-delivery",
+      "sameReviewedCommonBodyPixels": true
+    },
+    {
+      "name": "matrix",
+      "diagram": "customer-six",
+      "sameReviewedCommonBodyPixels": true
+    },
+    {
+      "name": "progress",
+      "diagram": "public-delivery",
+      "sameReviewedCommonBodyPixels": true
+    },
+    {
+      "name": "progress",
+      "diagram": "customer-six",
+      "sameReviewedCommonBodyPixels": true
+    }
+  ],
+  "note": "Shared diagram bodies are pixel-identical in all 12 decks; labels/IDs/page numbers are controlled template variables. Old136 page body preservation separately verified.",
+  "nativePowerPointVerified": false
+}

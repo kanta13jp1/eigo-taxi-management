@@ -1,0 +1,12 @@
+{
+  "dateJst": "2026-11-10",
+  "task": "Reconcile new isolated AT28 observation into shared tracker and affected presentation deliverables",
+  "recommendation": {"source": "jev", "model": "gpt-6-astra", "effort": "medium", "confidence": 0.97, "features": {"scope": "few", "risk": "medium", "uncertainty": "medium", "validation": "partial", "priorFailure": "no"}},
+  "effectiveRoute": "gpt-6-astra / medium / routed worker",
+  "worker": "/root/at28_result_materials_1110",
+  "workerScope": "Three affected illustrated PPTX and distribution metadata, preserving existing pages",
+  "independentReviewer": "/root/heartbeat18_readonly_audit",
+  "leadScope": "Scope corrections, shared-sheet precision updates, review acceptance and final structural validation",
+  "boundaries": "No code or service deployment, no customer fixture writes, no direct messages, no production start",
+  "cleanup": "No browser tabs or app surfaces opened by lead; author/reviewer must close only their own disposable surfaces"
+}

@@ -1,0 +1,17 @@
+{
+  "reviewer": "lead agent independent of implementation worker",
+  "baselineRelease": "54178ee8e9d61c91",
+  "file": "src/components/ParentPortal.tsx",
+  "sha256": "7b3ce4bc964456536cf33eb09a7abca93ec6679b33720941c40e01affcf4cba6",
+  "checks": [
+    "Confirmation identifies the selected scheduled reservation ID through current selected-student upcoming rides",
+    "Location and note distinguish reservations that share student, date, time and direction",
+    "Native modal dialog has an accessible name and description, focuses safe Back action, supports Escape and restores focus",
+    "A synchronous ref prevents duplicate confirmation writes while pending state disables parent cancellation controls",
+    "Cancellation only runs for a currently eligible target; changing selection or removal of the target removes the modal target",
+    "Independent actual-browser rerun covers ambiguous fixtures, safe dismissals, explicit target-only cancellation, unchanged balances and reload persistence",
+    "No live API, GAS, authentication, account or ticket calculation change"
+  ],
+  "pass": true,
+  "scope": "AT-10 re-verification in anonymous browser demo at mobile viewport. Does not add a new distinct AT ID or real Google/customer/physical-device acceptance."
+}

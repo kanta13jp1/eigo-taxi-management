@@ -1,0 +1,55 @@
+{
+  "status": "ROOT_LOCK",
+  "registryVersion": "2026-11-07-r17",
+  "registrySha256": "d6aa48ce6e5bd18c89db3cde4c465f44b3dd088d52c0e5208cebaaf49d2d1adf",
+  "observationSummary": "11/7：検証GAS v6と検証サイトへ配備、公開7応答が一致。指定検証台帳の限定設定と検証担当登録を保存・読戻し。固定日の片道・往復2予約は台帳と実Calendarの予約ID・日時・場所が一致し、サイト再読込で予定中2件・開始5枚を確認。初回本人ログインと顧客6件は未実施。既存管理者2名を維持。本番未開始。",
+  "frontendStatus": "検証サイトへ反映・公開7応答一致。固定2予約・開始5枚を実サイトで確認。本人の初回ログイン待ち。",
+  "customerStatus": "準備完了。日程調整・開発側の役割切替は不要。本人の確認0 / 6件・本番未開始。",
+  "contentReview": "r17。本人が固定2URLを切替、A03で11/7 16:00のA片道・B往復を完了。途中再開は未実施だけ、5→4→2→12を照合。限定reviewerは検証台帳のみ、通常役割分離を維持。顧客0/6・実受入AT-24〜30全体は未合格。v5の登録応答エラーは原因未確定、今回2件の正常応答と区別。",
+  "evidenceFiles": [
+    {
+      "path": "outputs/async-review-20261107/live/gas-deployment-v6.json",
+      "sha256": "b0129fa47a9aa7ac7b4f3b99842bfdbabde7fc54b5d23110a846d95697d6174f"
+    },
+    {
+      "path": "outputs/async-review-20261107/live/review-gate.json",
+      "sha256": "8fbac4ce1f1b0580fbaf9d7c29738cb39efa082bfa4ec8be60a969f6493e2e60"
+    },
+    {
+      "path": "outputs/async-review-20261107/live/reviewer-registration.json",
+      "sha256": "2e0ef0f8931eb8236929d3901ae8432f66e0b6000d06dfc4c1395c037152ce25"
+    },
+    {
+      "path": "outputs/async-review-20261107/live/fixed-fixtures.json",
+      "sha256": "f6ed229dfef6c2b68d8586b8994ea63af948c6d1d00924319915ad4d893d6de5"
+    },
+    {
+      "path": "outputs/async-review-20261107/live/hosted-delivery.json",
+      "sha256": "b8fa55209d0f1ca3557b93557e5a632246972c736e23341a2dda557bc763a0fd"
+    },
+    {
+      "path": "docs/acceptance/deployment/public-verification.json",
+      "sha256": "cbc67f795cb3c1c3948ad26ff9a3e1c05605d1dc9a215785adfa20332c873e20"
+    },
+    {
+      "path": "docs/traceability/reports/async-review-20261107/backend-review.json",
+      "sha256": "9f88d04bbedb8b2f991edebfc1edfcf42fcd014534bc240220e346047ae3088d"
+    },
+    {
+      "path": "docs/traceability/reports/async-review-20261107/frontend-review.json",
+      "sha256": "528f3e8f6c9a67f1ac1bd4f858045a999ff267483666eea63385e417401ea30d"
+    },
+    {
+      "path": "docs/traceability/reports/async-review-20261107/checker-review.json",
+      "sha256": "efbd75d78b31565f206ba41a6b401b0fe5a92917e942f39b136a5d93fc9742b9"
+    },
+    {
+      "path": "outputs/async-review-20261107/independent-docs/checker-tests.json",
+      "sha256": "b1abb686a93ef1a0f096db113aa9f671232a5271a007e8c1ed02a97832ac49db"
+    },
+    {
+      "path": "outputs/async-review-20261107/regression/regression-evidence-map.json",
+      "sha256": "30eaedb537f14a585a8a04c7a65d87212be448e46d482a4ed2233c7380e09ac5"
+    }
+  ]
+}

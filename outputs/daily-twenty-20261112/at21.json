@@ -1,0 +1,79 @@
+{
+  "mode": "after",
+  "checkedAt": "2026-11-12T13:26:00.997Z",
+  "address": "架空の送迎先・テスト学習センター別館・西口ロータリーを通過して第二集合場所へ・目印AT21ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789・緑の門前",
+  "width": 375,
+  "height": 812,
+  "engine": "Chromium (Edge) mobile emulation",
+  "profiles": "fresh anonymous browser-local demo",
+  "geometry": {
+    "parent": {
+      "viewport": 375,
+      "document": 375
+    },
+    "form": {
+      "viewport": 375,
+      "document": 375
+    },
+    "immediate": {
+      "clientWidth": 158,
+      "scrollWidth": 158,
+      "lines": 6,
+      "allTextInside": true,
+      "cancelVisible": true,
+      "cancelEnabled": true,
+      "cancelHitTarget": true,
+      "viewport": 375,
+      "document": 375
+    },
+    "reloaded": {
+      "clientWidth": 158,
+      "scrollWidth": 158,
+      "lines": 6,
+      "allTextInside": true,
+      "cancelVisible": true,
+      "cancelEnabled": true,
+      "cancelHitTarget": true,
+      "viewport": 375,
+      "document": 375
+    },
+    "admin": {
+      "viewport": 375,
+      "document": 375
+    }
+  },
+  "desktop": {
+    "clientWidth": 391,
+    "scrollWidth": 391,
+    "lines": 2,
+    "allTextInside": true,
+    "cancelVisible": true,
+    "cancelEnabled": true,
+    "cancelHitTarget": true,
+    "viewport": 1280,
+    "document": 1280
+  },
+  "fixture": {
+    "newId": "RIDE-13e590b4-c01a-4c0d-8b52-8becc2cb170b",
+    "initialCount": 3,
+    "finalCount": 4,
+    "initialBalances": [
+      [
+        "STU-001",
+        7
+      ],
+      [
+        "STU-002",
+        1
+      ],
+      [
+        "STU-003",
+        0
+      ]
+    ],
+    "unchangedPriorRows": true
+  },
+  "mutationRequests": [],
+  "site": "http://127.0.0.1:65088",
+  "pass": true
+}

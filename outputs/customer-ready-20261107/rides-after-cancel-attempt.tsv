@@ -1,0 +1,10 @@
+送迎ID	生徒ID	生徒名	送迎日	送迎時間	区分	送迎場所	ステータス	カレンダーイベントID	予約者	備考	完了日時
+RIDE-1791449398312	STU-002	TEST	2026-10-15	16:30	pickup	東京都世田谷区用賀2-5-12	scheduled	u8c78725qng22qdcmvsl5lblbk@google.com	parent	受入テスト検証予約	
+RIDE-1791452675815	STU-001	田中 陽菜	2026-10-16	17:00	pickup	東京都世田谷区桜新町1-10-5	cancelled	0bnff5ssauqb79fgu1s5pihhtk@google.com	teacher	キャンセル検証テスト	
+RIDE-1791457824097	STU-001	田中 陽菜	2026-10-17	16:00	pickup	東京都世田谷区桜新町1-10-5	cancelled	2mk3sdj2lkouienu1ol6rotcho@google.com	teacher		
+RIDE-4a0a7587-8006-4860-9374-b941fd4190aa	STU-CUST-20261107	顧客確認_架空生徒	2026-11-07	16:00	pickup	検証専用・実在しない乗車場所	scheduled	9rg4ntf03et9a9bi3bcjn7mdb4@google.com	teacher	DEV-CAL-SMOKE-20261107／登録取消の事前確認・実送迎なし	
+											
+											
+											
+											
+											

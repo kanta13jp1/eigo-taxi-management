@@ -1,0 +1,21 @@
+{
+  "mode": "after",
+  "scenario": "write-error",
+  "checkedAt": "2026-11-13T11:02:10.853Z",
+  "test": "AT-18",
+  "base": "http://127.0.0.1:65372",
+  "freshAnonymousAdminDemo": true,
+  "studentId": "STU-84109d9e-73a4-43b1-803d-95127f5cd2a9",
+  "rideId": "RIDE-5abd818e-185e-4bb7-98d9-e147fc42beec",
+  "successVisible": false,
+  "alert": [
+    "検証用：取消を保存できませんでした"
+  ],
+  "reloadOnlyRecovery": true,
+  "cancelledInLedger": false,
+  "onlyChangedTargetStatus": false,
+  "studentBalancesUnchanged": true,
+  "writeCount": 0,
+  "blockedRequests": [],
+  "scope": "Isolated synthetic browser demo; simulated read response, no Google or customer records."
+}

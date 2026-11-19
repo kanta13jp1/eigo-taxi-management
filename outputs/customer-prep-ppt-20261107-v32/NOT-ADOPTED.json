@@ -1,0 +1,14 @@
+{
+  "status": "NOT_ADOPTED",
+  "date": "2026-11-07",
+  "reason": "User rejected developer-assisted P→A→P→A→P role switching. New requirement: customer can complete independently at any time without developer operations. v32 represents prior r16 conditions and is preserved only as an unadopted history.",
+  "registryVersion": "2026-11-07-r16",
+  "registrySha256": "f2d307b7a61cfcbf13cc48221cd58ca73c910b499b30a1ed46f7e163773e36fd",
+  "independentReview": "docs/traceability/reports/ppt-customer-readiness-20261107/independent-review.json",
+  "independentReviewStatus": "PASS",
+  "currentManifestUpdated": false,
+  "currentReadmeUpdated": false,
+  "currentDeliverableReplaced": false,
+  "heavyAuthoringJobsCompleted": true,
+  "nextVersion": "Require redesigned r17 specification and v33 or later before adoption."
+}

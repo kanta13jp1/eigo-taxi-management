@@ -1,0 +1,14 @@
+{
+  "url": "https://eigo-taxi-test.web.app/#/parent",
+  "hostingVersion": "b88aec3501218a21",
+  "checkedAt": "2026-11-11T20:43:52.712Z",
+  "scope": "anonymous parent demo (no Google login)",
+  "accessibleName": "表示する生徒:",
+  "studentOptions": 1,
+  "student": "田中 陽菜 (ひな)",
+  "balance": 7,
+  "upcoming": 1,
+  "fare": "片道1回につきチケット1枚、往復は2枚",
+  "screenshot": "parent-view.png",
+  "realGoogleHouseholdAuthorizationTested": false
+}

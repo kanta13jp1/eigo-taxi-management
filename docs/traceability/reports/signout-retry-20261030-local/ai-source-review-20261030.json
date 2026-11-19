@@ -1,0 +1,47 @@
+{
+  "reviewId": "AI-REVIEW-AUTH-20261030-01",
+  "reviewer": "independent AI subagent",
+  "reviewedAt": "2026-10-29T15:57:13.007126+00:00",
+  "reviewScope": "未配備の認証準備・ログアウト再試行・関連UI・証跡とソースレビューの機械検査",
+  "reviewStatus": "PASS_WITH_LIMITATIONS",
+  "findings": "レビュー時点で再現可能な追加欠陥なし",
+  "sourceHashes": {
+    "src/services/google-auth.ts": "01667af44fce383f3763c8bb73497dafc690381592ddcf383d46aaafe90fe0d8",
+    "src/components/LoginScreen.tsx": "fff15f0ad096c08a59d28a8d14d43d2d67c819b5d92a7551a7deb510f4234bb2",
+    "scripts/test_google_auth.cjs": "75b18ca335a5307287f056f48e10948ffce8b667ac48b3a5594a3dd3ff5ff057",
+    "scripts/test_google_auth_retry_ui.cjs": "e8b1ba91546d3a3d33b0ca2ee4fe8967f94f41da89afaf7936c74982a90289ef",
+    "scripts/test_google_signout_retry.cjs": "6613c7fe2bcfb040111df272648db3cdfae106f88289199917425b74e7688e7f",
+    "scripts/test_trace_ui.mjs": "bcd60909358980aa583ee2a7f2526ef92bedbebb3ba2f2852d07aea530c14369",
+    "scripts/test_traceability.py": "798516f12643fd565bf9887a400af5aedb5b4581e3d2a532e7440bce62b861b2",
+    "scripts/traceability.py": "5dd22a62b958e691cfbed40ea29a87065511bd1a95a8ba353ce18c11e7347545"
+  },
+  "independentChecks": [
+    {
+      "test": "scripts/test_google_signout_retry.cjs",
+      "result": "9/9 PASS",
+      "scope": "Firebase SDKスタブ"
+    },
+    {
+      "test": "scripts/test_google_auth_retry_ui.cjs",
+      "result": "2/2 PASS",
+      "scope": "疑似React hooksとスタブ"
+    },
+    {
+      "test": "証跡ハッシュ欠落・対象ソース欠落・破損JSON",
+      "result": "各入力の改変をメモリ上で行い検出を確認。元ファイルは変更なし",
+      "scope": "SDK-07証跡"
+    },
+    {
+      "test": "UI-04証跡とapi.ts変更",
+      "result": "画面の架空データ6/6 PASS、外部リクエスト0、対象10ファイルのSHA一致。api.tsの読取のみをメモリ上で変更するとTEST_EVIDENCE_STALEを検出",
+      "scope": "既存ローカルブラウザ証跡の照合と負例"
+    }
+  ],
+  "limitations": [
+    "AIによるコード・テストレビューであり人のレビューではない",
+    "SDKスタブおよびローカルブラウザの結果で、実GoogleやiPhoneの修正後動作は未検証",
+    "以前のiPhone認証エラーの原因・修正との因果は未特定",
+    "独立第三者による受入30件の実施・合格には加算しない",
+    "検証サイトに未配備、本番運用は未開始"
+  ]
+}

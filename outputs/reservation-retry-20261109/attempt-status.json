@@ -1,0 +1,52 @@
+{
+  "dateJst": "2026-11-09",
+  "status": "SUPERSEDED_BY_VERIFIED_20261110_RELEASE",
+  "dailyRequiredCompleted": 0,
+  "localFix": "REVIEWED_PASS",
+  "candidateSourceDigest": "9474523b706d44f520a627c1c1611824ed8d0b3e2347687d35fa98dbf61e0d27",
+  "candidateManifest": "outputs/reservation-retry-20261109/candidate-build-manifest.json",
+  "currentHostingVersion": "0b830b69152e45a3",
+  "currentGasVersion": 6,
+  "currentRegistry": "2026-11-10-r18",
+  "currentPowerPointVersion": "v34",
+  "publicFixVerification": "Normal public frontend demo verified Nov10; no liveGoogle response-fault injection",
+  "productionStarted": false,
+  "customerFixtureWrites": 0,
+  "customerPassed": 0,
+  "customerTotal": 6,
+  "sharedHistoryRow": 61,
+  "sharedHistoryId": "VR-20261109-01",
+  "localChecks": {
+    "frontendContract": "33/33 PASS",
+    "reservationUiMerge": "PASS",
+    "gasMock": "85/85 PASS",
+    "offlineBrowserRegression": "28/28 PASS; zero external requests",
+    "typecheck": "PASS",
+    "lint": "PASS",
+    "independentReview": "PASS",
+    "build": "PASS",
+    "registryStrictAgainstCandidate": "FAIL: immutable r17 evidence and canonical source baseline refer to last adopted source; candidate not adopted"
+  },
+  "handoff": {
+    "browser": "Edge",
+    "browserId": "1",
+    "tabId": "1750959498",
+    "service": "Firebase CLI Google reauthentication",
+    "requiredOperation": "No reauthentication action remains pending; CLI target listing and test deployments succeeded",
+    "status": "RESOLVED"
+  },
+  "resume": [
+    "Latest Nov10 completion record is complete for daily fix and documents; do not repeat deployment",
+    "Keep customerfixturesunchanged; verify personalCUSTevidence beforepass",
+    "Next item: isolatedmulti-sheetbackuprestoreverification"
+  ],
+  "updatedDateJst": "2026-11-10",
+  "subsequentProgress": {
+    "nov9PublicHashConfirmedOn": "2026-11-10",
+    "nov10MeaningfulPubliclyVerifiedFixes": 1,
+    "nov10SourceDigest": "b80b9e2a7c0b0fc4b51c08bab18a77184309f72dcbbf932084ab5779a95bc81f",
+    "customerFixtureWrites": 0,
+    "nov9ActualDeployment": "876e93eaee4e4640",
+    "nov10Record": "outputs/consumption-timing-20261110/completion.json"
+  }
+}

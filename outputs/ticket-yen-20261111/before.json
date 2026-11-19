@@ -1,0 +1,14 @@
+{
+  "checkedAt": "2026-11-10T15:19:48.786Z",
+  "case": "AT-05",
+  "scope": "real React form and demo API in JSDOM, synthetic browser storage",
+  "before": true,
+  "step": "500",
+  "valid": false,
+  "stepMismatch": true,
+  "submits": 0,
+  "balanceBefore": 7,
+  "balanceAfter": 7,
+  "historyDelta": 0,
+  "record": null
+}

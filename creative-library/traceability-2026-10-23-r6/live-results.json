@@ -1,0 +1,31 @@
+{
+  "id": "AT27-LIVE-01",
+  "date": "2026-10-23",
+  "clickDispatchUtc": "2026-10-23T03:30:40.589Z",
+  "environment": "published-test-frontend-and-validation-GAS",
+  "evidenceType": "live DOM and bounded Sheets UI clipboard reads",
+  "principals": ["restored-admin-1", "restored-admin-2"],
+  "fixtureStudentId": "STU-AT27-a67d20b4",
+  "fixtureRideId": "RIDE-AT27-3f85e0af",
+  "initialBalance": 3,
+  "finalBalance": 2,
+  "uiConsumedByPrincipal": [0, 1],
+  "rideState": "completed",
+  "completionTimestampDisplayed": "2026/10/23 12:30:43",
+  "bothReloadedBalance": 2,
+  "bothReloadedCompletionButtons": 0,
+  "explicitSubsequentReplay": "NOT_RUN",
+  "serverRequestOverlapProven": false,
+  "dispatchMethod": "Promise.allSettled of two observed completion-button clicks; both fulfilled",
+  "cleanup": {
+    "idGuardedFixtureCellsCleared": true,
+    "studentsA1H8MatchesBefore": true,
+    "ridesA1L8MatchesBefore": true,
+    "purchasesA1G8MatchesBefore": true,
+    "bothDashboardStudentCount": 3
+  },
+  "subcheckResult": "CONFIRMED",
+  "fullAT27": "NOT_PASSED",
+  "calendarPermissionAdded": false,
+  "productionStarted": false
+}

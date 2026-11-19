@@ -1,0 +1,47 @@
+{
+  "url": "https://eigo-taxi-test.web.app",
+  "checkedAt": "2026-11-18T21:58:51.000Z",
+  "release": {
+    "environment": "mighty-test",
+    "projectId": "eigo-taxi-app",
+    "siteId": "eigo-taxi-test",
+    "builtAt": "2026-11-18T21:55:07.263Z",
+    "sourceDigest": "40a5f1e3586442d8c0a5c1f81cad262171ddb9920d4827a38ad1766e155b4db3"
+  },
+  "publicVerification": "docs/acceptance/deployment-verification/public-2026-11-18T21-55-47-989Z.json",
+  "cumulativeCounts": {
+    "fixesTotal": 29,
+    "fable52PriorFixes": 2,
+    "subsequentFixes": 27,
+    "acceptanceTestsTotal": 29
+  },
+  "results": {
+    "AT-01": {
+      "status": "PASS",
+      "loginMetrics": { "hasUrlInput": false, "hasLoginKey": false, "hasGoogleBtn": true },
+      "errors": []
+    },
+    "AT-26_AT-27_FIX26_27_28": {
+      "status": "PASS",
+      "termsCheck": { "hasAriaLabel": true, "fitsViewport": true },
+      "studentErr": "生徒名と送迎場所を入力してください",
+      "rideErr": "必須項目をすべて入力してください",
+      "errors": []
+    },
+    "AT-23_GAS_STATIC": {
+      "status": "PASS",
+      "idempotentInit": true,
+      "lockService": true
+    },
+    "SAT-38_TRACEABILITY": {
+      "status": "PASS",
+      "total": 34,
+      "passed": 34
+    },
+    "AT-28_BACKUP_RESTORE": {
+      "status": "PARTIAL_BLOCKED",
+      "driveCopyFile": "PASS",
+      "sheetsApiRead": "BLOCKED (Google Sheets API disabled in project 994752997370)"
+    }
+  }
+}

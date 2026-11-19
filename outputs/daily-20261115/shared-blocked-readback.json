@@ -1,0 +1,12 @@
+{
+  "passValuesAndPreservation": true,
+  "status": "BLOCKED_REAUTH",
+  "dailyPublishedFixes": 0,
+  "publicRelease": "a97d95510290c92b",
+  "customerCellsAndValidationPreserved": true,
+  "customerPasses": 0,
+  "overviewFormulaPreserved": true,
+  "historyRow": 94,
+  "format": "Copied wrapped prior row; no whole-sheet formatting change",
+  "visualVerification": "Deferred while the user completes the Google authentication handoff; API values and format read back. No completed-deliverable or public-UI-pass claim."
+}

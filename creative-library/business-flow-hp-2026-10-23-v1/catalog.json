@@ -1,0 +1,56 @@
+[
+  {
+    "path": "business-flow-hp-2026-10-23-v1.pptx",
+    "sha256": "ADC06480D0AB2DF4AF879FB6707E6447FF9EC8548C1D86FBA82E8FB172531702",
+    "provider": "artifact-tool",
+    "rights": "review-required",
+    "publication": "private",
+    "parent": "business-flow-swimlane-2026-10-22-v2",
+    "brief": "MightyLINK HPの実ロゴ・背景写真と二色枠に寄せる。サンプル形式の担当者別フロー3枚を維持。"
+  },
+  {
+    "path": "clouds.jpeg",
+    "sha256": "73A92A664FA090C1AED13CD7DF45EF6B6C20753377C91D41E4E6C77304BBBF66",
+    "provider": "artifact-tool",
+    "rights": "review-required",
+    "publication": "private",
+    "parent": "business-flow-swimlane-2026-10-22-v2",
+    "brief": "MightyLINK HPの実ロゴ・背景写真と二色枠に寄せる。サンプル形式の担当者別フロー3枚を維持。"
+  },
+  {
+    "path": "hp-flow.mjs",
+    "sha256": "191491C2F3E8375282E00384652D2F628E4B686A3E491580201D71BE62005C74",
+    "provider": "artifact-tool",
+    "rights": "review-required",
+    "publication": "private",
+    "parent": "business-flow-swimlane-2026-10-22-v2",
+    "brief": "MightyLINK HPの実ロゴ・背景写真と二色枠に寄せる。サンプル形式の担当者別フロー3枚を維持。"
+  },
+  {
+    "path": "logo.jpg",
+    "sha256": "557148018BB56216DCD2502AE379088E5950668C16A3C13D355A7B6F25E7C231",
+    "provider": "artifact-tool",
+    "rights": "review-required",
+    "publication": "private",
+    "parent": "business-flow-swimlane-2026-10-22-v2",
+    "brief": "MightyLINK HPの実ロゴ・背景写真と二色枠に寄せる。サンプル形式の担当者別フロー3枚を維持。"
+  },
+  {
+    "path": "README.md",
+    "sha256": "912CD2FC1E94531A1A788D018EBE6829DF404434975FE699BD990562925C2066",
+    "provider": "artifact-tool",
+    "rights": "review-required",
+    "publication": "private",
+    "parent": "business-flow-swimlane-2026-10-22-v2",
+    "brief": "MightyLINK HPの実ロゴ・背景写真と二色枠に寄せる。サンプル形式の担当者別フロー3枚を維持。"
+  },
+  {
+    "path": "validation-v1.json",
+    "sha256": "E00A1F72E1641800DB702E21C1641B204A35E6B68FA82913AD341C8A3F2EA60B",
+    "provider": "artifact-tool",
+    "rights": "review-required",
+    "publication": "private",
+    "parent": "business-flow-swimlane-2026-10-22-v2",
+    "brief": "MightyLINK HPの実ロゴ・背景写真と二色枠に寄せる。サンプル形式の担当者別フロー3枚を維持。"
+  }
+]

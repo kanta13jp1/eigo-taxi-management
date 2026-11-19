@@ -1,0 +1,29 @@
+{
+  "id": "AT-29",
+  "scope": "Chromium touch emulation on public anonymous demo; no actual iPhone or Android device",
+  "runs": [
+    {
+      "width": 390,
+      "height": 844,
+      "reservation": "scheduled",
+      "afterReload": "cancelled",
+      "balance": [
+        7,
+        7,
+        7
+      ]
+    },
+    {
+      "width": 412,
+      "height": 915,
+      "reservation": "scheduled",
+      "afterReload": "cancelled",
+      "balance": [
+        7,
+        7,
+        7
+      ]
+    }
+  ],
+  "externalWrites": 0
+}

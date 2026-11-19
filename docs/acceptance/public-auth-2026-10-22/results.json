@@ -1,0 +1,16 @@
+{
+  "checkedAt": "2026-10-22T10:29:24.032827+00:00",
+  "environment": "mighty-test",
+  "sourceDigest": "bf61f6857b8ed09a7f3827b84bca6227432f8baa3a5cc735fef08fc9024b5702",
+  "checks": {
+    "publicAdminIdentity": "PASS",
+    "studentsCount3": "PASS",
+    "ridesCount3": "PASS",
+    "reloadIdentityAndCounts": "PASS",
+    "logoutReturnsLogin": "PASS",
+    "reloadAfterLogoutNoLedger": "PASS",
+    "googleLoginAfterLegacyDisabled": "PASS",
+    "reloadAfterLegacyDisabledCounts3": "PASS"
+  },
+  "scope": "One company test administrator, read-only except logout. User completed Google account selection. No second administrator, real parent accounts, Calendar, booking or production checks. Prior intermittent read error did not recur in this observation; root cause not established. Legacy flag false independently persisted; subsequent Google login and reload confirmed, 3 students/3 rides."
+}

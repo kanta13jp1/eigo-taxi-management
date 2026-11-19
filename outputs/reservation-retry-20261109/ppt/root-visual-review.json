@@ -1,0 +1,10 @@
+{
+  "reviewer": "/root",
+  "dateJst": "2026-11-09",
+  "file": "docs/deliverables/2026-11-09-reservation-retry/progress-retry-2026-11-09-v2-blocked.pptx",
+  "sha256": "d661cfd3dec1ff18b19e382d4ebdfaf18915afe0693ab3fc6c2319b0e770f5bc",
+  "pagesViewed": [1, 2, 3, 4],
+  "result": "PASS_FOR_BLOCKER_REPORT_ONLY",
+  "checks": ["Common reference style retained", "All four reimported page images legible", "No visible clipping or overlaps", "Public deployment and UI validation explicitly pending", "Customer result remains 0/6", "No private account, family URL or access key in slides"],
+  "doesNotAdoptCodeOrRegistryRelease": true
+}

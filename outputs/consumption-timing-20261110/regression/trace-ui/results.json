@@ -1,0 +1,75 @@
+{
+  "sourceHashes": {
+    "scripts/test_trace_ui.mjs": "bcd60909358980aa583ee2a7f2526ef92bedbebb3ba2f2852d07aea530c14369",
+    "scripts/fixtures/trace-ui/harness.tsx": "90bef1928e68fb736a4cf43150bb11153ba980414b5016b318f9ca494a24e136",
+    "src/components/ParentPortal.tsx": "c58b97530f55b5ec2241c9e92a6600e5b3f24ab8e4fc28fef3d3dbb1746cd04e",
+    "src/components/TeacherDashboard.tsx": "1316fbc950664e43614387bea8bf614c98374c2bc1fcf6e7f3c97c9b01334ea4",
+    "src/components/AddRideModal.tsx": "1bc02fa836a77d0dec2d9ec873ae4cff8bc1c98cbd24bb3da3cbbf5073856f85",
+    "src/services/api.ts": "159c91b9ead700c8e32bc17ce978145c81bd4419d10a3104be72db9730902264",
+    "src/services/google-auth.ts": "01667af44fce383f3763c8bb73497dafc690381592ddcf383d46aaafe90fe0d8",
+    "src/deployment-config.ts": "5c30aad36376487fcf2fbb664f2574bdd430890191675ca9813b5fdea516b6f1",
+    "src/portal.ts": "2cb1dc0aed33b27a24ef6ed804a6ae1e01b44e07f0814c12044dc1d3525cbeec",
+    "src/index.css": "66baff8b6d7a116920270aba8584dd856cf5de345b59b511b849b96152ce91d8"
+  },
+  "mode": "offline localhost Chromium; touch emulation is not a physical device; fixture data only",
+  "externalRequests": [],
+  "results": [
+    {
+      "id": "UI-01",
+      "requirements": [
+        "REQ-03"
+      ],
+      "name": "Family component renders balance 7 one-way rule and assigned student only",
+      "status": "PASS"
+    },
+    {
+      "id": "UI-01",
+      "requirements": [
+        "REQ-03"
+      ],
+      "name": "Family component renders balance 7 one-way rule and assigned student only",
+      "status": "FAIL",
+      "error": "TimeoutError: page.screenshot: Timeout 8000ms exceeded.\nCall log:\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n"
+    },
+    {
+      "id": "UI-02",
+      "requirements": [
+        "REQ-04"
+      ],
+      "name": "Balances 2 1 0 show named contact warning; 3 and 7 do not",
+      "status": "PASS"
+    },
+    {
+      "id": "UI-03",
+      "requirements": [
+        "REQ-09"
+      ],
+      "name": "Admin reservation form submits teacher date student and location",
+      "status": "PASS"
+    },
+    {
+      "id": "UI-04",
+      "requirements": [
+        "REQ-12"
+      ],
+      "name": "Today list encodes a Google Maps search for exact pickup location",
+      "status": "PASS"
+    },
+    {
+      "id": "UI-05",
+      "requirements": [
+        "REQ-21"
+      ],
+      "name": "Admin family and form stay within actual 375px viewport",
+      "status": "PASS"
+    },
+    {
+      "id": "UI-06",
+      "requirements": [
+        "REQ-29"
+      ],
+      "name": "Touch emulation can request booking and confirm cancellation without external network",
+      "status": "PASS"
+    }
+  ]
+}

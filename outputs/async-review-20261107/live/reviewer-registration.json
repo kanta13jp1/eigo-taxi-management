@@ -1,0 +1,18 @@
+{
+  "checkedAt": "2026-11-07T09:14:54.566Z",
+  "role": "reviewer",
+  "active": true,
+  "googleLinked": false,
+  "firstLoginPending": true,
+  "studentId": "STU-CUST-20261107",
+  "selectedStudentNames": [
+    "顧客確認_架空生徒"
+  ],
+  "otherThreeStudentsSelected": false,
+  "originalTwoAdminsUnchanged": true,
+  "readback": "Account directory re-fetched then edit form reopened",
+  "productionStarted": false,
+  "parentUrl": "https://eigo-taxi-test.web.app/#/parent/24db89d1-e687-4535-900a-559e6ebca0b7",
+  "parentUrlUnchanged": true,
+  "adminUrl": "https://eigo-taxi-test.web.app/#/admin"
+}

@@ -1,0 +1,153 @@
+Browser tab: 1750959453, Title: "Mauro & Brenda 送迎チケット管理 | Eigo Taxi Link", URL: "https://eigo-taxi-test.web.app/#/admin".
+1 AXWebArea Mauro & Brenda 送迎チケット管理 | Eigo Taxi Link, URL: eigo-taxi-test.web.app/#/admin
+	2 container root
+		3 container
+			4 heading Mauro & Brenda Taxi Link, Value: 1
+				5 text Mauro & Brenda Taxi Link
+			6 text 管理者専用ページ
+			7 container 管理者メニュー
+				8 button 管理者用 (Mauro・Brenda)
+				9 button 個別URL・QR
+				10 button アカウント管理
+				11 button Google連携
+		12 container
+			13 text 教室の連携環境  /  Mighty 検証管理者
+		14 button ログアウト
+		15 container
+			16 text 管理者画面 Mauro・Brenda 先生用管理ダッシュボード ※完全予約制対応：送迎完了時に「送迎完了」を押すと片道1枚（往復は2枚）が自動消化されます 本日の送迎 2 件 予定
+			17 text チケット残少・残ゼロ
+			18 text 1 名 登録生徒数 4 名
+			19 button 本日の送迎 (3)
+				20 text 本日の送迎 (
+				21 text 3
+				22 text )
+			23 button 送迎スケジュール一覧 (6)
+				24 text 送迎スケジュール一覧 (
+				25 text 6
+				26 text )
+			27 button 生徒・チケット管理 (4)
+				28 text 生徒・チケット管理 (
+				29 text 4
+				30 text )
+			31 button 送迎予定を追加
+			32 button チケット追加
+			65 heading 全送迎スケジュール・履歴, Value: 2
+				66 text 全送迎スケジュール・履歴
+			67 pop up button (collapsed, settable) Value: すべてのステータス, Secondary Actions: Expand
+				68 menu
+					69 (selected) すべてのステータス
+					70 予定中のみ
+					71 完了済みのみ
+					72 キャンセルのみ
+			73 table
+				74 row
+					75 cell
+						76 text 日時
+					77 cell
+						78 text 生徒名
+					79 cell
+						80 text 区分
+					81 cell
+						82 text 送迎場所
+					83 cell
+						84 text 予約者
+					85 cell
+						86 text ステータス
+					87 cell
+						88 text 操作
+				89 row
+					90 cell
+						91 text 2026-11-07 16:00
+					92 cell
+						93 text 顧客確認_架空生徒
+					94 cell
+						95 text お迎え
+					96 cell
+						97 text 検証専用・実在しない乗車場所
+					98 cell
+						99 text 先生登録
+					100 cell
+						101 text 取消
+				102 row
+					103 cell
+						104 text 2026-11-07 16:00
+					105 cell
+						106 text 顧客確認_架空生徒
+					107 cell
+						108 text お迎え
+					109 cell
+						110 text CUST-04 完了用A・片道／実在しない場所
+					111 cell
+						112 text 先生登録
+					113 cell
+						114 text 予定中
+					115 cell
+						116 button 完了
+						117 button 取消
+				118 row
+					119 cell
+						120 text 2026-11-07 16:00
+					121 cell
+						122 text 顧客確認_架空生徒
+					123 cell
+						124 text 往復
+					125 cell
+						126 text CUST-04 完了用B・往復／実在しない場所
+					127 cell
+						128 text 先生登録
+					129 cell
+						130 text 予定中
+					131 cell
+						132 button 完了
+						133 button 取消
+				134 row
+					135 cell
+						136 text 2026-10-17 16:00
+					137 cell
+						138 text 田中 陽菜
+					139 cell
+						140 text お迎え
+					141 cell
+						142 text 東京都世田谷区桜新町1-10-5
+					143 cell
+						144 text 先生登録
+					145 cell
+						146 text 取消
+				147 row
+					148 cell
+						149 text 2026-10-16 17:00
+					150 cell
+						151 text 田中 陽菜
+					152 cell
+						153 text お迎え
+					154 cell
+						155 text 東京都世田谷区桜新町1-10-5
+					156 cell
+						157 text 先生登録
+					158 cell
+						159 text 取消
+				160 row
+					161 cell
+						162 text 2026-10-15 16:30
+					163 cell
+						164 text TEST
+					165 cell
+						166 text お迎え
+					167 cell
+						168 text 東京都世田谷区用賀2-5-12
+					169 cell
+						170 text 保護者予約
+					171 cell
+						172 text 予定中
+					173 cell
+						174 button 完了
+						175 button 取消
+		58 container
+			59 text © 2026 Mauro & Brenda English School. All rights reserved.
+			60 button 利用規約
+			61 text |
+			62 button 個人情報の取扱い
+			63 text |
+			64 button 免責事項
+
+The focused UI element is 23 button 送迎スケジュール一覧 (6)

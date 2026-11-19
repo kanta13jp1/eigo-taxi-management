@@ -1,0 +1,22 @@
+{
+  "checkedAt": "2026-11-11T06:26:44.031Z",
+  "case": "AT-02",
+  "scope": "actual React form and demo API with synthetic storage",
+  "before": true,
+  "input": "1.5",
+  "displayed": "1",
+  "fractionalSubmits": 1,
+  "blankAndNegativeRejected": false,
+  "initialCount": 3,
+  "finalCount": 4,
+  "saved": {
+    "name": "AT02 Demo",
+    "parentName": "Demo Parent",
+    "phone": "000-0000-0000",
+    "address": "AT02 Demo Address",
+    "pickupNote": "AT02 Demo Note",
+    "ticketBalance": 1,
+    "id": "STU-70e3399b-898d-479f-abc7-131f2330ee33",
+    "createdAt": "2026-11-11"
+  }
+}

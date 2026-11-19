@@ -1,0 +1,12 @@
+{
+  "status": "ADOPTED",
+  "deckCount": 12,
+  "slides": 190,
+  "updated": 3,
+  "unchanged": 9,
+  "proposalSha256": "c2d7a97a8be821a5830f5aeca160f9d2cf52962c1e137c5f6ff5a2a97c8b8f17",
+  "manifestSha256": "c2d7a97a8be821a5830f5aeca160f9d2cf52962c1e137c5f6ff5a2a97c8b8f17",
+  "registrySha256": "0f6b53a352a8549cc4a66a34af7932c8e692f4dbe0280f0b13920a4eede35719",
+  "customerPassed": 0,
+  "productionStarted": false
+}

@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "spreadsheetUrl": "https://docs.google.com/spreadsheets/d/1PqUq7BoBBVlPolivap0eg1UPik47vNNWphyBd0DNwvU/edit",
+  "ranges": [
+    "'検証結果履歴'!A60:I60",
+    "'進捗概要'!B12:B13"
+  ],
+  "checks": {
+    "historyExact": true,
+    "overviewExact": true,
+    "customerAllNotRun": true,
+    "customerTimesAndObservationsBlank": true,
+    "dropdownsPreserved": true,
+    "passCountFormulaPreserved": true
+  },
+  "teacherFirstLogin": "NOT_RUN",
+  "customerPassCount": 0,
+  "customerTotal": 6
+}

@@ -1,0 +1,42 @@
+{
+  "reviewId": "AI-REVIEW-AT24-20261103-01",
+  "reviewer": "independent AI subagent (calendar_independent_review)",
+  "reviewedAt": "2026-11-02T18:26:55Z",
+  "reviewScope": "AT-24: 新規予定説明への予約ID追記、GAS-67の同一ID・重複防止確認、関係する認証・ID検証・ロック・補償を含む差分の独立点検",
+  "reviewStatus": "PASS_WITH_LIMITATIONS",
+  "findings": "対象差分に追加の再現可能な合格阻害指摘なし。過去に作成した予定や既存予約の再送には予約IDを遡及追加しないため、適用範囲を明示する。",
+  "sourceHashes": {
+    "gas/Code.gs": "e9dfe7c3374ff491f13d90daeab04d20d3114dc2879a3515d1a67c4251b373fd",
+    "scripts/test_gas.cjs": "cf56ff697a925398402d5c2800ce2de666ac2c2ba4eb03e3374aa1ae7d9aef35"
+  },
+  "independentChecks": [
+    {
+      "test": "旧配備アーカイブd4261c506bb71586と現行gas/Code.gsの比較",
+      "result": "新規予定の説明への予約ID追加1行のみ",
+      "scope": "対象GAS全体の直接テキスト比較"
+    },
+    {
+      "test": "GAS-67の赤・緑証跡とソースハッシュの照合",
+      "result": "同一テストSHAで旧GASはGAS-67 FAIL・69/70、現行GASは70/70 PASS",
+      "scope": "ローカルNode VM・Googleサービス模擬"
+    },
+    {
+      "test": "scripts/test_gas.cjs独立再実行",
+      "result": "70/70 PASS、終了コード0、対象ソース2件のSHA一致",
+      "evidence": "outputs/at24-independent-review-20261103/2026-11-02T18-25-37-734Z/gas-results.json",
+      "scope": "ローカルNode VM・Googleサービス模擬"
+    },
+    {
+      "test": "認証・ID検証・ロック・再試行・書込補償のコード確認",
+      "result": "IDは所定文字種・長さの検証後に予定説明と台帳に保存。同一IDの正常再送は予定追加前に既存行を返す。対象差分に制御変更なし",
+      "scope": "静的レビューとGAS-67の再試行観測"
+    }
+  ],
+  "limitations": [
+    "変更済みGASはローカルにあり、検証用GASへの反映と実Google Calendar連携の確認は未実施",
+    "既存予定や既存予約の再送に説明欄を遡及追加しない",
+    "scripts/test_gas.cjsは未追跡のため変更前ファイル全体の直接差分は復元できず、現行テスト本文と赤・緑証跡のハッシュを点検",
+    "AIによる差分レビューとGoogleサービス模擬試験であり、人による第三者受入30件の実施・合格には加算しない",
+    "Calendar権限の追加・本番運用開始は行っていない"
+  ]
+}

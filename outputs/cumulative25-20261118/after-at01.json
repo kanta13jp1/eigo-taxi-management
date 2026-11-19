@@ -1,0 +1,38 @@
+{
+  "mode": "after",
+  "at": "2026-11-17T20:33:25.988Z",
+  "externalPostRequestsSent": 0,
+  "checks": [
+    "管理者入口にGoogleログインがあり、接続先・キー入力欄と台帳がない",
+    "模擬Google認証後に架空台帳取得、再読込で本人再確認と再取得",
+    "ログアウト後の再読込でログイン画面のみ。セッションと台帳は非表示"
+  ],
+  "mockActions": [
+    {
+      "action": "login",
+      "revoked": false
+    },
+    {
+      "action": "getStudents",
+      "revoked": false
+    },
+    {
+      "action": "getRides",
+      "revoked": false
+    },
+    {
+      "action": "login",
+      "revoked": false
+    },
+    {
+      "action": "getStudents",
+      "revoked": false
+    },
+    {
+      "action": "getRides",
+      "revoked": false
+    }
+  ],
+  "base": "http://127.0.0.1:57205",
+  "pass": true
+}

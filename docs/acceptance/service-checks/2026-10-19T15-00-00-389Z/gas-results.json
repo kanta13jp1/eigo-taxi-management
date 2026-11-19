@@ -1,0 +1,419 @@
+{
+  "suite": "gas-vm-contract-and-fault-injection",
+  "generatedAt": "2026-10-19T15:00:00.389Z",
+  "execution": "offline Node VM; Google services stubbed; no network/deployment",
+  "counts": {
+    "total": 38,
+    "passed": 38,
+    "failed": 0
+  },
+  "categoryCounts": {
+    "schema": 1,
+    "authentication": 5,
+    "parent-authorization": 6,
+    "completion": 4,
+    "concurrency": 1,
+    "validation": 7,
+    "idempotency": 3,
+    "failures": 11
+  },
+  "sourceHashes": {
+    "gas/Code.gs": "c19a57baad58ebc7c24466115eb4e11fc3bdc3b7d81105c46b13d1d835a46e04",
+    "scripts/test_gas.cjs": "3e6230a2f850f6ec7c3d245c660bd4f8967d079e00f456e6631ee4b01e91f756"
+  },
+  "limitations": [
+    "Script lock contention is simulated, not a live concurrent GAS execution.",
+    "Real deployment identity, permissions, Calendar/Sheets behavior, network timeouts and cross-device parent isolation remain unverified."
+  ],
+  "results": [
+    {
+      "id": "GAS-01",
+      "category": "schema",
+      "defects": [],
+      "name": "Initialization keeps 8/12/7 columns, preserves data, adds no sample students",
+      "status": "PASS",
+      "durationMs": 3
+    },
+    {
+      "id": "GAS-02",
+      "category": "authentication",
+      "defects": [
+        "DEF-05"
+      ],
+      "name": "GET cannot expose students/rides or invoke mutations",
+      "status": "PASS",
+      "durationMs": 1
+    },
+    {
+      "id": "GAS-03",
+      "category": "authentication",
+      "defects": [
+        "DEF-05"
+      ],
+      "name": "Every POST action rejects missing/invalid keys before accessing data",
+      "status": "PASS",
+      "durationMs": 2
+    },
+    {
+      "id": "GAS-04",
+      "category": "authentication",
+      "defects": [
+        "DEF-05"
+      ],
+      "name": "Missing/malformed/empty authentication configuration fails closed",
+      "status": "PASS",
+      "durationMs": 1
+    },
+    {
+      "id": "GAS-05",
+      "category": "authentication",
+      "defects": [
+        "DEF-05",
+        "DEF-06"
+      ],
+      "name": "Login returns server principal and ignores client-supplied role/scopes",
+      "status": "PASS",
+      "durationMs": 1
+    },
+    {
+      "id": "GAS-06",
+      "category": "parent-authorization",
+      "defects": [
+        "DEF-06"
+      ],
+      "name": "Parent reads expose only mapped students and rides despite forged filters",
+      "status": "PASS",
+      "durationMs": 2
+    },
+    {
+      "id": "GAS-07",
+      "category": "parent-authorization",
+      "defects": [
+        "DEF-06"
+      ],
+      "name": "A parent with no assignments receives no student or ride data",
+      "status": "PASS",
+      "durationMs": 1
+    },
+    {
+      "id": "GAS-08",
+      "category": "parent-authorization",
+      "defects": [
+        "DEF-05",
+        "DEF-06"
+      ],
+      "name": "Parent cannot register students, add tickets or complete rides",
+      "status": "PASS",
+      "durationMs": 1
+    },
+    {
+      "id": "GAS-09",
+      "category": "parent-authorization",
+      "defects": [
+        "DEF-06"
+      ],
+      "name": "Cross-family booking/cancellation uses authoritative student mapping",
+      "status": "PASS",
+      "durationMs": 2
+    },
+    {
+      "id": "GAS-10",
+      "category": "parent-authorization",
+      "defects": [
+        "DEF-06"
+      ],
+      "name": "Parent booking derives stored name/role and ignores supplied event ID",
+      "status": "PASS",
+      "durationMs": 2
+    },
+    {
+      "id": "GAS-11",
+      "category": "parent-authorization",
+      "defects": [
+        "DEF-06"
+      ],
+      "name": "Cancellation affects only stored event ID and is idempotent",
+      "status": "PASS",
+      "durationMs": 1
+    },
+    {
+      "id": "GAS-12",
+      "category": "authentication",
+      "defects": [
+        "DEF-05",
+        "DEF-06"
+      ],
+      "name": "Revocation and remapping take effect on the next request",
+      "status": "PASS",
+      "durationMs": 1
+    },
+    {
+      "id": "GAS-13",
+      "category": "completion",
+      "defects": [
+        "DEF-01"
+      ],
+      "name": "Duplicate completion consumes only once, including after other purchases",
+      "status": "PASS",
+      "durationMs": 1
+    },
+    {
+      "id": "GAS-14",
+      "category": "completion",
+      "defects": [
+        "DEF-01",
+        "DEF-03"
+      ],
+      "name": "Roundtrip consumption is derived from stored type and tampering rejected",
+      "status": "PASS",
+      "durationMs": 1
+    },
+    {
+      "id": "GAS-15",
+      "category": "completion",
+      "defects": [
+        "DEF-02"
+      ],
+      "name": "Cancelled completion and completed cancellation have no side effects",
+      "status": "PASS",
+      "durationMs": 1
+    },
+    {
+      "id": "GAS-16",
+      "category": "completion",
+      "defects": [
+        "DEF-01",
+        "DEF-03"
+      ],
+      "name": "Insufficient/corrupt balances and missing targets never complete a ride",
+      "status": "PASS",
+      "durationMs": 1
+    },
+    {
+      "id": "GAS-17",
+      "category": "concurrency",
+      "defects": [
+        "DEF-01"
+      ],
+      "name": "Contending completion cannot enter locked mutation, retry becomes replay",
+      "status": "PASS",
+      "durationMs": 1
+    },
+    {
+      "id": "GAS-18",
+      "category": "validation",
+      "defects": [
+        "DEF-03"
+      ],
+      "name": "Negative/fraction/nonfinite/nonnumeric ticket quantities rejected before writes",
+      "status": "PASS",
+      "durationMs": 1
+    },
+    {
+      "id": "GAS-19",
+      "category": "validation",
+      "defects": [
+        "DEF-03"
+      ],
+      "name": "Invalid amounts and initial balances rejected, zero amount allowed",
+      "status": "PASS",
+      "durationMs": 1
+    },
+    {
+      "id": "GAS-20",
+      "category": "validation",
+      "defects": [
+        "DEF-03"
+      ],
+      "name": "Safe-integer overflow, missing students and unknown IDs cause no writes",
+      "status": "PASS",
+      "durationMs": 1
+    },
+    {
+      "id": "GAS-21",
+      "category": "validation",
+      "defects": [
+        "DEF-03",
+        "DEF-04"
+      ],
+      "name": "Invalid reservation date/time/type and empty fields precede calendar work",
+      "status": "PASS",
+      "durationMs": 1
+    },
+    {
+      "id": "GAS-22",
+      "category": "idempotency",
+      "defects": [
+        "DEF-01",
+        "DEF-04"
+      ],
+      "name": "Reservation retry creates one event/row and rejects changed-payload collision",
+      "status": "PASS",
+      "durationMs": 1
+    },
+    {
+      "id": "GAS-23",
+      "category": "idempotency",
+      "defects": [
+        "DEF-01",
+        "DEF-03"
+      ],
+      "name": "Purchase retry credits once and collision never overwrites a previous purchase",
+      "status": "PASS",
+      "durationMs": 1
+    },
+    {
+      "id": "GAS-24",
+      "category": "idempotency",
+      "defects": [
+        "DEF-04"
+      ],
+      "name": "Student registration has stable-ID replay and rejects conflicting IDs",
+      "status": "PASS",
+      "durationMs": 1
+    },
+    {
+      "id": "GAS-25",
+      "category": "failures",
+      "defects": [
+        "DEF-04"
+      ],
+      "name": "Calendar creation exception is never success and retains an uncertainty guard",
+      "status": "PASS",
+      "durationMs": 2
+    },
+    {
+      "id": "GAS-26",
+      "category": "failures",
+      "defects": [
+        "DEF-04"
+      ],
+      "name": "Reservation append failure before/after write removes event/row and allows retry",
+      "status": "PASS",
+      "durationMs": 2
+    },
+    {
+      "id": "GAS-27",
+      "category": "failures",
+      "defects": [
+        "DEF-01",
+        "DEF-04"
+      ],
+      "name": "Completion rollback restores balance/status/timestamp for every failed write",
+      "status": "PASS",
+      "durationMs": 6
+    },
+    {
+      "id": "GAS-28",
+      "category": "failures",
+      "defects": [
+        "DEF-03",
+        "DEF-04"
+      ],
+      "name": "Purchase failures compensate both history and balance, retries credit once",
+      "status": "PASS",
+      "durationMs": 3
+    },
+    {
+      "id": "GAS-29",
+      "category": "failures",
+      "defects": [
+        "DEF-04"
+      ],
+      "name": "Student create append failure compensates, no fabricated success row",
+      "status": "PASS",
+      "durationMs": 2
+    },
+    {
+      "id": "GAS-30",
+      "category": "failures",
+      "defects": [
+        "DEF-04"
+      ],
+      "name": "Calendar deletion failure never claims cancellation, blocks unsafe replay",
+      "status": "PASS",
+      "durationMs": 2
+    },
+    {
+      "id": "GAS-31",
+      "category": "failures",
+      "defects": [
+        "DEF-04"
+      ],
+      "name": "Cancellation sheet failure does not delete the calendar event",
+      "status": "PASS",
+      "durationMs": 2
+    },
+    {
+      "id": "GAS-32",
+      "category": "failures",
+      "defects": [
+        "DEF-04"
+      ],
+      "name": "Read/calendar-lookup/missing-sheet errors propagate without data or mutation",
+      "status": "PASS",
+      "durationMs": 1
+    },
+    {
+      "id": "GAS-33",
+      "category": "failures",
+      "defects": [
+        "DEF-01",
+        "DEF-04"
+      ],
+      "name": "Failed compensation keeps durable guard; login works but data/mutations block",
+      "status": "PASS",
+      "durationMs": 1
+    },
+    {
+      "id": "GAS-34",
+      "category": "failures",
+      "defects": [
+        "DEF-04"
+      ],
+      "name": "Guard write failure prevents writes; failed guard deletion compensates safely",
+      "status": "PASS",
+      "durationMs": 2
+    },
+    {
+      "id": "GAS-35",
+      "category": "failures",
+      "defects": [
+        "DEF-04"
+      ],
+      "name": "After irreversible calendar deletion, guard-delete failure restores guard even if applied",
+      "status": "PASS",
+      "durationMs": 2
+    },
+    {
+      "id": "GAS-36",
+      "category": "validation",
+      "defects": [
+        "DEF-05"
+      ],
+      "name": "Malformed JSON, unknown/prototype actions and remote init are rejected",
+      "status": "PASS",
+      "durationMs": 1
+    },
+    {
+      "id": "GAS-37",
+      "category": "validation",
+      "defects": [
+        "DEF-04"
+      ],
+      "name": "Duplicate authoritative IDs fail closed instead of updating an arbitrary row",
+      "status": "PASS",
+      "durationMs": 1
+    },
+    {
+      "id": "GAS-38",
+      "category": "validation",
+      "defects": [
+        "DEF-04"
+      ],
+      "name": "User text is stored as literal text and date cells normalize to JST",
+      "status": "PASS",
+      "durationMs": 1
+    }
+  ]
+}

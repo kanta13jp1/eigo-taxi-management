@@ -1,0 +1,28 @@
+{
+  "mode": "public",
+  "checkedAt": "2026-11-14T09:08:26.664Z",
+  "base": "https://eigo-taxi-test.web.app",
+  "width": 375,
+  "height": 812,
+  "engine": "Chromium (Edge) mobile emulation",
+  "profiles": "fresh anonymous browser-local demo",
+  "geometry": {},
+  "cancelWrites": 1,
+  "safeDismissals": [
+    "Escape",
+    "initial Enter",
+    "戻る"
+  ],
+  "initialFocus": "戻る",
+  "focusRestored": true,
+  "targetOnlyCancelled": true,
+  "doubleConfirmSingleWrite": true,
+  "persistedAfterReload": true,
+  "studentBalancesUnchanged": true,
+  "blockedRequests": [],
+  "fixtureIds": [
+    "RIDE-341a2fbf-9308-43d5-b541-89cbc3b6d4bf",
+    "RIDE-882f7e86-1f42-45ee-ba63-08b60d0fddb4"
+  ],
+  "scope": "Isolated anonymous parent demo, mobile Edge emulation. No live Google/calendar or customer data."
+}

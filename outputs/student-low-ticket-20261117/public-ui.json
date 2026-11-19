@@ -1,0 +1,15 @@
+{
+  "checkedAt": "2026-11-17 (JST), about 19:57",
+  "url": "https://eigo-taxi-test.web.app/#/admin",
+  "hostingVersion": "e260bd4c435ced70",
+  "sourceDigest": "9f1204674355b5f66a53a7b1248138706ce0efe19d39bc7918c126cc4757dfe1",
+  "mode": "Anonymous admin demo in the user's Chrome; fictional browser-only data; no Google login, no ledger or calendar writes",
+  "steps": [
+    "Opened the admin demo and the 生徒・チケット管理 tab: 7回 (no label), 1回 残り1回, 0回 チケット切れ; summary card 2名",
+    "Added 1 ticket (demo preset 1回分) to the fictional student at 1, giving 2",
+    "Reopened the tab: the student at 2 shows an amber 2回 badge and 残り2回; summary card still 2名 (students at 2 and 0)"
+  ],
+  "result": "PASS",
+  "leftover": "The demo state in this Chrome profile keeps the fictional student at 2 tickets until the demo data is reset",
+  "screenshot": "public-students-tab.jpg"
+}

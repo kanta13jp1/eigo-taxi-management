@@ -1,0 +1,71 @@
+{
+  "checkedAt": "2026-10-19T16:43:50.780Z",
+  "url": "https://eigo-taxi-test.web.app",
+  "release": {
+    "environment": "mighty-test",
+    "projectId": "eigo-taxi-app",
+    "siteId": "eigo-taxi-test",
+    "builtAt": "2026-10-19T16:42:01.618Z",
+    "baseCommit": "2fa6127715017d52ae0c9bd80be39c4db90a47c3",
+    "sourceDigest": "2d755063f1dc2c279e17c80743cc4b6ebe0a4f956cbcf3fd14bf4f74a40bbdae"
+  },
+  "results": [
+    {
+      "path": "/assets/index-CH_N-4uk.js",
+      "status": 200,
+      "sha256": "7912c9a9d4a42ce78f1ce494a58d785877ec10c0b7cf691a92b787807d94eb9a",
+      "expectedSha256": "7912c9a9d4a42ce78f1ce494a58d785877ec10c0b7cf691a92b787807d94eb9a",
+      "match": true,
+      "cacheControl": "public, max-age=31536000, immutable"
+    },
+    {
+      "path": "/assets/index-DMyQH3Xd.css",
+      "status": 200,
+      "sha256": "94de2287f73df15bd92b83938754a65167ed3e9b725d8b94264eab48d233334c",
+      "expectedSha256": "94de2287f73df15bd92b83938754a65167ed3e9b725d8b94264eab48d233334c",
+      "match": true,
+      "cacheControl": "public, max-age=31536000, immutable"
+    },
+    {
+      "path": "/favicon.svg",
+      "status": 200,
+      "sha256": "61bc9a161de58248288e6905425d7180f0624c2865007b97d763fdac12043a66",
+      "expectedSha256": "61bc9a161de58248288e6905425d7180f0624c2865007b97d763fdac12043a66",
+      "match": true,
+      "cacheControl": "max-age=3600"
+    },
+    {
+      "path": "/icons.svg",
+      "status": 200,
+      "sha256": "b45fa506195cfcdef406ba9f0c77b36ddc1a7c224040926ec70abc2fdea7b93a",
+      "expectedSha256": "b45fa506195cfcdef406ba9f0c77b36ddc1a7c224040926ec70abc2fdea7b93a",
+      "match": true,
+      "cacheControl": "max-age=3600"
+    },
+    {
+      "path": "/index.html",
+      "status": 200,
+      "sha256": "5a4dcca2f1b352dd98c96f77ce243eea73c0e32f10e5e8c24abdda4c01b3e025",
+      "expectedSha256": "5a4dcca2f1b352dd98c96f77ce243eea73c0e32f10e5e8c24abdda4c01b3e025",
+      "match": true,
+      "cacheControl": "no-cache, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/release.json",
+      "status": 200,
+      "sha256": "90a76d0744e4ba8db95a513900822af62fc410de794287330ac3a601dd777e4d",
+      "expectedSha256": "90a76d0744e4ba8db95a513900822af62fc410de794287330ac3a601dd777e4d",
+      "match": true,
+      "cacheControl": "no-cache, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/",
+      "status": 200,
+      "sha256": "5a4dcca2f1b352dd98c96f77ce243eea73c0e32f10e5e8c24abdda4c01b3e025",
+      "expectedSha256": "5a4dcca2f1b352dd98c96f77ce243eea73c0e32f10e5e8c24abdda4c01b3e025",
+      "match": true,
+      "cacheControl": "no-cache, max-age=0, must-revalidate"
+    }
+  ],
+  "pass": true
+}

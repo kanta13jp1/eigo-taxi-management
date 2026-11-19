@@ -1,0 +1,124 @@
+[
+  {
+    "id": "PKG-01",
+    "path": "docs/deliverables/2026-10-23-traceability/business-2026-10-24-v13.pptx",
+    "themeId": "mighty-hp-v1",
+    "registryVersion": "2026-10-24-r13",
+    "registrySha256": "90129f144cd0fee7054482efcd4c178dd0fb7c99fcc79fed2f70de33aefec3b6",
+    "sha256": "47a16bd84c202f19d65b0215e88626839efe5aca388291dda5e5e1f11cdb0061",
+    "receipt": "docs/traceability/reports/ppt-r13/business/validation.json",
+    "slides": 21
+  },
+  {
+    "id": "PKG-02",
+    "path": "docs/deliverables/2026-10-23-traceability/requirements-2026-10-24-v13.pptx",
+    "themeId": "mighty-hp-v1",
+    "registryVersion": "2026-10-24-r13",
+    "registrySha256": "90129f144cd0fee7054482efcd4c178dd0fb7c99fcc79fed2f70de33aefec3b6",
+    "sha256": "a342135226e7573dfe6d1c8f31303c21a1d84832cd8d039a7df1b97ec9863886",
+    "receipt": "docs/traceability/reports/ppt-r13/requirements/validation.json",
+    "slides": 10
+  },
+  {
+    "id": "PKG-03",
+    "path": "docs/deliverables/2026-10-23-traceability/design-2026-10-24-v13.pptx",
+    "themeId": "mighty-hp-v1",
+    "registryVersion": "2026-10-24-r13",
+    "registrySha256": "90129f144cd0fee7054482efcd4c178dd0fb7c99fcc79fed2f70de33aefec3b6",
+    "sha256": "3fdd472f8cf7965e119e498bc0d0af35cea684e6fb1302bd4df1446f04049c59",
+    "receipt": "docs/traceability/reports/ppt-r13/design/validation.json",
+    "slides": 10
+  },
+  {
+    "id": "PKG-04",
+    "path": "docs/deliverables/2026-10-23-traceability/test-spec-2026-10-24-v13.pptx",
+    "themeId": "mighty-hp-v1",
+    "registryVersion": "2026-10-24-r13",
+    "registrySha256": "90129f144cd0fee7054482efcd4c178dd0fb7c99fcc79fed2f70de33aefec3b6",
+    "sha256": "2418a9a94a09a4127097236eb924d4d6fd969f4ea17486422b52fbcbba8cd055",
+    "receipt": "docs/traceability/reports/ppt-r13/test-spec/validation.json",
+    "slides": 10
+  },
+  {
+    "id": "PKG-05",
+    "path": "docs/deliverables/2026-10-23-traceability/tasks-2026-10-28-v14.pptx",
+    "themeId": "mighty-hp-v1",
+    "registryVersion": "2026-10-24-r13",
+    "registrySha256": "90129f144cd0fee7054482efcd4c178dd0fb7c99fcc79fed2f70de33aefec3b6",
+    "sha256": "5b483c02ecb12aa7f5b2afb17fbe66445ceef870f8d6d1a38111063fbe125816",
+    "receipt": "docs/traceability/reports/ppt-update-20261028/tasks/validation.json",
+    "slides": 10,
+    "progressSupplementDate": "2026-10-28"
+  },
+  {
+    "id": "PKG-06",
+    "path": "docs/deliverables/2026-10-23-traceability/implementation-2026-10-24-v13.pptx",
+    "themeId": "mighty-hp-v1",
+    "registryVersion": "2026-10-24-r13",
+    "registrySha256": "90129f144cd0fee7054482efcd4c178dd0fb7c99fcc79fed2f70de33aefec3b6",
+    "sha256": "1f0dd7eb32da226894ebd45a76d54f0881e9ba8a8586089e5240d12d78e0a864",
+    "receipt": "docs/traceability/reports/ppt-r13/implementation/validation.json",
+    "slides": 10
+  },
+  {
+    "id": "PKG-07",
+    "path": "docs/deliverables/2026-10-23-traceability/test-code-2026-10-24-v13.pptx",
+    "themeId": "mighty-hp-v1",
+    "registryVersion": "2026-10-24-r13",
+    "registrySha256": "90129f144cd0fee7054482efcd4c178dd0fb7c99fcc79fed2f70de33aefec3b6",
+    "sha256": "1cbb0e7aed4f8bc7d0465a2df021e2846a73613e4bab142682ff23cf00da3e12",
+    "receipt": "docs/traceability/reports/ppt-r13/test-code/validation.json",
+    "slides": 10
+  },
+  {
+    "id": "PKG-08",
+    "path": "docs/deliverables/2026-10-23-traceability/acceptance-2026-10-24-v13.pptx",
+    "themeId": "mighty-hp-v1",
+    "registryVersion": "2026-10-24-r13",
+    "registrySha256": "90129f144cd0fee7054482efcd4c178dd0fb7c99fcc79fed2f70de33aefec3b6",
+    "sha256": "28fb6b5ca8cfeb628736033e4eab3830ceb68c423272ef2d45d8099479a910ab",
+    "receipt": "docs/traceability/reports/ppt-r13/acceptance/validation.json",
+    "slides": 10
+  },
+  {
+    "id": "PKG-09",
+    "path": "docs/deliverables/2026-10-23-traceability/operations-2026-10-24-v13.pptx",
+    "themeId": "mighty-hp-v1",
+    "registryVersion": "2026-10-24-r13",
+    "registrySha256": "90129f144cd0fee7054482efcd4c178dd0fb7c99fcc79fed2f70de33aefec3b6",
+    "sha256": "9c8c8ee284fcc010edbf97f75f3624c156bd175d2036deeb16676ea019a93be9",
+    "receipt": "docs/traceability/reports/ppt-r13/operations/validation.json",
+    "slides": 10
+  },
+  {
+    "id": "PKG-10",
+    "path": "docs/deliverables/2026-10-23-traceability/user-2026-10-24-v13.pptx",
+    "themeId": "mighty-hp-v1",
+    "registryVersion": "2026-10-24-r13",
+    "registrySha256": "90129f144cd0fee7054482efcd4c178dd0fb7c99fcc79fed2f70de33aefec3b6",
+    "sha256": "c5cb703d639a87c203658db36d4818914f47794b92e1600a80743e773de3044a",
+    "receipt": "docs/traceability/reports/ppt-r13/user/validation.json",
+    "slides": 10
+  },
+  {
+    "id": "PKG-11",
+    "path": "docs/deliverables/2026-10-23-traceability/matrix-2026-10-24-v13.pptx",
+    "themeId": "mighty-hp-v1",
+    "registryVersion": "2026-10-24-r13",
+    "registrySha256": "90129f144cd0fee7054482efcd4c178dd0fb7c99fcc79fed2f70de33aefec3b6",
+    "sha256": "43d4a8b4abcd2bbe252a1dc0e18c3ec819f4692503a391acdb8d09df38f2ef9a",
+    "receipt": "docs/traceability/reports/ppt-r13/matrix/validation.json",
+    "slides": 8
+  },
+  {
+    "id": "PKG-12",
+    "path": "docs/deliverables/2026-10-23-traceability/progress-2026-10-28-v14.pptx",
+    "themeId": "mighty-hp-v1",
+    "registryVersion": "2026-10-24-r13",
+    "registrySha256": "90129f144cd0fee7054482efcd4c178dd0fb7c99fcc79fed2f70de33aefec3b6",
+    "sha256": "0937050a1a696f8666316136fcb6fe952a7537cf16120651471160c3dc1b9eef",
+    "receipt": "docs/traceability/reports/ppt-update-20261028/progress/validation.json",
+    "slides": 7,
+    "progressSupplementDate": "2026-10-28"
+  }
+]

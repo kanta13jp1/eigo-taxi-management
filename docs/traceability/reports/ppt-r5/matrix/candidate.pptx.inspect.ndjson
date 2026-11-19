@@ -1,0 +1,128 @@
+{"kind":"deck","id":"pr/soierr","name":"Deck"}
+{"kind":"layout","id":"ly/at8ru1ob","editable":false,"name":"Master","type":"master"}
+{"kind":"layout","id":"ly/5onq9g7q","editable":false,"name":"Title Slide","type":"title","placeholders":[{"name":"title","type":"title"},{"name":"subtitle","type":"subtitle"}]}
+{"kind":"layout","id":"ly/43e9gv6h","editable":false,"name":"Section Header","type":"sectionHeader","placeholders":[{"name":"title","type":"title"}]}
+{"kind":"layout","id":"ly/psfad8jy","editable":false,"name":"Title and Body","type":"tx","placeholders":[{"name":"title","type":"title"},{"name":"body","type":"body"}]}
+{"kind":"layout","id":"ly/cvq5kr2t","editable":false,"name":"Title and Two Column","type":"twoColTx","placeholders":[{"name":"title","type":"title"},{"name":"Left column","type":"body"},{"name":"Right column","type":"body"}]}
+{"kind":"layout","id":"ly/ra9kb21o","editable":false,"name":"Title and One Column","type":"tx","placeholders":[{"name":"title","type":"title"},{"name":"body","type":"body"}]}
+{"kind":"layout","id":"ly/bydc7a90","editable":false,"name":"Blank","type":"blank"}
+{"kind":"slide","id":"sl/grz16s","slideIndex":0,"layout":{"id":"ly/bydc7a90","name":"Blank"},"title":"トレーサビリティ","textShapes":3,"backgroundColor":"rgba(252,249,244,1)"}
+{"kind":"shape","id":"sh/cjmtw7q9","slideIndex":0,"position":{"left":0,"top":0,"width":1280,"height":66},"geometry":"rect","fillColor":"#FFFFFF","lineWidth":0}
+{"kind":"textbox","id":"sh/y54byh8f","slideIndex":0,"position":{"left":310,"top":20,"width":900,"height":35},"text":"トレーサビリティ","geometry":"rect","lineWidth":0,"style":{"fontSize":21,"typeface":"Yu Gothic","color":"#333333","alignment":"left"}}
+{"kind":"shape","id":"sh/z6dsrmp0","slideIndex":0,"position":{"left":110,"top":90,"width":1060,"height":105},"geometry":"rect","fillColor":"rgba(255,255,255,0.95)","lineWidth":0}
+{"kind":"shape","id":"sh/07mt0rql","slideIndex":0,"position":{"left":110,"top":90,"width":1060,"height":4},"geometry":"rect","fillColor":"#EF7E00","lineWidth":0}
+{"kind":"shape","id":"sh/l8vutw7q","slideIndex":0,"position":{"left":1166,"top":90,"width":4,"height":105},"geometry":"rect","fillColor":"#EF7E00","lineWidth":0}
+{"kind":"shape","id":"sh/m94b218b","slideIndex":0,"position":{"left":110,"top":191,"width":1060,"height":4},"geometry":"rect","fillColor":"#00A5E3","lineWidth":0}
+{"kind":"shape","id":"sh/7axcvmpw","slideIndex":0,"position":{"left":110,"top":90,"width":4,"height":105},"geometry":"rect","fillColor":"#00A5E3","lineWidth":0}
+{"kind":"textbox","id":"sh/3e5ovqdk","slideIndex":0,"position":{"left":137,"top":112,"width":1005,"height":65},"text":"工程間対応 1–10 / 業務から","geometry":"rect","lineWidth":0,"style":{"fontSize":29,"typeface":"Yu Gothic","color":"#333333","alignment":"left"}}
+{"kind":"shape","id":"sh/2dwn2lcz","slideIndex":0,"position":{"left":45,"top":215,"width":1190,"height":450},"geometry":"rect","fillColor":"rgba(255,255,255,0.96)","lineWidth":0}
+{"kind":"textbox","id":"sh/4fy54vup","slideIndex":0,"position":{"left":62,"top":682,"width":1145,"height":24},"text":"PKG-11-SL-01 | 2026-10-23-r5 | 1/8 ","geometry":"rect","lineWidth":0,"style":{"fontSize":13,"typeface":"Yu Gothic","color":"#333333","alignment":"left"}}
+{"kind":"table","id":"tb/ylwnudc7","slideIndex":0,"position":{"left":65,"top":230,"width":1150,"height":410},"name":"","rows":11,"cols":5,"preview":"業務 | 要件 | 設計 | テスト仕様 | タスク"}
+{"kind":"image","id":"im/qx4j2lo3","slideIndex":0,"position":{"left":0,"top":66,"width":1280,"height":654},"fit":"cover","name":""}
+{"kind":"image","id":"im/cjm14v69","slideIndex":0,"position":{"left":48,"top":0,"width":190,"height":66},"fit":"contain","name":""}
+{"kind":"notes","id":"nt/grz16s","slideIndex":0,"text":"\nTheme:mighty-hp-v1. Canonical:docs/traceability/registry.json. Display excerpts:see canonical document and notes for full detail. No acceptance PASS implied."}
+{"kind":"slide","id":"sl/s0cfye","slideIndex":1,"layout":{"id":"ly/bydc7a90","name":"Blank"},"title":"トレーサビリティ","textShapes":3,"backgroundColor":"rgba(252,249,244,1)"}
+{"kind":"shape","id":"sh/ts3y5ofq","slideIndex":1,"position":{"left":0,"top":0,"width":1280,"height":66},"geometry":"rect","fillColor":"#FFFFFF","lineWidth":0}
+{"kind":"textbox","id":"sh/jm1gzexo","slideIndex":1,"position":{"left":310,"top":20,"width":900,"height":35},"text":"トレーサビリティ","geometry":"rect","lineWidth":0,"style":{"fontSize":21,"typeface":"Yu Gothic","color":"#333333","alignment":"left"}}
+{"kind":"shape","id":"sh/ilsfq9w3","slideIndex":1,"position":{"left":110,"top":90,"width":1060,"height":105},"geometry":"rect","fillColor":"rgba(255,255,255,0.95)","lineWidth":0}
+{"kind":"shape","id":"sh/5ojy1ofu","slideIndex":1,"position":{"left":110,"top":90,"width":1060,"height":4},"geometry":"rect","fillColor":"#EF7E00","lineWidth":0}
+{"kind":"shape","id":"sh/4naxsje9","slideIndex":1,"position":{"left":1166,"top":90,"width":4,"height":105},"geometry":"rect","fillColor":"#EF7E00","lineWidth":0}
+{"kind":"shape","id":"sh/3ilgbixs","slideIndex":1,"position":{"left":110,"top":191,"width":1060,"height":4},"geometry":"rect","fillColor":"#00A5E3","lineWidth":0}
+{"kind":"shape","id":"sh/2hcf2dwn","slideIndex":1,"position":{"left":110,"top":90,"width":4,"height":105},"geometry":"rect","fillColor":"#00A5E3","lineWidth":0}
+{"kind":"textbox","id":"sh/g3il8vix","slideIndex":1,"position":{"left":137,"top":112,"width":1005,"height":65},"text":"工程間対応 11–20 / 業務から","geometry":"rect","lineWidth":0,"style":{"fontSize":29,"typeface":"Yu Gothic","color":"#333333","alignment":"left"}}
+{"kind":"shape","id":"sh/14r2h0zi","slideIndex":1,"position":{"left":45,"top":215,"width":1190,"height":450},"geometry":"rect","fillColor":"rgba(255,255,255,0.96)","lineWidth":0}
+{"kind":"textbox","id":"sh/f29kfqhc","slideIndex":1,"position":{"left":62,"top":682,"width":1145,"height":24},"text":"PKG-11-SL-02 | 2026-10-23-r5 | 2/8 ","geometry":"rect","lineWidth":0,"style":{"fontSize":13,"typeface":"Yu Gothic","color":"#333333","alignment":"left"}}
+{"kind":"table","id":"tb/98fqh47e","slideIndex":1,"position":{"left":65,"top":230,"width":1150,"height":410},"name":"","rows":11,"cols":5,"preview":"業務 | 要件 | 設計 | テスト仕様 | タスク"}
+{"kind":"image","id":"im/7qtov654","slideIndex":1,"position":{"left":0,"top":66,"width":1280,"height":654},"fit":"cover","name":""}
+{"kind":"image","id":"im/tsb6xgna","slideIndex":1,"position":{"left":48,"top":0,"width":190,"height":66},"fit":"contain","name":""}
+{"kind":"notes","id":"nt/s0cfye","slideIndex":1,"text":"\nTheme:mighty-hp-v1. Canonical:docs/traceability/registry.json. Display excerpts:see canonical document and notes for full detail. No acceptance PASS implied."}
+{"kind":"slide","id":"sl/ymqbmb","slideIndex":2,"layout":{"id":"ly/bydc7a90","name":"Blank"},"title":"トレーサビリティ","textShapes":3,"backgroundColor":"rgba(252,249,244,1)"}
+{"kind":"shape","id":"sh/zi18zqd4","slideIndex":2,"position":{"left":0,"top":0,"width":1280,"height":66},"geometry":"rect","fillColor":"#FFFFFF","lineWidth":0}
+{"kind":"textbox","id":"sh/dgjqxgve","slideIndex":2,"position":{"left":310,"top":20,"width":900,"height":35},"text":"トレーサビリティ","geometry":"rect","lineWidth":0,"style":{"fontSize":21,"typeface":"Yu Gothic","color":"#333333","alignment":"left"}}
+{"kind":"shape","id":"sh/cva9obut","slideIndex":2,"position":{"left":110,"top":90,"width":1060,"height":105},"geometry":"rect","fillColor":"rgba(255,255,255,0.95)","lineWidth":0}
+{"kind":"shape","id":"sh/bu18v6d8","slideIndex":2,"position":{"left":110,"top":90,"width":1060,"height":4},"geometry":"rect","fillColor":"#EF7E00","lineWidth":0}
+{"kind":"shape","id":"sh/qtsrm1cn","slideIndex":2,"position":{"left":1166,"top":90,"width":4,"height":105},"geometry":"rect","fillColor":"#EF7E00","lineWidth":0}
+{"kind":"shape","id":"sh/pszqtwv2","slideIndex":2,"position":{"left":110,"top":191,"width":1060,"height":4},"geometry":"rect","fillColor":"#00A5E3","lineWidth":0}
+{"kind":"shape","id":"sh/orqpkruh","slideIndex":2,"position":{"left":110,"top":90,"width":4,"height":105},"geometry":"rect","fillColor":"#00A5E3","lineWidth":0}
+{"kind":"textbox","id":"sh/2t8nqx8j","slideIndex":2,"position":{"left":137,"top":112,"width":1005,"height":65},"text":"工程間対応 21–30 / 業務から","geometry":"rect","lineWidth":0,"style":{"fontSize":29,"typeface":"Yu Gothic","color":"#333333","alignment":"left"}}
+{"kind":"shape","id":"sh/3uhoj2p4","slideIndex":2,"position":{"left":45,"top":215,"width":1190,"height":450},"geometry":"rect","fillColor":"rgba(255,255,255,0.96)","lineWidth":0}
+{"kind":"textbox","id":"sh/pgz6lc7u","slideIndex":2,"position":{"left":62,"top":682,"width":1145,"height":24},"text":"PKG-11-SL-03 | 2026-10-23-r5 | 3/8 ","geometry":"rect","lineWidth":0,"style":{"fontSize":13,"typeface":"Yu Gothic","color":"#333333","alignment":"left"}}
+{"kind":"table","id":"tb/z65gnmpk","slideIndex":2,"position":{"left":65,"top":230,"width":1150,"height":410},"name":"","rows":11,"cols":5,"preview":"業務 | 要件 | 設計 | テスト仕様 | タスク"}
+{"kind":"image","id":"im/dsj6hgn2","slideIndex":2,"position":{"left":0,"top":66,"width":1280,"height":654},"fit":"cover","name":""}
+{"kind":"image","id":"im/rq1of65w","slideIndex":2,"position":{"left":48,"top":0,"width":190,"height":66},"fit":"contain","name":""}
+{"kind":"notes","id":"nt/ymqbmb","slideIndex":2,"text":"\nTheme:mighty-hp-v1. Canonical:docs/traceability/registry.json. Display excerpts:see canonical document and notes for full detail. No acceptance PASS implied."}
+{"kind":"slide","id":"sl/1m1boi","slideIndex":3,"layout":{"id":"ly/bydc7a90","name":"Blank"},"title":"トレーサビリティ","textShapes":3,"backgroundColor":"rgba(252,249,244,1)"}
+{"kind":"shape","id":"sh/ulo361gv","slideIndex":3,"position":{"left":0,"top":0,"width":1280,"height":66},"geometry":"rect","fillColor":"#FFFFFF","lineWidth":0}
+{"kind":"textbox","id":"sh/sjm14ry5","slideIndex":3,"position":{"left":310,"top":20,"width":900,"height":35},"text":"トレーサビリティ","geometry":"rect","lineWidth":0,"style":{"fontSize":21,"typeface":"Yu Gothic","color":"#333333","alignment":"left"}}
+{"kind":"shape","id":"sh/tkv2dwfq","slideIndex":3,"position":{"left":110,"top":90,"width":1060,"height":105},"geometry":"rect","fillColor":"rgba(255,255,255,0.95)","lineWidth":0}
+{"kind":"shape","id":"sh/6x4j2hgz","slideIndex":3,"position":{"left":110,"top":90,"width":1060,"height":4},"geometry":"rect","fillColor":"#EF7E00","lineWidth":0}
+{"kind":"shape","id":"sh/7idkbmxk","slideIndex":3,"position":{"left":1166,"top":90,"width":4,"height":105},"geometry":"rect","fillColor":"#EF7E00","lineWidth":0}
+{"kind":"shape","id":"sh/cfqlgbe9","slideIndex":3,"position":{"left":110,"top":191,"width":1060,"height":4},"geometry":"rect","fillColor":"#00A5E3","lineWidth":0}
+{"kind":"shape","id":"sh/dgz2pgfu","slideIndex":3,"position":{"left":110,"top":90,"width":4,"height":105},"geometry":"rect","fillColor":"#00A5E3","lineWidth":0}
+{"kind":"textbox","id":"sh/5gvmxsri","slideIndex":3,"position":{"left":137,"top":112,"width":1005,"height":65},"text":"工程間対応 31–38 / 業務から","geometry":"rect","lineWidth":0,"style":{"fontSize":29,"typeface":"Yu Gothic","color":"#333333","alignment":"left"}}
+{"kind":"shape","id":"sh/4fm54nqx","slideIndex":3,"position":{"left":45,"top":215,"width":1190,"height":450},"geometry":"rect","fillColor":"rgba(255,255,255,0.96)","lineWidth":0}
+{"kind":"textbox","id":"sh/idkn2x8r","slideIndex":3,"position":{"left":62,"top":682,"width":1145,"height":24},"text":"PKG-11-SL-04 | 2026-10-23-r5 | 4/8 ","geometry":"rect","lineWidth":0,"style":{"fontSize":13,"typeface":"Yu Gothic","color":"#333333","alignment":"left"}}
+{"kind":"table","id":"tb/gfa987ap","slideIndex":3,"position":{"left":65,"top":230,"width":1150,"height":410},"name":"","rows":9,"cols":5,"preview":"業務 | 要件 | 設計 | テスト仕様 | タスク"}
+{"kind":"image","id":"im/03ut8nal","slideIndex":3,"position":{"left":0,"top":66,"width":1280,"height":654},"fit":"cover","name":""}
+{"kind":"image","id":"im/e1cb6dsv","slideIndex":3,"position":{"left":48,"top":0,"width":190,"height":66},"fit":"contain","name":""}
+{"kind":"notes","id":"nt/1m1boi","slideIndex":3,"text":"\nTheme:mighty-hp-v1. Canonical:docs/traceability/registry.json. Display excerpts:see canonical document and notes for full detail. No acceptance PASS implied."}
+{"kind":"slide","id":"sl/0ni4x1","slideIndex":4,"layout":{"id":"ly/bydc7a90","name":"Blank"},"title":"トレーサビリティ","textShapes":3,"backgroundColor":"rgba(252,249,244,1)"}
+{"kind":"shape","id":"sh/t8bq5kjm","slideIndex":4,"position":{"left":0,"top":0,"width":1280,"height":66},"geometry":"rect","fillColor":"#FFFFFF","lineWidth":0}
+{"kind":"textbox","id":"sh/j298zqlk","slideIndex":4,"position":{"left":310,"top":20,"width":900,"height":35},"text":"トレーサビリティ","geometry":"rect","lineWidth":0,"style":{"fontSize":21,"typeface":"Yu Gothic","color":"#333333","alignment":"left"}}
+{"kind":"shape","id":"sh/i107qlkz","slideIndex":4,"position":{"left":110,"top":90,"width":1060,"height":105},"geometry":"rect","fillColor":"rgba(255,255,255,0.95)","lineWidth":0}
+{"kind":"shape","id":"sh/54bq103q","slideIndex":4,"position":{"left":110,"top":90,"width":1060,"height":4},"geometry":"rect","fillColor":"#EF7E00","lineWidth":0}
+{"kind":"shape","id":"sh/k3i9sv25","slideIndex":4,"position":{"left":1166,"top":90,"width":4,"height":105},"geometry":"rect","fillColor":"#EF7E00","lineWidth":0}
+{"kind":"shape","id":"sh/3yd8bu14","slideIndex":4,"position":{"left":110,"top":191,"width":1060,"height":4},"geometry":"rect","fillColor":"#00A5E3","lineWidth":0}
+{"kind":"shape","id":"sh/2x4r2pkj","slideIndex":4,"position":{"left":110,"top":90,"width":4,"height":105},"geometry":"rect","fillColor":"#00A5E3","lineWidth":0}
+{"kind":"textbox","id":"sh/4r6l8zat","slideIndex":4,"position":{"left":137,"top":112,"width":1005,"height":65},"text":"工程間対応 1–10 / 実装から","geometry":"rect","lineWidth":0,"style":{"fontSize":29,"typeface":"Yu Gothic","color":"#333333","alignment":"left"}}
+{"kind":"shape","id":"sh/5sf2h4re","slideIndex":4,"position":{"left":45,"top":215,"width":1190,"height":450},"geometry":"rect","fillColor":"rgba(255,255,255,0.96)","lineWidth":0}
+{"kind":"textbox","id":"sh/3qxkfe9o","slideIndex":4,"position":{"left":62,"top":682,"width":1145,"height":24},"text":"PKG-11-SL-05 | 2026-10-23-r5 | 5/8 ","geometry":"rect","lineWidth":0,"style":{"fontSize":13,"typeface":"Yu Gothic","color":"#333333","alignment":"left"}}
+{"kind":"table","id":"tb/pwfitoje","slideIndex":4,"position":{"left":65,"top":230,"width":1150,"height":410},"name":"","rows":11,"cols":5,"preview":"実装 | テストコード | 受入 | 運用 | 利用者"}
+{"kind":"image","id":"im/f2ho3q1k","slideIndex":4,"position":{"left":0,"top":66,"width":1280,"height":654},"fit":"cover","name":""}
+{"kind":"image","id":"im/1oz650za","slideIndex":4,"position":{"left":48,"top":0,"width":190,"height":66},"fit":"contain","name":""}
+{"kind":"notes","id":"nt/0ni4x1","slideIndex":4,"text":"\nTheme:mighty-hp-v1. Canonical:docs/traceability/registry.json. Display excerpts:see canonical document and notes for full detail. No acceptance PASS implied."}
+{"kind":"slide","id":"sl/gjhftf","slideIndex":5,"layout":{"id":"ly/bydc7a90","name":"Blank"},"title":"トレーサビリティ","textShapes":3,"backgroundColor":"rgba(252,249,244,1)"}
+{"kind":"shape","id":"sh/2x4ful0n","slideIndex":5,"position":{"left":0,"top":0,"width":1280,"height":66},"geometry":"rect","fillColor":"#FFFFFF","lineWidth":0}
+{"kind":"textbox","id":"sh/0vmxsbih","slideIndex":5,"position":{"left":310,"top":20,"width":900,"height":35},"text":"トレーサビリティ","geometry":"rect","lineWidth":0,"style":{"fontSize":21,"typeface":"Yu Gothic","color":"#333333","alignment":"left"}}
+{"kind":"shape","id":"sh/1wvylgj2","slideIndex":5,"position":{"left":110,"top":90,"width":1060,"height":105},"geometry":"rect","fillColor":"rgba(255,255,255,0.95)","lineWidth":0}
+{"kind":"shape","id":"sh/et4fql0b","slideIndex":5,"position":{"left":110,"top":90,"width":1060,"height":4},"geometry":"rect","fillColor":"#EF7E00","lineWidth":0}
+{"kind":"shape","id":"sh/fudgj61w","slideIndex":5,"position":{"left":1166,"top":90,"width":4,"height":105},"geometry":"rect","fillColor":"#EF7E00","lineWidth":0}
+{"kind":"shape","id":"sh/kr6h4fil","slideIndex":5,"position":{"left":110,"top":191,"width":1060,"height":4},"geometry":"rect","fillColor":"#00A5E3","lineWidth":0}
+{"kind":"shape","id":"sh/lszyxkj6","slideIndex":5,"position":{"left":110,"top":90,"width":4,"height":105},"geometry":"rect","fillColor":"#00A5E3","lineWidth":0}
+{"kind":"textbox","id":"sh/t0zup0by","slideIndex":5,"position":{"left":137,"top":112,"width":1005,"height":65},"text":"工程間対応 11–20 / 実装から","geometry":"rect","lineWidth":0,"style":{"fontSize":29,"typeface":"Yu Gothic","color":"#333333","alignment":"left"}}
+{"kind":"shape","id":"sh/szqdgvud","slideIndex":5,"position":{"left":45,"top":215,"width":1190,"height":450},"geometry":"rect","fillColor":"rgba(255,255,255,0.96)","lineWidth":0}
+{"kind":"textbox","id":"sh/6xobelc7","slideIndex":5,"position":{"left":62,"top":682,"width":1145,"height":24},"text":"PKG-11-SL-06 | 2026-10-23-r5 | 6/8 ","geometry":"rect","lineWidth":0,"style":{"fontSize":13,"typeface":"Yu Gothic","color":"#333333","alignment":"left"}}
+{"kind":"table","id":"tb/kfm1s3mt","slideIndex":5,"position":{"left":65,"top":230,"width":1150,"height":410},"name":"","rows":11,"cols":5,"preview":"実装 | テストコード | 受入 | 運用 | 利用者"}
+{"kind":"image","id":"im/g7ixcfi1","slideIndex":5,"position":{"left":0,"top":66,"width":1280,"height":654},"fit":"cover","name":""}
+{"kind":"image","id":"im/u50fap0b","slideIndex":5,"position":{"left":48,"top":0,"width":190,"height":66},"fit":"contain","name":""}
+{"kind":"notes","id":"nt/gjhftf","slideIndex":5,"text":"\nTheme:mighty-hp-v1. Canonical:docs/traceability/registry.json. Display excerpts:see canonical document and notes for full detail. No acceptance PASS implied."}
+{"kind":"slide","id":"sl/sdbsaj","slideIndex":6,"layout":{"id":"ly/bydc7a90","name":"Blank"},"title":"トレーサビリティ","textShapes":3,"backgroundColor":"rgba(252,249,244,1)"}
+{"kind":"shape","id":"sh/4z2p4369","slideIndex":6,"position":{"left":0,"top":0,"width":1280,"height":66},"geometry":"rect","fillColor":"#FFFFFF","lineWidth":0}
+{"kind":"textbox","id":"sh/61kr6dof","slideIndex":6,"position":{"left":310,"top":20,"width":900,"height":35},"text":"トレーサビリティ","geometry":"rect","lineWidth":0,"style":{"fontSize":21,"typeface":"Yu Gothic","color":"#333333","alignment":"left"}}
+{"kind":"shape","id":"sh/r2t8fi50","slideIndex":6,"position":{"left":110,"top":90,"width":1060,"height":105},"geometry":"rect","fillColor":"rgba(255,255,255,0.95)","lineWidth":0}
+{"kind":"shape","id":"sh/s329836l","slideIndex":6,"position":{"left":110,"top":90,"width":1060,"height":4},"geometry":"rect","fillColor":"#EF7E00","lineWidth":0}
+{"kind":"shape","id":"sh/t4bqh8n6","slideIndex":6,"position":{"left":1166,"top":90,"width":4,"height":105},"geometry":"rect","fillColor":"#EF7E00","lineWidth":0}
+{"kind":"shape","id":"sh/m5g7u9ob","slideIndex":6,"position":{"left":110,"top":191,"width":1060,"height":4},"geometry":"rect","fillColor":"#00A5E3","lineWidth":0}
+{"kind":"shape","id":"sh/n6p83epg","slideIndex":6,"position":{"left":110,"top":90,"width":4,"height":105},"geometry":"rect","fillColor":"#00A5E3","lineWidth":0}
+{"kind":"textbox","id":"sh/7m18betc","slideIndex":6,"position":{"left":137,"top":112,"width":1005,"height":65},"text":"工程間対応 21–30 / 実装から","geometry":"rect","lineWidth":0,"style":{"fontSize":29,"typeface":"Yu Gothic","color":"#333333","alignment":"left"}}
+{"kind":"shape","id":"sh/mls729cr","slideIndex":6,"position":{"left":45,"top":215,"width":1190,"height":450},"geometry":"rect","fillColor":"rgba(255,255,255,0.96)","lineWidth":0}
+{"kind":"textbox","id":"sh/8nu94juh","slideIndex":6,"position":{"left":62,"top":682,"width":1145,"height":24},"text":"PKG-11-SL-07 | 2026-10-23-r5 | 7/8 ","geometry":"rect","lineWidth":0,"style":{"fontSize":13,"typeface":"Yu Gothic","color":"#333333","alignment":"left"}}
+{"kind":"table","id":"tb/6hkzep4r","slideIndex":6,"position":{"left":65,"top":230,"width":1150,"height":410},"name":"","rows":11,"cols":5,"preview":"実装 | テストコード | 受入 | 運用 | 利用者"}
+{"kind":"image","id":"im/mhwn69gr","slideIndex":6,"position":{"left":0,"top":66,"width":1280,"height":654},"fit":"cover","name":""}
+{"kind":"image","id":"im/83y58jyx","slideIndex":6,"position":{"left":48,"top":0,"width":190,"height":66},"fit":"contain","name":""}
+{"kind":"notes","id":"nt/sdbsaj","slideIndex":6,"text":"\nTheme:mighty-hp-v1. Canonical:docs/traceability/registry.json. Display excerpts:see canonical document and notes for full detail. No acceptance PASS implied."}
+{"kind":"slide","id":"sl/8wq1e0","slideIndex":7,"layout":{"id":"ly/bydc7a90","name":"Blank"},"title":"トレーサビリティ","textShapes":3,"backgroundColor":"rgba(252,249,244,1)"}
+{"kind":"shape","id":"sh/76t8bq9k","slideIndex":7,"position":{"left":0,"top":0,"width":1280,"height":66},"geometry":"rect","fillColor":"#FFFFFF","lineWidth":0}
+{"kind":"textbox","id":"sh/l4b69gre","slideIndex":7,"position":{"left":310,"top":20,"width":900,"height":35},"text":"トレーサビリティ","geometry":"rect","lineWidth":0,"style":{"fontSize":21,"typeface":"Yu Gothic","color":"#333333","alignment":"left"}}
+{"kind":"shape","id":"sh/k32p0bqt","slideIndex":7,"position":{"left":110,"top":90,"width":1060,"height":105},"geometry":"rect","fillColor":"rgba(255,255,255,0.95)","lineWidth":0}
+{"kind":"shape","id":"sh/j29o7698","slideIndex":7,"position":{"left":110,"top":90,"width":1060,"height":4},"geometry":"rect","fillColor":"#EF7E00","lineWidth":0}
+{"kind":"shape","id":"sh/yh07yl8n","slideIndex":7,"position":{"left":1166,"top":90,"width":4,"height":105},"geometry":"rect","fillColor":"#EF7E00","lineWidth":0}
+{"kind":"shape","id":"sh/50vqlkri","slideIndex":7,"position":{"left":110,"top":191,"width":1060,"height":4},"geometry":"rect","fillColor":"#00A5E3","lineWidth":0}
+{"kind":"shape","id":"sh/4zmpcfqx","slideIndex":7,"position":{"left":110,"top":90,"width":4,"height":105},"geometry":"rect","fillColor":"#00A5E3","lineWidth":0}
+{"kind":"textbox","id":"sh/6p4r2pw7","slideIndex":7,"position":{"left":137,"top":112,"width":1005,"height":65},"text":"工程間対応 31–38 / 実装から","geometry":"rect","lineWidth":0,"style":{"fontSize":29,"typeface":"Yu Gothic","color":"#333333","alignment":"left"}}
+{"kind":"shape","id":"sh/7qd8vuxs","slideIndex":7,"position":{"left":45,"top":215,"width":1190,"height":450},"geometry":"rect","fillColor":"rgba(255,255,255,0.96)","lineWidth":0}
+{"kind":"textbox","id":"sh/tsvqxkvy","slideIndex":7,"position":{"left":62,"top":682,"width":1145,"height":24},"text":"PKG-11-SL-08 | 2026-10-23-r5 | 8/8 ","geometry":"rect","lineWidth":0,"style":{"fontSize":13,"typeface":"Yu Gothic","color":"#333333","alignment":"left"}}
+{"kind":"table","id":"tb/bihknu9o","slideIndex":7,"position":{"left":65,"top":230,"width":1150,"height":410},"name":"","rows":9,"cols":5,"preview":"実装 | テストコード | 受入 | 運用 | 利用者"}
+{"kind":"image","id":"im/pgvup4zi","slideIndex":7,"position":{"left":0,"top":66,"width":1280,"height":654},"fit":"cover","name":""}
+{"kind":"image","id":"im/3edcnehs","slideIndex":7,"position":{"left":48,"top":0,"width":190,"height":66},"fit":"contain","name":""}
+{"kind":"notes","id":"nt/8wq1e0","slideIndex":7,"text":"\nTheme:mighty-hp-v1. Canonical:docs/traceability/registry.json. Display excerpts:see canonical document and notes for full detail. No acceptance PASS implied."}

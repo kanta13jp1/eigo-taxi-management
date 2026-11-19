@@ -1,0 +1,85 @@
+{
+  "mode": "after",
+  "at": "2026-11-15T09:06:26.920Z",
+  "cases": [
+    {
+      "width": 390,
+      "height": 360,
+      "bounds": {
+        "x": 16,
+        "y": 16,
+        "width": 358,
+        "height": 328
+      },
+      "scrollHeight": 520,
+      "clientHeight": 326,
+      "overflow": "auto",
+      "footerAfterWheel": {
+        "x": 202,
+        "y": 259,
+        "width": 147,
+        "height": 60
+      },
+      "initial": 7,
+      "result": 17,
+      "amount": 0,
+      "purchasesAdded": 1,
+      "requiredValidation": true,
+      "reopenClosedWithoutMutation": true,
+      "parentVerified": true
+    },
+    {
+      "width": 375,
+      "height": 600,
+      "bounds": {
+        "x": 16,
+        "y": 39,
+        "width": 343,
+        "height": 522
+      },
+      "scrollHeight": 520,
+      "clientHeight": 520,
+      "overflow": "auto",
+      "footerAfterWheel": {
+        "x": 194.5,
+        "y": 476,
+        "width": 139.5,
+        "height": 60
+      },
+      "initial": 7,
+      "result": 17,
+      "amount": 0,
+      "purchasesAdded": 1,
+      "requiredValidation": true,
+      "reopenClosedWithoutMutation": true,
+      "parentVerified": true
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "bounds": {
+        "x": 198,
+        "y": 16,
+        "width": 448,
+        "height": 358
+      },
+      "scrollHeight": 486,
+      "clientHeight": 356,
+      "overflow": "auto",
+      "footerAfterWheel": {
+        "x": 429,
+        "y": 307,
+        "width": 192,
+        "height": 42
+      },
+      "initial": 7,
+      "result": 17,
+      "amount": 0,
+      "purchasesAdded": 1,
+      "requiredValidation": true,
+      "reopenClosedWithoutMutation": true,
+      "parentVerified": true
+    }
+  ],
+  "writesSent": 0
+}

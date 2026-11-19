@@ -1,0 +1,25 @@
+{
+  "execution": "Local Node VM with the repository mock and synthetic rows only",
+  "sourceHash": "e9dfe7c3374ff491f13d90daeab04d20d3114dc2879a3515d1a67c4251b373fd",
+  "createWithoutCalendarProperty": {
+    "success": true,
+    "calls": [
+      "calendar.default",
+      "calendar.create",
+      "calendar.id:CAL-11"
+    ]
+  },
+  "cancelStoredIdNotReturned": {
+    "success": true,
+    "rowStatus": "cancelled",
+    "calls": [
+      "calendar.default",
+      "calendar.get:CAL-1"
+    ]
+  },
+  "cancelEmptyStoredId": {
+    "success": true,
+    "rowStatus": "cancelled",
+    "calls": []
+  }
+}

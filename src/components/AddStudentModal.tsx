@@ -18,26 +18,35 @@ export const AddStudentModal: React.FC<AddStudentModalProps> = ({
   const [phone, setPhone] = useState('');
   const [address, setAddress] = useState('');
   const [pickupNote, setPickupNote] = useState('');
-  const [ticketBalance, setTicketBalance] = useState<number>(10);
+  const [ticketBalance, setTicketBalance] = useState('10');
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState('');
 
   if (!isOpen) return null;
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!name || !address) {
-      alert('生徒名と送迎場所を入力してください');
+    const trimmedName = name.trim();
+    const trimmedAddress = address.trim();
+    if (!trimmedName || !trimmedAddress) {
+      setError('生徒名と送迎場所を入力してください');
+      return;
+    }
+    const initialBalance = Number(ticketBalance);
+    if (!ticketBalance.trim() || !Number.isSafeInteger(initialBalance) || initialBalance < 0) {
+      setError('初期チケット枚数は0以上の整数で入力してください');
       return;
     }
     setIsSubmitting(true);
+    setError('');
     try {
       await onSubmit({
-        name,
-        parentName,
-        phone,
-        address,
-        pickupNote,
-        ticketBalance,
+        name: trimmedName,
+        parentName: parentName.trim(),
+        phone: phone.trim(),
+        address: trimmedAddress,
+        pickupNote: pickupNote.trim(),
+        ticketBalance: initialBalance,
       });
       // リセット
       setName('');
@@ -45,8 +54,10 @@ export const AddStudentModal: React.FC<AddStudentModalProps> = ({
       setPhone('');
       setAddress('');
       setPickupNote('');
-      setTicketBalance(10);
+      setTicketBalance('10');
       onClose();
+    } catch (err) {
+      setError(err instanceof Error ? err.message : '生徒を登録できませんでした');
     } finally {
       setIsSubmitting(false);
     }
@@ -54,7 +65,7 @@ export const AddStudentModal: React.FC<AddStudentModalProps> = ({
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs">
-      <div className="bg-white rounded-2xl shadow-xl w-full max-w-lg overflow-hidden border border-slate-100 animate-in fade-in zoom-in-95 duration-150">
+      <div className="bg-white rounded-2xl shadow-xl w-full max-w-lg max-h-[calc(100dvh-2rem)] overflow-y-auto overscroll-contain border border-slate-100 animate-in fade-in zoom-in-95 duration-150">
         <div className="px-6 py-4 border-b border-slate-100 flex items-center justify-between bg-emerald-50/50">
           <div className="flex items-center gap-2">
             <div className="p-2 rounded-xl bg-emerald-100 text-emerald-700">
@@ -66,6 +77,8 @@ export const AddStudentModal: React.FC<AddStudentModalProps> = ({
             </div>
           </div>
           <button
+            type="button"
+            aria-label="閉じる"
             onClick={onClose}
             className="p-1 rounded-full text-slate-400 hover:text-slate-600 hover:bg-slate-100 transition-colors"
           >
@@ -74,6 +87,7 @@ export const AddStudentModal: React.FC<AddStudentModalProps> = ({
         </div>
 
         <form onSubmit={handleSubmit} className="p-6 space-y-4">
+          {error && <p role="alert" className="rounded-lg bg-rose-50 p-3 text-sm text-rose-800">{error}</p>}
           <div className="grid grid-cols-2 gap-3">
             <div>
               <label className="block text-xs font-semibold text-slate-600 mb-1 flex items-center gap-1">
@@ -120,8 +134,10 @@ export const AddStudentModal: React.FC<AddStudentModalProps> = ({
               <input
                 type="number"
                 min="0"
+                step="1"
+                required
                 value={ticketBalance}
-                onChange={(e) => setTicketBalance(parseInt(e.target.value) || 0)}
+                onChange={(e) => setTicketBalance(e.target.value)}
                 className="w-full px-3 py-2 border border-slate-200 rounded-xl focus:outline-hidden focus:ring-2 focus:ring-emerald-500 text-slate-800 text-sm font-semibold"
               />
             </div>

@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "deckSha256": "91f73b0cebb2e801b3d54c17cd99b3006e6ef40304d5569be9f3c3128eea27cd",
+  "nativePowerPointViewed": false,
+  "visuallyInspectedRenderedSlides": [
+    1,
+    2,
+    12
+  ],
+  "observations": [
+    "Slide 1 enumerates 19 fixes with Claude Code 2 and Codex 17. The daily counts are 4, 8 and 7.",
+    "Slide 2 lists 19 distinct AT identifiers, discloses partial coverage and shows AT-06 last.",
+    "Slide 12 shows A, C, B in ascending pickup time with all three rows readable and the public demo balance of 32. No clipping or overlaps observed on the revised slides.",
+    "Speaker notes account for 3 initial tool trials plus 3 verified date/time reservations, existing 4 to final 10; these are browser demo observations."
+  ],
+  "slide12SpeakerNotes": "AT-06。送迎日10/20 16:30、10/21 18:00、10/21 15:30をA・B・Cの順に新規登録。表示はA・C・B。公開匿名デモの元の4予約を維持。操作ツールの日付・時刻変更が反映されなかった初期3試行は11/12 16:00で登録し、その後の3件は画面値を確認して登録。全体4件から10件、残数32枚不変。独立React試験は残数7枚不変。新しいGoogle認証・家庭別認可・カレンダー同期の受入は行っていない。顧客用データ維持、本番未開始。",
+  "sourceInputCount": 32,
+  "onlySourceChange": "src/components/ParentPortal.tsx",
+  "beforeSha256": "1bb565fc165f16b6367313778a366e7b6b4849abeefeee9bcad0379165017283",
+  "afterSha256": "a9a756e628f62095361415060be4217ace4db4c2f892192eb762887b323afca4"
+}

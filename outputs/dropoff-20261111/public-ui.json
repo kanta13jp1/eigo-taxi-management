@@ -1,0 +1,24 @@
+{
+  "recordedAt": "2026-11-11T08:45:06.3534929Z",
+  "case": "AT-07",
+  "previousRelease": "aeb3c6dc735ff84d",
+  "release": "0024a904b2943843",
+  "scope": "Public test Hosting, parent demo, browser-local synthetic records",
+  "oldSelection": "帰り（送り）",
+  "oldTimeLabel": "お迎え時間",
+  "selection": "帰り（送り）",
+  "timeLabel": "お送り時間",
+  "time": "17:30",
+  "day": "2026-11-11",
+  "location": "架空の試験停留所 AT-07",
+  "beforeActive": 1,
+  "afterReloadActive": 2,
+  "beforeBalance": 32,
+  "afterReloadBalance": 32,
+  "afterReloadRide": "17:30 送り（ご自宅へ）",
+  "screens": [
+    "public-form.png",
+    "public-result.png"
+  ],
+  "customerWrites": 0
+}

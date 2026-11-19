@@ -1,0 +1,380 @@
+{
+  "verifiedAt": "2026-11-07T09:16:51.400971+00:00",
+  "newExecution": {
+    "passed": 20,
+    "total": 20,
+    "offline": true,
+    "externalRequests": 0,
+    "node": "24.22.1",
+    "browserVersion": "145.0.7632.6",
+    "runs": [
+      {
+        "path": "outputs/async-review-20261107/regression/trace-ui-2/results.json",
+        "command": "$env:EIGO_PLAYWRIGHT_MODULE='C:/Users/kanta/GitHub/eigo-taxi-management/.manual-build-20261020/node_modules/playwright'\n$env:EIGO_CHROMIUM_EXECUTABLE='C:/Users/kanta/AppData/Local/ms-playwright/chromium_headless_shell-1208/chrome-headless-shell-win64/chrome-headless-shell.exe'\n$env:EIGO_UI_TEST_OUTPUT_DIR='C:/Users/kanta/GitHub/eigo-taxi-management/outputs/async-review-20261107/regression/trace-ui-2'\n& 'C:/Program Files/WindowsApps/OpenAI.CodexPrimaryRuntime.v26-1104-709-0_26.1104.709.0_x64__3k8sg7r9htsxt/dependencies/node/bin/node.exe' scripts/test_trace_ui.mjs\nexit $LASTEXITCODE",
+        "workingDirectory": "outputs/async-review-20261107/regression/source",
+        "exitCode": 0
+      },
+      {
+        "path": "outputs/async-review-20261107/regression/local-ui-2/results.json",
+        "command": "$env:EIGO_PLAYWRIGHT_MODULE='C:/Users/kanta/GitHub/eigo-taxi-management/.manual-build-20261020/node_modules/playwright'\n$env:EIGO_CHROMIUM_EXECUTABLE='C:/Users/kanta/AppData/Local/ms-playwright/chromium_headless_shell-1208/chrome-headless-shell-win64/chrome-headless-shell.exe'\n& 'C:/Program Files/WindowsApps/OpenAI.CodexPrimaryRuntime.v26-1104-709-0_26.1104.709.0_x64__3k8sg7r9htsxt/dependencies/node/bin/node.exe' scripts/run_local_acceptance.mjs --out 'C:/Users/kanta/GitHub/eigo-taxi-management/outputs/async-review-20261107/regression/local-ui-2'\nexit $LASTEXITCODE",
+        "workingDirectory": "outputs/async-review-20261107/regression/source",
+        "exitCode": 0
+      }
+    ],
+    "checkedSnapshotSha256": {
+      "index.html": "0c4b500e19e937d57851c5ef15266a60c130570d81e7f245efbbc963bb98c7a7",
+      "package-lock.json": "ad3a4848723b7b1dc3ce3c840ffdf44ae8c9ea8cb58fb793cf5b5d58f2f3b805",
+      "package.json": "20528469ab1c1c2bd32f8f95b071a36ba9ea4eafcf62f2eccf683da755901375",
+      "postcss.config.js": "190c877db466995bf1482f4a16abd06e04a89ede3119341e2a86ff96e1737b27",
+      "tailwind.config.js": "2494112440ffad4261a3acc00236d9d0fa8fe12e3b08e882a3ca31ed42df798c",
+      "tsconfig.app.json": "8e5d12ba330e7d86409edec74b95451e0db22ee09b9426c94b5bf817571eddb0",
+      "tsconfig.json": "770b4140bbb581e2dfd9ea9946ffc9c75a1d86ba7d2db5f77c83e37cbdf9d808",
+      "tsconfig.node.json": "d366cc0827139db39c61815f22491bbfda56c654354a42ad7795143d314e45e8",
+      "scripts/local_acceptance_safety.mjs": "a7c512fdc80788c246aa1eb5a6dbca9ad7573859fc8dab0a1b0a2d099e370b34",
+      "scripts/run_local_acceptance.mjs": "bbf98d8ac266683e6239a6391f081c7a73af0ff3d22387495847fb8290bdb603",
+      "scripts/test_trace_ui.mjs": "bcd60909358980aa583ee2a7f2526ef92bedbebb3ba2f2852d07aea530c14369",
+      "src/App.css": "6e25a776d3e8102da5bacb3cb99f4a5fc662a2e01e6143140671a556d28c3d5c",
+      "src/App.tsx": "30d9a0d99648a09cd5891a6aea5e4d310ca97f9514e13bcbdd1bf8ceda60cb5f",
+      "src/deployment-config.ts": "5c30aad36376487fcf2fbb664f2574bdd430890191675ca9813b5fdea516b6f1",
+      "src/index.css": "66baff8b6d7a116920270aba8584dd856cf5de345b59b511b849b96152ce91d8",
+      "src/main.tsx": "6e9e5807fcbd48b75a96db5cbef36c996262196be42e6d4760dc86babbe61ad2",
+      "src/portal.ts": "2cb1dc0aed33b27a24ef6ed804a6ae1e01b44e07f0814c12044dc1d3525cbeec",
+      "scripts/fixtures/local-acceptance/google-auth.ts": "cdf798e20c6329ea53de6e037ef41fdb26754a8412d67f2d45fb1d6747bca40a",
+      "scripts/fixtures/local-acceptance/harness.tsx": "9ba68515c51b783d8ce17d81015993391e4bd3ec1ff85e9f881513117fb07cc2",
+      "scripts/fixtures/local-acceptance/index.html": "a0030c371776b189471b5e18df159b04706dba1659ab740055c2d1954b62eb0b",
+      "scripts/fixtures/trace-ui/harness.tsx": "90bef1928e68fb736a4cf43150bb11153ba980414b5016b318f9ca494a24e136",
+      "scripts/fixtures/trace-ui/index.html": "bb06e84fdd6a4190bf22de854eafb50a3d755ac61cd01742de7c4389ccdd07c2",
+      "src/assets/hero.png": "881ffbcaafc212e49addad08846a5b82761355fa20624253af3477ba33262c5c",
+      "src/assets/react.svg": "35ef61ed53b323ae94a16a8ec659b3d0af3880698791133f23b084085ab1c2e5",
+      "src/assets/vite.svg": "5be21acd42eb7b896e517f4e0f0f11eb5c5d9e54fbbcebe9453f033008fcca6f",
+      "src/components/AccountManagement.tsx": "b5473029c444e6dedd6c310bb4927ffdb543bc53b332912908e4df08e850c0f7",
+      "src/components/AddRideModal.tsx": "b4a3001504d344c099c89064681ec80c21a0f5d8a69520e3a73954e094ab563f",
+      "src/components/AddStudentModal.tsx": "2c87f49df6388b808a5ce11776166bec79f46400aa615b3f59837cb68cbabf5e",
+      "src/components/AddTicketModal.tsx": "965c827bbab6e2105299543a06c77e521494e6b1af982f05e2f7ea1a96b93b0e",
+      "src/components/GoogleSettings.tsx": "c4ee8f86601d05ee1cf052a437dbbaa253e24bf412ea4e1f5ae5492caab7ed69",
+      "src/components/LoginScreen.tsx": "fff15f0ad096c08a59d28a8d14d43d2d67c819b5d92a7551a7deb510f4234bb2",
+      "src/components/Navbar.tsx": "2c544b44e4d40a06d723a69b434862f214c1ea320a1806446c5dbd59ccf561de",
+      "src/components/ParentPortal.tsx": "998083755ce72d50be3aee89665d36106acdb1c1d61a0ad8b76e83e4287ae48e",
+      "src/components/PortalInvitations.tsx": "ea4e25e8b56937a653ca5080953785ac7c3e70236985efe7bd19c69e049cbfb1",
+      "src/components/TeacherDashboard.tsx": "1316fbc950664e43614387bea8bf614c98374c2bc1fcf6e7f3c97c9b01334ea4",
+      "src/components/TermsModal.tsx": "96f10c3cfc69d3652946837ef4c2f04ed30e4319c7d2f4a605e1a490a9a91cca",
+      "src/services/api.ts": "62cfcc488be0eb1b104cf70e2afd1c9c7c4eef9136e1d950f2fb768479ebc30a",
+      "src/services/google-auth.ts": "01667af44fce383f3763c8bb73497dafc690381592ddcf383d46aaafe90fe0d8",
+      "src/types/index.ts": "bf24cc2caa853a440a5abe9fad2d78645f5720491f48e00f2a0e49b5776abe20"
+    },
+    "isolation": "Copied each listed snapshot file byte-for-byte using its workspace-relative path into an isolated working directory. Created a local node_modules/vite junction to workspace node_modules/vite, supplied the workspace Playwright module and headless Chromium executable. The fixture server ran on loopback. The source snapshot, dependency junction, and Vite cache are retained under the regression output directory for reproducibility. Both test runners exited, closing the server and browser."
+  },
+  "evidence": [
+    {
+      "previousPath": "docs/traceability/reports/signout-retry-20261030-local/google-sdk-contract.json",
+      "previousReportSha256": "84ab7b64c9cacce88a84ae74970423d36ee2504c6acaca7d99b70b966a316fd8",
+      "previousSourceHashes": {
+        "src/services/google-auth.ts": "01667af44fce383f3763c8bb73497dafc690381592ddcf383d46aaafe90fe0d8",
+        "scripts/test_google_auth.cjs": "75b18ca335a5307287f056f48e10948ffce8b667ac48b3a5594a3dd3ff5ff057"
+      },
+      "changedSources": [],
+      "action": "retain matching original report",
+      "path": "docs/traceability/reports/signout-retry-20261030-local/google-sdk-contract.json",
+      "reportSha256": "84ab7b64c9cacce88a84ae74970423d36ee2504c6acaca7d99b70b966a316fd8",
+      "passed": 7,
+      "total": 7,
+      "sourceHashes": {
+        "src/services/google-auth.ts": "01667af44fce383f3763c8bb73497dafc690381592ddcf383d46aaafe90fe0d8",
+        "scripts/test_google_auth.cjs": "75b18ca335a5307287f056f48e10948ffce8b667ac48b3a5594a3dd3ff5ff057"
+      }
+    },
+    {
+      "previousPath": "docs/traceability/reports/signout-retry-20261030-local/google-auth-retry-ui.json",
+      "previousReportSha256": "4df997ebe5db6b0f8c302d30f647e10f96f7d685063dd086b42e33688e51eaf4",
+      "previousSourceHashes": {
+        "src/components/LoginScreen.tsx": "fff15f0ad096c08a59d28a8d14d43d2d67c819b5d92a7551a7deb510f4234bb2",
+        "scripts/test_google_auth_retry_ui.cjs": "e8b1ba91546d3a3d33b0ca2ee4fe8967f94f41da89afaf7936c74982a90289ef"
+      },
+      "changedSources": [],
+      "action": "retain matching original report",
+      "path": "docs/traceability/reports/signout-retry-20261030-local/google-auth-retry-ui.json",
+      "reportSha256": "4df997ebe5db6b0f8c302d30f647e10f96f7d685063dd086b42e33688e51eaf4",
+      "passed": 2,
+      "total": 2,
+      "sourceHashes": {
+        "src/components/LoginScreen.tsx": "fff15f0ad096c08a59d28a8d14d43d2d67c819b5d92a7551a7deb510f4234bb2",
+        "scripts/test_google_auth_retry_ui.cjs": "e8b1ba91546d3a3d33b0ca2ee4fe8967f94f41da89afaf7936c74982a90289ef"
+      }
+    },
+    {
+      "previousPath": "outputs/booking-modal-existing-ui-20261106/results.json",
+      "previousReportSha256": "46d900d10f467bca23dc901783e134a34b0d4b8d5c2a43c851bb464042130057",
+      "previousSourceHashes": {
+        "scripts/test_trace_ui.mjs": "bcd60909358980aa583ee2a7f2526ef92bedbebb3ba2f2852d07aea530c14369",
+        "scripts/fixtures/trace-ui/harness.tsx": "90bef1928e68fb736a4cf43150bb11153ba980414b5016b318f9ca494a24e136",
+        "src/components/ParentPortal.tsx": "998083755ce72d50be3aee89665d36106acdb1c1d61a0ad8b76e83e4287ae48e",
+        "src/components/TeacherDashboard.tsx": "9a9d6474bf2c0fd3b62522b8ffcdba4ed3356dd212d7a24fe160fa67c9273627",
+        "src/components/AddRideModal.tsx": "b4a3001504d344c099c89064681ec80c21a0f5d8a69520e3a73954e094ab563f",
+        "src/services/api.ts": "7d19ad4889cadd4e831bc4af6ad5aa139a2dacd52363f57e4431f6c543eeaf89",
+        "src/services/google-auth.ts": "01667af44fce383f3763c8bb73497dafc690381592ddcf383d46aaafe90fe0d8",
+        "src/deployment-config.ts": "5c30aad36376487fcf2fbb664f2574bdd430890191675ca9813b5fdea516b6f1",
+        "src/portal.ts": "2cb1dc0aed33b27a24ef6ed804a6ae1e01b44e07f0814c12044dc1d3525cbeec",
+        "src/index.css": "66baff8b6d7a116920270aba8584dd856cf5de345b59b511b849b96152ce91d8"
+      },
+      "changedSources": [
+        "src/components/TeacherDashboard.tsx",
+        "src/services/api.ts"
+      ],
+      "action": "reran on isolated current snapshot",
+      "path": "outputs/async-review-20261107/regression/trace-ui-2/results.json",
+      "reportSha256": "aabf76d7b2557faf35ff56aa5f1c21744b3c7d1f0a6ba3ecd2dfe5a68ea6f7f0",
+      "passed": 6,
+      "total": 6,
+      "sourceHashes": {
+        "scripts/test_trace_ui.mjs": "bcd60909358980aa583ee2a7f2526ef92bedbebb3ba2f2852d07aea530c14369",
+        "scripts/fixtures/trace-ui/harness.tsx": "90bef1928e68fb736a4cf43150bb11153ba980414b5016b318f9ca494a24e136",
+        "src/components/ParentPortal.tsx": "998083755ce72d50be3aee89665d36106acdb1c1d61a0ad8b76e83e4287ae48e",
+        "src/components/TeacherDashboard.tsx": "1316fbc950664e43614387bea8bf614c98374c2bc1fcf6e7f3c97c9b01334ea4",
+        "src/components/AddRideModal.tsx": "b4a3001504d344c099c89064681ec80c21a0f5d8a69520e3a73954e094ab563f",
+        "src/services/api.ts": "62cfcc488be0eb1b104cf70e2afd1c9c7c4eef9136e1d950f2fb768479ebc30a",
+        "src/services/google-auth.ts": "01667af44fce383f3763c8bb73497dafc690381592ddcf383d46aaafe90fe0d8",
+        "src/deployment-config.ts": "5c30aad36376487fcf2fbb664f2574bdd430890191675ca9813b5fdea516b6f1",
+        "src/portal.ts": "2cb1dc0aed33b27a24ef6ed804a6ae1e01b44e07f0814c12044dc1d3525cbeec",
+        "src/index.css": "66baff8b6d7a116920270aba8584dd856cf5de345b59b511b849b96152ce91d8"
+      }
+    },
+    {
+      "previousPath": "outputs/calendar-readiness-20261107/independent/2026-11-07T07-08-24-277Z/gas-results.json",
+      "previousReportSha256": "8487939467b62eec07329644e45c357833b3d3a0b2cbca6e2bf093564cd5c111",
+      "previousSourceHashes": {
+        "gas/Code.gs": "e39555d3540a22e1db6b20bf7885d6ee95a4e0ae11eace6e3fb29bccd3f6fef6",
+        "gas/appsscript.json": "86919604f8083bcfad5433147d46a41dba5653f190b29f6b560255628e2b9006",
+        "scripts/test_gas.cjs": "ebc558f172d63fdbb5d35e8d1c0b936f0ac6f367d39c12e34a9f929f1521c654"
+      },
+      "changedSources": [
+        "gas/Code.gs",
+        "scripts/test_gas.cjs"
+      ],
+      "action": "adopt existing current independent run",
+      "path": "outputs/async-review-20261107/independent-backend/2026-11-07T08-59-32-465Z/gas-results.json",
+      "reportSha256": "12e621a21f59c1907b8db731d7f2ed78c625d6e2874f5d8e8e3aa73b594bd464",
+      "passed": 85,
+      "total": 85,
+      "sourceHashes": {
+        "gas/Code.gs": "3a2bce6188a99daf331cad60a01759d6414c99f07e9d8f47a43ad28102ec336c",
+        "gas/appsscript.json": "86919604f8083bcfad5433147d46a41dba5653f190b29f6b560255628e2b9006",
+        "scripts/test_gas.cjs": "a4cfb2af81b0edc926ae10a1bd0179808a4c0ccb1076460dca1b84add90e2291"
+      }
+    },
+    {
+      "previousPath": "docs/traceability/reports/signout-retry-20261030-local/frontend-contract.json",
+      "previousReportSha256": "24e567d08b3bdd9a9186a91b60519357f6e106223600e70a63b3ba579f0edb9d",
+      "previousSourceHashes": {
+        "src/deployment-config.ts": "5c30aad36376487fcf2fbb664f2574bdd430890191675ca9813b5fdea516b6f1",
+        "src/services/api.ts": "7d19ad4889cadd4e831bc4af6ad5aa139a2dacd52363f57e4431f6c543eeaf89",
+        "src/services/google-auth.ts": "01667af44fce383f3763c8bb73497dafc690381592ddcf383d46aaafe90fe0d8",
+        "src/portal.ts": "2cb1dc0aed33b27a24ef6ed804a6ae1e01b44e07f0814c12044dc1d3525cbeec",
+        "scripts/test_portals.cjs": "cc538b7fe355db16bc30d9a3bc5ca268aead3296391c1cdbbe040437c3a39d06"
+      },
+      "changedSources": [
+        "src/services/api.ts",
+        "scripts/test_portals.cjs"
+      ],
+      "action": "adopt existing current independent run",
+      "path": "outputs/async-review-20261107/independent-frontend/contracts/frontend-contract.json",
+      "reportSha256": "4d23e9ac55aebd9fee127b9462c9fe7a09c65bbc55feabb1c749150c83cb862f",
+      "passed": 31,
+      "total": 31,
+      "sourceHashes": {
+        "src/deployment-config.ts": "5c30aad36376487fcf2fbb664f2574bdd430890191675ca9813b5fdea516b6f1",
+        "src/services/api.ts": "62cfcc488be0eb1b104cf70e2afd1c9c7c4eef9136e1d950f2fb768479ebc30a",
+        "src/services/google-auth.ts": "01667af44fce383f3763c8bb73497dafc690381592ddcf383d46aaafe90fe0d8",
+        "src/portal.ts": "2cb1dc0aed33b27a24ef6ed804a6ae1e01b44e07f0814c12044dc1d3525cbeec",
+        "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\test_portals.cjs": "22f6ce09d925a27267efb6ab27442ea2a15660a6d29fdabc4ad2e087611e805c"
+      }
+    },
+    {
+      "previousPath": "docs/traceability/reports/r2/offline/release-contract.json",
+      "previousReportSha256": "cf3b9ce2ad6092a91ca6c205e5cdbd334a1fbe1b9e6a1b72a2bd067e74683cf5",
+      "previousSourceHashes": {
+        "scripts/prepare_test_release.cjs": "e960b0e41e8e7b9d00877b3ecdbf336b7a94d9728859faff7a4407fe635de51b",
+        "scripts/test_release_contract.cjs": "c6ed405f3f9696dff834ed09efdd0de1fe1df1454d2e7a9805ea6b482c23e770"
+      },
+      "changedSources": [],
+      "action": "retain matching original report",
+      "path": "docs/traceability/reports/r2/offline/release-contract.json",
+      "reportSha256": "cf3b9ce2ad6092a91ca6c205e5cdbd334a1fbe1b9e6a1b72a2bd067e74683cf5",
+      "passed": 1,
+      "total": 1,
+      "sourceHashes": {
+        "scripts/prepare_test_release.cjs": "e960b0e41e8e7b9d00877b3ecdbf336b7a94d9728859faff7a4407fe635de51b",
+        "scripts/test_release_contract.cjs": "c6ed405f3f9696dff834ed09efdd0de1fe1df1454d2e7a9805ea6b482c23e770"
+      }
+    },
+    {
+      "previousPath": "docs/traceability/reports/signout-retry-20261030-local/google-signout-retry.json",
+      "previousReportSha256": "91df0d8d549ad72868353c17cc24a7777285d78b21095ec4d1a7a9706999b7b1",
+      "previousSourceHashes": {
+        "src/services/google-auth.ts": "01667af44fce383f3763c8bb73497dafc690381592ddcf383d46aaafe90fe0d8",
+        "scripts/test_google_signout_retry.cjs": "6613c7fe2bcfb040111df272648db3cdfae106f88289199917425b74e7688e7f"
+      },
+      "changedSources": [],
+      "action": "retain matching original report",
+      "path": "docs/traceability/reports/signout-retry-20261030-local/google-signout-retry.json",
+      "reportSha256": "91df0d8d549ad72868353c17cc24a7777285d78b21095ec4d1a7a9706999b7b1",
+      "passed": 9,
+      "total": 9,
+      "sourceHashes": {
+        "src/services/google-auth.ts": "01667af44fce383f3763c8bb73497dafc690381592ddcf383d46aaafe90fe0d8",
+        "scripts/test_google_signout_retry.cjs": "6613c7fe2bcfb040111df272648db3cdfae106f88289199917425b74e7688e7f"
+      }
+    },
+    {
+      "previousPath": "docs/traceability/reports/customer-ready-20261107/independent/checker-tests.json",
+      "previousReportSha256": "6f3801c15f0c97e7b7bd97af2a5757ce226f728b5e7172e9f636c3ed498e8847",
+      "previousSourceHashes": {
+        "scripts/traceability.py": "afb3801da75b019e50eff6958ee89b6f020f4f9fdb02b6234fe47f69c7e81eea",
+        "scripts/test_traceability.py": "fd00aa7c107b3e697f62748328dfb942dd8797921c05d57fccb36ab1186924a4"
+      },
+      "changedSources": [
+        "scripts/traceability.py",
+        "scripts/test_traceability.py"
+      ],
+      "action": "adopt existing current independent run",
+      "path": "outputs/async-review-20261107/independent-docs/checker-tests.json",
+      "reportSha256": "b1abb686a93ef1a0f096db113aa9f671232a5271a007e8c1ed02a97832ac49db",
+      "passed": 34,
+      "total": 34,
+      "sourceHashes": {
+        "scripts/traceability.py": "74d1e2d9b0cdbdf3479242da4d085777e6de30c006013d9bf06affc4b8eb4a7f",
+        "scripts/test_traceability.py": "1bec894e08844f98373e8c61332891d4c288d384853234d5ad537ed92afd2178"
+      }
+    },
+    {
+      "previousPath": "outputs/booking-modal-scroll-20261106-green/results.json",
+      "previousReportSha256": "61b05b5a7b9d51a130a9ebe2c55226d95a27621203be0241880e66e14ccbbb36",
+      "previousSourceHashes": {
+        "src/components/AddRideModal.tsx": "b4a3001504d344c099c89064681ec80c21a0f5d8a69520e3a73954e094ab563f",
+        "scripts/fixtures/trace-ui/harness.tsx": "90bef1928e68fb736a4cf43150bb11153ba980414b5016b318f9ca494a24e136",
+        "scripts/test_booking_modal_scroll.mjs": "33bac2031ba62f38b0053d1e0ab5a22e33fe047ac432d477011e5a43a4eb0917"
+      },
+      "changedSources": [],
+      "action": "retain matching original report",
+      "path": "outputs/booking-modal-scroll-20261106-green/results.json",
+      "reportSha256": "61b05b5a7b9d51a130a9ebe2c55226d95a27621203be0241880e66e14ccbbb36",
+      "passed": 2,
+      "total": 2,
+      "sourceHashes": {
+        "src/components/AddRideModal.tsx": "b4a3001504d344c099c89064681ec80c21a0f5d8a69520e3a73954e094ab563f",
+        "scripts/fixtures/trace-ui/harness.tsx": "90bef1928e68fb736a4cf43150bb11153ba980414b5016b318f9ca494a24e136",
+        "scripts/test_booking_modal_scroll.mjs": "33bac2031ba62f38b0053d1e0ab5a22e33fe047ac432d477011e5a43a4eb0917"
+      }
+    },
+    {
+      "previousPath": "outputs/local-acceptance-independent-final-20261106/results.json",
+      "previousReportSha256": "c828705d8ca174db988ae520b230a6389684ee4a631d46e9ea090824c4b819fe",
+      "previousSourceHashes": {
+        "src/App.css": "6e25a776d3e8102da5bacb3cb99f4a5fc662a2e01e6143140671a556d28c3d5c",
+        "src/App.tsx": "743821c58e31ea615ef8a53f3151eae58a14928c465bbde4484f807be9e824db",
+        "src/assets/hero.png": "881ffbcaafc212e49addad08846a5b82761355fa20624253af3477ba33262c5c",
+        "src/assets/react.svg": "35ef61ed53b323ae94a16a8ec659b3d0af3880698791133f23b084085ab1c2e5",
+        "src/assets/vite.svg": "5be21acd42eb7b896e517f4e0f0f11eb5c5d9e54fbbcebe9453f033008fcca6f",
+        "src/components/AccountManagement.tsx": "ead0bff5c9108bec18fac42bc1dc31f5a03c1f7c5fe38c5ea94f678ff5839e70",
+        "src/components/AddRideModal.tsx": "b4a3001504d344c099c89064681ec80c21a0f5d8a69520e3a73954e094ab563f",
+        "src/components/AddStudentModal.tsx": "2c87f49df6388b808a5ce11776166bec79f46400aa615b3f59837cb68cbabf5e",
+        "src/components/AddTicketModal.tsx": "965c827bbab6e2105299543a06c77e521494e6b1af982f05e2f7ea1a96b93b0e",
+        "src/components/GoogleSettings.tsx": "c4ee8f86601d05ee1cf052a437dbbaa253e24bf412ea4e1f5ae5492caab7ed69",
+        "src/components/LoginScreen.tsx": "fff15f0ad096c08a59d28a8d14d43d2d67c819b5d92a7551a7deb510f4234bb2",
+        "src/components/Navbar.tsx": "6c0659a3c08a34e755bdabd92d7b7a70f7f675d02d30ddf1be2ac897a1d96fde",
+        "src/components/ParentPortal.tsx": "998083755ce72d50be3aee89665d36106acdb1c1d61a0ad8b76e83e4287ae48e",
+        "src/components/PortalInvitations.tsx": "ea4e25e8b56937a653ca5080953785ac7c3e70236985efe7bd19c69e049cbfb1",
+        "src/components/TeacherDashboard.tsx": "9a9d6474bf2c0fd3b62522b8ffcdba4ed3356dd212d7a24fe160fa67c9273627",
+        "src/components/TermsModal.tsx": "96f10c3cfc69d3652946837ef4c2f04ed30e4319c7d2f4a605e1a490a9a91cca",
+        "src/deployment-config.ts": "5c30aad36376487fcf2fbb664f2574bdd430890191675ca9813b5fdea516b6f1",
+        "src/index.css": "66baff8b6d7a116920270aba8584dd856cf5de345b59b511b849b96152ce91d8",
+        "src/main.tsx": "6e9e5807fcbd48b75a96db5cbef36c996262196be42e6d4760dc86babbe61ad2",
+        "src/portal.ts": "2cb1dc0aed33b27a24ef6ed804a6ae1e01b44e07f0814c12044dc1d3525cbeec",
+        "src/services/api.ts": "7d19ad4889cadd4e831bc4af6ad5aa139a2dacd52363f57e4431f6c543eeaf89",
+        "src/services/google-auth.ts": "01667af44fce383f3763c8bb73497dafc690381592ddcf383d46aaafe90fe0d8",
+        "src/types/index.ts": "bf24cc2caa853a440a5abe9fad2d78645f5720491f48e00f2a0e49b5776abe20",
+        "package.json": "20528469ab1c1c2bd32f8f95b071a36ba9ea4eafcf62f2eccf683da755901375",
+        "package-lock.json": "ad3a4848723b7b1dc3ce3c840ffdf44ae8c9ea8cb58fb793cf5b5d58f2f3b805",
+        "scripts/run_local_acceptance.mjs": "bbf98d8ac266683e6239a6391f081c7a73af0ff3d22387495847fb8290bdb603",
+        "scripts/local_acceptance_safety.mjs": "a7c512fdc80788c246aa1eb5a6dbca9ad7573859fc8dab0a1b0a2d099e370b34",
+        "scripts/fixtures/local-acceptance/harness.tsx": "9ba68515c51b783d8ce17d81015993391e4bd3ec1ff85e9f881513117fb07cc2",
+        "scripts/fixtures/local-acceptance/google-auth.ts": "cdf798e20c6329ea53de6e037ef41fdb26754a8412d67f2d45fb1d6747bca40a",
+        "scripts/fixtures/local-acceptance/index.html": "a0030c371776b189471b5e18df159b04706dba1659ab740055c2d1954b62eb0b"
+      },
+      "changedSources": [
+        "src/App.tsx",
+        "src/components/AccountManagement.tsx",
+        "src/components/Navbar.tsx",
+        "src/components/TeacherDashboard.tsx",
+        "src/services/api.ts"
+      ],
+      "action": "reran on isolated current snapshot",
+      "path": "outputs/async-review-20261107/regression/local-ui-2/results.json",
+      "reportSha256": "e78db500a05f5d71ef7e9f4cdbed8d009250542b811ca2295b329c0b2d8f73be",
+      "passed": 14,
+      "total": 14,
+      "sourceHashes": {
+        "src/App.css": "6e25a776d3e8102da5bacb3cb99f4a5fc662a2e01e6143140671a556d28c3d5c",
+        "src/App.tsx": "30d9a0d99648a09cd5891a6aea5e4d310ca97f9514e13bcbdd1bf8ceda60cb5f",
+        "src/assets/hero.png": "881ffbcaafc212e49addad08846a5b82761355fa20624253af3477ba33262c5c",
+        "src/assets/react.svg": "35ef61ed53b323ae94a16a8ec659b3d0af3880698791133f23b084085ab1c2e5",
+        "src/assets/vite.svg": "5be21acd42eb7b896e517f4e0f0f11eb5c5d9e54fbbcebe9453f033008fcca6f",
+        "src/components/AccountManagement.tsx": "b5473029c444e6dedd6c310bb4927ffdb543bc53b332912908e4df08e850c0f7",
+        "src/components/AddRideModal.tsx": "b4a3001504d344c099c89064681ec80c21a0f5d8a69520e3a73954e094ab563f",
+        "src/components/AddStudentModal.tsx": "2c87f49df6388b808a5ce11776166bec79f46400aa615b3f59837cb68cbabf5e",
+        "src/components/AddTicketModal.tsx": "965c827bbab6e2105299543a06c77e521494e6b1af982f05e2f7ea1a96b93b0e",
+        "src/components/GoogleSettings.tsx": "c4ee8f86601d05ee1cf052a437dbbaa253e24bf412ea4e1f5ae5492caab7ed69",
+        "src/components/LoginScreen.tsx": "fff15f0ad096c08a59d28a8d14d43d2d67c819b5d92a7551a7deb510f4234bb2",
+        "src/components/Navbar.tsx": "2c544b44e4d40a06d723a69b434862f214c1ea320a1806446c5dbd59ccf561de",
+        "src/components/ParentPortal.tsx": "998083755ce72d50be3aee89665d36106acdb1c1d61a0ad8b76e83e4287ae48e",
+        "src/components/PortalInvitations.tsx": "ea4e25e8b56937a653ca5080953785ac7c3e70236985efe7bd19c69e049cbfb1",
+        "src/components/TeacherDashboard.tsx": "1316fbc950664e43614387bea8bf614c98374c2bc1fcf6e7f3c97c9b01334ea4",
+        "src/components/TermsModal.tsx": "96f10c3cfc69d3652946837ef4c2f04ed30e4319c7d2f4a605e1a490a9a91cca",
+        "src/deployment-config.ts": "5c30aad36376487fcf2fbb664f2574bdd430890191675ca9813b5fdea516b6f1",
+        "src/index.css": "66baff8b6d7a116920270aba8584dd856cf5de345b59b511b849b96152ce91d8",
+        "src/main.tsx": "6e9e5807fcbd48b75a96db5cbef36c996262196be42e6d4760dc86babbe61ad2",
+        "src/portal.ts": "2cb1dc0aed33b27a24ef6ed804a6ae1e01b44e07f0814c12044dc1d3525cbeec",
+        "src/services/api.ts": "62cfcc488be0eb1b104cf70e2afd1c9c7c4eef9136e1d950f2fb768479ebc30a",
+        "src/services/google-auth.ts": "01667af44fce383f3763c8bb73497dafc690381592ddcf383d46aaafe90fe0d8",
+        "src/types/index.ts": "bf24cc2caa853a440a5abe9fad2d78645f5720491f48e00f2a0e49b5776abe20",
+        "package.json": "20528469ab1c1c2bd32f8f95b071a36ba9ea4eafcf62f2eccf683da755901375",
+        "package-lock.json": "ad3a4848723b7b1dc3ce3c840ffdf44ae8c9ea8cb58fb793cf5b5d58f2f3b805",
+        "scripts/run_local_acceptance.mjs": "bbf98d8ac266683e6239a6391f081c7a73af0ff3d22387495847fb8290bdb603",
+        "scripts/local_acceptance_safety.mjs": "a7c512fdc80788c246aa1eb5a6dbca9ad7573859fc8dab0a1b0a2d099e370b34",
+        "scripts/fixtures/local-acceptance/harness.tsx": "9ba68515c51b783d8ce17d81015993391e4bd3ec1ff85e9f881513117fb07cc2",
+        "scripts/fixtures/local-acceptance/google-auth.ts": "cdf798e20c6329ea53de6e037ef41fdb26754a8412d67f2d45fb1d6747bca40a",
+        "scripts/fixtures/local-acceptance/index.html": "a0030c371776b189471b5e18df159b04706dba1659ab740055c2d1954b62eb0b"
+      }
+    },
+    {
+      "previousPath": "outputs/local-ui-safety-20261106-final/results.json",
+      "previousReportSha256": "c5228866ccaa31705a7c01cafc9696359899de4a32908cda3c7ab3adc06da8e6",
+      "previousSourceHashes": {
+        "scripts/local_acceptance_safety.mjs": "a7c512fdc80788c246aa1eb5a6dbca9ad7573859fc8dab0a1b0a2d099e370b34",
+        "tests/local_acceptance_safety.test.mjs": "fa9cece28e43ac588b0706d7c9afc1763a22fe6549075288d15113b9eb332317",
+        "scripts/run_local_acceptance.mjs": "bbf98d8ac266683e6239a6391f081c7a73af0ff3d22387495847fb8290bdb603"
+      },
+      "changedSources": [],
+      "action": "retain matching original report",
+      "path": "outputs/local-ui-safety-20261106-final/results.json",
+      "reportSha256": "c5228866ccaa31705a7c01cafc9696359899de4a32908cda3c7ab3adc06da8e6",
+      "passed": 4,
+      "total": 4,
+      "sourceHashes": {
+        "scripts/local_acceptance_safety.mjs": "a7c512fdc80788c246aa1eb5a6dbca9ad7573859fc8dab0a1b0a2d099e370b34",
+        "tests/local_acceptance_safety.test.mjs": "fa9cece28e43ac588b0706d7c9afc1763a22fe6549075288d15113b9eb332317",
+        "scripts/run_local_acceptance.mjs": "bbf98d8ac266683e6239a6391f081c7a73af0ff3d22387495847fb8290bdb603"
+      }
+    }
+  ],
+  "priorSetupAttempts": [
+    {
+      "path": "outputs/async-review-20261107/regression/local-ui/results.json",
+      "cause": "Isolated snapshot lacked tsconfig.node.json on the first run. Build stopped before browser scenarios."
+    },
+    {
+      "path": "outputs/async-review-20261107/regression/trace-ui/results.json",
+      "cause": "Isolated snapshot lacked tsconfig.node.json at Vite server startup. Six UI checks could not load the fixture. The corrected complete configuration was used in a fresh server and output directory."
+    }
+  ],
+  "limits": "Local Chromium and simulated identities or services. Results do not determine hosted or customer acceptance."
+}

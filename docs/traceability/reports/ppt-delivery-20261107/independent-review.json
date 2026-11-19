@@ -1,0 +1,268 @@
+{
+  "schemaVersion": 1,
+  "status": "PASS",
+  "date": "2026-11-07",
+  "reviewer": "independent AI worker /root/modern_runner_1106/ppt_final_review",
+  "scope": "Read-only review of the 12 finalized v31 PPTX candidates and proposed manifest; no authoring, current-manifest changes, deployment or Google operations by reviewer.",
+  "registryVersion": "2026-11-07-r15",
+  "registrySha256": "2e7c85880aa8e9c2bbf57700ec9ba3a5a6ed6307287b9af778c86552ef7cf545",
+  "registeredTests": 171,
+  "decks": 12,
+  "slides": 160,
+  "historicalBodyPagesPixelIdentical": 136,
+  "newDiagramPages": 24,
+  "checks": {
+    "candidateAndStagedCopyHashesMatchProposedManifestAndReceipts": true,
+    "currentRegistryAndCurrentGeneratedDocumentHashesMatch": true,
+    "all160PagesRenderedAndReimported": true,
+    "old136BodyRegionsBelowHeaderPixelIdentical": true,
+    "oldNotesAndMediaPreserved": true,
+    "new24BodiesMatchTwoFullSizeInspectedPrototypes": true,
+    "oldPolicyMarkedHistoricalInHeaderAndCurrentNotes": true,
+    "customerCUST01to06NotRun0of6": true,
+    "originalAT01to30RetainedAsDevelopmentTechnicalTests": true,
+    "formerThirdParty30NoLongerReleaseCondition": true,
+    "buildNov6SeparatedFromDeploymentAndValidationNov7": true,
+    "hostingVersionSeparatedFromBuildManifestReleaseId": true,
+    "public7ResponsesHTTP200AndHashesMatch": true,
+    "sameRunner4FailuresBeforeAnd4PassesAfter": true,
+    "frontendAnonymousDemoSeparatedFromRealGoogleDeviceCustomerAcceptance": true,
+    "gasSavedHeadRecordMatchesCurrentCodeAndManifestHashes": true,
+    "gasWebAppDeploymentStillPending": true,
+    "calendarTestingAuthorizedButGoogleConsentStillPending": true,
+    "productionNotStarted": true,
+    "noEmailAddressesOrPrivateGoogleLinksInSlideTextOrNotes": true
+  },
+  "rows": [
+    {
+      "id": "PKG-01",
+      "name": "business",
+      "sha256": "3fac3c423b603e51fe33a9085b9c0e0b2ade825b6892b0747d989265e3905362",
+      "slides": 23,
+      "historicalBodyPagesPixelIdentical": 21,
+      "oldNotesAndMediaPreserved": true,
+      "currentGeneratedSourceInNotes": true,
+      "currentPolicyInEveryNote": true,
+      "packageFindings": 0,
+      "layoutFindings": 0,
+      "inheritedLayoutWarnings": 21,
+      "newLayoutWarnings": 0,
+      "reimportPassed": true
+    },
+    {
+      "id": "PKG-02",
+      "name": "requirements",
+      "sha256": "ca81c4c6d679ce0d4a82d5bcee6f06ab7637b56cd56a0379e9d8b3066cd41339",
+      "slides": 12,
+      "historicalBodyPagesPixelIdentical": 10,
+      "oldNotesAndMediaPreserved": true,
+      "currentGeneratedSourceInNotes": true,
+      "currentPolicyInEveryNote": true,
+      "packageFindings": 0,
+      "layoutFindings": 0,
+      "inheritedLayoutWarnings": 0,
+      "newLayoutWarnings": 0,
+      "reimportPassed": true
+    },
+    {
+      "id": "PKG-03",
+      "name": "design",
+      "sha256": "d6045c3ecc2d2e90a67f1ecfee0fd43000396fa1986697e506f6e210311ceacc",
+      "slides": 13,
+      "historicalBodyPagesPixelIdentical": 11,
+      "oldNotesAndMediaPreserved": true,
+      "currentGeneratedSourceInNotes": true,
+      "currentPolicyInEveryNote": true,
+      "packageFindings": 0,
+      "layoutFindings": 0,
+      "inheritedLayoutWarnings": 0,
+      "newLayoutWarnings": 0,
+      "reimportPassed": true
+    },
+    {
+      "id": "PKG-04",
+      "name": "test-spec",
+      "sha256": "fe5460918287c0c4a7b81a5e4cf922a1b4116a7144cf44608c0a6a1fcc54549f",
+      "slides": 13,
+      "historicalBodyPagesPixelIdentical": 11,
+      "oldNotesAndMediaPreserved": true,
+      "currentGeneratedSourceInNotes": true,
+      "currentPolicyInEveryNote": true,
+      "packageFindings": 0,
+      "layoutFindings": 0,
+      "inheritedLayoutWarnings": 0,
+      "newLayoutWarnings": 0,
+      "reimportPassed": true
+    },
+    {
+      "id": "PKG-05",
+      "name": "tasks",
+      "sha256": "bd6a4784d04f8e568c9ff3bbf3fc7c87e0fcedbea2719d5e88a20edb2d23b3f7",
+      "slides": 15,
+      "historicalBodyPagesPixelIdentical": 13,
+      "oldNotesAndMediaPreserved": true,
+      "currentGeneratedSourceInNotes": true,
+      "currentPolicyInEveryNote": true,
+      "packageFindings": 0,
+      "layoutFindings": 0,
+      "inheritedLayoutWarnings": 0,
+      "newLayoutWarnings": 0,
+      "reimportPassed": true
+    },
+    {
+      "id": "PKG-06",
+      "name": "implementation",
+      "sha256": "01a400b16c57513e1563ab2e722a50d324d54864d2b04507bc85182a8ef0bdef",
+      "slides": 13,
+      "historicalBodyPagesPixelIdentical": 11,
+      "oldNotesAndMediaPreserved": true,
+      "currentGeneratedSourceInNotes": true,
+      "currentPolicyInEveryNote": true,
+      "packageFindings": 0,
+      "layoutFindings": 0,
+      "inheritedLayoutWarnings": 0,
+      "newLayoutWarnings": 0,
+      "reimportPassed": true
+    },
+    {
+      "id": "PKG-07",
+      "name": "test-code",
+      "sha256": "5e54230c680175bcc0a8a8b9e033cbbeb050bdaa69c620d6e7b48929987bf033",
+      "slides": 13,
+      "historicalBodyPagesPixelIdentical": 11,
+      "oldNotesAndMediaPreserved": true,
+      "currentGeneratedSourceInNotes": true,
+      "currentPolicyInEveryNote": true,
+      "packageFindings": 0,
+      "layoutFindings": 0,
+      "inheritedLayoutWarnings": 0,
+      "newLayoutWarnings": 0,
+      "reimportPassed": true
+    },
+    {
+      "id": "PKG-08",
+      "name": "acceptance",
+      "sha256": "670df4f75588ab87104338488c8f3827b3e301d4893e3ca339d5f9fb126be6f2",
+      "slides": 12,
+      "historicalBodyPagesPixelIdentical": 10,
+      "oldNotesAndMediaPreserved": true,
+      "currentGeneratedSourceInNotes": true,
+      "currentPolicyInEveryNote": true,
+      "packageFindings": 0,
+      "layoutFindings": 0,
+      "inheritedLayoutWarnings": 0,
+      "newLayoutWarnings": 0,
+      "reimportPassed": true
+    },
+    {
+      "id": "PKG-09",
+      "name": "operations",
+      "sha256": "10436adf52c7cab9430ebd1351786cceebefa0e94ef71d4231721db3534b0f2a",
+      "slides": 12,
+      "historicalBodyPagesPixelIdentical": 10,
+      "oldNotesAndMediaPreserved": true,
+      "currentGeneratedSourceInNotes": true,
+      "currentPolicyInEveryNote": true,
+      "packageFindings": 0,
+      "layoutFindings": 0,
+      "inheritedLayoutWarnings": 0,
+      "newLayoutWarnings": 0,
+      "reimportPassed": true
+    },
+    {
+      "id": "PKG-10",
+      "name": "user",
+      "sha256": "8810f5b7f0c687c991e968af9c571b117459cb3608f92efe309c6c989efdb249",
+      "slides": 12,
+      "historicalBodyPagesPixelIdentical": 10,
+      "oldNotesAndMediaPreserved": true,
+      "currentGeneratedSourceInNotes": true,
+      "currentPolicyInEveryNote": true,
+      "packageFindings": 0,
+      "layoutFindings": 0,
+      "inheritedLayoutWarnings": 0,
+      "newLayoutWarnings": 0,
+      "reimportPassed": true
+    },
+    {
+      "id": "PKG-11",
+      "name": "matrix",
+      "sha256": "320be7f686dfdd195a85281c6449d59f8b5b51f6b801acd37bff66893f4a5362",
+      "slides": 10,
+      "historicalBodyPagesPixelIdentical": 8,
+      "oldNotesAndMediaPreserved": true,
+      "currentGeneratedSourceInNotes": true,
+      "currentPolicyInEveryNote": true,
+      "packageFindings": 0,
+      "layoutFindings": 0,
+      "inheritedLayoutWarnings": 0,
+      "newLayoutWarnings": 0,
+      "reimportPassed": true
+    },
+    {
+      "id": "PKG-12",
+      "name": "progress",
+      "sha256": "acf5e805b00d1a14c9d43144e058f6bb637130fccadb84a79b5789dc724fa261",
+      "slides": 12,
+      "historicalBodyPagesPixelIdentical": 10,
+      "oldNotesAndMediaPreserved": true,
+      "currentGeneratedSourceInNotes": true,
+      "currentPolicyInEveryNote": true,
+      "packageFindings": 0,
+      "layoutFindings": 0,
+      "inheritedLayoutWarnings": 0,
+      "newLayoutWarnings": 0,
+      "reimportPassed": true
+    }
+  ],
+  "evidence": [
+    {
+      "path": "docs/acceptance/CUSTOMER_ACCEPTANCE_MINIMUM_20261107.md",
+      "sha256": "643b20dcd32913bf6aabe27be0a6f0ac00ca972028eff19105c2b8753b06502e"
+    },
+    {
+      "path": "docs/progress/2026-11-07-test-site-delivery.md",
+      "sha256": "56d29292f92f2ab902c9dd059cca551659a14cb081d8f2042e9fe62d12fa9e0f"
+    },
+    {
+      "path": "outputs/booking-modal-release-20261107-evidence.json",
+      "sha256": "51d370f6276d8439ef8ae5ba18f8e0ab4035f39503135a77bb07a0b84cb18eb7"
+    },
+    {
+      "path": "outputs/booking-modal-release-20261107-after-review.json",
+      "sha256": "8987eda45fe02bcda502d8e2c62b56011b9fe99a370ad4583c0c5789e3b9203a"
+    },
+    {
+      "path": "outputs/booking-modal-hosted-before-final-20261106/results.json",
+      "sha256": "a5b21fc2edb315e32238063fe3ed7e234119f9108968e87876b8d5b18a0f4322"
+    },
+    {
+      "path": "outputs/booking-modal-hosted-after-20261107/results.json",
+      "sha256": "aff9430e1d48dcc029317c0f3ed0bb2c5162bf759a00bd6a5a0c5ebbbca5436f"
+    },
+    {
+      "path": "outputs/calendar-readiness-20261107/live-preparation.json",
+      "sha256": "fbdd0824875624c056bc51ed9faa17aace637a7ca40b2b899228d69b7b34118f"
+    },
+    {
+      "path": "outputs/calendar-readiness-20261107/live-head-manifest.png",
+      "sha256": "d51df9634ff9c521fd921da7b91c35b60613efbd6b4b2c2ddf267542aa67df79"
+    }
+  ],
+  "fullSizeVisualReview": [
+    "outputs/ppt-deploy-20261107-v31/finalized/progress/roundtrip/11.png",
+    "outputs/ppt-deploy-20261107-v31/finalized/progress/roundtrip/12.png",
+    "outputs/ppt-deploy-20261107-v31/finalized/business/roundtrip/1.png",
+    "outputs/ppt-deploy-20261107-v31/finalized/operations/roundtrip/1.png",
+    "outputs/calendar-readiness-20261107/live-head-manifest.png"
+  ],
+  "findings": [],
+  "limits": [
+    "Reviewed saved result files and observed images; did not independently execute Google consent, GAS save, Web App deployment, application tests or live customer checks.",
+    "Public outcome is an Edge small-viewport touch-emulation anonymous browser demo, not a new real-Google, Calendar, iPhone or customer acceptance pass.",
+    "GAS HEAD-save claim is supported by the updated owner observation record, reload verification and current-file hash match; native cloud re-reading was not performed by this reviewer.",
+    "Native PowerPoint application rendering remains unverified.",
+    "Business deck retains 21 old layout warnings; no new warnings were introduced.",
+    "Current manifest and README adoption are owned by the root agent; this review checks the proposed manifest and staged files."
+  ]
+}

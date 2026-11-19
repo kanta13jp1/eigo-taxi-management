@@ -1,0 +1,18 @@
+Browser tab: 1750956561, Title: "Mighty AT-23 検証専用 2026-10-20 - Google スプレッドシート", URL: "https://docs.google.com/spreadsheets/d/1hNjywlyQfTvqcgSys8iH7JH5Ru0dYLM9fA7-mGOOSO4/edit?gid=1793901165#gid=1793901165".
+The following is a diff from the previous accessibility tree with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
+Removed element IDs: 142-153, 156-178
+~						10 button Description: ドキュメントのステータス: 保存しています…., ID: docs-save-indicator-badge
++							156 container
++								157 text 保存しています…
++						158 text 購入ID
++					159 pop up button (collapsed) AT23保全_生徒台帳, ID: alrzag:1ba, Secondary Actions: Expand
++						160 container
++							161 text AT23保全_生徒台帳
++					162 pop up button (collapsed) AT23保全_送迎予定履歴, ID: alrzag:1br, Secondary Actions: Expand
++						163 container
++							164 text AT23保全_送迎予定履歴
++					165 pop up button (collapsed) AT23保全_チケット購入履歴, ID: alrzag:1c8, Secondary Actions: Expand
++						166 container
++							167 text AT23保全_チケット購入履歴
+The focused UI element is 108 text entry area (settable) ID: waffle-rich-text-editor, Value: 
+

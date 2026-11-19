@@ -1,0 +1,100 @@
+{
+  "provenance": "User-confirmed iPhone Safari and logout state. Device identifiers excluded. Reload and Android remain unverified. No publication authorization.",
+  "files": [
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/business-2026-10-24-v11.pptx",
+      "file": "business-2026-10-24-v11.pptx",
+      "sha256": "186ed7a9afb9f6682598728a057aaab12dce290d74c9e5ae5e3aa07d07189f27"
+    },
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/requirements-2026-10-24-v11.pptx",
+      "file": "requirements-2026-10-24-v11.pptx",
+      "sha256": "c3207b5a110af02ac923f6f23a2fa3fa89cc70bb297ccc8cffac80dbe2dfa9c8"
+    },
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/design-2026-10-24-v11.pptx",
+      "file": "design-2026-10-24-v11.pptx",
+      "sha256": "3b586e1f2a55504480999c604109df7bd341f22f91c06d6ccad6207b1dcb67e9"
+    },
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/test-spec-2026-10-24-v11.pptx",
+      "file": "test-spec-2026-10-24-v11.pptx",
+      "sha256": "5b687734b0d22f156d12840adaf4144ac56756f75c9950eebd8fa0c0498148cb"
+    },
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/tasks-2026-10-24-v11.pptx",
+      "file": "tasks-2026-10-24-v11.pptx",
+      "sha256": "314f98cf57fbf9b521853e33dbff4c14ec91888321c2a55df6af2a7b2e53fa40"
+    },
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/implementation-2026-10-24-v11.pptx",
+      "file": "implementation-2026-10-24-v11.pptx",
+      "sha256": "eca919b1618a131f7ad7bd5589d7c397036dfa9b4848cc21ee24493e77665423"
+    },
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/test-code-2026-10-24-v11.pptx",
+      "file": "test-code-2026-10-24-v11.pptx",
+      "sha256": "e8a55c6de32af430f93721790545a3735a850139b60d0390e23abb0a780ab345"
+    },
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/acceptance-2026-10-24-v11.pptx",
+      "file": "acceptance-2026-10-24-v11.pptx",
+      "sha256": "ebd397f355ae37ac6ebef824328b76261c9b811c8a70579dd44c6948d4b9c82a"
+    },
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/operations-2026-10-24-v11.pptx",
+      "file": "operations-2026-10-24-v11.pptx",
+      "sha256": "b6c966cb284e4adf2f448a766e36323979e08179689be8340afa8f428a49c4b3"
+    },
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/user-2026-10-24-v11.pptx",
+      "file": "user-2026-10-24-v11.pptx",
+      "sha256": "7bab34d46be1bb3374f7ec6e4998e9029b700f1e9d3cddbd787363a88290cfb0"
+    },
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/matrix-2026-10-24-v11.pptx",
+      "file": "matrix-2026-10-24-v11.pptx",
+      "sha256": "938c0d43205cf2ba17f72a41ddc876b38ef5f11fcbdd0fe856ba4ae240d8148d"
+    },
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/progress-2026-10-24-v11.pptx",
+      "file": "progress-2026-10-24-v11.pptx",
+      "sha256": "e34dba7b02aee05dbb83d4d7367027c3b880a0852dc334c5f3d38a19b4a853ca"
+    },
+    {
+      "source": "docs/traceability/registry.json",
+      "file": "registry.json",
+      "sha256": "4cb55c96bedf6b928e35d6949e07d5f791416c415475deeddf9dd0f0f0d3f2e3"
+    },
+    {
+      "source": "docs/traceability/matrix.csv",
+      "file": "matrix.csv",
+      "sha256": "c9066deb638efa33be6d866194c5c703044ba79884b569e6b772cfcf4aec85f1"
+    },
+    {
+      "source": "docs/traceability/SELF_REVIEW_R11.md",
+      "file": "SELF_REVIEW_R11.md",
+      "sha256": "9f4a3cc1ceb4f7a1bbb2f8e322f20a26e69b896d897a65be3d073d2923978c14"
+    },
+    {
+      "source": "docs/acceptance/device-readonly-2026-10-24/iphone-observations.json",
+      "file": "iphone-observations.json",
+      "sha256": "89c0d251f53e6f66b5426c7eeac8827fe1f76980e9036de3b3180ae5b49b051d"
+    },
+    {
+      "source": ".manual-build-20261020/traceability-decks-r11.mjs",
+      "file": "traceability-decks-r11.mjs",
+      "sha256": "a27b2e48cbce8d4352a43b988e54714367ac3c73a903ff5f58e9c5ea64bb9aff"
+    },
+    {
+      "source": ".manual-build-20261020/finalize-traceability-r11.mjs",
+      "file": "finalize-traceability-r11.mjs",
+      "sha256": "1cb14083bb4849d10af98ec773a8652f40f2989e9e4342ec05ff55b973d133bc"
+    },
+    {
+      "source": "docs/progress/2026-10-24-iphone-device-confirmed.md",
+      "file": "2026-10-24-iphone-device-confirmed.md",
+      "sha256": "cd3c47694d7ec19ebdd316cd7ee28f723d1d2f085db443436130d1da1d3000c8"
+    }
+  ]
+}

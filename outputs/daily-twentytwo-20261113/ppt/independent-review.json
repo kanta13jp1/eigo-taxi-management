@@ -1,0 +1,28 @@
+{
+  "status": "pass",
+  "sha256": "bfbf783a17b7ea80b2351f152470cd95d7b4b47bff4683da5a3538b8a560dc2f",
+  "slideCount": 15,
+  "visualReview": [
+    1,
+    2,
+    15
+  ],
+  "slides3To14IdenticalText": true,
+  "fixRows": 22,
+  "distinctAT": 22,
+  "attribution": {
+    "Codex": 20,
+    "ClaudeCodeFable52": 2
+  },
+  "dailyCounts": [
+    4,
+    8,
+    8,
+    2
+  ],
+  "customerChecks": "0/6",
+  "at18Scope": "Post-cancellation readback failure in public anonymous demo only",
+  "slide15": "Caption and public scenario agree: no success after a read fault, read-only recovery and seven tickets. Screenshot detail is small at slide size. Main caption is legible.",
+  "visualClippingOnReviewedSlides": false,
+  "nativePowerPointViewed": false
+}

@@ -1,0 +1,21 @@
+{
+  "checkedAt": "2026-11-07T09:26:04.761045+00:00",
+  "environment": "mighty-test",
+  "site": "eigo-taxi-test",
+  "hostingVersion": "43d4ac9b2a065441",
+  "gasVersion": 6,
+  "publicFilesMatched": 7,
+  "publicVerification": "docs/acceptance/deployment/public-verification.json",
+  "sourceDigest": "d28e685ae2072c61c50beac982e7054fbdfabed2119c4517ef046ac345e51888",
+  "reviewerRegisteredAndReadBack": true,
+  "testLedgerGateExactAndPersisted": true,
+  "originalTwoAdministratorsRetained": true,
+  "normalAdminExplicitReload": true,
+  "fixedTwoScheduledAndBalanceFiveReadBack": true,
+  "fixedTwoCalendarDescriptionIdsDateTimePlacesMatched": true,
+  "liveReviewerFirstGoogleLogin": "PENDING_CUSTOMER",
+  "customerPassed": 0,
+  "customerTotal": 6,
+  "productionStarted": false,
+  "scope": "Developer deployment and fixture preparation; not customer acceptance."
+}

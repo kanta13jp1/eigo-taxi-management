@@ -1,0 +1,52 @@
+{
+  "release": {
+    "environment": "mighty-test",
+    "projectId": "eigo-taxi-app",
+    "siteId": "eigo-taxi-test",
+    "builtAt": "2026-11-19T14:51:32.851Z",
+    "baseCommit": "2fa6127715017d52ae0c9bd80be39c4db90a47c3",
+    "sourceDigest": "cbbad1e31a2282580f8a85d9262be454fb0fe7254cd88125a39e32e3612d928c"
+  },
+  "sourceHashes": {
+    ".firebaserc": "cb2d89a95d2550bcd6d4e2478e2bb8b7844c05bf79fec042220f226c815519f2",
+    "firebase.json": "060e2adf4f0089f3df436379b6c4650c00fdc1b50110c8a31a2622e8e028528f",
+    "gas/Code.gs": "3a2bce6188a99daf331cad60a01759d6414c99f07e9d8f47a43ad28102ec336c",
+    "index.html": "0c4b500e19e937d57851c5ef15266a60c130570d81e7f245efbbc963bb98c7a7",
+    "package-lock.json": "ad3a4848723b7b1dc3ce3c840ffdf44ae8c9ea8cb58fb793cf5b5d58f2f3b805",
+    "package.json": "20528469ab1c1c2bd32f8f95b071a36ba9ea4eafcf62f2eccf683da755901375",
+    "public/favicon.svg": "61bc9a161de58248288e6905425d7180f0624c2865007b97d763fdac12043a66",
+    "public/icons.svg": "b45fa506195cfcdef406ba9f0c77b36ddc1a7c224040926ec70abc2fdea7b93a",
+    "src/App.css": "6e25a776d3e8102da5bacb3cb99f4a5fc662a2e01e6143140671a556d28c3d5c",
+    "src/App.tsx": "1f6251c7c70b403b25e9a4cd55bd8d22d6881d42735bd964f93b99105ca87cb1",
+    "src/assets/hero.png": "881ffbcaafc212e49addad08846a5b82761355fa20624253af3477ba33262c5c",
+    "src/assets/react.svg": "35ef61ed53b323ae94a16a8ec659b3d0af3880698791133f23b084085ab1c2e5",
+    "src/assets/vite.svg": "5be21acd42eb7b896e517f4e0f0f11eb5c5d9e54fbbcebe9453f033008fcca6f",
+    "src/components/AccountManagement.tsx": "89476404d0e6b02a9fa63e7225b9857fb9766daca5e129f6d0a9eba58214b758",
+    "src/components/AddRideModal.tsx": "03be818bbd16dabe5da04c38df763d5c598a0da9d73ac006107d6b6b9a37f856",
+    "src/components/AddStudentModal.tsx": "cc9811224ad35e1576e9a4137a1f4f817944157ebd7078faa729c36c3065f3fc",
+    "src/components/AddTicketModal.tsx": "23374856ac5ce0b39e5ac1827f5a5f71b1f59f2397756a3f421b919513d184b3",
+    "src/components/GoogleSettings.tsx": "c4ee8f86601d05ee1cf052a437dbbaa253e24bf412ea4e1f5ae5492caab7ed69",
+    "src/components/LoginScreen.tsx": "cc4c8e967093422d34225f67aacd8b4ec86bc51b5079c444b1e510026f19973d",
+    "src/components/Navbar.tsx": "77d967411aab9b6ec1181f22a9fa44caebf82fa59197aad9d63fc63f2594a3b0",
+    "src/components/ParentPortal.tsx": "f69447f73b26044ca02355f4b8b61573e5ccdabf54def97f7061417ad8935816",
+    "src/components/PortalInvitations.tsx": "9c05d751fdd5912a6b31f641ef5265b699d73fb7fa5e368bc3c4f6e42804b845",
+    "src/components/TeacherDashboard.tsx": "3e46370730b4663cbdcd9002b4273b5c902e8d0f1bc64fb50cc4986bb11ed654",
+    "src/components/TermsModal.tsx": "fae1239b768e76da159bc5762fdb17522c53eef27aae13831d9732c4ffb503d5",
+    "src/deployment-config.ts": "5c30aad36376487fcf2fbb664f2574bdd430890191675ca9813b5fdea516b6f1",
+    "src/index.css": "66baff8b6d7a116920270aba8584dd856cf5de345b59b511b849b96152ce91d8",
+    "src/main.tsx": "6e9e5807fcbd48b75a96db5cbef36c996262196be42e6d4760dc86babbe61ad2",
+    "src/portal.ts": "874dce7f269e59073b75d6ae47c7fb3b682686fa2ab214d8cb0eacb48c59cac7",
+    "src/services/api.ts": "9de6da24a594b1bb37d12d1dc4b2910a8cfdadf9124ed4abf22ac8104cd35e28",
+    "src/services/google-auth.ts": "01667af44fce383f3763c8bb73497dafc690381592ddcf383d46aaafe90fe0d8",
+    "src/types/index.ts": "bf24cc2caa853a440a5abe9fad2d78645f5720491f48e00f2a0e49b5776abe20",
+    "vite.config.ts": "116056c4029005abca8bc3a1ff86b54d37fd33e22530d43a59194969e4929e77"
+  },
+  "distHashes": {
+    "dist/assets/index-CqKUJMyn.js": "426530e64326e4fb7c7763c108f886df12230712adaa7cb7ce8b508dd6eaff0a",
+    "dist/assets/index-D6_YvfiE.css": "f294030c8f04ace0f74a309e8e293aa50beaaf65d66b56b549bb7edd9d6e17ea",
+    "dist/favicon.svg": "61bc9a161de58248288e6905425d7180f0624c2865007b97d763fdac12043a66",
+    "dist/icons.svg": "b45fa506195cfcdef406ba9f0c77b36ddc1a7c224040926ec70abc2fdea7b93a",
+    "dist/index.html": "971d9e17f01fcb59d292ca22ed1de7c51a7f591530f2da46df194e43b0398f61",
+    "dist/release.json": "9ed142c870dd803e0bf3395b3fadd6aadd75c543b8e2de70a285bd7e48e2e567"
+  }
+}

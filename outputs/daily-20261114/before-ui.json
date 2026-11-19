@@ -1,0 +1,20 @@
+{
+  "mode": "before",
+  "checkedAt": "2026-11-14T09:02:51.944Z",
+  "base": "http://127.0.0.1:62336",
+  "width": 375,
+  "height": 812,
+  "engine": "Chromium (Edge) mobile emulation",
+  "profiles": "fresh anonymous browser-local demo",
+  "geometry": {},
+  "indistinguishableMessages": [
+    "田中 陽菜 (ひな) 2026-11-25 15:10 お迎え（教室へ）\nこのブラウザ内のデモ予約を取り消しますか？ 教室の予定は変わりません。",
+    "田中 陽菜 (ひな) 2026-11-25 15:10 お迎え（教室へ）\nこのブラウザ内のデモ予約を取り消しますか？ 教室の予定は変わりません。"
+  ],
+  "blockedRequests": [],
+  "fixtureIds": [
+    "RIDE-a6d178f5-de61-4f3f-90d9-320cb0ab4758",
+    "RIDE-dc1c6c18-2176-453f-b34a-a5cbaadcee38"
+  ],
+  "scope": "Isolated anonymous parent demo, mobile Edge emulation. No live Google/calendar or customer data."
+}

@@ -1,0 +1,29 @@
+{
+  "recordedAt": "2026-11-10T21:30+09:00",
+  "environment": "verification (eigo-taxi-test.web.app, GAS v6)",
+  "operator": "Mighty 検証管理者 (admin screen, account management)",
+  "registered": {
+    "displayName": "開発確認用（検証専用）",
+    "email": "kanta0930@gmail.com",
+    "role": "reviewer",
+    "active": true,
+    "linked": false,
+    "students": ["AT23検証_20261020_1514"],
+    "parentUrl": "https://eigo-taxi-test.web.app/#/parent/2b6bd545-a93e-4f8c-9981-025f0b2128e1",
+    "adminUrl": "https://eigo-taxi-test.web.app/#/admin"
+  },
+  "notRegistered": {
+    "email": "kanta13jp@gmail.com",
+    "reason": "already registered as admin 'Mighty 検証管理者2' (active, linked); not changed"
+  },
+  "listAfterSave": [
+    "Mighty 検証管理者 / admin / active / linked",
+    "Mighty 検証管理者2 / admin / active / linked",
+    "小林さん顧客確認 / reviewer / active / first login pending",
+    "Brenda先生（検証用） / reviewer / active / first login pending",
+    "開発確認用（検証専用） / reviewer / active / first login pending"
+  ],
+  "kobayashiParentUrlUnchanged": true,
+  "notVerified": ["first login by kanta0930@gmail.com", "both portals with the new account"],
+  "noChanges": ["code", "GAS", "Hosting", "students", "reservations", "tickets"]
+}

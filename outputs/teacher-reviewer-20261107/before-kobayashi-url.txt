@@ -1,0 +1,37 @@
+Browser tab: 1750959453, Title: "Mauro & Brenda 送迎チケット管理 | Eigo Taxi Link", URL: "https://eigo-taxi-test.web.app/#/admin".
+1 AXWebArea Mauro & Brenda 送迎チケット管理 | Eigo Taxi Link, URL: eigo-taxi-test.web.app/#/admin
+	2 container root
+		3 container
+			4 heading Mauro & Brenda Taxi Link, Value: 1
+				5 text Mauro & Brenda Taxi Link
+			6 text 管理者専用ページ
+			7 container 管理者メニュー
+				8 button 管理者用 (Mauro・Brenda)
+				9 button 個別URL・QR
+				10 button アカウント管理
+				11 button Google連携
+		12 container
+			13 text 教室の連携環境  /  Mighty 検証管理者
+		14 button ログアウト
+		65 container
+			66 heading ご家庭の個別URL・QR, Value: 2
+				67 text ご家庭の個別URL・QR
+			68 text 登録済みのご家庭を選び、URLまたはQR画像を本人へ配布します。教室に登録されたGoogleアカウントでログインしてもらってください。 QRには個別URLだけを含めます。氏名・生徒ID・認証情報は入りません。 配布先のご家庭
+			69 pop up button (collapsed, settable) 配布先のご家庭, Value: 小林さん顧客確認, ID: invitation-family, Secondary Actions: Expand
+				70 menu
+					71 (selected) 小林さん顧客確認
+			72 text https://eigo-taxi-test.web.app/#/parent/24db89d1-e687-4535-900a-559e6ebca0b7
+			73 button URLをコピー
+			74 image ご家庭専用のログインURLのQRコード
+			75 link QR画像を保存
+				76 text QR画像を保存
+			77 text 配布前にご家庭名を確認してください。リンクの紛失時は「アカウント管理」で個別URLを再発行します。アカウント変更・退会時も管理者が利用登録を停止・変更します。
+		58 container
+			59 text © 2026 Mauro & Brenda English School. All rights reserved.
+			60 button 利用規約
+			61 text |
+			62 button 個人情報の取扱い
+			63 text |
+			64 button 免責事項
+
+The focused UI element is 9 button 個別URL・QR

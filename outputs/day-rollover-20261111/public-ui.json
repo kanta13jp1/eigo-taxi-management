@@ -1,0 +1,14 @@
+{
+  "checkedAt": "2026-11-10T15:11:00.812Z",
+  "hosting": "6d90f151c5483c87",
+  "scope": "public anonymous admin demo; browser-only synthetic booking",
+  "date": "2026-11-11",
+  "beforeCount": 0,
+  "afterCount": 1,
+  "time": "16:00",
+  "location": "架空の試験停留所 AT-12",
+  "mapURL": "https://www.google.com/maps/search/?api=1&query=%E6%9E%B6%E7%A9%BA%E3%81%AE%E8%A9%A6%E9%A8%93%E5%81%9C%E7%95%99%E6%89%80%20AT-12",
+  "openedMap": false,
+  "observedNaturalMidnight": false,
+  "googleWrite": false
+}

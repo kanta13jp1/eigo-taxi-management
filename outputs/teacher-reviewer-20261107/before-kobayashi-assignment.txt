@@ -1,0 +1,73 @@
+Browser tab: 1750959453, Title: "Mauro & Brenda 送迎チケット管理 | Eigo Taxi Link", URL: "https://eigo-taxi-test.web.app/#/admin".
+1 AXWebArea Mauro & Brenda 送迎チケット管理 | Eigo Taxi Link, URL: eigo-taxi-test.web.app/#/admin
+	2 container root
+		3 container
+			4 heading Mauro & Brenda Taxi Link, Value: 1
+				5 text Mauro & Brenda Taxi Link
+			6 text 管理者専用ページ
+			7 container 管理者メニュー
+				8 button 管理者用 (Mauro・Brenda)
+				9 button 個別URL・QR
+				10 button アカウント管理
+				11 button Google連携
+		12 container
+			13 text 教室の連携環境  /  Mighty 検証管理者
+		14 button ログアウト
+		65 container
+			66 heading アカウント管理, Value: 2
+				67 text アカウント管理
+			68 text Googleアカウントのメールアドレス、役割、対象の生徒を登録します。本人の初回Googleログインで本人確認が完了します。Googleアカウント自体の作成・削除は行いません。 停止・削除は次の通信から反映します。退会前に予約の確認を行ってください。自分自身の停止・削除はできません。
+			69 button 一覧を再取得
+			70 content list
+				71 container
+					72 text Mighty 検証管理者 （自分） メール未登録（既存設定） 管理者  /  有効  /  本人確認済み
+					73 button 編集：Mighty 検証管理者
+						74 text 編集：
+						75 text Mighty 検証管理者
+				76 container
+					77 text Mighty 検証管理者2 kanta13jp@gmail.com 管理者  /  有効  /  本人確認済み
+					78 button 編集：Mighty 検証管理者2
+						79 text 編集：
+						80 text Mighty 検証管理者2
+				81 container
+					82 text 小林さん顧客確認 kobayashi-masami@ml-mightylink.com 検証専用（指定した架空生徒のみ）  /  有効  /  初回ログイン待ち
+					83 button 編集：小林さん顧客確認
+						84 text 編集：
+						85 text 小林さん顧客確認
+			86 heading 利用登録を編集, Value: 3
+				87 text 利用登録を編集
+			88 container
+				89 text 表示名
+				90 text field (settable) 表示名, Value: 小林さん顧客確認
+			91 container
+				92 text Googleメールアドレス
+				93 text field (settable) Googleメールアドレス, Value: <redacted>
+			94 text メールを変更する場合は古い利用登録を停止し、新しいメールで登録してください。
+			95 container
+				96 text 役割
+				97 pop up button (collapsed, settable) 役割, Value: 検証専用（指定した架空生徒のみ）, Secondary Actions: Expand
+					98 menu
+						99 生徒・保護者
+						100 管理者（全生徒とアカウントを管理）
+						101 (selected) 検証専用（指定した架空生徒のみ）
+			111 text 検証台帳専用です。同じGoogleアカウントで管理者用と保護者用の2つのURLを使えます。実際の生徒は選択しないでください。アカウント管理・教室設定・生徒追加は利用できません。
+			102 container 対象の架空生徒（1名以上）
+				103 text 対象の架空生徒（1名以上）
+				104 checkbox (settable, integer) Description: 田中 陽菜, Value: 0
+				105 checkbox (settable, integer) Description: 山本 颯太, Value: 0
+				106 checkbox (settable, integer) Description: AT23検証_20261020_1514, Value: 0
+				107 checkbox (settable, integer) Description: 顧客確認_架空生徒, Value: 1
+			108 checkbox (settable, integer) Description: 利用を有効にする, Value: 1
+			112 checkbox (settable, integer) Description: 個別URLを再発行する（以前のURLは使えなくなります）, Value: 0
+			109 button 内容を確認
+			110 button 新規登録に戻る
+			113 button 利用登録を削除
+		58 container
+			59 text © 2026 Mauro & Brenda English School. All rights reserved.
+			60 button 利用規約
+			61 text |
+			62 button 個人情報の取扱い
+			63 text |
+			64 button 免責事項
+
+The focused UI element is 83 button 編集：小林さん顧客確認

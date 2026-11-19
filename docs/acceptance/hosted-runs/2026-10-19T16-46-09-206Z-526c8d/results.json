@@ -1,0 +1,461 @@
+{
+  "schemaVersion": 1,
+  "runId": "2026-10-19T16-46-09-206Z-526c8d",
+  "url": "https://eigo-taxi-test.web.app/",
+  "selectedCaseIds": [
+    "PUB-18"
+  ],
+  "catalogCaseCount": 23,
+  "startedAt": "2026-10-19T16:46:09.208Z",
+  "finishedAt": "2026-10-19T16:46:14.639Z",
+  "timezone": "Asia/Tokyo",
+  "mode": "Unmodified HTTPS-hosted assets; UI forms/buttons; isolated fresh browser contexts; demo storage read-only inspection; optional intercepted synthetic HTTPS failures",
+  "browser": "HeadlessChrome/154.0.8037.57",
+  "commit": "2fa6127715017d52ae0c9bd80be39c4db90a47c3",
+  "scriptSha256": "d0bca0a6b9c99267dce1422e2e537ebcd526ae5d81a8ae818caf1ad11c3cd3c8",
+  "safety": {
+    "externalNetwork": "blocked except mocked acceptance.invalid; same-origin GET/HEAD only",
+    "realCredentialsUsed": false,
+    "realCustomerDataUsed": false,
+    "profileIsolated": true,
+    "storageSeeded": false,
+    "sourceApiImported": false,
+    "deployedBundleModified": false
+  },
+  "servedAssets": [
+    {
+      "url": "https://eigo-taxi-test.web.app/",
+      "resourceType": "document",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 507,
+      "sha256": "5a4dcca2f1b352dd98c96f77ce243eea73c0e32f10e5e8c24abdda4c01b3e025",
+      "observedIn": [
+        "PUB-18"
+      ]
+    },
+    {
+      "url": "https://eigo-taxi-test.web.app/assets/index-DMyQH3Xd.css",
+      "resourceType": "stylesheet",
+      "status": 200,
+      "contentType": "text/css; charset=utf-8",
+      "bytes": 22224,
+      "sha256": "94de2287f73df15bd92b83938754a65167ed3e9b725d8b94264eab48d233334c",
+      "observedIn": [
+        "PUB-18"
+      ]
+    },
+    {
+      "url": "https://eigo-taxi-test.web.app/assets/index-CH_N-4uk.js",
+      "resourceType": "script",
+      "status": 200,
+      "contentType": "text/javascript; charset=utf-8",
+      "bytes": 319840,
+      "sha256": "7912c9a9d4a42ce78f1ce494a58d785877ec10c0b7cf691a92b787807d94eb9a",
+      "observedIn": [
+        "PUB-18"
+      ]
+    }
+  ],
+  "networkAudit": [],
+  "runtimeErrors": [],
+  "fatalError": null,
+  "summary": {
+    "pass": 0,
+    "fail": 1,
+    "notRun": 0,
+    "total": 1
+  },
+  "results": [
+    {
+      "id": "PUB-18",
+      "acceptanceIds": [
+        "AT-21"
+      ],
+      "title": "375pxで管理・保護者・予約フォームを表示",
+      "mode": "hosted-ui-synthetic-demo",
+      "scope": "Headless Chromium emulation; not iPhone Safari or Android device acceptance",
+      "status": "FAIL",
+      "startedAt": "2026-10-19T16:46:09.385Z",
+      "screenshots": [
+        {
+          "file": "PUB-18-teacher.png",
+          "sha256": "1bba42e8a4ca30a089c790b24a69b9dd4e335cf992c7b702ce9901f89d1ed7fe",
+          "capturedAt": "2026-10-19T16:46:11.019Z"
+        },
+        {
+          "file": "PUB-18-parent.png",
+          "sha256": "cbfd491305aae435d181c474d77ca829582498ae561156e064dc66db3e671b10",
+          "capturedAt": "2026-10-19T16:46:11.209Z"
+        },
+        {
+          "file": "PUB-18-booking.png",
+          "sha256": "2a4c9b2d577ce6922f35b63e884fd2aad6f3944868b20916798c908566c2c089",
+          "capturedAt": "2026-10-19T16:46:11.558Z"
+        },
+        {
+          "file": "PUB-18-result.png",
+          "sha256": "6df04c69f42329a3c773821fa295cda75f19340f9f1a0c98508769b93c7427db",
+          "capturedAt": "2026-10-19T16:46:11.628Z"
+        }
+      ],
+      "dialogs": [],
+      "observations": {
+        "teacher": {
+          "viewport": 375,
+          "width": 375,
+          "client": 375,
+          "scroll": 375,
+          "overflowingElements": []
+        },
+        "parent": {
+          "viewport": 375,
+          "width": 388,
+          "client": 375,
+          "scroll": 388,
+          "overflowingElements": [
+            {
+              "tag": "BUTTON",
+              "className": "shrink-0 text-xs text-rose-600 hover:text-rose-700 bg-rose-50 hover:bg-rose-100 font-bold px-2.5 py-1.5 rounded-lg border border-rose-200 transition-colors flex items-center gap-1",
+              "text": "キャンセル",
+              "left": 300.875,
+              "right": 388.140625,
+              "width": 87.265625
+            }
+          ]
+        },
+        "booking": {
+          "viewport": 375,
+          "width": 388,
+          "client": 375,
+          "scroll": 388,
+          "overflowingElements": [
+            {
+              "tag": "BUTTON",
+              "className": "shrink-0 text-xs text-rose-600 hover:text-rose-700 bg-rose-50 hover:bg-rose-100 font-bold px-2.5 py-1.5 rounded-lg border border-rose-200 transition-colors flex items-center gap-1",
+              "text": "キャンセル",
+              "left": 300.875,
+              "right": 388.140625,
+              "width": 87.265625
+            },
+            {
+              "tag": "DIV",
+              "className": "fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs",
+              "text": "送迎予定の登録生徒・保護者からの送迎予約生徒田中 陽菜 (ひな)（残チケット: 7枚）送迎日お迎え時間送迎区分（フレックス予約）片道1回＝チケット1枚行き（お迎え）チケット1枚帰り（送り）チケット1枚",
+              "left": 0,
+              "right": 388,
+              "width": 388
+            }
+          ]
+        },
+        "savedSyntheticData": {
+          "students": [
+            {
+              "id": "STU-001",
+              "name": "田中 陽菜 (ひな)",
+              "parentName": "田中 美咲",
+              "phone": "090-1111-2222",
+              "address": "東京都世田谷区桜新町1-10-5 パークサイド201",
+              "pickupNote": "エントランス前。到着時インターホンかLINE",
+              "ticketBalance": 7,
+              "createdAt": "2026-09-01"
+            },
+            {
+              "id": "STU-002",
+              "name": "山本 颯太 (そうた)",
+              "parentName": "山本 健一",
+              "phone": "080-3333-4444",
+              "address": "東京都世田谷区用賀2-5-12",
+              "pickupNote": "正面道路沿いで待機しています",
+              "ticketBalance": 1,
+              "createdAt": "2026-09-10"
+            },
+            {
+              "id": "STU-003",
+              "name": "高橋 莉子 (りこ)",
+              "parentName": "高橋 智子",
+              "phone": "090-5555-6666",
+              "address": "東京都世田谷区弦巻3-8-1",
+              "pickupNote": "自宅玄関先までお越しください",
+              "ticketBalance": 0,
+              "createdAt": "2026-09-15"
+            }
+          ],
+          "rides": [
+            {
+              "id": "RIDE-101",
+              "studentId": "STU-001",
+              "studentName": "田中 陽菜 (ひな)",
+              "rideDate": "2026-10-20",
+              "rideTime": "16:00",
+              "rideType": "pickup",
+              "pickupLocation": "東京都世田谷区桜新町1-10-5 パークサイド201",
+              "status": "scheduled",
+              "calendarEventId": "mock-cal-101",
+              "note": "レッスン前のお迎え",
+              "reservedBy": "parent"
+            },
+            {
+              "id": "RIDE-102",
+              "studentId": "STU-002",
+              "studentName": "山本 颯太 (そうた)",
+              "rideDate": "2026-10-20",
+              "rideTime": "17:30",
+              "rideType": "dropoff",
+              "pickupLocation": "英語教室 → 東京都世田谷区用賀2-5-12",
+              "status": "scheduled",
+              "calendarEventId": "mock-cal-102",
+              "note": "レッスン後のご自宅送り",
+              "reservedBy": "teacher"
+            },
+            {
+              "id": "RIDE-103",
+              "studentId": "STU-001",
+              "studentName": "田中 陽菜 (ひな)",
+              "rideDate": "2026-10-06",
+              "rideTime": "16:00",
+              "rideType": "roundtrip",
+              "pickupLocation": "東京都世田谷区桜新町1-10-5 パークサイド201",
+              "status": "completed",
+              "completedAt": "2026-10-06 17:45",
+              "note": "送迎完了済み",
+              "reservedBy": "parent"
+            }
+          ],
+          "purchases": null
+        }
+      },
+      "detail": "parent: innerWidth=388, scrollWidth=388, clientWidth=375; booking: innerWidth=388, scrollWidth=388, clientWidth=375\n\n2 !== 0\n",
+      "errorStack": "AssertionError [ERR_ASSERTION]: parent: innerWidth=388, scrollWidth=388, clientWidth=375; booking: innerWidth=388, scrollWidth=388, clientWidth=375\n\n2 !== 0\n\n    at Object.run (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:248:12)\n    at async main (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:342:7)",
+      "finishedAt": "2026-10-19T16:46:11.632Z"
+    }
+  ],
+  "coverage": [
+    {
+      "id": "AT-01",
+      "title": "Google連携先の設定保存",
+      "publicCases": [],
+      "note": ""
+    },
+    {
+      "id": "AT-02",
+      "title": "生徒登録",
+      "publicCases": [],
+      "note": ""
+    },
+    {
+      "id": "AT-03",
+      "title": "保護者の残数確認",
+      "publicCases": [],
+      "note": ""
+    },
+    {
+      "id": "AT-04",
+      "title": "残少・ゼロ案内",
+      "publicCases": [],
+      "note": ""
+    },
+    {
+      "id": "AT-05",
+      "title": "チケット追加",
+      "publicCases": [],
+      "note": ""
+    },
+    {
+      "id": "AT-06",
+      "title": "保護者のお迎え予約",
+      "publicCases": [],
+      "note": ""
+    },
+    {
+      "id": "AT-07",
+      "title": "送り予約",
+      "publicCases": [],
+      "note": ""
+    },
+    {
+      "id": "AT-08",
+      "title": "往復予約",
+      "publicCases": [],
+      "note": ""
+    },
+    {
+      "id": "AT-09",
+      "title": "管理者の代理予約",
+      "publicCases": [],
+      "note": ""
+    },
+    {
+      "id": "AT-10",
+      "title": "保護者の予約取消",
+      "publicCases": [],
+      "note": ""
+    },
+    {
+      "id": "AT-11",
+      "title": "管理者の予約取消",
+      "publicCases": [],
+      "note": ""
+    },
+    {
+      "id": "AT-12",
+      "title": "当日一覧・地図リンク",
+      "publicCases": [],
+      "note": ""
+    },
+    {
+      "id": "AT-13",
+      "title": "片道完了",
+      "publicCases": [],
+      "note": ""
+    },
+    {
+      "id": "AT-14",
+      "title": "往復完了",
+      "publicCases": [],
+      "note": ""
+    },
+    {
+      "id": "AT-15",
+      "title": "完了の二重処理防止",
+      "publicCases": [],
+      "note": "Hosted UI observations do not replace direct service authorization, duplicate-request/idempotency and malformed-value regression tests."
+    },
+    {
+      "id": "AT-16",
+      "title": "取消済みの完了拒否",
+      "publicCases": [],
+      "note": "Hosted UI observations do not replace direct service authorization, duplicate-request/idempotency and malformed-value regression tests."
+    },
+    {
+      "id": "AT-17",
+      "title": "不正なチケット追加拒否",
+      "publicCases": [],
+      "note": "Hosted UI observations do not replace direct service authorization, duplicate-request/idempotency and malformed-value regression tests."
+    },
+    {
+      "id": "AT-18",
+      "title": "通信障害時に成功扱いしない",
+      "publicCases": [],
+      "note": "Faults are intercepted at acceptance.invalid in this browser. No real GAS outage, concurrent request or external service was exercised."
+    },
+    {
+      "id": "AT-19",
+      "title": "未認証の管理操作を拒否",
+      "publicCases": [],
+      "note": "Hosted UI observations do not replace direct service authorization, duplicate-request/idempotency and malformed-value regression tests."
+    },
+    {
+      "id": "AT-20",
+      "title": "保護者の家庭別アクセス制限",
+      "publicCases": [],
+      "note": "Hosted UI observations do not replace direct service authorization, duplicate-request/idempotency and malformed-value regression tests."
+    },
+    {
+      "id": "AT-21",
+      "title": "モバイル表示",
+      "publicCases": [
+        {
+          "id": "PUB-18",
+          "status": "FAIL"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "AT-22",
+      "title": "再読込後の永続化",
+      "publicCases": [],
+      "note": ""
+    },
+    {
+      "id": "AT-23",
+      "title": "Google初期化・永続化",
+      "publicCases": [],
+      "note": "Requires explicitly isolated Google Sheets/GAS/Calendar resources, configured credentials, multi-session or backup execution; not attempted by this hosted UI suite."
+    },
+    {
+      "id": "AT-24",
+      "title": "実カレンダー予約同期",
+      "publicCases": [],
+      "note": "Requires explicitly isolated Google Sheets/GAS/Calendar resources, configured credentials, multi-session or backup execution; not attempted by this hosted UI suite."
+    },
+    {
+      "id": "AT-25",
+      "title": "実カレンダー取消同期",
+      "publicCases": [],
+      "note": "Requires explicitly isolated Google Sheets/GAS/Calendar resources, configured credentials, multi-session or backup execution; not attempted by this hosted UI suite."
+    },
+    {
+      "id": "AT-26",
+      "title": "管理者2名・保護者の端末共有",
+      "publicCases": [],
+      "note": "Requires explicitly isolated Google Sheets/GAS/Calendar resources, configured credentials, multi-session or backup execution; not attempted by this hosted UI suite."
+    },
+    {
+      "id": "AT-27",
+      "title": "同時完了の排他制御",
+      "publicCases": [],
+      "note": "Requires explicitly isolated Google Sheets/GAS/Calendar resources, configured credentials, multi-session or backup execution; not attempted by this hosted UI suite."
+    },
+    {
+      "id": "AT-28",
+      "title": "バックアップから復旧",
+      "publicCases": [],
+      "note": "Requires explicitly isolated Google Sheets/GAS/Calendar resources, configured credentials, multi-session or backup execution; not attempted by this hosted UI suite."
+    },
+    {
+      "id": "AT-29",
+      "title": "実機受入",
+      "publicCases": [],
+      "note": "Requires physical iPhone Safari / Android Chrome and human acceptance; Chromium mobile emulation is partial evidence only."
+    },
+    {
+      "id": "AT-30",
+      "title": "リリース後スモークテスト",
+      "publicCases": [],
+      "note": "This is test-hosting UI smoke and served-asset evidence, not full production release acceptance; external integration and release prerequisites remain independent."
+    }
+  ],
+  "residuals": [
+    {
+      "acceptanceIds": [
+        "AT-15",
+        "AT-16",
+        "AT-17",
+        "AT-19",
+        "AT-20"
+      ],
+      "reason": "Hosted UI observations do not replace direct service authorization, duplicate-request/idempotency and malformed-value regression tests."
+    },
+    {
+      "acceptanceIds": [
+        "AT-18"
+      ],
+      "reason": "Faults are intercepted at acceptance.invalid in this browser. No real GAS outage, concurrent request or external service was exercised."
+    },
+    {
+      "acceptanceIds": [
+        "AT-23",
+        "AT-24",
+        "AT-25",
+        "AT-26",
+        "AT-27",
+        "AT-28"
+      ],
+      "reason": "Requires explicitly isolated Google Sheets/GAS/Calendar resources, configured credentials, multi-session or backup execution; not attempted by this hosted UI suite."
+    },
+    {
+      "acceptanceIds": [
+        "AT-29"
+      ],
+      "reason": "Requires physical iPhone Safari / Android Chrome and human acceptance; Chromium mobile emulation is partial evidence only."
+    },
+    {
+      "acceptanceIds": [
+        "AT-30"
+      ],
+      "reason": "This is test-hosting UI smoke and served-asset evidence, not full production release acceptance; external integration and release prerequisites remain independent."
+    }
+  ]
+}

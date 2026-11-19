@@ -1,0 +1,21 @@
+﻿id,name,role,implementation,operation
+C01,入口案内,未ログイン,#/ ／ 不正URL,管理者・保護者入口へ
+C02,利用規約・個人情報・免責,共通,TermsModal内タブ,元画面へ閉じる
+A01,管理者ログイン,管理者,#/admin,Google認証後A02
+A02,本日の送迎,管理者,TeacherDashboard today,完了・予約・購入
+A03,送迎予定・履歴一覧,管理者,同allRidesタブ,一覧・完了・取消
+A04,生徒・チケット管理,管理者,同studentsタブ,生徒登録・追加購入
+A05,個別URL・QR,管理者,PortalInvitations,コピー・QR表示
+A06,アカウント一覧・編集,管理者,AccountManagement,追加・停止・削除・再発行
+A07,Google連携情報,管理者,GoogleSettings,接続情報表示／デモ初期化
+P01,保護者ログイン,保護者,#/parent[/個別ID],Google認証後P02
+P02,家庭専用ページ,保護者,ParentPortal,兄弟選択・予約・残数・取消
+D01,送迎予約入力,両者,AddRideModal,送信後、呼出元へ
+D02,チケット追加入力,管理者,AddTicketModal,送信後、呼出元へ
+D03,生徒新規入力,管理者,AddStudentModal,送信後、呼出元へ
+D04,アカウント変更確認,管理者,A06内の確認dialog,保存／削除→A06
+D05,取消確認,両者,window.confirm,OK→取消、戻る→元画面
+E01,Googleアカウント選択,外部,Firebase Auth popup,認証成功／中止を返す
+E02,Googleカレンダー,外部,Google Calendar,当日の予定を人が確認
+E03,Googleスプレッドシート,外部,Google Sheets,保守修正・保全・照合
+E04,導入・保守設定,外部,Firebase Console／GAS,初期設定・緊急復旧

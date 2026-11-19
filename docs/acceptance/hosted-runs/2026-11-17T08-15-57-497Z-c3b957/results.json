@@ -1,0 +1,1220 @@
+{
+  "schemaVersion": 1,
+  "runId": "2026-11-17T08-15-57-497Z-c3b957",
+  "url": "https://eigo-taxi-test.web.app/",
+  "selectedCaseIds": [
+    "PUB-01",
+    "PUB-02",
+    "PUB-03",
+    "PUB-04",
+    "PUB-05",
+    "PUB-06",
+    "PUB-07",
+    "PUB-08",
+    "PUB-09",
+    "PUB-10",
+    "PUB-11",
+    "PUB-12",
+    "PUB-13",
+    "PUB-14",
+    "PUB-15",
+    "PUB-16",
+    "PUB-17",
+    "PUB-18",
+    "PUB-19",
+    "PUB-20",
+    "PUB-21",
+    "PUB-22",
+    "PUB-23"
+  ],
+  "catalogCaseCount": 23,
+  "startedAt": "2026-11-17T08:15:57.499Z",
+  "finishedAt": "2026-11-17T08:19:43.739Z",
+  "timezone": "Asia/Tokyo",
+  "mode": "Unmodified HTTPS-hosted assets; UI forms/buttons; isolated fresh browser contexts; demo storage read-only inspection; optional intercepted synthetic HTTPS failures",
+  "browser": "HeadlessChrome/154.0.8037.57",
+  "commit": "2fa6127715017d52ae0c9bd80be39c4db90a47c3",
+  "scriptSha256": "d0bca0a6b9c99267dce1422e2e537ebcd526ae5d81a8ae818caf1ad11c3cd3c8",
+  "safety": {
+    "externalNetwork": "blocked except mocked acceptance.invalid; same-origin GET/HEAD only",
+    "realCredentialsUsed": false,
+    "realCustomerDataUsed": false,
+    "profileIsolated": true,
+    "storageSeeded": false,
+    "sourceApiImported": false,
+    "deployedBundleModified": false
+  },
+  "servedAssets": [
+    {
+      "url": "https://eigo-taxi-test.web.app/",
+      "resourceType": "document",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 507,
+      "sha256": "c027c98e6e7105ce3b4a74dcb795f04cd39f57995c39ecf7b0b3c9272a06b1f5",
+      "observedIn": [
+        "PUB-01",
+        "PUB-02",
+        "PUB-03",
+        "PUB-04",
+        "PUB-05",
+        "PUB-06",
+        "PUB-07",
+        "PUB-08",
+        "PUB-09",
+        "PUB-10",
+        "PUB-11",
+        "PUB-12",
+        "PUB-13",
+        "PUB-14",
+        "PUB-15",
+        "PUB-16",
+        "PUB-17",
+        "PUB-18",
+        "PUB-19",
+        "PUB-20",
+        "PUB-21",
+        "PUB-22",
+        "PUB-23"
+      ]
+    },
+    {
+      "url": "https://eigo-taxi-test.web.app/assets/index-j9C27HUZ.css",
+      "resourceType": "stylesheet",
+      "status": 200,
+      "contentType": "text/css; charset=utf-8",
+      "bytes": 23364,
+      "sha256": "9afe98275b7d66dc458ee063382538546665a6ee4535bf89cc88e8953fa98c12",
+      "observedIn": [
+        "PUB-01",
+        "PUB-02",
+        "PUB-03",
+        "PUB-04",
+        "PUB-05",
+        "PUB-06",
+        "PUB-07",
+        "PUB-08",
+        "PUB-09",
+        "PUB-10",
+        "PUB-11",
+        "PUB-12",
+        "PUB-13",
+        "PUB-14",
+        "PUB-15",
+        "PUB-16",
+        "PUB-17",
+        "PUB-18",
+        "PUB-19",
+        "PUB-20",
+        "PUB-21",
+        "PUB-22",
+        "PUB-23"
+      ]
+    },
+    {
+      "url": "https://eigo-taxi-test.web.app/assets/index-dKQz-5SP.js",
+      "resourceType": "script",
+      "status": 200,
+      "contentType": "text/javascript; charset=utf-8",
+      "bytes": 450505,
+      "sha256": "59f81594f0dc044615742c21c4a139f8598bad9632eaddf4359db133f55351e8",
+      "observedIn": [
+        "PUB-01",
+        "PUB-02",
+        "PUB-03",
+        "PUB-04",
+        "PUB-05",
+        "PUB-06",
+        "PUB-07",
+        "PUB-08",
+        "PUB-09",
+        "PUB-10",
+        "PUB-11",
+        "PUB-12",
+        "PUB-13",
+        "PUB-14",
+        "PUB-15",
+        "PUB-16",
+        "PUB-17",
+        "PUB-18",
+        "PUB-19",
+        "PUB-20",
+        "PUB-21",
+        "PUB-22",
+        "PUB-23"
+      ]
+    },
+    {
+      "url": "https://eigo-taxi-test.web.app/?student=STU-002",
+      "resourceType": "document",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 507,
+      "sha256": "c027c98e6e7105ce3b4a74dcb795f04cd39f57995c39ecf7b0b3c9272a06b1f5",
+      "observedIn": [
+        "PUB-02"
+      ]
+    }
+  ],
+  "networkAudit": [],
+  "runtimeErrors": [],
+  "fatalError": null,
+  "summary": {
+    "pass": 0,
+    "fail": 23,
+    "notRun": 0,
+    "total": 23
+  },
+  "results": [
+    {
+      "id": "PUB-01",
+      "acceptanceIds": [
+        "AT-19",
+        "AT-30"
+      ],
+      "title": "未認証の公開ページ",
+      "mode": "hosted-ui-synthetic-demo",
+      "scope": "UI visibility only; no direct service authorization assertion",
+      "status": "FAIL",
+      "startedAt": "2026-11-17T08:15:58.910Z",
+      "screenshots": [
+        {
+          "file": "PUB-01-result.png",
+          "sha256": "44208ba04c104932a8de94dc2513ec77ce6546cd5c792d271d8072c2a2620776",
+          "capturedAt": "2026-11-17T08:16:11.057Z"
+        }
+      ],
+      "dialogs": [],
+      "observations": {
+        "savedSyntheticData": {
+          "students": null,
+          "rides": null,
+          "purchases": null
+        }
+      },
+      "detail": "Waiting for selector `#login-key` failed",
+      "errorStack": "TimeoutError: Waiting for selector `#login-key` failed\n    at CSSQueryHandler.waitFor (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/common/QueryHandler.js:211:46)\n    at async CdpFrame.waitForSelector (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/api/Frame.js:546:21)\n    at async CdpPage.waitForSelector (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/api/Page.js:1477:20)\n    at async Object.run (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:162:5)\n    at async main (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:342:7)",
+      "finishedAt": "2026-11-17T08:16:11.066Z"
+    },
+    {
+      "id": "PUB-02",
+      "acceptanceIds": [
+        "AT-19",
+        "AT-20"
+      ],
+      "title": "studentクエリでは認証を迂回しない",
+      "mode": "hosted-ui-synthetic-demo",
+      "scope": "Query URL and parent UI only",
+      "status": "FAIL",
+      "startedAt": "2026-11-17T08:16:11.066Z",
+      "screenshots": [
+        {
+          "file": "PUB-02-result.png",
+          "sha256": "44208ba04c104932a8de94dc2513ec77ce6546cd5c792d271d8072c2a2620776",
+          "capturedAt": "2026-11-17T08:16:21.603Z"
+        }
+      ],
+      "dialogs": [],
+      "observations": {
+        "savedSyntheticData": {
+          "students": null,
+          "rides": null,
+          "purchases": null
+        }
+      },
+      "detail": "Waiting for selector `#login-key` failed",
+      "errorStack": "TimeoutError: Waiting for selector `#login-key` failed\n    at CSSQueryHandler.waitFor (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/common/QueryHandler.js:211:46)\n    at async CdpFrame.waitForSelector (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/api/Frame.js:546:21)\n    at async CdpPage.waitForSelector (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/api/Page.js:1477:20)\n    at async Object.run (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:168:5)\n    at async main (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:342:7)",
+      "finishedAt": "2026-11-17T08:16:21.608Z"
+    },
+    {
+      "id": "PUB-03",
+      "acceptanceIds": [
+        "AT-03",
+        "AT-20"
+      ],
+      "title": "明示した保護者デモの家庭・残高表示",
+      "mode": "hosted-ui-synthetic-demo",
+      "scope": "Synthetic STU-001 UI; live family authorization remains external",
+      "status": "FAIL",
+      "startedAt": "2026-11-17T08:16:21.608Z",
+      "screenshots": [
+        {
+          "file": "PUB-03-result.png",
+          "sha256": "44208ba04c104932a8de94dc2513ec77ce6546cd5c792d271d8072c2a2620776",
+          "capturedAt": "2026-11-17T08:16:30.843Z"
+        }
+      ],
+      "dialogs": [],
+      "observations": {
+        "savedSyntheticData": {
+          "students": null,
+          "rides": null,
+          "purchases": null
+        }
+      },
+      "detail": "Waiting failed: 8000ms exceeded",
+      "errorStack": "TimeoutError: Waiting failed: 8000ms exceeded\n    at new WaitTask (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/common/WaitTask.js:46:34)\n    at IsolatedWorld.waitForFunction (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/api/Realm.js:49:26)\n    at CdpFrame.waitForFunction (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/api/Frame.js:585:43)\n    at CdpFrame.<anonymous> (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/util/decorators.js:101:27)\n    at CdpPage.waitForFunction (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/api/Page.js:1537:37)\n    at click (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:45:14)\n    at enter (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:82:9)\n    at Object.run (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:172:11)\n    at main (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:342:15)",
+      "finishedAt": "2026-11-17T08:16:30.847Z"
+    },
+    {
+      "id": "PUB-04",
+      "acceptanceIds": [
+        "AT-19",
+        "AT-20"
+      ],
+      "title": "ログアウトと管理者・保護者の切替",
+      "mode": "hosted-ui-synthetic-demo",
+      "scope": "Fresh demo sessions, UI visibility and session state",
+      "status": "FAIL",
+      "startedAt": "2026-11-17T08:16:30.847Z",
+      "screenshots": [
+        {
+          "file": "PUB-04-result.png",
+          "sha256": "44208ba04c104932a8de94dc2513ec77ce6546cd5c792d271d8072c2a2620776",
+          "capturedAt": "2026-11-17T08:16:40.106Z"
+        }
+      ],
+      "dialogs": [],
+      "observations": {
+        "savedSyntheticData": {
+          "students": null,
+          "rides": null,
+          "purchases": null
+        }
+      },
+      "detail": "Waiting failed: 8000ms exceeded",
+      "errorStack": "TimeoutError: Waiting failed: 8000ms exceeded\n    at new WaitTask (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/common/WaitTask.js:46:34)\n    at IsolatedWorld.waitForFunction (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/api/Realm.js:49:26)\n    at CdpFrame.waitForFunction (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/api/Frame.js:585:43)\n    at CdpFrame.<anonymous> (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/util/decorators.js:101:27)\n    at CdpPage.waitForFunction (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/api/Page.js:1537:37)\n    at click (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:45:14)\n    at enter (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:82:9)\n    at Object.run (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:176:11)\n    at main (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:342:15)",
+      "finishedAt": "2026-11-17T08:16:40.110Z"
+    },
+    {
+      "id": "PUB-05",
+      "acceptanceIds": [
+        "AT-02"
+      ],
+      "title": "画面から架空生徒を登録",
+      "mode": "hosted-ui-synthetic-demo",
+      "scope": "Demo UI and saved synthetic data",
+      "status": "FAIL",
+      "startedAt": "2026-11-17T08:16:40.110Z",
+      "screenshots": [
+        {
+          "file": "PUB-05-result.png",
+          "sha256": "44208ba04c104932a8de94dc2513ec77ce6546cd5c792d271d8072c2a2620776",
+          "capturedAt": "2026-11-17T08:16:49.405Z"
+        }
+      ],
+      "dialogs": [],
+      "observations": {
+        "savedSyntheticData": {
+          "students": null,
+          "rides": null,
+          "purchases": null
+        }
+      },
+      "detail": "Waiting failed: 8000ms exceeded",
+      "errorStack": "TimeoutError: Waiting failed: 8000ms exceeded\n    at new WaitTask (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/common/WaitTask.js:46:34)\n    at IsolatedWorld.waitForFunction (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/api/Realm.js:49:26)\n    at CdpFrame.waitForFunction (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/api/Frame.js:585:43)\n    at CdpFrame.<anonymous> (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/util/decorators.js:101:27)\n    at CdpPage.waitForFunction (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/api/Page.js:1537:37)\n    at click (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:45:14)\n    at enter (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:82:9)\n    at Object.run (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:180:11)\n    at main (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:342:15)",
+      "finishedAt": "2026-11-17T08:16:49.454Z"
+    },
+    {
+      "id": "PUB-06",
+      "acceptanceIds": [
+        "AT-05"
+      ],
+      "title": "画面から10回券を追加",
+      "mode": "hosted-ui-synthetic-demo",
+      "scope": "Demo UI, balance and persisted purchase fields",
+      "status": "FAIL",
+      "startedAt": "2026-11-17T08:16:49.455Z",
+      "screenshots": [
+        {
+          "file": "PUB-06-result.png",
+          "sha256": "44208ba04c104932a8de94dc2513ec77ce6546cd5c792d271d8072c2a2620776",
+          "capturedAt": "2026-11-17T08:16:58.833Z"
+        }
+      ],
+      "dialogs": [],
+      "observations": {
+        "savedSyntheticData": {
+          "students": null,
+          "rides": null,
+          "purchases": null
+        }
+      },
+      "detail": "Waiting failed: 8000ms exceeded",
+      "errorStack": "TimeoutError: Waiting failed: 8000ms exceeded\n    at new WaitTask (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/common/WaitTask.js:46:34)\n    at IsolatedWorld.waitForFunction (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/api/Realm.js:49:26)\n    at CdpFrame.waitForFunction (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/api/Frame.js:585:43)\n    at CdpFrame.<anonymous> (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/util/decorators.js:101:27)\n    at CdpPage.waitForFunction (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/api/Page.js:1537:37)\n    at click (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:45:14)\n    at enter (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:82:9)\n    at Object.run (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:183:11)\n    at main (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:342:15)",
+      "finishedAt": "2026-11-17T08:16:58.880Z"
+    },
+    {
+      "id": "PUB-07",
+      "acceptanceIds": [
+        "AT-06"
+      ],
+      "title": "保護者が画面からお迎え予約",
+      "mode": "hosted-ui-synthetic-demo",
+      "scope": "Real form submit, demo storage and visible reservation; no external calendar",
+      "status": "FAIL",
+      "startedAt": "2026-11-17T08:16:58.880Z",
+      "screenshots": [
+        {
+          "file": "PUB-07-result.png",
+          "sha256": "44208ba04c104932a8de94dc2513ec77ce6546cd5c792d271d8072c2a2620776",
+          "capturedAt": "2026-11-17T08:17:08.536Z"
+        }
+      ],
+      "dialogs": [],
+      "observations": {
+        "savedSyntheticData": {
+          "students": null,
+          "rides": null,
+          "purchases": null
+        }
+      },
+      "detail": "Waiting failed: 8000ms exceeded",
+      "errorStack": "TimeoutError: Waiting failed: 8000ms exceeded\n    at new WaitTask (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/common/WaitTask.js:46:34)\n    at IsolatedWorld.waitForFunction (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/api/Realm.js:49:26)\n    at CdpFrame.waitForFunction (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/api/Frame.js:585:43)\n    at CdpFrame.<anonymous> (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/util/decorators.js:101:27)\n    at CdpPage.waitForFunction (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/api/Page.js:1537:37)\n    at click (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:45:14)\n    at enter (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:82:9)\n    at Object.run (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:191:11)\n    at main (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:342:15)",
+      "finishedAt": "2026-11-17T08:17:08.566Z"
+    },
+    {
+      "id": "PUB-08",
+      "acceptanceIds": [
+        "AT-07"
+      ],
+      "title": "保護者が画面から送り予約",
+      "mode": "hosted-ui-synthetic-demo",
+      "scope": "Real form submit, demo storage and visible reservation; no external calendar",
+      "status": "FAIL",
+      "startedAt": "2026-11-17T08:17:08.567Z",
+      "screenshots": [
+        {
+          "file": "PUB-08-result.png",
+          "sha256": "44208ba04c104932a8de94dc2513ec77ce6546cd5c792d271d8072c2a2620776",
+          "capturedAt": "2026-11-17T08:17:18.007Z"
+        }
+      ],
+      "dialogs": [],
+      "observations": {
+        "savedSyntheticData": {
+          "students": null,
+          "rides": null,
+          "purchases": null
+        }
+      },
+      "detail": "Waiting failed: 8000ms exceeded",
+      "errorStack": "TimeoutError: Waiting failed: 8000ms exceeded\n    at new WaitTask (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/common/WaitTask.js:46:34)\n    at IsolatedWorld.waitForFunction (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/api/Realm.js:49:26)\n    at CdpFrame.waitForFunction (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/api/Frame.js:585:43)\n    at CdpFrame.<anonymous> (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/util/decorators.js:101:27)\n    at CdpPage.waitForFunction (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/api/Page.js:1537:37)\n    at click (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:45:14)\n    at enter (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:82:9)\n    at Object.run (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:191:11)\n    at main (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:342:15)",
+      "finishedAt": "2026-11-17T08:17:18.012Z"
+    },
+    {
+      "id": "PUB-09",
+      "acceptanceIds": [
+        "AT-08"
+      ],
+      "title": "保護者が画面から往復予約",
+      "mode": "hosted-ui-synthetic-demo",
+      "scope": "Real form submit, demo storage and visible reservation; no external calendar",
+      "status": "FAIL",
+      "startedAt": "2026-11-17T08:17:18.012Z",
+      "screenshots": [
+        {
+          "file": "PUB-09-result.png",
+          "sha256": "44208ba04c104932a8de94dc2513ec77ce6546cd5c792d271d8072c2a2620776",
+          "capturedAt": "2026-11-17T08:17:27.315Z"
+        }
+      ],
+      "dialogs": [],
+      "observations": {
+        "savedSyntheticData": {
+          "students": null,
+          "rides": null,
+          "purchases": null
+        }
+      },
+      "detail": "Waiting failed: 8000ms exceeded",
+      "errorStack": "TimeoutError: Waiting failed: 8000ms exceeded\n    at new WaitTask (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/common/WaitTask.js:46:34)\n    at IsolatedWorld.waitForFunction (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/api/Realm.js:49:26)\n    at CdpFrame.waitForFunction (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/api/Frame.js:585:43)\n    at CdpFrame.<anonymous> (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/util/decorators.js:101:27)\n    at CdpPage.waitForFunction (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/api/Page.js:1537:37)\n    at click (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:45:14)\n    at enter (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:82:9)\n    at Object.run (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:191:11)\n    at main (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:342:15)",
+      "finishedAt": "2026-11-17T08:17:27.339Z"
+    },
+    {
+      "id": "PUB-10",
+      "acceptanceIds": [
+        "AT-09"
+      ],
+      "title": "管理者予約者属性をセッションから決定",
+      "mode": "hosted-ui-synthetic-demo",
+      "scope": "Admin form and admin visiting parent tab both persist reservedBy=teacher",
+      "status": "FAIL",
+      "startedAt": "2026-11-17T08:17:27.339Z",
+      "screenshots": [
+        {
+          "file": "PUB-10-result.png",
+          "sha256": "44208ba04c104932a8de94dc2513ec77ce6546cd5c792d271d8072c2a2620776",
+          "capturedAt": "2026-11-17T08:17:37.213Z"
+        }
+      ],
+      "dialogs": [],
+      "observations": {
+        "savedSyntheticData": {
+          "students": null,
+          "rides": null,
+          "purchases": null
+        }
+      },
+      "detail": "Waiting failed: 8000ms exceeded",
+      "errorStack": "TimeoutError: Waiting failed: 8000ms exceeded\n    at new WaitTask (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/common/WaitTask.js:46:34)\n    at IsolatedWorld.waitForFunction (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/api/Realm.js:49:26)\n    at CdpFrame.waitForFunction (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/api/Frame.js:585:43)\n    at CdpFrame.<anonymous> (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/util/decorators.js:101:27)\n    at CdpPage.waitForFunction (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/api/Page.js:1537:37)\n    at click (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:45:14)\n    at enter (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:82:9)\n    at Object.run (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:196:11)\n    at main (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:342:15)",
+      "finishedAt": "2026-11-17T08:17:37.316Z"
+    },
+    {
+      "id": "PUB-11",
+      "acceptanceIds": [
+        "AT-10",
+        "AT-16"
+      ],
+      "title": "保護者の取消確認・取消後表示",
+      "mode": "hosted-ui-synthetic-demo",
+      "scope": "Confirmation dismiss/accept and canceled UI; not direct-call rejection proof",
+      "status": "FAIL",
+      "startedAt": "2026-11-17T08:17:37.316Z",
+      "screenshots": [
+        {
+          "file": "PUB-11-result.png",
+          "sha256": "44208ba04c104932a8de94dc2513ec77ce6546cd5c792d271d8072c2a2620776",
+          "capturedAt": "2026-11-17T08:17:46.995Z"
+        }
+      ],
+      "dialogs": [],
+      "observations": {
+        "savedSyntheticData": {
+          "students": null,
+          "rides": null,
+          "purchases": null
+        }
+      },
+      "detail": "Waiting failed: 8000ms exceeded",
+      "errorStack": "TimeoutError: Waiting failed: 8000ms exceeded\n    at new WaitTask (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/common/WaitTask.js:46:34)\n    at IsolatedWorld.waitForFunction (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/api/Realm.js:49:26)\n    at CdpFrame.waitForFunction (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/api/Frame.js:585:43)\n    at CdpFrame.<anonymous> (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/util/decorators.js:101:27)\n    at CdpPage.waitForFunction (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/api/Page.js:1537:37)\n    at click (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:45:14)\n    at enter (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:82:9)\n    at Object.run (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:200:11)\n    at main (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:342:15)",
+      "finishedAt": "2026-11-17T08:17:47.000Z"
+    },
+    {
+      "id": "PUB-12",
+      "acceptanceIds": [
+        "AT-11",
+        "AT-16"
+      ],
+      "title": "管理者取消と取消後の操作非表示",
+      "mode": "hosted-ui-synthetic-demo",
+      "scope": "UI cancel and no completion/cancel buttons on canceled row; not server rejection proof",
+      "status": "FAIL",
+      "startedAt": "2026-11-17T08:17:47.000Z",
+      "screenshots": [
+        {
+          "file": "PUB-12-result.png",
+          "sha256": "44208ba04c104932a8de94dc2513ec77ce6546cd5c792d271d8072c2a2620776",
+          "capturedAt": "2026-11-17T08:17:56.323Z"
+        }
+      ],
+      "dialogs": [],
+      "observations": {
+        "savedSyntheticData": {
+          "students": null,
+          "rides": null,
+          "purchases": null
+        }
+      },
+      "detail": "Waiting failed: 8000ms exceeded",
+      "errorStack": "TimeoutError: Waiting failed: 8000ms exceeded\n    at new WaitTask (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/common/WaitTask.js:46:34)\n    at IsolatedWorld.waitForFunction (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/api/Realm.js:49:26)\n    at CdpFrame.waitForFunction (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/api/Frame.js:585:43)\n    at CdpFrame.<anonymous> (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/util/decorators.js:101:27)\n    at CdpPage.waitForFunction (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/api/Page.js:1537:37)\n    at click (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:45:14)\n    at enter (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:82:9)\n    at Object.run (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:207:11)\n    at main (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:342:15)",
+      "finishedAt": "2026-11-17T08:17:56.328Z"
+    },
+    {
+      "id": "PUB-13",
+      "acceptanceIds": [
+        "AT-12"
+      ],
+      "title": "当日の一覧とGoogle地図リンク",
+      "mode": "hosted-ui-synthetic-demo",
+      "scope": "URL construction only; Maps destination is not opened",
+      "status": "FAIL",
+      "startedAt": "2026-11-17T08:17:56.328Z",
+      "screenshots": [
+        {
+          "file": "PUB-13-result.png",
+          "sha256": "44208ba04c104932a8de94dc2513ec77ce6546cd5c792d271d8072c2a2620776",
+          "capturedAt": "2026-11-17T08:18:05.833Z"
+        }
+      ],
+      "dialogs": [],
+      "observations": {
+        "savedSyntheticData": {
+          "students": null,
+          "rides": null,
+          "purchases": null
+        }
+      },
+      "detail": "Waiting failed: 8000ms exceeded",
+      "errorStack": "TimeoutError: Waiting failed: 8000ms exceeded\n    at new WaitTask (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/common/WaitTask.js:46:34)\n    at IsolatedWorld.waitForFunction (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/api/Realm.js:49:26)\n    at CdpFrame.waitForFunction (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/api/Frame.js:585:43)\n    at CdpFrame.<anonymous> (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/util/decorators.js:101:27)\n    at CdpPage.waitForFunction (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/api/Page.js:1537:37)\n    at click (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:45:14)\n    at enter (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:82:9)\n    at Object.run (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:213:11)\n    at main (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:342:15)",
+      "finishedAt": "2026-11-17T08:18:05.880Z"
+    },
+    {
+      "id": "PUB-14",
+      "acceptanceIds": [
+        "AT-13",
+        "AT-15"
+      ],
+      "title": "管理者が片道を完了",
+      "mode": "hosted-ui-synthetic-demo",
+      "scope": "UI completed state, ticket consumption and hidden repeat button; not direct replay/server lock proof",
+      "status": "FAIL",
+      "startedAt": "2026-11-17T08:18:05.880Z",
+      "screenshots": [
+        {
+          "file": "PUB-14-result.png",
+          "sha256": "44208ba04c104932a8de94dc2513ec77ce6546cd5c792d271d8072c2a2620776",
+          "capturedAt": "2026-11-17T08:18:15.726Z"
+        }
+      ],
+      "dialogs": [],
+      "observations": {
+        "savedSyntheticData": {
+          "students": null,
+          "rides": null,
+          "purchases": null
+        }
+      },
+      "detail": "Waiting failed: 8000ms exceeded",
+      "errorStack": "TimeoutError: Waiting failed: 8000ms exceeded\n    at new WaitTask (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/common/WaitTask.js:46:34)\n    at IsolatedWorld.waitForFunction (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/api/Realm.js:49:26)\n    at CdpFrame.waitForFunction (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/api/Frame.js:585:43)\n    at CdpFrame.<anonymous> (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/util/decorators.js:101:27)\n    at CdpPage.waitForFunction (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/api/Page.js:1537:37)\n    at click (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:45:14)\n    at enter (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:82:9)\n    at Object.run (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:218:11)\n    at main (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:342:15)",
+      "finishedAt": "2026-11-17T08:18:15.731Z"
+    },
+    {
+      "id": "PUB-15",
+      "acceptanceIds": [
+        "AT-14",
+        "AT-15"
+      ],
+      "title": "管理者が往復を完了",
+      "mode": "hosted-ui-synthetic-demo",
+      "scope": "UI completed state, ticket consumption and hidden repeat button; not direct replay/server lock proof",
+      "status": "FAIL",
+      "startedAt": "2026-11-17T08:18:15.731Z",
+      "screenshots": [
+        {
+          "file": "PUB-15-result.png",
+          "sha256": "44208ba04c104932a8de94dc2513ec77ce6546cd5c792d271d8072c2a2620776",
+          "capturedAt": "2026-11-17T08:18:25.021Z"
+        }
+      ],
+      "dialogs": [],
+      "observations": {
+        "savedSyntheticData": {
+          "students": null,
+          "rides": null,
+          "purchases": null
+        }
+      },
+      "detail": "Waiting failed: 8000ms exceeded",
+      "errorStack": "TimeoutError: Waiting failed: 8000ms exceeded\n    at new WaitTask (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/common/WaitTask.js:46:34)\n    at IsolatedWorld.waitForFunction (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/api/Realm.js:49:26)\n    at CdpFrame.waitForFunction (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/api/Frame.js:585:43)\n    at CdpFrame.<anonymous> (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/util/decorators.js:101:27)\n    at CdpPage.waitForFunction (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/api/Page.js:1537:37)\n    at click (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:45:14)\n    at enter (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:82:9)\n    at Object.run (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:218:11)\n    at main (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:342:15)",
+      "finishedAt": "2026-11-17T08:18:25.048Z"
+    },
+    {
+      "id": "PUB-16",
+      "acceptanceIds": [
+        "AT-02",
+        "AT-06"
+      ],
+      "title": "必須項目の空欄を送信しない",
+      "mode": "hosted-ui-synthetic-demo",
+      "scope": "Native form validation for student name and pickup location",
+      "status": "FAIL",
+      "startedAt": "2026-11-17T08:18:25.049Z",
+      "screenshots": [
+        {
+          "file": "PUB-16-result.png",
+          "sha256": "44208ba04c104932a8de94dc2513ec77ce6546cd5c792d271d8072c2a2620776",
+          "capturedAt": "2026-11-17T08:18:34.459Z"
+        }
+      ],
+      "dialogs": [],
+      "observations": {
+        "savedSyntheticData": {
+          "students": null,
+          "rides": null,
+          "purchases": null
+        }
+      },
+      "detail": "Waiting failed: 8000ms exceeded",
+      "errorStack": "TimeoutError: Waiting failed: 8000ms exceeded\n    at new WaitTask (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/common/WaitTask.js:46:34)\n    at IsolatedWorld.waitForFunction (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/api/Realm.js:49:26)\n    at CdpFrame.waitForFunction (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/api/Frame.js:585:43)\n    at CdpFrame.<anonymous> (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/util/decorators.js:101:27)\n    at CdpPage.waitForFunction (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/api/Page.js:1537:37)\n    at click (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:45:14)\n    at enter (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:82:9)\n    at Object.run (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:226:11)\n    at main (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:342:15)",
+      "finishedAt": "2026-11-17T08:18:34.509Z"
+    },
+    {
+      "id": "PUB-17",
+      "acceptanceIds": [
+        "AT-17"
+      ],
+      "title": "画面で不正なチケット枚数・金額を拒否",
+      "mode": "hosted-ui-synthetic-demo",
+      "scope": "UI-representable invalid numbers only; NaN/Infinity/direct service calls are not covered",
+      "status": "FAIL",
+      "startedAt": "2026-11-17T08:18:34.509Z",
+      "screenshots": [
+        {
+          "file": "PUB-17-result.png",
+          "sha256": "44208ba04c104932a8de94dc2513ec77ce6546cd5c792d271d8072c2a2620776",
+          "capturedAt": "2026-11-17T08:18:44.086Z"
+        }
+      ],
+      "dialogs": [],
+      "observations": {
+        "savedSyntheticData": {
+          "students": null,
+          "rides": null,
+          "purchases": null
+        }
+      },
+      "detail": "Waiting failed: 8000ms exceeded",
+      "errorStack": "TimeoutError: Waiting failed: 8000ms exceeded\n    at new WaitTask (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/common/WaitTask.js:46:34)\n    at IsolatedWorld.waitForFunction (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/api/Realm.js:49:26)\n    at CdpFrame.waitForFunction (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/api/Frame.js:585:43)\n    at CdpFrame.<anonymous> (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/util/decorators.js:101:27)\n    at CdpPage.waitForFunction (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/api/Page.js:1537:37)\n    at click (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:45:14)\n    at enter (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:82:9)\n    at Object.run (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:232:11)\n    at main (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:342:15)",
+      "finishedAt": "2026-11-17T08:18:44.090Z"
+    },
+    {
+      "id": "PUB-18",
+      "acceptanceIds": [
+        "AT-21"
+      ],
+      "title": "375pxで管理・保護者・予約フォームを表示",
+      "mode": "hosted-ui-synthetic-demo",
+      "scope": "Headless Chromium emulation; not iPhone Safari or Android device acceptance",
+      "status": "FAIL",
+      "startedAt": "2026-11-17T08:18:44.090Z",
+      "screenshots": [
+        {
+          "file": "PUB-18-result.png",
+          "sha256": "77ac862c033eed49e84603a2fe4c59f0f125db7fbae02c799cf1c8dd957c773d",
+          "capturedAt": "2026-11-17T08:18:53.632Z"
+        }
+      ],
+      "dialogs": [],
+      "observations": {
+        "savedSyntheticData": {
+          "students": null,
+          "rides": null,
+          "purchases": null
+        }
+      },
+      "detail": "Waiting failed: 8000ms exceeded",
+      "errorStack": "TimeoutError: Waiting failed: 8000ms exceeded\n    at new WaitTask (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/common/WaitTask.js:46:34)\n    at IsolatedWorld.waitForFunction (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/api/Realm.js:49:26)\n    at CdpFrame.waitForFunction (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/api/Frame.js:585:43)\n    at CdpFrame.<anonymous> (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/util/decorators.js:101:27)\n    at CdpPage.waitForFunction (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/api/Page.js:1537:37)\n    at click (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:45:14)\n    at enter (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:82:9)\n    at Object.run (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:238:87)\n    at async main (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:342:7)",
+      "finishedAt": "2026-11-17T08:18:53.728Z"
+    },
+    {
+      "id": "PUB-19",
+      "acceptanceIds": [
+        "AT-22"
+      ],
+      "title": "生徒・予約の再読込後の永続化",
+      "mode": "hosted-ui-synthetic-demo",
+      "scope": "Same isolated browser demo storage only, not cross-device/Google persistence",
+      "status": "FAIL",
+      "startedAt": "2026-11-17T08:18:53.728Z",
+      "screenshots": [
+        {
+          "file": "PUB-19-result.png",
+          "sha256": "44208ba04c104932a8de94dc2513ec77ce6546cd5c792d271d8072c2a2620776",
+          "capturedAt": "2026-11-17T08:19:03.419Z"
+        }
+      ],
+      "dialogs": [],
+      "observations": {
+        "savedSyntheticData": {
+          "students": null,
+          "rides": null,
+          "purchases": null
+        }
+      },
+      "detail": "Waiting failed: 8000ms exceeded",
+      "errorStack": "TimeoutError: Waiting failed: 8000ms exceeded\n    at new WaitTask (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/common/WaitTask.js:46:34)\n    at IsolatedWorld.waitForFunction (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/api/Realm.js:49:26)\n    at CdpFrame.waitForFunction (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/api/Frame.js:585:43)\n    at CdpFrame.<anonymous> (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/util/decorators.js:101:27)\n    at CdpPage.waitForFunction (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/api/Page.js:1537:37)\n    at click (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:45:14)\n    at enter (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:82:9)\n    at Object.run (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:251:11)\n    at main (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:342:15)",
+      "finishedAt": "2026-11-17T08:19:03.486Z"
+    },
+    {
+      "id": "PUB-20",
+      "acceptanceIds": [
+        "AT-01"
+      ],
+      "title": "設定保存でデモから実接続へ自動切替しない",
+      "mode": "hosted-ui-synthetic-demo",
+      "scope": "Synthetic endpoint saved without contact; explicit login still required",
+      "status": "FAIL",
+      "startedAt": "2026-11-17T08:19:03.486Z",
+      "screenshots": [
+        {
+          "file": "PUB-20-result.png",
+          "sha256": "44208ba04c104932a8de94dc2513ec77ce6546cd5c792d271d8072c2a2620776",
+          "capturedAt": "2026-11-17T08:19:13.018Z"
+        }
+      ],
+      "dialogs": [],
+      "observations": {
+        "savedSyntheticData": {
+          "students": null,
+          "rides": null,
+          "purchases": null
+        }
+      },
+      "detail": "Waiting failed: 8000ms exceeded",
+      "errorStack": "TimeoutError: Waiting failed: 8000ms exceeded\n    at new WaitTask (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/common/WaitTask.js:46:34)\n    at IsolatedWorld.waitForFunction (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/api/Realm.js:49:26)\n    at CdpFrame.waitForFunction (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/api/Frame.js:585:43)\n    at CdpFrame.<anonymous> (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/util/decorators.js:101:27)\n    at CdpPage.waitForFunction (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/api/Page.js:1537:37)\n    at click (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:45:14)\n    at enter (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:82:9)\n    at Object.run (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:255:11)\n    at main (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:342:15)",
+      "finishedAt": "2026-11-17T08:19:13.076Z"
+    },
+    {
+      "id": "PUB-21",
+      "acceptanceIds": [
+        "AT-04"
+      ],
+      "title": "実際のデモ完了操作で残高2・1・0の案内",
+      "mode": "hosted-ui-synthetic-demo",
+      "scope": "Synthetic UI operations create each balance; no storage seeding",
+      "status": "FAIL",
+      "startedAt": "2026-11-17T08:19:13.076Z",
+      "screenshots": [
+        {
+          "file": "PUB-21-result.png",
+          "sha256": "44208ba04c104932a8de94dc2513ec77ce6546cd5c792d271d8072c2a2620776",
+          "capturedAt": "2026-11-17T08:19:22.669Z"
+        }
+      ],
+      "dialogs": [],
+      "observations": {
+        "savedSyntheticData": {
+          "students": null,
+          "rides": null,
+          "purchases": null
+        }
+      },
+      "detail": "Waiting failed: 8000ms exceeded",
+      "errorStack": "TimeoutError: Waiting failed: 8000ms exceeded\n    at new WaitTask (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/common/WaitTask.js:46:34)\n    at IsolatedWorld.waitForFunction (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/api/Realm.js:49:26)\n    at CdpFrame.waitForFunction (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/api/Frame.js:585:43)\n    at CdpFrame.<anonymous> (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/util/decorators.js:101:27)\n    at CdpPage.waitForFunction (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/api/Page.js:1537:37)\n    at click (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:45:14)\n    at enter (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:82:9)\n    at Object.run (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:261:11)\n    at main (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:342:15)",
+      "finishedAt": "2026-11-17T08:19:22.713Z"
+    },
+    {
+      "id": "PUB-22",
+      "acceptanceIds": [
+        "AT-18"
+      ],
+      "title": "模擬HTTPS障害で各更新を成功扱いしない",
+      "mode": "hosted-ui-with-mocked-https",
+      "scope": "UI-only mock at acceptance.invalid; no real GAS/Google requests; all five mutation types and retry ID",
+      "status": "FAIL",
+      "startedAt": "2026-11-17T08:19:22.713Z",
+      "screenshots": [
+        {
+          "file": "PUB-22-result.png",
+          "sha256": "44208ba04c104932a8de94dc2513ec77ce6546cd5c792d271d8072c2a2620776",
+          "capturedAt": "2026-11-17T08:19:32.322Z"
+        }
+      ],
+      "dialogs": [],
+      "observations": {
+        "savedSyntheticData": {
+          "students": null,
+          "rides": null,
+          "purchases": null
+        }
+      },
+      "detail": "Waiting failed: 8000ms exceeded",
+      "errorStack": "TimeoutError: Waiting failed: 8000ms exceeded\n    at new WaitTask (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/common/WaitTask.js:46:34)\n    at IsolatedWorld.waitForFunction (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/api/Realm.js:49:26)\n    at CdpFrame.waitForFunction (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/api/Frame.js:585:43)\n    at CdpFrame.<anonymous> (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/util/decorators.js:101:27)\n    at CdpPage.waitForFunction (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/api/Page.js:1537:37)\n    at click (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:45:14)\n    at enter (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:82:9)\n    at mockLogin (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:148:9)\n    at Object.run (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:269:24)\n    at main (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:342:15)",
+      "finishedAt": "2026-11-17T08:19:32.381Z"
+    },
+    {
+      "id": "PUB-23",
+      "acceptanceIds": [
+        "AT-19"
+      ],
+      "title": "模擬認証失効応答でログイン画面へ戻る",
+      "mode": "hosted-ui-with-mocked-https",
+      "scope": "Mock UNAUTHORIZED response through genuine UI; real identity provider remains untested",
+      "status": "FAIL",
+      "startedAt": "2026-11-17T08:19:32.382Z",
+      "screenshots": [
+        {
+          "file": "PUB-23-result.png",
+          "sha256": "44208ba04c104932a8de94dc2513ec77ce6546cd5c792d271d8072c2a2620776",
+          "capturedAt": "2026-11-17T08:19:42.318Z"
+        }
+      ],
+      "dialogs": [],
+      "observations": {
+        "savedSyntheticData": {
+          "students": null,
+          "rides": null,
+          "purchases": null
+        }
+      },
+      "detail": "Waiting failed: 8000ms exceeded",
+      "errorStack": "TimeoutError: Waiting failed: 8000ms exceeded\n    at new WaitTask (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/common/WaitTask.js:46:34)\n    at IsolatedWorld.waitForFunction (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/api/Realm.js:49:26)\n    at CdpFrame.waitForFunction (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/api/Frame.js:585:43)\n    at CdpFrame.<anonymous> (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/util/decorators.js:101:27)\n    at CdpPage.waitForFunction (file:///C:/Users/kanta/GitHub/eigo-taxi-management/node_modules/puppeteer-core/lib/puppeteer/api/Page.js:1537:37)\n    at click (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:45:14)\n    at enter (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:82:9)\n    at mockLogin (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:148:9)\n    at Object.run (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:285:11)\n    at main (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_hosted_acceptance.cjs:342:15)",
+      "finishedAt": "2026-11-17T08:19:42.369Z"
+    }
+  ],
+  "coverage": [
+    {
+      "id": "AT-01",
+      "title": "Google連携先の設定保存",
+      "publicCases": [
+        {
+          "id": "PUB-20",
+          "status": "FAIL"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "AT-02",
+      "title": "生徒登録",
+      "publicCases": [
+        {
+          "id": "PUB-05",
+          "status": "FAIL"
+        },
+        {
+          "id": "PUB-16",
+          "status": "FAIL"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "AT-03",
+      "title": "保護者の残数確認",
+      "publicCases": [
+        {
+          "id": "PUB-03",
+          "status": "FAIL"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "AT-04",
+      "title": "残少・ゼロ案内",
+      "publicCases": [
+        {
+          "id": "PUB-21",
+          "status": "FAIL"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "AT-05",
+      "title": "チケット追加",
+      "publicCases": [
+        {
+          "id": "PUB-06",
+          "status": "FAIL"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "AT-06",
+      "title": "保護者のお迎え予約",
+      "publicCases": [
+        {
+          "id": "PUB-07",
+          "status": "FAIL"
+        },
+        {
+          "id": "PUB-16",
+          "status": "FAIL"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "AT-07",
+      "title": "送り予約",
+      "publicCases": [
+        {
+          "id": "PUB-08",
+          "status": "FAIL"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "AT-08",
+      "title": "往復予約",
+      "publicCases": [
+        {
+          "id": "PUB-09",
+          "status": "FAIL"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "AT-09",
+      "title": "管理者の代理予約",
+      "publicCases": [
+        {
+          "id": "PUB-10",
+          "status": "FAIL"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "AT-10",
+      "title": "保護者の予約取消",
+      "publicCases": [
+        {
+          "id": "PUB-11",
+          "status": "FAIL"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "AT-11",
+      "title": "管理者の予約取消",
+      "publicCases": [
+        {
+          "id": "PUB-12",
+          "status": "FAIL"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "AT-12",
+      "title": "当日一覧・地図リンク",
+      "publicCases": [
+        {
+          "id": "PUB-13",
+          "status": "FAIL"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "AT-13",
+      "title": "片道完了",
+      "publicCases": [
+        {
+          "id": "PUB-14",
+          "status": "FAIL"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "AT-14",
+      "title": "往復完了",
+      "publicCases": [
+        {
+          "id": "PUB-15",
+          "status": "FAIL"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "AT-15",
+      "title": "完了の二重処理防止",
+      "publicCases": [
+        {
+          "id": "PUB-14",
+          "status": "FAIL"
+        },
+        {
+          "id": "PUB-15",
+          "status": "FAIL"
+        }
+      ],
+      "note": "Hosted UI observations do not replace direct service authorization, duplicate-request/idempotency and malformed-value regression tests."
+    },
+    {
+      "id": "AT-16",
+      "title": "取消済みの完了拒否",
+      "publicCases": [
+        {
+          "id": "PUB-11",
+          "status": "FAIL"
+        },
+        {
+          "id": "PUB-12",
+          "status": "FAIL"
+        }
+      ],
+      "note": "Hosted UI observations do not replace direct service authorization, duplicate-request/idempotency and malformed-value regression tests."
+    },
+    {
+      "id": "AT-17",
+      "title": "不正なチケット追加拒否",
+      "publicCases": [
+        {
+          "id": "PUB-17",
+          "status": "FAIL"
+        }
+      ],
+      "note": "Hosted UI observations do not replace direct service authorization, duplicate-request/idempotency and malformed-value regression tests."
+    },
+    {
+      "id": "AT-18",
+      "title": "通信障害時に成功扱いしない",
+      "publicCases": [
+        {
+          "id": "PUB-22",
+          "status": "FAIL"
+        }
+      ],
+      "note": "Faults are intercepted at acceptance.invalid in this browser. No real GAS outage, concurrent request or external service was exercised."
+    },
+    {
+      "id": "AT-19",
+      "title": "未認証の管理操作を拒否",
+      "publicCases": [
+        {
+          "id": "PUB-01",
+          "status": "FAIL"
+        },
+        {
+          "id": "PUB-02",
+          "status": "FAIL"
+        },
+        {
+          "id": "PUB-04",
+          "status": "FAIL"
+        },
+        {
+          "id": "PUB-23",
+          "status": "FAIL"
+        }
+      ],
+      "note": "Hosted UI observations do not replace direct service authorization, duplicate-request/idempotency and malformed-value regression tests."
+    },
+    {
+      "id": "AT-20",
+      "title": "保護者の家庭別アクセス制限",
+      "publicCases": [
+        {
+          "id": "PUB-02",
+          "status": "FAIL"
+        },
+        {
+          "id": "PUB-03",
+          "status": "FAIL"
+        },
+        {
+          "id": "PUB-04",
+          "status": "FAIL"
+        }
+      ],
+      "note": "Hosted UI observations do not replace direct service authorization, duplicate-request/idempotency and malformed-value regression tests."
+    },
+    {
+      "id": "AT-21",
+      "title": "モバイル表示",
+      "publicCases": [
+        {
+          "id": "PUB-18",
+          "status": "FAIL"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "AT-22",
+      "title": "再読込後の永続化",
+      "publicCases": [
+        {
+          "id": "PUB-19",
+          "status": "FAIL"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "AT-23",
+      "title": "Google初期化・永続化",
+      "publicCases": [],
+      "note": "Requires explicitly isolated Google Sheets/GAS/Calendar resources, configured credentials, multi-session or backup execution; not attempted by this hosted UI suite."
+    },
+    {
+      "id": "AT-24",
+      "title": "実カレンダー予約同期",
+      "publicCases": [],
+      "note": "Requires explicitly isolated Google Sheets/GAS/Calendar resources, configured credentials, multi-session or backup execution; not attempted by this hosted UI suite."
+    },
+    {
+      "id": "AT-25",
+      "title": "実カレンダー取消同期",
+      "publicCases": [],
+      "note": "Requires explicitly isolated Google Sheets/GAS/Calendar resources, configured credentials, multi-session or backup execution; not attempted by this hosted UI suite."
+    },
+    {
+      "id": "AT-26",
+      "title": "管理者2名・保護者の端末共有",
+      "publicCases": [],
+      "note": "Requires explicitly isolated Google Sheets/GAS/Calendar resources, configured credentials, multi-session or backup execution; not attempted by this hosted UI suite."
+    },
+    {
+      "id": "AT-27",
+      "title": "同時完了の排他制御",
+      "publicCases": [],
+      "note": "Requires explicitly isolated Google Sheets/GAS/Calendar resources, configured credentials, multi-session or backup execution; not attempted by this hosted UI suite."
+    },
+    {
+      "id": "AT-28",
+      "title": "バックアップから復旧",
+      "publicCases": [],
+      "note": "Requires explicitly isolated Google Sheets/GAS/Calendar resources, configured credentials, multi-session or backup execution; not attempted by this hosted UI suite."
+    },
+    {
+      "id": "AT-29",
+      "title": "実機受入",
+      "publicCases": [],
+      "note": "Requires physical iPhone Safari / Android Chrome and human acceptance; Chromium mobile emulation is partial evidence only."
+    },
+    {
+      "id": "AT-30",
+      "title": "リリース後スモークテスト",
+      "publicCases": [
+        {
+          "id": "PUB-01",
+          "status": "FAIL"
+        }
+      ],
+      "note": "This is test-hosting UI smoke and served-asset evidence, not full production release acceptance; external integration and release prerequisites remain independent."
+    }
+  ],
+  "residuals": [
+    {
+      "acceptanceIds": [
+        "AT-15",
+        "AT-16",
+        "AT-17",
+        "AT-19",
+        "AT-20"
+      ],
+      "reason": "Hosted UI observations do not replace direct service authorization, duplicate-request/idempotency and malformed-value regression tests."
+    },
+    {
+      "acceptanceIds": [
+        "AT-18"
+      ],
+      "reason": "Faults are intercepted at acceptance.invalid in this browser. No real GAS outage, concurrent request or external service was exercised."
+    },
+    {
+      "acceptanceIds": [
+        "AT-23",
+        "AT-24",
+        "AT-25",
+        "AT-26",
+        "AT-27",
+        "AT-28"
+      ],
+      "reason": "Requires explicitly isolated Google Sheets/GAS/Calendar resources, configured credentials, multi-session or backup execution; not attempted by this hosted UI suite."
+    },
+    {
+      "acceptanceIds": [
+        "AT-29"
+      ],
+      "reason": "Requires physical iPhone Safari / Android Chrome and human acceptance; Chromium mobile emulation is partial evidence only."
+    },
+    {
+      "acceptanceIds": [
+        "AT-30"
+      ],
+      "reason": "This is test-hosting UI smoke and served-asset evidence, not full production release acceptance; external integration and release prerequisites remain independent."
+    }
+  ]
+}

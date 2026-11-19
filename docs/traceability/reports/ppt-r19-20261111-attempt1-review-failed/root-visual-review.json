@@ -1,0 +1,22 @@
+{
+  "reviewer": "authoring session (Claude Code); visual check by the author of the appended pages, not an independent review",
+  "reviewedAt": "2026-11-11T07:17:42.152133+09:00",
+  "result": "PASS",
+  "proposalSha256": "870b1364fd18e2bdd15f68688c96c8751372341f6b447a87ecd8a05e8daef9c0",
+  "viewed": [
+    "business/current-26.png",
+    "business/current-27.png",
+    "progress/contact.png (18 pages)",
+    "trial render of tasks pages 20-21 before the final build (wording of one box changed afterwards)"
+  ],
+  "observations": [
+    "Header, sky band, title frame, footer ID and page number render as in earlier supplement pages",
+    "No clipped or overlapping text on the two appended pages; table fits above the note box",
+    "Page order in the progress deck: earlier supplements stay in place and the two r19 pages are last"
+  ],
+  "reliesOnMachineCheck": "The other 10 decks were not opened individually; review.json asserts that the body area of both appended pages is pixel-equivalent to the business deck in all 12 decks and that all 190 preserved pages are pixel-identical to a render of their source",
+  "notVerified": [
+    "Display in the PowerPoint application",
+    "Speaker notes rendering"
+  ]
+}

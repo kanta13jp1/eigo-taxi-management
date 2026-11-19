@@ -1,0 +1,10 @@
+{
+  "status": "PASS_AUTHOR_VISUAL",
+  "reviewer": "/root/r18_ppt_coordinator_1110",
+  "date": "2026-11-10",
+  "pptxSha256": "590cf407be6f7428b0eb89a7dfaf3dbb6869d6dca54d1a3c8209ed3c16bfd2d3",
+  "fullSizePagesViewed": [1, 2, 3, 4],
+  "findings": [],
+  "checks": ["All four pages legible with no visible clipping or overlaps", "Actual shared MightyLINK logo, sky band and Yu Gothic reference retained", "Meeting November11 Wednesday16:00 is distinguished from proposed20–30 minute duration", "Anonymous demo and actual Google customer checks are separated", "Example5→4→2 is distinguished from observed public demo7→7→6→4→2", "Customer remains0/6 and productionHOLD"],
+  "nativePowerPointVerified": false
+}

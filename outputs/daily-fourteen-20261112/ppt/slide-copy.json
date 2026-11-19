@@ -1,0 +1,5 @@
+{
+  "summary": "公開デモ：対象の生徒・日時・消費枚数を操作名で確認。",
+  "result": "片道1件だけを完了。再読込後も完了状態・残数7枚から6枚を確認。",
+  "image": "outputs/daily-fourteen-20261112/public-completed.png"
+}

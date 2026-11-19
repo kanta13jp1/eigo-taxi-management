@@ -1,0 +1,6 @@
+# Preserve reviewed bytes for hash-based document traceability on Windows and CI.
+/docs/** -text
+/src/** -text
+/gas/** -text
+/scripts/** -text
+/README.md -text

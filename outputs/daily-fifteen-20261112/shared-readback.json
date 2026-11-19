@@ -1,0 +1,86 @@
+{
+  "pass": true,
+  "checks": {
+    "history": true,
+    "overview": true,
+    "customer": true,
+    "formula": true
+  },
+  "ranges": [
+    "検証結果履歴!A83:I83",
+    "進捗概要!A3"
+  ],
+  "historyRow": [
+    "VR-20261112-03",
+    "2026-11-12",
+    "AT-14・往復完了",
+    "15件目の実装修正・15項目目の開発側試験",
+    "残数不足などの送迎完了エラーを管理画面内に表示し、画面・チケット追加を維持して再試行可能に修正。台帳取得失敗の扱いは維持。",
+    "実App模擬：残数1で拒否・データ不変・追加可能、6枚追加し7→往復完了5、他データ不変。操作の通信失敗は画面内、初期台帳取得失敗は従来どおり再取得。公開匿名デモ：新規生徒1で拒否→同じ画面で6追加し7→同じ往復予約完了5→再読込後も完了5。前回の片道生徒6は不変。",
+    "docs/progress/2026-11-12-cumulative-fifteen.md／outputs/daily-fifteen-20261112/public-insufficient.png／public-completed.png",
+    "検証Hosting 6755531e1441c5d6・公開7応答SHA一致。11/10各4件・11/11各8件・11/12各3件で累計15。先行2件Claude Code Fable 5.2、追加13件Codex。匿名デモ・実Google・顧客確認を区別、顧客確認0/6、本番保留。",
+    "AT-28保護設定・参照式の復旧手順を継続。AT-10公開取消確定は未確認。小林さん6件→先生との合同テスト→教室Google環境の準備・移行判断。"
+  ],
+  "overviewSummary": "更新：2026-11-12 ／ 本日累計3修正・開発側3項目。11/10各4件・11/11各8件と合わせ全体累計15。検証版6755531e1441c5d6。公開デモで往復の残数不足拒否後も画面・追加を維持し、追加後に完了7→5・再表示を確認。",
+  "protectedRange": "顧客確認6件!E6:I11",
+  "customerReadback": {
+    "5,4": {
+      "stringValue": "表示されるのは割り当てた検証生徒だけで、初期状態は5枚。別の家庭のお子様は選択肢に出ない。"
+    },
+    "5,5": {
+      "stringValue": "未実施"
+    },
+    "5,8": {
+      "stringValue": "AT-01・AT-03・AT-20"
+    },
+    "6,4": {
+      "stringValue": "事前準備した完了確認用2件とは別に、取消確認用が1件増える（初期2件→3件）。生徒・日付・時刻・場所がカレンダーと一致する。繰返しのない1回分の予約で、チケットは5枚のまま。"
+    },
+    "6,5": {
+      "stringValue": "未実施"
+    },
+    "6,8": {
+      "stringValue": "AT-06・AT-24"
+    },
+    "7,4": {
+      "stringValue": "自分で作成した取消確認用だけが「現在予約中の送迎」とカレンダーから消える（3件→2件）。完了確認用の2件は残る。取消前も取消後もチケットは5枚。"
+    },
+    "7,5": {
+      "stringValue": "未実施"
+    },
+    "7,8": {
+      "stringValue": "AT-10・AT-25"
+    },
+    "8,4": {
+      "stringValue": "準備時に残数5枚。片道の完了後は4枚、往復の完了後は2枚。2件とも完了として表示される。"
+    },
+    "8,5": {
+      "stringValue": "未実施"
+    },
+    "8,8": {
+      "stringValue": "AT-13・AT-14"
+    },
+    "9,4": {
+      "stringValue": "残り2枚でMauro・Brendaに連絡する案内が表示される。追加後は両方の画面で12枚となり、家庭画面の残少案内が消える。"
+    },
+    "9,5": {
+      "stringValue": "未実施"
+    },
+    "9,8": {
+      "stringValue": "AT-04・AT-05"
+    },
+    "10,4": {
+      "stringValue": "両方ともログイン画面に戻り、氏名・チケット残数・予約履歴・生徒台帳が表示されない。"
+    },
+    "10,5": {
+      "stringValue": "未実施"
+    },
+    "10,8": {
+      "stringValue": "AT-01・AT-19・AT-26"
+    }
+  },
+  "formulaReadback": {
+    "formulaValue": "=COUNTIF('顧客確認6件'!F6:F11,\"合格\")"
+  },
+  "visualCheck": "Inherited preceding row format; wrapped text; only appended row resized. API formatting verification, no rendered Sheet inspection."
+}

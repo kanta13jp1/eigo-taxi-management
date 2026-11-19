@@ -1,0 +1,11 @@
+{
+  "case": "AT-11",
+  "checkedAt": "2026-11-12T06:02:03.683Z",
+  "scope": "React App + anonymous demo ApiService; jsdom substitutes native dialog plumbing",
+  "confirmationIdentifiesTarget": true,
+  "dismissAndEscapePreserved": true,
+  "cancelledExactlyTarget": true,
+  "otherReservationPreserved": true,
+  "balanceBefore": 7,
+  "balanceAfter": 7
+}

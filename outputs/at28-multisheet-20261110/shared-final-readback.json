@@ -1,0 +1,2380 @@
+{
+  "pass": true,
+  "checks": {
+    "summary": true,
+    "history65": true,
+    "history66": true,
+    "customerFormula": true,
+    "customer0": true,
+    "customer6": true,
+    "customerNativePreserved": true,
+    "answersPreserved": true,
+    "changedCellsWrap": true
+  },
+  "historyRows": [
+    65,
+    66
+  ],
+  "visualVerification": "API values, formulas, dropdown constraints and format readback only. Authenticated Google-rendered display not performed this heartbeat.",
+  "initialComparisonCorrection": "Different read masks were normalized for customer native-state equality.",
+  "s": {
+    "spreadsheetId": "1PqUq7BoBBVlPolivap0eg1UPik47vNNWphyBd0DNwvU",
+    "spreadsheetUrl": "https://docs.google.com/spreadsheets/d/1PqUq7BoBBVlPolivap0eg1UPik47vNNWphyBd0DNwvU/edit",
+    "properties": {
+      "title": "英語教室送迎管理｜残タスク・受入確認（2026-10-24）",
+      "locale": "ja_JP",
+      "timeZone": "Asia/Tokyo"
+    },
+    "sheets": [
+      {
+        "properties": {
+          "sheetId": 2012604155,
+          "title": "進捗概要",
+          "index": 0,
+          "sheetType": "GRID",
+          "gridProperties": {
+            "rowCount": 1000,
+            "columnCount": 26,
+            "hideGridlines": true,
+            "rowGroupControlAfter": true,
+            "columnGroupControlAfter": true
+          }
+        },
+        "data": [
+          {
+            "startRow": 6,
+            "startColumn": 1,
+            "rowData": [
+              {
+                "values": [
+                  {
+                    "userEnteredValue": {
+                      "formulaValue": "=COUNTIF('顧客確認6件'!F6:F11,\"合格\")"
+                    },
+                    "effectiveValue": {
+                      "numberValue": 0
+                    },
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "NUMBER",
+                        "pattern": "0"
+                      },
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "foregroundColor": {
+                          "red": 0.1254902,
+                          "green": 0.12941177,
+                          "blue": 0.14117648
+                        },
+                        "fontFamily": "Arial",
+                        "fontSize": 11,
+                        "foregroundColorStyle": {
+                          "rgbColor": {
+                            "red": 0.1254902,
+                            "green": 0.12941177,
+                            "blue": 0.14117648
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "values": [
+                  {
+                    "userEnteredValue": {
+                      "numberValue": 6
+                    },
+                    "effectiveValue": {
+                      "numberValue": 6
+                    },
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "NUMBER",
+                        "pattern": "0"
+                      },
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "foregroundColor": {
+                          "red": 0.1254902,
+                          "green": 0.12941177,
+                          "blue": 0.14117648
+                        },
+                        "fontFamily": "Arial",
+                        "fontSize": 11,
+                        "foregroundColorStyle": {
+                          "rgbColor": {
+                            "red": 0.1254902,
+                            "green": 0.12941177,
+                            "blue": 0.14117648
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "values": [
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "AT-24〜30の全範囲は未合格。部分的な開発側確認は残タスク欄を参照。"
+                    },
+                    "effectiveValue": {
+                      "stringValue": "AT-24〜30の全範囲は未合格。部分的な開発側確認は残タスク欄を参照。"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "foregroundColor": {
+                          "red": 0.1254902,
+                          "green": 0.12941177,
+                          "blue": 0.14117648
+                        },
+                        "fontFamily": "Arial",
+                        "fontSize": 11,
+                        "foregroundColorStyle": {
+                          "rgbColor": {
+                            "red": 0.1254902,
+                            "green": 0.12941177,
+                            "blue": 0.14117648
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "values": [
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "顧客了承済み（10月22日チャット）。接続先URL・アクセスキーの入力は不要。"
+                    },
+                    "effectiveValue": {
+                      "stringValue": "顧客了承済み（10月22日チャット）。接続先URL・アクセスキーの入力は不要。"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "foregroundColor": {
+                          "red": 0.1254902,
+                          "green": 0.12941177,
+                          "blue": 0.14117648
+                        },
+                        "fontFamily": "Arial",
+                        "fontSize": 11,
+                        "foregroundColorStyle": {
+                          "rgbColor": {
+                            "red": 0.1254902,
+                            "green": 0.12941177,
+                            "blue": 0.14117648
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "values": [
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "開発側：架空ファイルで、範囲貼付後に不足設定と名前参照式を再作成し、式・値・設定を照合する復旧手順を検証する。顧客側：11月11日（水）16:00の事前打ち合わせで先生のデモ試用と小林さんの随時実施6件をすり合わせる。"
+                    },
+                    "effectiveValue": {
+                      "stringValue": "開発側：架空ファイルで、範囲貼付後に不足設定と名前参照式を再作成し、式・値・設定を照合する復旧手順を検証する。顧客側：11月11日（水）16:00の事前打ち合わせで先生のデモ試用と小林さんの随時実施6件をすり合わせる。"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "foregroundColor": {
+                          "red": 0.1254902,
+                          "green": 0.12941177,
+                          "blue": 0.14117648
+                        },
+                        "fontFamily": "Arial",
+                        "fontSize": 11,
+                        "foregroundColorStyle": {
+                          "rgbColor": {
+                            "red": 0.1254902,
+                            "green": 0.12941177,
+                            "blue": 0.14117648
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "values": [
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "11月11日（水）16:00の打ち合わせは11/9のチャットで合意済み。消費時点の疑問には回答済み。取消・精算、完了入力と代理担当、バックアップ担当・頻度・保管先、教室所有の運用用Googleアカウント、運用開始の判断方法を確認する。"
+                    },
+                    "effectiveValue": {
+                      "stringValue": "11月11日（水）16:00の打ち合わせは11/9のチャットで合意済み。消費時点の疑問には回答済み。取消・精算、完了入力と代理担当、バックアップ担当・頻度・保管先、教室所有の運用用Googleアカウント、運用開始の判断方法を確認する。"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "foregroundColor": {
+                          "red": 0.1254902,
+                          "green": 0.12941177,
+                          "blue": 0.14117648
+                        },
+                        "fontFamily": "Arial",
+                        "fontSize": 11,
+                        "foregroundColorStyle": {
+                          "rgbColor": {
+                            "red": 0.1254902,
+                            "green": 0.12941177,
+                            "blue": 0.14117648
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "values": [
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "検証Hosting0b830b69152e45a3・GAS v6。11/10の残数説明改善1件と公開デモ7項目を確認済み。公開7応答SHAの再照合も一致（追加配備には数えない）。正本r18、運用・残作業・進捗3冊をv35へ改版し独立レビュー後採用、他9冊はv34を維持。架空Google複数シートの復元比較は部分確認で、全体復旧は未合格。顧客データ書込0、顧客0/6、本番HOLD。"
+                    },
+                    "effectiveValue": {
+                      "stringValue": "検証Hosting0b830b69152e45a3・GAS v6。11/10の残数説明改善1件と公開デモ7項目を確認済み。公開7応答SHAの再照合も一致（追加配備には数えない）。正本r18、運用・残作業・進捗3冊をv35へ改版し独立レビュー後採用、他9冊はv34を維持。架空Google複数シートの復元比較は部分確認で、全体復旧は未合格。顧客データ書込0、顧客0/6、本番HOLD。"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "foregroundColor": {
+                          "red": 0.1254902,
+                          "green": 0.12941177,
+                          "blue": 0.14117648
+                        },
+                        "fontFamily": "Arial",
+                        "fontSize": 11,
+                        "foregroundColorStyle": {
+                          "rgbColor": {
+                            "red": 0.1254902,
+                            "green": 0.12941177,
+                            "blue": 0.14117648
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "properties": {
+          "sheetId": 1014039656,
+          "title": "残タスク・確認事項",
+          "index": 1,
+          "sheetType": "GRID",
+          "gridProperties": {
+            "rowCount": 1000,
+            "columnCount": 26,
+            "frozenRowCount": 5,
+            "frozenColumnCount": 2,
+            "hideGridlines": true,
+            "rowGroupControlAfter": true,
+            "columnGroupControlAfter": true
+          }
+        },
+        "data": [
+          {
+            "startRow": 5,
+            "startColumn": 3,
+            "rowData": [
+              {
+                "values": [
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "部分確認済み"
+                    },
+                    "effectiveValue": {
+                      "stringValue": "部分確認済み"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "foregroundColor": {
+                          "red": 0.1254902,
+                          "green": 0.12941177,
+                          "blue": 0.14117648
+                        },
+                        "fontFamily": "Arial",
+                        "fontSize": 11,
+                        "foregroundColorStyle": {
+                          "rgbColor": {
+                            "red": 0.1254902,
+                            "green": 0.12941177,
+                            "blue": 0.14117648
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "v5で架空予約1件の台帳・専用Calendar・予約ID・日時・場所と残数5枚を照合。登録直後は汎用通信エラー、再読込後は表示。"
+                    },
+                    "effectiveValue": {
+                      "stringValue": "v5で架空予約1件の台帳・専用Calendar・予約ID・日時・場所と残数5枚を照合。登録直後は汎用通信エラー、再読込後は表示。"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "foregroundColor": {
+                          "red": 0.1254902,
+                          "green": 0.12941177,
+                          "blue": 0.14117648
+                        },
+                        "fontFamily": "Arial",
+                        "fontSize": 11,
+                        "foregroundColorStyle": {
+                          "rgbColor": {
+                            "red": 0.1254902,
+                            "green": 0.12941177,
+                            "blue": 0.14117648
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "通信エラーの原因と通常成功表示、保護者からの片道・往復等を確認。AT-24全体は未合格。"
+                    },
+                    "effectiveValue": {
+                      "stringValue": "通信エラーの原因と通常成功表示、保護者からの片道・往復等を確認。AT-24全体は未合格。"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "foregroundColor": {
+                          "red": 0.1254902,
+                          "green": 0.12941177,
+                          "blue": 0.14117648
+                        },
+                        "fontFamily": "Arial",
+                        "fontSize": 11,
+                        "foregroundColorStyle": {
+                          "rgbColor": {
+                            "red": 0.1254902,
+                            "green": 0.12941177,
+                            "blue": 0.14117648
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "開発担当"
+                    },
+                    "effectiveValue": {
+                      "stringValue": "開発担当"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "foregroundColor": {
+                          "red": 0.1254902,
+                          "green": 0.12941177,
+                          "blue": 0.14117648
+                        },
+                        "fontFamily": "Arial",
+                        "fontSize": 11,
+                        "foregroundColorStyle": {
+                          "rgbColor": {
+                            "red": 0.1254902,
+                            "green": 0.12941177,
+                            "blue": 0.14117648
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "開発側は別の架空データで応答・実連携を検証可能。顧客6件は本人の随時実施で、日程調整不要。"
+                    },
+                    "effectiveValue": {
+                      "stringValue": "開発側は別の架空データで応答・実連携を検証可能。顧客6件は本人の随時実施で、日程調整不要。"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "foregroundColor": {
+                          "red": 0.1254902,
+                          "green": 0.12941177,
+                          "blue": 0.14117648
+                        },
+                        "fontFamily": "Arial",
+                        "fontSize": 11,
+                        "foregroundColorStyle": {
+                          "rgbColor": {
+                            "red": 0.1254902,
+                            "green": 0.12941177,
+                            "blue": 0.14117648
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "未定"
+                    },
+                    "effectiveValue": {
+                      "stringValue": "未定"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "foregroundColor": {
+                          "red": 0.1254902,
+                          "green": 0.12941177,
+                          "blue": 0.14117648
+                        },
+                        "fontFamily": "Arial",
+                        "fontSize": 11,
+                        "foregroundColorStyle": {
+                          "rgbColor": {
+                            "red": 0.1254902,
+                            "green": 0.12941177,
+                            "blue": 0.14117648
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "backgroundColor": {
+                        "red": 1,
+                        "green": 0.972549,
+                        "blue": 0.88235295
+                      },
+                      "borders": {
+                        "top": {
+                          "style": "SOLID",
+                          "width": 1
+                        },
+                        "bottom": {
+                          "style": "SOLID",
+                          "width": 1
+                        },
+                        "left": {
+                          "style": "SOLID",
+                          "width": 1
+                        },
+                        "right": {
+                          "style": "SOLID",
+                          "width": 1
+                        }
+                      },
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "foregroundColor": {
+                          "red": 0.1254902,
+                          "green": 0.12941177,
+                          "blue": 0.14117648
+                        },
+                        "fontFamily": "Arial",
+                        "fontSize": 11,
+                        "foregroundColorStyle": {
+                          "rgbColor": {
+                            "red": 0.1254902,
+                            "green": 0.12941177,
+                            "blue": 0.14117648
+                          }
+                        }
+                      },
+                      "backgroundColorStyle": {
+                        "rgbColor": {
+                          "red": 1,
+                          "green": 0.972549,
+                          "blue": 0.88235295
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "values": [
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "部分確認済み"
+                    },
+                    "effectiveValue": {
+                      "stringValue": "部分確認済み"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "foregroundColor": {
+                          "red": 0.1254902,
+                          "green": 0.12941177,
+                          "blue": 0.14117648
+                        },
+                        "fontFamily": "Arial",
+                        "fontSize": 11,
+                        "foregroundColorStyle": {
+                          "rgbColor": {
+                            "red": 0.1254902,
+                            "green": 0.12941177,
+                            "blue": 0.14117648
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "同じ架空予約の取消確定後、台帳cancelled・専用Calendar予定消失・再読込後のサイト取消と残数5枚を照合。"
+                    },
+                    "effectiveValue": {
+                      "stringValue": "同じ架空予約の取消確定後、台帳cancelled・専用Calendar予定消失・再読込後のサイト取消と残数5枚を照合。"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "foregroundColor": {
+                          "red": 0.1254902,
+                          "green": 0.12941177,
+                          "blue": 0.14117648
+                        },
+                        "fontFamily": "Arial",
+                        "fontSize": 11,
+                        "foregroundColorStyle": {
+                          "rgbColor": {
+                            "red": 0.1254902,
+                            "green": 0.12941177,
+                            "blue": 0.14117648
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "保護者からの取消と同一予約の再試行等、残る技術受入範囲を確認。"
+                    },
+                    "effectiveValue": {
+                      "stringValue": "保護者からの取消と同一予約の再試行等、残る技術受入範囲を確認。"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "foregroundColor": {
+                          "red": 0.1254902,
+                          "green": 0.12941177,
+                          "blue": 0.14117648
+                        },
+                        "fontFamily": "Arial",
+                        "fontSize": 11,
+                        "foregroundColorStyle": {
+                          "rgbColor": {
+                            "red": 0.1254902,
+                            "green": 0.12941177,
+                            "blue": 0.14117648
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "開発担当"
+                    },
+                    "effectiveValue": {
+                      "stringValue": "開発担当"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "foregroundColor": {
+                          "red": 0.1254902,
+                          "green": 0.12941177,
+                          "blue": 0.14117648
+                        },
+                        "fontFamily": "Arial",
+                        "fontSize": 11,
+                        "foregroundColorStyle": {
+                          "rgbColor": {
+                            "red": 0.1254902,
+                            "green": 0.12941177,
+                            "blue": 0.14117648
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "開発側は別の架空予約で取消・再試行を検証可能。顧客用の固定予約は維持し、日程調整不要。"
+                    },
+                    "effectiveValue": {
+                      "stringValue": "開発側は別の架空予約で取消・再試行を検証可能。顧客用の固定予約は維持し、日程調整不要。"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "foregroundColor": {
+                          "red": 0.1254902,
+                          "green": 0.12941177,
+                          "blue": 0.14117648
+                        },
+                        "fontFamily": "Arial",
+                        "fontSize": 11,
+                        "foregroundColorStyle": {
+                          "rgbColor": {
+                            "red": 0.1254902,
+                            "green": 0.12941177,
+                            "blue": 0.14117648
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "未定"
+                    },
+                    "effectiveValue": {
+                      "stringValue": "未定"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "foregroundColor": {
+                          "red": 0.1254902,
+                          "green": 0.12941177,
+                          "blue": 0.14117648
+                        },
+                        "fontFamily": "Arial",
+                        "fontSize": 11,
+                        "foregroundColorStyle": {
+                          "rgbColor": {
+                            "red": 0.1254902,
+                            "green": 0.12941177,
+                            "blue": 0.14117648
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "backgroundColor": {
+                        "red": 1,
+                        "green": 0.972549,
+                        "blue": 0.88235295
+                      },
+                      "borders": {
+                        "top": {
+                          "style": "SOLID",
+                          "width": 1
+                        },
+                        "bottom": {
+                          "style": "SOLID",
+                          "width": 1
+                        },
+                        "left": {
+                          "style": "SOLID",
+                          "width": 1
+                        },
+                        "right": {
+                          "style": "SOLID",
+                          "width": 1
+                        }
+                      },
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "foregroundColor": {
+                          "red": 0.1254902,
+                          "green": 0.12941177,
+                          "blue": 0.14117648
+                        },
+                        "fontFamily": "Arial",
+                        "fontSize": 11,
+                        "foregroundColorStyle": {
+                          "rgbColor": {
+                            "red": 0.1254902,
+                            "green": 0.12941177,
+                            "blue": 0.14117648
+                          }
+                        }
+                      },
+                      "backgroundColorStyle": {
+                        "rgbColor": {
+                          "red": 1,
+                          "green": 0.972549,
+                          "blue": 0.88235295
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "values": [
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "部分確認済み"
+                    },
+                    "effectiveValue": {
+                      "stringValue": "部分確認済み"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "foregroundColor": {
+                          "red": 0.1254902,
+                          "green": 0.12941177,
+                          "blue": 0.14117648
+                        },
+                        "fontFamily": "Arial",
+                        "fontSize": 11,
+                        "foregroundColorStyle": {
+                          "rgbColor": {
+                            "red": 0.1254902,
+                            "green": 0.12941177,
+                            "blue": 0.14117648
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "既存管理者2名を維持。検証専用台帳でのみ有効な検証担当を登録・読戻し。両画面とも対象は架空生徒1名のみ。通常の管理者・保護者の分離は維持。"
+                    },
+                    "effectiveValue": {
+                      "stringValue": "既存管理者2名を維持。検証専用台帳でのみ有効な検証担当を登録・読戻し。両画面とも対象は架空生徒1名のみ。通常の管理者・保護者の分離は維持。"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "foregroundColor": {
+                          "red": 0.1254902,
+                          "green": 0.12941177,
+                          "blue": 0.14117648
+                        },
+                        "fontFamily": "Arial",
+                        "fontSize": 11,
+                        "foregroundColorStyle": {
+                          "rgbColor": {
+                            "red": 0.1254902,
+                            "green": 0.12941177,
+                            "blue": 0.14117648
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "小林さん本人が固定の家庭用・管理者用URLへ同じGoogleでログインし6件を確認。実施中の登録変更は不要。原AT-26全体は別管理。"
+                    },
+                    "effectiveValue": {
+                      "stringValue": "小林さん本人が固定の家庭用・管理者用URLへ同じGoogleでログインし6件を確認。実施中の登録変更は不要。原AT-26全体は別管理。"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "foregroundColor": {
+                          "red": 0.1254902,
+                          "green": 0.12941177,
+                          "blue": 0.14117648
+                        },
+                        "fontFamily": "Arial",
+                        "fontSize": 11,
+                        "foregroundColorStyle": {
+                          "rgbColor": {
+                            "red": 0.1254902,
+                            "green": 0.12941177,
+                            "blue": 0.14117648
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "開発担当／小林さん"
+                    },
+                    "effectiveValue": {
+                      "stringValue": "開発担当／小林さん"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "foregroundColor": {
+                          "red": 0.1254902,
+                          "green": 0.12941177,
+                          "blue": 0.14117648
+                        },
+                        "fontFamily": "Arial",
+                        "fontSize": 11,
+                        "foregroundColorStyle": {
+                          "rgbColor": {
+                            "red": 0.1254902,
+                            "green": 0.12941177,
+                            "blue": 0.14117648
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "本人の随時実施待ち（日程調整不要）"
+                    },
+                    "effectiveValue": {
+                      "stringValue": "本人の随時実施待ち（日程調整不要）"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "foregroundColor": {
+                          "red": 0.1254902,
+                          "green": 0.12941177,
+                          "blue": 0.14117648
+                        },
+                        "fontFamily": "Arial",
+                        "fontSize": 11,
+                        "foregroundColorStyle": {
+                          "rgbColor": {
+                            "red": 0.1254902,
+                            "green": 0.12941177,
+                            "blue": 0.14117648
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "日付指定なし"
+                    },
+                    "effectiveValue": {
+                      "stringValue": "日付指定なし"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "foregroundColor": {
+                          "red": 0.1254902,
+                          "green": 0.12941177,
+                          "blue": 0.14117648
+                        },
+                        "fontFamily": "Arial",
+                        "fontSize": 11,
+                        "foregroundColorStyle": {
+                          "rgbColor": {
+                            "red": 0.1254902,
+                            "green": 0.12941177,
+                            "blue": 0.14117648
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "backgroundColor": {
+                        "red": 1,
+                        "green": 0.972549,
+                        "blue": 0.88235295
+                      },
+                      "borders": {
+                        "top": {
+                          "style": "SOLID",
+                          "width": 1
+                        },
+                        "bottom": {
+                          "style": "SOLID",
+                          "width": 1
+                        },
+                        "left": {
+                          "style": "SOLID",
+                          "width": 1
+                        },
+                        "right": {
+                          "style": "SOLID",
+                          "width": 1
+                        }
+                      },
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "foregroundColor": {
+                          "red": 0.1254902,
+                          "green": 0.12941177,
+                          "blue": 0.14117648
+                        },
+                        "fontFamily": "Arial",
+                        "fontSize": 11,
+                        "foregroundColorStyle": {
+                          "rgbColor": {
+                            "red": 0.1254902,
+                            "green": 0.12941177,
+                            "blue": 0.14117648
+                          }
+                        }
+                      },
+                      "backgroundColorStyle": {
+                        "rgbColor": {
+                          "red": 1,
+                          "green": 0.972549,
+                          "blue": 0.88235295
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "values": [
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "開発側確認済み"
+                    },
+                    "effectiveValue": {
+                      "stringValue": "開発側確認済み"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "foregroundColor": {
+                          "red": 0.1254902,
+                          "green": 0.12941177,
+                          "blue": 0.14117648
+                        },
+                        "fontFamily": "Arial",
+                        "fontSize": 11,
+                        "foregroundColorStyle": {
+                          "rgbColor": {
+                            "red": 0.1254902,
+                            "green": 0.12941177,
+                            "blue": 0.14117648
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "同時完了は片道1枚のみ。後続再試行の追加消費0枚。試験行除去・実行前照合済み"
+                    },
+                    "effectiveValue": {
+                      "stringValue": "同時完了は片道1枚のみ。後続再試行の追加消費0枚。試験行除去・実行前照合済み"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "foregroundColor": {
+                          "red": 0.1254902,
+                          "green": 0.12941177,
+                          "blue": 0.14117648
+                        },
+                        "fontFamily": "Arial",
+                        "fontSize": 11,
+                        "foregroundColorStyle": {
+                          "rgbColor": {
+                            "red": 0.1254902,
+                            "green": 0.12941177,
+                            "blue": 0.14117648
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "開発側で未計測のサーバー実行時刻の重複を検証する。旧第三者30件は履歴として保持し、顧客確認6件と分ける。"
+                    },
+                    "effectiveValue": {
+                      "stringValue": "開発側で未計測のサーバー実行時刻の重複を検証する。旧第三者30件は履歴として保持し、顧客確認6件と分ける。"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "foregroundColor": {
+                          "red": 0.1254902,
+                          "green": 0.12941177,
+                          "blue": 0.14117648
+                        },
+                        "fontFamily": "Arial",
+                        "fontSize": 11,
+                        "foregroundColorStyle": {
+                          "rgbColor": {
+                            "red": 0.1254902,
+                            "green": 0.12941177,
+                            "blue": 0.14117648
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "開発担当"
+                    },
+                    "effectiveValue": {
+                      "stringValue": "開発担当"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "foregroundColor": {
+                          "red": 0.1254902,
+                          "green": 0.12941177,
+                          "blue": 0.14117648
+                        },
+                        "fontFamily": "Arial",
+                        "fontSize": 11,
+                        "foregroundColorStyle": {
+                          "rgbColor": {
+                            "red": 0.1254902,
+                            "green": 0.12941177,
+                            "blue": 0.14117648
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "別の架空データで実施可能。第三者実施待ちを開発検証の条件にしない。"
+                    },
+                    "effectiveValue": {
+                      "stringValue": "別の架空データで実施可能。第三者実施待ちを開発検証の条件にしない。"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "foregroundColor": {
+                          "red": 0.1254902,
+                          "green": 0.12941177,
+                          "blue": 0.14117648
+                        },
+                        "fontFamily": "Arial",
+                        "fontSize": 11,
+                        "foregroundColorStyle": {
+                          "rgbColor": {
+                            "red": 0.1254902,
+                            "green": 0.12941177,
+                            "blue": 0.14117648
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "未定"
+                    },
+                    "effectiveValue": {
+                      "stringValue": "未定"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "foregroundColor": {
+                          "red": 0.1254902,
+                          "green": 0.12941177,
+                          "blue": 0.14117648
+                        },
+                        "fontFamily": "Arial",
+                        "fontSize": 11,
+                        "foregroundColorStyle": {
+                          "rgbColor": {
+                            "red": 0.1254902,
+                            "green": 0.12941177,
+                            "blue": 0.14117648
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "backgroundColor": {
+                        "red": 1,
+                        "green": 0.972549,
+                        "blue": 0.88235295
+                      },
+                      "borders": {
+                        "top": {
+                          "style": "SOLID",
+                          "width": 1
+                        },
+                        "bottom": {
+                          "style": "SOLID",
+                          "width": 1
+                        },
+                        "left": {
+                          "style": "SOLID",
+                          "width": 1
+                        },
+                        "right": {
+                          "style": "SOLID",
+                          "width": 1
+                        }
+                      },
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "foregroundColor": {
+                          "red": 0.1254902,
+                          "green": 0.12941177,
+                          "blue": 0.14117648
+                        },
+                        "fontFamily": "Arial",
+                        "fontSize": 11,
+                        "foregroundColorStyle": {
+                          "rgbColor": {
+                            "red": 0.1254902,
+                            "green": 0.12941177,
+                            "blue": 0.14117648
+                          }
+                        }
+                      },
+                      "backgroundColorStyle": {
+                        "rgbColor": {
+                          "red": 1,
+                          "green": 0.972549,
+                          "blue": 0.88235295
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "values": [
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "部分確認済み"
+                    },
+                    "effectiveValue": {
+                      "stringValue": "部分確認済み"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "foregroundColor": {
+                          "red": 0.1254902,
+                          "green": 0.12941177,
+                          "blue": 0.14117648
+                        },
+                        "fontFamily": "Arial",
+                        "fontSize": 11,
+                        "foregroundColorStyle": {
+                          "rgbColor": {
+                            "red": 0.1254902,
+                            "green": 0.12941177,
+                            "blue": 0.14117648
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "過去の限定値・単一シート復元に加え、11/10に新しい架空2ファイルで比較。範囲貼付で値10・集計20は復元したが保護・名前付き範囲・フィルタ・固定は戻らず、シート複写＋改名では数式が旧シートを追従し、削除後#REF!となった。複写先の保護も戻らなかった。"
+                    },
+                    "effectiveValue": {
+                      "stringValue": "過去の限定値・単一シート復元に加え、11/10に新しい架空2ファイルで比較。範囲貼付で値10・集計20は復元したが保護・名前付き範囲・フィルタ・固定は戻らず、シート複写＋改名では数式が旧シートを追従し、削除後#REF!となった。複写先の保護も戻らなかった。"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "foregroundColor": {
+                          "red": 0.1254902,
+                          "green": 0.12941177,
+                          "blue": 0.14117648
+                        },
+                        "fontFamily": "Arial",
+                        "fontSize": 11,
+                        "foregroundColorStyle": {
+                          "rgbColor": {
+                            "red": 0.1254902,
+                            "green": 0.12941177,
+                            "blue": 0.14117648
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "範囲貼付は暫定候補。不足設定の再作成・名前参照式の再入力と全体照合を検証する。ファイル設定、他利用者の保護、全数式・全ブック、GAS取得・gidリンク、サイト再取得・Calendar整合は未確認。AT-28全体は部分確認のまま。"
+                    },
+                    "effectiveValue": {
+                      "stringValue": "範囲貼付は暫定候補。不足設定の再作成・名前参照式の再入力と全体照合を検証する。ファイル設定、他利用者の保護、全数式・全ブック、GAS取得・gidリンク、サイト再取得・Calendar整合は未確認。AT-28全体は部分確認のまま。"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "foregroundColor": {
+                          "red": 0.1254902,
+                          "green": 0.12941177,
+                          "blue": 0.14117648
+                        },
+                        "fontFamily": "Arial",
+                        "fontSize": 11,
+                        "foregroundColorStyle": {
+                          "rgbColor": {
+                            "red": 0.1254902,
+                            "green": 0.12941177,
+                            "blue": 0.14117648
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "開発担当／運用担当（案）"
+                    },
+                    "effectiveValue": {
+                      "stringValue": "開発担当／運用担当（案）"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "foregroundColor": {
+                          "red": 0.1254902,
+                          "green": 0.12941177,
+                          "blue": 0.14117648
+                        },
+                        "fontFamily": "Arial",
+                        "fontSize": 11,
+                        "foregroundColorStyle": {
+                          "rgbColor": {
+                            "red": 0.1254902,
+                            "green": 0.12941177,
+                            "blue": 0.14117648
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "OPEN-02の運用回答待ち。独立した架空環境で復旧手順の検証は先行可能。顧客用データは使わない。"
+                    },
+                    "effectiveValue": {
+                      "stringValue": "OPEN-02の運用回答待ち。独立した架空環境で復旧手順の検証は先行可能。顧客用データは使わない。"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "foregroundColor": {
+                          "red": 0.1254902,
+                          "green": 0.12941177,
+                          "blue": 0.14117648
+                        },
+                        "fontFamily": "Arial",
+                        "fontSize": 11,
+                        "foregroundColorStyle": {
+                          "rgbColor": {
+                            "red": 0.1254902,
+                            "green": 0.12941177,
+                            "blue": 0.14117648
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "未定"
+                    },
+                    "effectiveValue": {
+                      "stringValue": "未定"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "foregroundColor": {
+                          "red": 0.1254902,
+                          "green": 0.12941177,
+                          "blue": 0.14117648
+                        },
+                        "fontFamily": "Arial",
+                        "fontSize": 11,
+                        "foregroundColorStyle": {
+                          "rgbColor": {
+                            "red": 0.1254902,
+                            "green": 0.12941177,
+                            "blue": 0.14117648
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "backgroundColor": {
+                        "red": 1,
+                        "green": 0.972549,
+                        "blue": 0.88235295
+                      },
+                      "borders": {
+                        "top": {
+                          "style": "SOLID",
+                          "width": 1
+                        },
+                        "bottom": {
+                          "style": "SOLID",
+                          "width": 1
+                        },
+                        "left": {
+                          "style": "SOLID",
+                          "width": 1
+                        },
+                        "right": {
+                          "style": "SOLID",
+                          "width": 1
+                        }
+                      },
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "foregroundColor": {
+                          "red": 0.1254902,
+                          "green": 0.12941177,
+                          "blue": 0.14117648
+                        },
+                        "fontFamily": "Arial",
+                        "fontSize": 11,
+                        "foregroundColorStyle": {
+                          "rgbColor": {
+                            "red": 0.1254902,
+                            "green": 0.12941177,
+                            "blue": 0.14117648
+                          }
+                        }
+                      },
+                      "backgroundColorStyle": {
+                        "rgbColor": {
+                          "red": 1,
+                          "green": 0.972549,
+                          "blue": 0.88235295
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "properties": {
+          "sheetId": 110706,
+          "title": "顧客確認6件",
+          "index": 2,
+          "sheetType": "GRID",
+          "gridProperties": {
+            "rowCount": 60,
+            "columnCount": 9,
+            "frozenRowCount": 5,
+            "hideGridlines": true
+          }
+        },
+        "data": [
+          {
+            "startRow": 5,
+            "startColumn": 5,
+            "rowData": [
+              {
+                "values": [
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "未実施"
+                    },
+                    "effectiveValue": {
+                      "stringValue": "未実施"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    },
+                    "dataValidation": {
+                      "condition": {
+                        "type": "ONE_OF_LIST",
+                        "values": [
+                          {
+                            "userEnteredValue": "未実施"
+                          },
+                          {
+                            "userEnteredValue": "合格"
+                          },
+                          {
+                            "userEnteredValue": "要確認"
+                          },
+                          {
+                            "userEnteredValue": "保留"
+                          }
+                        ]
+                      },
+                      "strict": true,
+                      "showCustomUi": true
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "AT-01・AT-03・AT-20"
+                    },
+                    "effectiveValue": {
+                      "stringValue": "AT-01・AT-03・AT-20"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "values": [
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "未実施"
+                    },
+                    "effectiveValue": {
+                      "stringValue": "未実施"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    },
+                    "dataValidation": {
+                      "condition": {
+                        "type": "ONE_OF_LIST",
+                        "values": [
+                          {
+                            "userEnteredValue": "未実施"
+                          },
+                          {
+                            "userEnteredValue": "合格"
+                          },
+                          {
+                            "userEnteredValue": "要確認"
+                          },
+                          {
+                            "userEnteredValue": "保留"
+                          }
+                        ]
+                      },
+                      "strict": true,
+                      "showCustomUi": true
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "AT-06・AT-24"
+                    },
+                    "effectiveValue": {
+                      "stringValue": "AT-06・AT-24"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "values": [
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "未実施"
+                    },
+                    "effectiveValue": {
+                      "stringValue": "未実施"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    },
+                    "dataValidation": {
+                      "condition": {
+                        "type": "ONE_OF_LIST",
+                        "values": [
+                          {
+                            "userEnteredValue": "未実施"
+                          },
+                          {
+                            "userEnteredValue": "合格"
+                          },
+                          {
+                            "userEnteredValue": "要確認"
+                          },
+                          {
+                            "userEnteredValue": "保留"
+                          }
+                        ]
+                      },
+                      "strict": true,
+                      "showCustomUi": true
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "AT-10・AT-25"
+                    },
+                    "effectiveValue": {
+                      "stringValue": "AT-10・AT-25"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "values": [
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "未実施"
+                    },
+                    "effectiveValue": {
+                      "stringValue": "未実施"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    },
+                    "dataValidation": {
+                      "condition": {
+                        "type": "ONE_OF_LIST",
+                        "values": [
+                          {
+                            "userEnteredValue": "未実施"
+                          },
+                          {
+                            "userEnteredValue": "合格"
+                          },
+                          {
+                            "userEnteredValue": "要確認"
+                          },
+                          {
+                            "userEnteredValue": "保留"
+                          }
+                        ]
+                      },
+                      "strict": true,
+                      "showCustomUi": true
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "AT-13・AT-14"
+                    },
+                    "effectiveValue": {
+                      "stringValue": "AT-13・AT-14"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "values": [
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "未実施"
+                    },
+                    "effectiveValue": {
+                      "stringValue": "未実施"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    },
+                    "dataValidation": {
+                      "condition": {
+                        "type": "ONE_OF_LIST",
+                        "values": [
+                          {
+                            "userEnteredValue": "未実施"
+                          },
+                          {
+                            "userEnteredValue": "合格"
+                          },
+                          {
+                            "userEnteredValue": "要確認"
+                          },
+                          {
+                            "userEnteredValue": "保留"
+                          }
+                        ]
+                      },
+                      "strict": true,
+                      "showCustomUi": true
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "AT-04・AT-05"
+                    },
+                    "effectiveValue": {
+                      "stringValue": "AT-04・AT-05"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "values": [
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "未実施"
+                    },
+                    "effectiveValue": {
+                      "stringValue": "未実施"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    },
+                    "dataValidation": {
+                      "condition": {
+                        "type": "ONE_OF_LIST",
+                        "values": [
+                          {
+                            "userEnteredValue": "未実施"
+                          },
+                          {
+                            "userEnteredValue": "合格"
+                          },
+                          {
+                            "userEnteredValue": "要確認"
+                          },
+                          {
+                            "userEnteredValue": "保留"
+                          }
+                        ]
+                      },
+                      "strict": true,
+                      "showCustomUi": true
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "AT-01・AT-19・AT-26"
+                    },
+                    "effectiveValue": {
+                      "stringValue": "AT-01・AT-19・AT-26"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "properties": {
+          "sheetId": 1920826968,
+          "title": "検証結果履歴",
+          "index": 4,
+          "sheetType": "GRID",
+          "gridProperties": {
+            "rowCount": 100,
+            "columnCount": 9,
+            "frozenRowCount": 1,
+            "hideGridlines": true
+          }
+        },
+        "data": [
+          {
+            "startRow": 63,
+            "rowData": [
+              {
+                "values": [
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "VR-20261110-03"
+                    },
+                    "effectiveValue": {
+                      "stringValue": "VR-20261110-03"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "2026-11-10"
+                    },
+                    "effectiveValue": {
+                      "stringValue": "2026-11-10"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "正本r18・PowerPoint v34"
+                    },
+                    "effectiveValue": {
+                      "stringValue": "正本r18・PowerPoint v34"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "検証証跡と図入り資料の改版・保全"
+                    },
+                    "effectiveValue": {
+                      "stringValue": "検証証跡と図入り資料の改版・保全"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "工程横断整合・描画再取込・独立AIレビュー"
+                    },
+                    "effectiveValue": {
+                      "stringValue": "工程横断整合・描画再取込・独立AIレビュー"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "要件39・フロー11・画面20・I/F16・テスト対応206を管理。PowerPoint12冊184頁をv34へ更新。旧160頁の全画素・ノート・画像を保持し、新24頁を図表で追加。独立レビュー358項目に新規指摘なし。"
+                    },
+                    "effectiveValue": {
+                      "stringValue": "要件39・フロー11・画面20・I/F16・テスト対応206を管理。PowerPoint12冊184頁をv34へ更新。旧160頁の全画素・ノート・画像を保持し、新24頁を図表で追加。独立レビュー358項目に新規指摘なし。"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "docs/deliverables/2026-10-23-traceability/README.md／docs/traceability/reports/ppt-consumption-20261110/independent-ppt-review.json"
+                    },
+                    "effectiveValue": {
+                      "stringValue": "docs/deliverables/2026-10-23-traceability/README.md／docs/traceability/reports/ppt-consumption-20261110/independent-ppt-review.json"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "206はテスト対応数で実Google・顧客の合格数ではない。旧業務フローの既存配置警告21件を維持、新警告0。PowerPointアプリ表示は未確認。顧客0/6、本番HOLD。"
+                    },
+                    "effectiveValue": {
+                      "stringValue": "206はテスト対応数で実Google・顧客の合格数ではない。旧業務フローの既存配置警告21件を維持、新警告0。PowerPointアプリ表示は未確認。顧客0/6、本番HOLD。"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "11/11（水）16:00の打ち合わせ用4頁資料を別冊で用意。先生のデモと小林さんの実Google6件を分けて説明する。"
+                    },
+                    "effectiveValue": {
+                      "stringValue": "11/11（水）16:00の打ち合わせ用4頁資料を別冊で用意。先生のデモと小林さんの実Google6件を分けて説明する。"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "values": [
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "VR-20261110-04"
+                    },
+                    "effectiveValue": {
+                      "stringValue": "VR-20261110-04"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "2026-11-10"
+                    },
+                    "effectiveValue": {
+                      "stringValue": "2026-11-10"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "AT-28・REM-05"
+                    },
+                    "effectiveValue": {
+                      "stringValue": "AT-28・REM-05"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "複数シートの復元方式を架空Google Sheetsで比較"
+                    },
+                    "effectiveValue": {
+                      "stringValue": "複数シートの復元方式を架空Google Sheetsで比較"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "新しい架空2ファイルの実画面観測・画像の独立レビュー"
+                    },
+                    "effectiveValue": {
+                      "stringValue": "新しい架空2ファイルの実画面観測・画像の独立レビュー"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "範囲貼付で値10・シート間参照の集計20を確認。不足設定は復元されず、シート複写＋改名では参照が旧シートを追い、削除後#REF!。複写先の保護なし。"
+                    },
+                    "effectiveValue": {
+                      "stringValue": "範囲貼付で値10・シート間参照の集計20を確認。不足設定は復元されず、シート複写＋改名では参照が旧シートを追い、削除後#REF!。複写先の保護なし。"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "docs/progress/2026-11-10-at28-multisheet-result.md／outputs/at28-multisheet-20261110/SHA256SUMS.txt"
+                    },
+                    "effectiveValue": {
+                      "stringValue": "docs/progress/2026-11-10-at28-multisheet-result.md／outputs/at28-multisheet-20261110/SHA256SUMS.txt"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "AT-28全体は部分確認。C10ファイル設定は未実施。GAS・gid・実台帳・サイト再取得・Calendar整合は未実測。顧客用データへの書込なし、顧客0/6、本番HOLD。結果は図入り3冊v35へ反映・独立レビュー後採用。"
+                    },
+                    "effectiveValue": {
+                      "stringValue": "AT-28全体は部分確認。C10ファイル設定は未実施。GAS・gid・実台帳・サイト再取得・Calendar整合は未実測。顧客用データへの書込なし、顧客0/6、本番HOLD。結果は図入り3冊v35へ反映・独立レビュー後採用。"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "架空環境で不足設定と名前参照式を戻す手順を検証し、式・値・設定を照合する。"
+                    },
+                    "effectiveValue": {
+                      "stringValue": "架空環境で不足設定と名前参照式を戻す手順を検証し、式・値・設定を照合する。"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "values": [
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "VR-20261110-05"
+                    },
+                    "effectiveValue": {
+                      "stringValue": "VR-20261110-05"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "2026-11-10"
+                    },
+                    "effectiveValue": {
+                      "stringValue": "2026-11-10"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "AT-28・図入り資料3冊v35"
+                    },
+                    "effectiveValue": {
+                      "stringValue": "AT-28・図入り資料3冊v35"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "複数シート比較結果を運用・残作業・進捗資料へ反映"
+                    },
+                    "effectiveValue": {
+                      "stringValue": "複数シート比較結果を運用・残作業・進捗資料へ反映"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "PPT構造・再取込・全頁描画・保存照合・独立レビュー"
+                    },
+                    "effectiveValue": {
+                      "stringValue": "PPT構造・再取込・全頁描画・保存照合・独立レビュー"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "影響する3冊51頁を描画し、旧45頁の全画素・本文・ノート・画像を保全。新6頁に比較表と参照エラーの図を追補。追加レビューで誤読防止の注意を修正後に再レビューし、採用。残9冊v34は不変、現行12冊190頁。"
+                    },
+                    "effectiveValue": {
+                      "stringValue": "影響する3冊51頁を描画し、旧45頁の全画素・本文・ノート・画像を保全。新6頁に比較表と参照エラーの図を追補。追加レビューで誤読防止の注意を修正後に再レビューし、採用。残9冊v34は不変、現行12冊190頁。"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "docs/deliverables/2026-10-23-traceability/README.md／docs/traceability/reports/ppt-at28-20261110/revised/independent-ppt-review.json"
+                    },
+                    "effectiveValue": {
+                      "stringValue": "docs/deliverables/2026-10-23-traceability/README.md／docs/traceability/reports/ppt-at28-20261110/revised/independent-ppt-review.json"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "資料の採用でありAT-28全体の合格ではない。旧候補と最初のレビュー・採用撤回記録も保全。PowerPointアプリ表示は未確認。顧客0/6、本番HOLD。"
+                    },
+                    "effectiveValue": {
+                      "stringValue": "資料の採用でありAT-28全体の合格ではない。旧候補と最初のレビュー・採用撤回記録も保全。PowerPointアプリ表示は未確認。顧客0/6、本番HOLD。"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "架空環境で不足設定・名前参照式を戻し、式・値・設定の全体を照合する復旧手順を検証する。"
+                    },
+                    "effectiveValue": {
+                      "stringValue": "架空環境で不足設定・名前参照式を戻し、式・値・設定の全体を照合する復旧手順を検証する。"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

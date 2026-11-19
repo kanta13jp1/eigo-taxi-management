@@ -1,0 +1,408 @@
+{
+  "status": "PASS",
+  "date": "2026-11-07",
+  "reviewer": "AI author /root/modern_runner_1106",
+  "registrySha256": "d6aa48ce6e5bd18c89db3cde4c465f44b3dd088d52c0e5208cebaaf49d2d1adf",
+  "registryVersion": "2026-11-07-r17",
+  "decks": 12,
+  "slides": 160,
+  "historicalBodyPagesPreserved": 136,
+  "oldNotesPreserved": 160,
+  "replacedDiagramPages": 24,
+  "rows": [
+    {
+      "id": "PKG-01",
+      "name": "business",
+      "source": "docs/deliverables/2026-10-23-traceability/business-2026-11-07-v31.pptx",
+      "sourceSha256": "3fac3c423b603e51fe33a9085b9c0e0b2ade825b6892b0747d989265e3905362",
+      "sourceMdPath": "docs/acceptance/01_BUSINESS_FLOWS.md",
+      "sourceMdSha256": "d061e088fb945756a574566a559da174fc6d96bc1c85de6b79324a7984345ddf",
+      "sha256": "7798b1c695c4e07d17dd842aee8c60189fbe9c8a3c6e72db2b3a806d240dfc54",
+      "slides": 23,
+      "preservedBodySlides": 21,
+      "oldBodyPagesPixelIdentical": 21,
+      "oldNotesPreserved": 23,
+      "oldImagesPreserved": true,
+      "currentGeneratedSourceInNotes": true,
+      "renderedFinalPages": 23,
+      "packageFindings": 0,
+      "layoutFindings": 0,
+      "layoutWarnings": 21,
+      "newWarnings": 0,
+      "reimportPassed": true,
+      "privateEmailsOrGoogleLinks": 0
+    },
+    {
+      "id": "PKG-02",
+      "name": "requirements",
+      "source": "docs/deliverables/2026-10-23-traceability/requirements-2026-11-07-v31.pptx",
+      "sourceSha256": "ca81c4c6d679ce0d4a82d5bcee6f06ab7637b56cd56a0379e9d8b3066cd41339",
+      "sourceMdPath": "docs/acceptance/03_REQUIREMENTS.md",
+      "sourceMdSha256": "e9dd191c079cd30544e042c99830f766e458d8c6cf652da266f73a300764b82b",
+      "sha256": "0ed29877d0e8a2d1987911e379b68774d9937ecb6418771ef1506368bc5e2ef7",
+      "slides": 12,
+      "preservedBodySlides": 10,
+      "oldBodyPagesPixelIdentical": 10,
+      "oldNotesPreserved": 12,
+      "oldImagesPreserved": true,
+      "currentGeneratedSourceInNotes": true,
+      "renderedFinalPages": 12,
+      "packageFindings": 0,
+      "layoutFindings": 0,
+      "layoutWarnings": 0,
+      "newWarnings": 0,
+      "reimportPassed": true,
+      "privateEmailsOrGoogleLinks": 0
+    },
+    {
+      "id": "PKG-03",
+      "name": "design",
+      "source": "docs/deliverables/2026-10-23-traceability/design-2026-11-07-v31.pptx",
+      "sourceSha256": "d6045c3ecc2d2e90a67f1ecfee0fd43000396fa1986697e506f6e210311ceacc",
+      "sourceMdPath": "docs/acceptance/04_FUNCTIONAL_SPEC.md",
+      "sourceMdSha256": "9684e35e70a05cab0b094f8fcb04bf2ad2a90c01e1d2937dbb5148f040a40684",
+      "sha256": "abda764ea15cf369d355de14538a5e7cef447944ed562053f24e3de5f5d0e79c",
+      "slides": 13,
+      "preservedBodySlides": 11,
+      "oldBodyPagesPixelIdentical": 11,
+      "oldNotesPreserved": 13,
+      "oldImagesPreserved": true,
+      "currentGeneratedSourceInNotes": true,
+      "renderedFinalPages": 13,
+      "packageFindings": 0,
+      "layoutFindings": 0,
+      "layoutWarnings": 0,
+      "newWarnings": 0,
+      "reimportPassed": true,
+      "privateEmailsOrGoogleLinks": 0
+    },
+    {
+      "id": "PKG-04",
+      "name": "test-spec",
+      "source": "docs/deliverables/2026-10-23-traceability/test-spec-2026-11-07-v31.pptx",
+      "sourceSha256": "fe5460918287c0c4a7b81a5e4cf922a1b4116a7144cf44608c0a6a1fcc54549f",
+      "sourceMdPath": "docs/acceptance/17_TEST_SPEC.md",
+      "sourceMdSha256": "f6b23f467b42add1918c39897dfea7fa3a5ae221b5dc80f1767233637bd35d7c",
+      "sha256": "709fd1447a8fed836958810b787c28168b4f6efc8ff4145e50dd8215d1561455",
+      "slides": 13,
+      "preservedBodySlides": 11,
+      "oldBodyPagesPixelIdentical": 11,
+      "oldNotesPreserved": 13,
+      "oldImagesPreserved": true,
+      "currentGeneratedSourceInNotes": true,
+      "renderedFinalPages": 13,
+      "packageFindings": 0,
+      "layoutFindings": 0,
+      "layoutWarnings": 0,
+      "newWarnings": 0,
+      "reimportPassed": true,
+      "privateEmailsOrGoogleLinks": 0
+    },
+    {
+      "id": "PKG-05",
+      "name": "tasks",
+      "source": "docs/deliverables/2026-10-23-traceability/tasks-2026-11-07-v31.pptx",
+      "sourceSha256": "bd6a4784d04f8e568c9ff3bbf3fc7c87e0fcedbea2719d5e88a20edb2d23b3f7",
+      "sourceMdPath": "docs/acceptance/05_TASKS.md",
+      "sourceMdSha256": "17e8d54b874ba28fc6a285b9e7f24181a9e1bc2932eed8ac78d318c2bf81ed2a",
+      "sha256": "b5c1e8d564f8f588fc1ff4a47f322b3a29d6454f7bdd29b06a6d12caa358974f",
+      "slides": 15,
+      "preservedBodySlides": 13,
+      "oldBodyPagesPixelIdentical": 13,
+      "oldNotesPreserved": 15,
+      "oldImagesPreserved": true,
+      "currentGeneratedSourceInNotes": true,
+      "renderedFinalPages": 15,
+      "packageFindings": 0,
+      "layoutFindings": 0,
+      "layoutWarnings": 0,
+      "newWarnings": 0,
+      "reimportPassed": true,
+      "privateEmailsOrGoogleLinks": 0
+    },
+    {
+      "id": "PKG-06",
+      "name": "implementation",
+      "source": "docs/deliverables/2026-10-23-traceability/implementation-2026-11-07-v31.pptx",
+      "sourceSha256": "01a400b16c57513e1563ab2e722a50d324d54864d2b04507bc85182a8ef0bdef",
+      "sourceMdPath": "docs/acceptance/18_IMPLEMENTATION_INDEX.md",
+      "sourceMdSha256": "dcb9254cbb9dd88f0a36b9682700fad6abfe06352200599a696d08d18a6da561",
+      "sha256": "2463d6982418fac283dcebda8cf7c95371e7244c82d0574ae51b2bf2f5218383",
+      "slides": 13,
+      "preservedBodySlides": 11,
+      "oldBodyPagesPixelIdentical": 11,
+      "oldNotesPreserved": 13,
+      "oldImagesPreserved": true,
+      "currentGeneratedSourceInNotes": true,
+      "renderedFinalPages": 13,
+      "packageFindings": 0,
+      "layoutFindings": 0,
+      "layoutWarnings": 0,
+      "newWarnings": 0,
+      "reimportPassed": true,
+      "privateEmailsOrGoogleLinks": 0
+    },
+    {
+      "id": "PKG-07",
+      "name": "test-code",
+      "source": "docs/deliverables/2026-10-23-traceability/test-code-2026-11-07-v31.pptx",
+      "sourceSha256": "5e54230c680175bcc0a8a8b9e033cbbeb050bdaa69c620d6e7b48929987bf033",
+      "sourceMdPath": "docs/acceptance/19_TEST_CODE_INDEX.md",
+      "sourceMdSha256": "62be57bdc7eab222e39b045d27a6bbb255db82c441be51136fd30ce041fedf50",
+      "sha256": "f7eea28fa998266f2bf7adb60ea3236d280127e7eb1c6520c503cd8e1dfa0c52",
+      "slides": 13,
+      "preservedBodySlides": 11,
+      "oldBodyPagesPixelIdentical": 11,
+      "oldNotesPreserved": 13,
+      "oldImagesPreserved": true,
+      "currentGeneratedSourceInNotes": true,
+      "renderedFinalPages": 13,
+      "packageFindings": 0,
+      "layoutFindings": 0,
+      "layoutWarnings": 0,
+      "newWarnings": 0,
+      "reimportPassed": true,
+      "privateEmailsOrGoogleLinks": 0
+    },
+    {
+      "id": "PKG-08",
+      "name": "acceptance",
+      "source": "docs/deliverables/2026-10-23-traceability/acceptance-2026-11-07-v31.pptx",
+      "sourceSha256": "670df4f75588ab87104338488c8f3827b3e301d4893e3ca339d5f9fb126be6f2",
+      "sourceMdPath": "docs/acceptance/06_ACCEPTANCE_TEST_SPEC.md",
+      "sourceMdSha256": "1e138cf8fd5efe7d59b7571b7a6d75bf3dea9152bdf1669cf5a7b75bbb643b1f",
+      "sha256": "4f0d08d467a01fce45ea8b79320f8b656c714d8f952b750c41ac5eff9c17aafe",
+      "slides": 12,
+      "preservedBodySlides": 10,
+      "oldBodyPagesPixelIdentical": 10,
+      "oldNotesPreserved": 12,
+      "oldImagesPreserved": true,
+      "currentGeneratedSourceInNotes": true,
+      "renderedFinalPages": 12,
+      "packageFindings": 0,
+      "layoutFindings": 0,
+      "layoutWarnings": 0,
+      "newWarnings": 0,
+      "reimportPassed": true,
+      "privateEmailsOrGoogleLinks": 0
+    },
+    {
+      "id": "PKG-09",
+      "name": "operations",
+      "source": "docs/deliverables/2026-10-23-traceability/operations-2026-11-07-v31.pptx",
+      "sourceSha256": "10436adf52c7cab9430ebd1351786cceebefa0e94ef71d4231721db3534b0f2a",
+      "sourceMdPath": "docs/acceptance/20_OPERATIONS.md",
+      "sourceMdSha256": "c56710adcf2fc7133f6e0f17443135e58acd20eb5dfe42bf65ddaf8298f5b5ce",
+      "sha256": "97616ac306e31b16decfba568538b6125d5ecdd07b7f8161205c3868875b7309",
+      "slides": 12,
+      "preservedBodySlides": 10,
+      "oldBodyPagesPixelIdentical": 10,
+      "oldNotesPreserved": 12,
+      "oldImagesPreserved": true,
+      "currentGeneratedSourceInNotes": true,
+      "renderedFinalPages": 12,
+      "packageFindings": 0,
+      "layoutFindings": 0,
+      "layoutWarnings": 0,
+      "newWarnings": 0,
+      "reimportPassed": true,
+      "privateEmailsOrGoogleLinks": 0
+    },
+    {
+      "id": "PKG-10",
+      "name": "user",
+      "source": "docs/deliverables/2026-10-23-traceability/user-2026-11-07-v31.pptx",
+      "sourceSha256": "8810f5b7f0c687c991e968af9c571b117459cb3608f92efe309c6c989efdb249",
+      "sourceMdPath": "docs/acceptance/21_USER_MANUAL.md",
+      "sourceMdSha256": "4f44b2859eb5b3465181055b7f7dfdef1ca96d009352ba713d3ae831b8cf3a68",
+      "sha256": "a66b5ff7fea5c2d1475d87218cf83bd779f58e164cce640e16c881cfd0b5ffeb",
+      "slides": 12,
+      "preservedBodySlides": 10,
+      "oldBodyPagesPixelIdentical": 10,
+      "oldNotesPreserved": 12,
+      "oldImagesPreserved": true,
+      "currentGeneratedSourceInNotes": true,
+      "renderedFinalPages": 12,
+      "packageFindings": 0,
+      "layoutFindings": 0,
+      "layoutWarnings": 0,
+      "newWarnings": 0,
+      "reimportPassed": true,
+      "privateEmailsOrGoogleLinks": 0
+    },
+    {
+      "id": "PKG-11",
+      "name": "matrix",
+      "source": "docs/deliverables/2026-10-23-traceability/matrix-2026-11-07-v31.pptx",
+      "sourceSha256": "320be7f686dfdd195a85281c6449d59f8b5b51f6b801acd37bff66893f4a5362",
+      "sourceMdPath": "docs/acceptance/07_TRACEABILITY_MATRIX.md",
+      "sourceMdSha256": "7775341d5626c8dd2c9076a77cf01c10609c36a155a0df1b332b0d70444d2040",
+      "sha256": "f97b8af56217d59eb7c9ca7c777d699a9e54b8e05ec5ea72a03ff8458dd2691c",
+      "slides": 10,
+      "preservedBodySlides": 8,
+      "oldBodyPagesPixelIdentical": 8,
+      "oldNotesPreserved": 10,
+      "oldImagesPreserved": true,
+      "currentGeneratedSourceInNotes": true,
+      "renderedFinalPages": 10,
+      "packageFindings": 0,
+      "layoutFindings": 0,
+      "layoutWarnings": 0,
+      "newWarnings": 0,
+      "reimportPassed": true,
+      "privateEmailsOrGoogleLinks": 0
+    },
+    {
+      "id": "PKG-12",
+      "name": "progress",
+      "source": "docs/deliverables/2026-10-23-traceability/progress-2026-11-07-v31.pptx",
+      "sourceSha256": "acf5e805b00d1a14c9d43144e058f6bb637130fccadb84a79b5789dc724fa261",
+      "sourceMdPath": "docs/acceptance/08_ACCEPTANCE_RESULTS.md",
+      "sourceMdSha256": "0c14b33e092d101c8463101d1731a93cf9e47402d5070db67639c9254a44e1e1",
+      "sha256": "9bd371ac08ca26d3ef3bd1079e904f8fa746291fa67ce11fe40272b8f93941fb",
+      "slides": 12,
+      "preservedBodySlides": 10,
+      "oldBodyPagesPixelIdentical": 10,
+      "oldNotesPreserved": 12,
+      "oldImagesPreserved": true,
+      "currentGeneratedSourceInNotes": true,
+      "renderedFinalPages": 12,
+      "packageFindings": 0,
+      "layoutFindings": 0,
+      "layoutWarnings": 0,
+      "newWarnings": 0,
+      "reimportPassed": true,
+      "privateEmailsOrGoogleLinks": 0
+    }
+  ],
+  "sharedDiagramBodyPixelChecks": [
+    {
+      "name": "business",
+      "diagram": 1,
+      "pixelEquivalentToReviewedTemplate": true
+    },
+    {
+      "name": "business",
+      "diagram": 2,
+      "pixelEquivalentToReviewedTemplate": true
+    },
+    {
+      "name": "requirements",
+      "diagram": 1,
+      "pixelEquivalentToReviewedTemplate": true
+    },
+    {
+      "name": "requirements",
+      "diagram": 2,
+      "pixelEquivalentToReviewedTemplate": true
+    },
+    {
+      "name": "design",
+      "diagram": 1,
+      "pixelEquivalentToReviewedTemplate": true
+    },
+    {
+      "name": "design",
+      "diagram": 2,
+      "pixelEquivalentToReviewedTemplate": true
+    },
+    {
+      "name": "test-spec",
+      "diagram": 1,
+      "pixelEquivalentToReviewedTemplate": true
+    },
+    {
+      "name": "test-spec",
+      "diagram": 2,
+      "pixelEquivalentToReviewedTemplate": true
+    },
+    {
+      "name": "tasks",
+      "diagram": 1,
+      "pixelEquivalentToReviewedTemplate": true
+    },
+    {
+      "name": "tasks",
+      "diagram": 2,
+      "pixelEquivalentToReviewedTemplate": true
+    },
+    {
+      "name": "implementation",
+      "diagram": 1,
+      "pixelEquivalentToReviewedTemplate": true
+    },
+    {
+      "name": "implementation",
+      "diagram": 2,
+      "pixelEquivalentToReviewedTemplate": true
+    },
+    {
+      "name": "test-code",
+      "diagram": 1,
+      "pixelEquivalentToReviewedTemplate": true
+    },
+    {
+      "name": "test-code",
+      "diagram": 2,
+      "pixelEquivalentToReviewedTemplate": true
+    },
+    {
+      "name": "acceptance",
+      "diagram": 1,
+      "pixelEquivalentToReviewedTemplate": true
+    },
+    {
+      "name": "acceptance",
+      "diagram": 2,
+      "pixelEquivalentToReviewedTemplate": true
+    },
+    {
+      "name": "operations",
+      "diagram": 1,
+      "pixelEquivalentToReviewedTemplate": true
+    },
+    {
+      "name": "operations",
+      "diagram": 2,
+      "pixelEquivalentToReviewedTemplate": true
+    },
+    {
+      "name": "user",
+      "diagram": 1,
+      "pixelEquivalentToReviewedTemplate": true
+    },
+    {
+      "name": "user",
+      "diagram": 2,
+      "pixelEquivalentToReviewedTemplate": true
+    },
+    {
+      "name": "matrix",
+      "diagram": 1,
+      "pixelEquivalentToReviewedTemplate": true
+    },
+    {
+      "name": "matrix",
+      "diagram": 2,
+      "pixelEquivalentToReviewedTemplate": true
+    },
+    {
+      "name": "progress",
+      "diagram": 1,
+      "pixelEquivalentToReviewedTemplate": true
+    },
+    {
+      "name": "progress",
+      "diagram": 2,
+      "pixelEquivalentToReviewedTemplate": true
+    }
+  ],
+  "nativePowerPointVerified": false,
+  "limits": [
+    "The diagrams describe a single restricted reviewer identity using two fixed URLs; no developer role switching during the customer steps.",
+    "Frozen observation status: 11/7：検証GAS v6と検証サイトへ配備、公開7応答が一致。指定検証台帳の限定設定と検証担当登録を保存・読戻し。固定日の片道・往復2予約は台帳と実Calendarの予約ID・日時・場所が一致し、サイト再読込で予定中2件・開始5枚を確認。初回本人ログインと顧客6件は未実施。既存管理者2名を維持。本番未開始。",
+    "Customer CUST01-06 remain 0/6 and all release HOLD; developer local tests do not imply live Google or customer acceptance.",
+    "Old v31 body and notes are historical; v32 was not adopted.",
+    "Existing business warning21 preserved, no new layout warning; native PowerPoint not verified; current manifest/README/binaries not modified"
+  ]
+}

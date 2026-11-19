@@ -1,0 +1,74 @@
+{
+  "reviewedAt": "2026-11-07T09:09:23.886960+00:00",
+  "reviewer": "independent checker and handoff documentation reviewer",
+  "scope": "Offline generator, trace checker/tests, r17 registry and generated documents, self-paced design, customer request draft and progress history. No remote operations, source/registry/baseline or delivered documents changed.",
+  "sourceReviewPass": true,
+  "independentTestPass": true,
+  "blockingCodeFindings": [],
+  "blockingDocFindings": [],
+  "testEvidence": "outputs/async-review-20261107/independent-docs/checker-tests.json",
+  "independentCount": 34,
+  "sourceHashes": {
+    "scripts/traceability.py": "74d1e2d9b0cdbdf3479242da4d085777e6de30c006013d9bf06affc4b8eb4a7f",
+    "scripts/test_traceability.py": "1bec894e08844f98373e8c61332891d4c288d384853234d5ad537ed92afd2178"
+  },
+  "reviewedFileHashes": {
+    "scripts/traceability.py": "74d1e2d9b0cdbdf3479242da4d085777e6de30c006013d9bf06affc4b8eb4a7f",
+    "scripts/test_traceability.py": "1bec894e08844f98373e8c61332891d4c288d384853234d5ad537ed92afd2178",
+    "docs/traceability/registry.json": "cf72f82b9b67d2be18525c92f74f446ba64f504f4dc707dbfe5496b71c05396b",
+    "docs/acceptance/CUSTOMER_ACCEPTANCE_MINIMUM_20261107.md": "eca7c39bd7d9ae1d033e3bf44120c1de4faabbcc7985addc2d3e33c4abf08b42",
+    "docs/acceptance/SELF_PACED_CUSTOMER_REVIEW_20261107.md": "7d9d6d61b67dff47f7aa62b9325e9bbaff01af0b9cdc93d614809d616b46e040",
+    "docs/progress/2026-11-07-kobayashi-customer-request.md": "bba66a37554a60dbcd0fd38118231ba01c4d8aef9aba84b302b52aec88fcce86",
+    "docs/progress/2026-11-07-customer-readiness.md": "6a2585b21bb72bf461f0a26f478a13ad26ec7fa59807dd8c5fe42a18ec310998",
+    "outputs/async-review-20261107/independent-docs/checker-tests.json": "b1abb686a93ef1a0f096db113aa9f671232a5271a007e8c1ed02a97832ac49db"
+  },
+  "structuralChecks": {
+    "generatedFiles": 33,
+    "generatedByteDrift": [],
+    "requirements": 39,
+    "flows": 11,
+    "interimCoverageGap": [
+      "REQ-39"
+    ],
+    "sixCustomerResults": "NOT_RUN",
+    "customerCount": "0/6",
+    "originalAT": 30,
+    "originalATReleaseGate": false,
+    "production": "HOLD",
+    "verificationDeploymentObserved": 5,
+    "reviewerAccount": "MIGRATION_PENDING",
+    "reviewerGate": "NOT_CONFIGURED",
+    "fixedDateSeeds": "PENDING"
+  },
+  "semanticChecks": [
+    "Same Google UID uses assigned test fixture in two fixed portals; ordinary roles remain single-role. Exact bound test ledger is required.",
+    "CUST-02/03 relative counts 2 to 3 to 2 with booking ID collected on Calendar before cancellation. Fixed-date A03 and marked pickup locations distinguish the two completed fixtures. Both admin and family observe 12 after 5 to 4 to 2 and the one-time 10/0 top-up. Both logged-out views are checked.",
+    "Source guide distinguishes evidence, resume and communication errors. Self-paced handoff conditional on deployment, configuration, fixture and observed booking-response readiness.",
+    "History labels original developer role switching as superseded. No customer PASS from developer exercise."
+  ],
+  "findings": [
+    {
+      "id": "DOCREV-01",
+      "status": "RESOLVED",
+      "original": "Malformed preparation field caused AttributeError rather than a structured diagnostic.",
+      "resolution": "Guarded non-mappings; independently injected null, list, int and string after change. All four yielded CUSTOMER_EXECUTION_CONFLICT. Final 34-case suite passed."
+    },
+    {
+      "id": "DOCREV-02",
+      "status": "RESOLVED",
+      "original": "Send-ready letter omitted recording Calendar reservation ID before cancel and admin balance 12 before logout.",
+      "resolution": "Independently reread amended steps 2 and 5; both observations are explicit."
+    },
+    {
+      "id": "DOCREV-03",
+      "status": "RESOLVED",
+      "original": "Resume instructions at balance 5 did not distinguish C not created, already scheduled or already cancelled.",
+      "resolution": "ASYNC-04 now distinguishes visible existing C/cancelled history/confirmed absence/unknown, and instructs stopping if uncertain."
+    }
+  ],
+  "limits": [
+    "Not a Google environment, actual customer, deployment smoke, front/back product-code review, or release signoff.",
+    "REQ-39 mapping remains a declared temporary gap. Register independent product and new checker evidence and recheck source baseline, index, strict coverage and presentation receipts before delivery.",
+    "Reviewed registry/document hashes refer to the r17 draft before live reviewer migration and fixture provisioning."
+  ]
+}

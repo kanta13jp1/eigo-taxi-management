@@ -1,29 +1,33 @@
 import React from 'react';
-import { Car, UserCheck, ShieldCheck, Settings } from 'lucide-react';
+import { Car, ShieldCheck, Settings, QrCode } from 'lucide-react';
 
 interface NavbarProps {
-  currentTab: 'teacher' | 'parent' | 'settings';
-  setCurrentTab: (tab: 'teacher' | 'parent' | 'settings') => void;
+  currentTab: 'teacher' | 'invitations' | 'accounts' | 'settings';
+  setCurrentTab: (tab: 'teacher' | 'invitations' | 'accounts' | 'settings') => void;
   selectedStudentName?: string;
+  isAdmin: boolean;
+  reviewOnly?: boolean;
 }
 
-export const Navbar: React.FC<NavbarProps> = ({ currentTab, setCurrentTab }) => {
+export const Navbar: React.FC<NavbarProps> = ({ currentTab, setCurrentTab, isAdmin, reviewOnly = false }) => {
   return (
     <header className="bg-white border-b border-slate-200 sticky top-0 z-30 shadow-sm">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 py-3 flex flex-col sm:flex-row items-center justify-between gap-3">
-        <div className="flex items-center gap-2 cursor-pointer" onClick={() => setCurrentTab('teacher')}>
+        <div className="flex items-center gap-2">
           <div className="bg-emerald-600 text-white p-2 rounded-xl shadow-sm flex items-center justify-center">
             <Car className="w-5 h-5" />
           </div>
           <div>
             <h1 className="text-lg font-bold text-slate-800 leading-tight">Mauro & Brenda Taxi Link</h1>
-            <p className="text-xs text-slate-500 font-medium">英語教室 送迎チケット管理システム</p>
+            <p className="text-xs text-slate-500 font-medium">{isAdmin ? '管理者専用ページ' : 'ご家庭専用ページ'}</p>
           </div>
         </div>
 
         {/* タブ切り替え */}
-        <div className="flex bg-slate-100 p-1 rounded-xl text-sm font-medium w-full sm:w-auto justify-center">
-          <button
+        {isAdmin && <nav aria-label="管理者メニュー" className="flex flex-wrap bg-slate-100 p-1 rounded-xl text-sm font-medium w-full sm:w-auto justify-center">
+          {isAdmin && <button
+            type="button"
+            aria-current={currentTab === 'teacher' ? 'page' : undefined}
             onClick={() => setCurrentTab('teacher')}
             className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg transition-all ${
               currentTab === 'teacher'
@@ -33,19 +37,24 @@ export const Navbar: React.FC<NavbarProps> = ({ currentTab, setCurrentTab }) => 
           >
             <ShieldCheck className="w-4 h-4" />
             管理者用 (Mauro・Brenda)
-          </button>
-          <button
-            onClick={() => setCurrentTab('parent')}
+          </button>}
+          {!reviewOnly && <button
+            type="button"
+            aria-current={currentTab === 'invitations' ? 'page' : undefined}
+            onClick={() => setCurrentTab('invitations')}
             className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg transition-all ${
-              currentTab === 'parent'
+              currentTab === 'invitations'
                 ? 'bg-white text-emerald-700 font-bold shadow-xs'
                 : 'text-slate-600 hover:text-slate-900'
             }`}
           >
-            <UserCheck className="w-4 h-4" />
-            送迎利用者用 (生徒・保護者)
-          </button>
-          <button
+            <QrCode className="w-4 h-4" />
+            個別URL・QR
+          </button>}
+          {!reviewOnly && <button type="button" aria-current={currentTab === 'accounts' ? 'page' : undefined} onClick={() => setCurrentTab('accounts')} className={`rounded-lg px-3 py-1.5 ${currentTab === 'accounts' ? 'bg-white text-emerald-700' : 'text-slate-600'}`}>アカウント管理</button>}
+          {!reviewOnly && <button
+            type="button"
+            aria-current={currentTab === 'settings' ? 'page' : undefined}
             onClick={() => setCurrentTab('settings')}
             className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg transition-all ${
               currentTab === 'settings'
@@ -55,8 +64,8 @@ export const Navbar: React.FC<NavbarProps> = ({ currentTab, setCurrentTab }) => 
           >
             <Settings className="w-4 h-4" />
             Google連携
-          </button>
-        </div>
+          </button>}
+        </nav>}
       </div>
     </header>
   );

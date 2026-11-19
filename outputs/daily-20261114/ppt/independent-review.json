@@ -1,0 +1,24 @@
+{
+  "reviewer": "Independent implementation worker reviewing lead-authored deck",
+  "finalSha256": "d6761ef35c8dc0b8a205fec56080e5bdf7b483ba76190c694e4a9389b2597535",
+  "renderedSlides": [
+    1,
+    2,
+    16
+  ],
+  "renderHashes": {
+    "1": "d36c92717ed5f67e6ebd11b0c3863064bff4a4fe51519b93063e012007572bbe",
+    "2": "7cf6e898ebfd1a44006307f73985bc7ec276d09e0eac7e4e92e6137ee1ce7336",
+    "16": "1ca31fda151c8fe7202e8b434705c011e3ce04484a5a298155479e5565dd13dc"
+  },
+  "publicConfirmationImageSha256": "4459e50a93adec9e69db50c2a5937f9e930a86500fc913402f865b74528c3463",
+  "checks": [
+    "Pages 1 and 2 display 23 implementation fixes, 22 distinct AT IDs, daily counts, attribution and 0/6 customer confirmations.",
+    "Page 16 clearly shows parent cancellation UI and correct labels, location and note, safe return and unchanged balance.",
+    "No clipped or overlapping text observed on these three rendered slides.",
+    "Embedded media contains the exact screenshot from the public anonymous demo.",
+    "Demo, live Google, physical device, customer, and production scopes remain distinct."
+  ],
+  "nativePowerPointVerified": false,
+  "passReview": true
+}

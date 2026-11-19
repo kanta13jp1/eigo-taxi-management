@@ -1,0 +1,10 @@
+import React from 'react';import {createRoot} from 'react-dom/client';
+import '../../../src/index.css';
+import {ParentPortal} from '../../../src/components/ParentPortal';
+import {TeacherDashboard} from '../../../src/components/TeacherDashboard';
+import {AddRideModal} from '../../../src/components/AddRideModal';
+const p=new URLSearchParams(location.search),view=p.get('view')||'parent';const now=new Date();now.setMinutes(now.getMinutes()-now.getTimezoneOffset());const today=now.toISOString().slice(0,10);
+const student={id:'A',name:'Fixture A',parentName:'Parent A',address:'Test place Tokyo',phone:'000-000',ticketBalance:Number(p.get('balance')??7)};
+const ride={id:'R1',studentId:'A',studentName:'Fixture A',rideDate:today,rideTime:'16:30',rideType:'pickup',pickupLocation:'Test place Tokyo',status:'scheduled',reservedBy:'parent'};
+const props={students:[student],rides:[ride],onCancelRide:async(id)=>{document.body.dataset.cancelled=id},onOpenAddRide:()=>{document.body.dataset.booking="A"}};
+createRoot(document.getElementById('root')!).render(<main className="p-4 max-w-5xl mx-auto">{view==='parent'?<ParentPortal {...props}/>:view==='admin'?<TeacherDashboard {...props} onCompleteRide={async()=>{}} onOpenAddTicket={()=>{}} onOpenAddStudent={()=>{}}/>:<AddRideModal isOpen onClose={()=>{}} students={[student]} isTeacher initialStudentId="A" onSubmit={async d=>{document.body.dataset.submitted=JSON.stringify(d)}}/>}</main>);

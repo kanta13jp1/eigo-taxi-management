@@ -1,0 +1,52 @@
+{
+  "id": "2026-10-20-step-02",
+  "date": "2026-10-20",
+  "timezone": "Asia/Tokyo",
+  "audience": "小林さん",
+  "status": "draft-not-sent",
+  "acceptanceId": "AT-23",
+  "result": "BLOCKED",
+  "report": "docs/progress/2026-10-20-step-02.md",
+  "evidence": [
+    "docs/acceptance/at23-2026-10-20/HANDOFF.md",
+    "docs/acceptance/at23-2026-10-20/saved-source-verification.json"
+  ],
+  "evidenceLimit": "OAuth画面画像はCDPタイムアウトで未保存。要求内容はAX確認。元台帳・旧コード・一時認証URLは送信用添付に含めない。",
+  "attachments": [
+    {
+      "path": "docs/deliverables/2026-10-20-manuals/operation-manual-2026-10-20-v4.pptx",
+      "changed": false,
+      "sha256": "d239f03ce9f23588975b4aa2902b1ce152d40775458fd0bc4a47de15bae20b6e"
+    },
+    {
+      "path": "docs/deliverables/2026-10-20-manuals/user-manual-2026-10-20-v4.pptx",
+      "changed": false,
+      "sha256": "e9b0ec1889a7a188c68ed486581c044f56b573b8680e19a61695f8b03e2da250"
+    },
+    {
+      "path": "docs/deliverables/2026-10-20-manuals/remaining-tasks-2026-10-20-v5.pptx",
+      "changed": true,
+      "sha256": "a1b23791fdc80261f3c5c5e0dc511f35bf46bd1c3497f3b3039a74bf5f210e27"
+    },
+    {
+      "path": "docs/deliverables/2026-10-20-manuals/progress-report-step-02-2026-10-20-v5.pptx",
+      "changed": true,
+      "sha256": "aa331eaca3061e8354da762f84c37c28b50366359c4edceeb3ba84e80073946f"
+    }
+  ],
+  "changes": [
+    "接続復旧と元資源保全を記録",
+    "非公開検証コピーと現行ソース全文一致を記録",
+    "待ち条件をOAuth承認へ更新、全8件未合格を維持",
+    "進捗4枚・残作業13枚のみv5、操作マニュアル2冊はv4継続"
+  ],
+  "next": "Sheets権限の具体的承認後に初期化2回と既存値保持を実測。個別キー・Web配備・生徒1行保存へ進む。",
+  "requests": [
+    "会社アカウントへの全Sheets操作権限の部分承認について確認。Calendar権限は付与しない。",
+    "教室側で本番運用Googleアカウントと所有者・管理者・共有方法を準備"
+  ],
+  "owner": null,
+  "dueDate": null,
+  "sentAt": null,
+  "validation": "2 PPTX passed package/layout/font/slide-count/import checks. 17 slides rendered and visually inspected; updated slide compared with v4. PowerPoint application not opened."
+}

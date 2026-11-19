@@ -1,0 +1,84 @@
+{
+  "parent": "traceability-2026-10-23-r2",
+  "purpose": "Private company document preservation; no publication authorized",
+  "rights": "MightyLINK logo/photo reference; public reuse requires review",
+  "liveAdminResult": "WAITING_USER; never PASS",
+  "files": [
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/business-2026-10-23-v3.pptx",
+      "sha256": "b2694a8f41195d78d44844c9d0941ac1d502ca5cd46eea06c641024f1ca03ab3"
+    },
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/requirements-2026-10-23-v3.pptx",
+      "sha256": "dc0698216915730eb57c426f0daaab6ad46a7c728c48381c26c0c42447dec555"
+    },
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/design-2026-10-23-v3.pptx",
+      "sha256": "de45c7ec1364ec95c9fec95d39367f01e45bbb671585c8a8638c30b2cd9a6357"
+    },
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/test-spec-2026-10-23-v3.pptx",
+      "sha256": "361fcc424849e44f6e508eb5e1bd1df87d768110227fa66dbc8b285b5167989a"
+    },
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/tasks-2026-10-23-v3.pptx",
+      "sha256": "7815226d13bb41a272f11434136a96216484eec66ede227afe37cb10ed305dcf"
+    },
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/implementation-2026-10-23-v3.pptx",
+      "sha256": "64b053c91baea18b2ed63fa553bf61eec4912cf925a4449be2dbe5e942774c2f"
+    },
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/test-code-2026-10-23-v3.pptx",
+      "sha256": "88dc9baa73ec68ccb36f766291a1aadfe2c1b8cc2e255f0cef6a3e1fa8bc0b5f"
+    },
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/acceptance-2026-10-23-v3.pptx",
+      "sha256": "1e361fa4b0c762adf75c41291368cafbb1545b5a3fdb99e9f4e8bced169def2d"
+    },
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/operations-2026-10-23-v3.pptx",
+      "sha256": "6134eeb04975db1a45813cc8dfc83fc3d3a10b1b37915c13137f7143280db0c7"
+    },
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/user-2026-10-23-v3.pptx",
+      "sha256": "a8cd57a1056c5f425a781cc3a517b5e86b038a118f9c47b7fb2f7664d154d126"
+    },
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/matrix-2026-10-23-v3.pptx",
+      "sha256": "ff4420730b6842d0939d029b1842e0ec68a9f19f1ae94bfebc509548e0b822cd"
+    },
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/progress-2026-10-23-v3.pptx",
+      "sha256": "817c9a62f5f4061343c867e5808e6e5f0065a3d99ef4a09decc6993b4883049f"
+    },
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/README.md",
+      "sha256": "07d0a213d6e371a51fdd94816c38c582efc52a63b7312dda97f71b606f91f136"
+    },
+    {
+      "source": "docs/traceability/registry.json",
+      "sha256": "ed01c8e8db18bbe91e938cd44a758b2e9a39667bc418902b4e9a59817d6ac71a"
+    },
+    {
+      "source": "docs/traceability/matrix.csv",
+      "sha256": "c9066deb638efa33be6d866194c5c703044ba79884b569e6b772cfcf4aec85f1"
+    },
+    {
+      "source": "docs/acceptance/restored-admins-2026-10-23/README.md",
+      "sha256": "0bc5f16e656e43589cec9640320cf982297ba7972969503c5e7a671f8827e57d"
+    },
+    {
+      "source": "docs/acceptance/restored-admins-2026-10-23/results.json",
+      "sha256": "a895e5c1a1071cc417341caabed114d2b5d9d099c8e54279c515a79d8fdc2779"
+    },
+    {
+      "source": ".manual-build-20261020/traceability-decks-r3.mjs",
+      "sha256": "1097a7752817e7259117cc8f012862da82d12097d842502c2d3176419c9ded0e"
+    },
+    {
+      "source": ".manual-build-20261020/finalize-traceability-r3.mjs",
+      "sha256": "d9fd62906dc8727e72d664bfbc6dfdbd76fe7884d1992831cf04874e8b368585"
+    }
+  ]
+}

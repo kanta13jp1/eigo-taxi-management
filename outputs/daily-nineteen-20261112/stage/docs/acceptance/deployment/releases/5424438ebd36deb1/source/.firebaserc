@@ -1,0 +1,8 @@
+{
+  "projects": { "mighty-test": "eigo-taxi-app" },
+  "targets": {
+    "eigo-taxi-app": {
+      "hosting": { "mighty-test": ["eigo-taxi-test"] }
+    }
+  }
+}

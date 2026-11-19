@@ -1,0 +1,932 @@
+[
+  {
+    "id": "AT-01",
+    "bf": "BF-01",
+    "uc": "UC-01",
+    "req": "REQ-01",
+    "fs": "FS-01",
+    "task": "TASK-01",
+    "code": "CODE-01",
+    "test": "TEST-01",
+    "title": "Google連携先の設定保存",
+    "pre": "テスト用URLのみ使用",
+    "steps": "Google連携画面でURLを入力し保存・再読込",
+    "expected": "保存したURLが再読込後も一致",
+    "file": "src/services/api.ts",
+    "symbol": "setGasApiUrl",
+    "kind": "auto",
+    "origin": "チャット要望から具体化",
+    "relatedCode": [],
+    "line": 234,
+    "link": "[src/services/api.ts:234](../../src/services/api.ts#L234)",
+    "sha256": "e9e83d5f66c798b123dd83d0085b16dd29c83f9f0def712a627e9288e57f0d4c",
+    "status": "PASS",
+    "hostedTests": [
+      {
+        "id": "PUB-20",
+        "status": "PASS",
+        "runId": "2026-10-19T17-00-52-047Z-264bbd"
+      }
+    ]
+  },
+  {
+    "id": "AT-02",
+    "bf": "BF-02",
+    "uc": "UC-02",
+    "req": "REQ-02",
+    "fs": "FS-02",
+    "task": "TASK-02",
+    "code": "CODE-02",
+    "test": "TEST-02",
+    "title": "生徒登録",
+    "pre": "ダミー台帳",
+    "steps": "生徒登録画面で氏名・保護者・住所・連絡先・初期10回を登録",
+    "expected": "生徒が1件増え全入力値と初期残高10が保存される",
+    "file": "src/components/AddStudentModal.tsx",
+    "symbol": "handleSubmit",
+    "kind": "auto",
+    "origin": "チャット要望から具体化",
+    "relatedCode": [],
+    "line": 27,
+    "link": "[src/components/AddStudentModal.tsx:27](../../src/components/AddStudentModal.tsx#L27)",
+    "sha256": "2c87f49df6388b808a5ce11776166bec79f46400aa615b3f59837cb68cbabf5e",
+    "status": "PASS",
+    "hostedTests": [
+      {
+        "id": "PUB-05",
+        "status": "PASS",
+        "runId": "2026-10-19T17-00-52-047Z-264bbd"
+      },
+      {
+        "id": "PUB-16",
+        "status": "PASS",
+        "runId": "2026-10-19T17-00-52-047Z-264bbd"
+      }
+    ]
+  },
+  {
+    "id": "AT-03",
+    "bf": "BF-03",
+    "uc": "UC-03",
+    "req": "REQ-03",
+    "fs": "FS-03",
+    "task": "TASK-03",
+    "code": "CODE-03",
+    "test": "TEST-03",
+    "title": "保護者の残数確認",
+    "pre": "初期生徒STU-001が7回",
+    "steps": "利用者画面で生徒を選択",
+    "expected": "氏名と7回分・片道1枚の説明が表示される",
+    "file": "src/components/ParentPortal.tsx",
+    "symbol": "ParentPortal",
+    "kind": "auto",
+    "origin": "チャット要望から具体化",
+    "relatedCode": [],
+    "line": 15,
+    "link": "[src/components/ParentPortal.tsx:15](../../src/components/ParentPortal.tsx#L15)",
+    "sha256": "09c7dedc47a5c06122b9bdeab08ac6c1349ef0011eb9350ff374e19fd52266b7",
+    "status": "PASS",
+    "hostedTests": [
+      {
+        "id": "PUB-03",
+        "status": "PASS",
+        "runId": "2026-10-19T17-00-52-047Z-264bbd"
+      }
+    ]
+  },
+  {
+    "id": "AT-04",
+    "bf": "BF-03",
+    "uc": "UC-04",
+    "req": "REQ-04",
+    "fs": "FS-04",
+    "task": "TASK-04",
+    "code": "CODE-04",
+    "test": "TEST-04",
+    "title": "残少・ゼロ案内",
+    "pre": "残高2・1・0の各生徒",
+    "steps": "各残高で利用者画面を開く",
+    "expected": "各値でMauro・Brendaへの連絡案内が表示される",
+    "file": "src/components/ParentPortal.tsx",
+    "symbol": "ParentPortal",
+    "kind": "auto",
+    "origin": "チャット要望から具体化",
+    "relatedCode": [],
+    "line": 15,
+    "link": "[src/components/ParentPortal.tsx:15](../../src/components/ParentPortal.tsx#L15)",
+    "sha256": "09c7dedc47a5c06122b9bdeab08ac6c1349ef0011eb9350ff374e19fd52266b7",
+    "status": "PASS",
+    "hostedTests": [
+      {
+        "id": "PUB-21",
+        "status": "PASS",
+        "runId": "2026-10-19T17-00-52-047Z-264bbd"
+      }
+    ]
+  },
+  {
+    "id": "AT-05",
+    "bf": "BF-03",
+    "uc": "UC-05",
+    "req": "REQ-05",
+    "fs": "FS-05",
+    "task": "TASK-05",
+    "code": "CODE-05",
+    "test": "TEST-05",
+    "title": "チケット追加",
+    "pre": "初期残高7",
+    "steps": "10回を追加し台帳・購入履歴を確認",
+    "expected": "残高17、履歴1件増、枚数10・金額・備考一致",
+    "file": "src/services/api.ts",
+    "symbol": "addTickets",
+    "kind": "auto",
+    "origin": "チャット要望から具体化",
+    "relatedCode": [],
+    "line": 300,
+    "link": "[src/services/api.ts:300](../../src/services/api.ts#L300)",
+    "sha256": "e9e83d5f66c798b123dd83d0085b16dd29c83f9f0def712a627e9288e57f0d4c",
+    "status": "PASS",
+    "hostedTests": [
+      {
+        "id": "PUB-06",
+        "status": "PASS",
+        "runId": "2026-10-19T17-00-52-047Z-264bbd"
+      }
+    ]
+  },
+  {
+    "id": "AT-06",
+    "bf": "BF-04",
+    "uc": "UC-06",
+    "req": "REQ-06",
+    "fs": "FS-06",
+    "task": "TASK-06",
+    "code": "CODE-06",
+    "test": "TEST-06",
+    "title": "保護者のお迎え予約",
+    "pre": "残高7・明示選択したデモ",
+    "steps": "利用者画面から2026-10-20 16:30・お迎え・登録済み住所を使って予約",
+    "expected": "新規予約1件、scheduled、parent、残高7のまま",
+    "file": "src/components/AddRideModal.tsx",
+    "symbol": "handleSubmit",
+    "kind": "auto",
+    "origin": "チャット要望から具体化",
+    "relatedCode": [],
+    "line": 51,
+    "link": "[src/components/AddRideModal.tsx:51](../../src/components/AddRideModal.tsx#L51)",
+    "sha256": "59666dfc6eb78b08ab075fe28cba8909425066f21c7df18b1ff63ccb21a2efa2",
+    "status": "PASS",
+    "hostedTests": [
+      {
+        "id": "PUB-07",
+        "status": "PASS",
+        "runId": "2026-10-19T17-00-52-047Z-264bbd"
+      },
+      {
+        "id": "PUB-16",
+        "status": "PASS",
+        "runId": "2026-10-19T17-00-52-047Z-264bbd"
+      }
+    ]
+  },
+  {
+    "id": "AT-07",
+    "bf": "BF-04",
+    "uc": "UC-07",
+    "req": "REQ-07",
+    "fs": "FS-07",
+    "task": "TASK-07",
+    "code": "CODE-07",
+    "test": "TEST-07",
+    "title": "送り予約",
+    "pre": "残高7・未接続デモ",
+    "steps": "サービス経由で送り17:30を登録し画面を再表示",
+    "expected": "dropoffの予約が1件増え、残高7のまま",
+    "file": "src/services/api.ts",
+    "symbol": "createReservation",
+    "kind": "auto",
+    "origin": "チャット要望から具体化",
+    "relatedCode": [],
+    "line": 264,
+    "link": "[src/services/api.ts:264](../../src/services/api.ts#L264)",
+    "sha256": "e9e83d5f66c798b123dd83d0085b16dd29c83f9f0def712a627e9288e57f0d4c",
+    "status": "PASS",
+    "hostedTests": [
+      {
+        "id": "PUB-08",
+        "status": "PASS",
+        "runId": "2026-10-19T17-00-52-047Z-264bbd"
+      }
+    ]
+  },
+  {
+    "id": "AT-08",
+    "bf": "BF-04",
+    "uc": "UC-08",
+    "req": "REQ-08",
+    "fs": "FS-08",
+    "task": "TASK-08",
+    "code": "CODE-08",
+    "test": "TEST-08",
+    "title": "往復予約",
+    "pre": "残高7・未接続デモ",
+    "steps": "サービス経由で往復を登録し画面を再表示",
+    "expected": "roundtripの予約が1件増え、予約時残高7のまま",
+    "file": "src/services/api.ts",
+    "symbol": "createReservation",
+    "kind": "auto",
+    "origin": "チャット要望から具体化",
+    "relatedCode": [],
+    "line": 264,
+    "link": "[src/services/api.ts:264](../../src/services/api.ts#L264)",
+    "sha256": "e9e83d5f66c798b123dd83d0085b16dd29c83f9f0def712a627e9288e57f0d4c",
+    "status": "PASS",
+    "hostedTests": [
+      {
+        "id": "PUB-09",
+        "status": "PASS",
+        "runId": "2026-10-19T17-00-52-047Z-264bbd"
+      }
+    ]
+  },
+  {
+    "id": "AT-09",
+    "bf": "BF-04",
+    "uc": "UC-09",
+    "req": "REQ-09",
+    "fs": "FS-09",
+    "task": "TASK-09",
+    "code": "CODE-09",
+    "test": "TEST-09",
+    "title": "管理者の代理予約",
+    "pre": "初期台帳",
+    "steps": "管理者画面から日時・生徒・場所を指定して予約",
+    "expected": "新規予約1件、reservedBy=teacher",
+    "file": "src/components/AddRideModal.tsx",
+    "symbol": "handleSubmit",
+    "kind": "auto",
+    "origin": "チャット要望から具体化",
+    "relatedCode": [],
+    "line": 51,
+    "link": "[src/components/AddRideModal.tsx:51](../../src/components/AddRideModal.tsx#L51)",
+    "sha256": "59666dfc6eb78b08ab075fe28cba8909425066f21c7df18b1ff63ccb21a2efa2",
+    "status": "PASS",
+    "hostedTests": [
+      {
+        "id": "PUB-10",
+        "status": "PASS",
+        "runId": "2026-10-19T17-00-52-047Z-264bbd"
+      }
+    ]
+  },
+  {
+    "id": "AT-10",
+    "bf": "BF-05",
+    "uc": "UC-10",
+    "req": "REQ-10",
+    "fs": "FS-10",
+    "task": "TASK-10",
+    "code": "CODE-10",
+    "test": "TEST-10",
+    "title": "保護者の予約取消",
+    "pre": "保護者予約1件・残高7",
+    "steps": "利用者画面で対象予約をキャンセルし確認を承諾",
+    "expected": "対象IDがcancelled、残高7のまま",
+    "file": "src/services/api.ts",
+    "symbol": "cancelReservation",
+    "kind": "auto",
+    "origin": "チャット要望から具体化",
+    "relatedCode": [],
+    "line": 275,
+    "link": "[src/services/api.ts:275](../../src/services/api.ts#L275)",
+    "sha256": "e9e83d5f66c798b123dd83d0085b16dd29c83f9f0def712a627e9288e57f0d4c",
+    "status": "PASS",
+    "hostedTests": [
+      {
+        "id": "PUB-11",
+        "status": "PASS",
+        "runId": "2026-10-19T17-00-52-047Z-264bbd"
+      }
+    ]
+  },
+  {
+    "id": "AT-11",
+    "bf": "BF-05",
+    "uc": "UC-11",
+    "req": "REQ-11",
+    "fs": "FS-11",
+    "task": "TASK-11",
+    "code": "CODE-11",
+    "test": "TEST-11",
+    "title": "管理者の予約取消",
+    "pre": "予約1件",
+    "steps": "サービス経由で取消後に管理画面を再表示",
+    "expected": "対象IDがcancelled、残数不変",
+    "file": "src/services/api.ts",
+    "symbol": "cancelReservation",
+    "kind": "auto",
+    "origin": "チャット要望から具体化",
+    "relatedCode": [],
+    "line": 275,
+    "link": "[src/services/api.ts:275](../../src/services/api.ts#L275)",
+    "sha256": "e9e83d5f66c798b123dd83d0085b16dd29c83f9f0def712a627e9288e57f0d4c",
+    "status": "PASS",
+    "hostedTests": [
+      {
+        "id": "PUB-12",
+        "status": "PASS",
+        "runId": "2026-10-19T17-00-52-047Z-264bbd"
+      }
+    ]
+  },
+  {
+    "id": "AT-12",
+    "bf": "BF-06",
+    "uc": "UC-12",
+    "req": "REQ-12",
+    "fs": "FS-12",
+    "task": "TASK-12",
+    "code": "CODE-12",
+    "test": "TEST-12",
+    "title": "当日一覧・地図リンク",
+    "pre": "初期当日予約",
+    "steps": "管理者画面を開き地図リンクを調べる",
+    "expected": "当日予約とGoogle Maps検索URLが表示される（地図先の動作は対象外）",
+    "file": "src/components/TeacherDashboard.tsx",
+    "symbol": "TeacherDashboard",
+    "kind": "auto",
+    "origin": "チャット要望から具体化",
+    "relatedCode": [],
+    "line": 21,
+    "link": "[src/components/TeacherDashboard.tsx:21](../../src/components/TeacherDashboard.tsx#L21)",
+    "sha256": "083624341d2ff0e355619cf33a126a2519af2e194f47545222c1b13166198400",
+    "status": "PASS",
+    "hostedTests": [
+      {
+        "id": "PUB-13",
+        "status": "PASS",
+        "runId": "2026-10-19T17-00-52-047Z-264bbd"
+      }
+    ]
+  },
+  {
+    "id": "AT-13",
+    "bf": "BF-06",
+    "uc": "UC-13",
+    "req": "REQ-13",
+    "fs": "FS-13",
+    "task": "TASK-13",
+    "code": "CODE-13",
+    "test": "TEST-13",
+    "title": "片道完了",
+    "pre": "残高7・お迎え予約",
+    "steps": "サービス経由で完了後に画面を再表示",
+    "expected": "completed・完了日時あり・残高6",
+    "file": "src/services/api.ts",
+    "symbol": "completeRide",
+    "kind": "auto",
+    "origin": "チャット要望から具体化",
+    "relatedCode": [],
+    "line": 283,
+    "link": "[src/services/api.ts:283](../../src/services/api.ts#L283)",
+    "sha256": "e9e83d5f66c798b123dd83d0085b16dd29c83f9f0def712a627e9288e57f0d4c",
+    "status": "PASS",
+    "hostedTests": [
+      {
+        "id": "PUB-14",
+        "status": "PASS",
+        "runId": "2026-10-19T17-00-52-047Z-264bbd"
+      }
+    ]
+  },
+  {
+    "id": "AT-14",
+    "bf": "BF-06",
+    "uc": "UC-14",
+    "req": "REQ-14",
+    "fs": "FS-14",
+    "task": "TASK-14",
+    "code": "CODE-14",
+    "test": "TEST-14",
+    "title": "往復完了",
+    "pre": "残高7・往復予約",
+    "steps": "サービス経由で往復完了後に画面を再表示",
+    "expected": "completed・残高5・消費2",
+    "file": "src/services/api.ts",
+    "symbol": "completeRide",
+    "kind": "auto",
+    "origin": "チャット要望から具体化",
+    "relatedCode": [],
+    "line": 283,
+    "link": "[src/services/api.ts:283](../../src/services/api.ts#L283)",
+    "sha256": "e9e83d5f66c798b123dd83d0085b16dd29c83f9f0def712a627e9288e57f0d4c",
+    "status": "PASS",
+    "hostedTests": [
+      {
+        "id": "PUB-15",
+        "status": "PASS",
+        "runId": "2026-10-19T17-00-52-047Z-264bbd"
+      }
+    ]
+  },
+  {
+    "id": "AT-15",
+    "bf": "BF-06",
+    "uc": "UC-15",
+    "req": "REQ-15",
+    "fs": "FS-15",
+    "task": "TASK-15",
+    "code": "CODE-15",
+    "test": "TEST-15",
+    "title": "完了の二重処理防止",
+    "pre": "管理者デモ・残高7・片道予約",
+    "steps": "同じ予約IDに完了を2回要求",
+    "expected": "最終残高6、completedを保持、再処理の消費枚数0",
+    "file": "src/services/api.ts",
+    "symbol": "completeRide",
+    "kind": "auto",
+    "origin": "ユーザーによる不合格6件の修正依頼（実装対象確定）",
+    "relatedCode": [
+      "src/services/api.ts",
+      "gas/Code.gs"
+    ],
+    "line": 283,
+    "link": "[src/services/api.ts:283](../../src/services/api.ts#L283)",
+    "sha256": "e9e83d5f66c798b123dd83d0085b16dd29c83f9f0def712a627e9288e57f0d4c",
+    "status": "PASS",
+    "hostedTests": [
+      {
+        "id": "PUB-14",
+        "status": "PASS",
+        "runId": "2026-10-19T17-00-52-047Z-264bbd"
+      },
+      {
+        "id": "PUB-15",
+        "status": "PASS",
+        "runId": "2026-10-19T17-00-52-047Z-264bbd"
+      }
+    ]
+  },
+  {
+    "id": "AT-16",
+    "bf": "BF-06",
+    "uc": "UC-16",
+    "req": "REQ-16",
+    "fs": "FS-16",
+    "task": "TASK-16",
+    "code": "CODE-16",
+    "test": "TEST-16",
+    "title": "取消済みの完了拒否",
+    "pre": "残高7・取消済み予約",
+    "steps": "取消済みIDを完了要求",
+    "expected": "cancelledを保持し残高7のまま",
+    "file": "src/services/api.ts",
+    "symbol": "completeRide",
+    "kind": "auto",
+    "origin": "ユーザーによる不合格6件の修正依頼（実装対象確定）",
+    "relatedCode": [
+      "src/services/api.ts",
+      "gas/Code.gs"
+    ],
+    "line": 283,
+    "link": "[src/services/api.ts:283](../../src/services/api.ts#L283)",
+    "sha256": "e9e83d5f66c798b123dd83d0085b16dd29c83f9f0def712a627e9288e57f0d4c",
+    "status": "PASS",
+    "hostedTests": [
+      {
+        "id": "PUB-11",
+        "status": "PASS",
+        "runId": "2026-10-19T17-00-52-047Z-264bbd"
+      },
+      {
+        "id": "PUB-12",
+        "status": "PASS",
+        "runId": "2026-10-19T17-00-52-047Z-264bbd"
+      }
+    ]
+  },
+  {
+    "id": "AT-17",
+    "bf": "BF-03",
+    "uc": "UC-17",
+    "req": "REQ-17",
+    "fs": "FS-17",
+    "task": "TASK-17",
+    "code": "CODE-17",
+    "test": "TEST-17",
+    "title": "不正なチケット追加拒否",
+    "pre": "管理者デモ・残高7",
+    "steps": "枚数に-1/0/小数/NaN/Infinity/101、金額に負数/小数/NaN/Infinityを渡す",
+    "expected": "全要求が拒否され残高7・購入履歴が不変",
+    "file": "src/services/api.ts",
+    "symbol": "addTickets",
+    "kind": "auto",
+    "origin": "ユーザーによる不合格6件の修正依頼（実装対象確定）",
+    "relatedCode": [
+      "src/services/api.ts",
+      "gas/Code.gs"
+    ],
+    "line": 300,
+    "link": "[src/services/api.ts:300](../../src/services/api.ts#L300)",
+    "sha256": "e9e83d5f66c798b123dd83d0085b16dd29c83f9f0def712a627e9288e57f0d4c",
+    "status": "PASS",
+    "hostedTests": [
+      {
+        "id": "PUB-17",
+        "status": "PASS",
+        "runId": "2026-10-19T17-00-52-047Z-264bbd"
+      }
+    ]
+  },
+  {
+    "id": "AT-18",
+    "bf": "BF-07",
+    "uc": "UC-18",
+    "req": "REQ-18",
+    "fs": "FS-18",
+    "task": "TASK-18",
+    "code": "CODE-18",
+    "test": "TEST-18",
+    "title": "通信障害時に成功扱いしない",
+    "pre": "ローカル模擬APIへのログイン・通信障害注入",
+    "steps": "全5更新POSTを通信失敗させる。業務エラー/HTTP503/不正JSONも拒否確認。同一予約を再試行しUIでも予約する",
+    "expected": "すべて拒否、ローカル台帳不変、同一内容再試行の予約ID不変、UIにエラー表示してフォーム維持",
+    "file": "src/services/api.ts",
+    "symbol": "createReservation",
+    "kind": "auto",
+    "origin": "ユーザーによる不合格6件の修正依頼（実装対象確定）",
+    "relatedCode": [
+      "src/services/api.ts",
+      "gas/Code.gs",
+      "src/App.tsx",
+      "src/components/LoginScreen.tsx",
+      "src/components/Navbar.tsx"
+    ],
+    "line": 264,
+    "link": "[src/services/api.ts:264](../../src/services/api.ts#L264)",
+    "sha256": "e9e83d5f66c798b123dd83d0085b16dd29c83f9f0def712a627e9288e57f0d4c",
+    "status": "PASS",
+    "hostedTests": [
+      {
+        "id": "PUB-22",
+        "status": "PASS",
+        "runId": "2026-10-19T17-00-52-047Z-264bbd"
+      }
+    ]
+  },
+  {
+    "id": "AT-19",
+    "bf": "BF-07",
+    "uc": "UC-19",
+    "req": "REQ-19",
+    "fs": "FS-19",
+    "task": "TASK-19",
+    "code": "CODE-19",
+    "test": "TEST-19",
+    "title": "未認証の管理操作を拒否",
+    "pre": "セッション・保存データなしの新規画面",
+    "steps": "未認証の画面とAPI拒否を確認。その後ローカル模擬APIでログインし、キー失効応答を注入する",
+    "expected": "認証前はログイン画面のみ・台帳未生成。キー失効応答後はセッションと画面の個人情報を消しログイン画面に戻る",
+    "file": "src/App.tsx",
+    "symbol": "App",
+    "kind": "auto",
+    "origin": "ユーザーによる不合格6件の修正依頼（実装対象確定）",
+    "relatedCode": [
+      "src/services/api.ts",
+      "gas/Code.gs",
+      "src/App.tsx",
+      "src/components/LoginScreen.tsx",
+      "src/components/Navbar.tsx"
+    ],
+    "line": 4,
+    "link": "[src/App.tsx:4](../../src/App.tsx#L4)",
+    "sha256": "4792c95c7f640d242442d124eed3d72cc0ab5d5a8364a84f55abaa81f9fbd9d4",
+    "status": "PASS",
+    "hostedTests": [
+      {
+        "id": "PUB-01",
+        "status": "PASS",
+        "runId": "2026-10-19T17-00-52-047Z-264bbd"
+      },
+      {
+        "id": "PUB-02",
+        "status": "PASS",
+        "runId": "2026-10-19T17-00-52-047Z-264bbd"
+      },
+      {
+        "id": "PUB-04",
+        "status": "PASS",
+        "runId": "2026-10-19T17-00-52-047Z-264bbd"
+      },
+      {
+        "id": "PUB-23",
+        "status": "PASS",
+        "runId": "2026-10-19T17-00-52-047Z-264bbd"
+      }
+    ]
+  },
+  {
+    "id": "AT-20",
+    "bf": "BF-07",
+    "uc": "UC-20",
+    "req": "REQ-20",
+    "fs": "FS-20",
+    "task": "TASK-20",
+    "code": "CODE-20",
+    "test": "TEST-20",
+    "title": "保護者の家庭別アクセス制限",
+    "pre": "STU-001だけに紐付いた保護者デモ",
+    "steps": "生徒一覧・予約一覧・STU-002への参照/予約/取消・管理者操作の直接呼出を確認",
+    "expected": "STU-001だけを表示。別家庭の参照/予約/取消と完了/チケット追加を拒否",
+    "file": "src/components/ParentPortal.tsx",
+    "symbol": "ParentPortal",
+    "kind": "auto",
+    "origin": "ユーザーによる不合格6件の修正依頼（実装対象確定）",
+    "relatedCode": [
+      "src/services/api.ts",
+      "gas/Code.gs",
+      "src/App.tsx",
+      "src/components/LoginScreen.tsx",
+      "src/components/Navbar.tsx"
+    ],
+    "line": 15,
+    "link": "[src/components/ParentPortal.tsx:15](../../src/components/ParentPortal.tsx#L15)",
+    "sha256": "09c7dedc47a5c06122b9bdeab08ac6c1349ef0011eb9350ff374e19fd52266b7",
+    "status": "PASS",
+    "hostedTests": [
+      {
+        "id": "PUB-02",
+        "status": "PASS",
+        "runId": "2026-10-19T17-00-52-047Z-264bbd"
+      },
+      {
+        "id": "PUB-03",
+        "status": "PASS",
+        "runId": "2026-10-19T17-00-52-047Z-264bbd"
+      },
+      {
+        "id": "PUB-04",
+        "status": "PASS",
+        "runId": "2026-10-19T17-00-52-047Z-264bbd"
+      }
+    ]
+  },
+  {
+    "id": "AT-21",
+    "bf": "BF-08",
+    "uc": "UC-21",
+    "req": "REQ-21",
+    "fs": "FS-21",
+    "task": "TASK-21",
+    "code": "CODE-21",
+    "test": "TEST-21",
+    "title": "モバイル表示",
+    "pre": "375×812のエミュレーション",
+    "steps": "管理・利用者・予約フォームを順に表示し、指定幅375pxと実際の描画幅を照合",
+    "expected": "各画面でscrollWidthとinnerWidthが375px以下。保護者の予約・取消行も画面内に収まる",
+    "file": "src/components/ParentPortal.tsx",
+    "symbol": "ParentPortal",
+    "kind": "auto",
+    "origin": "チャット要望から具体化",
+    "relatedCode": [],
+    "line": 15,
+    "link": "[src/components/ParentPortal.tsx:15](../../src/components/ParentPortal.tsx#L15)",
+    "sha256": "09c7dedc47a5c06122b9bdeab08ac6c1349ef0011eb9350ff374e19fd52266b7",
+    "status": "PASS",
+    "hostedTests": [
+      {
+        "id": "PUB-18",
+        "status": "PASS",
+        "runId": "2026-10-19T17-00-52-047Z-264bbd"
+      }
+    ]
+  },
+  {
+    "id": "AT-22",
+    "bf": "BF-07",
+    "uc": "UC-22",
+    "req": "REQ-22",
+    "fs": "FS-22",
+    "task": "TASK-22",
+    "code": "CODE-22",
+    "test": "TEST-22",
+    "title": "再読込後の永続化",
+    "pre": "ダミー台帳",
+    "steps": "生徒追加と予約登録後に再読込",
+    "expected": "追加した生徒・予約のIDと値が維持される",
+    "file": "src/services/api.ts",
+    "symbol": "getRides",
+    "kind": "auto",
+    "origin": "チャット要望から具体化",
+    "relatedCode": [],
+    "line": 258,
+    "link": "[src/services/api.ts:258](../../src/services/api.ts#L258)",
+    "sha256": "e9e83d5f66c798b123dd83d0085b16dd29c83f9f0def712a627e9288e57f0d4c",
+    "status": "PASS",
+    "hostedTests": [
+      {
+        "id": "PUB-19",
+        "status": "PASS",
+        "runId": "2026-10-19T17-00-52-047Z-264bbd"
+      }
+    ]
+  },
+  {
+    "id": "AT-23",
+    "bf": "BF-01",
+    "uc": "UC-23",
+    "req": "REQ-23",
+    "fs": "FS-23",
+    "task": "TASK-23",
+    "code": "CODE-23",
+    "test": "TEST-23",
+    "title": "Google初期化・永続化",
+    "pre": "専用シート・GAS配備・権限が必要",
+    "steps": "initSpreadsheetを2回実行し生徒をWeb登録、シートを開く",
+    "expected": "3シート生成・再実行で既存値不変・新規生徒1行",
+    "file": "gas/Code.gs",
+    "symbol": "initSpreadsheet",
+    "kind": "external",
+    "origin": "チャット要望から具体化",
+    "relatedCode": [],
+    "line": 14,
+    "link": "[gas/Code.gs:14](../../gas/Code.gs#L14)",
+    "sha256": "4e1af3401186e0bab1e1afeb0345e0d0fe05c6d5cb50aeec01a1c069df4baf6c",
+    "status": "BLOCKED",
+    "hostedTests": []
+  },
+  {
+    "id": "AT-24",
+    "bf": "BF-04",
+    "uc": "UC-24",
+    "req": "REQ-24",
+    "fs": "FS-24",
+    "task": "TASK-24",
+    "code": "CODE-24",
+    "test": "TEST-24",
+    "title": "実カレンダー予約同期",
+    "pre": "専用GAS・カレンダーが必要",
+    "steps": "Webから予約しシート行と実カレンダー予定を開く",
+    "expected": "同一予約ID・日時・場所・イベントIDが一致",
+    "file": "gas/Code.gs",
+    "symbol": "doPost",
+    "kind": "external",
+    "origin": "チャット要望から具体化",
+    "relatedCode": [],
+    "line": 12,
+    "link": "[gas/Code.gs:12](../../gas/Code.gs#L12)",
+    "sha256": "4e1af3401186e0bab1e1afeb0345e0d0fe05c6d5cb50aeec01a1c069df4baf6c",
+    "status": "BLOCKED",
+    "hostedTests": []
+  },
+  {
+    "id": "AT-25",
+    "bf": "BF-05",
+    "uc": "UC-25",
+    "req": "REQ-25",
+    "fs": "FS-25",
+    "task": "TASK-25",
+    "code": "CODE-25",
+    "test": "TEST-25",
+    "title": "実カレンダー取消同期",
+    "pre": "AT-24の予約",
+    "steps": "予約取消後にシートとカレンダーを開く",
+    "expected": "cancelled・対象イベント削除・残高不変",
+    "file": "gas/Code.gs",
+    "symbol": "doPost",
+    "kind": "external",
+    "origin": "チャット要望から具体化",
+    "relatedCode": [],
+    "line": 12,
+    "link": "[gas/Code.gs:12](../../gas/Code.gs#L12)",
+    "sha256": "4e1af3401186e0bab1e1afeb0345e0d0fe05c6d5cb50aeec01a1c069df4baf6c",
+    "status": "BLOCKED",
+    "hostedTests": []
+  },
+  {
+    "id": "AT-26",
+    "bf": "BF-07",
+    "uc": "UC-26",
+    "req": "REQ-26",
+    "fs": "FS-26",
+    "task": "TASK-26",
+    "code": "CODE-26",
+    "test": "TEST-26",
+    "title": "管理者2名・保護者の端末共有",
+    "pre": "別セッション3台・権限分離・専用GAS",
+    "steps": "保護者予約 → 管理者A確認・完了 → 管理者Bと保護者が再取得",
+    "expected": "同一予約・残高を確認し家庭の範囲を維持",
+    "file": "src/services/api.ts",
+    "symbol": "getStudents",
+    "kind": "external",
+    "origin": "チャット要望から具体化",
+    "relatedCode": [],
+    "line": 241,
+    "link": "[src/services/api.ts:241](../../src/services/api.ts#L241)",
+    "sha256": "e9e83d5f66c798b123dd83d0085b16dd29c83f9f0def712a627e9288e57f0d4c",
+    "status": "BLOCKED",
+    "hostedTests": []
+  },
+  {
+    "id": "AT-27",
+    "bf": "BF-06",
+    "uc": "UC-27",
+    "req": "REQ-27",
+    "fs": "FS-27",
+    "task": "TASK-27",
+    "code": "CODE-27",
+    "test": "TEST-27",
+    "title": "同時完了の排他制御",
+    "pre": "独立管理者2セッション・専用GAS",
+    "steps": "同じ予約を両管理者から同時に完了",
+    "expected": "完了1件・片道1枚だけ消費、再試行でも不変",
+    "file": "gas/Code.gs",
+    "symbol": "doPost",
+    "kind": "external",
+    "origin": "運用開始に向けた追加提案（受入基準案）",
+    "relatedCode": [],
+    "line": 12,
+    "link": "[gas/Code.gs:12](../../gas/Code.gs#L12)",
+    "sha256": "4e1af3401186e0bab1e1afeb0345e0d0fe05c6d5cb50aeec01a1c069df4baf6c",
+    "status": "BLOCKED",
+    "hostedTests": []
+  },
+  {
+    "id": "AT-28",
+    "bf": "BF-08",
+    "uc": "UC-28",
+    "req": "REQ-28",
+    "fs": "FS-28",
+    "task": "TASK-28",
+    "code": "CODE-28",
+    "test": "TEST-28",
+    "title": "バックアップから復旧",
+    "pre": "専用テスト資源・保存先・担当者",
+    "steps": "バックアップ → テスト行変更 → 復元 → Web再取得",
+    "expected": "生徒・予約・購入履歴・カレンダーの整合を回復",
+    "file": "docs/OPERATION_RUNBOOK.md",
+    "symbol": "バックアップ",
+    "kind": "external",
+    "origin": "運用開始に向けた追加提案（受入基準案）",
+    "relatedCode": [],
+    "line": 97,
+    "link": "[docs/OPERATION_RUNBOOK.md:97](../../docs/OPERATION_RUNBOOK.md#L97)",
+    "sha256": "9bca302bc043cab6cb5503344d58e1d1eb367057d7a2fdd517b8f0304d1873a0",
+    "status": "BLOCKED",
+    "hostedTests": []
+  },
+  {
+    "id": "AT-29",
+    "bf": "BF-08",
+    "uc": "UC-29",
+    "req": "REQ-29",
+    "fs": "FS-29",
+    "task": "TASK-29",
+    "code": "CODE-29",
+    "test": "TEST-29",
+    "title": "実機受入",
+    "pre": "iPhone Safari・Android Chromeと受入担当者",
+    "steps": "予約・取消・残高確認を各実機で実施",
+    "expected": "入力・確認・操作が可能、受入担当の確認記録あり",
+    "file": "src/App.tsx",
+    "symbol": "App",
+    "kind": "external",
+    "origin": "運用開始に向けた追加提案（受入基準案）",
+    "relatedCode": [],
+    "line": 4,
+    "link": "[src/App.tsx:4](../../src/App.tsx#L4)",
+    "sha256": "4792c95c7f640d242442d124eed3d72cc0ab5d5a8364a84f55abaa81f9fbd9d4",
+    "status": "BLOCKED",
+    "hostedTests": []
+  },
+  {
+    "id": "AT-30",
+    "bf": "BF-08",
+    "uc": "UC-30",
+    "req": "REQ-30",
+    "fs": "FS-30",
+    "task": "TASK-30",
+    "code": "CODE-30",
+    "test": "TEST-30",
+    "title": "リリース後スモークテスト",
+    "pre": "全必須合格・受入確認・対象環境確定",
+    "steps": "リリース後URLで権限・予約・取消・連携・版を確認",
+    "expected": "対象コミットと公開版一致、重大不具合なし、戻し手順あり",
+    "file": ".github/workflows/deploy.yml",
+    "symbol": "build-and-deploy",
+    "kind": "external",
+    "origin": "運用開始に向けた追加提案（受入基準案）",
+    "relatedCode": [],
+    "line": 18,
+    "link": "[.github/workflows/deploy.yml:18](../../.github/workflows/deploy.yml#L18)",
+    "sha256": "c336192a2d4c1542a222767d4c6b859935f447b4df59d7a6b242ac317eb338c7",
+    "status": "BLOCKED",
+    "hostedTests": [
+      {
+        "id": "PUB-01",
+        "status": "PASS",
+        "runId": "2026-10-19T17-00-52-047Z-264bbd"
+      }
+    ]
+  }
+]

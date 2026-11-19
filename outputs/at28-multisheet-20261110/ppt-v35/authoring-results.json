@@ -1,0 +1,50 @@
+{
+  "records": [
+    {
+      "id": "PKG-05",
+      "name": "tasks",
+      "source": "docs/deliverables/2026-10-23-traceability/tasks-2026-11-10-v34.pptx",
+      "sourceSha256": "26f9cc8aecb2cc31c94e3c8ba6358aa137b69bdac01cbff56f805ba91e2174a1",
+      "sourceSlides": 17,
+      "final": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\outputs\\at28-multisheet-20261110\\ppt-v35\\tasks\\final\\tasks-2026-11-10-v35.pptx",
+      "sha256": "f2a363e0cd16cc0871b5fd8713a6a96e04a1e1f48e34fe3699fbdc12613ed3ad",
+      "slides": 19
+    },
+    {
+      "id": "PKG-09",
+      "name": "operations",
+      "source": "docs/deliverables/2026-10-23-traceability/operations-2026-11-10-v34.pptx",
+      "sourceSha256": "cdcf8efdabe21917701fbdcf4fadece91e69c0717ea2760e22593db05ddba7a9",
+      "sourceSlides": 14,
+      "final": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\outputs\\at28-multisheet-20261110\\ppt-v35\\operations\\final\\operations-2026-11-10-v35.pptx",
+      "sha256": "980d6ca10dc797121c2266ed9afa74d9f3cb4f8fda3e569ee5e78eadec7fccf4",
+      "slides": 16
+    },
+    {
+      "id": "PKG-12",
+      "name": "progress",
+      "source": "docs/deliverables/2026-10-23-traceability/progress-2026-11-10-v34.pptx",
+      "sourceSha256": "2c575989b20e016a958c538ce3766af33821c754cf7b3775daea95e075ce5c19",
+      "sourceSlides": 14,
+      "final": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\outputs\\at28-multisheet-20261110\\ppt-v35\\progress\\final\\progress-2026-11-10-v35.pptx",
+      "sha256": "ec6113844a6b2b09545392eb2aa4fa7a6156c00348f28884f9bc2ffd3d6364a3",
+      "slides": 16
+    }
+  ],
+  "locked": {
+    "docs/traceability/registry.json": "0f6b53a352a8549cc4a66a34af7932c8e692f4dbe0280f0b13920a4eede35719",
+    "docs/progress/2026-11-10-at28-multisheet-result.md": "9bfc4456cfef8922d0607998312762f92bb5479c4c43427e29273dc02f45f981",
+    "outputs/at28-multisheet-20261110/SHA256SUMS.txt": "144e5a93aace9fa3dc24172616a6d2f36ac1af0da64e625b8eae50640b0e2017",
+    "outputs/at28-multisheet-20261110/00-before-restore-named-formula-ref.png": "63e8f0c4e320332353d309d41b43bda03eaae40308486aad354d38565a8bdbfe",
+    "outputs/at28-multisheet-20261110/01-range-paste-protection-empty.jpg": "6aa009b788e0c5b01f819676353df5c65f0090ea2ab883f37f6a86d71252bccc",
+    "outputs/at28-multisheet-20261110/02-range-paste-summary-formulas.jpg": "2fa380a687708842f613c968997b2fad771fc05e851948b5646f0c9673ee1cda",
+    "outputs/at28-multisheet-20261110/03-sheet-copy-named-range-sheet-scoped.jpg": "c1ef15dc5c1b5bc8dc90b22a5b0d8e121e154c802f7f52b632ddb5dc41f156f9",
+    "outputs/at28-multisheet-20261110/04-sheet-copy-filter-freeze-no-range-protection.jpg": "a6ce3764194203c5e855879f6418f7f4f2bc3d678df771666d142e40ce4ba9b0",
+    "outputs/at28-multisheet-20261110/05-summary-copy-a1-formula.png": "49b9a75551df11a94cb521843c7d89b7f2d0fb66c70fe7365c21cfeff12f7723",
+    "outputs/at28-multisheet-20261110/06-summary-copy-b1-ref-and-protection-list.jpg": "392f6e58e6292138a3acf80a94976d0726574df37b9927e6eea27e4218b094d0",
+    "outputs/at28-multisheet-20261110/07-rename-formula-follows-old-sheet.jpg": "f88bcc236a29ffbbdbd4d724e5a09b11cb6ffce5ddce454dbc4118756fe8b962",
+    "outputs/at28-multisheet-20261110/08-delete-old-sheet-ref-error.jpg": "d49ce287d4977561c6dc583b4da5673d540d80d480d254215db1997bb8f36ae4",
+    "outputs/at28-multisheet-20261110/09-old-gid-url-opens-first-sheet.jpg": "7cea8484d0cbcc124dac30c787c9dcf8e0df8cc2a0910d99e5bc54f6a9fa08e3",
+    "docs/traceability/presentations.json": "f009659912859bc4f1db4e4f204e878eee6dfec31722aa79cd2f7d0e10027ada"
+  }
+}

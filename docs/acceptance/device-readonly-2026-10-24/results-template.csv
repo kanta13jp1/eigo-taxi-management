@@ -1,0 +1,9 @@
+case_id,device,browser,scope,status,observed_at,os_version,browser_version,actor_role,observation,evidence
+DEV29-IOS-01,physical_iPhone,Safari,admin_google_login,NOT_RUN,,,,,,
+DEV29-IOS-02,physical_iPhone,Safari,admin_read_and_scroll,NOT_RUN,,,,,,
+DEV29-IOS-03,physical_iPhone,Safari,logout_reload_no_ledger,NOT_RUN,,,,,,
+DEV29-IOS-04,physical_iPhone,Safari,parent_unauthenticated_entry,NOT_RUN,,,,,,
+DEV29-ANDROID-01,physical_Android,Chrome,admin_google_login,NOT_RUN,,,,,,
+DEV29-ANDROID-02,physical_Android,Chrome,admin_read_and_scroll,NOT_RUN,,,,,,
+DEV29-ANDROID-03,physical_Android,Chrome,logout_reload_no_ledger,NOT_RUN,,,,,,
+DEV29-ANDROID-04,physical_Android,Chrome,parent_unauthenticated_entry,NOT_RUN,,,,,,

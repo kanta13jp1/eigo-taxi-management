@@ -1,0 +1,32 @@
+{
+  "createdAt": "2026-11-06T11:02:51.725Z",
+  "node": {
+    "executable": "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1104-709-0_26.1104.709.0_x64__3k8sg7r9htsxt\\dependencies\\node\\bin\\node.exe",
+    "version": "v24.22.1"
+  },
+  "repositoryRoot": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management",
+  "archive": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\docs\\acceptance\\deployment\\releases\\d4261c506bb71586",
+  "archiveRelease": {
+    "environment": "mighty-test",
+    "projectId": "eigo-taxi-app",
+    "siteId": "eigo-taxi-test",
+    "builtAt": "2026-10-29T16:02:19.761Z",
+    "baseCommit": "2fa6127715017d52ae0c9bd80be39c4db90a47c3",
+    "sourceDigest": "5dd9373bc151e7a8f99065092b8f780b461c99b74bf7fcdb870ab17a4ebe8baa"
+  },
+  "expectedModalHash": "b4a3001504d344c099c89064681ec80c21a0f5d8a69520e3a73954e094ab563f",
+  "expectedCandidateDigest": "b7e510688a6e81268331db6d7d88db8875bf5ce443dbc90f52b4f647f39d1979",
+  "configSupplements": {
+    "tsconfig.json": "770b4140bbb581e2dfd9ea9946ffc9c75a1d86ba7d2db5f77c83e37cbdf9d808",
+    "tsconfig.app.json": "8e5d12ba330e7d86409edec74b95451e0db22ee09b9426c94b5bf817571eddb0",
+    "tsconfig.node.json": "d366cc0827139db39c61815f22491bbfda56c654354a42ad7795143d314e45e8",
+    "postcss.config.js": "190c877db466995bf1482f4a16abd06e04a89ede3119341e2a86ff96e1737b27",
+    "tailwind.config.js": "2494112440ffad4261a3acc00236d9d0fa8fe12e3b08e882a3ca31ed42df798c"
+  },
+  "releasePreparer": {
+    "path": "scripts/prepare_test_release.cjs",
+    "sha256": "e960b0e41e8e7b9d00877b3ecdbf336b7a94d9728859faff7a4407fe635de51b"
+  },
+  "dependencyMode": "Read existing repository node_modules via ancestor module resolution; no install or junction",
+  "writeBoundary": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\outputs\\booking-modal-release-20261106"
+}

@@ -1,0 +1,16 @@
+{
+  "release": "c9cd711d551ccc77",
+  "baseline": "5424438ebd36deb1",
+  "inputs": 32,
+  "diff": [
+    "src/components/ParentPortal.tsx"
+  ],
+  "build": "npm run build:firebase (tsc -b and vite build), exit 0",
+  "typecheck": "tsc -b, exit 0",
+  "lint": "oxlint src/components/ParentPortal.tsx, exit 0",
+  "sourceDigest": "d947fb98baf5106f20886db0635234bcf7cf76d68bdfdb242b2841dca0f58017",
+  "canonicalParentHash": "498b02b9b23f77e2d6101636ac6380e81ac031300f82763e5ef91c0b42cbf339",
+  "publicHashMatches": 7,
+  "publicUI": "public-ui.json",
+  "physicalDevice": false
+}

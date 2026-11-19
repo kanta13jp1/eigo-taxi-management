@@ -10,7 +10,11 @@ lerna-debug.log*
 node_modules
 dist
 dist-ssr
+.firebase/
 *.local
+__pycache__/
+*.pyc
+.manual-build-*/
 
 # Editor directories and files
 .vscode/*

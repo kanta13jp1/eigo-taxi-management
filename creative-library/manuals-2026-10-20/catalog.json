@@ -1,0 +1,2631 @@
+[
+  {
+    "id": "manual-140df5e8ab85e169",
+    "kind": "presentation",
+    "title": "operation-manual-2026-10-20-v3.pptx",
+    "status": "reviewed",
+    "createdAt": "2026-10-19T17:29:28.436Z",
+    "path": "creative-library/manuals-2026-10-20/originals/operation-manual-2026-10-20-v3.pptx",
+    "sha256": "140df5e8ab85e169eddc9be0321e3230ca4f63e3f3658edba6e0111339827543",
+    "source": {
+      "tool": "@oai/artifact-tool",
+      "model": null,
+      "provider": "OpenAI"
+    },
+    "generation": {
+      "prompt": "eigo-taxi-management の納品物として運用マニュアル、ユーザーマニュアル、タスクリスト（残作業一覧）をPowerPointで作成。実装と最新検証記録を根拠とし実環境未検証を明示。"
+    },
+    "rights": {
+      "ownership": "Project-specific authored documentation using repository evidence",
+      "commercialUse": "review-required",
+      "notes": "Project source and synthetic test screenshots. Distribution and commercial reuse rights require owner review."
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "tags": [
+      "Japanese",
+      "handover",
+      "manual"
+    ],
+    "relatedArtifactIds": [
+      "manual-d8bb9e88598e2745"
+    ]
+  },
+  {
+    "id": "manual-d8bb9e88598e2745",
+    "kind": "presentation",
+    "title": "operation-manual-2026-10-20.pptx",
+    "status": "superseded",
+    "createdAt": "2026-10-19T17:29:28.44Z",
+    "path": "creative-library/manuals-2026-10-20/originals/operation-manual-2026-10-20.pptx",
+    "sha256": "d8bb9e88598e27457ab5c14ad45d1b64a070ec297e0a2ab476db352ec0d24512",
+    "source": {
+      "tool": "@oai/artifact-tool",
+      "model": null,
+      "provider": "OpenAI"
+    },
+    "generation": {
+      "prompt": "eigo-taxi-management の納品物として運用マニュアル、ユーザーマニュアル、タスクリスト（残作業一覧）をPowerPointで作成。実装と最新検証記録を根拠とし実環境未検証を明示。"
+    },
+    "rights": {
+      "ownership": "Project-specific authored documentation using repository evidence",
+      "commercialUse": "review-required",
+      "notes": "Project source and synthetic test screenshots. Distribution and commercial reuse rights require owner review."
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "tags": [
+      "Japanese",
+      "handover",
+      "manual"
+    ],
+    "relatedArtifactIds": []
+  },
+  {
+    "id": "manual-cbd7491da02edd88",
+    "kind": "presentation",
+    "title": "remaining-tasks-2026-10-20-v3.pptx",
+    "status": "reviewed",
+    "createdAt": "2026-10-19T17:29:28.441Z",
+    "path": "creative-library/manuals-2026-10-20/originals/remaining-tasks-2026-10-20-v3.pptx",
+    "sha256": "cbd7491da02edd88348619194ff7868116f777000b01d1f114d0172f6f4a13dc",
+    "source": {
+      "tool": "@oai/artifact-tool",
+      "model": null,
+      "provider": "OpenAI"
+    },
+    "generation": {
+      "prompt": "eigo-taxi-management の納品物として運用マニュアル、ユーザーマニュアル、タスクリスト（残作業一覧）をPowerPointで作成。実装と最新検証記録を根拠とし実環境未検証を明示。"
+    },
+    "rights": {
+      "ownership": "Project-specific authored documentation using repository evidence",
+      "commercialUse": "review-required",
+      "notes": "Project source and synthetic test screenshots. Distribution and commercial reuse rights require owner review."
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "tags": [
+      "Japanese",
+      "handover",
+      "manual"
+    ],
+    "relatedArtifactIds": [
+      "manual-67855d9866087bca"
+    ]
+  },
+  {
+    "id": "manual-67855d9866087bca",
+    "kind": "presentation",
+    "title": "remaining-tasks-2026-10-20.pptx",
+    "status": "superseded",
+    "createdAt": "2026-10-19T17:29:28.442Z",
+    "path": "creative-library/manuals-2026-10-20/originals/remaining-tasks-2026-10-20.pptx",
+    "sha256": "67855d9866087bca99f65a5c9f6c622f5cb187ba81ff1fa7df84f8366f91c3a8",
+    "source": {
+      "tool": "@oai/artifact-tool",
+      "model": null,
+      "provider": "OpenAI"
+    },
+    "generation": {
+      "prompt": "eigo-taxi-management の納品物として運用マニュアル、ユーザーマニュアル、タスクリスト（残作業一覧）をPowerPointで作成。実装と最新検証記録を根拠とし実環境未検証を明示。"
+    },
+    "rights": {
+      "ownership": "Project-specific authored documentation using repository evidence",
+      "commercialUse": "review-required",
+      "notes": "Project source and synthetic test screenshots. Distribution and commercial reuse rights require owner review."
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "tags": [
+      "Japanese",
+      "handover",
+      "manual"
+    ],
+    "relatedArtifactIds": []
+  },
+  {
+    "id": "manual-c0d461ce0dfe2037",
+    "kind": "presentation",
+    "title": "user-manual-2026-10-20-v3.pptx",
+    "status": "reviewed",
+    "createdAt": "2026-10-19T17:29:28.444Z",
+    "path": "creative-library/manuals-2026-10-20/originals/user-manual-2026-10-20-v3.pptx",
+    "sha256": "c0d461ce0dfe20373bb1bd6e0e16c62118d27395a2c92d19bf2651e0f6724ce6",
+    "source": {
+      "tool": "@oai/artifact-tool",
+      "model": null,
+      "provider": "OpenAI"
+    },
+    "generation": {
+      "prompt": "eigo-taxi-management の納品物として運用マニュアル、ユーザーマニュアル、タスクリスト（残作業一覧）をPowerPointで作成。実装と最新検証記録を根拠とし実環境未検証を明示。"
+    },
+    "rights": {
+      "ownership": "Project-specific authored documentation using repository evidence",
+      "commercialUse": "review-required",
+      "notes": "Project source and synthetic test screenshots. Distribution and commercial reuse rights require owner review."
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "tags": [
+      "Japanese",
+      "handover",
+      "manual"
+    ],
+    "relatedArtifactIds": [
+      "manual-f8431fc69814ea5c"
+    ]
+  },
+  {
+    "id": "manual-f8431fc69814ea5c",
+    "kind": "presentation",
+    "title": "user-manual-2026-10-20.pptx",
+    "status": "superseded",
+    "createdAt": "2026-10-19T17:29:28.445Z",
+    "path": "creative-library/manuals-2026-10-20/originals/user-manual-2026-10-20.pptx",
+    "sha256": "f8431fc69814ea5c0a97ffd6150fcb05786f236b35ee9ae7fa29160bf841dc01",
+    "source": {
+      "tool": "@oai/artifact-tool",
+      "model": null,
+      "provider": "OpenAI"
+    },
+    "generation": {
+      "prompt": "eigo-taxi-management の納品物として運用マニュアル、ユーザーマニュアル、タスクリスト（残作業一覧）をPowerPointで作成。実装と最新検証記録を根拠とし実環境未検証を明示。"
+    },
+    "rights": {
+      "ownership": "Project-specific authored documentation using repository evidence",
+      "commercialUse": "review-required",
+      "notes": "Project source and synthetic test screenshots. Distribution and commercial reuse rights require owner review."
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "tags": [
+      "Japanese",
+      "handover",
+      "manual"
+    ],
+    "relatedArtifactIds": []
+  },
+  {
+    "id": "manual-d239f03ce9f23588",
+    "kind": "presentation",
+    "title": "operation-manual-2026-10-20-v4.pptx",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T03:25:54.498Z",
+    "path": "creative-library/manuals-2026-10-20/originals/operation-manual-2026-10-20-v4.pptx",
+    "sha256": "d239f03ce9f23588975b4aa2902b1ce152d40775458fd0bc4a47de15bae20b6e",
+    "source": {
+      "tool": "@oai/artifact-tool",
+      "model": null,
+      "provider": "OpenAI"
+    },
+    "generation": {
+      "prompt": "残作業を1件ずつ進め、そのたび小林さんへPowerPointも含めて報告。受入は会社アカウント、本番は教室の運用Googleアカウント。AT-23は接続復旧待ち。"
+    },
+    "rights": {
+      "ownership": "Project-specific authored documentation and supplied evidence",
+      "commercialUse": "review-required"
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "relatedArtifactIds": [
+      "manual-140df5e8ab85e169"
+    ]
+  },
+  {
+    "id": "manual-e9b0ec1889a7a188",
+    "kind": "presentation",
+    "title": "user-manual-2026-10-20-v4.pptx",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T03:25:54.525Z",
+    "path": "creative-library/manuals-2026-10-20/originals/user-manual-2026-10-20-v4.pptx",
+    "sha256": "e9b0ec1889a7a188c68ed486581c044f56b573b8680e19a61695f8b03e2da250",
+    "source": {
+      "tool": "@oai/artifact-tool",
+      "model": null,
+      "provider": "OpenAI"
+    },
+    "generation": {
+      "prompt": "残作業を1件ずつ進め、そのたび小林さんへPowerPointも含めて報告。受入は会社アカウント、本番は教室の運用Googleアカウント。AT-23は接続復旧待ち。"
+    },
+    "rights": {
+      "ownership": "Project-specific authored documentation and supplied evidence",
+      "commercialUse": "review-required"
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "relatedArtifactIds": [
+      "manual-c0d461ce0dfe2037"
+    ]
+  },
+  {
+    "id": "manual-c096899581af920b",
+    "kind": "presentation",
+    "title": "remaining-tasks-2026-10-20-v4.pptx",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T03:25:54.549Z",
+    "path": "creative-library/manuals-2026-10-20/originals/remaining-tasks-2026-10-20-v4.pptx",
+    "sha256": "c096899581af920be7b3709d4035d3c79a680abccb30e6044c7b552f06524ec5",
+    "source": {
+      "tool": "@oai/artifact-tool",
+      "model": null,
+      "provider": "OpenAI"
+    },
+    "generation": {
+      "prompt": "残作業を1件ずつ進め、そのたび小林さんへPowerPointも含めて報告。受入は会社アカウント、本番は教室の運用Googleアカウント。AT-23は接続復旧待ち。"
+    },
+    "rights": {
+      "ownership": "Project-specific authored documentation and supplied evidence",
+      "commercialUse": "review-required"
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "relatedArtifactIds": [
+      "manual-cbd7491da02edd88"
+    ]
+  },
+  {
+    "id": "manual-fc751413e92a7a9d",
+    "kind": "presentation",
+    "title": "progress-report-step-01-2026-10-20-v4.pptx",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T03:25:54.574Z",
+    "path": "creative-library/manuals-2026-10-20/originals/progress-report-step-01-2026-10-20-v4.pptx",
+    "sha256": "fc751413e92a7a9d259bae4bed08db354f02668d47be65fdb3a081384f97af91",
+    "source": {
+      "tool": "@oai/artifact-tool",
+      "model": null,
+      "provider": "OpenAI"
+    },
+    "generation": {
+      "prompt": "残作業を1件ずつ進め、そのたび小林さんへPowerPointも含めて報告。受入は会社アカウント、本番は教室の運用Googleアカウント。AT-23は接続復旧待ち。"
+    },
+    "rights": {
+      "ownership": "Project-specific authored documentation and supplied evidence",
+      "commercialUse": "review-required"
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "relatedArtifactIds": []
+  },
+  {
+    "id": "manual-a1b23791fdc80261",
+    "kind": "presentation",
+    "title": "remaining-tasks-2026-10-20-v5.pptx",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T04:11:59.617Z",
+    "path": "creative-library/manuals-2026-10-20/originals/remaining-tasks-2026-10-20-v5.pptx",
+    "sha256": "a1b23791fdc80261f3c5c5e0dc511f35bf46bd1c3497f3b3039a74bf5f210e27",
+    "source": {
+      "tool": "@oai/artifact-tool",
+      "provider": "OpenAI",
+      "model": null
+    },
+    "generation": {
+      "prompt": "AT-23準備進捗。接続復旧・元資源保全・非公開検証コピー・現行ソース全文一致。OAuth承認待ちで全8件未合格。4枚の報告と残作業一覧のみ改版。"
+    },
+    "rights": {
+      "ownership": "Project-specific authored documentation",
+      "commercialUse": "review-required"
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "relatedArtifactIds": [
+      "manual-c096899581af920b"
+    ]
+  },
+  {
+    "id": "manual-aa331eaca3061e83",
+    "kind": "presentation",
+    "title": "progress-report-step-02-2026-10-20-v5.pptx",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T04:11:59.621Z",
+    "path": "creative-library/manuals-2026-10-20/originals/progress-report-step-02-2026-10-20-v5.pptx",
+    "sha256": "aa331eaca3061e8354da762f84c37c28b50366359c4edceeb3ba84e80073946f",
+    "source": {
+      "tool": "@oai/artifact-tool",
+      "provider": "OpenAI",
+      "model": null
+    },
+    "generation": {
+      "prompt": "AT-23準備進捗。接続復旧・元資源保全・非公開検証コピー・現行ソース全文一致。OAuth承認待ちで全8件未合格。4枚の報告と残作業一覧のみ改版。"
+    },
+    "rights": {
+      "ownership": "Project-specific authored documentation",
+      "commercialUse": "review-required"
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "relatedArtifactIds": []
+  },
+  {
+    "id": "manual-1a6bc906bac4c229",
+    "kind": "presentation",
+    "title": "remaining-tasks-2026-10-20-v6.pptx",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T05:51:03.251Z",
+    "path": "creative-library/manuals-2026-10-20/originals/remaining-tasks-2026-10-20-v6.pptx",
+    "sha256": "1a6bc906bac4c229f2dae5176b997f480e3e20e9d16b324ee89151efaadab437",
+    "source": {
+      "tool": "@oai/artifact-tool",
+      "provider": "OpenAI",
+      "model": null
+    },
+    "generation": {
+      "prompt": "AT-23準備進捗。接続復旧・元資源保全・非公開検証コピー・現行ソース全文一致。Sheetsのみ付与、初期化2回と74セル保持。個別認証入力待ちで全8件未合格。4枚の報告と残作業一覧のみ改版。"
+    },
+    "rights": {
+      "ownership": "Project-specific authored documentation",
+      "commercialUse": "review-required"
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "relatedArtifactIds": [
+      "manual-c096899581af920b"
+    ]
+  },
+  {
+    "id": "manual-b2009725c1bfd18c",
+    "kind": "presentation",
+    "title": "progress-report-step-03-2026-10-20-v6.pptx",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T05:51:03.256Z",
+    "path": "creative-library/manuals-2026-10-20/originals/progress-report-step-03-2026-10-20-v6.pptx",
+    "sha256": "b2009725c1bfd18c92f2433de8a348479821c41424718c5515b95973a0f74fa8",
+    "source": {
+      "tool": "@oai/artifact-tool",
+      "provider": "OpenAI",
+      "model": null
+    },
+    "generation": {
+      "prompt": "AT-23準備進捗。接続復旧・元資源保全・非公開検証コピー・現行ソース全文一致。Sheetsのみ付与、初期化2回と74セル保持。個別認証入力待ちで全8件未合格。4枚の報告と残作業一覧のみ改版。"
+    },
+    "rights": {
+      "ownership": "Project-specific authored documentation",
+      "commercialUse": "review-required"
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "relatedArtifactIds": []
+  },
+  {
+    "id": "manual-4e72431dd8749f29",
+    "kind": "presentation",
+    "title": "remaining-tasks-2026-10-20-v7.pptx",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T06:21:54.212880+00:00",
+    "path": "creative-library/manuals-2026-10-20/originals/remaining-tasks-2026-10-20-v7.pptx",
+    "sha256": "4e72431dd8749f29512bda989290872a047e8e73ae77c5f7696b99e31af323bc",
+    "source": {
+      "tool": "@oai/artifact-tool",
+      "provider": "OpenAI",
+      "model": null
+    },
+    "generation": {
+      "prompt": "Step05 AT23 PASS: Web1行保存と再読込、不足3シート生成、82セル保全。残る7件とAT24検証先分離を記録。"
+    },
+    "rights": {
+      "ownership": "Project-specific authored documentation",
+      "commercialUse": "review-required"
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    }
+  },
+  {
+    "id": "manual-e2668e76be2ff699",
+    "kind": "presentation",
+    "title": "progress-report-step-05-2026-10-20-v7.pptx",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T06:21:54.213849+00:00",
+    "path": "creative-library/manuals-2026-10-20/originals/progress-report-step-05-2026-10-20-v7.pptx",
+    "sha256": "e2668e76be2ff699e56d2d0ff970b02eeb7c81dd1fa34558e885d4eab2e2d46a",
+    "source": {
+      "tool": "@oai/artifact-tool",
+      "provider": "OpenAI",
+      "model": null
+    },
+    "generation": {
+      "prompt": "Step05 AT23 PASS: Web1行保存と再読込、不足3シート生成、82セル保全。残る7件とAT24検証先分離を記録。"
+    },
+    "rights": {
+      "ownership": "Project-specific authored documentation",
+      "commercialUse": "review-required"
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    }
+  },
+  {
+    "id": "manual-389b64ca69bcbebe",
+    "kind": "presentation",
+    "title": "operation-manual-2026-10-20-v8.pptx",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T10:16:11.203574+00:00",
+    "path": "creative-library/manuals-2026-10-20/originals/operation-manual-2026-10-20-v8.pptx",
+    "sha256": "389b64ca69bcbebe396cbf41720abfa4530d968965836bffad1b00b28428c8c5",
+    "source": {
+      "tool": "@oai/artifact-tool",
+      "provider": "OpenAI",
+      "model": "gpt-6-astra"
+    },
+    "generation": {
+      "prompt": "既存のログインURL・キー取得手順を必要なドキュメントと納品PowerPointへ反映。検証のみ、秘密キー未読出、旧版保持。既存v4の書式を継承しv8へ改版。"
+    },
+    "rights": {
+      "ownership": "Project-specific authored documentation",
+      "commercialUse": "review-required"
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "relatedArtifactIds": [
+      "manual-d239f03ce9f23588"
+    ]
+  },
+  {
+    "id": "manual-62149aadbe265145",
+    "kind": "presentation",
+    "title": "user-manual-2026-10-20-v8.pptx",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T10:16:11.677790+00:00",
+    "path": "creative-library/manuals-2026-10-20/originals/user-manual-2026-10-20-v8.pptx",
+    "sha256": "62149aadbe265145fee7aaa0bc7ad73548e6598d0d4f11272efdb5f5bffdb521",
+    "source": {
+      "tool": "@oai/artifact-tool",
+      "provider": "OpenAI",
+      "model": "gpt-6-astra"
+    },
+    "generation": {
+      "prompt": "既存のログインURL・キー取得手順を必要なドキュメントと納品PowerPointへ反映。検証のみ、秘密キー未読出、旧版保持。既存v4の書式を継承しv8へ改版。"
+    },
+    "rights": {
+      "ownership": "Project-specific authored documentation",
+      "commercialUse": "review-required"
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "relatedArtifactIds": [
+      "manual-e9b0ec1889a7a188"
+    ]
+  },
+  {
+    "id": "manual-9d0fcfcaff2115b0",
+    "kind": "presentation",
+    "title": "operation-manual-2026-10-20-v9.pptx",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T10:35:29.627499+00:00",
+    "path": "creative-library/manuals-2026-10-20/originals/operation-manual-2026-10-20-v9.pptx",
+    "sha256": "9d0fcfcaff2115b00410ffeadf9a3ad5b9d9debd0dd8f3ac39cf62ef83bdf17c",
+    "source": {
+      "tool": "@oai/artifact-tool",
+      "provider": "OpenAI",
+      "model": "gpt-6-astra"
+    },
+    "generation": {
+      "prompt": "スプレッドシートを直接編集した場合の反映方法と、検証用台帳・元の台帳の違いをマニュアルへ反映。v8書式継承、F5更新・通常タブ・本番分離・日常Web操作を説明。"
+    },
+    "rights": {
+      "ownership": "Project-specific authored documentation",
+      "commercialUse": "review-required"
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "relatedArtifactIds": [
+      "manual-389b64ca69bcbebe"
+    ]
+  },
+  {
+    "id": "manual-0dc99909ea92d227",
+    "kind": "presentation",
+    "title": "user-manual-2026-10-20-v9.pptx",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T10:35:29.974728+00:00",
+    "path": "creative-library/manuals-2026-10-20/originals/user-manual-2026-10-20-v9.pptx",
+    "sha256": "0dc99909ea92d227ea5dd09811552c8e0ac1c6e134f6cae96c69d0265cf2f322",
+    "source": {
+      "tool": "@oai/artifact-tool",
+      "provider": "OpenAI",
+      "model": "gpt-6-astra"
+    },
+    "generation": {
+      "prompt": "スプレッドシートを直接編集した場合の反映方法と、検証用台帳・元の台帳の違いをマニュアルへ反映。v8書式継承、F5更新・通常タブ・本番分離・日常Web操作を説明。"
+    },
+    "rights": {
+      "ownership": "Project-specific authored documentation",
+      "commercialUse": "review-required"
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "relatedArtifactIds": [
+      "manual-62149aadbe265145"
+    ]
+  },
+  {
+    "id": "manual-e6346dcd7da4001f",
+    "kind": "presentation",
+    "title": "operation-manual-2026-10-20-v10.pptx",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T13:52:34.461Z",
+    "path": "creative-library/manuals-2026-10-20/originals/operation-manual-2026-10-20-v10.pptx",
+    "sha256": "e6346dcd7da4001f3d2ae6144dee9e18eb691a19eb08f2b0a301a7eaccf73811",
+    "source": {
+      "tool": "@oai/artifact-tool",
+      "provider": "OpenAI",
+      "model": null
+    },
+    "generation": {
+      "prompt": "管理者は管理者専用、保護者は自分の家庭の情報だけに完全分離。個別URLとQR配布・失効手順を実装し、全ての現行資料とPowerPointを変更仕様に更新する。旧資料・試験証跡は保持し、新旧の合格判定を区別する。"
+    },
+    "rights": {
+      "ownership": "Project-specific authored documentation",
+      "commercialUse": "review-required",
+      "notes": "Project-specific documentation and synthetic demo UI; school branding remains subject to rights review; not offered for sale."
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "relatedArtifactIds": [
+      "manual-9d0fcfcaff2115b0"
+    ]
+  },
+  {
+    "id": "preview-f13b8f06e5f528e7",
+    "kind": "image",
+    "title": "operation-manual-2026-10-20-v10.pptx slide 1",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T13:52:34.464Z",
+    "path": "creative-library/manuals-2026-10-20/source/v10/operation-manual/01.png",
+    "sha256": "f13b8f06e5f528e70477f42bf868a68c3a6eba5535e0a93e4a11248c80ca6aab",
+    "source": {
+      "tool": "@oai/artifact-tool render",
+      "provider": "OpenAI",
+      "model": null
+    },
+    "generation": {
+      "prompt": "Render slide 1 from operation-manual-2026-10-20-v10.pptx"
+    },
+    "rights": {
+      "ownership": "Derivative of project-specific presentation",
+      "commercialUse": "review-required"
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "relatedArtifactIds": [
+      "manual-e6346dcd7da4001f"
+    ]
+  },
+  {
+    "id": "preview-ea4d4ecd4e453d2b",
+    "kind": "image",
+    "title": "operation-manual-2026-10-20-v10.pptx slide 2",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T13:52:34.465Z",
+    "path": "creative-library/manuals-2026-10-20/source/v10/operation-manual/02.png",
+    "sha256": "ea4d4ecd4e453d2b08434e6eaf648e8a08b14c5b4a7ba1d76027fa739858bd87",
+    "source": {
+      "tool": "@oai/artifact-tool render",
+      "provider": "OpenAI",
+      "model": null
+    },
+    "generation": {
+      "prompt": "Render slide 2 from operation-manual-2026-10-20-v10.pptx"
+    },
+    "rights": {
+      "ownership": "Derivative of project-specific presentation",
+      "commercialUse": "review-required"
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "relatedArtifactIds": [
+      "manual-e6346dcd7da4001f"
+    ]
+  },
+  {
+    "id": "preview-e9a282a9a9eec6c7",
+    "kind": "image",
+    "title": "operation-manual-2026-10-20-v10.pptx slide 3",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T13:52:34.466Z",
+    "path": "creative-library/manuals-2026-10-20/source/v10/operation-manual/03.png",
+    "sha256": "e9a282a9a9eec6c739bf55f7fdff935c0bbf0101171bb989d057718bb7fccbde",
+    "source": {
+      "tool": "@oai/artifact-tool render",
+      "provider": "OpenAI",
+      "model": null
+    },
+    "generation": {
+      "prompt": "Render slide 3 from operation-manual-2026-10-20-v10.pptx"
+    },
+    "rights": {
+      "ownership": "Derivative of project-specific presentation",
+      "commercialUse": "review-required"
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "relatedArtifactIds": [
+      "manual-e6346dcd7da4001f"
+    ]
+  },
+  {
+    "id": "preview-79784e3b2543373a",
+    "kind": "image",
+    "title": "operation-manual-2026-10-20-v10.pptx slide 4",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T13:52:34.468Z",
+    "path": "creative-library/manuals-2026-10-20/source/v10/operation-manual/04.png",
+    "sha256": "79784e3b2543373a2f6c3aa7e1ff1019a2de96b700ec68efda10676bab44ed7a",
+    "source": {
+      "tool": "@oai/artifact-tool render",
+      "provider": "OpenAI",
+      "model": null
+    },
+    "generation": {
+      "prompt": "Render slide 4 from operation-manual-2026-10-20-v10.pptx"
+    },
+    "rights": {
+      "ownership": "Derivative of project-specific presentation",
+      "commercialUse": "review-required"
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "relatedArtifactIds": [
+      "manual-e6346dcd7da4001f"
+    ]
+  },
+  {
+    "id": "preview-9516624001c74acd",
+    "kind": "image",
+    "title": "operation-manual-2026-10-20-v10.pptx slide 5",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T13:52:34.469Z",
+    "path": "creative-library/manuals-2026-10-20/source/v10/operation-manual/05.png",
+    "sha256": "9516624001c74acdc9338ec2e6964f53bf82c7bb1ba83bf4b520784553a67d60",
+    "source": {
+      "tool": "@oai/artifact-tool render",
+      "provider": "OpenAI",
+      "model": null
+    },
+    "generation": {
+      "prompt": "Render slide 5 from operation-manual-2026-10-20-v10.pptx"
+    },
+    "rights": {
+      "ownership": "Derivative of project-specific presentation",
+      "commercialUse": "review-required"
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "relatedArtifactIds": [
+      "manual-e6346dcd7da4001f"
+    ]
+  },
+  {
+    "id": "preview-d9b5ba1a33b4a399",
+    "kind": "image",
+    "title": "operation-manual-2026-10-20-v10.pptx slide 6",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T13:52:34.470Z",
+    "path": "creative-library/manuals-2026-10-20/source/v10/operation-manual/06.png",
+    "sha256": "d9b5ba1a33b4a399321e6df44c3d95b97f1ebd8283a40707c7063326ea45db15",
+    "source": {
+      "tool": "@oai/artifact-tool render",
+      "provider": "OpenAI",
+      "model": null
+    },
+    "generation": {
+      "prompt": "Render slide 6 from operation-manual-2026-10-20-v10.pptx"
+    },
+    "rights": {
+      "ownership": "Derivative of project-specific presentation",
+      "commercialUse": "review-required"
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "relatedArtifactIds": [
+      "manual-e6346dcd7da4001f"
+    ]
+  },
+  {
+    "id": "preview-44d9bf70fdac4b65",
+    "kind": "image",
+    "title": "operation-manual-2026-10-20-v10.pptx slide 7",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T13:52:34.471Z",
+    "path": "creative-library/manuals-2026-10-20/source/v10/operation-manual/07.png",
+    "sha256": "44d9bf70fdac4b65dd927a5efc3ebfaa14caca788e57c9c33716e3be4ff4538a",
+    "source": {
+      "tool": "@oai/artifact-tool render",
+      "provider": "OpenAI",
+      "model": null
+    },
+    "generation": {
+      "prompt": "Render slide 7 from operation-manual-2026-10-20-v10.pptx"
+    },
+    "rights": {
+      "ownership": "Derivative of project-specific presentation",
+      "commercialUse": "review-required"
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "relatedArtifactIds": [
+      "manual-e6346dcd7da4001f"
+    ]
+  },
+  {
+    "id": "preview-5d242a1daed6e187",
+    "kind": "image",
+    "title": "operation-manual-2026-10-20-v10.pptx slide 8",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T13:52:34.472Z",
+    "path": "creative-library/manuals-2026-10-20/source/v10/operation-manual/08.png",
+    "sha256": "5d242a1daed6e187de8484885c75ef96b577eb27a1b86d56bfc8046501d0aab8",
+    "source": {
+      "tool": "@oai/artifact-tool render",
+      "provider": "OpenAI",
+      "model": null
+    },
+    "generation": {
+      "prompt": "Render slide 8 from operation-manual-2026-10-20-v10.pptx"
+    },
+    "rights": {
+      "ownership": "Derivative of project-specific presentation",
+      "commercialUse": "review-required"
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "relatedArtifactIds": [
+      "manual-e6346dcd7da4001f"
+    ]
+  },
+  {
+    "id": "preview-09c29b597f5d7117",
+    "kind": "image",
+    "title": "operation-manual-2026-10-20-v10.pptx slide 9",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T13:52:34.473Z",
+    "path": "creative-library/manuals-2026-10-20/source/v10/operation-manual/09.png",
+    "sha256": "09c29b597f5d7117980a3f3ccbbae8a24311026b49dc98ac27620f4e7bd2d110",
+    "source": {
+      "tool": "@oai/artifact-tool render",
+      "provider": "OpenAI",
+      "model": null
+    },
+    "generation": {
+      "prompt": "Render slide 9 from operation-manual-2026-10-20-v10.pptx"
+    },
+    "rights": {
+      "ownership": "Derivative of project-specific presentation",
+      "commercialUse": "review-required"
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "relatedArtifactIds": [
+      "manual-e6346dcd7da4001f"
+    ]
+  },
+  {
+    "id": "preview-9e2b841f0f613229",
+    "kind": "image",
+    "title": "operation-manual-2026-10-20-v10.pptx slide 10",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T13:52:34.476Z",
+    "path": "creative-library/manuals-2026-10-20/source/v10/operation-manual/10.png",
+    "sha256": "9e2b841f0f613229f5ed8d73cc0c369ed2a51d8a786b85bf34dbfb1e85bc0a07",
+    "source": {
+      "tool": "@oai/artifact-tool render",
+      "provider": "OpenAI",
+      "model": null
+    },
+    "generation": {
+      "prompt": "Render slide 10 from operation-manual-2026-10-20-v10.pptx"
+    },
+    "rights": {
+      "ownership": "Derivative of project-specific presentation",
+      "commercialUse": "review-required"
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "relatedArtifactIds": [
+      "manual-e6346dcd7da4001f"
+    ]
+  },
+  {
+    "id": "preview-e12b82727d82770f",
+    "kind": "image",
+    "title": "operation-manual-2026-10-20-v10.pptx slide 11",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T13:52:34.477Z",
+    "path": "creative-library/manuals-2026-10-20/source/v10/operation-manual/11.png",
+    "sha256": "e12b82727d82770fb87112ab05e90f62f46f839d05548290f79673afdd26f8ef",
+    "source": {
+      "tool": "@oai/artifact-tool render",
+      "provider": "OpenAI",
+      "model": null
+    },
+    "generation": {
+      "prompt": "Render slide 11 from operation-manual-2026-10-20-v10.pptx"
+    },
+    "rights": {
+      "ownership": "Derivative of project-specific presentation",
+      "commercialUse": "review-required"
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "relatedArtifactIds": [
+      "manual-e6346dcd7da4001f"
+    ]
+  },
+  {
+    "id": "preview-36afcb9d9c3228a7",
+    "kind": "image",
+    "title": "operation-manual-2026-10-20-v10.pptx slide 12",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T13:52:34.478Z",
+    "path": "creative-library/manuals-2026-10-20/source/v10/operation-manual/12.png",
+    "sha256": "36afcb9d9c3228a72f842be04fb2913e76fd5c3ccf179f2dfe3820f0e0dd6838",
+    "source": {
+      "tool": "@oai/artifact-tool render",
+      "provider": "OpenAI",
+      "model": null
+    },
+    "generation": {
+      "prompt": "Render slide 12 from operation-manual-2026-10-20-v10.pptx"
+    },
+    "rights": {
+      "ownership": "Derivative of project-specific presentation",
+      "commercialUse": "review-required"
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "relatedArtifactIds": [
+      "manual-e6346dcd7da4001f"
+    ]
+  },
+  {
+    "id": "preview-a302233278989277",
+    "kind": "image",
+    "title": "operation-manual-2026-10-20-v10.pptx slide 13",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T13:52:34.479Z",
+    "path": "creative-library/manuals-2026-10-20/source/v10/operation-manual/13.png",
+    "sha256": "a3022332789892777d400ed96cec4c5c9f6171e33f890f9eac41db7d4da87b99",
+    "source": {
+      "tool": "@oai/artifact-tool render",
+      "provider": "OpenAI",
+      "model": null
+    },
+    "generation": {
+      "prompt": "Render slide 13 from operation-manual-2026-10-20-v10.pptx"
+    },
+    "rights": {
+      "ownership": "Derivative of project-specific presentation",
+      "commercialUse": "review-required"
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "relatedArtifactIds": [
+      "manual-e6346dcd7da4001f"
+    ]
+  },
+  {
+    "id": "preview-5bf65b1be4fd893a",
+    "kind": "image",
+    "title": "operation-manual-2026-10-20-v10.pptx slide 14",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T13:52:34.480Z",
+    "path": "creative-library/manuals-2026-10-20/source/v10/operation-manual/14.png",
+    "sha256": "5bf65b1be4fd893ab53e46fb29dd691246ec4c690dff62eeddac3c9b3e742ace",
+    "source": {
+      "tool": "@oai/artifact-tool render",
+      "provider": "OpenAI",
+      "model": null
+    },
+    "generation": {
+      "prompt": "Render slide 14 from operation-manual-2026-10-20-v10.pptx"
+    },
+    "rights": {
+      "ownership": "Derivative of project-specific presentation",
+      "commercialUse": "review-required"
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "relatedArtifactIds": [
+      "manual-e6346dcd7da4001f"
+    ]
+  },
+  {
+    "id": "preview-0ccc5c556540bbc9",
+    "kind": "image",
+    "title": "operation-manual-2026-10-20-v10.pptx slide 15",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T13:52:34.480Z",
+    "path": "creative-library/manuals-2026-10-20/source/v10/operation-manual/15.png",
+    "sha256": "0ccc5c556540bbc907f65fb50489e612cc336bce2281cdff1f7273da2663fd58",
+    "source": {
+      "tool": "@oai/artifact-tool render",
+      "provider": "OpenAI",
+      "model": null
+    },
+    "generation": {
+      "prompt": "Render slide 15 from operation-manual-2026-10-20-v10.pptx"
+    },
+    "rights": {
+      "ownership": "Derivative of project-specific presentation",
+      "commercialUse": "review-required"
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "relatedArtifactIds": [
+      "manual-e6346dcd7da4001f"
+    ]
+  },
+  {
+    "id": "preview-80b0afd1e0aa3021",
+    "kind": "image",
+    "title": "operation-manual-2026-10-20-v10.pptx slide 16",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T13:52:34.481Z",
+    "path": "creative-library/manuals-2026-10-20/source/v10/operation-manual/16.png",
+    "sha256": "80b0afd1e0aa3021058cd94b955e49f6bd2257e6e288ebadd1bee44ac76e523c",
+    "source": {
+      "tool": "@oai/artifact-tool render",
+      "provider": "OpenAI",
+      "model": null
+    },
+    "generation": {
+      "prompt": "Render slide 16 from operation-manual-2026-10-20-v10.pptx"
+    },
+    "rights": {
+      "ownership": "Derivative of project-specific presentation",
+      "commercialUse": "review-required"
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "relatedArtifactIds": [
+      "manual-e6346dcd7da4001f"
+    ]
+  },
+  {
+    "id": "preview-e1ade6d246a49d16",
+    "kind": "image",
+    "title": "operation-manual-2026-10-20-v10.pptx slide 17",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T13:52:34.482Z",
+    "path": "creative-library/manuals-2026-10-20/source/v10/operation-manual/17.png",
+    "sha256": "e1ade6d246a49d1668dd7d7d12a64a3818c19338dc7b469d45f5b2f96d7c7487",
+    "source": {
+      "tool": "@oai/artifact-tool render",
+      "provider": "OpenAI",
+      "model": null
+    },
+    "generation": {
+      "prompt": "Render slide 17 from operation-manual-2026-10-20-v10.pptx"
+    },
+    "rights": {
+      "ownership": "Derivative of project-specific presentation",
+      "commercialUse": "review-required"
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "relatedArtifactIds": [
+      "manual-e6346dcd7da4001f"
+    ]
+  },
+  {
+    "id": "preview-0b4ef6ebfaf4b981",
+    "kind": "image",
+    "title": "operation-manual-2026-10-20-v10.pptx slide 18",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T13:52:34.483Z",
+    "path": "creative-library/manuals-2026-10-20/source/v10/operation-manual/18.png",
+    "sha256": "0b4ef6ebfaf4b981e4e79f7078950e1daa940f67652fecf6d36680b0da01f93b",
+    "source": {
+      "tool": "@oai/artifact-tool render",
+      "provider": "OpenAI",
+      "model": null
+    },
+    "generation": {
+      "prompt": "Render slide 18 from operation-manual-2026-10-20-v10.pptx"
+    },
+    "rights": {
+      "ownership": "Derivative of project-specific presentation",
+      "commercialUse": "review-required"
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "relatedArtifactIds": [
+      "manual-e6346dcd7da4001f"
+    ]
+  },
+  {
+    "id": "preview-4cec5e11a06e7c00",
+    "kind": "image",
+    "title": "operation-manual-2026-10-20-v10.pptx slide 19",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T13:52:34.483Z",
+    "path": "creative-library/manuals-2026-10-20/source/v10/operation-manual/19.png",
+    "sha256": "4cec5e11a06e7c000d13b11976fd2812565682f785eb32c0cb2fec530e911cc0",
+    "source": {
+      "tool": "@oai/artifact-tool render",
+      "provider": "OpenAI",
+      "model": null
+    },
+    "generation": {
+      "prompt": "Render slide 19 from operation-manual-2026-10-20-v10.pptx"
+    },
+    "rights": {
+      "ownership": "Derivative of project-specific presentation",
+      "commercialUse": "review-required"
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "relatedArtifactIds": [
+      "manual-e6346dcd7da4001f"
+    ]
+  },
+  {
+    "id": "preview-2290b65850261d6d",
+    "kind": "image",
+    "title": "operation-manual-2026-10-20-v10.pptx slide 20",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T13:52:34.484Z",
+    "path": "creative-library/manuals-2026-10-20/source/v10/operation-manual/20.png",
+    "sha256": "2290b65850261d6de1a908e1ceb6254a1aa5a8ff6a9a5009fbc260223c2b27ff",
+    "source": {
+      "tool": "@oai/artifact-tool render",
+      "provider": "OpenAI",
+      "model": null
+    },
+    "generation": {
+      "prompt": "Render slide 20 from operation-manual-2026-10-20-v10.pptx"
+    },
+    "rights": {
+      "ownership": "Derivative of project-specific presentation",
+      "commercialUse": "review-required"
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "relatedArtifactIds": [
+      "manual-e6346dcd7da4001f"
+    ]
+  },
+  {
+    "id": "preview-cea5d2acd21f4a06",
+    "kind": "image",
+    "title": "operation-manual-2026-10-20-v10.pptx slide 21",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T13:52:34.485Z",
+    "path": "creative-library/manuals-2026-10-20/source/v10/operation-manual/21.png",
+    "sha256": "cea5d2acd21f4a06300baecc17a2308ae481b9f36f175e1ebddf9c16042e5450",
+    "source": {
+      "tool": "@oai/artifact-tool render",
+      "provider": "OpenAI",
+      "model": null
+    },
+    "generation": {
+      "prompt": "Render slide 21 from operation-manual-2026-10-20-v10.pptx"
+    },
+    "rights": {
+      "ownership": "Derivative of project-specific presentation",
+      "commercialUse": "review-required"
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "relatedArtifactIds": [
+      "manual-e6346dcd7da4001f"
+    ]
+  },
+  {
+    "id": "preview-3f84310c68443738",
+    "kind": "image",
+    "title": "operation-manual-2026-10-20-v10.pptx slide 22",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T13:52:34.486Z",
+    "path": "creative-library/manuals-2026-10-20/source/v10/operation-manual/22.png",
+    "sha256": "3f84310c68443738dea7a4aa36f66019238b1e1e175b2a01de844a36185cbd9b",
+    "source": {
+      "tool": "@oai/artifact-tool render",
+      "provider": "OpenAI",
+      "model": null
+    },
+    "generation": {
+      "prompt": "Render slide 22 from operation-manual-2026-10-20-v10.pptx"
+    },
+    "rights": {
+      "ownership": "Derivative of project-specific presentation",
+      "commercialUse": "review-required"
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "relatedArtifactIds": [
+      "manual-e6346dcd7da4001f"
+    ]
+  },
+  {
+    "id": "preview-0fbc5c6c4bc0ec9e",
+    "kind": "image",
+    "title": "operation-manual-2026-10-20-v10.pptx slide 23",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T13:52:34.487Z",
+    "path": "creative-library/manuals-2026-10-20/source/v10/operation-manual/23.png",
+    "sha256": "0fbc5c6c4bc0ec9e897990bc258e90b60fb7d71d81db93c83331f78eba86fe90",
+    "source": {
+      "tool": "@oai/artifact-tool render",
+      "provider": "OpenAI",
+      "model": null
+    },
+    "generation": {
+      "prompt": "Render slide 23 from operation-manual-2026-10-20-v10.pptx"
+    },
+    "rights": {
+      "ownership": "Derivative of project-specific presentation",
+      "commercialUse": "review-required"
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "relatedArtifactIds": [
+      "manual-e6346dcd7da4001f"
+    ]
+  },
+  {
+    "id": "preview-c8b33da8be1240b3",
+    "kind": "image",
+    "title": "operation-manual-2026-10-20-v10.pptx slide 24",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T13:52:34.488Z",
+    "path": "creative-library/manuals-2026-10-20/source/v10/operation-manual/24.png",
+    "sha256": "c8b33da8be1240b3a3a5c383be7888df223125385b27f52e20e1de539cc84329",
+    "source": {
+      "tool": "@oai/artifact-tool render",
+      "provider": "OpenAI",
+      "model": null
+    },
+    "generation": {
+      "prompt": "Render slide 24 from operation-manual-2026-10-20-v10.pptx"
+    },
+    "rights": {
+      "ownership": "Derivative of project-specific presentation",
+      "commercialUse": "review-required"
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "relatedArtifactIds": [
+      "manual-e6346dcd7da4001f"
+    ]
+  },
+  {
+    "id": "preview-567e1f7d7d2f9b93",
+    "kind": "image",
+    "title": "operation-manual-2026-10-20-v10.pptx slide 25",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T13:52:34.489Z",
+    "path": "creative-library/manuals-2026-10-20/source/v10/operation-manual/25.png",
+    "sha256": "567e1f7d7d2f9b939480920d28721c4209824b071b06d119347c2349313339d2",
+    "source": {
+      "tool": "@oai/artifact-tool render",
+      "provider": "OpenAI",
+      "model": null
+    },
+    "generation": {
+      "prompt": "Render slide 25 from operation-manual-2026-10-20-v10.pptx"
+    },
+    "rights": {
+      "ownership": "Derivative of project-specific presentation",
+      "commercialUse": "review-required"
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "relatedArtifactIds": [
+      "manual-e6346dcd7da4001f"
+    ]
+  },
+  {
+    "id": "preview-5e71443d02edd367",
+    "kind": "image",
+    "title": "operation-manual-2026-10-20-v10.pptx slide 26",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T13:52:34.489Z",
+    "path": "creative-library/manuals-2026-10-20/source/v10/operation-manual/26.png",
+    "sha256": "5e71443d02edd367be420d8f84c847c2d21a8d41628704d1a94d8c8a5b4b16d5",
+    "source": {
+      "tool": "@oai/artifact-tool render",
+      "provider": "OpenAI",
+      "model": null
+    },
+    "generation": {
+      "prompt": "Render slide 26 from operation-manual-2026-10-20-v10.pptx"
+    },
+    "rights": {
+      "ownership": "Derivative of project-specific presentation",
+      "commercialUse": "review-required"
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "relatedArtifactIds": [
+      "manual-e6346dcd7da4001f"
+    ]
+  },
+  {
+    "id": "preview-9ebfe226370350fc",
+    "kind": "image",
+    "title": "operation-manual-2026-10-20-v10.pptx slide 27",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T13:52:34.490Z",
+    "path": "creative-library/manuals-2026-10-20/source/v10/operation-manual/27.png",
+    "sha256": "9ebfe226370350fc30ab337ef0811b7667ad9244adc890f3348b166e2b09d01a",
+    "source": {
+      "tool": "@oai/artifact-tool render",
+      "provider": "OpenAI",
+      "model": null
+    },
+    "generation": {
+      "prompt": "Render slide 27 from operation-manual-2026-10-20-v10.pptx"
+    },
+    "rights": {
+      "ownership": "Derivative of project-specific presentation",
+      "commercialUse": "review-required"
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "relatedArtifactIds": [
+      "manual-e6346dcd7da4001f"
+    ]
+  },
+  {
+    "id": "preview-cc83ccf0ba071a72",
+    "kind": "image",
+    "title": "operation-manual-2026-10-20-v10.pptx slide 28",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T13:52:34.491Z",
+    "path": "creative-library/manuals-2026-10-20/source/v10/operation-manual/28.png",
+    "sha256": "cc83ccf0ba071a72de4f6a569c04b2c18571d21ef3ee01dd0bd4daa0d7f331a7",
+    "source": {
+      "tool": "@oai/artifact-tool render",
+      "provider": "OpenAI",
+      "model": null
+    },
+    "generation": {
+      "prompt": "Render slide 28 from operation-manual-2026-10-20-v10.pptx"
+    },
+    "rights": {
+      "ownership": "Derivative of project-specific presentation",
+      "commercialUse": "review-required"
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "relatedArtifactIds": [
+      "manual-e6346dcd7da4001f"
+    ]
+  },
+  {
+    "id": "manual-65f7dcb34ce57625",
+    "kind": "presentation",
+    "title": "user-manual-2026-10-20-v10.pptx",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T13:52:34.492Z",
+    "path": "creative-library/manuals-2026-10-20/originals/user-manual-2026-10-20-v10.pptx",
+    "sha256": "65f7dcb34ce5762554e46e21a184c52541b64f390c1d2db7618a3955c69b26e2",
+    "source": {
+      "tool": "@oai/artifact-tool",
+      "provider": "OpenAI",
+      "model": null
+    },
+    "generation": {
+      "prompt": "管理者は管理者専用、保護者は自分の家庭の情報だけに完全分離。個別URLとQR配布・失効手順を実装し、全ての現行資料とPowerPointを変更仕様に更新する。旧資料・試験証跡は保持し、新旧の合格判定を区別する。"
+    },
+    "rights": {
+      "ownership": "Project-specific authored documentation",
+      "commercialUse": "review-required",
+      "notes": "Project-specific documentation and synthetic demo UI; school branding remains subject to rights review; not offered for sale."
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "relatedArtifactIds": [
+      "manual-0dc99909ea92d227"
+    ]
+  },
+  {
+    "id": "preview-d2adf5ae470e2808",
+    "kind": "image",
+    "title": "user-manual-2026-10-20-v10.pptx slide 1",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T13:52:34.493Z",
+    "path": "creative-library/manuals-2026-10-20/source/v10/user-manual/01.png",
+    "sha256": "d2adf5ae470e2808c5b727271ef2bd715d1cbc2aa03f2790739240c62bc29341",
+    "source": {
+      "tool": "@oai/artifact-tool render",
+      "provider": "OpenAI",
+      "model": null
+    },
+    "generation": {
+      "prompt": "Render slide 1 from user-manual-2026-10-20-v10.pptx"
+    },
+    "rights": {
+      "ownership": "Derivative of project-specific presentation",
+      "commercialUse": "review-required"
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "relatedArtifactIds": [
+      "manual-65f7dcb34ce57625"
+    ]
+  },
+  {
+    "id": "preview-86b08bdfb340259c",
+    "kind": "image",
+    "title": "user-manual-2026-10-20-v10.pptx slide 2",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T13:52:34.494Z",
+    "path": "creative-library/manuals-2026-10-20/source/v10/user-manual/02.png",
+    "sha256": "86b08bdfb340259cca3d497d3a6ba3195b0df1c32ef2446500f6d0a6dfe216e7",
+    "source": {
+      "tool": "@oai/artifact-tool render",
+      "provider": "OpenAI",
+      "model": null
+    },
+    "generation": {
+      "prompt": "Render slide 2 from user-manual-2026-10-20-v10.pptx"
+    },
+    "rights": {
+      "ownership": "Derivative of project-specific presentation",
+      "commercialUse": "review-required"
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "relatedArtifactIds": [
+      "manual-65f7dcb34ce57625"
+    ]
+  },
+  {
+    "id": "preview-569fa3efc596a0ba",
+    "kind": "image",
+    "title": "user-manual-2026-10-20-v10.pptx slide 3",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T13:52:34.495Z",
+    "path": "creative-library/manuals-2026-10-20/source/v10/user-manual/03.png",
+    "sha256": "569fa3efc596a0ba61cd48e39a3812534f434aac455eaf8d9d2ae6d610af8046",
+    "source": {
+      "tool": "@oai/artifact-tool render",
+      "provider": "OpenAI",
+      "model": null
+    },
+    "generation": {
+      "prompt": "Render slide 3 from user-manual-2026-10-20-v10.pptx"
+    },
+    "rights": {
+      "ownership": "Derivative of project-specific presentation",
+      "commercialUse": "review-required"
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "relatedArtifactIds": [
+      "manual-65f7dcb34ce57625"
+    ]
+  },
+  {
+    "id": "preview-86a2f6cf6b06adf6",
+    "kind": "image",
+    "title": "user-manual-2026-10-20-v10.pptx slide 4",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T13:52:34.497Z",
+    "path": "creative-library/manuals-2026-10-20/source/v10/user-manual/04.png",
+    "sha256": "86a2f6cf6b06adf6892ce576c1712886e96ddcfc858d8d73ae09af7a9d8af7a9",
+    "source": {
+      "tool": "@oai/artifact-tool render",
+      "provider": "OpenAI",
+      "model": null
+    },
+    "generation": {
+      "prompt": "Render slide 4 from user-manual-2026-10-20-v10.pptx"
+    },
+    "rights": {
+      "ownership": "Derivative of project-specific presentation",
+      "commercialUse": "review-required"
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "relatedArtifactIds": [
+      "manual-65f7dcb34ce57625"
+    ]
+  },
+  {
+    "id": "preview-2b04f9b16d1e3da0",
+    "kind": "image",
+    "title": "user-manual-2026-10-20-v10.pptx slide 5",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T13:52:34.498Z",
+    "path": "creative-library/manuals-2026-10-20/source/v10/user-manual/05.png",
+    "sha256": "2b04f9b16d1e3da0b411e2e4d7ba5849ab9d7bd8889006cb6179d099bbddf45a",
+    "source": {
+      "tool": "@oai/artifact-tool render",
+      "provider": "OpenAI",
+      "model": null
+    },
+    "generation": {
+      "prompt": "Render slide 5 from user-manual-2026-10-20-v10.pptx"
+    },
+    "rights": {
+      "ownership": "Derivative of project-specific presentation",
+      "commercialUse": "review-required"
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "relatedArtifactIds": [
+      "manual-65f7dcb34ce57625"
+    ]
+  },
+  {
+    "id": "preview-d509172f0fe2cb5e",
+    "kind": "image",
+    "title": "user-manual-2026-10-20-v10.pptx slide 6",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T13:52:34.499Z",
+    "path": "creative-library/manuals-2026-10-20/source/v10/user-manual/06.png",
+    "sha256": "d509172f0fe2cb5eae2ef0029f188aaa149ba5e093fad25b9044e0e522dd2259",
+    "source": {
+      "tool": "@oai/artifact-tool render",
+      "provider": "OpenAI",
+      "model": null
+    },
+    "generation": {
+      "prompt": "Render slide 6 from user-manual-2026-10-20-v10.pptx"
+    },
+    "rights": {
+      "ownership": "Derivative of project-specific presentation",
+      "commercialUse": "review-required"
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "relatedArtifactIds": [
+      "manual-65f7dcb34ce57625"
+    ]
+  },
+  {
+    "id": "preview-272c7a1e154f6c70",
+    "kind": "image",
+    "title": "user-manual-2026-10-20-v10.pptx slide 7",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T13:52:34.499Z",
+    "path": "creative-library/manuals-2026-10-20/source/v10/user-manual/07.png",
+    "sha256": "272c7a1e154f6c7059205905a107408a9c7f21b42534958c491f1e21841a4215",
+    "source": {
+      "tool": "@oai/artifact-tool render",
+      "provider": "OpenAI",
+      "model": null
+    },
+    "generation": {
+      "prompt": "Render slide 7 from user-manual-2026-10-20-v10.pptx"
+    },
+    "rights": {
+      "ownership": "Derivative of project-specific presentation",
+      "commercialUse": "review-required"
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "relatedArtifactIds": [
+      "manual-65f7dcb34ce57625"
+    ]
+  },
+  {
+    "id": "preview-55fcd2cc2339d34e",
+    "kind": "image",
+    "title": "user-manual-2026-10-20-v10.pptx slide 8",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T13:52:34.500Z",
+    "path": "creative-library/manuals-2026-10-20/source/v10/user-manual/08.png",
+    "sha256": "55fcd2cc2339d34e54f95235105a75f326c88c91098130411db3f9e03e7eccbb",
+    "source": {
+      "tool": "@oai/artifact-tool render",
+      "provider": "OpenAI",
+      "model": null
+    },
+    "generation": {
+      "prompt": "Render slide 8 from user-manual-2026-10-20-v10.pptx"
+    },
+    "rights": {
+      "ownership": "Derivative of project-specific presentation",
+      "commercialUse": "review-required"
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "relatedArtifactIds": [
+      "manual-65f7dcb34ce57625"
+    ]
+  },
+  {
+    "id": "preview-7d60e40fb43f1218",
+    "kind": "image",
+    "title": "user-manual-2026-10-20-v10.pptx slide 9",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T13:52:34.501Z",
+    "path": "creative-library/manuals-2026-10-20/source/v10/user-manual/09.png",
+    "sha256": "7d60e40fb43f12185d9ca1b3d9544b1cef1a85285fef65d7dc5c3b7ff15a3282",
+    "source": {
+      "tool": "@oai/artifact-tool render",
+      "provider": "OpenAI",
+      "model": null
+    },
+    "generation": {
+      "prompt": "Render slide 9 from user-manual-2026-10-20-v10.pptx"
+    },
+    "rights": {
+      "ownership": "Derivative of project-specific presentation",
+      "commercialUse": "review-required"
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "relatedArtifactIds": [
+      "manual-65f7dcb34ce57625"
+    ]
+  },
+  {
+    "id": "preview-b3688d623dc2ee7d",
+    "kind": "image",
+    "title": "user-manual-2026-10-20-v10.pptx slide 10",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T13:52:34.501Z",
+    "path": "creative-library/manuals-2026-10-20/source/v10/user-manual/10.png",
+    "sha256": "b3688d623dc2ee7dc0cc9dc26da0abd79957a468223e21807b95793563e67eb1",
+    "source": {
+      "tool": "@oai/artifact-tool render",
+      "provider": "OpenAI",
+      "model": null
+    },
+    "generation": {
+      "prompt": "Render slide 10 from user-manual-2026-10-20-v10.pptx"
+    },
+    "rights": {
+      "ownership": "Derivative of project-specific presentation",
+      "commercialUse": "review-required"
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "relatedArtifactIds": [
+      "manual-65f7dcb34ce57625"
+    ]
+  },
+  {
+    "id": "preview-d21542973e0add0b",
+    "kind": "image",
+    "title": "user-manual-2026-10-20-v10.pptx slide 11",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T13:52:34.502Z",
+    "path": "creative-library/manuals-2026-10-20/source/v10/user-manual/11.png",
+    "sha256": "d21542973e0add0b2fdecab72d3f85bb4e193ef23ddb66e1b71bfed7afe1b7fa",
+    "source": {
+      "tool": "@oai/artifact-tool render",
+      "provider": "OpenAI",
+      "model": null
+    },
+    "generation": {
+      "prompt": "Render slide 11 from user-manual-2026-10-20-v10.pptx"
+    },
+    "rights": {
+      "ownership": "Derivative of project-specific presentation",
+      "commercialUse": "review-required"
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "relatedArtifactIds": [
+      "manual-65f7dcb34ce57625"
+    ]
+  },
+  {
+    "id": "preview-f1bcce00a1fd2c7b",
+    "kind": "image",
+    "title": "user-manual-2026-10-20-v10.pptx slide 12",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T13:52:34.503Z",
+    "path": "creative-library/manuals-2026-10-20/source/v10/user-manual/12.png",
+    "sha256": "f1bcce00a1fd2c7bd330314ec86e2d58d7338ae4194393ac11ca26917a65b45b",
+    "source": {
+      "tool": "@oai/artifact-tool render",
+      "provider": "OpenAI",
+      "model": null
+    },
+    "generation": {
+      "prompt": "Render slide 12 from user-manual-2026-10-20-v10.pptx"
+    },
+    "rights": {
+      "ownership": "Derivative of project-specific presentation",
+      "commercialUse": "review-required"
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "relatedArtifactIds": [
+      "manual-65f7dcb34ce57625"
+    ]
+  },
+  {
+    "id": "preview-102134ccda676d7f",
+    "kind": "image",
+    "title": "user-manual-2026-10-20-v10.pptx slide 13",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T13:52:34.504Z",
+    "path": "creative-library/manuals-2026-10-20/source/v10/user-manual/13.png",
+    "sha256": "102134ccda676d7fa394896214fdde852a36eb826490da2c1d48e2aafb840111",
+    "source": {
+      "tool": "@oai/artifact-tool render",
+      "provider": "OpenAI",
+      "model": null
+    },
+    "generation": {
+      "prompt": "Render slide 13 from user-manual-2026-10-20-v10.pptx"
+    },
+    "rights": {
+      "ownership": "Derivative of project-specific presentation",
+      "commercialUse": "review-required"
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "relatedArtifactIds": [
+      "manual-65f7dcb34ce57625"
+    ]
+  },
+  {
+    "id": "preview-b09e296517b2c69a",
+    "kind": "image",
+    "title": "user-manual-2026-10-20-v10.pptx slide 14",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T13:52:34.505Z",
+    "path": "creative-library/manuals-2026-10-20/source/v10/user-manual/14.png",
+    "sha256": "b09e296517b2c69ac0a7df08af982d6d3c6521f8bb858404e3f658435329f337",
+    "source": {
+      "tool": "@oai/artifact-tool render",
+      "provider": "OpenAI",
+      "model": null
+    },
+    "generation": {
+      "prompt": "Render slide 14 from user-manual-2026-10-20-v10.pptx"
+    },
+    "rights": {
+      "ownership": "Derivative of project-specific presentation",
+      "commercialUse": "review-required"
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "relatedArtifactIds": [
+      "manual-65f7dcb34ce57625"
+    ]
+  },
+  {
+    "id": "manual-fe76b95964a69108",
+    "kind": "presentation",
+    "title": "remaining-tasks-2026-10-20-v10.pptx",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T13:52:34.506Z",
+    "path": "creative-library/manuals-2026-10-20/originals/remaining-tasks-2026-10-20-v10.pptx",
+    "sha256": "fe76b95964a69108bc65746afd90c7a7e3beb4e1d330dfb1073e8076bcf23dd3",
+    "source": {
+      "tool": "@oai/artifact-tool",
+      "provider": "OpenAI",
+      "model": null
+    },
+    "generation": {
+      "prompt": "管理者は管理者専用、保護者は自分の家庭の情報だけに完全分離。個別URLとQR配布・失効手順を実装し、全ての現行資料とPowerPointを変更仕様に更新する。旧資料・試験証跡は保持し、新旧の合格判定を区別する。"
+    },
+    "rights": {
+      "ownership": "Project-specific authored documentation",
+      "commercialUse": "review-required",
+      "notes": "Project-specific documentation and synthetic demo UI; school branding remains subject to rights review; not offered for sale."
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "relatedArtifactIds": [
+      "manual-4e72431dd8749f29"
+    ]
+  },
+  {
+    "id": "preview-1a7fe874c538ea20",
+    "kind": "image",
+    "title": "remaining-tasks-2026-10-20-v10.pptx slide 1",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T13:52:34.508Z",
+    "path": "creative-library/manuals-2026-10-20/source/v10/remaining-tasks/01.png",
+    "sha256": "1a7fe874c538ea200c4f6abd479b60ee5fb4b2a7b7c73028fb0094415666fec1",
+    "source": {
+      "tool": "@oai/artifact-tool render",
+      "provider": "OpenAI",
+      "model": null
+    },
+    "generation": {
+      "prompt": "Render slide 1 from remaining-tasks-2026-10-20-v10.pptx"
+    },
+    "rights": {
+      "ownership": "Derivative of project-specific presentation",
+      "commercialUse": "review-required"
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "relatedArtifactIds": [
+      "manual-fe76b95964a69108"
+    ]
+  },
+  {
+    "id": "preview-11d13349489a6e84",
+    "kind": "image",
+    "title": "remaining-tasks-2026-10-20-v10.pptx slide 2",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T13:52:34.509Z",
+    "path": "creative-library/manuals-2026-10-20/source/v10/remaining-tasks/02.png",
+    "sha256": "11d13349489a6e84ad749743584b48272601b49b7dff0335eedc6c9687d721ba",
+    "source": {
+      "tool": "@oai/artifact-tool render",
+      "provider": "OpenAI",
+      "model": null
+    },
+    "generation": {
+      "prompt": "Render slide 2 from remaining-tasks-2026-10-20-v10.pptx"
+    },
+    "rights": {
+      "ownership": "Derivative of project-specific presentation",
+      "commercialUse": "review-required"
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "relatedArtifactIds": [
+      "manual-fe76b95964a69108"
+    ]
+  },
+  {
+    "id": "preview-b1404dcc5c37c7fa",
+    "kind": "image",
+    "title": "remaining-tasks-2026-10-20-v10.pptx slide 3",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T13:52:34.509Z",
+    "path": "creative-library/manuals-2026-10-20/source/v10/remaining-tasks/03.png",
+    "sha256": "b1404dcc5c37c7fa33f128256f0e1eee754921d9591e8cc17f5374ae00590d7f",
+    "source": {
+      "tool": "@oai/artifact-tool render",
+      "provider": "OpenAI",
+      "model": null
+    },
+    "generation": {
+      "prompt": "Render slide 3 from remaining-tasks-2026-10-20-v10.pptx"
+    },
+    "rights": {
+      "ownership": "Derivative of project-specific presentation",
+      "commercialUse": "review-required"
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "relatedArtifactIds": [
+      "manual-fe76b95964a69108"
+    ]
+  },
+  {
+    "id": "preview-563144245b6cb874",
+    "kind": "image",
+    "title": "remaining-tasks-2026-10-20-v10.pptx slide 4",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T13:52:34.511Z",
+    "path": "creative-library/manuals-2026-10-20/source/v10/remaining-tasks/04.png",
+    "sha256": "563144245b6cb87420977ceb8d21bc6c9aa2d2db51127001fe17262f4f68aa82",
+    "source": {
+      "tool": "@oai/artifact-tool render",
+      "provider": "OpenAI",
+      "model": null
+    },
+    "generation": {
+      "prompt": "Render slide 4 from remaining-tasks-2026-10-20-v10.pptx"
+    },
+    "rights": {
+      "ownership": "Derivative of project-specific presentation",
+      "commercialUse": "review-required"
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "relatedArtifactIds": [
+      "manual-fe76b95964a69108"
+    ]
+  },
+  {
+    "id": "preview-2b98db3a17278faf",
+    "kind": "image",
+    "title": "remaining-tasks-2026-10-20-v10.pptx slide 5",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T13:52:34.512Z",
+    "path": "creative-library/manuals-2026-10-20/source/v10/remaining-tasks/05.png",
+    "sha256": "2b98db3a17278fafebed65acb271a8e73bf667182bb1aebeca1b2448adfe398f",
+    "source": {
+      "tool": "@oai/artifact-tool render",
+      "provider": "OpenAI",
+      "model": null
+    },
+    "generation": {
+      "prompt": "Render slide 5 from remaining-tasks-2026-10-20-v10.pptx"
+    },
+    "rights": {
+      "ownership": "Derivative of project-specific presentation",
+      "commercialUse": "review-required"
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "relatedArtifactIds": [
+      "manual-fe76b95964a69108"
+    ]
+  },
+  {
+    "id": "preview-69be1524bc7f2f90",
+    "kind": "image",
+    "title": "remaining-tasks-2026-10-20-v10.pptx slide 6",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T13:52:34.513Z",
+    "path": "creative-library/manuals-2026-10-20/source/v10/remaining-tasks/06.png",
+    "sha256": "69be1524bc7f2f900b893145af79e767967c7b4c1d25aa3d9860c4cfba56dd5b",
+    "source": {
+      "tool": "@oai/artifact-tool render",
+      "provider": "OpenAI",
+      "model": null
+    },
+    "generation": {
+      "prompt": "Render slide 6 from remaining-tasks-2026-10-20-v10.pptx"
+    },
+    "rights": {
+      "ownership": "Derivative of project-specific presentation",
+      "commercialUse": "review-required"
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "relatedArtifactIds": [
+      "manual-fe76b95964a69108"
+    ]
+  },
+  {
+    "id": "preview-a991de70ac3d8f1a",
+    "kind": "image",
+    "title": "remaining-tasks-2026-10-20-v10.pptx slide 7",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T13:52:34.514Z",
+    "path": "creative-library/manuals-2026-10-20/source/v10/remaining-tasks/07.png",
+    "sha256": "a991de70ac3d8f1a0a9bdabc62617c52550a620e1acb9547dba2f5e581770e88",
+    "source": {
+      "tool": "@oai/artifact-tool render",
+      "provider": "OpenAI",
+      "model": null
+    },
+    "generation": {
+      "prompt": "Render slide 7 from remaining-tasks-2026-10-20-v10.pptx"
+    },
+    "rights": {
+      "ownership": "Derivative of project-specific presentation",
+      "commercialUse": "review-required"
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "relatedArtifactIds": [
+      "manual-fe76b95964a69108"
+    ]
+  },
+  {
+    "id": "preview-3b809333484434d6",
+    "kind": "image",
+    "title": "remaining-tasks-2026-10-20-v10.pptx slide 8",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T13:52:34.515Z",
+    "path": "creative-library/manuals-2026-10-20/source/v10/remaining-tasks/08.png",
+    "sha256": "3b809333484434d6d74de9490b8590efc8979b6224500d397d0eb2a8036c1f43",
+    "source": {
+      "tool": "@oai/artifact-tool render",
+      "provider": "OpenAI",
+      "model": null
+    },
+    "generation": {
+      "prompt": "Render slide 8 from remaining-tasks-2026-10-20-v10.pptx"
+    },
+    "rights": {
+      "ownership": "Derivative of project-specific presentation",
+      "commercialUse": "review-required"
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "relatedArtifactIds": [
+      "manual-fe76b95964a69108"
+    ]
+  },
+  {
+    "id": "preview-048147d8e25c6336",
+    "kind": "image",
+    "title": "remaining-tasks-2026-10-20-v10.pptx slide 9",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T13:52:34.516Z",
+    "path": "creative-library/manuals-2026-10-20/source/v10/remaining-tasks/09.png",
+    "sha256": "048147d8e25c63366d156f6b10e0cca8b11ee2b4ec74d2b9943e7e8074bc4976",
+    "source": {
+      "tool": "@oai/artifact-tool render",
+      "provider": "OpenAI",
+      "model": null
+    },
+    "generation": {
+      "prompt": "Render slide 9 from remaining-tasks-2026-10-20-v10.pptx"
+    },
+    "rights": {
+      "ownership": "Derivative of project-specific presentation",
+      "commercialUse": "review-required"
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "relatedArtifactIds": [
+      "manual-fe76b95964a69108"
+    ]
+  },
+  {
+    "id": "preview-4e4c1ca591499479",
+    "kind": "image",
+    "title": "remaining-tasks-2026-10-20-v10.pptx slide 10",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T13:52:34.517Z",
+    "path": "creative-library/manuals-2026-10-20/source/v10/remaining-tasks/10.png",
+    "sha256": "4e4c1ca59149947970826787611a537615ccf3000fc7b6b1722b39eca8a3e2de",
+    "source": {
+      "tool": "@oai/artifact-tool render",
+      "provider": "OpenAI",
+      "model": null
+    },
+    "generation": {
+      "prompt": "Render slide 10 from remaining-tasks-2026-10-20-v10.pptx"
+    },
+    "rights": {
+      "ownership": "Derivative of project-specific presentation",
+      "commercialUse": "review-required"
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "relatedArtifactIds": [
+      "manual-fe76b95964a69108"
+    ]
+  },
+  {
+    "id": "preview-9539308cce14067a",
+    "kind": "image",
+    "title": "remaining-tasks-2026-10-20-v10.pptx slide 11",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T13:52:34.518Z",
+    "path": "creative-library/manuals-2026-10-20/source/v10/remaining-tasks/11.png",
+    "sha256": "9539308cce14067a0e30770f4e9ac3ff037cd7f1add96abda7f7fd4cf05c132f",
+    "source": {
+      "tool": "@oai/artifact-tool render",
+      "provider": "OpenAI",
+      "model": null
+    },
+    "generation": {
+      "prompt": "Render slide 11 from remaining-tasks-2026-10-20-v10.pptx"
+    },
+    "rights": {
+      "ownership": "Derivative of project-specific presentation",
+      "commercialUse": "review-required"
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "relatedArtifactIds": [
+      "manual-fe76b95964a69108"
+    ]
+  },
+  {
+    "id": "manual-775d656977203050",
+    "kind": "presentation",
+    "title": "progress-report-role-portals-2026-10-20-v10.pptx",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T13:52:34.519Z",
+    "path": "creative-library/manuals-2026-10-20/originals/progress-report-role-portals-2026-10-20-v10.pptx",
+    "sha256": "775d65697720305015d3f677be150ad0ecd3e7661d077103f0cd78bcf004d922",
+    "source": {
+      "tool": "@oai/artifact-tool",
+      "provider": "OpenAI",
+      "model": null
+    },
+    "generation": {
+      "prompt": "管理者は管理者専用、保護者は自分の家庭の情報だけに完全分離。個別URLとQR配布・失効手順を実装し、全ての現行資料とPowerPointを変更仕様に更新する。旧資料・試験証跡は保持し、新旧の合格判定を区別する。"
+    },
+    "rights": {
+      "ownership": "Project-specific authored documentation",
+      "commercialUse": "review-required",
+      "notes": "Project-specific documentation and synthetic demo UI; school branding remains subject to rights review; not offered for sale."
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "relatedArtifactIds": []
+  },
+  {
+    "id": "preview-a1953d2e5f873174",
+    "kind": "image",
+    "title": "progress-report-role-portals-2026-10-20-v10.pptx slide 1",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T13:52:34.521Z",
+    "path": "creative-library/manuals-2026-10-20/source/v10/progress-report-role-portals/01.png",
+    "sha256": "a1953d2e5f8731747f12734e8e171239a306e4a628b473e347a49869b40590d3",
+    "source": {
+      "tool": "@oai/artifact-tool render",
+      "provider": "OpenAI",
+      "model": null
+    },
+    "generation": {
+      "prompt": "Render slide 1 from progress-report-role-portals-2026-10-20-v10.pptx"
+    },
+    "rights": {
+      "ownership": "Derivative of project-specific presentation",
+      "commercialUse": "review-required"
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "relatedArtifactIds": [
+      "manual-775d656977203050"
+    ]
+  },
+  {
+    "id": "preview-df411d32bd869ed2",
+    "kind": "image",
+    "title": "progress-report-role-portals-2026-10-20-v10.pptx slide 2",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T13:52:34.522Z",
+    "path": "creative-library/manuals-2026-10-20/source/v10/progress-report-role-portals/02.png",
+    "sha256": "df411d32bd869ed2f54bf19565f91a7776987ed69f670d05a30fc9c4908db0e2",
+    "source": {
+      "tool": "@oai/artifact-tool render",
+      "provider": "OpenAI",
+      "model": null
+    },
+    "generation": {
+      "prompt": "Render slide 2 from progress-report-role-portals-2026-10-20-v10.pptx"
+    },
+    "rights": {
+      "ownership": "Derivative of project-specific presentation",
+      "commercialUse": "review-required"
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "relatedArtifactIds": [
+      "manual-775d656977203050"
+    ]
+  },
+  {
+    "id": "preview-80dc684ccfcac5fa",
+    "kind": "image",
+    "title": "progress-report-role-portals-2026-10-20-v10.pptx slide 3",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T13:52:34.523Z",
+    "path": "creative-library/manuals-2026-10-20/source/v10/progress-report-role-portals/03.png",
+    "sha256": "80dc684ccfcac5fa6605320465900961ba0d2c29acdc1545e119c45d63694759",
+    "source": {
+      "tool": "@oai/artifact-tool render",
+      "provider": "OpenAI",
+      "model": null
+    },
+    "generation": {
+      "prompt": "Render slide 3 from progress-report-role-portals-2026-10-20-v10.pptx"
+    },
+    "rights": {
+      "ownership": "Derivative of project-specific presentation",
+      "commercialUse": "review-required"
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "relatedArtifactIds": [
+      "manual-775d656977203050"
+    ]
+  },
+  {
+    "id": "preview-e927cdfaba9f3b77",
+    "kind": "image",
+    "title": "progress-report-role-portals-2026-10-20-v10.pptx slide 4",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T13:52:34.524Z",
+    "path": "creative-library/manuals-2026-10-20/source/v10/progress-report-role-portals/04.png",
+    "sha256": "e927cdfaba9f3b77802b82ea66280c5cc47cbdde8b87e6cd6462a9344dbd4906",
+    "source": {
+      "tool": "@oai/artifact-tool render",
+      "provider": "OpenAI",
+      "model": null
+    },
+    "generation": {
+      "prompt": "Render slide 4 from progress-report-role-portals-2026-10-20-v10.pptx"
+    },
+    "rights": {
+      "ownership": "Derivative of project-specific presentation",
+      "commercialUse": "review-required"
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "relatedArtifactIds": [
+      "manual-775d656977203050"
+    ]
+  },
+  {
+    "id": "preview-b14990cf95829adc",
+    "kind": "image",
+    "title": "progress-report-role-portals-2026-10-20-v10.pptx slide 5",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T13:52:34.524Z",
+    "path": "creative-library/manuals-2026-10-20/source/v10/progress-report-role-portals/05.png",
+    "sha256": "b14990cf95829adc24243ca04381df74939da613cddba35c4e55e9757c7991db",
+    "source": {
+      "tool": "@oai/artifact-tool render",
+      "provider": "OpenAI",
+      "model": null
+    },
+    "generation": {
+      "prompt": "Render slide 5 from progress-report-role-portals-2026-10-20-v10.pptx"
+    },
+    "rights": {
+      "ownership": "Derivative of project-specific presentation",
+      "commercialUse": "review-required"
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "relatedArtifactIds": [
+      "manual-775d656977203050"
+    ]
+  },
+  {
+    "id": "preview-2d0498b2d88f4dba",
+    "kind": "image",
+    "title": "progress-report-role-portals-2026-10-20-v10.pptx slide 6",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T13:52:34.525Z",
+    "path": "creative-library/manuals-2026-10-20/source/v10/progress-report-role-portals/06.png",
+    "sha256": "2d0498b2d88f4dbab366a27a8267a4a03613e9ae1c6f8b34a4cf0255e896813d",
+    "source": {
+      "tool": "@oai/artifact-tool render",
+      "provider": "OpenAI",
+      "model": null
+    },
+    "generation": {
+      "prompt": "Render slide 6 from progress-report-role-portals-2026-10-20-v10.pptx"
+    },
+    "rights": {
+      "ownership": "Derivative of project-specific presentation",
+      "commercialUse": "review-required"
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "relatedArtifactIds": [
+      "manual-775d656977203050"
+    ]
+  },
+  {
+    "id": "manual-1871a21af0021013",
+    "kind": "presentation",
+    "title": "portal-spec-supplement-2026-10-20-v10.pptx",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T13:52:34.526Z",
+    "path": "creative-library/manuals-2026-10-20/originals/portal-spec-supplement-2026-10-20-v10.pptx",
+    "sha256": "1871a21af00210136688f6162c86fd9c920a990883bef9d794630dbadc545fde",
+    "source": {
+      "tool": "@oai/artifact-tool",
+      "provider": "OpenAI",
+      "model": null
+    },
+    "generation": {
+      "prompt": "管理者は管理者専用、保護者は自分の家庭の情報だけに完全分離。個別URLとQR配布・失効手順を実装し、全ての現行資料とPowerPointを変更仕様に更新する。旧資料・試験証跡は保持し、新旧の合格判定を区別する。"
+    },
+    "rights": {
+      "ownership": "Project-specific authored documentation",
+      "commercialUse": "review-required",
+      "notes": "Project-specific documentation and synthetic demo UI; school branding remains subject to rights review; not offered for sale."
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "relatedArtifactIds": []
+  },
+  {
+    "id": "preview-6111d66f8b0852f5",
+    "kind": "image",
+    "title": "portal-spec-supplement-2026-10-20-v10.pptx slide 1",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T13:52:34.528Z",
+    "path": "creative-library/manuals-2026-10-20/source/v10/portal-spec-supplement/01.png",
+    "sha256": "6111d66f8b0852f55d835d6b9ae66df53eda8685c43cbb4f0e8d61c3a1c308c8",
+    "source": {
+      "tool": "@oai/artifact-tool render",
+      "provider": "OpenAI",
+      "model": null
+    },
+    "generation": {
+      "prompt": "Render slide 1 from portal-spec-supplement-2026-10-20-v10.pptx"
+    },
+    "rights": {
+      "ownership": "Derivative of project-specific presentation",
+      "commercialUse": "review-required"
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "relatedArtifactIds": [
+      "manual-1871a21af0021013"
+    ]
+  },
+  {
+    "id": "preview-d05b1a8a23e1b158",
+    "kind": "image",
+    "title": "portal-spec-supplement-2026-10-20-v10.pptx slide 2",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T13:52:34.529Z",
+    "path": "creative-library/manuals-2026-10-20/source/v10/portal-spec-supplement/02.png",
+    "sha256": "d05b1a8a23e1b15830c00f8698d5c9d10a92c4f0e11ae9c01bbe1cc37283898c",
+    "source": {
+      "tool": "@oai/artifact-tool render",
+      "provider": "OpenAI",
+      "model": null
+    },
+    "generation": {
+      "prompt": "Render slide 2 from portal-spec-supplement-2026-10-20-v10.pptx"
+    },
+    "rights": {
+      "ownership": "Derivative of project-specific presentation",
+      "commercialUse": "review-required"
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "relatedArtifactIds": [
+      "manual-1871a21af0021013"
+    ]
+  },
+  {
+    "id": "preview-13d90a2937e65133",
+    "kind": "image",
+    "title": "portal-spec-supplement-2026-10-20-v10.pptx slide 3",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T13:52:34.529Z",
+    "path": "creative-library/manuals-2026-10-20/source/v10/portal-spec-supplement/03.png",
+    "sha256": "13d90a2937e65133bf38faf6730d45eeafa4668524559279a9b3ad6ceea70a58",
+    "source": {
+      "tool": "@oai/artifact-tool render",
+      "provider": "OpenAI",
+      "model": null
+    },
+    "generation": {
+      "prompt": "Render slide 3 from portal-spec-supplement-2026-10-20-v10.pptx"
+    },
+    "rights": {
+      "ownership": "Derivative of project-specific presentation",
+      "commercialUse": "review-required"
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "relatedArtifactIds": [
+      "manual-1871a21af0021013"
+    ]
+  },
+  {
+    "id": "preview-e56fe62ec349cca3",
+    "kind": "image",
+    "title": "portal-spec-supplement-2026-10-20-v10.pptx slide 4",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T13:52:34.531Z",
+    "path": "creative-library/manuals-2026-10-20/source/v10/portal-spec-supplement/04.png",
+    "sha256": "e56fe62ec349cca3e6800e946d04eb29642d5541ccdcc3d713510679227768f9",
+    "source": {
+      "tool": "@oai/artifact-tool render",
+      "provider": "OpenAI",
+      "model": null
+    },
+    "generation": {
+      "prompt": "Render slide 4 from portal-spec-supplement-2026-10-20-v10.pptx"
+    },
+    "rights": {
+      "ownership": "Derivative of project-specific presentation",
+      "commercialUse": "review-required"
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "relatedArtifactIds": [
+      "manual-1871a21af0021013"
+    ]
+  },
+  {
+    "id": "preview-b17f5931352bf41f",
+    "kind": "image",
+    "title": "portal-spec-supplement-2026-10-20-v10.pptx slide 5",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T13:52:34.532Z",
+    "path": "creative-library/manuals-2026-10-20/source/v10/portal-spec-supplement/05.png",
+    "sha256": "b17f5931352bf41f0fec3427f549caa5ef4215688d040016fcf609a23ddb385d",
+    "source": {
+      "tool": "@oai/artifact-tool render",
+      "provider": "OpenAI",
+      "model": null
+    },
+    "generation": {
+      "prompt": "Render slide 5 from portal-spec-supplement-2026-10-20-v10.pptx"
+    },
+    "rights": {
+      "ownership": "Derivative of project-specific presentation",
+      "commercialUse": "review-required"
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "relatedArtifactIds": [
+      "manual-1871a21af0021013"
+    ]
+  },
+  {
+    "id": "preview-ed63a9d3b13d8b08",
+    "kind": "image",
+    "title": "portal-spec-supplement-2026-10-20-v10.pptx slide 6",
+    "status": "reviewed",
+    "createdAt": "2026-10-20T13:52:34.533Z",
+    "path": "creative-library/manuals-2026-10-20/source/v10/portal-spec-supplement/06.png",
+    "sha256": "ed63a9d3b13d8b08cc4b513d449b297b00f6e592c2431852530db7bcd84a9e49",
+    "source": {
+      "tool": "@oai/artifact-tool render",
+      "provider": "OpenAI",
+      "model": null
+    },
+    "generation": {
+      "prompt": "Render slide 6 from portal-spec-supplement-2026-10-20-v10.pptx"
+    },
+    "rights": {
+      "ownership": "Derivative of project-specific presentation",
+      "commercialUse": "review-required"
+    },
+    "commerce": {
+      "intendedForSale": false,
+      "listingStatus": "not-listed",
+      "publishedAt": null
+    },
+    "relatedArtifactIds": [
+      "manual-1871a21af0021013"
+    ]
+  }
+]

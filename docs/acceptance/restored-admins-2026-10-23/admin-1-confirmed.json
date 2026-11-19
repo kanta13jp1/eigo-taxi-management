@@ -1,0 +1,39 @@
+{
+  "recordedAt": "2026-10-23T01:09:19.269924+00:00",
+  "environment": "mighty-test",
+  "principal": "Mighty 検証管理者",
+  "role": "admin",
+  "results": [
+    {
+      "id": "RA-01-LOGIN",
+      "status": "PASS",
+      "observation": "Fresh login after company account selection showed admin portal, named principal, 3 students and 3 ride-history entries"
+    },
+    {
+      "id": "RA-01-RELOAD",
+      "status": "PASS",
+      "observation": "Explicit browser reload retained same principal and counts"
+    },
+    {
+      "id": "RA-07-DIRECTORY",
+      "status": "PASS",
+      "activeVerifiedAdmins": 2,
+      "temporaryFamilyPresent": false,
+      "observation": "UI showed Mighty 検証管理者 and Mighty 検証管理者2, both admin / active / identity verified"
+    },
+    {
+      "id": "RA-01-LOGOUT",
+      "status": "PASS",
+      "observation": "Logout returned to admin login; explicit reload still showed login only, no business data"
+    }
+  ],
+  "admin2": "WAITING_USER_SELECTION",
+  "calendarPermissionAdded": false,
+  "productionStarted": false,
+  "googleBusinessDataWrites": false,
+  "limitations": [
+    "No Calendar reservation/cancellation/completion, physical device or concurrent session acceptance executed.",
+    "AT-26 remains incomplete; this is restored-admin authentication subcheck only."
+  ],
+  "evidenceType": "Live browser UI and DOM observations in chat; no screenshot file captured; no credential/UID retained"
+}

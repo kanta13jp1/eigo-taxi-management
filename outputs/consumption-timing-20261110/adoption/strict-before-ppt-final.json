@@ -1,0 +1,113 @@
+{
+  "structuralStatus": "FAIL",
+  "errors": [
+    {
+      "code": "PRESENTATION_CONTENT_REVIEW",
+      "message": "docs/deliverables/2026-10-23-traceability/business-2026-11-07-v33.pptx"
+    },
+    {
+      "code": "PRESENTATION_STALE",
+      "message": "docs/deliverables/2026-10-23-traceability/business-2026-11-07-v33.pptx"
+    },
+    {
+      "code": "PRESENTATION_CONTENT_REVIEW",
+      "message": "docs/deliverables/2026-10-23-traceability/requirements-2026-11-07-v33.pptx"
+    },
+    {
+      "code": "PRESENTATION_STALE",
+      "message": "docs/deliverables/2026-10-23-traceability/requirements-2026-11-07-v33.pptx"
+    },
+    {
+      "code": "PRESENTATION_CONTENT_REVIEW",
+      "message": "docs/deliverables/2026-10-23-traceability/design-2026-11-07-v33.pptx"
+    },
+    {
+      "code": "PRESENTATION_STALE",
+      "message": "docs/deliverables/2026-10-23-traceability/design-2026-11-07-v33.pptx"
+    },
+    {
+      "code": "PRESENTATION_CONTENT_REVIEW",
+      "message": "docs/deliverables/2026-10-23-traceability/test-spec-2026-11-07-v33.pptx"
+    },
+    {
+      "code": "PRESENTATION_STALE",
+      "message": "docs/deliverables/2026-10-23-traceability/test-spec-2026-11-07-v33.pptx"
+    },
+    {
+      "code": "PRESENTATION_CONTENT_REVIEW",
+      "message": "docs/deliverables/2026-10-23-traceability/tasks-2026-11-07-v33.pptx"
+    },
+    {
+      "code": "PRESENTATION_STALE",
+      "message": "docs/deliverables/2026-10-23-traceability/tasks-2026-11-07-v33.pptx"
+    },
+    {
+      "code": "PRESENTATION_CONTENT_REVIEW",
+      "message": "docs/deliverables/2026-10-23-traceability/implementation-2026-11-07-v33.pptx"
+    },
+    {
+      "code": "PRESENTATION_STALE",
+      "message": "docs/deliverables/2026-10-23-traceability/implementation-2026-11-07-v33.pptx"
+    },
+    {
+      "code": "PRESENTATION_CONTENT_REVIEW",
+      "message": "docs/deliverables/2026-10-23-traceability/test-code-2026-11-07-v33.pptx"
+    },
+    {
+      "code": "PRESENTATION_STALE",
+      "message": "docs/deliverables/2026-10-23-traceability/test-code-2026-11-07-v33.pptx"
+    },
+    {
+      "code": "PRESENTATION_CONTENT_REVIEW",
+      "message": "docs/deliverables/2026-10-23-traceability/acceptance-2026-11-07-v33.pptx"
+    },
+    {
+      "code": "PRESENTATION_STALE",
+      "message": "docs/deliverables/2026-10-23-traceability/acceptance-2026-11-07-v33.pptx"
+    },
+    {
+      "code": "PRESENTATION_CONTENT_REVIEW",
+      "message": "docs/deliverables/2026-10-23-traceability/operations-2026-11-07-v33.pptx"
+    },
+    {
+      "code": "PRESENTATION_STALE",
+      "message": "docs/deliverables/2026-10-23-traceability/operations-2026-11-07-v33.pptx"
+    },
+    {
+      "code": "PRESENTATION_CONTENT_REVIEW",
+      "message": "docs/deliverables/2026-10-23-traceability/user-2026-11-07-v33.pptx"
+    },
+    {
+      "code": "PRESENTATION_STALE",
+      "message": "docs/deliverables/2026-10-23-traceability/user-2026-11-07-v33.pptx"
+    },
+    {
+      "code": "PRESENTATION_CONTENT_REVIEW",
+      "message": "docs/deliverables/2026-10-23-traceability/matrix-2026-11-07-v33.pptx"
+    },
+    {
+      "code": "PRESENTATION_STALE",
+      "message": "docs/deliverables/2026-10-23-traceability/matrix-2026-11-07-v33.pptx"
+    },
+    {
+      "code": "PRESENTATION_CONTENT_REVIEW",
+      "message": "docs/deliverables/2026-10-23-traceability/progress-2026-11-07-v33.pptx"
+    },
+    {
+      "code": "PRESENTATION_STALE",
+      "message": "docs/deliverables/2026-10-23-traceability/progress-2026-11-07-v33.pptx"
+    }
+  ],
+  "coverageGaps": [],
+  "counts": {
+    "requirements": 39,
+    "flows": 11,
+    "testCases": 206,
+    "screens": 20,
+    "interfaces": 16,
+    "coverageGaps": 0
+  },
+  "release": "HOLD",
+  "semanticReview": "REQUIRED",
+  "thirdPartyPassed": 0
+}

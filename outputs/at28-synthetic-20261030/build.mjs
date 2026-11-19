@@ -1,0 +1,15 @@
+import fs from 'node:fs/promises';
+import { Workbook, SpreadsheetFile } from '@oai/artifact-tool';
+const wb=Workbook.create();
+const s=wb.worksheets.add('架空検証');
+s.getRange('A1:D2').values=[['識別子','架空枚数','計算結果','架空金額'],['AT28-SYNTHETIC-01',4,null,1234.5]];
+s.getRange('C2').formulas=[['=B2*2']];
+s.getRange('D2').format.numberFormat='#,##0.00';
+s.getRange('A1:D1').format={fill:'#1673A4',font:{bold:true,color:'#FFFFFF'}};
+s.getRange('A:A').format.columnWidth=25;
+s.getRange('B:D').format.columnWidth=16;
+wb.recalculate();
+await (await SpreadsheetFile.exportXlsx(wb)).save('outputs/at28-synthetic-20261030/at28-synthetic.xlsx');
+const png=await wb.render({sheetName:'架空検証',range:'A1:D2',scale:2});
+await fs.writeFile('outputs/at28-synthetic-20261030/preview.png',new Uint8Array(await png.arrayBuffer()));
+console.log(JSON.stringify({preview:'outputs/at28-synthetic-20261030/preview.png',xlsx:'outputs/at28-synthetic-20261030/at28-synthetic.xlsx'}));

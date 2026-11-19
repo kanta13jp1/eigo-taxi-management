@@ -1,0 +1,19 @@
+{
+  "freeAfterCompressionBytes": 54521856,
+  "cacheType": "npm HTTP metadata responses; installed packages preserved",
+  "removed": [
+    {
+      "url": "https://registry.npmjs.org/playwright-core",
+      "blob": "sha512/6b/a9/9b98e6ee191cac5c134846efd9172125cea39485b03fbedbd5464ebc38bac4843341b001f95922f6be96f88a8d8903b80e3b9d6112c8bd20efc994ade646",
+      "bytes": 18701195
+    },
+    {
+      "url": "https://registry.npmjs.org/playwright",
+      "blob": "sha512/d3/8c/8348e41a70de3395a1d7413675c6d14dde09f9c77cabf55d3f367ebe86f6a9c34d23bb2d4eb52abe63e20c97b4afaa26e12523ceb644b8d3cac81681df7d",
+      "bytes": 17040058
+    }
+  ],
+  "archiveHardlinksCreated": 0,
+  "method": "SHA512 matched npm index-v5 key before removing only these two cached metadata responses",
+  "compression": "NTFS lossless compression used on generated evidence files"
+}

@@ -1,0 +1,38 @@
+{
+  "recordedAt": "2026-10-23T01:35:29.800169+00:00",
+  "environment": "mighty-test",
+  "principal": "Mighty 検証管理者2",
+  "role": "admin",
+  "results": [
+    {
+      "id": "RA-02-LOGIN",
+      "status": "PASS",
+      "observation": "User selected registered admin2; live admin page showed principal2, 3 students and 3 ride-history entries"
+    },
+    {
+      "id": "RA-02-RELOAD",
+      "status": "PASS",
+      "observation": "Explicit browser reload retained admin2 principal and both counts"
+    },
+    {
+      "id": "RA-08-DIRECTORY",
+      "status": "PASS",
+      "activeVerifiedAdmins": 2,
+      "temporaryFamilyPresent": false,
+      "admin2SelfLabel": true
+    },
+    {
+      "id": "RA-02-LOGOUT",
+      "status": "PASS",
+      "observation": "Logout and explicit reload returned login only with no business data"
+    }
+  ],
+  "adminAuthenticationRestoration": "BOTH_ADMINS_CONFIRMED",
+  "calendarPermissionAdded": false,
+  "productionStarted": false,
+  "googleBusinessDataWrites": false,
+  "limitations": [
+    "AT26 reservation/shared update, AT27 concurrent completion, AT28 restore, physical devices and production smoke are not passed by these authentication checks."
+  ],
+  "evidenceType": "Live browser UI/DOM observations; no credential, UID or email retained"
+}

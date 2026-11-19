@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "checks": {
+    "existing_four_visible_student_cards_unchanged": true,
+    "one_separate_teacher_student_added": true,
+    "teacher_initial_balance_five": true,
+    "all_six_existing_visible_schedule_rows_unchanged": true,
+    "two_existing_admins_and_kobayashi_directory_unchanged": true,
+    "teacher_registered_active_reviewer_first_login_pending": true,
+    "teacher_assignment_only_own_student": true,
+    "kobayashi_url_unchanged": true,
+    "teacher_url_distinct_and_observed": true,
+    "kobayashi_assignment_preserved": true
+  }
+}

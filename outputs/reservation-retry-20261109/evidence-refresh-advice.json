@@ -1,0 +1,40 @@
+{
+  "assessedAt": "2026-11-09T00:56:22.5460796Z",
+  "reviewer": "/root/retry_independent_review",
+  "decision": "KEEP_CANDIDATE_UNADOPTED_WHILE_FIREBASE_AUTH_BLOCKED",
+  "currentStrictStatus": "FAIL_EXPECTED_FOR_CHANGED_WORKTREE",
+  "canonicalStatus": "Last deployed release 43d4ac9b2a065441 with r17/v33 remains the last verified published baseline",
+  "preserveHistoricalReports": true,
+  "pinnedAffectedTests": 39,
+  "pinnedBundles": [
+    "outputs/async-review-20261107/regression/trace-ui-2/results.json",
+    "outputs/async-review-20261107/regression/local-ui-2/results.json",
+    "docs/traceability/reports/async-review-20261107/frontend-contract-normalized.json",
+    "outputs/async-review-20261107/independent-frontend/ui/results.json"
+  ],
+  "minimalHonestRefresh": [
+    "Run the four corresponding offline suites against frozen candidate source into new unique evidence directories",
+    "Normalize absolute source path keys only where required, preserving actual newly executed hashes and result keys",
+    "Create explicit new registry revision r18 with only appropriate evidence pointers/new retry references and controlled content changes",
+    "Register the new UI script before adding it to canonical source baseline, or retain it as independent supplemental evidence outside the baseline",
+    "Review exact source baseline deltas and candidate evidence adoption; do not overwrite the previous baseline snapshot",
+    "Regenerate controlled documents from registry; put daily narrative into progress documents rather than generated tracker",
+    "Re-review and render all 12 PPTs against the new registry SHA and version before treating the revised package as current",
+    "Run strict traceability checks without ignoring stale hash or presentation errors",
+    "Deploy only allowed Firebase test site after auth; match public assets, verify public UI, then mark daily mandatory completion achieved"
+  ],
+  "forbiddenShortcuts": [
+    "Overwriting November 7 evidence with November 9 executions",
+    "Changing only sourceHashes without executing the suite",
+    "Reducing requiredSources or bypassing stale-hash checks",
+    "Changing all presentation registry SHA fields without content/render review",
+    "Claiming current strict PASS or daily deployment completion while auth remains blocked"
+  ],
+  "waitState": {
+    "production": "HOLD",
+    "firebase": "User company Google authentication challenge",
+    "customerAcceptance": "No new pass inferred",
+    "dailyCompleted": 0,
+    "customerData": "Preserve untouched"
+  }
+}

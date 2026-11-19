@@ -1,0 +1,34 @@
+{
+  "checks": {
+    "生徒台帳": {
+      "generatedExactHeaderOnly": true,
+      "preservedDuringRename": true,
+      "restoredUnchanged": true,
+      "evidenceTabPreserved": true
+    },
+    "送迎予定履歴": {
+      "generatedExactHeaderOnly": true,
+      "preservedDuringRename": true,
+      "restoredUnchanged": true,
+      "evidenceTabPreserved": true
+    },
+    "チケット購入履歴": {
+      "generatedExactHeaderOnly": true,
+      "preservedDuringRename": true,
+      "restoredUnchanged": true,
+      "evidenceTabPreserved": true
+    }
+  },
+  "allPass": true,
+  "finalSheetCount": 6,
+  "webStudentNameCells": [
+    "B4"
+  ],
+  "webStudentSingleRow": true,
+  "preservedPopulatedCells": 82,
+  "sha256": {
+    "before-schema-test.xlsx": "ddfd0500909fe51f98a047419948a7b3039d415fe935953a487bf183fb5a8749",
+    "generated-schemas.xlsx": "fc9b15a804298ba0b33eaa2bd6b1417eec24dcbc43de1f8f2ac8774b6a957ffe",
+    "restored-workbook.xlsx": "4cbe8dae04aa5dbd342a3c5a9b1f1b5d68d77670cdbb3b72b35251a04bedc9bb"
+  }
+}

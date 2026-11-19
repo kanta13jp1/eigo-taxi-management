@@ -1,0 +1,16 @@
+{
+  "beforeCount": 2,
+  "afterCount": 3,
+  "matchedCount": 1,
+  "student": {
+    "id": "STU-57635b29-c850-40b4-b0ca-80d16ace0e20",
+    "name": "AT23検証_20261020_1514",
+    "parentName": "AT23架空保護者",
+    "phone": "000-0000-0000",
+    "address": "検証専用・実在住所なし",
+    "pickupNote": "AT23 Web保存試験。送迎・連絡を行わない架空データ。",
+    "ticketBalance": 10,
+    "createdAt": "2026-10-20"
+  },
+  "oneAdded": true
+}

@@ -1,0 +1,17 @@
+{
+  "at": "2026-11-17T20:53:07.085Z",
+  "id": "AT-23",
+  "pass": true,
+  "scope": "offline GAS VM with in-memory Google service stubs",
+  "sourceSha256": "3a2bce6188a99daf331cad60a01759d6414c99f07e9d8f47a43ad28102ec336c",
+  "initializations": 2,
+  "schema": {
+    "生徒台帳": 8,
+    "送迎予定履歴": 12,
+    "チケット購入履歴": 7
+  },
+  "existingPreserved": true,
+  "newRows": 1,
+  "balance": 10,
+  "externalWrites": 0
+}

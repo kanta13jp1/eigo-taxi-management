@@ -1,0 +1,68 @@
+{
+  "registryVersion": "2026-11-07-r17",
+  "customerPasses": 0,
+  "productionStarted": false,
+  "baselineUpdates": [
+    {
+      "path": "src/components/TeacherDashboard.tsx",
+      "previous": "9a9d6474bf2c0fd3b62522b8ffcdba4ed3356dd212d7a24fe160fa67c9273627",
+      "reviewed": "1316fbc950664e43614387bea8bf614c98374c2bc1fcf6e7f3c97c9b01334ea4"
+    },
+    {
+      "path": "src/services/api.ts",
+      "previous": "7d19ad4889cadd4e831bc4af6ad5aa139a2dacd52363f57e4431f6c543eeaf89",
+      "reviewed": "62cfcc488be0eb1b104cf70e2afd1c9c7c4eef9136e1d950f2fb768479ebc30a"
+    },
+    {
+      "path": "src/components/AccountManagement.tsx",
+      "previous": null,
+      "reviewed": "b5473029c444e6dedd6c310bb4927ffdb543bc53b332912908e4df08e850c0f7"
+    },
+    {
+      "path": "scripts/test_traceability.py",
+      "previous": "fd00aa7c107b3e697f62748328dfb942dd8797921c05d57fccb36ab1186924a4",
+      "reviewed": "1bec894e08844f98373e8c61332891d4c288d384853234d5ad537ed92afd2178"
+    },
+    {
+      "path": "scripts/traceability.py",
+      "previous": "afb3801da75b019e50eff6958ee89b6f020f4f9fdb02b6234fe47f69c7e81eea",
+      "reviewed": "74d1e2d9b0cdbdf3479242da4d085777e6de30c006013d9bf06affc4b8eb4a7f"
+    },
+    {
+      "path": "src/components/Navbar.tsx",
+      "previous": null,
+      "reviewed": "2c544b44e4d40a06d723a69b434862f214c1ea320a1806446c5dbd59ccf561de"
+    },
+    {
+      "path": "gas/Code.gs",
+      "previous": "e39555d3540a22e1db6b20bf7885d6ee95a4e0ae11eace6e3fb29bccd3f6fef6",
+      "reviewed": "3a2bce6188a99daf331cad60a01759d6414c99f07e9d8f47a43ad28102ec336c"
+    },
+    {
+      "path": "tests/reviewer-ui/run.mjs",
+      "previous": null,
+      "reviewed": "cf03da35c60113d2ec55fa7a016fd503bdc5e87854dfd58bb5d2be2cdf514de3"
+    },
+    {
+      "path": "src/App.tsx",
+      "previous": "743821c58e31ea615ef8a53f3151eae58a14928c465bbde4484f807be9e824db",
+      "reviewed": "30d9a0d99648a09cd5891a6aea5e4d310ca97f9514e13bcbdd1bf8ceda60cb5f"
+    },
+    {
+      "path": "scripts/test_portals.cjs",
+      "previous": "cc538b7fe355db16bc30d9a3bc5ca268aead3296391c1cdbbe040437c3a39d06",
+      "reviewed": "22f6ce09d925a27267efb6ab27442ea2a15660a6d29fdabc4ad2e087611e805c"
+    },
+    {
+      "path": "scripts/test_gas.cjs",
+      "previous": "ebc558f172d63fdbb5d35e8d1c0b936f0ac6f367d39c12e34a9f929f1521c654",
+      "reviewed": "a4cfb2af81b0edc926ae10a1bd0179808a4c0ccb1076460dca1b84add90e2291"
+    }
+  ],
+  "reviews": [
+    "backend-review.json",
+    "frontend-review.json",
+    "checker-review.json"
+  ],
+  "evidenceNormalization": "docs/traceability/reports/async-review-20261107/frontend-contract-normalized.json"
+}

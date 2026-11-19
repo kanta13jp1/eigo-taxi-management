@@ -1,0 +1,60 @@
+{
+  "executedAt": "2026-11-17T14:34:39.675Z",
+  "mode": "Offline real App with synthetic Google identity and GAS responses; no live acceptance claim",
+  "browserVersion": "157.0.8103.50",
+  "sourceHashes": {
+    "src/services/api.ts": "9de6da24a594b1bb37d12d1dc4b2910a8cfdadf9124ed4abf22ac8104cd35e28",
+    "src/App.tsx": "1f6251c7c70b403b25e9a4cd55bd8d22d6881d42735bd964f93b99105ca87cb1",
+    "src/components/Navbar.tsx": "2c544b44e4d40a06d723a69b434862f214c1ea320a1806446c5dbd59ccf561de",
+    "src/components/TeacherDashboard.tsx": "3e46370730b4663cbdcd9002b4273b5c902e8d0f1bc64fb50cc4986bb11ed654",
+    "src/components/AccountManagement.tsx": "b5473029c444e6dedd6c310bb4927ffdb543bc53b332912908e4df08e850c0f7",
+    "tests/reviewer-ui/main.tsx": "dd8aad05777bf2c56aaa461b6212ccbd8abd9858b32cc21fcf0d130aeac54e07",
+    "tests/reviewer-ui/google-auth.ts": "d517d9747c524c019041aee3d55376eaad1873976aa0c923244ada3b9c4463e6",
+    "tests/reviewer-ui/run.mjs": "8523ca0e96e59b093cbd955be52f07fecdc93b9d0e94e95705109f7d65360e46"
+  },
+  "sourceChangesDuringRun": [],
+  "externalRequests": [],
+  "pageErrors": [],
+  "results": [
+    {
+      "id": "REVIEW-UI-01",
+      "name": "Restricted admin opens all schedules, hides full administration and filters out other students",
+      "status": "PASS"
+    },
+    {
+      "id": "REVIEW-UI-02",
+      "name": "Old fixed-date one-way and roundtrip complete through UI once and persist across reload",
+      "status": "PASS"
+    },
+    {
+      "id": "REVIEW-UI-03",
+      "name": "Restricted fixture ticket addition reaches 12 and survives reload",
+      "status": "PASS"
+    },
+    {
+      "id": "REVIEW-UI-04",
+      "name": "Parent portal remains separate and logout plus reload hides all ledger data",
+      "status": "PASS"
+    },
+    {
+      "id": "REVIEW-UI-05",
+      "name": "Full admin keeps regular menu and can select reviewer only with exact true capability",
+      "status": "PASS"
+    },
+    {
+      "id": "REVIEW-UI-06",
+      "name": "Capability false preserves existing reviewer editing and URL rotation but blocks reviewer save",
+      "status": "PASS"
+    },
+    {
+      "id": "REVIEW-UI-07",
+      "name": "String true capability is not trusted to offer reviewer registration",
+      "status": "PASS"
+    },
+    {
+      "id": "REVIEW-UI-08",
+      "name": "Full admin reviewer registration requires fixture selection and preserves role and rotate flag",
+      "status": "PASS"
+    }
+  ]
+}

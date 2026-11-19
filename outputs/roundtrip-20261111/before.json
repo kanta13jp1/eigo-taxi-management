@@ -1,0 +1,16 @@
+{
+  "case": "AT-08",
+  "checkedAt": "2026-11-11T10:12:24.972Z",
+  "scope": "synthetic parent demo / React form -> ApiService -> fresh parent list",
+  "legend": null,
+  "allGrouped": false,
+  "focusStyle": false,
+  "totalRidesBefore": 2,
+  "totalRidesAfter": 3,
+  "preservedOtherRides": true,
+  "reservedBy": "parent",
+  "rideType": "roundtrip",
+  "displayedInList": true,
+  "balanceBefore": 7,
+  "balanceAfter": 7
+}

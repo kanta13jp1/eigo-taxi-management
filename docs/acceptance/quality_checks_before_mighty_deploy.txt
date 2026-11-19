@@ -1,0 +1,30 @@
+修正・再試験の検証記録（2026-10-20 JST）
+
+対象コミット基準: 2fa6127715017d52ae0c9bd80be39c4db90a47c3 / 実際の作業ツリーはresults.jsonのsourceHashesで識別。
+不合格6件の製品コードを修正済み。外部公開・GAS実デプロイなし。
+
+BUILD: PASS（ツール実測、exit_code=0）
+RAYON_NUM_THREADS=1 / UV_THREADPOOL_SIZE=2 / npm run build
+tsc -b && vite build: 1907 modules transformed
+dist/assets/index-DMyQH3Xd.css / dist/assets/index-CH_N-4uk.js を生成。
+
+LINT: PASS / npm run lint -- --threads=1 / exit_code=0 / 警告なし。
+GAS: PASS / node scripts/test_gas.cjs / 38グループ全合格。
+GAS source SHA-256: 4e1af3401186e0bab1e1afeb0345e0d0fe05c6d5cb50aeec01a1c069df4baf6c
+GoogleサービスはNode VM内スタブ。実Google・実並行動作とは別の検証。
+
+ACCEPTANCE: PASS 22 / FAIL 0 / BLOCKED 8 / 全30件。
+実行ID: 2026-10-19T15-05-33-372Z
+画面証跡: 29枚。
+受入スクリプトのexit_code=1は未実施8件を残すため。22件の実行失敗ではない。
+
+TRACEABILITY: node scripts/generate_acceptance_docs.cjs / node scripts/validate_acceptance.cjs
+8業務フロー・30追跡行・38GAS群、文書リンク・ソース/画面SHA-256を検証。
+
+VISUAL: AT-15（残高6）・AT-18（失敗通知とフォーム保持）・AT-19（ログインへ戻る）・AT-20（家庭内だけ）を表示確認。
+実機や全画面の人手受入承認とは区別。
+
+CLEANUP: 専用ブラウザとHTTPサーバーを終了。他のアプリ・タブは停止していない。
+
+履歴: 初回修正前の記録はquality_checks_2026-10-19.txtに保持。
+残る対応: AT-23〜30、実環境の設定/個人キー配布/旧API停止、実Google・異端末・同時完了・復旧・実機・受入・公開後確認。

@@ -1,0 +1,588 @@
+{
+  "pass": true,
+  "checks": {
+    "history": true,
+    "customer": true,
+    "formula": true
+  },
+  "historyRow": 75,
+  "data": {
+    "spreadsheetId": "1PqUq7BoBBVlPolivap0eg1UPik47vNNWphyBd0DNwvU",
+    "spreadsheetUrl": "https://docs.google.com/spreadsheets/d/1PqUq7BoBBVlPolivap0eg1UPik47vNNWphyBd0DNwvU/edit",
+    "properties": {
+      "title": "英語教室送迎管理｜残タスク・受入確認（2026-10-24）",
+      "locale": "ja_JP",
+      "timeZone": "Asia/Tokyo"
+    },
+    "sheets": [
+      {
+        "properties": {
+          "sheetId": 2012604155,
+          "title": "進捗概要",
+          "index": 0,
+          "sheetType": "GRID",
+          "gridProperties": {
+            "rowCount": 1000,
+            "columnCount": 26,
+            "hideGridlines": true,
+            "rowGroupControlAfter": true,
+            "columnGroupControlAfter": true
+          }
+        },
+        "data": [
+          {
+            "startRow": 6,
+            "startColumn": 1,
+            "rowData": [
+              {
+                "values": [
+                  {
+                    "userEnteredValue": {
+                      "formulaValue": "=COUNTIF('顧客確認6件'!F6:F11,\"合格\")"
+                    },
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "NUMBER",
+                        "pattern": "0"
+                      },
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "foregroundColor": {
+                          "red": 0.1254902,
+                          "green": 0.12941177,
+                          "blue": 0.14117648
+                        },
+                        "fontFamily": "Arial",
+                        "fontSize": 11,
+                        "foregroundColorStyle": {
+                          "rgbColor": {
+                            "red": 0.1254902,
+                            "green": 0.12941177,
+                            "blue": 0.14117648
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "properties": {
+          "sheetId": 110706,
+          "title": "顧客確認6件",
+          "index": 2,
+          "sheetType": "GRID",
+          "gridProperties": {
+            "rowCount": 60,
+            "columnCount": 9,
+            "frozenRowCount": 5,
+            "hideGridlines": true
+          }
+        },
+        "data": [
+          {
+            "startRow": 5,
+            "startColumn": 5,
+            "rowData": [
+              {
+                "values": [
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "未実施"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    },
+                    "dataValidation": {
+                      "condition": {
+                        "type": "ONE_OF_LIST",
+                        "values": [
+                          {
+                            "userEnteredValue": "未実施"
+                          },
+                          {
+                            "userEnteredValue": "合格"
+                          },
+                          {
+                            "userEnteredValue": "要確認"
+                          },
+                          {
+                            "userEnteredValue": "保留"
+                          }
+                        ]
+                      },
+                      "strict": true,
+                      "showCustomUi": true
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "values": [
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "未実施"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    },
+                    "dataValidation": {
+                      "condition": {
+                        "type": "ONE_OF_LIST",
+                        "values": [
+                          {
+                            "userEnteredValue": "未実施"
+                          },
+                          {
+                            "userEnteredValue": "合格"
+                          },
+                          {
+                            "userEnteredValue": "要確認"
+                          },
+                          {
+                            "userEnteredValue": "保留"
+                          }
+                        ]
+                      },
+                      "strict": true,
+                      "showCustomUi": true
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "values": [
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "未実施"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    },
+                    "dataValidation": {
+                      "condition": {
+                        "type": "ONE_OF_LIST",
+                        "values": [
+                          {
+                            "userEnteredValue": "未実施"
+                          },
+                          {
+                            "userEnteredValue": "合格"
+                          },
+                          {
+                            "userEnteredValue": "要確認"
+                          },
+                          {
+                            "userEnteredValue": "保留"
+                          }
+                        ]
+                      },
+                      "strict": true,
+                      "showCustomUi": true
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "values": [
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "未実施"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    },
+                    "dataValidation": {
+                      "condition": {
+                        "type": "ONE_OF_LIST",
+                        "values": [
+                          {
+                            "userEnteredValue": "未実施"
+                          },
+                          {
+                            "userEnteredValue": "合格"
+                          },
+                          {
+                            "userEnteredValue": "要確認"
+                          },
+                          {
+                            "userEnteredValue": "保留"
+                          }
+                        ]
+                      },
+                      "strict": true,
+                      "showCustomUi": true
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "values": [
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "未実施"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    },
+                    "dataValidation": {
+                      "condition": {
+                        "type": "ONE_OF_LIST",
+                        "values": [
+                          {
+                            "userEnteredValue": "未実施"
+                          },
+                          {
+                            "userEnteredValue": "合格"
+                          },
+                          {
+                            "userEnteredValue": "要確認"
+                          },
+                          {
+                            "userEnteredValue": "保留"
+                          }
+                        ]
+                      },
+                      "strict": true,
+                      "showCustomUi": true
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "values": [
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "未実施"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    },
+                    "dataValidation": {
+                      "condition": {
+                        "type": "ONE_OF_LIST",
+                        "values": [
+                          {
+                            "userEnteredValue": "未実施"
+                          },
+                          {
+                            "userEnteredValue": "合格"
+                          },
+                          {
+                            "userEnteredValue": "要確認"
+                          },
+                          {
+                            "userEnteredValue": "保留"
+                          }
+                        ]
+                      },
+                      "strict": true,
+                      "showCustomUi": true
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "properties": {
+          "sheetId": 1920826968,
+          "title": "検証結果履歴",
+          "index": 4,
+          "sheetType": "GRID",
+          "gridProperties": {
+            "rowCount": 100,
+            "columnCount": 9,
+            "frozenRowCount": 1,
+            "hideGridlines": true
+          }
+        },
+        "data": [
+          {
+            "startRow": 74,
+            "rowData": [
+              {
+                "values": [
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "VR-20261111-06"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "2026-11-11"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "AT-17・不正なチケット追加拒否"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "継続累計8件目の実装修正・8項目目の開発側試験"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "不正な金額編集中の入力を即座に0円へ変換する処理を修正。明示的0円は有効のまま維持"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "旧公開で1eが0円に変換され追加が成立することを再現。新React＋デモAPI試験の不正値10通りで残数・履歴不変、0円/4980円は保存。公開aeb3c6dc735ff84dの7応答SHA一致。公開1e拒否で22枚維持、明示0円で22→32回。"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "docs/progress/2026-11-11-cumulative-eight.md／outputs/ticket-amount-20261111/at17.json／public-ui.json"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "10〜11日の継続累計8、日別各4。先行2件Claude Code Fable5.2、追加6件Codex。不正値は模擬環境/匿名公開デモでの確認。実Google・顧客確認へ加算せず0/6、本番HOLD。"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "変更分の工程横断の正本採用とAT-28未確認設定の復旧を継続。"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

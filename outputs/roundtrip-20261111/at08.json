@@ -1,0 +1,16 @@
+{
+  "case": "AT-08",
+  "checkedAt": "2026-11-11T10:12:26.545Z",
+  "scope": "synthetic parent demo / React form -> ApiService -> fresh parent list",
+  "legend": "送迎区分（フレックス予約）片道1回＝チケット1枚",
+  "allGrouped": true,
+  "focusStyle": true,
+  "totalRidesBefore": 2,
+  "totalRidesAfter": 3,
+  "preservedOtherRides": true,
+  "reservedBy": "parent",
+  "rideType": "roundtrip",
+  "displayedInList": true,
+  "balanceBefore": 7,
+  "balanceAfter": 7
+}

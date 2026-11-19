@@ -1,0 +1,17 @@
+{
+  "reviewer": "lead agent independent of implementation worker",
+  "deck": "progress-2026-11-11-cumulative-eleven.pptx",
+  "sha256": "b0138b4c00df7325cc0af3f369f9fbe51bda95e4802fc68706b5b51a0131ed3d",
+  "renderedSlides": ["final-1.png", "final-2.png", "final-3.png"],
+  "checks": [
+    "All three rendered slides inspected visually",
+    "Eleven fixes and eleven executed developer test items shown",
+    "Claude 2 / Codex 9 and daily total 4 / 7 distinguished",
+    "Backup partial result, simulated cancellation and unconfirmed public cancellation explicit",
+    "Readable public demo screenshots labeled by scope",
+    "Customer 0/6 and production hold retained",
+    "No visible text clipping or overlap"
+  ],
+  "pass": true,
+  "nativePowerPointVerified": false
+}

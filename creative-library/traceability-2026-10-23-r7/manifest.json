@@ -1,0 +1,100 @@
+{
+  "provenance": "Requested replay verification and deck revision. No publication or production authorization.",
+  "files": [
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/business-2026-10-23-v7.pptx",
+      "file": "business-2026-10-23-v7.pptx",
+      "sha256": "45849a4229b2e240d34ac76da989133a43dd220de0178735f6e35c17003415a9"
+    },
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/requirements-2026-10-23-v7.pptx",
+      "file": "requirements-2026-10-23-v7.pptx",
+      "sha256": "2b454d3e4220ba5b7b53d832e7e16df0fbfe1293d35ce5bd01154ab506449c9b"
+    },
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/design-2026-10-23-v7.pptx",
+      "file": "design-2026-10-23-v7.pptx",
+      "sha256": "7579890b8a9879ce2579b816f825664d537b02d77e421e842898899940dcb536"
+    },
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/test-spec-2026-10-23-v7.pptx",
+      "file": "test-spec-2026-10-23-v7.pptx",
+      "sha256": "ad7800116dd74a8f4ee79a1bd74cde8ed21bbf1404d7af90ba49de800485bcb0"
+    },
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/tasks-2026-10-23-v7.pptx",
+      "file": "tasks-2026-10-23-v7.pptx",
+      "sha256": "2ccb0c9dca6d3603c1e4b083944120e4331dc3b486f3ed73c02b2ca94403fa55"
+    },
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/implementation-2026-10-23-v7.pptx",
+      "file": "implementation-2026-10-23-v7.pptx",
+      "sha256": "2e5274abc8174bd0a61d1a05752dc0eb44c8ba0c1e41ee2a6524492e8baf91ab"
+    },
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/test-code-2026-10-23-v7.pptx",
+      "file": "test-code-2026-10-23-v7.pptx",
+      "sha256": "6685efa347b0df667c5dd392999d2e3d92337b8a8362a34cd2ad10e9f5251097"
+    },
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/acceptance-2026-10-23-v7.pptx",
+      "file": "acceptance-2026-10-23-v7.pptx",
+      "sha256": "ec39c7213f5fac2ba42757d2bf5b044a0e3d8650382aa1c26cd41f165679b4d7"
+    },
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/operations-2026-10-23-v7.pptx",
+      "file": "operations-2026-10-23-v7.pptx",
+      "sha256": "b2fee8eb2bc79ffdeece41ef515e228f494dbb10bcbb42f575e2f5d3c7225afc"
+    },
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/user-2026-10-23-v7.pptx",
+      "file": "user-2026-10-23-v7.pptx",
+      "sha256": "d8a335ad3358af85cdded22f94b4e23834275acb72c1a3a23fdd6c47ea61fc75"
+    },
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/matrix-2026-10-23-v7.pptx",
+      "file": "matrix-2026-10-23-v7.pptx",
+      "sha256": "401f1dae6f2a06df04201d65b4aae208b0a07cb2b62de4d6ead31531a72009cd"
+    },
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/progress-2026-10-23-v7.pptx",
+      "file": "progress-2026-10-23-v7.pptx",
+      "sha256": "1c469bd46a740d0c0a1b9f84328b90c4e7ca2577ee206ed55551a25bac76982a"
+    },
+    {
+      "source": "docs/traceability/registry.json",
+      "file": "registry.json",
+      "sha256": "b6a6c83cf9b14b8daa8c3406797ac99f883361cb295f6745e141c34d4f2a65e3"
+    },
+    {
+      "source": "docs/traceability/matrix.csv",
+      "file": "matrix.csv",
+      "sha256": "c9066deb638efa33be6d866194c5c703044ba79884b569e6b772cfcf4aec85f1"
+    },
+    {
+      "source": "docs/traceability/SELF_REVIEW_R7.md",
+      "file": "SELF_REVIEW_R7.md",
+      "sha256": "9e52d63234671b97da15aaeabba8194632ca046e58ac11c7932d2f25535faf0b"
+    },
+    {
+      "source": "docs/acceptance/concurrent-completion-plan-2026-10-23/replay-results.json",
+      "file": "replay-results.json",
+      "sha256": "076b3d7e6eb8e6ff743d8161f5534f465857078fe84dd060f9fd7a9db868940c"
+    },
+    {
+      "source": ".manual-build-20261020/traceability-decks-r7.mjs",
+      "file": "traceability-decks-r7.mjs",
+      "sha256": "fea99a9b47e42f70e592f4019709eae11ed9e41bbea5586440cb7598716fa896"
+    },
+    {
+      "source": ".manual-build-20261020/finalize-traceability-r7.mjs",
+      "file": "finalize-traceability-r7.mjs",
+      "sha256": "0854a01e7eebe177c76a02af539267564dd463db2f679828edbe92b715653cab"
+    },
+    {
+      "source": "docs/progress/2026-10-23-at27-replay.md",
+      "file": "2026-10-23-at27-replay.md",
+      "sha256": "3d28170600b612e1cd6409b55b11001cc42d8211cd1ddb8b76466c2d7fd99315"
+    }
+  ]
+}

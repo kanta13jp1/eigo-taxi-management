@@ -1,0 +1,24 @@
+{
+  "reviewer": "routed implementation worker independent of presentation author",
+  "finalSha256": "7a71258ad2d132b65a6c1debc5158346c2e03098192b0663e111e0bd87ed73a8",
+  "slideCount": 17,
+  "renderedSlidesReviewed": [
+    1,
+    2,
+    17
+  ],
+  "implementationCount": 24,
+  "distinctAcceptanceIds": 24,
+  "attribution": {
+    "Claude Code Fable 5.2": 2,
+    "Codex": 22
+  },
+  "dailyFixes": 2,
+  "customerAcceptance": "0/6",
+  "scope": "Slide 17 depicts a public synthetic saved-session rejection; mock identity/API and local demo service checks are not real Google authorization, device or customer acceptance.",
+  "legibility": "All 3 changed renders readable, no observed overlap or clipping.",
+  "packageAndLayoutChecks": "17 slides, no findings",
+  "nativePowerPointVerified": false,
+  "pass": true,
+  "editorialRecheck": "Slide 17 title matches the actual reauthentication guidance and remains fully visible in the final render."
+}

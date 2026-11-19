@@ -1,0 +1,82 @@
+{
+  "reviewedAt": "2026-11-07T07:40:00.026Z",
+  "reviewer": "independent read-only subagent",
+  "pass": true,
+  "readyForControlledLiveVerification": true,
+  "criticalFindings": [],
+  "requiredCodeChangesBeforeControlledVerification": [],
+  "checks": {
+    "independentSuite74Pass": true,
+    "uniqueCaseIds74": true,
+    "originalGreen74Pass": true,
+    "independentCasesMatchGreenExceptTiming": true,
+    "allCurrentSourceHashesMatchReviewedAfter": true,
+    "independentEvidenceHashesMatchCurrent": true,
+    "originalGreenHashesMatchCurrent": true,
+    "javascriptParses": true,
+    "manifestParses": true,
+    "manifestScopeDeclared": true,
+    "manifestExistingScopesRetained": true,
+    "executesAsDeployer": true,
+    "noDefaultCalendarFallback": true
+  },
+  "sourceHashes": {
+    "gas/Code.gs": "e39555d3540a22e1db6b20bf7885d6ee95a4e0ae11eace6e3fb29bccd3f6fef6",
+    "gas/appsscript.json": "86919604f8083bcfad5433147d46a41dba5653f190b29f6b560255628e2b9006",
+    "scripts/test_gas.cjs": "ebc558f172d63fdbb5d35e8d1c0b936f0ac6f367d39c12e34a9f929f1521c654"
+  },
+  "evidence": {
+    "independentReport": "outputs/calendar-readiness-20261107/independent/2026-11-07T07-08-24-277Z/gas-results.json",
+    "independentReportSha256": "8487939467b62eec07329644e45c357833b3d3a0b2cbca6e2bf093564cd5c111",
+    "independentLatestSha256": "7a12fbfd987d56fcd18787d42c647fe5ae90ca55e54fa95ce6999c4bccf41559",
+    "greenReport": "outputs/calendar-readiness-20261107/green/2026-11-07T07-06-00-302Z/gas-results.json",
+    "greenReportSha256": "65fbf35518c501d35d87b36b91a7c35efbceea279a15d5e3210ca4cfe6437e47",
+    "patchSha256": "6bd9ee1fb9a2954978f517d9e5587ea128111a0bcae6d23f333481c2ad4d5484",
+    "reviewMdSha256": "f1a02a4e40f9c24ccae4ed21e0ba8d4aa304ac5fe399c4a058ebf0075477ef3e",
+    "counts": {
+      "total": 74,
+      "passed": 74,
+      "failed": 0
+    }
+  },
+  "audit": {
+    "target": "Script Properties TEST_CALENDAR_ID only; request calendar IDs and event IDs cannot override selection. getCalendarById result must match exact ID, be owned by effective deploying user, and be nonprimary.",
+    "failClosed": "Empty target, missing consent, inaccessible target, primary, nonowner, wrong returned calendar ID, lookup exception, empty stored event ID or event absent in selected calendar all fail before mutate_ sets pending guard or changes sheet/calendar.",
+    "pendingGuard": "withLock_ checks existing PENDING_MUTATION_JSON before handlers; new preflight occurs inside that lock and before mutate_. Event creation uncertainty, cancellation irreversible deletion, rollback, guard retention and lock release remain covered by prior fault tests.",
+    "replay": "Existing identical reservation replay and already-cancelled replay remain side-effect free and do not require new Calendar lookup. They do not prove remote event presence. New writes require validated target.",
+    "eventResolution": "Cancellation uses only ledger stored event ID in the selected calendar; no date search, supplied event ID or default calendar fallback. Legacy unresolved rows remain unchanged and require operator reconciliation.",
+    "regression": "All prior 70 cases plus 4 new calendar-target cases pass independently. Student/purchase/complete/auth/portal/account handling and 8/12/7 schemas unchanged in reviewed patch.",
+    "scope": "calendar is a documented supported write scope for the current CalendarApp implementation; it remains account-wide OAuth authority. Runtime target checks restrict application behavior, not the OAuth grant. No claim that this is the only possible scope design."
+  },
+  "officialReferences": [
+    {
+      "url": "https://developers.google.com/apps-script/reference/calendar/calendar",
+      "supports": [
+        "getId",
+        "isMyPrimaryCalendar",
+        "isOwnedByMe",
+        "getEventById",
+        "createEvent documented calendar scope"
+      ]
+    },
+    {
+      "url": "https://developers.google.com/apps-script/reference/script/script-app",
+      "supports": [
+        "getAuthorizationInfo(AuthMode,String[])",
+        "FULL auth mode",
+        "requested scope authorization state"
+      ]
+    }
+  ],
+  "operationalNotes": [
+    "Confirm selected calendar ID/name/privacy/ownership and bound verification spreadsheet/deployment version in live environment before synthetic live reservation.",
+    "Existing rows with blank or old-calendar event IDs intentionally cannot be cancelled automatically; reconcile manually without broad search/delete.",
+    "Legacy scripts/run_all_e2e_evidence.cjs TC-G04 assumes default calendar, as already documented; update before using that evidence generator for live acceptance."
+  ],
+  "limits": [
+    "Offline Node VM uses Google-service stubs; it does not establish actual OAuth consent, live deployed source identity, real Calendar/Sheets behavior, live concurrent execution, physical devices or third-party acceptance.",
+    "The 74 entries are suite results in gas-results.json, not 74 separate live acceptance artifacts.",
+    "Live AT-24 create and AT-25 cancel should independently prove one correct target event/row, JST date/time/location/booking ID, unrelated-event preservation, unchanged ticket balance, reload persistence and safe replay."
+  ],
+  "writeBoundary": "Only outputs/calendar-readiness-20261107/independent suite evidence and this new independent-review.json were written. No live change or other source/document edit."
+}

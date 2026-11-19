@@ -1,0 +1,44 @@
+{
+  "executedAt": "2026-11-09T16:13:32.640Z",
+  "mode": "Local Chromium mobile/touch emulation; fixture only; not real Google or physical device acceptance",
+  "sourceHashes": {
+    "src/components/AddRideModal.tsx": "1bc02fa836a77d0dec2d9ec873ae4cff8bc1c98cbd24bb3da3cbbf5073856f85",
+    "scripts/fixtures/trace-ui/harness.tsx": "90bef1928e68fb736a4cf43150bb11153ba980414b5016b318f9ca494a24e136",
+    "scripts/test_booking_modal_scroll.mjs": "33bac2031ba62f38b0053d1e0ab5a22e33fe047ac432d477011e5a43a4eb0917"
+  },
+  "externalRequests": [],
+  "results": [
+    {
+      "name": "375x500",
+      "status": "PASS",
+      "submitBox": {
+        "x": 194.5,
+        "y": 383,
+        "width": 139.5,
+        "height": 60
+      },
+      "closeBox": {
+        "x": 306,
+        "y": 41,
+        "width": 28,
+        "height": 28
+      }
+    },
+    {
+      "name": "812x375",
+      "status": "PASS",
+      "submitBox": {
+        "x": 413,
+        "y": 276,
+        "width": 224,
+        "height": 42
+      },
+      "closeBox": {
+        "x": 609,
+        "y": 41,
+        "width": 28,
+        "height": 28
+      }
+    }
+  ]
+}

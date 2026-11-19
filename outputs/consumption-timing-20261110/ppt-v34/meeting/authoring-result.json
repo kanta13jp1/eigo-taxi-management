@@ -1,0 +1,19 @@
+{
+  "date": "2026-11-10",
+  "meetingDateJst": "2026-11-11T16:00:00+09:00",
+  "duration": "20–30 minutes is a proposal, not agreed end time",
+  "sourcePath": "outputs/consumption-timing-20261110/ppt-v34/finalized/progress/final/progress-2026-11-10-v34.pptx",
+  "sourceSha256": "2c575989b20e016a958c538ce3766af33821c754cf7b3775daea95e075ce5c19",
+  "briefPath": "docs/progress/2026-11-10-premeeting-brief.md",
+  "briefSha256": "fa579064203b5064abe0fb3a290338c9ecfd934deaf6ae8bd5d9bb5ac506b35d",
+  "registryVersion": "2026-11-10-r18",
+  "registrySha256": "0f6b53a352a8549cc4a66a34af7932c8e692f4dbe0280f0b13920a4eede35719",
+  "final": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\docs\\deliverables\\2026-11-10-premeeting\\premeeting-2026-11-11-v1.pptx",
+  "sha256": "590cf407be6f7428b0eb89a7dfaf3dbb6869d6dca54d1a3c8209ed3c16bfd2d3",
+  "slides": 4,
+  "validation": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\outputs\\consumption-timing-20261110\\ppt-v34\\meeting\\validation.json",
+  "nativePowerPointVerified": false,
+  "customerPassed": 0,
+  "productionStarted": false,
+  "canonicalTwelveManifestModified": false
+}

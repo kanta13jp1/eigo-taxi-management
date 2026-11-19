@@ -1,0 +1,13 @@
+63e8f0c4e320332353d309d41b43bda03eaae40308486aad354d38565a8bdbfe *00-before-restore-named-formula-ref.png
+49b9a75551df11a94cb521843c7d89b7f2d0fb66c70fe7365c21cfeff12f7723 *05-summary-copy-a1-formula.png
+2e02bcb70a36c84a4cf50d8192e5069f05898051c3bf1e8aa77d3950f3742d66 *10-verification-ledger-named-ranges-empty.png
+58a7c1981723245463906ca0f081ccb1b2ebc65dc9cb710f1d26e36641649f4f *11-verification-ledger-protection-empty.png
+6aa009b788e0c5b01f819676353df5c65f0090ea2ab883f37f6a86d71252bccc *01-range-paste-protection-empty.jpg
+2fa380a687708842f613c968997b2fad771fc05e851948b5646f0c9673ee1cda *02-range-paste-summary-formulas.jpg
+c1ef15dc5c1b5bc8dc90b22a5b0d8e121e154c802f7f52b632ddb5dc41f156f9 *03-sheet-copy-named-range-sheet-scoped.jpg
+a6ce3764194203c5e855879f6418f7f4f2bc3d678df771666d142e40ce4ba9b0 *04-sheet-copy-filter-freeze-no-range-protection.jpg
+392f6e58e6292138a3acf80a94976d0726574df37b9927e6eea27e4218b094d0 *06-summary-copy-b1-ref-and-protection-list.jpg
+f88bcc236a29ffbbdbd4d724e5a09b11cb6ffce5ddce454dbc4118756fe8b962 *07-rename-formula-follows-old-sheet.jpg
+d49ce287d4977561c6dc583b4da5673d540d80d480d254215db1997bb8f36ae4 *08-delete-old-sheet-ref-error.jpg
+7cea8484d0cbcc124dac30c787c9dcf8e0df8cc2a0910d99e5bc54f6a9fa08e3 *09-old-gid-url-opens-first-sheet.jpg
+5e917b4313ba3f5643f3a24ba7c6e234ac31768ca1d8ed4cc0963abc0c6e6a3d *12-formula-search-control-synthetic.jpg

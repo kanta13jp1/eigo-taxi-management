@@ -1,0 +1,2259 @@
+{
+  "runId": "2026-10-19T14-45-09-864Z",
+  "url": "http://127.0.0.1:4179",
+  "mode": "Built dist UI + TypeScript-transpiled source API assertions / fresh headless shell profile / demo LocalStorage; external requests blocked",
+  "timezone": "Asia/Tokyo",
+  "commit": "2fa6127715017d52ae0c9bd80be39c4db90a47c3",
+  "sourceHashes": {
+    "src/services/api.ts": "32550d6b8befdc467fd8774900336f7ae96ab0a06d2832dc7b6b0999bdcadb38",
+    "src/components/AddStudentModal.tsx": "b3d122fa603cb600810a7a6a68880847543aa163629d1eea5980431cf1753469",
+    "src/components/ParentPortal.tsx": "df72cd65cf6f8c0303908e24a14eb778bd3f6ea9a445e1f179f051918fdf4745",
+    "src/components/AddRideModal.tsx": "de3defe9b920c6fdfd02b0f2c2e62b6de912169cb563b1e3249becc2fa8685dd",
+    "src/components/TeacherDashboard.tsx": "083624341d2ff0e355619cf33a126a2519af2e194f47545222c1b13166198400",
+    "src/App.tsx": "4704aa17513ac85c8b91383298382a06cf650a1ef5f2d47b310d371714c2a963",
+    "src/components/Navbar.tsx": "2cb17237d1631950e3ac9d1df017c60bb89934af9963231fa4dd806eed4d0c7c",
+    "gas/Code.gs": "7cad92cb26034e9ac40f9d8beecbe5d7e13e03a0e0172d7f71b92a1c65cc22f6",
+    ".github/workflows/deploy.yml": "c336192a2d4c1542a222767d4c6b859935f447b4df59d7a6b242ac317eb338c7",
+    "scripts/run_acceptance.cjs": "ffe17925eb86ad7a2060371eba55be418a553abf267973e179747b0573d7f9c3",
+    "scripts/acceptance-catalog.cjs": "2b4f1759c3e6e4f66a7faf77e2103aef8c962479c2874ce505a88590a41e324d",
+    "dist/assets/index-a4NOS63R.js": "9a85486562519095de22f35879059edcc444ce7383045523f6f667d6989debbb",
+    "dist/assets/index-DZOl_Wzw.css": "2dd860a49beee224db0143ab38448f9ca44a4c9fb7a6bc90fa186f9b49355bf4",
+    "dist/index.html": "d3011db06f5bc13e6e0eaf1efa81b67121bd179370653aa06ca1190050051785"
+  },
+  "browser": "C:\\Users\\kanta\\.cache\\puppeteer\\chrome-headless-shell\\win64-154.0.8037.57\\chrome-headless-shell-win64\\chrome-headless-shell.exe",
+  "results": [
+    {
+      "id": "AT-01",
+      "status": "PASS",
+      "startedAt": "2026-10-19T14:45:10.420Z",
+      "detail": "仕様の期待結果を自動assertで確認。デモLocalStorage環境のみ。",
+      "screenshots": [
+        {
+          "file": "AT-01.png",
+          "sha256": "19d5f6ccda87fd062713b08af0f414f6403592d87172a04e946126b03b43907a"
+        }
+      ],
+      "observed": {
+        "students": [
+          {
+            "id": "STU-001",
+            "name": "田中 陽菜 (ひな)",
+            "parentName": "田中 美咲",
+            "phone": "090-1111-2222",
+            "address": "東京都世田谷区桜新町1-10-5 パークサイド201",
+            "pickupNote": "エントランス前。到着時インターホンかLINE",
+            "ticketBalance": 7,
+            "createdAt": "2026-09-01"
+          },
+          {
+            "id": "STU-002",
+            "name": "山本 颯太 (そうた)",
+            "parentName": "山本 健一",
+            "phone": "080-3333-4444",
+            "address": "東京都世田谷区用賀2-5-12",
+            "pickupNote": "正面道路沿いで待機しています",
+            "ticketBalance": 1,
+            "createdAt": "2026-09-10"
+          },
+          {
+            "id": "STU-003",
+            "name": "高橋 莉子 (りこ)",
+            "parentName": "高橋 智子",
+            "phone": "090-5555-6666",
+            "address": "東京都世田谷区弦巻3-8-1",
+            "pickupNote": "自宅玄関先までお越しください",
+            "ticketBalance": 0,
+            "createdAt": "2026-09-15"
+          }
+        ],
+        "rides": [
+          {
+            "id": "RIDE-101",
+            "studentId": "STU-001",
+            "studentName": "田中 陽菜 (ひな)",
+            "rideDate": "2026-10-19",
+            "rideTime": "16:00",
+            "rideType": "pickup",
+            "pickupLocation": "東京都世田谷区桜新町1-10-5 パークサイド201",
+            "status": "scheduled",
+            "calendarEventId": "mock-cal-101",
+            "note": "レッスン前のお迎え",
+            "reservedBy": "parent"
+          },
+          {
+            "id": "RIDE-102",
+            "studentId": "STU-002",
+            "studentName": "山本 颯太 (そうた)",
+            "rideDate": "2026-10-19",
+            "rideTime": "17:30",
+            "rideType": "dropoff",
+            "pickupLocation": "英語教室 → 東京都世田谷区用賀2-5-12",
+            "status": "scheduled",
+            "calendarEventId": "mock-cal-102",
+            "note": "レッスン後のご自宅送り",
+            "reservedBy": "teacher"
+          },
+          {
+            "id": "RIDE-103",
+            "studentId": "STU-001",
+            "studentName": "田中 陽菜 (ひな)",
+            "rideDate": "2026-10-06",
+            "rideTime": "16:00",
+            "rideType": "roundtrip",
+            "pickupLocation": "東京都世田谷区桜新町1-10-5 パークサイド201",
+            "status": "completed",
+            "completedAt": "2026-10-06 17:45",
+            "note": "送迎完了済み",
+            "reservedBy": "parent"
+          }
+        ],
+        "purchases": []
+      },
+      "finishedAt": "2026-10-19T14:45:14.402Z"
+    },
+    {
+      "id": "AT-02",
+      "status": "PASS",
+      "startedAt": "2026-10-19T14:45:14.403Z",
+      "detail": "仕様の期待結果を自動assertで確認。デモLocalStorage環境のみ。",
+      "screenshots": [
+        {
+          "file": "AT-02.png",
+          "sha256": "a2bc4cfa9ac3685ee924662fa60b8f018dac31d658b6d282a4c9e034330747c0"
+        }
+      ],
+      "observed": {
+        "students": [
+          {
+            "id": "STU-001",
+            "name": "田中 陽菜 (ひな)",
+            "parentName": "田中 美咲",
+            "phone": "090-1111-2222",
+            "address": "東京都世田谷区桜新町1-10-5 パークサイド201",
+            "pickupNote": "エントランス前。到着時インターホンかLINE",
+            "ticketBalance": 7,
+            "createdAt": "2026-09-01"
+          },
+          {
+            "id": "STU-002",
+            "name": "山本 颯太 (そうた)",
+            "parentName": "山本 健一",
+            "phone": "080-3333-4444",
+            "address": "東京都世田谷区用賀2-5-12",
+            "pickupNote": "正面道路沿いで待機しています",
+            "ticketBalance": 1,
+            "createdAt": "2026-09-10"
+          },
+          {
+            "id": "STU-003",
+            "name": "高橋 莉子 (りこ)",
+            "parentName": "高橋 智子",
+            "phone": "090-5555-6666",
+            "address": "東京都世田谷区弦巻3-8-1",
+            "pickupNote": "自宅玄関先までお越しください",
+            "ticketBalance": 0,
+            "createdAt": "2026-09-15"
+          },
+          {
+            "name": "受入テスト生徒",
+            "parentName": "受入テスト保護者",
+            "phone": "000-0000-0000",
+            "address": "受入テスト専用住所",
+            "pickupNote": "",
+            "ticketBalance": 10,
+            "id": "STU-004",
+            "createdAt": "2026-10-19"
+          }
+        ],
+        "rides": [
+          {
+            "id": "RIDE-101",
+            "studentId": "STU-001",
+            "studentName": "田中 陽菜 (ひな)",
+            "rideDate": "2026-10-19",
+            "rideTime": "16:00",
+            "rideType": "pickup",
+            "pickupLocation": "東京都世田谷区桜新町1-10-5 パークサイド201",
+            "status": "scheduled",
+            "calendarEventId": "mock-cal-101",
+            "note": "レッスン前のお迎え",
+            "reservedBy": "parent"
+          },
+          {
+            "id": "RIDE-102",
+            "studentId": "STU-002",
+            "studentName": "山本 颯太 (そうた)",
+            "rideDate": "2026-10-19",
+            "rideTime": "17:30",
+            "rideType": "dropoff",
+            "pickupLocation": "英語教室 → 東京都世田谷区用賀2-5-12",
+            "status": "scheduled",
+            "calendarEventId": "mock-cal-102",
+            "note": "レッスン後のご自宅送り",
+            "reservedBy": "teacher"
+          },
+          {
+            "id": "RIDE-103",
+            "studentId": "STU-001",
+            "studentName": "田中 陽菜 (ひな)",
+            "rideDate": "2026-10-06",
+            "rideTime": "16:00",
+            "rideType": "roundtrip",
+            "pickupLocation": "東京都世田谷区桜新町1-10-5 パークサイド201",
+            "status": "completed",
+            "completedAt": "2026-10-06 17:45",
+            "note": "送迎完了済み",
+            "reservedBy": "parent"
+          }
+        ],
+        "purchases": []
+      },
+      "finishedAt": "2026-10-19T14:45:17.201Z"
+    },
+    {
+      "id": "AT-03",
+      "status": "PASS",
+      "startedAt": "2026-10-19T14:45:17.201Z",
+      "detail": "仕様の期待結果を自動assertで確認。デモLocalStorage環境のみ。",
+      "screenshots": [
+        {
+          "file": "AT-03.png",
+          "sha256": "93bc1e57b7d068ebd2c7f631631b721cff2f8cb8d9381fcd9e0649769df5453b"
+        }
+      ],
+      "observed": {
+        "students": [
+          {
+            "id": "STU-001",
+            "name": "田中 陽菜 (ひな)",
+            "parentName": "田中 美咲",
+            "phone": "090-1111-2222",
+            "address": "東京都世田谷区桜新町1-10-5 パークサイド201",
+            "pickupNote": "エントランス前。到着時インターホンかLINE",
+            "ticketBalance": 7,
+            "createdAt": "2026-09-01"
+          },
+          {
+            "id": "STU-002",
+            "name": "山本 颯太 (そうた)",
+            "parentName": "山本 健一",
+            "phone": "080-3333-4444",
+            "address": "東京都世田谷区用賀2-5-12",
+            "pickupNote": "正面道路沿いで待機しています",
+            "ticketBalance": 1,
+            "createdAt": "2026-09-10"
+          },
+          {
+            "id": "STU-003",
+            "name": "高橋 莉子 (りこ)",
+            "parentName": "高橋 智子",
+            "phone": "090-5555-6666",
+            "address": "東京都世田谷区弦巻3-8-1",
+            "pickupNote": "自宅玄関先までお越しください",
+            "ticketBalance": 0,
+            "createdAt": "2026-09-15"
+          }
+        ],
+        "rides": [
+          {
+            "id": "RIDE-101",
+            "studentId": "STU-001",
+            "studentName": "田中 陽菜 (ひな)",
+            "rideDate": "2026-10-19",
+            "rideTime": "16:00",
+            "rideType": "pickup",
+            "pickupLocation": "東京都世田谷区桜新町1-10-5 パークサイド201",
+            "status": "scheduled",
+            "calendarEventId": "mock-cal-101",
+            "note": "レッスン前のお迎え",
+            "reservedBy": "parent"
+          },
+          {
+            "id": "RIDE-102",
+            "studentId": "STU-002",
+            "studentName": "山本 颯太 (そうた)",
+            "rideDate": "2026-10-19",
+            "rideTime": "17:30",
+            "rideType": "dropoff",
+            "pickupLocation": "英語教室 → 東京都世田谷区用賀2-5-12",
+            "status": "scheduled",
+            "calendarEventId": "mock-cal-102",
+            "note": "レッスン後のご自宅送り",
+            "reservedBy": "teacher"
+          },
+          {
+            "id": "RIDE-103",
+            "studentId": "STU-001",
+            "studentName": "田中 陽菜 (ひな)",
+            "rideDate": "2026-10-06",
+            "rideTime": "16:00",
+            "rideType": "roundtrip",
+            "pickupLocation": "東京都世田谷区桜新町1-10-5 パークサイド201",
+            "status": "completed",
+            "completedAt": "2026-10-06 17:45",
+            "note": "送迎完了済み",
+            "reservedBy": "parent"
+          }
+        ],
+        "purchases": []
+      },
+      "finishedAt": "2026-10-19T14:45:19.482Z"
+    },
+    {
+      "id": "AT-04",
+      "status": "PASS",
+      "startedAt": "2026-10-19T14:45:19.482Z",
+      "detail": "仕様の期待結果を自動assertで確認。デモLocalStorage環境のみ。",
+      "screenshots": [
+        {
+          "file": "AT-04-balance-0.png",
+          "sha256": "a5ee39f10c56c05da72a3cf01083d97db9feb1b762d75721a3295b4c287fe0a3"
+        },
+        {
+          "file": "AT-04-balance-1.png",
+          "sha256": "bdbff9be3768dd2d9a8a5988bc72091d0a5d6003e7095611e11e55b6c6c50759"
+        },
+        {
+          "file": "AT-04-balance-2.png",
+          "sha256": "80434df349e7eac3818544dd6bd225e0632eb951658ea1b0fbef95154a1e0e57"
+        },
+        {
+          "file": "AT-04.png",
+          "sha256": "d5cbfeddcbdaa34db343f52c6597cdac4b674a11df18128f1121084cfdd0c094"
+        }
+      ],
+      "observed": {
+        "students": [
+          {
+            "id": "STU-001",
+            "name": "田中 陽菜 (ひな)",
+            "parentName": "田中 美咲",
+            "phone": "090-1111-2222",
+            "address": "東京都世田谷区桜新町1-10-5 パークサイド201",
+            "pickupNote": "エントランス前。到着時インターホンかLINE",
+            "ticketBalance": 0,
+            "createdAt": "2026-09-01"
+          },
+          {
+            "id": "STU-002",
+            "name": "山本 颯太 (そうた)",
+            "parentName": "山本 健一",
+            "phone": "080-3333-4444",
+            "address": "東京都世田谷区用賀2-5-12",
+            "pickupNote": "正面道路沿いで待機しています",
+            "ticketBalance": 1,
+            "createdAt": "2026-09-10"
+          },
+          {
+            "id": "STU-003",
+            "name": "高橋 莉子 (りこ)",
+            "parentName": "高橋 智子",
+            "phone": "090-5555-6666",
+            "address": "東京都世田谷区弦巻3-8-1",
+            "pickupNote": "自宅玄関先までお越しください",
+            "ticketBalance": 0,
+            "createdAt": "2026-09-15"
+          }
+        ],
+        "rides": [
+          {
+            "id": "RIDE-101",
+            "studentId": "STU-001",
+            "studentName": "田中 陽菜 (ひな)",
+            "rideDate": "2026-10-19",
+            "rideTime": "16:00",
+            "rideType": "pickup",
+            "pickupLocation": "東京都世田谷区桜新町1-10-5 パークサイド201",
+            "status": "scheduled",
+            "calendarEventId": "mock-cal-101",
+            "note": "レッスン前のお迎え",
+            "reservedBy": "parent"
+          },
+          {
+            "id": "RIDE-102",
+            "studentId": "STU-002",
+            "studentName": "山本 颯太 (そうた)",
+            "rideDate": "2026-10-19",
+            "rideTime": "17:30",
+            "rideType": "dropoff",
+            "pickupLocation": "英語教室 → 東京都世田谷区用賀2-5-12",
+            "status": "scheduled",
+            "calendarEventId": "mock-cal-102",
+            "note": "レッスン後のご自宅送り",
+            "reservedBy": "teacher"
+          },
+          {
+            "id": "RIDE-103",
+            "studentId": "STU-001",
+            "studentName": "田中 陽菜 (ひな)",
+            "rideDate": "2026-10-06",
+            "rideTime": "16:00",
+            "rideType": "roundtrip",
+            "pickupLocation": "東京都世田谷区桜新町1-10-5 パークサイド201",
+            "status": "completed",
+            "completedAt": "2026-10-06 17:45",
+            "note": "送迎完了済み",
+            "reservedBy": "parent"
+          }
+        ],
+        "purchases": []
+      },
+      "finishedAt": "2026-10-19T14:45:24.799Z"
+    },
+    {
+      "id": "AT-05",
+      "status": "PASS",
+      "startedAt": "2026-10-19T14:45:24.799Z",
+      "detail": "仕様の期待結果を自動assertで確認。デモLocalStorage環境のみ。",
+      "screenshots": [
+        {
+          "file": "AT-05.png",
+          "sha256": "09dcf4df19e708cb5e7b11c73fa4591eb78bd8fa5c36cc628b29efeac0219b85"
+        }
+      ],
+      "observed": {
+        "students": [
+          {
+            "id": "STU-001",
+            "name": "田中 陽菜 (ひな)",
+            "parentName": "田中 美咲",
+            "phone": "090-1111-2222",
+            "address": "東京都世田谷区桜新町1-10-5 パークサイド201",
+            "pickupNote": "エントランス前。到着時インターホンかLINE",
+            "ticketBalance": 17,
+            "createdAt": "2026-09-01"
+          },
+          {
+            "id": "STU-002",
+            "name": "山本 颯太 (そうた)",
+            "parentName": "山本 健一",
+            "phone": "080-3333-4444",
+            "address": "東京都世田谷区用賀2-5-12",
+            "pickupNote": "正面道路沿いで待機しています",
+            "ticketBalance": 1,
+            "createdAt": "2026-09-10"
+          },
+          {
+            "id": "STU-003",
+            "name": "高橋 莉子 (りこ)",
+            "parentName": "高橋 智子",
+            "phone": "090-5555-6666",
+            "address": "東京都世田谷区弦巻3-8-1",
+            "pickupNote": "自宅玄関先までお越しください",
+            "ticketBalance": 0,
+            "createdAt": "2026-09-15"
+          }
+        ],
+        "rides": [
+          {
+            "id": "RIDE-101",
+            "studentId": "STU-001",
+            "studentName": "田中 陽菜 (ひな)",
+            "rideDate": "2026-10-19",
+            "rideTime": "16:00",
+            "rideType": "pickup",
+            "pickupLocation": "東京都世田谷区桜新町1-10-5 パークサイド201",
+            "status": "scheduled",
+            "calendarEventId": "mock-cal-101",
+            "note": "レッスン前のお迎え",
+            "reservedBy": "parent"
+          },
+          {
+            "id": "RIDE-102",
+            "studentId": "STU-002",
+            "studentName": "山本 颯太 (そうた)",
+            "rideDate": "2026-10-19",
+            "rideTime": "17:30",
+            "rideType": "dropoff",
+            "pickupLocation": "英語教室 → 東京都世田谷区用賀2-5-12",
+            "status": "scheduled",
+            "calendarEventId": "mock-cal-102",
+            "note": "レッスン後のご自宅送り",
+            "reservedBy": "teacher"
+          },
+          {
+            "id": "RIDE-103",
+            "studentId": "STU-001",
+            "studentName": "田中 陽菜 (ひな)",
+            "rideDate": "2026-10-06",
+            "rideTime": "16:00",
+            "rideType": "roundtrip",
+            "pickupLocation": "東京都世田谷区桜新町1-10-5 パークサイド201",
+            "status": "completed",
+            "completedAt": "2026-10-06 17:45",
+            "note": "送迎完了済み",
+            "reservedBy": "parent"
+          }
+        ],
+        "purchases": [
+          {
+            "id": "PUR-26464",
+            "studentId": "STU-001",
+            "studentName": "田中 陽菜 (ひな)",
+            "purchaseDate": "2026-10-19",
+            "ticketCount": 10,
+            "amount": 10000,
+            "note": "受入追加"
+          }
+        ]
+      },
+      "finishedAt": "2026-10-19T14:45:27.491Z"
+    },
+    {
+      "id": "AT-06",
+      "status": "PASS",
+      "startedAt": "2026-10-19T14:45:27.491Z",
+      "detail": "仕様の期待結果を自動assertで確認。デモLocalStorage環境のみ。",
+      "screenshots": [
+        {
+          "file": "AT-06.png",
+          "sha256": "468d96284f5851ad39973f9e0cf7bdb5d01c74b932b922a6f6b9d1176b3e9f0a"
+        }
+      ],
+      "observed": {
+        "students": [
+          {
+            "id": "STU-001",
+            "name": "田中 陽菜 (ひな)",
+            "parentName": "田中 美咲",
+            "phone": "090-1111-2222",
+            "address": "東京都世田谷区桜新町1-10-5 パークサイド201",
+            "pickupNote": "エントランス前。到着時インターホンかLINE",
+            "ticketBalance": 7,
+            "createdAt": "2026-09-01"
+          },
+          {
+            "id": "STU-002",
+            "name": "山本 颯太 (そうた)",
+            "parentName": "山本 健一",
+            "phone": "080-3333-4444",
+            "address": "東京都世田谷区用賀2-5-12",
+            "pickupNote": "正面道路沿いで待機しています",
+            "ticketBalance": 1,
+            "createdAt": "2026-09-10"
+          },
+          {
+            "id": "STU-003",
+            "name": "高橋 莉子 (りこ)",
+            "parentName": "高橋 智子",
+            "phone": "090-5555-6666",
+            "address": "東京都世田谷区弦巻3-8-1",
+            "pickupNote": "自宅玄関先までお越しください",
+            "ticketBalance": 0,
+            "createdAt": "2026-09-15"
+          }
+        ],
+        "rides": [
+          {
+            "id": "RIDE-1792421129557",
+            "studentId": "STU-001",
+            "studentName": "田中 陽菜 (ひな)",
+            "rideDate": "2026-10-20",
+            "rideTime": "16:30",
+            "rideType": "pickup",
+            "pickupLocation": "東京都世田谷区桜新町1-10-5 パークサイド201",
+            "status": "scheduled",
+            "calendarEventId": "cal-1792421129557",
+            "note": "",
+            "reservedBy": "parent"
+          },
+          {
+            "id": "RIDE-102",
+            "studentId": "STU-002",
+            "studentName": "山本 颯太 (そうた)",
+            "rideDate": "2026-10-19",
+            "rideTime": "17:30",
+            "rideType": "dropoff",
+            "pickupLocation": "英語教室 → 東京都世田谷区用賀2-5-12",
+            "status": "scheduled",
+            "calendarEventId": "mock-cal-102",
+            "note": "レッスン後のご自宅送り",
+            "reservedBy": "teacher"
+          },
+          {
+            "id": "RIDE-101",
+            "studentId": "STU-001",
+            "studentName": "田中 陽菜 (ひな)",
+            "rideDate": "2026-10-19",
+            "rideTime": "16:00",
+            "rideType": "pickup",
+            "pickupLocation": "東京都世田谷区桜新町1-10-5 パークサイド201",
+            "status": "scheduled",
+            "calendarEventId": "mock-cal-101",
+            "note": "レッスン前のお迎え",
+            "reservedBy": "parent"
+          },
+          {
+            "id": "RIDE-103",
+            "studentId": "STU-001",
+            "studentName": "田中 陽菜 (ひな)",
+            "rideDate": "2026-10-06",
+            "rideTime": "16:00",
+            "rideType": "roundtrip",
+            "pickupLocation": "東京都世田谷区桜新町1-10-5 パークサイド201",
+            "status": "completed",
+            "completedAt": "2026-10-06 17:45",
+            "note": "送迎完了済み",
+            "reservedBy": "parent"
+          }
+        ],
+        "purchases": []
+      },
+      "finishedAt": "2026-10-19T14:45:29.869Z"
+    },
+    {
+      "id": "AT-07",
+      "status": "PASS",
+      "startedAt": "2026-10-19T14:45:29.870Z",
+      "detail": "仕様の期待結果を自動assertで確認。デモLocalStorage環境のみ。",
+      "screenshots": [
+        {
+          "file": "AT-07.png",
+          "sha256": "5a3a22fcd949269de6018438d75051c3cb2e366005595f3fb941726e7506cc6b"
+        }
+      ],
+      "observed": {
+        "students": [
+          {
+            "id": "STU-001",
+            "name": "田中 陽菜 (ひな)",
+            "parentName": "田中 美咲",
+            "phone": "090-1111-2222",
+            "address": "東京都世田谷区桜新町1-10-5 パークサイド201",
+            "pickupNote": "エントランス前。到着時インターホンかLINE",
+            "ticketBalance": 7,
+            "createdAt": "2026-09-01"
+          },
+          {
+            "id": "STU-002",
+            "name": "山本 颯太 (そうた)",
+            "parentName": "山本 健一",
+            "phone": "080-3333-4444",
+            "address": "東京都世田谷区用賀2-5-12",
+            "pickupNote": "正面道路沿いで待機しています",
+            "ticketBalance": 1,
+            "createdAt": "2026-09-10"
+          },
+          {
+            "id": "STU-003",
+            "name": "高橋 莉子 (りこ)",
+            "parentName": "高橋 智子",
+            "phone": "090-5555-6666",
+            "address": "東京都世田谷区弦巻3-8-1",
+            "pickupNote": "自宅玄関先までお越しください",
+            "ticketBalance": 0,
+            "createdAt": "2026-09-15"
+          }
+        ],
+        "rides": [
+          {
+            "id": "RIDE-1792421131496",
+            "studentId": "STU-001",
+            "studentName": "田中 陽菜 (ひな)",
+            "rideDate": "2026-10-20",
+            "rideTime": "16:30",
+            "rideType": "dropoff",
+            "pickupLocation": "受入テスト専用住所",
+            "status": "scheduled",
+            "calendarEventId": "cal-1792421131496",
+            "note": "acceptance",
+            "reservedBy": "parent"
+          },
+          {
+            "id": "RIDE-102",
+            "studentId": "STU-002",
+            "studentName": "山本 颯太 (そうた)",
+            "rideDate": "2026-10-19",
+            "rideTime": "17:30",
+            "rideType": "dropoff",
+            "pickupLocation": "英語教室 → 東京都世田谷区用賀2-5-12",
+            "status": "scheduled",
+            "calendarEventId": "mock-cal-102",
+            "note": "レッスン後のご自宅送り",
+            "reservedBy": "teacher"
+          },
+          {
+            "id": "RIDE-101",
+            "studentId": "STU-001",
+            "studentName": "田中 陽菜 (ひな)",
+            "rideDate": "2026-10-19",
+            "rideTime": "16:00",
+            "rideType": "pickup",
+            "pickupLocation": "東京都世田谷区桜新町1-10-5 パークサイド201",
+            "status": "scheduled",
+            "calendarEventId": "mock-cal-101",
+            "note": "レッスン前のお迎え",
+            "reservedBy": "parent"
+          },
+          {
+            "id": "RIDE-103",
+            "studentId": "STU-001",
+            "studentName": "田中 陽菜 (ひな)",
+            "rideDate": "2026-10-06",
+            "rideTime": "16:00",
+            "rideType": "roundtrip",
+            "pickupLocation": "東京都世田谷区桜新町1-10-5 パークサイド201",
+            "status": "completed",
+            "completedAt": "2026-10-06 17:45",
+            "note": "送迎完了済み",
+            "reservedBy": "parent"
+          }
+        ],
+        "purchases": []
+      },
+      "finishedAt": "2026-10-19T14:45:32.858Z"
+    },
+    {
+      "id": "AT-08",
+      "status": "PASS",
+      "startedAt": "2026-10-19T14:45:32.858Z",
+      "detail": "仕様の期待結果を自動assertで確認。デモLocalStorage環境のみ。",
+      "screenshots": [
+        {
+          "file": "AT-08.png",
+          "sha256": "6e8efefb43f92e1b88c40b111c915dd496b78e8084e5201154cd834484beb51d"
+        }
+      ],
+      "observed": {
+        "students": [
+          {
+            "id": "STU-001",
+            "name": "田中 陽菜 (ひな)",
+            "parentName": "田中 美咲",
+            "phone": "090-1111-2222",
+            "address": "東京都世田谷区桜新町1-10-5 パークサイド201",
+            "pickupNote": "エントランス前。到着時インターホンかLINE",
+            "ticketBalance": 7,
+            "createdAt": "2026-09-01"
+          },
+          {
+            "id": "STU-002",
+            "name": "山本 颯太 (そうた)",
+            "parentName": "山本 健一",
+            "phone": "080-3333-4444",
+            "address": "東京都世田谷区用賀2-5-12",
+            "pickupNote": "正面道路沿いで待機しています",
+            "ticketBalance": 1,
+            "createdAt": "2026-09-10"
+          },
+          {
+            "id": "STU-003",
+            "name": "高橋 莉子 (りこ)",
+            "parentName": "高橋 智子",
+            "phone": "090-5555-6666",
+            "address": "東京都世田谷区弦巻3-8-1",
+            "pickupNote": "自宅玄関先までお越しください",
+            "ticketBalance": 0,
+            "createdAt": "2026-09-15"
+          }
+        ],
+        "rides": [
+          {
+            "id": "RIDE-1792421134927",
+            "studentId": "STU-001",
+            "studentName": "田中 陽菜 (ひな)",
+            "rideDate": "2026-10-20",
+            "rideTime": "16:30",
+            "rideType": "roundtrip",
+            "pickupLocation": "受入テスト専用住所",
+            "status": "scheduled",
+            "calendarEventId": "cal-1792421134927",
+            "note": "acceptance",
+            "reservedBy": "parent"
+          },
+          {
+            "id": "RIDE-102",
+            "studentId": "STU-002",
+            "studentName": "山本 颯太 (そうた)",
+            "rideDate": "2026-10-19",
+            "rideTime": "17:30",
+            "rideType": "dropoff",
+            "pickupLocation": "英語教室 → 東京都世田谷区用賀2-5-12",
+            "status": "scheduled",
+            "calendarEventId": "mock-cal-102",
+            "note": "レッスン後のご自宅送り",
+            "reservedBy": "teacher"
+          },
+          {
+            "id": "RIDE-101",
+            "studentId": "STU-001",
+            "studentName": "田中 陽菜 (ひな)",
+            "rideDate": "2026-10-19",
+            "rideTime": "16:00",
+            "rideType": "pickup",
+            "pickupLocation": "東京都世田谷区桜新町1-10-5 パークサイド201",
+            "status": "scheduled",
+            "calendarEventId": "mock-cal-101",
+            "note": "レッスン前のお迎え",
+            "reservedBy": "parent"
+          },
+          {
+            "id": "RIDE-103",
+            "studentId": "STU-001",
+            "studentName": "田中 陽菜 (ひな)",
+            "rideDate": "2026-10-06",
+            "rideTime": "16:00",
+            "rideType": "roundtrip",
+            "pickupLocation": "東京都世田谷区桜新町1-10-5 パークサイド201",
+            "status": "completed",
+            "completedAt": "2026-10-06 17:45",
+            "note": "送迎完了済み",
+            "reservedBy": "parent"
+          }
+        ],
+        "purchases": []
+      },
+      "finishedAt": "2026-10-19T14:45:36.247Z"
+    },
+    {
+      "id": "AT-09",
+      "status": "PASS",
+      "startedAt": "2026-10-19T14:45:36.247Z",
+      "detail": "仕様の期待結果を自動assertで確認。デモLocalStorage環境のみ。",
+      "screenshots": [
+        {
+          "file": "AT-09.png",
+          "sha256": "7a901fbe81f14f0d6b39b790161140ba48210bf6ed8f60195ffb66ef1a85b044"
+        }
+      ],
+      "observed": {
+        "students": [
+          {
+            "id": "STU-001",
+            "name": "田中 陽菜 (ひな)",
+            "parentName": "田中 美咲",
+            "phone": "090-1111-2222",
+            "address": "東京都世田谷区桜新町1-10-5 パークサイド201",
+            "pickupNote": "エントランス前。到着時インターホンかLINE",
+            "ticketBalance": 7,
+            "createdAt": "2026-09-01"
+          },
+          {
+            "id": "STU-002",
+            "name": "山本 颯太 (そうた)",
+            "parentName": "山本 健一",
+            "phone": "080-3333-4444",
+            "address": "東京都世田谷区用賀2-5-12",
+            "pickupNote": "正面道路沿いで待機しています",
+            "ticketBalance": 1,
+            "createdAt": "2026-09-10"
+          },
+          {
+            "id": "STU-003",
+            "name": "高橋 莉子 (りこ)",
+            "parentName": "高橋 智子",
+            "phone": "090-5555-6666",
+            "address": "東京都世田谷区弦巻3-8-1",
+            "pickupNote": "自宅玄関先までお越しください",
+            "ticketBalance": 0,
+            "createdAt": "2026-09-15"
+          }
+        ],
+        "rides": [
+          {
+            "id": "RIDE-1792421138484",
+            "studentId": "STU-001",
+            "studentName": "田中 陽菜 (ひな)",
+            "rideDate": "2026-10-20",
+            "rideTime": "16:30",
+            "rideType": "pickup",
+            "pickupLocation": "東京都世田谷区桜新町1-10-5 パークサイド201",
+            "status": "scheduled",
+            "calendarEventId": "cal-1792421138484",
+            "note": "",
+            "reservedBy": "teacher"
+          },
+          {
+            "id": "RIDE-102",
+            "studentId": "STU-002",
+            "studentName": "山本 颯太 (そうた)",
+            "rideDate": "2026-10-19",
+            "rideTime": "17:30",
+            "rideType": "dropoff",
+            "pickupLocation": "英語教室 → 東京都世田谷区用賀2-5-12",
+            "status": "scheduled",
+            "calendarEventId": "mock-cal-102",
+            "note": "レッスン後のご自宅送り",
+            "reservedBy": "teacher"
+          },
+          {
+            "id": "RIDE-101",
+            "studentId": "STU-001",
+            "studentName": "田中 陽菜 (ひな)",
+            "rideDate": "2026-10-19",
+            "rideTime": "16:00",
+            "rideType": "pickup",
+            "pickupLocation": "東京都世田谷区桜新町1-10-5 パークサイド201",
+            "status": "scheduled",
+            "calendarEventId": "mock-cal-101",
+            "note": "レッスン前のお迎え",
+            "reservedBy": "parent"
+          },
+          {
+            "id": "RIDE-103",
+            "studentId": "STU-001",
+            "studentName": "田中 陽菜 (ひな)",
+            "rideDate": "2026-10-06",
+            "rideTime": "16:00",
+            "rideType": "roundtrip",
+            "pickupLocation": "東京都世田谷区桜新町1-10-5 パークサイド201",
+            "status": "completed",
+            "completedAt": "2026-10-06 17:45",
+            "note": "送迎完了済み",
+            "reservedBy": "parent"
+          }
+        ],
+        "purchases": []
+      },
+      "finishedAt": "2026-10-19T14:45:38.720Z"
+    },
+    {
+      "id": "AT-10",
+      "status": "PASS",
+      "startedAt": "2026-10-19T14:45:38.720Z",
+      "detail": "仕様の期待結果を自動assertで確認。デモLocalStorage環境のみ。",
+      "screenshots": [
+        {
+          "file": "AT-10.png",
+          "sha256": "de40bce4b565db7af522a6f5f9e4491e8cb369b98b84c49e506427ba1416e3aa"
+        }
+      ],
+      "observed": {
+        "students": [
+          {
+            "id": "STU-001",
+            "name": "田中 陽菜 (ひな)",
+            "parentName": "田中 美咲",
+            "phone": "090-1111-2222",
+            "address": "東京都世田谷区桜新町1-10-5 パークサイド201",
+            "pickupNote": "エントランス前。到着時インターホンかLINE",
+            "ticketBalance": 7,
+            "createdAt": "2026-09-01"
+          },
+          {
+            "id": "STU-002",
+            "name": "山本 颯太 (そうた)",
+            "parentName": "山本 健一",
+            "phone": "080-3333-4444",
+            "address": "東京都世田谷区用賀2-5-12",
+            "pickupNote": "正面道路沿いで待機しています",
+            "ticketBalance": 1,
+            "createdAt": "2026-09-10"
+          },
+          {
+            "id": "STU-003",
+            "name": "高橋 莉子 (りこ)",
+            "parentName": "高橋 智子",
+            "phone": "090-5555-6666",
+            "address": "東京都世田谷区弦巻3-8-1",
+            "pickupNote": "自宅玄関先までお越しください",
+            "ticketBalance": 0,
+            "createdAt": "2026-09-15"
+          }
+        ],
+        "rides": [
+          {
+            "id": "RIDE-102",
+            "studentId": "STU-002",
+            "studentName": "山本 颯太 (そうた)",
+            "rideDate": "2026-10-19",
+            "rideTime": "17:30",
+            "rideType": "dropoff",
+            "pickupLocation": "英語教室 → 東京都世田谷区用賀2-5-12",
+            "status": "scheduled",
+            "calendarEventId": "mock-cal-102",
+            "note": "レッスン後のご自宅送り",
+            "reservedBy": "teacher"
+          },
+          {
+            "id": "RIDE-101",
+            "studentId": "STU-001",
+            "studentName": "田中 陽菜 (ひな)",
+            "rideDate": "2026-10-19",
+            "rideTime": "16:00",
+            "rideType": "pickup",
+            "pickupLocation": "東京都世田谷区桜新町1-10-5 パークサイド201",
+            "status": "cancelled",
+            "calendarEventId": "mock-cal-101",
+            "note": "レッスン前のお迎え",
+            "reservedBy": "parent"
+          },
+          {
+            "id": "RIDE-103",
+            "studentId": "STU-001",
+            "studentName": "田中 陽菜 (ひな)",
+            "rideDate": "2026-10-06",
+            "rideTime": "16:00",
+            "rideType": "roundtrip",
+            "pickupLocation": "東京都世田谷区桜新町1-10-5 パークサイド201",
+            "status": "completed",
+            "completedAt": "2026-10-06 17:45",
+            "note": "送迎完了済み",
+            "reservedBy": "parent"
+          }
+        ],
+        "purchases": []
+      },
+      "finishedAt": "2026-10-19T14:45:40.466Z"
+    },
+    {
+      "id": "AT-11",
+      "status": "PASS",
+      "startedAt": "2026-10-19T14:45:40.467Z",
+      "detail": "仕様の期待結果を自動assertで確認。デモLocalStorage環境のみ。",
+      "screenshots": [
+        {
+          "file": "AT-11.png",
+          "sha256": "c4216bb5abe538a09b04bb91a629362873149013092d94d1cde0b3911ed31d20"
+        }
+      ],
+      "observed": {
+        "students": [
+          {
+            "id": "STU-001",
+            "name": "田中 陽菜 (ひな)",
+            "parentName": "田中 美咲",
+            "phone": "090-1111-2222",
+            "address": "東京都世田谷区桜新町1-10-5 パークサイド201",
+            "pickupNote": "エントランス前。到着時インターホンかLINE",
+            "ticketBalance": 7,
+            "createdAt": "2026-09-01"
+          },
+          {
+            "id": "STU-002",
+            "name": "山本 颯太 (そうた)",
+            "parentName": "山本 健一",
+            "phone": "080-3333-4444",
+            "address": "東京都世田谷区用賀2-5-12",
+            "pickupNote": "正面道路沿いで待機しています",
+            "ticketBalance": 1,
+            "createdAt": "2026-09-10"
+          },
+          {
+            "id": "STU-003",
+            "name": "高橋 莉子 (りこ)",
+            "parentName": "高橋 智子",
+            "phone": "090-5555-6666",
+            "address": "東京都世田谷区弦巻3-8-1",
+            "pickupNote": "自宅玄関先までお越しください",
+            "ticketBalance": 0,
+            "createdAt": "2026-09-15"
+          }
+        ],
+        "rides": [
+          {
+            "id": "RIDE-1792421142518",
+            "studentId": "STU-001",
+            "studentName": "田中 陽菜 (ひな)",
+            "rideDate": "2026-10-20",
+            "rideTime": "16:30",
+            "rideType": "pickup",
+            "pickupLocation": "受入テスト専用住所",
+            "status": "cancelled",
+            "calendarEventId": "cal-1792421142518",
+            "note": "acceptance",
+            "reservedBy": "teacher"
+          },
+          {
+            "id": "RIDE-102",
+            "studentId": "STU-002",
+            "studentName": "山本 颯太 (そうた)",
+            "rideDate": "2026-10-19",
+            "rideTime": "17:30",
+            "rideType": "dropoff",
+            "pickupLocation": "英語教室 → 東京都世田谷区用賀2-5-12",
+            "status": "scheduled",
+            "calendarEventId": "mock-cal-102",
+            "note": "レッスン後のご自宅送り",
+            "reservedBy": "teacher"
+          },
+          {
+            "id": "RIDE-101",
+            "studentId": "STU-001",
+            "studentName": "田中 陽菜 (ひな)",
+            "rideDate": "2026-10-19",
+            "rideTime": "16:00",
+            "rideType": "pickup",
+            "pickupLocation": "東京都世田谷区桜新町1-10-5 パークサイド201",
+            "status": "scheduled",
+            "calendarEventId": "mock-cal-101",
+            "note": "レッスン前のお迎え",
+            "reservedBy": "parent"
+          },
+          {
+            "id": "RIDE-103",
+            "studentId": "STU-001",
+            "studentName": "田中 陽菜 (ひな)",
+            "rideDate": "2026-10-06",
+            "rideTime": "16:00",
+            "rideType": "roundtrip",
+            "pickupLocation": "東京都世田谷区桜新町1-10-5 パークサイド201",
+            "status": "completed",
+            "completedAt": "2026-10-06 17:45",
+            "note": "送迎完了済み",
+            "reservedBy": "parent"
+          }
+        ],
+        "purchases": []
+      },
+      "finishedAt": "2026-10-19T14:45:43.818Z"
+    },
+    {
+      "id": "AT-12",
+      "status": "PASS",
+      "startedAt": "2026-10-19T14:45:43.818Z",
+      "detail": "仕様の期待結果を自動assertで確認。デモLocalStorage環境のみ。",
+      "screenshots": [
+        {
+          "file": "AT-12.png",
+          "sha256": "eff1f6f9e0ed6815bc56a7c713a4ce0a38c2249326f5e6767f598f05caba99a1"
+        }
+      ],
+      "observed": {
+        "students": [
+          {
+            "id": "STU-001",
+            "name": "田中 陽菜 (ひな)",
+            "parentName": "田中 美咲",
+            "phone": "090-1111-2222",
+            "address": "東京都世田谷区桜新町1-10-5 パークサイド201",
+            "pickupNote": "エントランス前。到着時インターホンかLINE",
+            "ticketBalance": 7,
+            "createdAt": "2026-09-01"
+          },
+          {
+            "id": "STU-002",
+            "name": "山本 颯太 (そうた)",
+            "parentName": "山本 健一",
+            "phone": "080-3333-4444",
+            "address": "東京都世田谷区用賀2-5-12",
+            "pickupNote": "正面道路沿いで待機しています",
+            "ticketBalance": 1,
+            "createdAt": "2026-09-10"
+          },
+          {
+            "id": "STU-003",
+            "name": "高橋 莉子 (りこ)",
+            "parentName": "高橋 智子",
+            "phone": "090-5555-6666",
+            "address": "東京都世田谷区弦巻3-8-1",
+            "pickupNote": "自宅玄関先までお越しください",
+            "ticketBalance": 0,
+            "createdAt": "2026-09-15"
+          }
+        ],
+        "rides": [
+          {
+            "id": "RIDE-101",
+            "studentId": "STU-001",
+            "studentName": "田中 陽菜 (ひな)",
+            "rideDate": "2026-10-19",
+            "rideTime": "16:00",
+            "rideType": "pickup",
+            "pickupLocation": "東京都世田谷区桜新町1-10-5 パークサイド201",
+            "status": "scheduled",
+            "calendarEventId": "mock-cal-101",
+            "note": "レッスン前のお迎え",
+            "reservedBy": "parent"
+          },
+          {
+            "id": "RIDE-102",
+            "studentId": "STU-002",
+            "studentName": "山本 颯太 (そうた)",
+            "rideDate": "2026-10-19",
+            "rideTime": "17:30",
+            "rideType": "dropoff",
+            "pickupLocation": "英語教室 → 東京都世田谷区用賀2-5-12",
+            "status": "scheduled",
+            "calendarEventId": "mock-cal-102",
+            "note": "レッスン後のご自宅送り",
+            "reservedBy": "teacher"
+          },
+          {
+            "id": "RIDE-103",
+            "studentId": "STU-001",
+            "studentName": "田中 陽菜 (ひな)",
+            "rideDate": "2026-10-06",
+            "rideTime": "16:00",
+            "rideType": "roundtrip",
+            "pickupLocation": "東京都世田谷区桜新町1-10-5 パークサイド201",
+            "status": "completed",
+            "completedAt": "2026-10-06 17:45",
+            "note": "送迎完了済み",
+            "reservedBy": "parent"
+          }
+        ],
+        "purchases": []
+      },
+      "finishedAt": "2026-10-19T14:45:46.015Z"
+    },
+    {
+      "id": "AT-13",
+      "status": "PASS",
+      "startedAt": "2026-10-19T14:45:46.015Z",
+      "detail": "仕様の期待結果を自動assertで確認。デモLocalStorage環境のみ。",
+      "screenshots": [
+        {
+          "file": "AT-13.png",
+          "sha256": "f8c41ac68247697ad06416f8b7d15097b7ccbc75ef045d2a5205e5b62eb585cf"
+        }
+      ],
+      "observed": {
+        "students": [
+          {
+            "id": "STU-001",
+            "name": "田中 陽菜 (ひな)",
+            "parentName": "田中 美咲",
+            "phone": "090-1111-2222",
+            "address": "東京都世田谷区桜新町1-10-5 パークサイド201",
+            "pickupNote": "エントランス前。到着時インターホンかLINE",
+            "ticketBalance": 6,
+            "createdAt": "2026-09-01"
+          },
+          {
+            "id": "STU-002",
+            "name": "山本 颯太 (そうた)",
+            "parentName": "山本 健一",
+            "phone": "080-3333-4444",
+            "address": "東京都世田谷区用賀2-5-12",
+            "pickupNote": "正面道路沿いで待機しています",
+            "ticketBalance": 1,
+            "createdAt": "2026-09-10"
+          },
+          {
+            "id": "STU-003",
+            "name": "高橋 莉子 (りこ)",
+            "parentName": "高橋 智子",
+            "phone": "090-5555-6666",
+            "address": "東京都世田谷区弦巻3-8-1",
+            "pickupNote": "自宅玄関先までお越しください",
+            "ticketBalance": 0,
+            "createdAt": "2026-09-15"
+          }
+        ],
+        "rides": [
+          {
+            "id": "RIDE-1792421147625",
+            "studentId": "STU-001",
+            "studentName": "田中 陽菜 (ひな)",
+            "rideDate": "2026-10-20",
+            "rideTime": "16:30",
+            "rideType": "pickup",
+            "pickupLocation": "受入テスト専用住所",
+            "status": "completed",
+            "calendarEventId": "cal-1792421147625",
+            "note": "acceptance",
+            "reservedBy": "parent",
+            "completedAt": "2026/10/19 23:45:47"
+          },
+          {
+            "id": "RIDE-102",
+            "studentId": "STU-002",
+            "studentName": "山本 颯太 (そうた)",
+            "rideDate": "2026-10-19",
+            "rideTime": "17:30",
+            "rideType": "dropoff",
+            "pickupLocation": "英語教室 → 東京都世田谷区用賀2-5-12",
+            "status": "scheduled",
+            "calendarEventId": "mock-cal-102",
+            "note": "レッスン後のご自宅送り",
+            "reservedBy": "teacher"
+          },
+          {
+            "id": "RIDE-101",
+            "studentId": "STU-001",
+            "studentName": "田中 陽菜 (ひな)",
+            "rideDate": "2026-10-19",
+            "rideTime": "16:00",
+            "rideType": "pickup",
+            "pickupLocation": "東京都世田谷区桜新町1-10-5 パークサイド201",
+            "status": "scheduled",
+            "calendarEventId": "mock-cal-101",
+            "note": "レッスン前のお迎え",
+            "reservedBy": "parent"
+          },
+          {
+            "id": "RIDE-103",
+            "studentId": "STU-001",
+            "studentName": "田中 陽菜 (ひな)",
+            "rideDate": "2026-10-06",
+            "rideTime": "16:00",
+            "rideType": "roundtrip",
+            "pickupLocation": "東京都世田谷区桜新町1-10-5 パークサイド201",
+            "status": "completed",
+            "completedAt": "2026-10-06 17:45",
+            "note": "送迎完了済み",
+            "reservedBy": "parent"
+          }
+        ],
+        "purchases": []
+      },
+      "finishedAt": "2026-10-19T14:45:48.957Z"
+    },
+    {
+      "id": "AT-14",
+      "status": "PASS",
+      "startedAt": "2026-10-19T14:45:48.957Z",
+      "detail": "仕様の期待結果を自動assertで確認。デモLocalStorage環境のみ。",
+      "screenshots": [
+        {
+          "file": "AT-14.png",
+          "sha256": "5e6a963c8fe7a387923199dbd4674b0629ce8941f5a2c55d83a07ea65051eb82"
+        }
+      ],
+      "observed": {
+        "students": [
+          {
+            "id": "STU-001",
+            "name": "田中 陽菜 (ひな)",
+            "parentName": "田中 美咲",
+            "phone": "090-1111-2222",
+            "address": "東京都世田谷区桜新町1-10-5 パークサイド201",
+            "pickupNote": "エントランス前。到着時インターホンかLINE",
+            "ticketBalance": 5,
+            "createdAt": "2026-09-01"
+          },
+          {
+            "id": "STU-002",
+            "name": "山本 颯太 (そうた)",
+            "parentName": "山本 健一",
+            "phone": "080-3333-4444",
+            "address": "東京都世田谷区用賀2-5-12",
+            "pickupNote": "正面道路沿いで待機しています",
+            "ticketBalance": 1,
+            "createdAt": "2026-09-10"
+          },
+          {
+            "id": "STU-003",
+            "name": "高橋 莉子 (りこ)",
+            "parentName": "高橋 智子",
+            "phone": "090-5555-6666",
+            "address": "東京都世田谷区弦巻3-8-1",
+            "pickupNote": "自宅玄関先までお越しください",
+            "ticketBalance": 0,
+            "createdAt": "2026-09-15"
+          }
+        ],
+        "rides": [
+          {
+            "id": "RIDE-1792421151011",
+            "studentId": "STU-001",
+            "studentName": "田中 陽菜 (ひな)",
+            "rideDate": "2026-10-20",
+            "rideTime": "16:30",
+            "rideType": "roundtrip",
+            "pickupLocation": "受入テスト専用住所",
+            "status": "completed",
+            "calendarEventId": "cal-1792421151011",
+            "note": "acceptance",
+            "reservedBy": "parent",
+            "completedAt": "2026/10/19 23:45:51"
+          },
+          {
+            "id": "RIDE-102",
+            "studentId": "STU-002",
+            "studentName": "山本 颯太 (そうた)",
+            "rideDate": "2026-10-19",
+            "rideTime": "17:30",
+            "rideType": "dropoff",
+            "pickupLocation": "英語教室 → 東京都世田谷区用賀2-5-12",
+            "status": "scheduled",
+            "calendarEventId": "mock-cal-102",
+            "note": "レッスン後のご自宅送り",
+            "reservedBy": "teacher"
+          },
+          {
+            "id": "RIDE-101",
+            "studentId": "STU-001",
+            "studentName": "田中 陽菜 (ひな)",
+            "rideDate": "2026-10-19",
+            "rideTime": "16:00",
+            "rideType": "pickup",
+            "pickupLocation": "東京都世田谷区桜新町1-10-5 パークサイド201",
+            "status": "scheduled",
+            "calendarEventId": "mock-cal-101",
+            "note": "レッスン前のお迎え",
+            "reservedBy": "parent"
+          },
+          {
+            "id": "RIDE-103",
+            "studentId": "STU-001",
+            "studentName": "田中 陽菜 (ひな)",
+            "rideDate": "2026-10-06",
+            "rideTime": "16:00",
+            "rideType": "roundtrip",
+            "pickupLocation": "東京都世田谷区桜新町1-10-5 パークサイド201",
+            "status": "completed",
+            "completedAt": "2026-10-06 17:45",
+            "note": "送迎完了済み",
+            "reservedBy": "parent"
+          }
+        ],
+        "purchases": []
+      },
+      "finishedAt": "2026-10-19T14:45:52.054Z"
+    },
+    {
+      "id": "AT-15",
+      "status": "FAIL",
+      "startedAt": "2026-10-19T14:45:52.054Z",
+      "detail": "Expected values to be strictly equal:\n\n5 !== 6\n",
+      "screenshots": [
+        {
+          "file": "AT-15.png",
+          "sha256": "46f0857b04fcbaa799a1f7fc5d9eeeeac7067ac141bd106a20d7f86eda5cd912"
+        }
+      ],
+      "observed": {
+        "students": [
+          {
+            "id": "STU-001",
+            "name": "田中 陽菜 (ひな)",
+            "parentName": "田中 美咲",
+            "phone": "090-1111-2222",
+            "address": "東京都世田谷区桜新町1-10-5 パークサイド201",
+            "pickupNote": "エントランス前。到着時インターホンかLINE",
+            "ticketBalance": 5,
+            "createdAt": "2026-09-01"
+          },
+          {
+            "id": "STU-002",
+            "name": "山本 颯太 (そうた)",
+            "parentName": "山本 健一",
+            "phone": "080-3333-4444",
+            "address": "東京都世田谷区用賀2-5-12",
+            "pickupNote": "正面道路沿いで待機しています",
+            "ticketBalance": 1,
+            "createdAt": "2026-09-10"
+          },
+          {
+            "id": "STU-003",
+            "name": "高橋 莉子 (りこ)",
+            "parentName": "高橋 智子",
+            "phone": "090-5555-6666",
+            "address": "東京都世田谷区弦巻3-8-1",
+            "pickupNote": "自宅玄関先までお越しください",
+            "ticketBalance": 0,
+            "createdAt": "2026-09-15"
+          }
+        ],
+        "rides": [
+          {
+            "id": "RIDE-1792421154121",
+            "studentId": "STU-001",
+            "studentName": "田中 陽菜 (ひな)",
+            "rideDate": "2026-10-20",
+            "rideTime": "16:30",
+            "rideType": "pickup",
+            "pickupLocation": "受入テスト専用住所",
+            "status": "completed",
+            "calendarEventId": "cal-1792421154121",
+            "note": "acceptance",
+            "reservedBy": "parent",
+            "completedAt": "2026/10/19 23:45:54"
+          },
+          {
+            "id": "RIDE-102",
+            "studentId": "STU-002",
+            "studentName": "山本 颯太 (そうた)",
+            "rideDate": "2026-10-19",
+            "rideTime": "17:30",
+            "rideType": "dropoff",
+            "pickupLocation": "英語教室 → 東京都世田谷区用賀2-5-12",
+            "status": "scheduled",
+            "calendarEventId": "mock-cal-102",
+            "note": "レッスン後のご自宅送り",
+            "reservedBy": "teacher"
+          },
+          {
+            "id": "RIDE-101",
+            "studentId": "STU-001",
+            "studentName": "田中 陽菜 (ひな)",
+            "rideDate": "2026-10-19",
+            "rideTime": "16:00",
+            "rideType": "pickup",
+            "pickupLocation": "東京都世田谷区桜新町1-10-5 パークサイド201",
+            "status": "scheduled",
+            "calendarEventId": "mock-cal-101",
+            "note": "レッスン前のお迎え",
+            "reservedBy": "parent"
+          },
+          {
+            "id": "RIDE-103",
+            "studentId": "STU-001",
+            "studentName": "田中 陽菜 (ひな)",
+            "rideDate": "2026-10-06",
+            "rideTime": "16:00",
+            "rideType": "roundtrip",
+            "pickupLocation": "東京都世田谷区桜新町1-10-5 パークサイド201",
+            "status": "completed",
+            "completedAt": "2026-10-06 17:45",
+            "note": "送迎完了済み",
+            "reservedBy": "parent"
+          }
+        ],
+        "purchases": []
+      },
+      "finishedAt": "2026-10-19T14:45:55.436Z"
+    },
+    {
+      "id": "AT-16",
+      "status": "FAIL",
+      "startedAt": "2026-10-19T14:45:55.436Z",
+      "detail": "Expected values to be strictly equal:\n\n6 !== 7\n",
+      "screenshots": [
+        {
+          "file": "AT-16.png",
+          "sha256": "f8c41ac68247697ad06416f8b7d15097b7ccbc75ef045d2a5205e5b62eb585cf"
+        }
+      ],
+      "observed": {
+        "students": [
+          {
+            "id": "STU-001",
+            "name": "田中 陽菜 (ひな)",
+            "parentName": "田中 美咲",
+            "phone": "090-1111-2222",
+            "address": "東京都世田谷区桜新町1-10-5 パークサイド201",
+            "pickupNote": "エントランス前。到着時インターホンかLINE",
+            "ticketBalance": 6,
+            "createdAt": "2026-09-01"
+          },
+          {
+            "id": "STU-002",
+            "name": "山本 颯太 (そうた)",
+            "parentName": "山本 健一",
+            "phone": "080-3333-4444",
+            "address": "東京都世田谷区用賀2-5-12",
+            "pickupNote": "正面道路沿いで待機しています",
+            "ticketBalance": 1,
+            "createdAt": "2026-09-10"
+          },
+          {
+            "id": "STU-003",
+            "name": "高橋 莉子 (りこ)",
+            "parentName": "高橋 智子",
+            "phone": "090-5555-6666",
+            "address": "東京都世田谷区弦巻3-8-1",
+            "pickupNote": "自宅玄関先までお越しください",
+            "ticketBalance": 0,
+            "createdAt": "2026-09-15"
+          }
+        ],
+        "rides": [
+          {
+            "id": "RIDE-1792421157500",
+            "studentId": "STU-001",
+            "studentName": "田中 陽菜 (ひな)",
+            "rideDate": "2026-10-20",
+            "rideTime": "16:30",
+            "rideType": "pickup",
+            "pickupLocation": "受入テスト専用住所",
+            "status": "completed",
+            "calendarEventId": "cal-1792421157500",
+            "note": "acceptance",
+            "reservedBy": "parent",
+            "completedAt": "2026/10/19 23:45:57"
+          },
+          {
+            "id": "RIDE-102",
+            "studentId": "STU-002",
+            "studentName": "山本 颯太 (そうた)",
+            "rideDate": "2026-10-19",
+            "rideTime": "17:30",
+            "rideType": "dropoff",
+            "pickupLocation": "英語教室 → 東京都世田谷区用賀2-5-12",
+            "status": "scheduled",
+            "calendarEventId": "mock-cal-102",
+            "note": "レッスン後のご自宅送り",
+            "reservedBy": "teacher"
+          },
+          {
+            "id": "RIDE-101",
+            "studentId": "STU-001",
+            "studentName": "田中 陽菜 (ひな)",
+            "rideDate": "2026-10-19",
+            "rideTime": "16:00",
+            "rideType": "pickup",
+            "pickupLocation": "東京都世田谷区桜新町1-10-5 パークサイド201",
+            "status": "scheduled",
+            "calendarEventId": "mock-cal-101",
+            "note": "レッスン前のお迎え",
+            "reservedBy": "parent"
+          },
+          {
+            "id": "RIDE-103",
+            "studentId": "STU-001",
+            "studentName": "田中 陽菜 (ひな)",
+            "rideDate": "2026-10-06",
+            "rideTime": "16:00",
+            "rideType": "roundtrip",
+            "pickupLocation": "東京都世田谷区桜新町1-10-5 パークサイド201",
+            "status": "completed",
+            "completedAt": "2026-10-06 17:45",
+            "note": "送迎完了済み",
+            "reservedBy": "parent"
+          }
+        ],
+        "purchases": []
+      },
+      "finishedAt": "2026-10-19T14:45:58.755Z"
+    },
+    {
+      "id": "AT-17",
+      "status": "FAIL",
+      "startedAt": "2026-10-19T14:45:58.755Z",
+      "detail": "負数追加が成功扱い",
+      "screenshots": [
+        {
+          "file": "AT-17.png",
+          "sha256": "df729b201f45423fa9086f5c904ac0b9887d9690e0aeddad414253107e47b9d7"
+        }
+      ],
+      "observed": {
+        "students": [
+          {
+            "id": "STU-001",
+            "name": "田中 陽菜 (ひな)",
+            "parentName": "田中 美咲",
+            "phone": "090-1111-2222",
+            "address": "東京都世田谷区桜新町1-10-5 パークサイド201",
+            "pickupNote": "エントランス前。到着時インターホンかLINE",
+            "ticketBalance": 6,
+            "createdAt": "2026-09-01"
+          },
+          {
+            "id": "STU-002",
+            "name": "山本 颯太 (そうた)",
+            "parentName": "山本 健一",
+            "phone": "080-3333-4444",
+            "address": "東京都世田谷区用賀2-5-12",
+            "pickupNote": "正面道路沿いで待機しています",
+            "ticketBalance": 1,
+            "createdAt": "2026-09-10"
+          },
+          {
+            "id": "STU-003",
+            "name": "高橋 莉子 (りこ)",
+            "parentName": "高橋 智子",
+            "phone": "090-5555-6666",
+            "address": "東京都世田谷区弦巻3-8-1",
+            "pickupNote": "自宅玄関先までお越しください",
+            "ticketBalance": 0,
+            "createdAt": "2026-09-15"
+          }
+        ],
+        "rides": [
+          {
+            "id": "RIDE-101",
+            "studentId": "STU-001",
+            "studentName": "田中 陽菜 (ひな)",
+            "rideDate": "2026-10-19",
+            "rideTime": "16:00",
+            "rideType": "pickup",
+            "pickupLocation": "東京都世田谷区桜新町1-10-5 パークサイド201",
+            "status": "scheduled",
+            "calendarEventId": "mock-cal-101",
+            "note": "レッスン前のお迎え",
+            "reservedBy": "parent"
+          },
+          {
+            "id": "RIDE-102",
+            "studentId": "STU-002",
+            "studentName": "山本 颯太 (そうた)",
+            "rideDate": "2026-10-19",
+            "rideTime": "17:30",
+            "rideType": "dropoff",
+            "pickupLocation": "英語教室 → 東京都世田谷区用賀2-5-12",
+            "status": "scheduled",
+            "calendarEventId": "mock-cal-102",
+            "note": "レッスン後のご自宅送り",
+            "reservedBy": "teacher"
+          },
+          {
+            "id": "RIDE-103",
+            "studentId": "STU-001",
+            "studentName": "田中 陽菜 (ひな)",
+            "rideDate": "2026-10-06",
+            "rideTime": "16:00",
+            "rideType": "roundtrip",
+            "pickupLocation": "東京都世田谷区桜新町1-10-5 パークサイド201",
+            "status": "completed",
+            "completedAt": "2026-10-06 17:45",
+            "note": "送迎完了済み",
+            "reservedBy": "parent"
+          }
+        ],
+        "purchases": [
+          {
+            "id": "PUR-60812",
+            "studentId": "STU-001",
+            "studentName": "田中 陽菜 (ひな)",
+            "purchaseDate": "2026-10-19",
+            "ticketCount": -1,
+            "amount": 0,
+            "note": ""
+          }
+        ]
+      },
+      "finishedAt": "2026-10-19T14:46:02.077Z"
+    },
+    {
+      "id": "AT-18",
+      "status": "FAIL",
+      "startedAt": "2026-10-19T14:46:02.078Z",
+      "detail": "通信失敗後も予約オブジェクトを成功として返した",
+      "screenshots": [
+        {
+          "file": "AT-18.png",
+          "sha256": "28796f5104aa116b671347c8f0f410cb2cbe2134ec072af2c90149793d37fb1b"
+        }
+      ],
+      "observed": {
+        "students": [
+          {
+            "id": "STU-001",
+            "name": "田中 陽菜 (ひな)",
+            "parentName": "田中 美咲",
+            "phone": "090-1111-2222",
+            "address": "東京都世田谷区桜新町1-10-5 パークサイド201",
+            "pickupNote": "エントランス前。到着時インターホンかLINE",
+            "ticketBalance": 7,
+            "createdAt": "2026-09-01"
+          },
+          {
+            "id": "STU-002",
+            "name": "山本 颯太 (そうた)",
+            "parentName": "山本 健一",
+            "phone": "080-3333-4444",
+            "address": "東京都世田谷区用賀2-5-12",
+            "pickupNote": "正面道路沿いで待機しています",
+            "ticketBalance": 1,
+            "createdAt": "2026-09-10"
+          },
+          {
+            "id": "STU-003",
+            "name": "高橋 莉子 (りこ)",
+            "parentName": "高橋 智子",
+            "phone": "090-5555-6666",
+            "address": "東京都世田谷区弦巻3-8-1",
+            "pickupNote": "自宅玄関先までお越しください",
+            "ticketBalance": 0,
+            "createdAt": "2026-09-15"
+          }
+        ],
+        "rides": [
+          {
+            "id": "RIDE-1792421164150",
+            "studentId": "STU-001",
+            "studentName": "田中 陽菜 (ひな)",
+            "rideDate": "2026-10-20",
+            "rideTime": "16:30",
+            "rideType": "pickup",
+            "pickupLocation": "受入テスト専用住所",
+            "status": "scheduled",
+            "calendarEventId": "cal-1792421164153",
+            "note": "acceptance",
+            "reservedBy": "parent"
+          },
+          {
+            "id": "RIDE-102",
+            "studentId": "STU-002",
+            "studentName": "山本 颯太 (そうた)",
+            "rideDate": "2026-10-19",
+            "rideTime": "17:30",
+            "rideType": "dropoff",
+            "pickupLocation": "英語教室 → 東京都世田谷区用賀2-5-12",
+            "status": "scheduled",
+            "calendarEventId": "mock-cal-102",
+            "note": "レッスン後のご自宅送り",
+            "reservedBy": "teacher"
+          },
+          {
+            "id": "RIDE-101",
+            "studentId": "STU-001",
+            "studentName": "田中 陽菜 (ひな)",
+            "rideDate": "2026-10-19",
+            "rideTime": "16:00",
+            "rideType": "pickup",
+            "pickupLocation": "東京都世田谷区桜新町1-10-5 パークサイド201",
+            "status": "scheduled",
+            "calendarEventId": "mock-cal-101",
+            "note": "レッスン前のお迎え",
+            "reservedBy": "parent"
+          },
+          {
+            "id": "RIDE-103",
+            "studentId": "STU-001",
+            "studentName": "田中 陽菜 (ひな)",
+            "rideDate": "2026-10-06",
+            "rideTime": "16:00",
+            "rideType": "roundtrip",
+            "pickupLocation": "東京都世田谷区桜新町1-10-5 パークサイド201",
+            "status": "completed",
+            "completedAt": "2026-10-06 17:45",
+            "note": "送迎完了済み",
+            "reservedBy": "parent"
+          }
+        ],
+        "purchases": []
+      },
+      "finishedAt": "2026-10-19T14:46:05.265Z"
+    },
+    {
+      "id": "AT-19",
+      "status": "FAIL",
+      "startedAt": "2026-10-19T14:46:05.265Z",
+      "detail": "未認証で管理画面・生徒氏名が表示された",
+      "screenshots": [
+        {
+          "file": "AT-19.png",
+          "sha256": "eff1f6f9e0ed6815bc56a7c713a4ce0a38c2249326f5e6767f598f05caba99a1"
+        }
+      ],
+      "observed": {
+        "students": [
+          {
+            "id": "STU-001",
+            "name": "田中 陽菜 (ひな)",
+            "parentName": "田中 美咲",
+            "phone": "090-1111-2222",
+            "address": "東京都世田谷区桜新町1-10-5 パークサイド201",
+            "pickupNote": "エントランス前。到着時インターホンかLINE",
+            "ticketBalance": 7,
+            "createdAt": "2026-09-01"
+          },
+          {
+            "id": "STU-002",
+            "name": "山本 颯太 (そうた)",
+            "parentName": "山本 健一",
+            "phone": "080-3333-4444",
+            "address": "東京都世田谷区用賀2-5-12",
+            "pickupNote": "正面道路沿いで待機しています",
+            "ticketBalance": 1,
+            "createdAt": "2026-09-10"
+          },
+          {
+            "id": "STU-003",
+            "name": "高橋 莉子 (りこ)",
+            "parentName": "高橋 智子",
+            "phone": "090-5555-6666",
+            "address": "東京都世田谷区弦巻3-8-1",
+            "pickupNote": "自宅玄関先までお越しください",
+            "ticketBalance": 0,
+            "createdAt": "2026-09-15"
+          }
+        ],
+        "rides": [
+          {
+            "id": "RIDE-101",
+            "studentId": "STU-001",
+            "studentName": "田中 陽菜 (ひな)",
+            "rideDate": "2026-10-19",
+            "rideTime": "16:00",
+            "rideType": "pickup",
+            "pickupLocation": "東京都世田谷区桜新町1-10-5 パークサイド201",
+            "status": "scheduled",
+            "calendarEventId": "mock-cal-101",
+            "note": "レッスン前のお迎え",
+            "reservedBy": "parent"
+          },
+          {
+            "id": "RIDE-102",
+            "studentId": "STU-002",
+            "studentName": "山本 颯太 (そうた)",
+            "rideDate": "2026-10-19",
+            "rideTime": "17:30",
+            "rideType": "dropoff",
+            "pickupLocation": "英語教室 → 東京都世田谷区用賀2-5-12",
+            "status": "scheduled",
+            "calendarEventId": "mock-cal-102",
+            "note": "レッスン後のご自宅送り",
+            "reservedBy": "teacher"
+          },
+          {
+            "id": "RIDE-103",
+            "studentId": "STU-001",
+            "studentName": "田中 陽菜 (ひな)",
+            "rideDate": "2026-10-06",
+            "rideTime": "16:00",
+            "rideType": "roundtrip",
+            "pickupLocation": "東京都世田谷区桜新町1-10-5 パークサイド201",
+            "status": "completed",
+            "completedAt": "2026-10-06 17:45",
+            "note": "送迎完了済み",
+            "reservedBy": "parent"
+          }
+        ],
+        "purchases": []
+      },
+      "finishedAt": "2026-10-19T14:46:07.003Z"
+    },
+    {
+      "id": "AT-20",
+      "status": "FAIL",
+      "startedAt": "2026-10-19T14:46:07.003Z",
+      "detail": "別家庭STU-002を選択可能",
+      "screenshots": [
+        {
+          "file": "AT-20.png",
+          "sha256": "93bc1e57b7d068ebd2c7f631631b721cff2f8cb8d9381fcd9e0649769df5453b"
+        }
+      ],
+      "observed": {
+        "students": [
+          {
+            "id": "STU-001",
+            "name": "田中 陽菜 (ひな)",
+            "parentName": "田中 美咲",
+            "phone": "090-1111-2222",
+            "address": "東京都世田谷区桜新町1-10-5 パークサイド201",
+            "pickupNote": "エントランス前。到着時インターホンかLINE",
+            "ticketBalance": 7,
+            "createdAt": "2026-09-01"
+          },
+          {
+            "id": "STU-002",
+            "name": "山本 颯太 (そうた)",
+            "parentName": "山本 健一",
+            "phone": "080-3333-4444",
+            "address": "東京都世田谷区用賀2-5-12",
+            "pickupNote": "正面道路沿いで待機しています",
+            "ticketBalance": 1,
+            "createdAt": "2026-09-10"
+          },
+          {
+            "id": "STU-003",
+            "name": "高橋 莉子 (りこ)",
+            "parentName": "高橋 智子",
+            "phone": "090-5555-6666",
+            "address": "東京都世田谷区弦巻3-8-1",
+            "pickupNote": "自宅玄関先までお越しください",
+            "ticketBalance": 0,
+            "createdAt": "2026-09-15"
+          }
+        ],
+        "rides": [
+          {
+            "id": "RIDE-101",
+            "studentId": "STU-001",
+            "studentName": "田中 陽菜 (ひな)",
+            "rideDate": "2026-10-19",
+            "rideTime": "16:00",
+            "rideType": "pickup",
+            "pickupLocation": "東京都世田谷区桜新町1-10-5 パークサイド201",
+            "status": "scheduled",
+            "calendarEventId": "mock-cal-101",
+            "note": "レッスン前のお迎え",
+            "reservedBy": "parent"
+          },
+          {
+            "id": "RIDE-102",
+            "studentId": "STU-002",
+            "studentName": "山本 颯太 (そうた)",
+            "rideDate": "2026-10-19",
+            "rideTime": "17:30",
+            "rideType": "dropoff",
+            "pickupLocation": "英語教室 → 東京都世田谷区用賀2-5-12",
+            "status": "scheduled",
+            "calendarEventId": "mock-cal-102",
+            "note": "レッスン後のご自宅送り",
+            "reservedBy": "teacher"
+          },
+          {
+            "id": "RIDE-103",
+            "studentId": "STU-001",
+            "studentName": "田中 陽菜 (ひな)",
+            "rideDate": "2026-10-06",
+            "rideTime": "16:00",
+            "rideType": "roundtrip",
+            "pickupLocation": "東京都世田谷区桜新町1-10-5 パークサイド201",
+            "status": "completed",
+            "completedAt": "2026-10-06 17:45",
+            "note": "送迎完了済み",
+            "reservedBy": "parent"
+          }
+        ],
+        "purchases": []
+      },
+      "finishedAt": "2026-10-19T14:46:09.393Z"
+    },
+    {
+      "id": "AT-21",
+      "status": "PASS",
+      "startedAt": "2026-10-19T14:46:09.393Z",
+      "detail": "仕様の期待結果を自動assertで確認。デモLocalStorage環境のみ。",
+      "screenshots": [
+        {
+          "file": "AT-21-form.png",
+          "sha256": "7765f3e3fd7ab80e94438685df073a04b524cbde0a9d232f60724c0d5e72e82c"
+        },
+        {
+          "file": "AT-21-parent.png",
+          "sha256": "06f6ffe75fef98b637bbe1270d3e63b5834bf039e4dd747433f32e1c1e8a2e37"
+        },
+        {
+          "file": "AT-21-teacher.png",
+          "sha256": "f6112dfb3d40d28ddb91b62f090dc0a2251dd78d512fe2bb446a6fd2af5c608e"
+        },
+        {
+          "file": "AT-21.png",
+          "sha256": "1348c1f62ea6138eaa73a6581a5396be863a54769021f2f74df1f39bf74f5e86"
+        }
+      ],
+      "observed": {
+        "students": [
+          {
+            "id": "STU-001",
+            "name": "田中 陽菜 (ひな)",
+            "parentName": "田中 美咲",
+            "phone": "090-1111-2222",
+            "address": "東京都世田谷区桜新町1-10-5 パークサイド201",
+            "pickupNote": "エントランス前。到着時インターホンかLINE",
+            "ticketBalance": 7,
+            "createdAt": "2026-09-01"
+          },
+          {
+            "id": "STU-002",
+            "name": "山本 颯太 (そうた)",
+            "parentName": "山本 健一",
+            "phone": "080-3333-4444",
+            "address": "東京都世田谷区用賀2-5-12",
+            "pickupNote": "正面道路沿いで待機しています",
+            "ticketBalance": 1,
+            "createdAt": "2026-09-10"
+          },
+          {
+            "id": "STU-003",
+            "name": "高橋 莉子 (りこ)",
+            "parentName": "高橋 智子",
+            "phone": "090-5555-6666",
+            "address": "東京都世田谷区弦巻3-8-1",
+            "pickupNote": "自宅玄関先までお越しください",
+            "ticketBalance": 0,
+            "createdAt": "2026-09-15"
+          }
+        ],
+        "rides": [
+          {
+            "id": "RIDE-101",
+            "studentId": "STU-001",
+            "studentName": "田中 陽菜 (ひな)",
+            "rideDate": "2026-10-19",
+            "rideTime": "16:00",
+            "rideType": "pickup",
+            "pickupLocation": "東京都世田谷区桜新町1-10-5 パークサイド201",
+            "status": "scheduled",
+            "calendarEventId": "mock-cal-101",
+            "note": "レッスン前のお迎え",
+            "reservedBy": "parent"
+          },
+          {
+            "id": "RIDE-102",
+            "studentId": "STU-002",
+            "studentName": "山本 颯太 (そうた)",
+            "rideDate": "2026-10-19",
+            "rideTime": "17:30",
+            "rideType": "dropoff",
+            "pickupLocation": "英語教室 → 東京都世田谷区用賀2-5-12",
+            "status": "scheduled",
+            "calendarEventId": "mock-cal-102",
+            "note": "レッスン後のご自宅送り",
+            "reservedBy": "teacher"
+          },
+          {
+            "id": "RIDE-103",
+            "studentId": "STU-001",
+            "studentName": "田中 陽菜 (ひな)",
+            "rideDate": "2026-10-06",
+            "rideTime": "16:00",
+            "rideType": "roundtrip",
+            "pickupLocation": "東京都世田谷区桜新町1-10-5 パークサイド201",
+            "status": "completed",
+            "completedAt": "2026-10-06 17:45",
+            "note": "送迎完了済み",
+            "reservedBy": "parent"
+          }
+        ],
+        "purchases": []
+      },
+      "finishedAt": "2026-10-19T14:46:11.835Z"
+    },
+    {
+      "id": "AT-22",
+      "status": "PASS",
+      "startedAt": "2026-10-19T14:46:11.835Z",
+      "detail": "仕様の期待結果を自動assertで確認。デモLocalStorage環境のみ。",
+      "screenshots": [
+        {
+          "file": "AT-22.png",
+          "sha256": "95e3341e5e4c0251635a9bb54e8f3cd759dc927077854ee545b5501d41119631"
+        }
+      ],
+      "observed": {
+        "students": [
+          {
+            "id": "STU-001",
+            "name": "田中 陽菜 (ひな)",
+            "parentName": "田中 美咲",
+            "phone": "090-1111-2222",
+            "address": "東京都世田谷区桜新町1-10-5 パークサイド201",
+            "pickupNote": "エントランス前。到着時インターホンかLINE",
+            "ticketBalance": 7,
+            "createdAt": "2026-09-01"
+          },
+          {
+            "id": "STU-002",
+            "name": "山本 颯太 (そうた)",
+            "parentName": "山本 健一",
+            "phone": "080-3333-4444",
+            "address": "東京都世田谷区用賀2-5-12",
+            "pickupNote": "正面道路沿いで待機しています",
+            "ticketBalance": 1,
+            "createdAt": "2026-09-10"
+          },
+          {
+            "id": "STU-003",
+            "name": "高橋 莉子 (りこ)",
+            "parentName": "高橋 智子",
+            "phone": "090-5555-6666",
+            "address": "東京都世田谷区弦巻3-8-1",
+            "pickupNote": "自宅玄関先までお越しください",
+            "ticketBalance": 0,
+            "createdAt": "2026-09-15"
+          },
+          {
+            "name": "永続化テスト",
+            "parentName": "保護者",
+            "phone": "",
+            "address": "テスト住所",
+            "pickupNote": "",
+            "ticketBalance": 10,
+            "id": "STU-004",
+            "createdAt": "2026-10-19"
+          }
+        ],
+        "rides": [
+          {
+            "id": "RIDE-1792421173917",
+            "studentId": "STU-001",
+            "studentName": "田中 陽菜 (ひな)",
+            "rideDate": "2026-10-20",
+            "rideTime": "16:30",
+            "rideType": "pickup",
+            "pickupLocation": "受入テスト専用住所",
+            "status": "scheduled",
+            "calendarEventId": "cal-1792421173917",
+            "note": "acceptance",
+            "reservedBy": "parent"
+          },
+          {
+            "id": "RIDE-102",
+            "studentId": "STU-002",
+            "studentName": "山本 颯太 (そうた)",
+            "rideDate": "2026-10-19",
+            "rideTime": "17:30",
+            "rideType": "dropoff",
+            "pickupLocation": "英語教室 → 東京都世田谷区用賀2-5-12",
+            "status": "scheduled",
+            "calendarEventId": "mock-cal-102",
+            "note": "レッスン後のご自宅送り",
+            "reservedBy": "teacher"
+          },
+          {
+            "id": "RIDE-101",
+            "studentId": "STU-001",
+            "studentName": "田中 陽菜 (ひな)",
+            "rideDate": "2026-10-19",
+            "rideTime": "16:00",
+            "rideType": "pickup",
+            "pickupLocation": "東京都世田谷区桜新町1-10-5 パークサイド201",
+            "status": "scheduled",
+            "calendarEventId": "mock-cal-101",
+            "note": "レッスン前のお迎え",
+            "reservedBy": "parent"
+          },
+          {
+            "id": "RIDE-103",
+            "studentId": "STU-001",
+            "studentName": "田中 陽菜 (ひな)",
+            "rideDate": "2026-10-06",
+            "rideTime": "16:00",
+            "rideType": "roundtrip",
+            "pickupLocation": "東京都世田谷区桜新町1-10-5 パークサイド201",
+            "status": "completed",
+            "completedAt": "2026-10-06 17:45",
+            "note": "送迎完了済み",
+            "reservedBy": "parent"
+          }
+        ],
+        "purchases": []
+      },
+      "finishedAt": "2026-10-19T14:46:15.193Z"
+    },
+    {
+      "id": "AT-23",
+      "status": "BLOCKED",
+      "startedAt": "2026-10-19T14:46:15.193Z",
+      "detail": "専用Google環境・権限・受入担当または前段合格が未準備。実サービス操作は未実施。",
+      "screenshots": [],
+      "finishedAt": "2026-10-19T14:46:15.193Z"
+    },
+    {
+      "id": "AT-24",
+      "status": "BLOCKED",
+      "startedAt": "2026-10-19T14:46:15.194Z",
+      "detail": "専用Google環境・権限・受入担当または前段合格が未準備。実サービス操作は未実施。",
+      "screenshots": [],
+      "finishedAt": "2026-10-19T14:46:15.194Z"
+    },
+    {
+      "id": "AT-25",
+      "status": "BLOCKED",
+      "startedAt": "2026-10-19T14:46:15.194Z",
+      "detail": "専用Google環境・権限・受入担当または前段合格が未準備。実サービス操作は未実施。",
+      "screenshots": [],
+      "finishedAt": "2026-10-19T14:46:15.194Z"
+    },
+    {
+      "id": "AT-26",
+      "status": "BLOCKED",
+      "startedAt": "2026-10-19T14:46:15.194Z",
+      "detail": "専用Google環境・権限・受入担当または前段合格が未準備。実サービス操作は未実施。",
+      "screenshots": [],
+      "finishedAt": "2026-10-19T14:46:15.194Z"
+    },
+    {
+      "id": "AT-27",
+      "status": "BLOCKED",
+      "startedAt": "2026-10-19T14:46:15.194Z",
+      "detail": "専用Google環境・権限・受入担当または前段合格が未準備。実サービス操作は未実施。",
+      "screenshots": [],
+      "finishedAt": "2026-10-19T14:46:15.194Z"
+    },
+    {
+      "id": "AT-28",
+      "status": "BLOCKED",
+      "startedAt": "2026-10-19T14:46:15.194Z",
+      "detail": "専用Google環境・権限・受入担当または前段合格が未準備。実サービス操作は未実施。",
+      "screenshots": [],
+      "finishedAt": "2026-10-19T14:46:15.194Z"
+    },
+    {
+      "id": "AT-29",
+      "status": "BLOCKED",
+      "startedAt": "2026-10-19T14:46:15.194Z",
+      "detail": "専用Google環境・権限・受入担当または前段合格が未準備。実サービス操作は未実施。",
+      "screenshots": [],
+      "finishedAt": "2026-10-19T14:46:15.194Z"
+    },
+    {
+      "id": "AT-30",
+      "status": "BLOCKED",
+      "startedAt": "2026-10-19T14:46:15.194Z",
+      "detail": "専用Google環境・権限・受入担当または前段合格が未準備。実サービス操作は未実施。",
+      "screenshots": [],
+      "finishedAt": "2026-10-19T14:46:15.194Z"
+    }
+  ]
+}

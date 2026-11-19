@@ -1,0 +1,3826 @@
+{
+  "schemaVersion": 1,
+  "version": "2026-10-23-r7",
+  "facts": {
+    "authentication": "google",
+    "setupOwner": "developer",
+    "dailyAccountOwner": "admin",
+    "consumeAt": "completion",
+    "oneWay": 1,
+    "roundTrip": 2,
+    "calendarPermissionAdded": false,
+    "productionStarted": false,
+    "originalLedgerAutoSync": false,
+    "thirdPartyPassed": 0,
+    "thirdPartyTotal": 30,
+    "remainingRealAcceptance": [
+      "AT-24",
+      "AT-25",
+      "AT-26",
+      "AT-27",
+      "AT-28",
+      "AT-29",
+      "AT-30"
+    ],
+    "release": "HOLD",
+    "restoredAdminRelogin": "BOTH_ADMINS_CONFIRMED",
+    "publicFrontendFilesMatched": 7,
+    "restoredActiveAdmins": 2
+  },
+  "flows": [
+    {
+      "id": "BF-01",
+      "title": "導入・接続設定",
+      "actor": "導入担当",
+      "steps": "検証用Google資源を準備 → 接続 → 端末間確認",
+      "expected": "接続・所有者・権限が確認できる"
+    },
+    {
+      "id": "BF-02",
+      "title": "生徒利用開始",
+      "actor": "管理者",
+      "steps": "生徒情報を受領 → 台帳登録 → 利用者に案内",
+      "expected": "予約対象として選択できる"
+    },
+    {
+      "id": "BF-03",
+      "title": "残数確認・チケット購入",
+      "actor": "保護者・管理者",
+      "steps": "残数確認 → 残少案内 → 代金受領確認 → 回数追加",
+      "expected": "残高と購入履歴が整合する"
+    },
+    {
+      "id": "BF-04",
+      "title": "都度送迎予約",
+      "actor": "保護者・管理者",
+      "steps": "生徒・日時・区分・場所を指定 → 登録 → 予定確認",
+      "expected": "残数を減らさず予約・カレンダーに記録"
+    },
+    {
+      "id": "BF-05",
+      "title": "送迎取消",
+      "actor": "保護者・管理者",
+      "steps": "対象予約を確認 → 取消確認 → 履歴確認",
+      "expected": "予定取消・カレンダー削除・残高維持"
+    },
+    {
+      "id": "BF-06",
+      "title": "当日運行・実績処理",
+      "actor": "管理者",
+      "steps": "当日予定確認 → 地図確認 → 送迎実施 → 完了登録",
+      "expected": "片道1回・往復2回を一度だけ消費"
+    },
+    {
+      "id": "BF-07",
+      "title": "アクセス管理・障害対応",
+      "actor": "運用担当",
+      "steps": "本人確認 → 権限判定 → 操作 → 障害検知・復旧",
+      "expected": "他家庭の情報を保護し記録を失わない"
+    },
+    {
+      "id": "BF-08",
+      "title": "受入・リリース・保守",
+      "actor": "導入担当・受入担当",
+      "steps": "仕様確認 → テスト → 不具合修正 → 再試験 → 受入 → リリース",
+      "expected": "合格証跡・復旧手順・担当者を残す"
+    },
+    {
+      "id": "BF-09",
+      "title": "利用者登録・停止・退会",
+      "actor": "管理者・本人",
+      "steps": "本人情報受領→利用登録→初回紐付け→変更・停止・退会",
+      "expected": "管理者が日常運用し家庭範囲を維持"
+    },
+    {
+      "id": "BF-10",
+      "title": "台帳の保守修正",
+      "actor": "管理者・保守",
+      "steps": "対象確認→保全・操作停止→修正→関連照合→画面再取得",
+      "expected": "検証と元台帳を混同せず関連値を維持"
+    },
+    {
+      "id": "BF-11",
+      "title": "文書・実装・検証の変更管理",
+      "actor": "開発・レビュー担当",
+      "steps": "ID登録→変更→自動生成→機械検査→差分レビュー",
+      "expected": "工程間の参照と欠落を検知し受入と区別"
+    }
+  ],
+  "capabilities": [
+    {
+      "number": 1,
+      "title": "開発者設定とGoogleログイン",
+      "bf": "BF-01",
+      "requirement": "許可された管理者だけが管理画面・検証台帳へ接続。再読込で本人を再確認し、ログアウト後は台帳を表示しない。",
+      "precondition": "顧客がGoogle方式を了承し、検証用会社管理者を事前登録。",
+      "steps": "管理者URLを開く。接続先URL・キー入力欄がないことを確認しGoogleで本人を選択。台帳取得後に再読込し、ログアウトする。",
+      "expected": "許可された管理者だけが管理画面・検証台帳へ接続。再読込で本人を再確認し、ログアウト後は台帳を表示しない。",
+      "origin": "チャット要望から具体化",
+      "req": "REQ-01",
+      "design": "FS-01",
+      "testSpec": "TS-01",
+      "task": "TASK-01",
+      "code": "CODE-01",
+      "testCode": "TEST-01",
+      "operation": "OPS-01",
+      "user": "USR-01",
+      "acceptance": "AT-01",
+      "screens": [
+        "A01",
+        "E01",
+        "E04"
+      ],
+      "interfaces": [
+        "IF-01",
+        "IF-15"
+      ],
+      "implementation": [
+        {
+          "path": "src/services/google-auth.ts",
+          "locator": "signInGoogle"
+        },
+        {
+          "path": "src/components/LoginScreen.tsx",
+          "locator": "LoginScreen"
+        }
+      ],
+      "tests": [
+        "GAS-02",
+        "GAS-03",
+        "GAS-04",
+        "GAS-05",
+        "GAS-12",
+        "GAS-43",
+        "GAS-44",
+        "GAS-45",
+        "GAS-46",
+        "GAS-47",
+        "GAS-48",
+        "GAS-49",
+        "GAS-50",
+        "GAS-51",
+        "GAS-52",
+        "GAS-53",
+        "GAS-54",
+        "PT-01",
+        "PT-02",
+        "PT-03",
+        "PT-04",
+        "PT-05",
+        "PT-06",
+        "PT-07",
+        "PT-08",
+        "PT-09",
+        "PT-10",
+        "PT-11",
+        "PT-12",
+        "PT-13",
+        "PT-14",
+        "PT-15",
+        "PT-16",
+        "PT-17",
+        "PT-18",
+        "PT-19",
+        "PT-20",
+        "SDK-01",
+        "SDK-02",
+        "SDK-03",
+        "SDK-04",
+        "SDK-05",
+        "SDK-06"
+      ],
+      "manualReason": "",
+      "testGap": "",
+      "status": "PENDING_ACCEPTANCE",
+      "acceptanceStatus": "NOT_RUN",
+      "designText": "画面 A01, E01, E04。I/F IF-01, IF-15。許可された管理者だけが管理画面・検証台帳へ接続。再読込で本人を再確認し、ログアウト後は台帳を表示しない。",
+      "operationText": "担当者が前提を確認し、管理者URLを開く。接続先URL・キー入力欄がないことを確認しGoogleで本人を選択。台帳取得後に再読込し、ログアウトする。 結果不明時は同一対象と履歴を照合してから判断する。",
+      "userText": "開発者設定とGoogleログイン：管理者URLを開く。接続先URL・キー入力欄がないことを確認しGoogleで本人を選択。台帳取得後に再読込し、ログアウトする。",
+      "latestObservation": "RA-01/02：復元後の管理者2名それぞれの新規Googleログイン、本人名義・生徒3名・送迎履歴3件、再読込保持、ログアウト後の再読込で台帳非表示を確認。"
+    },
+    {
+      "number": 2,
+      "title": "生徒登録",
+      "bf": "BF-02",
+      "requirement": "生徒が1件増え全入力値と初期残高10が保存される。",
+      "precondition": "ダミー台帳。",
+      "steps": "生徒登録画面で氏名・保護者・住所・連絡先・初期10回を登録。",
+      "expected": "生徒が1件増え全入力値と初期残高10が保存される。",
+      "origin": "チャット要望から具体化",
+      "req": "REQ-02",
+      "design": "FS-02",
+      "testSpec": "TS-02",
+      "task": "TASK-02",
+      "code": "CODE-02",
+      "testCode": "TEST-02",
+      "operation": "OPS-02",
+      "user": "USR-02",
+      "acceptance": "AT-02",
+      "screens": [
+        "A04",
+        "D03"
+      ],
+      "interfaces": [
+        "IF-04",
+        "IF-11"
+      ],
+      "implementation": [
+        {
+          "path": "gas/Code.gs",
+          "locator": "createStudent_"
+        }
+      ],
+      "tests": [
+        "GAS-01",
+        "GAS-18",
+        "GAS-19",
+        "GAS-20",
+        "GAS-21",
+        "GAS-36",
+        "GAS-37",
+        "GAS-38"
+      ],
+      "manualReason": "",
+      "testGap": "",
+      "status": "PENDING_ACCEPTANCE",
+      "acceptanceStatus": "NOT_RUN",
+      "designText": "画面 A04, D03。I/F IF-04, IF-11。生徒が1件増え全入力値と初期残高10が保存される。",
+      "operationText": "担当者が前提を確認し、生徒登録画面で氏名・保護者・住所・連絡先・初期10回を登録。 結果不明時は同一対象と履歴を照合してから判断する。",
+      "userText": "生徒登録：生徒登録画面で氏名・保護者・住所・連絡先・初期10回を登録。"
+    },
+    {
+      "number": 3,
+      "title": "保護者の残数確認",
+      "bf": "BF-03",
+      "requirement": "氏名と7回分・片道1枚の説明が表示される。",
+      "precondition": "初期生徒STU-001が7回。",
+      "steps": "登録済み保護者が家庭専用URLからGoogleで入り、自家庭のお子様の氏名・残高・説明を確認。他家庭が選べないことを確認。",
+      "expected": "氏名と7回分・片道1枚の説明が表示される。",
+      "origin": "チャット要望から具体化",
+      "req": "REQ-03",
+      "design": "FS-03",
+      "testSpec": "TS-03",
+      "task": "TASK-03",
+      "code": "CODE-03",
+      "testCode": "TEST-03",
+      "operation": "OPS-03",
+      "user": "USR-03",
+      "acceptance": "AT-03",
+      "screens": [
+        "P02"
+      ],
+      "interfaces": [
+        "IF-03"
+      ],
+      "implementation": [
+        {
+          "path": "src/components/ParentPortal.tsx",
+          "locator": "ParentPortal"
+        }
+      ],
+      "tests": [
+        "UI-01",
+        "GAS-06"
+      ],
+      "manualReason": "",
+      "testGap": "",
+      "status": "PENDING_ACCEPTANCE",
+      "acceptanceStatus": "NOT_RUN",
+      "designText": "画面 P02。I/F IF-03。氏名と7回分・片道1枚の説明が表示される。",
+      "operationText": "担当者が前提を確認し、登録済み保護者が家庭専用URLからGoogleで入り、自家庭のお子様の氏名・残高・説明を確認。他家庭が選べないことを確認。 結果不明時は同一対象と履歴を照合してから判断する。",
+      "userText": "保護者の残数確認：登録済み保護者が家庭専用URLからGoogleで入り、自家庭のお子様の氏名・残高・説明を確認。他家庭が選べないことを確認。",
+      "testScope": "ローカルのコンポーネントまたはGAS処理契約の自動検査。本人操作の実受入合格は別。"
+    },
+    {
+      "number": 4,
+      "title": "残少・ゼロ案内",
+      "bf": "BF-03",
+      "requirement": "各値でMauro・Brendaへの連絡案内が表示される。",
+      "precondition": "残高2・1・0の各生徒。",
+      "steps": "各残高で利用者画面を開く。",
+      "expected": "各値でMauro・Brendaへの連絡案内が表示される。",
+      "origin": "チャット要望から具体化",
+      "req": "REQ-04",
+      "design": "FS-04",
+      "testSpec": "TS-04",
+      "task": "TASK-04",
+      "code": "CODE-04",
+      "testCode": "TEST-04",
+      "operation": "OPS-04",
+      "user": "USR-04",
+      "acceptance": "AT-04",
+      "screens": [
+        "P02"
+      ],
+      "interfaces": [
+        "IF-03"
+      ],
+      "implementation": [
+        {
+          "path": "src/components/ParentPortal.tsx",
+          "locator": "ParentPortal"
+        }
+      ],
+      "tests": [
+        "UI-02"
+      ],
+      "manualReason": "",
+      "testGap": "",
+      "status": "PENDING_ACCEPTANCE",
+      "acceptanceStatus": "NOT_RUN",
+      "designText": "画面 P02。I/F IF-03。各値でMauro・Brendaへの連絡案内が表示される。",
+      "operationText": "担当者が前提を確認し、各残高で利用者画面を開く。 結果不明時は同一対象と履歴を照合してから判断する。",
+      "userText": "残少・ゼロ案内：各残高で利用者画面を開く。",
+      "testScope": "ローカルのコンポーネントまたはGAS処理契約の自動検査。本人操作の実受入合格は別。"
+    },
+    {
+      "number": 5,
+      "title": "チケット追加",
+      "bf": "BF-03",
+      "requirement": "残高17、履歴1件増、枚数10・金額・備考一致。",
+      "precondition": "初期残高7。",
+      "steps": "10回を追加し台帳・購入履歴を確認。",
+      "expected": "残高17、履歴1件増、枚数10・金額・備考一致。",
+      "origin": "チャット要望から具体化",
+      "req": "REQ-05",
+      "design": "FS-05",
+      "testSpec": "TS-05",
+      "task": "TASK-05",
+      "code": "CODE-05",
+      "testCode": "TEST-05",
+      "operation": "OPS-05",
+      "user": "USR-05",
+      "acceptance": "AT-05",
+      "screens": [
+        "D02"
+      ],
+      "interfaces": [
+        "IF-10",
+        "IF-11"
+      ],
+      "implementation": [
+        {
+          "path": "gas/Code.gs",
+          "locator": "addTickets_"
+        }
+      ],
+      "tests": [
+        "GAS-63"
+      ],
+      "manualReason": "",
+      "testGap": "",
+      "status": "PENDING_ACCEPTANCE",
+      "acceptanceStatus": "NOT_RUN",
+      "designText": "画面 D02。I/F IF-10, IF-11。残高17、履歴1件増、枚数10・金額・備考一致。",
+      "operationText": "担当者が前提を確認し、10回を追加し台帳・購入履歴を確認。 結果不明時は同一対象と履歴を照合してから判断する。",
+      "userText": "チケット追加：10回を追加し台帳・購入履歴を確認。",
+      "testScope": "ローカルのコンポーネントまたはGAS処理契約の自動検査。本人操作の実受入合格は別。"
+    },
+    {
+      "number": 6,
+      "title": "保護者のお迎え予約",
+      "bf": "BF-04",
+      "requirement": "新規予約1件、scheduled、parent、残高7のまま。",
+      "precondition": "残高7・明示選択したデモ。",
+      "steps": "利用者画面から2026-10-20 16:30・お迎え・登録済み住所を使って予約。",
+      "expected": "新規予約1件、scheduled、parent、残高7のまま。",
+      "origin": "チャット要望から具体化",
+      "req": "REQ-06",
+      "design": "FS-06",
+      "testSpec": "TS-06",
+      "task": "TASK-06",
+      "code": "CODE-06",
+      "testCode": "TEST-06",
+      "operation": "OPS-06",
+      "user": "USR-06",
+      "acceptance": "AT-06",
+      "screens": [
+        "D01",
+        "P02"
+      ],
+      "interfaces": [
+        "IF-02",
+        "IF-13"
+      ],
+      "implementation": [
+        {
+          "path": "gas/Code.gs",
+          "locator": "createReservation_"
+        }
+      ],
+      "tests": [
+        "GAS-06",
+        "GAS-07",
+        "GAS-08",
+        "GAS-09",
+        "GAS-10",
+        "GAS-11"
+      ],
+      "manualReason": "",
+      "testGap": "",
+      "status": "PENDING_ACCEPTANCE",
+      "acceptanceStatus": "NOT_RUN",
+      "designText": "画面 D01, P02。I/F IF-02, IF-13。新規予約1件、scheduled、parent、残高7のまま。",
+      "operationText": "担当者が前提を確認し、利用者画面から2026-10-20 16:30・お迎え・登録済み住所を使って予約。 結果不明時は同一対象と履歴を照合してから判断する。",
+      "userText": "保護者のお迎え予約：利用者画面から2026-10-20 16:30・お迎え・登録済み住所を使って予約。"
+    },
+    {
+      "number": 7,
+      "title": "送り予約",
+      "bf": "BF-04",
+      "requirement": "dropoffの予約が1件増え、残高7のまま。",
+      "precondition": "残高7・未接続デモ。",
+      "steps": "サービス経由で送り17:30を登録し画面を再表示。",
+      "expected": "dropoffの予約が1件増え、残高7のまま。",
+      "origin": "チャット要望から具体化",
+      "req": "REQ-07",
+      "design": "FS-07",
+      "testSpec": "TS-07",
+      "task": "TASK-07",
+      "code": "CODE-07",
+      "testCode": "TEST-07",
+      "operation": "OPS-07",
+      "user": "USR-07",
+      "acceptance": "AT-07",
+      "screens": [
+        "D01"
+      ],
+      "interfaces": [
+        "IF-02",
+        "IF-13"
+      ],
+      "implementation": [
+        {
+          "path": "gas/Code.gs",
+          "locator": "createReservation_"
+        }
+      ],
+      "tests": [
+        "GAS-64"
+      ],
+      "manualReason": "",
+      "testGap": "",
+      "status": "PENDING_ACCEPTANCE",
+      "acceptanceStatus": "NOT_RUN",
+      "designText": "画面 D01。I/F IF-02, IF-13。dropoffの予約が1件増え、残高7のまま。",
+      "operationText": "担当者が前提を確認し、サービス経由で送り17:30を登録し画面を再表示。 結果不明時は同一対象と履歴を照合してから判断する。",
+      "userText": "送り予約：サービス経由で送り17:30を登録し画面を再表示。",
+      "testScope": "ローカルのコンポーネントまたはGAS処理契約の自動検査。本人操作の実受入合格は別。"
+    },
+    {
+      "number": 8,
+      "title": "往復予約",
+      "bf": "BF-04",
+      "requirement": "roundtripの予約が1件増え、予約時残高7のまま。",
+      "precondition": "残高7・未接続デモ。",
+      "steps": "サービス経由で往復を登録し画面を再表示。",
+      "expected": "roundtripの予約が1件増え、予約時残高7のまま。",
+      "origin": "チャット要望から具体化",
+      "req": "REQ-08",
+      "design": "FS-08",
+      "testSpec": "TS-08",
+      "task": "TASK-08",
+      "code": "CODE-08",
+      "testCode": "TEST-08",
+      "operation": "OPS-08",
+      "user": "USR-08",
+      "acceptance": "AT-08",
+      "screens": [
+        "D01"
+      ],
+      "interfaces": [
+        "IF-02",
+        "IF-13"
+      ],
+      "implementation": [
+        {
+          "path": "gas/Code.gs",
+          "locator": "createReservation_"
+        }
+      ],
+      "tests": [
+        "GAS-65"
+      ],
+      "manualReason": "",
+      "testGap": "",
+      "status": "PENDING_ACCEPTANCE",
+      "acceptanceStatus": "NOT_RUN",
+      "designText": "画面 D01。I/F IF-02, IF-13。roundtripの予約が1件増え、予約時残高7のまま。",
+      "operationText": "担当者が前提を確認し、サービス経由で往復を登録し画面を再表示。 結果不明時は同一対象と履歴を照合してから判断する。",
+      "userText": "往復予約：サービス経由で往復を登録し画面を再表示。",
+      "testScope": "ローカルのコンポーネントまたはGAS処理契約の自動検査。本人操作の実受入合格は別。"
+    },
+    {
+      "number": 9,
+      "title": "管理者の代理予約",
+      "bf": "BF-04",
+      "requirement": "新規予約1件、reservedBy=teacher。",
+      "precondition": "初期台帳。",
+      "steps": "管理者画面から日時・生徒・場所を指定して予約。",
+      "expected": "新規予約1件、reservedBy=teacher。",
+      "origin": "チャット要望から具体化",
+      "req": "REQ-09",
+      "design": "FS-09",
+      "testSpec": "TS-09",
+      "task": "TASK-09",
+      "code": "CODE-09",
+      "testCode": "TEST-09",
+      "operation": "OPS-09",
+      "user": "USR-09",
+      "acceptance": "AT-09",
+      "screens": [
+        "A02",
+        "D01"
+      ],
+      "interfaces": [
+        "IF-02"
+      ],
+      "implementation": [
+        {
+          "path": "src/components/AddRideModal.tsx",
+          "locator": "AddRideModal"
+        }
+      ],
+      "tests": [
+        "UI-03"
+      ],
+      "manualReason": "",
+      "testGap": "",
+      "status": "PENDING_ACCEPTANCE",
+      "acceptanceStatus": "NOT_RUN",
+      "designText": "画面 A02, D01。I/F IF-02。新規予約1件、reservedBy=teacher。",
+      "operationText": "担当者が前提を確認し、管理者画面から日時・生徒・場所を指定して予約。 結果不明時は同一対象と履歴を照合してから判断する。",
+      "userText": "管理者の代理予約：管理者画面から日時・生徒・場所を指定して予約。",
+      "testScope": "ローカルのコンポーネントまたはGAS処理契約の自動検査。本人操作の実受入合格は別。"
+    },
+    {
+      "number": 10,
+      "title": "保護者の予約取消",
+      "bf": "BF-05",
+      "requirement": "対象IDがcancelled、残高7のまま。",
+      "precondition": "保護者予約1件・残高7。",
+      "steps": "利用者画面で対象予約をキャンセルし確認を承諾。",
+      "expected": "対象IDがcancelled、残高7のまま。",
+      "origin": "チャット要望から具体化",
+      "req": "REQ-10",
+      "design": "FS-10",
+      "testSpec": "TS-10",
+      "task": "TASK-10",
+      "code": "CODE-10",
+      "testCode": "TEST-10",
+      "operation": "OPS-10",
+      "user": "USR-10",
+      "acceptance": "AT-10",
+      "screens": [
+        "P02",
+        "D05"
+      ],
+      "interfaces": [
+        "IF-05",
+        "IF-13"
+      ],
+      "implementation": [
+        {
+          "path": "gas/Code.gs",
+          "locator": "cancelReservation_"
+        }
+      ],
+      "tests": [
+        "GAS-06",
+        "GAS-07",
+        "GAS-08",
+        "GAS-09",
+        "GAS-10",
+        "GAS-11"
+      ],
+      "manualReason": "",
+      "testGap": "",
+      "status": "PENDING_ACCEPTANCE",
+      "acceptanceStatus": "NOT_RUN",
+      "designText": "画面 P02, D05。I/F IF-05, IF-13。対象IDがcancelled、残高7のまま。",
+      "operationText": "担当者が前提を確認し、利用者画面で対象予約をキャンセルし確認を承諾。 結果不明時は同一対象と履歴を照合してから判断する。",
+      "userText": "保護者の予約取消：利用者画面で対象予約をキャンセルし確認を承諾。"
+    },
+    {
+      "number": 11,
+      "title": "管理者の予約取消",
+      "bf": "BF-05",
+      "requirement": "対象IDがcancelled、残数不変。",
+      "precondition": "予約1件。",
+      "steps": "サービス経由で取消後に管理画面を再表示。",
+      "expected": "対象IDがcancelled、残数不変。",
+      "origin": "チャット要望から具体化",
+      "req": "REQ-11",
+      "design": "FS-11",
+      "testSpec": "TS-11",
+      "task": "TASK-11",
+      "code": "CODE-11",
+      "testCode": "TEST-11",
+      "operation": "OPS-11",
+      "user": "USR-11",
+      "acceptance": "AT-11",
+      "screens": [
+        "A03",
+        "D05"
+      ],
+      "interfaces": [
+        "IF-05",
+        "IF-13"
+      ],
+      "implementation": [
+        {
+          "path": "gas/Code.gs",
+          "locator": "cancelReservation_"
+        }
+      ],
+      "tests": [
+        "GAS-66"
+      ],
+      "manualReason": "",
+      "testGap": "",
+      "status": "PENDING_ACCEPTANCE",
+      "acceptanceStatus": "NOT_RUN",
+      "designText": "画面 A03, D05。I/F IF-05, IF-13。対象IDがcancelled、残数不変。",
+      "operationText": "担当者が前提を確認し、サービス経由で取消後に管理画面を再表示。 結果不明時は同一対象と履歴を照合してから判断する。",
+      "userText": "管理者の予約取消：サービス経由で取消後に管理画面を再表示。",
+      "testScope": "ローカルのコンポーネントまたはGAS処理契約の自動検査。本人操作の実受入合格は別。"
+    },
+    {
+      "number": 12,
+      "title": "当日一覧・地図リンク",
+      "bf": "BF-06",
+      "requirement": "当日予約とGoogle Maps検索URLが表示される（地図先の動作は対象外）。",
+      "precondition": "初期当日予約。",
+      "steps": "管理者画面を開き地図リンクを調べる。",
+      "expected": "当日予約とGoogle Maps検索URLが表示される（地図先の動作は対象外）。",
+      "origin": "チャット要望から具体化",
+      "req": "REQ-12",
+      "design": "FS-12",
+      "testSpec": "TS-12",
+      "task": "TASK-12",
+      "code": "CODE-12",
+      "testCode": "TEST-12",
+      "operation": "OPS-12",
+      "user": "USR-12",
+      "acceptance": "AT-12",
+      "screens": [
+        "A02",
+        "E02"
+      ],
+      "interfaces": [
+        "IF-03",
+        "IF-16"
+      ],
+      "implementation": [
+        {
+          "path": "src/components/TeacherDashboard.tsx",
+          "locator": "TeacherDashboard"
+        }
+      ],
+      "tests": [
+        "UI-04"
+      ],
+      "manualReason": "",
+      "testGap": "",
+      "status": "PENDING_ACCEPTANCE",
+      "acceptanceStatus": "NOT_RUN",
+      "designText": "画面 A02, E02。I/F IF-03, IF-16。当日予約とGoogle Maps検索URLが表示される（地図先の動作は対象外）。",
+      "operationText": "担当者が前提を確認し、管理者画面を開き地図リンクを調べる。 結果不明時は同一対象と履歴を照合してから判断する。",
+      "userText": "当日一覧・地図リンク：管理者画面を開き地図リンクを調べる。",
+      "testScope": "ローカルのコンポーネントまたはGAS処理契約の自動検査。本人操作の実受入合格は別。"
+    },
+    {
+      "number": 13,
+      "title": "片道完了",
+      "bf": "BF-06",
+      "requirement": "completed・完了日時あり・残高6。",
+      "precondition": "残高7・お迎え予約。",
+      "steps": "サービス経由で完了後に画面を再表示。",
+      "expected": "completed・完了日時あり・残高6。",
+      "origin": "チャット要望から具体化",
+      "req": "REQ-13",
+      "design": "FS-13",
+      "testSpec": "TS-13",
+      "task": "TASK-13",
+      "code": "CODE-13",
+      "testCode": "TEST-13",
+      "operation": "OPS-13",
+      "user": "USR-13",
+      "acceptance": "AT-13",
+      "screens": [
+        "A02",
+        "A03"
+      ],
+      "interfaces": [
+        "IF-06",
+        "IF-11"
+      ],
+      "implementation": [
+        {
+          "path": "gas/Code.gs",
+          "locator": "completeRide_"
+        }
+      ],
+      "tests": [
+        "GAS-13",
+        "GAS-14",
+        "GAS-15",
+        "GAS-16"
+      ],
+      "manualReason": "",
+      "testGap": "",
+      "status": "PENDING_ACCEPTANCE",
+      "acceptanceStatus": "NOT_RUN",
+      "designText": "画面 A02, A03。I/F IF-06, IF-11。completed・完了日時あり・残高6。",
+      "operationText": "担当者が前提を確認し、サービス経由で完了後に画面を再表示。 結果不明時は同一対象と履歴を照合してから判断する。",
+      "userText": "片道完了：サービス経由で完了後に画面を再表示。"
+    },
+    {
+      "number": 14,
+      "title": "往復完了",
+      "bf": "BF-06",
+      "requirement": "completed・残高5・消費2。",
+      "precondition": "残高7・往復予約。",
+      "steps": "サービス経由で往復完了後に画面を再表示。",
+      "expected": "completed・残高5・消費2。",
+      "origin": "チャット要望から具体化",
+      "req": "REQ-14",
+      "design": "FS-14",
+      "testSpec": "TS-14",
+      "task": "TASK-14",
+      "code": "CODE-14",
+      "testCode": "TEST-14",
+      "operation": "OPS-14",
+      "user": "USR-14",
+      "acceptance": "AT-14",
+      "screens": [
+        "A02",
+        "A03"
+      ],
+      "interfaces": [
+        "IF-06",
+        "IF-11"
+      ],
+      "implementation": [
+        {
+          "path": "gas/Code.gs",
+          "locator": "completeRide_"
+        }
+      ],
+      "tests": [
+        "GAS-13",
+        "GAS-14",
+        "GAS-15",
+        "GAS-16"
+      ],
+      "manualReason": "",
+      "testGap": "",
+      "status": "PENDING_ACCEPTANCE",
+      "acceptanceStatus": "NOT_RUN",
+      "designText": "画面 A02, A03。I/F IF-06, IF-11。completed・残高5・消費2。",
+      "operationText": "担当者が前提を確認し、サービス経由で往復完了後に画面を再表示。 結果不明時は同一対象と履歴を照合してから判断する。",
+      "userText": "往復完了：サービス経由で往復完了後に画面を再表示。"
+    },
+    {
+      "number": 15,
+      "title": "完了の二重処理防止",
+      "bf": "BF-06",
+      "requirement": "最終残高6、completedを保持、再処理の消費枚数0。",
+      "precondition": "管理者デモ・残高7・片道予約。",
+      "steps": "同じ予約IDに完了を2回要求。",
+      "expected": "最終残高6、completedを保持、再処理の消費枚数0。",
+      "origin": "ユーザーによる不合格6件の修正依頼（実装対象確定）",
+      "req": "REQ-15",
+      "design": "FS-15",
+      "testSpec": "TS-15",
+      "task": "TASK-15",
+      "code": "CODE-15",
+      "testCode": "TEST-15",
+      "operation": "OPS-15",
+      "user": "USR-15",
+      "acceptance": "AT-15",
+      "screens": [
+        "A02",
+        "A03"
+      ],
+      "interfaces": [
+        "IF-06"
+      ],
+      "implementation": [
+        {
+          "path": "gas/Code.gs",
+          "locator": "completeRide_"
+        }
+      ],
+      "tests": [
+        "GAS-13",
+        "GAS-14",
+        "GAS-15",
+        "GAS-16"
+      ],
+      "manualReason": "",
+      "testGap": "",
+      "status": "PENDING_ACCEPTANCE",
+      "acceptanceStatus": "NOT_RUN",
+      "designText": "画面 A02, A03。I/F IF-06。最終残高6、completedを保持、再処理の消費枚数0。",
+      "operationText": "担当者が前提を確認し、同じ予約IDに完了を2回要求。 結果不明時は同一対象と履歴を照合してから判断する。",
+      "userText": "完了の二重処理防止：同じ予約IDに完了を2回要求。"
+    },
+    {
+      "number": 16,
+      "title": "取消済みの完了拒否",
+      "bf": "BF-06",
+      "requirement": "cancelledを保持し残高7のまま。",
+      "precondition": "残高7・取消済み予約。",
+      "steps": "取消済みIDを完了要求。",
+      "expected": "cancelledを保持し残高7のまま。",
+      "origin": "ユーザーによる不合格6件の修正依頼（実装対象確定）",
+      "req": "REQ-16",
+      "design": "FS-16",
+      "testSpec": "TS-16",
+      "task": "TASK-16",
+      "code": "CODE-16",
+      "testCode": "TEST-16",
+      "operation": "OPS-16",
+      "user": "USR-16",
+      "acceptance": "AT-16",
+      "screens": [
+        "A03"
+      ],
+      "interfaces": [
+        "IF-06"
+      ],
+      "implementation": [
+        {
+          "path": "gas/Code.gs",
+          "locator": "completeRide_"
+        }
+      ],
+      "tests": [
+        "GAS-13",
+        "GAS-14",
+        "GAS-15",
+        "GAS-16"
+      ],
+      "manualReason": "",
+      "testGap": "",
+      "status": "PENDING_ACCEPTANCE",
+      "acceptanceStatus": "NOT_RUN",
+      "designText": "画面 A03。I/F IF-06。cancelledを保持し残高7のまま。",
+      "operationText": "担当者が前提を確認し、取消済みIDを完了要求。 結果不明時は同一対象と履歴を照合してから判断する。",
+      "userText": "取消済みの完了拒否：取消済みIDを完了要求。"
+    },
+    {
+      "number": 17,
+      "title": "不正なチケット追加拒否",
+      "bf": "BF-03",
+      "requirement": "全要求が拒否され残高7・購入履歴が不変。",
+      "precondition": "管理者デモ・残高7。",
+      "steps": "枚数に-1/0/小数/NaN/Infinity/101、金額に負数/小数/NaN/Infinityを渡す。",
+      "expected": "全要求が拒否され残高7・購入履歴が不変。",
+      "origin": "ユーザーによる不合格6件の修正依頼（実装対象確定）",
+      "req": "REQ-17",
+      "design": "FS-17",
+      "testSpec": "TS-17",
+      "task": "TASK-17",
+      "code": "CODE-17",
+      "testCode": "TEST-17",
+      "operation": "OPS-17",
+      "user": "USR-17",
+      "acceptance": "AT-17",
+      "screens": [
+        "D02"
+      ],
+      "interfaces": [
+        "IF-10"
+      ],
+      "implementation": [
+        {
+          "path": "gas/Code.gs",
+          "locator": "addTickets_"
+        }
+      ],
+      "tests": [
+        "GAS-18",
+        "GAS-19",
+        "GAS-20",
+        "GAS-21",
+        "GAS-36",
+        "GAS-37",
+        "GAS-38"
+      ],
+      "manualReason": "",
+      "testGap": "",
+      "status": "PENDING_ACCEPTANCE",
+      "acceptanceStatus": "NOT_RUN",
+      "designText": "画面 D02。I/F IF-10。全要求が拒否され残高7・購入履歴が不変。",
+      "operationText": "担当者が前提を確認し、枚数に-1/0/小数/NaN/Infinity/101、金額に負数/小数/NaN/Infinityを渡す。 結果不明時は同一対象と履歴を照合してから判断する。",
+      "userText": "不正なチケット追加拒否：枚数に-1/0/小数/NaN/Infinity/101、金額に負数/小数/NaN/Infinityを渡す。"
+    },
+    {
+      "number": 18,
+      "title": "通信障害時に成功扱いしない",
+      "bf": "BF-07",
+      "requirement": "すべて拒否、ローカル台帳不変、同一内容再試行の予約ID不変、UIにエラー表示してフォーム維持。",
+      "precondition": "ローカル模擬APIへのログイン・通信障害注入。",
+      "steps": "全5更新POSTを通信失敗させる。業務エラー/HTTP503/不正JSONも拒否確認。同一予約を再試行しUIでも予約する。",
+      "expected": "すべて拒否、ローカル台帳不変、同一内容再試行の予約ID不変、UIにエラー表示してフォーム維持。",
+      "origin": "ユーザーによる不合格6件の修正依頼（実装対象確定）",
+      "req": "REQ-18",
+      "design": "FS-18",
+      "testSpec": "TS-18",
+      "task": "TASK-18",
+      "code": "CODE-18",
+      "testCode": "TEST-18",
+      "operation": "OPS-18",
+      "user": "USR-18",
+      "acceptance": "AT-18",
+      "screens": [
+        "D01"
+      ],
+      "interfaces": [
+        "IF-02",
+        "IF-09"
+      ],
+      "implementation": [
+        {
+          "path": "gas/Code.gs",
+          "locator": "mutate_"
+        },
+        {
+          "path": "src/services/api.ts",
+          "locator": "request"
+        }
+      ],
+      "tests": [
+        "GAS-18",
+        "GAS-19",
+        "GAS-20",
+        "GAS-21",
+        "GAS-22",
+        "GAS-23",
+        "GAS-24",
+        "GAS-25",
+        "GAS-26",
+        "GAS-27",
+        "GAS-28",
+        "GAS-29",
+        "GAS-30",
+        "GAS-31",
+        "GAS-32",
+        "GAS-33",
+        "GAS-34",
+        "GAS-35",
+        "GAS-36",
+        "GAS-37",
+        "GAS-38"
+      ],
+      "manualReason": "",
+      "testGap": "",
+      "status": "PENDING_ACCEPTANCE",
+      "acceptanceStatus": "NOT_RUN",
+      "designText": "画面 D01。I/F IF-02, IF-09。すべて拒否、ローカル台帳不変、同一内容再試行の予約ID不変、UIにエラー表示してフォーム維持。",
+      "operationText": "担当者が前提を確認し、全5更新POSTを通信失敗させる。業務エラー/HTTP503/不正JSONも拒否確認。同一予約を再試行しUIでも予約する。 結果不明時は同一対象と履歴を照合してから判断する。",
+      "userText": "通信障害時に成功扱いしない：全5更新POSTを通信失敗させる。業務エラー/HTTP503/不正JSONも拒否確認。同一予約を再試行しUIでも予約する。"
+    },
+    {
+      "number": 19,
+      "title": "未認証の管理操作を拒否",
+      "bf": "BF-07",
+      "requirement": "認証前はログイン画面のみ・台帳未生成。キー失効応答後はセッションと画面の個人情報を消しログイン画面に戻る。",
+      "precondition": "セッション・保存データなしの新規画面。",
+      "steps": "未認証の画面とAPI拒否を確認。その後ローカル模擬APIでログインし、キー失効応答を注入する。",
+      "expected": "認証前はログイン画面のみ・台帳未生成。キー失効応答後はセッションと画面の個人情報を消しログイン画面に戻る。",
+      "origin": "ユーザーによる不合格6件の修正依頼（実装対象確定）",
+      "req": "REQ-19",
+      "design": "FS-19",
+      "testSpec": "TS-19",
+      "task": "TASK-19",
+      "code": "CODE-19",
+      "testCode": "TEST-19",
+      "operation": "OPS-19",
+      "user": "USR-19",
+      "acceptance": "AT-19",
+      "screens": [
+        "A01",
+        "P01"
+      ],
+      "interfaces": [
+        "IF-01"
+      ],
+      "implementation": [
+        {
+          "path": "gas/Code.gs",
+          "locator": "authenticateGoogle_"
+        }
+      ],
+      "tests": [
+        "GAS-02",
+        "GAS-03",
+        "GAS-04",
+        "GAS-05",
+        "GAS-12",
+        "GAS-43",
+        "GAS-44",
+        "GAS-45",
+        "GAS-46",
+        "GAS-47",
+        "GAS-48",
+        "GAS-49",
+        "GAS-50",
+        "GAS-51",
+        "GAS-52",
+        "GAS-53",
+        "GAS-54",
+        "PT-01",
+        "PT-02",
+        "PT-03",
+        "PT-04",
+        "PT-05",
+        "PT-06",
+        "PT-07",
+        "PT-08",
+        "PT-09",
+        "PT-10",
+        "PT-11",
+        "PT-12",
+        "PT-13",
+        "PT-14",
+        "PT-15",
+        "PT-16",
+        "PT-17",
+        "PT-18",
+        "PT-19",
+        "PT-20"
+      ],
+      "manualReason": "",
+      "testGap": "",
+      "status": "PENDING_ACCEPTANCE",
+      "acceptanceStatus": "NOT_RUN",
+      "designText": "画面 A01, P01。I/F IF-01。認証前はログイン画面のみ・台帳未生成。キー失効応答後はセッションと画面の個人情報を消しログイン画面に戻る。",
+      "operationText": "担当者が前提を確認し、未認証の画面とAPI拒否を確認。その後ローカル模擬APIでログインし、キー失効応答を注入する。 結果不明時は同一対象と履歴を照合してから判断する。",
+      "userText": "未認証の管理操作を拒否：未認証の画面とAPI拒否を確認。その後ローカル模擬APIでログインし、キー失効応答を注入する。",
+      "latestObservation": "RA-03：公開管理者入口で未認証時に台帳非表示を確認。未認証API拒否を含むAT-19全体の再合格ではない。"
+    },
+    {
+      "number": 20,
+      "title": "保護者の家庭別アクセス制限",
+      "bf": "BF-07",
+      "requirement": "STU-001だけを表示。別家庭の参照/予約/取消と完了/チケット追加を拒否。",
+      "precondition": "STU-001だけに紐付いた保護者デモ。",
+      "steps": "生徒一覧・予約一覧・STU-002への参照/予約/取消・管理者操作の直接呼出を確認。",
+      "expected": "STU-001だけを表示。別家庭の参照/予約/取消と完了/チケット追加を拒否。",
+      "origin": "ユーザーによる不合格6件の修正依頼（実装対象確定）",
+      "req": "REQ-20",
+      "design": "FS-20",
+      "testSpec": "TS-20",
+      "task": "TASK-20",
+      "code": "CODE-20",
+      "testCode": "TEST-20",
+      "operation": "OPS-20",
+      "user": "USR-20",
+      "acceptance": "AT-20",
+      "screens": [
+        "P02"
+      ],
+      "interfaces": [
+        "IF-01",
+        "IF-03"
+      ],
+      "implementation": [
+        {
+          "path": "gas/Code.gs",
+          "locator": "requireAccess_"
+        },
+        {
+          "path": "src/portal.ts",
+          "locator": "assertPortal"
+        }
+      ],
+      "tests": [
+        "GAS-02",
+        "GAS-03",
+        "GAS-04",
+        "GAS-05",
+        "GAS-06",
+        "GAS-07",
+        "GAS-08",
+        "GAS-09",
+        "GAS-10",
+        "GAS-11",
+        "GAS-12",
+        "GAS-39",
+        "GAS-40",
+        "GAS-41",
+        "GAS-42",
+        "GAS-43",
+        "GAS-44",
+        "GAS-45",
+        "GAS-46",
+        "GAS-47",
+        "GAS-48",
+        "GAS-49",
+        "GAS-50",
+        "GAS-51",
+        "GAS-52",
+        "GAS-53",
+        "GAS-54",
+        "PT-01",
+        "PT-02",
+        "PT-03",
+        "PT-04",
+        "PT-05",
+        "PT-06",
+        "PT-07",
+        "PT-08",
+        "PT-09",
+        "PT-10",
+        "PT-11",
+        "PT-12",
+        "PT-13",
+        "PT-14",
+        "PT-15",
+        "PT-16",
+        "PT-17",
+        "PT-18",
+        "PT-19",
+        "PT-20"
+      ],
+      "manualReason": "",
+      "testGap": "",
+      "status": "PENDING_ACCEPTANCE",
+      "acceptanceStatus": "NOT_RUN",
+      "designText": "画面 P02。I/F IF-01, IF-03。STU-001だけを表示。別家庭の参照/予約/取消と完了/チケット追加を拒否。",
+      "operationText": "担当者が前提を確認し、生徒一覧・予約一覧・STU-002への参照/予約/取消・管理者操作の直接呼出を確認。 結果不明時は同一対象と履歴を照合してから判断する。",
+      "userText": "保護者の家庭別アクセス制限：生徒一覧・予約一覧・STU-002への参照/予約/取消・管理者操作の直接呼出を確認。"
+    },
+    {
+      "number": 21,
+      "title": "モバイル表示",
+      "bf": "BF-08",
+      "requirement": "各画面でscrollWidthとinnerWidthが375px以下。保護者の予約・取消行も画面内に収まる。",
+      "precondition": "375×812のエミュレーション。",
+      "steps": "管理・利用者・予約フォームを順に表示し、指定幅375pxと実際の描画幅を照合。",
+      "expected": "各画面でscrollWidthとinnerWidthが375px以下。保護者の予約・取消行も画面内に収まる。",
+      "origin": "チャット要望から具体化",
+      "req": "REQ-21",
+      "design": "FS-21",
+      "testSpec": "TS-21",
+      "task": "TASK-21",
+      "code": "CODE-21",
+      "testCode": "TEST-21",
+      "operation": "OPS-21",
+      "user": "USR-21",
+      "acceptance": "AT-21",
+      "screens": [
+        "A02",
+        "P02",
+        "D01"
+      ],
+      "interfaces": [
+        "IF-03"
+      ],
+      "implementation": [
+        {
+          "path": "src/components/ParentPortal.tsx",
+          "locator": "ParentPortal"
+        }
+      ],
+      "tests": [
+        "UI-05"
+      ],
+      "manualReason": "",
+      "testGap": "",
+      "status": "PENDING_ACCEPTANCE",
+      "acceptanceStatus": "NOT_RUN",
+      "designText": "画面 A02, P02, D01。I/F IF-03。各画面でscrollWidthとinnerWidthが375px以下。保護者の予約・取消行も画面内に収まる。",
+      "operationText": "担当者が前提を確認し、管理・利用者・予約フォームを順に表示し、指定幅375pxと実際の描画幅を照合。 結果不明時は同一対象と履歴を照合してから判断する。",
+      "userText": "モバイル表示：管理・利用者・予約フォームを順に表示し、指定幅375pxと実際の描画幅を照合。",
+      "testScope": "375pxのローカルChromium実測。スマートフォン実機では未確認。"
+    },
+    {
+      "number": 22,
+      "title": "再読込後の永続化",
+      "bf": "BF-07",
+      "requirement": "追加した生徒・予約のIDと値が維持される。",
+      "precondition": "ダミー台帳。",
+      "steps": "生徒追加と予約登録後に再読込。",
+      "expected": "追加した生徒・予約のIDと値が維持される。",
+      "origin": "チャット要望から具体化",
+      "req": "REQ-22",
+      "design": "FS-22",
+      "testSpec": "TS-22",
+      "task": "TASK-22",
+      "code": "CODE-22",
+      "testCode": "TEST-22",
+      "operation": "OPS-22",
+      "user": "USR-22",
+      "acceptance": "AT-22",
+      "screens": [
+        "A02",
+        "P02"
+      ],
+      "interfaces": [
+        "IF-03"
+      ],
+      "implementation": [
+        {
+          "path": "src/App.tsx",
+          "locator": "App"
+        }
+      ],
+      "tests": [
+        "PT-21"
+      ],
+      "manualReason": "",
+      "testGap": "",
+      "status": "PENDING_ACCEPTANCE",
+      "acceptanceStatus": "NOT_RUN",
+      "designText": "画面 A02, P02。I/F IF-03。追加した生徒・予約のIDと値が維持される。",
+      "operationText": "担当者が前提を確認し、生徒追加と予約登録後に再読込。 結果不明時は同一対象と履歴を照合してから判断する。",
+      "userText": "再読込後の永続化：生徒追加と予約登録後に再読込。",
+      "testScope": "実ApiServiceのデモ保存と新インスタンス再取得を検証。実Google台帳の永続化受入は別。"
+    },
+    {
+      "number": 23,
+      "title": "Google初期化・永続化",
+      "bf": "BF-01",
+      "requirement": "3シート生成・再実行で既存値不変・新規生徒1行。",
+      "precondition": "専用シート・GAS配備・権限が必要。",
+      "steps": "initSpreadsheetを2回実行し生徒をWeb登録、シートを開く。",
+      "expected": "3シート生成・再実行で既存値不変・新規生徒1行。",
+      "origin": "チャット要望から具体化",
+      "req": "REQ-23",
+      "design": "FS-23",
+      "testSpec": "TS-23",
+      "task": "TASK-23",
+      "code": "CODE-23",
+      "testCode": "TEST-23",
+      "operation": "OPS-23",
+      "user": "USR-23",
+      "acceptance": "AT-23",
+      "screens": [
+        "E04"
+      ],
+      "interfaces": [
+        "IF-15",
+        "IF-11"
+      ],
+      "implementation": [
+        {
+          "path": "gas/Code.gs",
+          "locator": "initSpreadsheet"
+        }
+      ],
+      "tests": [
+        "GAS-01"
+      ],
+      "manualReason": "",
+      "testGap": "",
+      "status": "PENDING_ACCEPTANCE",
+      "acceptanceStatus": "NOT_RUN",
+      "designText": "画面 E04。I/F IF-15, IF-11。3シート生成・再実行で既存値不変・新規生徒1行。",
+      "operationText": "担当者が前提を確認し、initSpreadsheetを2回実行し生徒をWeb登録、シートを開く。 結果不明時は同一対象と履歴を照合してから判断する。",
+      "userText": "開発・運用担当向け。利用者の直接操作は対象外。"
+    },
+    {
+      "number": 24,
+      "title": "実カレンダー予約同期",
+      "bf": "BF-04",
+      "requirement": "同一予約ID・日時・場所・イベントIDが一致。",
+      "precondition": "専用GAS・カレンダーが必要。",
+      "steps": "Webから予約しシート行と実カレンダー予定を開く。",
+      "expected": "同一予約ID・日時・場所・イベントIDが一致。",
+      "origin": "チャット要望から具体化",
+      "req": "REQ-24",
+      "design": "FS-24",
+      "testSpec": "TS-24",
+      "task": "TASK-24",
+      "code": "CODE-24",
+      "testCode": "TEST-24",
+      "operation": "OPS-24",
+      "user": "USR-24",
+      "acceptance": "AT-24",
+      "screens": [
+        "D01",
+        "E02",
+        "E03"
+      ],
+      "interfaces": [
+        "IF-02",
+        "IF-13"
+      ],
+      "implementation": [
+        {
+          "path": "gas/Code.gs",
+          "locator": "createReservation_"
+        }
+      ],
+      "tests": [
+        "GAS-67"
+      ],
+      "manualReason": "",
+      "testGap": "",
+      "status": "HOLD",
+      "acceptanceStatus": "BLOCKED",
+      "designText": "画面 D01, E02, E03。I/F IF-02, IF-13。同一予約ID・日時・場所・イベントIDが一致。",
+      "operationText": "担当者が前提を確認し、Webから予約しシート行と実カレンダー予定を開く。 結果不明時は同一対象と履歴を照合してから判断する。",
+      "userText": "開発・運用担当向け。利用者の直接操作は対象外。",
+      "testScope": "GASのCalendarアダプタ契約をスタブで検証。実Calendar同期の受入AT-24は未完。"
+    },
+    {
+      "number": 25,
+      "title": "実カレンダー取消同期",
+      "bf": "BF-05",
+      "requirement": "cancelled・対象イベント削除・残高不変。",
+      "precondition": "AT-24の予約。",
+      "steps": "予約取消後にシートとカレンダーを開く。",
+      "expected": "cancelled・対象イベント削除・残高不変。",
+      "origin": "チャット要望から具体化",
+      "req": "REQ-25",
+      "design": "FS-25",
+      "testSpec": "TS-25",
+      "task": "TASK-25",
+      "code": "CODE-25",
+      "testCode": "TEST-25",
+      "operation": "OPS-25",
+      "user": "USR-25",
+      "acceptance": "AT-25",
+      "screens": [
+        "D05",
+        "E02",
+        "E03"
+      ],
+      "interfaces": [
+        "IF-05",
+        "IF-13"
+      ],
+      "implementation": [
+        {
+          "path": "gas/Code.gs",
+          "locator": "cancelReservation_"
+        }
+      ],
+      "tests": [
+        "GAS-68"
+      ],
+      "manualReason": "",
+      "testGap": "",
+      "status": "HOLD",
+      "acceptanceStatus": "BLOCKED",
+      "designText": "画面 D05, E02, E03。I/F IF-05, IF-13。cancelled・対象イベント削除・残高不変。",
+      "operationText": "担当者が前提を確認し、予約取消後にシートとカレンダーを開く。 結果不明時は同一対象と履歴を照合してから判断する。",
+      "userText": "開発・運用担当向け。利用者の直接操作は対象外。",
+      "testScope": "GASの取消アダプタ契約をスタブで検証。実Calendar削除の受入AT-25は未完。"
+    },
+    {
+      "number": 26,
+      "title": "管理者2名・保護者の端末共有",
+      "bf": "BF-07",
+      "requirement": "同一予約・残高を確認し家庭の範囲を維持。",
+      "precondition": "別セッション3台・権限分離・専用GAS。",
+      "steps": "保護者予約 → 管理者A確認・完了 → 管理者Bと保護者が再取得。",
+      "expected": "同一予約・残高を確認し家庭の範囲を維持。",
+      "origin": "チャット要望から具体化",
+      "req": "REQ-26",
+      "design": "FS-26",
+      "testSpec": "TS-26",
+      "task": "TASK-26",
+      "code": "CODE-26",
+      "testCode": "TEST-26",
+      "operation": "OPS-26",
+      "user": "USR-26",
+      "acceptance": "AT-26",
+      "screens": [
+        "A02",
+        "P02"
+      ],
+      "interfaces": [
+        "IF-03",
+        "IF-06"
+      ],
+      "implementation": [
+        {
+          "path": "gas/Code.gs",
+          "locator": "withLock_"
+        }
+      ],
+      "tests": [
+        "GAS-17"
+      ],
+      "manualReason": "",
+      "testGap": "",
+      "status": "PENDING_ACCEPTANCE",
+      "acceptanceStatus": "NOT_RUN",
+      "designText": "画面 A02, P02。I/F IF-03, IF-06。同一予約・残高を確認し家庭の範囲を維持。",
+      "operationText": "担当者が前提を確認し、保護者予約 → 管理者A確認・完了 → 管理者Bと保護者が再取得。 結果不明時は同一対象と履歴を照合してから判断する。",
+      "userText": "管理者2名・保護者の端末共有：保護者予約 → 管理者A確認・完了 → 管理者Bと保護者が再取得。",
+      "latestObservation": "RA-01/02/07/08：復元後の管理者2名の本人ログイン・再読込・ログアウトを確認。両管理者から有効・本人確認済み2名と一時家庭なしを読取り照合。予約・完了・他端末の更新共有を含むAT-26全体は未完。"
+    },
+    {
+      "number": 27,
+      "title": "同時完了の排他制御",
+      "bf": "BF-06",
+      "requirement": "完了1件・片道1枚だけ消費、再試行でも不変。",
+      "precondition": "独立管理者2セッション・専用GAS。",
+      "steps": "同じ予約を両管理者から同時に完了。",
+      "expected": "完了1件・片道1枚だけ消費、再試行でも不変。",
+      "origin": "運用開始に向けた追加提案（受入基準案）",
+      "req": "REQ-27",
+      "design": "FS-27",
+      "testSpec": "TS-27",
+      "task": "TASK-27",
+      "code": "CODE-27",
+      "testCode": "TEST-27",
+      "operation": "OPS-27",
+      "user": "USR-27",
+      "acceptance": "AT-27",
+      "screens": [
+        "A02",
+        "A03"
+      ],
+      "interfaces": [
+        "IF-06"
+      ],
+      "implementation": [
+        {
+          "path": "gas/Code.gs",
+          "locator": "withLock_"
+        }
+      ],
+      "tests": [
+        "GAS-17"
+      ],
+      "manualReason": "",
+      "testGap": "",
+      "status": "PENDING_ACCEPTANCE",
+      "acceptanceStatus": "NOT_RUN",
+      "designText": "画面 A02, A03。I/F IF-06。完了1件・片道1枚だけ消費、再試行でも不変。",
+      "operationText": "担当者が前提を確認し、同じ予約を両管理者から同時に完了。 結果不明時は同一対象と履歴を照合してから判断する。",
+      "userText": "開発・運用担当向け。利用者の直接操作は対象外。",
+      "latestObservation": "AT27-LIVE-01/02：2管理者の同時完了で3枚→2枚。別の専用送迎を管理者1で完了確定後、完了前の管理者2画面から明示再試行して追加0枚・残数2枚・送迎行と完了日時不変を確認。試験行除去後に主要3シートの実行前範囲一致。開発側の期待値確認は完了、独立した第三者受入は未実施。",
+      "observationRecord": "concurrent-completion-plan-2026-10-23/README.md",
+      "developerVerification": "CONFIRMED",
+      "developerEvidence": "docs/acceptance/concurrent-completion-plan-2026-10-23/replay-results.json"
+    },
+    {
+      "number": 28,
+      "title": "バックアップから復旧",
+      "bf": "BF-08",
+      "requirement": "生徒・予約・購入履歴・カレンダーの整合を回復。",
+      "precondition": "専用テスト資源・保存先・担当者。",
+      "steps": "バックアップ → テスト行変更 → 復元 → Web再取得。",
+      "expected": "生徒・予約・購入履歴・カレンダーの整合を回復。",
+      "origin": "運用開始に向けた追加提案（受入基準案）",
+      "req": "REQ-28",
+      "design": "FS-28",
+      "testSpec": "TS-28",
+      "task": "TASK-28",
+      "code": "CODE-28",
+      "testCode": "TEST-28",
+      "operation": "OPS-28",
+      "user": "USR-28",
+      "acceptance": "AT-28",
+      "screens": [
+        "E03",
+        "E04"
+      ],
+      "interfaces": [
+        "IF-14",
+        "IF-15"
+      ],
+      "implementation": [],
+      "tests": [
+        "GAS-25",
+        "GAS-26",
+        "GAS-27",
+        "GAS-28",
+        "GAS-29",
+        "GAS-30",
+        "GAS-31",
+        "GAS-32",
+        "GAS-33",
+        "GAS-34",
+        "GAS-35"
+      ],
+      "manualReason": "バックアップ復元は担当者が外部画面で行う。自動復元APIはない。",
+      "testGap": "",
+      "status": "PENDING_ACCEPTANCE",
+      "acceptanceStatus": "NOT_RUN",
+      "designText": "画面 E03, E04。I/F IF-14, IF-15。生徒・予約・購入履歴・カレンダーの整合を回復。",
+      "operationText": "担当者が前提を確認し、バックアップ → テスト行変更 → 復元 → Web再取得。 結果不明時は同一対象と履歴を照合してから判断する。",
+      "userText": "開発・運用担当向け。利用者の直接操作は対象外。"
+    },
+    {
+      "number": 29,
+      "title": "実機受入",
+      "bf": "BF-08",
+      "requirement": "入力・確認・操作が可能、受入担当の確認記録あり。",
+      "precondition": "iPhone Safari・Android Chromeと受入担当者。",
+      "steps": "予約・取消・残高確認を各実機で実施。",
+      "expected": "入力・確認・操作が可能、受入担当の確認記録あり。",
+      "origin": "運用開始に向けた追加提案（受入基準案）",
+      "req": "REQ-29",
+      "design": "FS-29",
+      "testSpec": "TS-29",
+      "task": "TASK-29",
+      "code": "CODE-29",
+      "testCode": "TEST-29",
+      "operation": "OPS-29",
+      "user": "USR-29",
+      "acceptance": "AT-29",
+      "screens": [
+        "P02",
+        "D01"
+      ],
+      "interfaces": [
+        "IF-02",
+        "IF-05"
+      ],
+      "implementation": [
+        {
+          "path": "src/App.tsx",
+          "locator": "App"
+        }
+      ],
+      "tests": [
+        "UI-06"
+      ],
+      "manualReason": "",
+      "testGap": "",
+      "status": "PENDING_ACCEPTANCE",
+      "acceptanceStatus": "NOT_RUN",
+      "designText": "画面 P02, D01。I/F IF-02, IF-05。入力・確認・操作が可能、受入担当の確認記録あり。",
+      "operationText": "担当者が前提を確認し、予約・取消・残高確認を各実機で実施。 結果不明時は同一対象と履歴を照合してから判断する。",
+      "userText": "実機受入：予約・取消・残高確認を各実機で実施。",
+      "testScope": "Chromiumタッチエミュレーション。物理端末と全操作の実機受入AT-29は未完。"
+    },
+    {
+      "number": 30,
+      "title": "リリース後スモークテスト",
+      "bf": "BF-08",
+      "requirement": "対象コミットと公開版一致、重大不具合なし、戻し手順あり。",
+      "precondition": "全必須合格・受入確認・対象環境確定。",
+      "steps": "リリース後URLで権限・予約・取消・連携・版を確認。 AT-30は本番後確認で本番前全30件条件と時点が異なる。リハーサル採用の可否を責任者と確定する。",
+      "expected": "対象コミットと公開版一致、重大不具合なし、戻し手順あり。",
+      "origin": "運用開始に向けた追加提案（受入基準案）",
+      "req": "REQ-30",
+      "design": "FS-30",
+      "testSpec": "TS-30",
+      "task": "TASK-30",
+      "code": "CODE-30",
+      "testCode": "TEST-30",
+      "operation": "OPS-30",
+      "user": "USR-30",
+      "acceptance": "AT-30",
+      "screens": [
+        "A01",
+        "P01"
+      ],
+      "interfaces": [
+        "IF-15"
+      ],
+      "implementation": [
+        {
+          "path": "scripts/prepare_test_release.cjs",
+          "locator": "sourceDigest"
+        }
+      ],
+      "tests": [
+        "REL-01"
+      ],
+      "manualReason": "",
+      "testGap": "",
+      "status": "HOLD",
+      "acceptanceStatus": "BLOCKED",
+      "designText": "画面 A01, P01。I/F IF-15。対象コミットと公開版一致、重大不具合なし、戻し手順あり。",
+      "operationText": "担当者が前提を確認し、リリース後URLで権限・予約・取消・連携・版を確認。 AT-30は本番後確認で本番前全30件条件と時点が異なる。リハーサル採用の可否を責任者と確定する。 結果不明時は同一対象と履歴を照合してから判断する。",
+      "userText": "開発・運用担当向け。利用者の直接操作は対象外。",
+      "testScope": "配布マニフェスト作成を隔離VMで検証。本番公開後の疎通・復旧確認AT-30は未実施。",
+      "latestObservation": "RA-06：現行配布記録の公開7ファイルとSHA-256一致。古い固定版との比較失敗は棄却記録として保持。本番AT-30・実Google受入の合格ではない。"
+    },
+    {
+      "number": 31,
+      "title": "管理者による利用登録・停止・削除",
+      "bf": "BF-09",
+      "requirement": "管理者が本人メール・役割・対象生徒を登録し、変更・停止・削除する。",
+      "precondition": "架空データと許可された検証環境。必要な本人と担当者を準備。",
+      "steps": "A06で登録・停止・再有効化・削除を行い次の通信の権限を確認。",
+      "expected": "許可リストだけを変更。業務履歴・Google本人は削除せず、自分の停止削除・最後の管理者喪失を拒否。",
+      "origin": "ユーザーの追加要望・実装確認",
+      "req": "REQ-31",
+      "design": "FS-31",
+      "testSpec": "TS-31",
+      "task": "TASK-31",
+      "code": "CODE-31",
+      "testCode": "TEST-31",
+      "operation": "OPS-31",
+      "user": "USR-31",
+      "acceptance": "SAT-31",
+      "screens": [
+        "A06",
+        "D04"
+      ],
+      "interfaces": [
+        "IF-08",
+        "IF-09"
+      ],
+      "implementation": [
+        {
+          "path": "gas/Code.gs",
+          "locator": "saveManagedUser_"
+        },
+        {
+          "path": "gas/Code.gs",
+          "locator": "deleteManagedUser_"
+        }
+      ],
+      "tests": [
+        "GAS-55",
+        "GAS-56",
+        "GAS-57",
+        "GAS-58",
+        "GAS-59",
+        "GAS-60",
+        "GAS-61",
+        "GAS-62",
+        "PT-01",
+        "PT-02",
+        "PT-03",
+        "PT-04",
+        "PT-05",
+        "PT-06",
+        "PT-07",
+        "PT-08",
+        "PT-09",
+        "PT-10",
+        "PT-11",
+        "PT-12",
+        "PT-13",
+        "PT-14",
+        "PT-15",
+        "PT-16",
+        "PT-17",
+        "PT-18",
+        "PT-19",
+        "PT-20"
+      ],
+      "manualReason": "",
+      "testGap": "",
+      "status": "PENDING_ACCEPTANCE",
+      "acceptanceStatus": "NOT_RUN",
+      "designText": "画面 A06, D04。I/F IF-08, IF-09。管理者が本人メール・役割・対象生徒を登録し、変更・停止・削除する。",
+      "operationText": "担当者が前提を確認し、A06で登録・停止・再有効化・削除を行い次の通信の権限を確認。 結果不明時は同一対象と履歴を照合してから判断する。",
+      "userText": "管理者による利用登録・停止・削除：A06で登録・停止・再有効化・削除を行い次の通信の権限を確認。",
+      "latestObservation": "RA-07/08：両管理者の公開管理画面で、有効・本人確認済みの管理者2名、一時検証家庭なしを確認。許可設定の書込は実施していない。"
+    },
+    {
+      "number": 32,
+      "title": "初回Google本人紐付け",
+      "bf": "BF-09",
+      "requirement": "本人確認済みGoogleメールだけを事前登録と紐付ける。",
+      "precondition": "架空データと許可された検証環境。必要な本人と担当者を準備。",
+      "steps": "事前登録した本人で初回ログイン。未確認メール・停止済み・他人で試す。",
+      "expected": "正しい本人だけ一度UIDへ移行し、役割を自己選択できない。",
+      "origin": "ユーザーの追加要望・実装確認",
+      "req": "REQ-32",
+      "design": "FS-32",
+      "testSpec": "TS-32",
+      "task": "TASK-32",
+      "code": "CODE-32",
+      "testCode": "TEST-32",
+      "operation": "OPS-32",
+      "user": "USR-32",
+      "acceptance": "SAT-32",
+      "screens": [
+        "A01",
+        "P01",
+        "E01"
+      ],
+      "interfaces": [
+        "IF-01",
+        "IF-09"
+      ],
+      "implementation": [
+        {
+          "path": "gas/Code.gs",
+          "locator": "authenticateGoogle_"
+        }
+      ],
+      "tests": [
+        "GAS-43",
+        "GAS-44",
+        "GAS-45",
+        "GAS-46",
+        "GAS-47",
+        "GAS-48",
+        "GAS-49",
+        "GAS-50",
+        "GAS-51",
+        "GAS-52",
+        "GAS-53",
+        "GAS-54",
+        "GAS-55",
+        "GAS-56",
+        "GAS-57",
+        "GAS-58",
+        "GAS-59",
+        "GAS-60",
+        "GAS-61",
+        "GAS-62"
+      ],
+      "manualReason": "",
+      "testGap": "",
+      "status": "PENDING_ACCEPTANCE",
+      "acceptanceStatus": "NOT_RUN",
+      "designText": "画面 A01, P01, E01。I/F IF-01, IF-09。本人確認済みGoogleメールだけを事前登録と紐付ける。",
+      "operationText": "担当者が前提を確認し、事前登録した本人で初回ログイン。未確認メール・停止済み・他人で試す。 結果不明時は同一対象と履歴を照合してから判断する。",
+      "userText": "初回Google本人紐付け：事前登録した本人で初回ログイン。未確認メール・停止済み・他人で試す。",
+      "latestObservation": "RA-04：公開保護者入口の入力欄0・管理者メニューなし・台帳なしを確認。家庭本人での実ログインは今回未実施。"
+    },
+    {
+      "number": 33,
+      "title": "家庭URL・QRの配布と再発行",
+      "bf": "BF-09",
+      "requirement": "個別URLとQRは管理者が本人へ配布し紛失時再発行する。",
+      "precondition": "架空データと許可された検証環境。必要な本人と担当者を準備。",
+      "steps": "A05で表示・コピー。A06で再発行後、新旧URLで本人ログイン。",
+      "expected": "URLにキー・メールを含めず、旧URLは次の通信から拒否。",
+      "origin": "ユーザーの追加要望・実装確認",
+      "req": "REQ-33",
+      "design": "FS-33",
+      "testSpec": "TS-33",
+      "task": "TASK-33",
+      "code": "CODE-33",
+      "testCode": "TEST-33",
+      "operation": "OPS-33",
+      "user": "USR-33",
+      "acceptance": "SAT-33",
+      "screens": [
+        "A05",
+        "A06"
+      ],
+      "interfaces": [
+        "IF-07",
+        "IF-08"
+      ],
+      "implementation": [
+        {
+          "path": "src/components/PortalInvitations.tsx",
+          "locator": "PortalInvitations"
+        },
+        {
+          "path": "gas/Code.gs",
+          "locator": "getPortalInvitations_"
+        }
+      ],
+      "tests": [
+        "GAS-39",
+        "GAS-40",
+        "GAS-41",
+        "GAS-42",
+        "GAS-55",
+        "GAS-56",
+        "GAS-57",
+        "GAS-58",
+        "GAS-59",
+        "GAS-60",
+        "GAS-61",
+        "GAS-62",
+        "PT-01",
+        "PT-02",
+        "PT-03",
+        "PT-04",
+        "PT-05",
+        "PT-06",
+        "PT-07",
+        "PT-08",
+        "PT-09",
+        "PT-10",
+        "PT-11",
+        "PT-12",
+        "PT-13",
+        "PT-14",
+        "PT-15",
+        "PT-16",
+        "PT-17",
+        "PT-18",
+        "PT-19",
+        "PT-20"
+      ],
+      "manualReason": "",
+      "testGap": "",
+      "status": "PENDING_ACCEPTANCE",
+      "acceptanceStatus": "NOT_RUN",
+      "designText": "画面 A05, A06。I/F IF-07, IF-08。個別URLとQRは管理者が本人へ配布し紛失時再発行する。",
+      "operationText": "担当者が前提を確認し、A05で表示・コピー。A06で再発行後、新旧URLで本人ログイン。 結果不明時は同一対象と履歴を照合してから判断する。",
+      "userText": "家庭URL・QRの配布と再発行：A05で表示・コピー。A06で再発行後、新旧URLで本人ログイン。",
+      "latestObservation": "RA-05：不正形式の家庭URLはURL確認画面、家庭データ非表示。発行・失効を含むSAT-33全体の合格ではない。"
+    },
+    {
+      "number": 34,
+      "title": "Google認証・再読込・ログアウト",
+      "bf": "BF-07",
+      "requirement": "本人Googleでログインし毎通信で権限を確認。ログアウトで業務表示を消す。",
+      "precondition": "架空データと許可された検証環境。必要な本人と担当者を準備。",
+      "steps": "管理者2名・家庭2つを別セッションでログイン・再取得・終了。",
+      "expected": "本人の役割と家庭を維持し、無効化・入口不一致・ログアウト後の業務アクセスを拒否。",
+      "origin": "ユーザーの追加要望・実装確認",
+      "req": "REQ-34",
+      "design": "FS-34",
+      "testSpec": "TS-34",
+      "task": "TASK-34",
+      "code": "CODE-34",
+      "testCode": "TEST-34",
+      "operation": "OPS-34",
+      "user": "USR-34",
+      "acceptance": "SAT-34",
+      "screens": [
+        "A01",
+        "P01",
+        "A02",
+        "P02"
+      ],
+      "interfaces": [
+        "IF-01",
+        "IF-12"
+      ],
+      "implementation": [
+        {
+          "path": "src/services/google-auth.ts",
+          "locator": "signOutGoogle"
+        },
+        {
+          "path": "src/services/api.ts",
+          "locator": "endSession"
+        }
+      ],
+      "tests": [
+        "GAS-02",
+        "GAS-03",
+        "GAS-04",
+        "GAS-05",
+        "GAS-12",
+        "GAS-43",
+        "GAS-44",
+        "GAS-45",
+        "GAS-46",
+        "GAS-47",
+        "GAS-48",
+        "GAS-49",
+        "GAS-50",
+        "GAS-51",
+        "GAS-52",
+        "GAS-53",
+        "GAS-54",
+        "PT-01",
+        "PT-02",
+        "PT-03",
+        "PT-04",
+        "PT-05",
+        "PT-06",
+        "PT-07",
+        "PT-08",
+        "PT-09",
+        "PT-10",
+        "PT-11",
+        "PT-12",
+        "PT-13",
+        "PT-14",
+        "PT-15",
+        "PT-16",
+        "PT-17",
+        "PT-18",
+        "PT-19",
+        "PT-20",
+        "SDK-01",
+        "SDK-02",
+        "SDK-03",
+        "SDK-04",
+        "SDK-05",
+        "SDK-06"
+      ],
+      "manualReason": "",
+      "testGap": "",
+      "status": "PENDING_ACCEPTANCE",
+      "acceptanceStatus": "NOT_RUN",
+      "designText": "画面 A01, P01, A02, P02。I/F IF-01, IF-12。本人Googleでログインし毎通信で権限を確認。ログアウトで業務表示を消す。",
+      "operationText": "担当者が前提を確認し、管理者2名・家庭2つを別セッションでログイン・再取得・終了。 結果不明時は同一対象と履歴を照合してから判断する。",
+      "userText": "Google認証・再読込・ログアウト：管理者2名・家庭2つを別セッションでログイン・再取得・終了。",
+      "latestObservation": "RA-01/02-LOGOUT：復元後の両管理者についてログアウト直後・再読込後とも管理者ログイン画面だけとなり、台帳非表示を確認。"
+    },
+    {
+      "number": 35,
+      "title": "台帳直接編集と反映",
+      "bf": "BF-10",
+      "requirement": "保守担当が対象を保全し接続先台帳を修正、再読込と関連値を照合する。",
+      "precondition": "架空データと許可された検証環境。必要な本人と担当者を準備。",
+      "steps": "同時操作停止・バックアップ後、検証台帳の対象値を修正しサイト再取得。",
+      "expected": "検証コピーと元台帳は非同期。直接修正で予定同期・消費計算・関連履歴更新を自動実行しない。",
+      "origin": "ユーザーの追加要望・実装確認",
+      "req": "REQ-35",
+      "design": "FS-35",
+      "testSpec": "TS-35",
+      "task": "TASK-35",
+      "code": "CODE-35",
+      "testCode": "TEST-35",
+      "operation": "OPS-35",
+      "user": "USR-35",
+      "acceptance": "SAT-35",
+      "screens": [
+        "E03",
+        "P02"
+      ],
+      "interfaces": [
+        "IF-14",
+        "IF-03"
+      ],
+      "implementation": [],
+      "tests": [
+        "GAS-69"
+      ],
+      "manualReason": "手動の保全・外部台帳操作／実送迎。業務処理の自動コードはない。",
+      "testGap": "",
+      "status": "PENDING_ACCEPTANCE",
+      "acceptanceStatus": "NOT_RUN",
+      "designText": "画面 E03, P02。I/F IF-14, IF-03。保守担当が対象を保全し接続先台帳を修正、再読込と関連値を照合する。",
+      "operationText": "担当者が前提を確認し、同時操作停止・バックアップ後、検証台帳の対象値を修正しサイト再取得。 結果不明時は同一対象と履歴を照合してから判断する。",
+      "userText": "台帳直接編集と反映：同時操作停止・バックアップ後、検証台帳の対象値を修正しサイト再取得。",
+      "testScope": "分離したメモリ台帳で次回取得・非連動を検証。実Google資源の手修正手順と保全は別。"
+    },
+    {
+      "number": 36,
+      "title": "カレンダー確認・実送迎・実績確認",
+      "bf": "BF-06",
+      "requirement": "先生が当日の予定と変更取消を照合し送迎を行い実績を確認する。",
+      "precondition": "架空データと許可された検証環境。必要な本人と担当者を準備。",
+      "steps": "時刻・生徒・場所を確認し、お迎え／送り／往復を実施した記録を確認後に完了登録。",
+      "expected": "実移動やカレンダー閲覧だけで自動消費しない。未実施・取消を完了にしない。",
+      "origin": "ユーザーの追加要望・実装確認",
+      "req": "REQ-36",
+      "design": "FS-36",
+      "testSpec": "TS-36",
+      "task": "TASK-36",
+      "code": "CODE-36",
+      "testCode": "TEST-36",
+      "operation": "OPS-36",
+      "user": "USR-36",
+      "acceptance": "SAT-36",
+      "screens": [
+        "E02",
+        "A02",
+        "P02"
+      ],
+      "interfaces": [
+        "IF-16",
+        "IF-06"
+      ],
+      "implementation": [],
+      "tests": [
+        "GAS-13",
+        "GAS-14",
+        "GAS-15",
+        "GAS-16"
+      ],
+      "manualReason": "手動の保全・外部台帳操作／実送迎。業務処理の自動コードはない。",
+      "testGap": "",
+      "status": "PENDING_ACCEPTANCE",
+      "acceptanceStatus": "NOT_RUN",
+      "designText": "画面 E02, A02, P02。I/F IF-16, IF-06。先生が当日の予定と変更取消を照合し送迎を行い実績を確認する。",
+      "operationText": "担当者が前提を確認し、時刻・生徒・場所を確認し、お迎え／送り／往復を実施した記録を確認後に完了登録。 結果不明時は同一対象と履歴を照合してから判断する。",
+      "userText": "カレンダー確認・実送迎・実績確認：時刻・生徒・場所を確認し、お迎え／送り／往復を実施した記録を確認後に完了登録。"
+    },
+    {
+      "number": 37,
+      "title": "日時・場所変更と直前連絡",
+      "bf": "BF-05",
+      "requirement": "変更は教室へ連絡し、直接変更APIがないため取消後に新規予約する。",
+      "precondition": "架空データと許可された検証環境。必要な本人と担当者を準備。",
+      "steps": "旧予約取消の成功を照合して新しい内容を登録し二重予約がないか確認。",
+      "expected": "取消と新規は別処理。片方だけ成功した場合は結果照合し盲目的に再送しない。",
+      "origin": "ユーザーの追加要望・実装確認",
+      "req": "REQ-37",
+      "design": "FS-37",
+      "testSpec": "TS-37",
+      "task": "TASK-37",
+      "code": "CODE-37",
+      "testCode": "TEST-37",
+      "operation": "OPS-37",
+      "user": "USR-37",
+      "acceptance": "SAT-37",
+      "screens": [
+        "A03",
+        "D05",
+        "D01"
+      ],
+      "interfaces": [
+        "IF-05",
+        "IF-02"
+      ],
+      "implementation": [
+        {
+          "path": "gas/Code.gs",
+          "locator": "cancelReservation_"
+        },
+        {
+          "path": "gas/Code.gs",
+          "locator": "createReservation_"
+        }
+      ],
+      "tests": [
+        "GAS-70"
+      ],
+      "manualReason": "",
+      "testGap": "",
+      "status": "PENDING_ACCEPTANCE",
+      "acceptanceStatus": "NOT_RUN",
+      "designText": "画面 A03, D05, D01。I/F IF-05, IF-02。変更は教室へ連絡し、直接変更APIがないため取消後に新規予約する。",
+      "operationText": "担当者が前提を確認し、旧予約取消の成功を照合して新しい内容を登録し二重予約がないか確認。 結果不明時は同一対象と履歴を照合してから判断する。",
+      "userText": "日時・場所変更と直前連絡：旧予約取消の成功を照合して新しい内容を登録し二重予約がないか確認。",
+      "testScope": "正常な取消→新規と、Calendar結果不明時の再送禁止・照合待ちを検証。日時・場所の原子的編集ではない。"
+    },
+    {
+      "number": 38,
+      "title": "工程横断のID・整合検査・共通デザイン",
+      "bf": "BF-11",
+      "requirement": "全工程のID・参照・定義値・対応漏れと成果物改変を機械検査する。",
+      "precondition": "架空データと許可された検証環境。必要な本人と担当者を準備。",
+      "steps": "正本変更→生成→検査。重複ID・欠落・参照切れ・仕様値相違の異常系も確認。",
+      "expected": "異常時に非ゼロ終了。履歴と現行・自動試験と実受入を分離し、現行PPTは共通テーマ。",
+      "origin": "ユーザーの追加要望・実装確認",
+      "req": "REQ-38",
+      "design": "FS-38",
+      "testSpec": "TS-38",
+      "task": "TASK-38",
+      "code": "CODE-38",
+      "testCode": "TEST-38",
+      "operation": "OPS-38",
+      "user": "USR-38",
+      "acceptance": "SAT-38",
+      "screens": [],
+      "interfaces": [],
+      "implementation": [
+        {
+          "path": "scripts/traceability.py",
+          "locator": "validate"
+        }
+      ],
+      "tests": [
+        "TRACE-01",
+        "TRACE-02",
+        "TRACE-03",
+        "TRACE-04",
+        "TRACE-05",
+        "TRACE-06",
+        "TRACE-07",
+        "TRACE-08",
+        "TRACE-09",
+        "TRACE-10",
+        "TRACE-11",
+        "TRACE-12",
+        "TRACE-13",
+        "TRACE-14"
+      ],
+      "manualReason": "",
+      "testGap": "",
+      "status": "PENDING_ACCEPTANCE",
+      "acceptanceStatus": "NOT_RUN",
+      "designText": "画面 画面なし・文書検査。I/F ローカル検査。全工程のID・参照・定義値・対応漏れと成果物改変を機械検査する。",
+      "operationText": "担当者が前提を確認し、正本変更→生成→検査。重複ID・欠落・参照切れ・仕様値相違の異常系も確認。 結果不明時は同一対象と履歴を照合してから判断する。",
+      "userText": "開発・運用担当向け。利用者の直接操作は対象外。"
+    }
+  ],
+  "tests": [
+    {
+      "id": "GAS-01",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-01'",
+      "requirements": [
+        "REQ-23",
+        "REQ-02"
+      ],
+      "mode": "offline-stub",
+      "category": "schema"
+    },
+    {
+      "id": "GAS-02",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-02'",
+      "requirements": [
+        "REQ-01",
+        "REQ-19",
+        "REQ-20",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "authentication"
+    },
+    {
+      "id": "GAS-03",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-03'",
+      "requirements": [
+        "REQ-01",
+        "REQ-19",
+        "REQ-20",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "authentication"
+    },
+    {
+      "id": "GAS-04",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-04'",
+      "requirements": [
+        "REQ-01",
+        "REQ-19",
+        "REQ-20",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "authentication"
+    },
+    {
+      "id": "GAS-05",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-05'",
+      "requirements": [
+        "REQ-01",
+        "REQ-19",
+        "REQ-20",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "authentication"
+    },
+    {
+      "id": "GAS-06",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-06'",
+      "requirements": [
+        "REQ-06",
+        "REQ-10",
+        "REQ-20",
+        "REQ-03"
+      ],
+      "mode": "offline-stub",
+      "category": "parent-authorization"
+    },
+    {
+      "id": "GAS-07",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-07'",
+      "requirements": [
+        "REQ-06",
+        "REQ-10",
+        "REQ-20"
+      ],
+      "mode": "offline-stub",
+      "category": "parent-authorization"
+    },
+    {
+      "id": "GAS-08",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-08'",
+      "requirements": [
+        "REQ-06",
+        "REQ-10",
+        "REQ-20"
+      ],
+      "mode": "offline-stub",
+      "category": "parent-authorization"
+    },
+    {
+      "id": "GAS-09",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-09'",
+      "requirements": [
+        "REQ-06",
+        "REQ-10",
+        "REQ-20"
+      ],
+      "mode": "offline-stub",
+      "category": "parent-authorization"
+    },
+    {
+      "id": "GAS-10",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-10'",
+      "requirements": [
+        "REQ-06",
+        "REQ-10",
+        "REQ-20"
+      ],
+      "mode": "offline-stub",
+      "category": "parent-authorization"
+    },
+    {
+      "id": "GAS-11",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-11'",
+      "requirements": [
+        "REQ-06",
+        "REQ-10",
+        "REQ-20"
+      ],
+      "mode": "offline-stub",
+      "category": "parent-authorization"
+    },
+    {
+      "id": "GAS-12",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-12'",
+      "requirements": [
+        "REQ-01",
+        "REQ-19",
+        "REQ-20",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "authentication"
+    },
+    {
+      "id": "GAS-13",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-13'",
+      "requirements": [
+        "REQ-13",
+        "REQ-14",
+        "REQ-15",
+        "REQ-16",
+        "REQ-36"
+      ],
+      "mode": "offline-stub",
+      "category": "completion"
+    },
+    {
+      "id": "GAS-14",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-14'",
+      "requirements": [
+        "REQ-13",
+        "REQ-14",
+        "REQ-15",
+        "REQ-16",
+        "REQ-36"
+      ],
+      "mode": "offline-stub",
+      "category": "completion"
+    },
+    {
+      "id": "GAS-15",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-15'",
+      "requirements": [
+        "REQ-13",
+        "REQ-14",
+        "REQ-15",
+        "REQ-16",
+        "REQ-36"
+      ],
+      "mode": "offline-stub",
+      "category": "completion"
+    },
+    {
+      "id": "GAS-16",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-16'",
+      "requirements": [
+        "REQ-13",
+        "REQ-14",
+        "REQ-15",
+        "REQ-16",
+        "REQ-36"
+      ],
+      "mode": "offline-stub",
+      "category": "completion"
+    },
+    {
+      "id": "GAS-17",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-17'",
+      "requirements": [
+        "REQ-26",
+        "REQ-27"
+      ],
+      "mode": "offline-stub",
+      "category": "concurrency"
+    },
+    {
+      "id": "GAS-18",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-18'",
+      "requirements": [
+        "REQ-02",
+        "REQ-17",
+        "REQ-18"
+      ],
+      "mode": "offline-stub",
+      "category": "validation"
+    },
+    {
+      "id": "GAS-19",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-19'",
+      "requirements": [
+        "REQ-02",
+        "REQ-17",
+        "REQ-18"
+      ],
+      "mode": "offline-stub",
+      "category": "validation"
+    },
+    {
+      "id": "GAS-20",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-20'",
+      "requirements": [
+        "REQ-02",
+        "REQ-17",
+        "REQ-18"
+      ],
+      "mode": "offline-stub",
+      "category": "validation"
+    },
+    {
+      "id": "GAS-21",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-21'",
+      "requirements": [
+        "REQ-02",
+        "REQ-17",
+        "REQ-18"
+      ],
+      "mode": "offline-stub",
+      "category": "validation"
+    },
+    {
+      "id": "GAS-22",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-22'",
+      "requirements": [
+        "REQ-18"
+      ],
+      "mode": "offline-stub",
+      "category": "idempotency"
+    },
+    {
+      "id": "GAS-23",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-23'",
+      "requirements": [
+        "REQ-18"
+      ],
+      "mode": "offline-stub",
+      "category": "idempotency"
+    },
+    {
+      "id": "GAS-24",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-24'",
+      "requirements": [
+        "REQ-18"
+      ],
+      "mode": "offline-stub",
+      "category": "idempotency"
+    },
+    {
+      "id": "GAS-25",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-25'",
+      "requirements": [
+        "REQ-18",
+        "REQ-28"
+      ],
+      "mode": "offline-stub",
+      "category": "failures"
+    },
+    {
+      "id": "GAS-26",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-26'",
+      "requirements": [
+        "REQ-18",
+        "REQ-28"
+      ],
+      "mode": "offline-stub",
+      "category": "failures"
+    },
+    {
+      "id": "GAS-27",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-27'",
+      "requirements": [
+        "REQ-18",
+        "REQ-28"
+      ],
+      "mode": "offline-stub",
+      "category": "failures"
+    },
+    {
+      "id": "GAS-28",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-28'",
+      "requirements": [
+        "REQ-18",
+        "REQ-28"
+      ],
+      "mode": "offline-stub",
+      "category": "failures"
+    },
+    {
+      "id": "GAS-29",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-29'",
+      "requirements": [
+        "REQ-18",
+        "REQ-28"
+      ],
+      "mode": "offline-stub",
+      "category": "failures"
+    },
+    {
+      "id": "GAS-30",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-30'",
+      "requirements": [
+        "REQ-18",
+        "REQ-28"
+      ],
+      "mode": "offline-stub",
+      "category": "failures"
+    },
+    {
+      "id": "GAS-31",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-31'",
+      "requirements": [
+        "REQ-18",
+        "REQ-28"
+      ],
+      "mode": "offline-stub",
+      "category": "failures"
+    },
+    {
+      "id": "GAS-32",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-32'",
+      "requirements": [
+        "REQ-18",
+        "REQ-28"
+      ],
+      "mode": "offline-stub",
+      "category": "failures"
+    },
+    {
+      "id": "GAS-33",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-33'",
+      "requirements": [
+        "REQ-18",
+        "REQ-28"
+      ],
+      "mode": "offline-stub",
+      "category": "failures"
+    },
+    {
+      "id": "GAS-34",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-34'",
+      "requirements": [
+        "REQ-18",
+        "REQ-28"
+      ],
+      "mode": "offline-stub",
+      "category": "failures"
+    },
+    {
+      "id": "GAS-35",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-35'",
+      "requirements": [
+        "REQ-18",
+        "REQ-28"
+      ],
+      "mode": "offline-stub",
+      "category": "failures"
+    },
+    {
+      "id": "GAS-36",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-36'",
+      "requirements": [
+        "REQ-02",
+        "REQ-17",
+        "REQ-18"
+      ],
+      "mode": "offline-stub",
+      "category": "validation"
+    },
+    {
+      "id": "GAS-37",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-37'",
+      "requirements": [
+        "REQ-02",
+        "REQ-17",
+        "REQ-18"
+      ],
+      "mode": "offline-stub",
+      "category": "validation"
+    },
+    {
+      "id": "GAS-38",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-38'",
+      "requirements": [
+        "REQ-02",
+        "REQ-17",
+        "REQ-18"
+      ],
+      "mode": "offline-stub",
+      "category": "validation"
+    },
+    {
+      "id": "GAS-39",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-39'",
+      "requirements": [
+        "REQ-20",
+        "REQ-33"
+      ],
+      "mode": "offline-stub",
+      "category": "portal"
+    },
+    {
+      "id": "GAS-40",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-40'",
+      "requirements": [
+        "REQ-20",
+        "REQ-33"
+      ],
+      "mode": "offline-stub",
+      "category": "portal"
+    },
+    {
+      "id": "GAS-41",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-41'",
+      "requirements": [
+        "REQ-20",
+        "REQ-33"
+      ],
+      "mode": "offline-stub",
+      "category": "portal"
+    },
+    {
+      "id": "GAS-42",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-42'",
+      "requirements": [
+        "REQ-20",
+        "REQ-33"
+      ],
+      "mode": "offline-stub",
+      "category": "portal"
+    },
+    {
+      "id": "GAS-43",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-43'",
+      "requirements": [
+        "REQ-01",
+        "REQ-19",
+        "REQ-20",
+        "REQ-32",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "google-auth"
+    },
+    {
+      "id": "GAS-44",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-44'",
+      "requirements": [
+        "REQ-01",
+        "REQ-19",
+        "REQ-20",
+        "REQ-32",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "google-auth"
+    },
+    {
+      "id": "GAS-45",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-45'",
+      "requirements": [
+        "REQ-01",
+        "REQ-19",
+        "REQ-20",
+        "REQ-32",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "google-auth"
+    },
+    {
+      "id": "GAS-46",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-46'",
+      "requirements": [
+        "REQ-01",
+        "REQ-19",
+        "REQ-20",
+        "REQ-32",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "google-auth"
+    },
+    {
+      "id": "GAS-47",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-47'",
+      "requirements": [
+        "REQ-01",
+        "REQ-19",
+        "REQ-20",
+        "REQ-32",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "google-auth"
+    },
+    {
+      "id": "GAS-48",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-48'",
+      "requirements": [
+        "REQ-01",
+        "REQ-19",
+        "REQ-20",
+        "REQ-32",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "google-auth"
+    },
+    {
+      "id": "GAS-49",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-49'",
+      "requirements": [
+        "REQ-01",
+        "REQ-19",
+        "REQ-20",
+        "REQ-32",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "google-auth"
+    },
+    {
+      "id": "GAS-50",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-50'",
+      "requirements": [
+        "REQ-01",
+        "REQ-19",
+        "REQ-20",
+        "REQ-32",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "google-auth"
+    },
+    {
+      "id": "GAS-51",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-51'",
+      "requirements": [
+        "REQ-01",
+        "REQ-19",
+        "REQ-20",
+        "REQ-32",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "google-auth"
+    },
+    {
+      "id": "GAS-52",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-52'",
+      "requirements": [
+        "REQ-01",
+        "REQ-19",
+        "REQ-20",
+        "REQ-32",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "google-auth"
+    },
+    {
+      "id": "GAS-53",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-53'",
+      "requirements": [
+        "REQ-01",
+        "REQ-19",
+        "REQ-20",
+        "REQ-32",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "google-auth"
+    },
+    {
+      "id": "GAS-54",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-54'",
+      "requirements": [
+        "REQ-01",
+        "REQ-19",
+        "REQ-20",
+        "REQ-32",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "google-auth"
+    },
+    {
+      "id": "GAS-55",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-55'",
+      "requirements": [
+        "REQ-31",
+        "REQ-32",
+        "REQ-33"
+      ],
+      "mode": "offline-stub",
+      "category": "account-management"
+    },
+    {
+      "id": "GAS-56",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-56'",
+      "requirements": [
+        "REQ-31",
+        "REQ-32",
+        "REQ-33"
+      ],
+      "mode": "offline-stub",
+      "category": "account-management"
+    },
+    {
+      "id": "GAS-57",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-57'",
+      "requirements": [
+        "REQ-31",
+        "REQ-32",
+        "REQ-33"
+      ],
+      "mode": "offline-stub",
+      "category": "account-management"
+    },
+    {
+      "id": "GAS-58",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-58'",
+      "requirements": [
+        "REQ-31",
+        "REQ-32",
+        "REQ-33"
+      ],
+      "mode": "offline-stub",
+      "category": "account-management"
+    },
+    {
+      "id": "GAS-59",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-59'",
+      "requirements": [
+        "REQ-31",
+        "REQ-32",
+        "REQ-33"
+      ],
+      "mode": "offline-stub",
+      "category": "account-management"
+    },
+    {
+      "id": "GAS-60",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-60'",
+      "requirements": [
+        "REQ-31",
+        "REQ-32",
+        "REQ-33"
+      ],
+      "mode": "offline-stub",
+      "category": "account-management"
+    },
+    {
+      "id": "GAS-61",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-61'",
+      "requirements": [
+        "REQ-31",
+        "REQ-32",
+        "REQ-33"
+      ],
+      "mode": "offline-stub",
+      "category": "account-management"
+    },
+    {
+      "id": "GAS-62",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-62'",
+      "requirements": [
+        "REQ-31",
+        "REQ-32",
+        "REQ-33"
+      ],
+      "mode": "offline-stub",
+      "category": "account-management"
+    },
+    {
+      "id": "PT-01",
+      "path": "scripts/test_portals.cjs",
+      "locator": "test('Strict hash routes, including unknown and malformed entry IDs'",
+      "requirements": [
+        "REQ-01",
+        "REQ-19",
+        "REQ-20",
+        "REQ-31",
+        "REQ-33",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "frontend-contract"
+    },
+    {
+      "id": "PT-02",
+      "path": "scripts/test_portals.cjs",
+      "locator": "test('Roles and personal-link identity mismatch fail closed'",
+      "requirements": [
+        "REQ-01",
+        "REQ-19",
+        "REQ-20",
+        "REQ-31",
+        "REQ-33",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "frontend-contract"
+    },
+    {
+      "id": "PT-03",
+      "path": "scripts/test_portals.cjs",
+      "locator": "test('QR payload has only canonical app URL and opaque ID, preserving GitHub base'",
+      "requirements": [
+        "REQ-01",
+        "REQ-19",
+        "REQ-20",
+        "REQ-31",
+        "REQ-33",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "frontend-contract"
+    },
+    {
+      "id": "PT-04",
+      "path": "scripts/test_portals.cjs",
+      "locator": "test('Admin response refused at parent entry with no saved session'",
+      "requirements": [
+        "REQ-01",
+        "REQ-19",
+        "REQ-20",
+        "REQ-31",
+        "REQ-33",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "frontend-contract"
+    },
+    {
+      "id": "PT-05",
+      "path": "scripts/test_portals.cjs",
+      "locator": "test('Individual ID mismatch refused even against old server without binding'",
+      "requirements": [
+        "REQ-01",
+        "REQ-19",
+        "REQ-20",
+        "REQ-31",
+        "REQ-33",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "frontend-contract"
+    },
+    {
+      "id": "PT-06",
+      "path": "scripts/test_portals.cjs",
+      "locator": "test('Parent request carries ID and role, directory and admin writes are rejected locally'",
+      "requirements": [
+        "REQ-01",
+        "REQ-19",
+        "REQ-20",
+        "REQ-31",
+        "REQ-33",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "frontend-contract"
+    },
+    {
+      "id": "PT-07",
+      "path": "scripts/test_portals.cjs",
+      "locator": "test('Stored role tampering cannot pass server identity validation'",
+      "requirements": [
+        "REQ-01",
+        "REQ-19",
+        "REQ-20",
+        "REQ-31",
+        "REQ-33",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "frontend-contract"
+    },
+    {
+      "id": "PT-08",
+      "path": "scripts/test_portals.cjs",
+      "locator": "test('Rotated individual ID response clears live session'",
+      "requirements": [
+        "REQ-01",
+        "REQ-19",
+        "REQ-20",
+        "REQ-31",
+        "REQ-33",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "frontend-contract"
+    },
+    {
+      "id": "PT-09",
+      "path": "scripts/test_portals.cjs",
+      "locator": "test('Demo parent data limited to assigned family and demo role entry mismatch refused'",
+      "requirements": [
+        "REQ-01",
+        "REQ-19",
+        "REQ-20",
+        "REQ-31",
+        "REQ-33",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "frontend-contract"
+    },
+    {
+      "id": "PT-10",
+      "path": "scripts/test_portals.cjs",
+      "locator": "test('Only a valid developer GAS exec endpoint is accepted'",
+      "requirements": [
+        "REQ-01",
+        "REQ-19",
+        "REQ-20",
+        "REQ-31",
+        "REQ-33",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "frontend-contract"
+    },
+    {
+      "id": "PT-11",
+      "path": "scripts/test_portals.cjs",
+      "locator": "test('Missing Google setup prevents any sign-in request'",
+      "requirements": [
+        "REQ-01",
+        "REQ-19",
+        "REQ-20",
+        "REQ-31",
+        "REQ-33",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "frontend-contract"
+    },
+    {
+      "id": "PT-12",
+      "path": "scripts/test_portals.cjs",
+      "locator": "test('Saved endpoint overrides are ignored and tokens travel only in a POST body'",
+      "requirements": [
+        "REQ-01",
+        "REQ-19",
+        "REQ-20",
+        "REQ-31",
+        "REQ-33",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "frontend-contract"
+    },
+    {
+      "id": "PT-13",
+      "path": "scripts/test_portals.cjs",
+      "locator": "test('Tampered saved endpoint or project cannot send a Google token'",
+      "requirements": [
+        "REQ-01",
+        "REQ-19",
+        "REQ-20",
+        "REQ-31",
+        "REQ-33",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "frontend-contract"
+    },
+    {
+      "id": "PT-14",
+      "path": "scripts/test_portals.cjs",
+      "locator": "test('Each data call obtains a current Google token without persisting it in app session'",
+      "requirements": [
+        "REQ-01",
+        "REQ-19",
+        "REQ-20",
+        "REQ-31",
+        "REQ-33",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "frontend-contract"
+    },
+    {
+      "id": "PT-15",
+      "path": "scripts/test_portals.cjs",
+      "locator": "test('Missing Google user clears the application session before sending data requests'",
+      "requirements": [
+        "REQ-01",
+        "REQ-19",
+        "REQ-20",
+        "REQ-31",
+        "REQ-33",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "frontend-contract"
+    },
+    {
+      "id": "PT-16",
+      "path": "scripts/test_portals.cjs",
+      "locator": "test('Demo-only entry can never start a real Google login'",
+      "requirements": [
+        "REQ-01",
+        "REQ-19",
+        "REQ-20",
+        "REQ-31",
+        "REQ-33",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "frontend-contract"
+    },
+    {
+      "id": "PT-17",
+      "path": "scripts/test_portals.cjs",
+      "locator": "test('Logout invalidates an outstanding login response and signs out Firebase'",
+      "requirements": [
+        "REQ-01",
+        "REQ-19",
+        "REQ-20",
+        "REQ-31",
+        "REQ-33",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "frontend-contract"
+    },
+    {
+      "id": "PT-18",
+      "path": "scripts/test_portals.cjs",
+      "locator": "test('Account management refuses parent and demo admin without sending requests'",
+      "requirements": [
+        "REQ-01",
+        "REQ-19",
+        "REQ-20",
+        "REQ-31",
+        "REQ-33",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "frontend-contract"
+    },
+    {
+      "id": "PT-19",
+      "path": "scripts/test_portals.cjs",
+      "locator": "test('Account management sends revision with each write and rejects malformed directory'",
+      "requirements": [
+        "REQ-01",
+        "REQ-19",
+        "REQ-20",
+        "REQ-31",
+        "REQ-33",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "frontend-contract"
+    },
+    {
+      "id": "PT-20",
+      "path": "scripts/test_portals.cjs",
+      "locator": "test('Malformed successful list responses are rejected, including health-only payloads'",
+      "requirements": [
+        "REQ-01",
+        "REQ-19",
+        "REQ-20",
+        "REQ-31",
+        "REQ-33",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "frontend-contract"
+    },
+    {
+      "id": "SDK-01",
+      "path": "scripts/test_google_auth.cjs",
+      "locator": "test('Popup cannot start before SDK setup completes'",
+      "requirements": [
+        "REQ-01",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "frontend-contract"
+    },
+    {
+      "id": "SDK-02",
+      "path": "scripts/test_google_auth.cjs",
+      "locator": "test('Preparation configures tab/session persistence and Japanese UI'",
+      "requirements": [
+        "REQ-01",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "frontend-contract"
+    },
+    {
+      "id": "SDK-03",
+      "path": "scripts/test_google_auth.cjs",
+      "locator": "test('Prepared sign-in opens popup before yielding the click and selects the user account'",
+      "requirements": [
+        "REQ-01",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "frontend-contract"
+    },
+    {
+      "id": "SDK-04",
+      "path": "scripts/test_google_auth.cjs",
+      "locator": "test('Data request obtains the current SDK token and refuses a different user'",
+      "requirements": [
+        "REQ-01",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "frontend-contract"
+    },
+    {
+      "id": "SDK-05",
+      "path": "scripts/test_google_auth.cjs",
+      "locator": "test('Provider errors are translated without exposing raw credential details'",
+      "requirements": [
+        "REQ-01",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "frontend-contract"
+    },
+    {
+      "id": "SDK-06",
+      "path": "scripts/test_google_auth.cjs",
+      "locator": "test('Logout clears the Firebase SDK user and later data calls cannot use it'",
+      "requirements": [
+        "REQ-01",
+        "REQ-34"
+      ],
+      "mode": "offline-stub",
+      "category": "frontend-contract"
+    },
+    {
+      "id": "TRACE-01",
+      "path": "scripts/test_traceability.py",
+      "locator": "case('TRACE-01'",
+      "requirements": [
+        "REQ-38"
+      ],
+      "mode": "offline-mutation",
+      "category": "trace-checker"
+    },
+    {
+      "id": "TRACE-02",
+      "path": "scripts/test_traceability.py",
+      "locator": "case('TRACE-02'",
+      "requirements": [
+        "REQ-38"
+      ],
+      "mode": "offline-mutation",
+      "category": "trace-checker"
+    },
+    {
+      "id": "TRACE-03",
+      "path": "scripts/test_traceability.py",
+      "locator": "case('TRACE-03'",
+      "requirements": [
+        "REQ-38"
+      ],
+      "mode": "offline-mutation",
+      "category": "trace-checker"
+    },
+    {
+      "id": "TRACE-04",
+      "path": "scripts/test_traceability.py",
+      "locator": "case('TRACE-04'",
+      "requirements": [
+        "REQ-38"
+      ],
+      "mode": "offline-mutation",
+      "category": "trace-checker"
+    },
+    {
+      "id": "TRACE-05",
+      "path": "scripts/test_traceability.py",
+      "locator": "case('TRACE-05'",
+      "requirements": [
+        "REQ-38"
+      ],
+      "mode": "offline-mutation",
+      "category": "trace-checker"
+    },
+    {
+      "id": "TRACE-06",
+      "path": "scripts/test_traceability.py",
+      "locator": "case('TRACE-06'",
+      "requirements": [
+        "REQ-38"
+      ],
+      "mode": "offline-mutation",
+      "category": "trace-checker"
+    },
+    {
+      "id": "TRACE-07",
+      "path": "scripts/test_traceability.py",
+      "locator": "case('TRACE-07'",
+      "requirements": [
+        "REQ-38"
+      ],
+      "mode": "offline-mutation",
+      "category": "trace-checker"
+    },
+    {
+      "id": "TRACE-08",
+      "path": "scripts/test_traceability.py",
+      "locator": "case('TRACE-08'",
+      "requirements": [
+        "REQ-38"
+      ],
+      "mode": "offline-mutation",
+      "category": "trace-checker"
+    },
+    {
+      "id": "TRACE-09",
+      "path": "scripts/test_traceability.py",
+      "locator": "case('TRACE-09'",
+      "requirements": [
+        "REQ-38"
+      ],
+      "mode": "offline-mutation",
+      "category": "trace-checker"
+    },
+    {
+      "id": "TRACE-10",
+      "path": "scripts/test_traceability.py",
+      "locator": "case('TRACE-10'",
+      "requirements": [
+        "REQ-38"
+      ],
+      "mode": "offline-mutation",
+      "category": "trace-checker"
+    },
+    {
+      "id": "TRACE-11",
+      "path": "scripts/test_traceability.py",
+      "locator": "case('TRACE-11'",
+      "requirements": [
+        "REQ-38"
+      ],
+      "mode": "offline-mutation",
+      "category": "trace-checker"
+    },
+    {
+      "id": "TRACE-12",
+      "path": "scripts/test_traceability.py",
+      "locator": "case('TRACE-12'",
+      "requirements": [
+        "REQ-38"
+      ],
+      "mode": "offline-mutation",
+      "category": "trace-checker"
+    },
+    {
+      "id": "UI-01",
+      "path": "scripts/test_trace_ui.mjs",
+      "locator": "check('UI-01'",
+      "requirements": [
+        "REQ-03"
+      ],
+      "scope": "ローカルのコンポーネントまたはGAS処理契約の自動検査。本人操作の実受入合格は別。",
+      "evidence": {
+        "path": "docs/traceability/reports/r2/browser/results.json",
+        "key": "UI-01"
+      }
+    },
+    {
+      "id": "UI-02",
+      "path": "scripts/test_trace_ui.mjs",
+      "locator": "check('UI-02'",
+      "requirements": [
+        "REQ-04"
+      ],
+      "scope": "ローカルのコンポーネントまたはGAS処理契約の自動検査。本人操作の実受入合格は別。",
+      "evidence": {
+        "path": "docs/traceability/reports/r2/browser/results.json",
+        "key": "UI-02"
+      }
+    },
+    {
+      "id": "GAS-63",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-63'",
+      "requirements": [
+        "REQ-05"
+      ],
+      "scope": "ローカルのコンポーネントまたはGAS処理契約の自動検査。本人操作の実受入合格は別。",
+      "evidence": {
+        "path": "docs/traceability/reports/r2/offline/latest.json",
+        "key": "GAS-63"
+      }
+    },
+    {
+      "id": "GAS-64",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-64'",
+      "requirements": [
+        "REQ-07"
+      ],
+      "scope": "ローカルのコンポーネントまたはGAS処理契約の自動検査。本人操作の実受入合格は別。",
+      "evidence": {
+        "path": "docs/traceability/reports/r2/offline/latest.json",
+        "key": "GAS-64"
+      }
+    },
+    {
+      "id": "GAS-65",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-65'",
+      "requirements": [
+        "REQ-08"
+      ],
+      "scope": "ローカルのコンポーネントまたはGAS処理契約の自動検査。本人操作の実受入合格は別。",
+      "evidence": {
+        "path": "docs/traceability/reports/r2/offline/latest.json",
+        "key": "GAS-65"
+      }
+    },
+    {
+      "id": "UI-03",
+      "path": "scripts/test_trace_ui.mjs",
+      "locator": "check('UI-03'",
+      "requirements": [
+        "REQ-09"
+      ],
+      "scope": "ローカルのコンポーネントまたはGAS処理契約の自動検査。本人操作の実受入合格は別。",
+      "evidence": {
+        "path": "docs/traceability/reports/r2/browser/results.json",
+        "key": "UI-03"
+      }
+    },
+    {
+      "id": "GAS-66",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-66'",
+      "requirements": [
+        "REQ-11"
+      ],
+      "scope": "ローカルのコンポーネントまたはGAS処理契約の自動検査。本人操作の実受入合格は別。",
+      "evidence": {
+        "path": "docs/traceability/reports/r2/offline/latest.json",
+        "key": "GAS-66"
+      }
+    },
+    {
+      "id": "UI-04",
+      "path": "scripts/test_trace_ui.mjs",
+      "locator": "check('UI-04'",
+      "requirements": [
+        "REQ-12"
+      ],
+      "scope": "ローカルのコンポーネントまたはGAS処理契約の自動検査。本人操作の実受入合格は別。",
+      "evidence": {
+        "path": "docs/traceability/reports/r2/browser/results.json",
+        "key": "UI-04"
+      }
+    },
+    {
+      "id": "UI-05",
+      "path": "scripts/test_trace_ui.mjs",
+      "locator": "check('UI-05'",
+      "requirements": [
+        "REQ-21"
+      ],
+      "scope": "375pxのローカルChromium実測。スマートフォン実機では未確認。",
+      "evidence": {
+        "path": "docs/traceability/reports/r2/browser/results.json",
+        "key": "UI-05"
+      }
+    },
+    {
+      "id": "PT-21",
+      "path": "scripts/test_portals.cjs",
+      "locator": "Fresh service instance reload retains created student and reservation IDs and values in demo storage",
+      "requirements": [
+        "REQ-22"
+      ],
+      "scope": "実ApiServiceのデモ保存と新インスタンス再取得を検証。実Google台帳の永続化受入は別。",
+      "evidence": {
+        "path": "docs/traceability/reports/r2/offline/frontend-contract.json",
+        "key": "Fresh service instance reload retains created student and reservation IDs and values in demo storage"
+      }
+    },
+    {
+      "id": "GAS-67",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-67'",
+      "requirements": [
+        "REQ-24"
+      ],
+      "scope": "GASのCalendarアダプタ契約をスタブで検証。実Calendar同期の受入AT-24は未完。",
+      "evidence": {
+        "path": "docs/traceability/reports/r2/offline/latest.json",
+        "key": "GAS-67"
+      }
+    },
+    {
+      "id": "GAS-68",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-68'",
+      "requirements": [
+        "REQ-25"
+      ],
+      "scope": "GASの取消アダプタ契約をスタブで検証。実Calendar削除の受入AT-25は未完。",
+      "evidence": {
+        "path": "docs/traceability/reports/r2/offline/latest.json",
+        "key": "GAS-68"
+      }
+    },
+    {
+      "id": "UI-06",
+      "path": "scripts/test_trace_ui.mjs",
+      "locator": "check('UI-06'",
+      "requirements": [
+        "REQ-29"
+      ],
+      "scope": "Chromiumタッチエミュレーション。物理端末と全操作の実機受入AT-29は未完。",
+      "evidence": {
+        "path": "docs/traceability/reports/r2/browser/results.json",
+        "key": "UI-06"
+      }
+    },
+    {
+      "id": "REL-01",
+      "path": "scripts/test_release_contract.cjs",
+      "locator": "REL-01",
+      "requirements": [
+        "REQ-30"
+      ],
+      "scope": "配布マニフェスト作成を隔離VMで検証。本番公開後の疎通・復旧確認AT-30は未実施。",
+      "evidence": {
+        "path": "docs/traceability/reports/r2/offline/release-contract.json",
+        "key": "REL-01"
+      }
+    },
+    {
+      "id": "GAS-69",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-69'",
+      "requirements": [
+        "REQ-35"
+      ],
+      "scope": "分離したメモリ台帳で次回取得・非連動を検証。実Google資源の手修正手順と保全は別。",
+      "evidence": {
+        "path": "docs/traceability/reports/r2/offline/latest.json",
+        "key": "GAS-69"
+      }
+    },
+    {
+      "id": "GAS-70",
+      "path": "scripts/test_gas.cjs",
+      "locator": "check('GAS-70'",
+      "requirements": [
+        "REQ-37"
+      ],
+      "scope": "正常な取消→新規と、Calendar結果不明時の再送禁止・照合待ちを検証。日時・場所の原子的編集ではない。",
+      "evidence": {
+        "path": "docs/traceability/reports/r2/offline/latest.json",
+        "key": "GAS-70"
+      }
+    },
+    {
+      "id": "TRACE-13",
+      "path": "scripts/test_traceability.py",
+      "locator": "case('TRACE-13'",
+      "requirements": [
+        "REQ-38"
+      ]
+    },
+    {
+      "id": "TRACE-14",
+      "path": "scripts/test_traceability.py",
+      "locator": "case('TRACE-14'",
+      "requirements": [
+        "REQ-38"
+      ]
+    }
+  ],
+  "screens": [
+    {
+      "id": "C01",
+      "name": "入口案内",
+      "role": "未ログイン",
+      "implementation": "#/ ／ 不正URL",
+      "operation": "管理者・保護者入口へ"
+    },
+    {
+      "id": "C02",
+      "name": "利用規約・個人情報・免責",
+      "role": "共通",
+      "implementation": "TermsModal内タブ",
+      "operation": "元画面へ閉じる"
+    },
+    {
+      "id": "A01",
+      "name": "管理者ログイン",
+      "role": "管理者",
+      "implementation": "#/admin",
+      "operation": "Google認証後A02"
+    },
+    {
+      "id": "A02",
+      "name": "本日の送迎",
+      "role": "管理者",
+      "implementation": "TeacherDashboard today",
+      "operation": "完了・予約・購入"
+    },
+    {
+      "id": "A03",
+      "name": "送迎予定・履歴一覧",
+      "role": "管理者",
+      "implementation": "同allRidesタブ",
+      "operation": "一覧・完了・取消"
+    },
+    {
+      "id": "A04",
+      "name": "生徒・チケット管理",
+      "role": "管理者",
+      "implementation": "同studentsタブ",
+      "operation": "生徒登録・追加購入"
+    },
+    {
+      "id": "A05",
+      "name": "個別URL・QR",
+      "role": "管理者",
+      "implementation": "PortalInvitations",
+      "operation": "コピー・QR表示"
+    },
+    {
+      "id": "A06",
+      "name": "アカウント一覧・編集",
+      "role": "管理者",
+      "implementation": "AccountManagement",
+      "operation": "追加・停止・削除・再発行"
+    },
+    {
+      "id": "A07",
+      "name": "Google連携情報",
+      "role": "管理者",
+      "implementation": "GoogleSettings",
+      "operation": "接続情報表示／デモ初期化"
+    },
+    {
+      "id": "P01",
+      "name": "保護者ログイン",
+      "role": "保護者",
+      "implementation": "#/parent[/個別ID]",
+      "operation": "Google認証後P02"
+    },
+    {
+      "id": "P02",
+      "name": "家庭専用ページ",
+      "role": "保護者",
+      "implementation": "ParentPortal",
+      "operation": "兄弟選択・予約・残数・取消"
+    },
+    {
+      "id": "D01",
+      "name": "送迎予約入力",
+      "role": "両者",
+      "implementation": "AddRideModal",
+      "operation": "送信後、呼出元へ"
+    },
+    {
+      "id": "D02",
+      "name": "チケット追加入力",
+      "role": "管理者",
+      "implementation": "AddTicketModal",
+      "operation": "送信後、呼出元へ"
+    },
+    {
+      "id": "D03",
+      "name": "生徒新規入力",
+      "role": "管理者",
+      "implementation": "AddStudentModal",
+      "operation": "送信後、呼出元へ"
+    },
+    {
+      "id": "D04",
+      "name": "アカウント変更確認",
+      "role": "管理者",
+      "implementation": "A06内の確認dialog",
+      "operation": "保存／削除→A06"
+    },
+    {
+      "id": "D05",
+      "name": "取消確認",
+      "role": "両者",
+      "implementation": "window.confirm",
+      "operation": "OK→取消、戻る→元画面"
+    },
+    {
+      "id": "E01",
+      "name": "Googleアカウント選択",
+      "role": "外部",
+      "implementation": "Firebase Auth popup",
+      "operation": "認証成功／中止を返す"
+    },
+    {
+      "id": "E02",
+      "name": "Googleカレンダー",
+      "role": "外部",
+      "implementation": "Google Calendar",
+      "operation": "当日の予定を人が確認"
+    },
+    {
+      "id": "E03",
+      "name": "Googleスプレッドシート",
+      "role": "外部",
+      "implementation": "Google Sheets",
+      "operation": "保守修正・保全・照合"
+    },
+    {
+      "id": "E04",
+      "name": "導入・保守設定",
+      "role": "外部",
+      "implementation": "Firebase Console／GAS",
+      "operation": "初期設定・緊急復旧"
+    }
+  ],
+  "interfaces": [
+    {
+      "id": "IF-01",
+      "endpoints": "A01/P01→E01→GAS",
+      "action": "Firebase認証＋login",
+      "description": "Google本人確認、役割・家庭・有効状態照合"
+    },
+    {
+      "id": "IF-02",
+      "endpoints": "D01→GAS",
+      "action": "createReservation",
+      "description": "生徒・日時・区分・場所・メモ→予定／結果"
+    },
+    {
+      "id": "IF-03",
+      "endpoints": "A02〜04/P02→GAS",
+      "action": "getStudents / getRides",
+      "description": "権限に応じた生徒・送迎一覧を取得"
+    },
+    {
+      "id": "IF-04",
+      "endpoints": "D03→GAS",
+      "action": "createStudent",
+      "description": "生徒情報・初期残数→生徒台帳"
+    },
+    {
+      "id": "IF-05",
+      "endpoints": "D05→GAS",
+      "action": "cancelReservation",
+      "description": "送迎ID→取消状態・予定削除"
+    },
+    {
+      "id": "IF-06",
+      "endpoints": "A02/A03→GAS",
+      "action": "completeRide",
+      "description": "送迎ID→片道1／往復2消費・完了履歴"
+    },
+    {
+      "id": "IF-07",
+      "endpoints": "A05→GAS／端末内",
+      "action": "getPortalInvitations",
+      "description": "専用URL取得。QRは端末内生成・コピー"
+    },
+    {
+      "id": "IF-08",
+      "endpoints": "A06/D04→GAS",
+      "action": "getManagedUsers / saveManagedUser / deleteManagedUser",
+      "description": "一覧取得・保存・削除・再発行（管理者限定）"
+    },
+    {
+      "id": "IF-09",
+      "endpoints": "GAS→Script Properties",
+      "action": "PropertiesService",
+      "description": "Google許可設定・更新ガードを保存"
+    },
+    {
+      "id": "IF-10",
+      "endpoints": "D02→GAS",
+      "action": "addTickets",
+      "description": "生徒・枚数・金額→残数・購入履歴更新"
+    },
+    {
+      "id": "IF-11",
+      "endpoints": "GAS→台帳",
+      "action": "SpreadsheetApp",
+      "description": "生徒・送迎・購入の各シートを読書き"
+    },
+    {
+      "id": "IF-12",
+      "endpoints": "ログアウト操作→SDK",
+      "action": "session消去＋signOut",
+      "description": "アプリ状態消去・Firebaseログアウト"
+    },
+    {
+      "id": "IF-13",
+      "endpoints": "GAS⇄Google Calendar",
+      "action": "CalendarApp",
+      "description": "予定作成・ID指定削除。実受入未完了"
+    },
+    {
+      "id": "IF-14",
+      "endpoints": "人→E03→サイト再読込",
+      "action": "外部画面で直接編集",
+      "description": "保守修正。自動計算・予定同期は実行しない"
+    },
+    {
+      "id": "IF-15",
+      "endpoints": "人→E04",
+      "action": "導入担当の外部画面操作",
+      "description": "初期Google接続・認証・初期管理者設定"
+    },
+    {
+      "id": "IF-16",
+      "endpoints": "送迎担当→E02",
+      "action": "Google Calendarの画面",
+      "description": "予定を人が閲覧。当アプリのAPI呼出しなし"
+    }
+  ],
+  "exceptions": [
+    {
+      "id": "OPEN-01",
+      "title": "取消期限・当日変更・返金・片道だけ実施の精算",
+      "status": "CUSTOMER_CONFIRMATION"
+    },
+    {
+      "id": "OPEN-02",
+      "title": "バックアップ担当・頻度・保管先",
+      "status": "CUSTOMER_CONFIRMATION"
+    },
+    {
+      "id": "OPEN-03",
+      "title": "AT-30本番後確認と本番前全30件条件の時点差",
+      "status": "CUSTOMER_CONFIRMATION"
+    },
+    {
+      "id": "OPEN-04",
+      "title": "復元後の管理者2名の再ログイン確認",
+      "status": "RESOLVED"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "base": "d360644531543a4e",
+  "sourceChanges": {
+    "src/components/ParentPortal.tsx": "706020ccef78b8e080c16c6d22c0ec4562ec00be1d6ae0bd9859130ef512b35b",
+    "src/components/TeacherDashboard.tsx": "4fd64d9e8f805b847787186c3d04434680afc82de90d577f7ebcf225e4024d11",
+    "src/App.tsx": "0eefaa4c0244f47fb9da6cb5a3dc670ff61ce561f298ea4d26bc6f5fc7ea11aa"
+  },
+  "otherSourceDifferences": 0,
+  "frozenAt": "2026-11-10T23:01:53.0382296+09:00"
+}

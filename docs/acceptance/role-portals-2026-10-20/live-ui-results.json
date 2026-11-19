@@ -1,0 +1,15 @@
+{
+  "verifiedAt": "2026-10-20T13:49:05.481Z",
+  "environment": "Mighty hosted frontend + GAS v2",
+  "adminLoginPassed": true,
+  "adminHasNoParentMenu": true,
+  "parentLoginPassed": true,
+  "parentHasNoAdminOrGoogleMenu": true,
+  "parentStudentOptions": 1,
+  "parentHasOnlyExpectedFamily": true,
+  "mutationsPerformed": false,
+  "qrDirectoryFamilies": 2,
+  "qrDecodedBothPassed": true,
+  "downloadCompletionVerified": false,
+  "limitation": "Browser download completion not observed; verify on actual devices in AT-29."
+}

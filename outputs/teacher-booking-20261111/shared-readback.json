@@ -1,0 +1,21 @@
+{
+  "checkedAt": "2026-11-11T09:16:38.621Z",
+  "range": "検証結果履歴!A78:I78",
+  "values": [
+    "VR-20261111-09",
+    "2026-11-11",
+    "AT-09・管理者の代理予約",
+    "10件目の実装修正・10項目目の開発側試験",
+    "代理予約フォームの5項目にラベルを関連付け、項目名で操作可能にした。",
+    "実フォームで関連付け0→5、指定日時16:45・対象生徒・場所を保存し3→4件、予約者teacher。公開管理者デモでは7→8件、再読込後11月11日16:00「AT09 西門・先生登録」を確認。",
+    "docs/progress/2026-11-11-cumulative-ten.md／outputs/teacher-booking-20261111/public-result.png",
+    "検証Hosting 5204dfe9fc36b599、7応答SHA一致。10日4件・11日6件。先行2件Claude Code Fable 5.2、追加8件Codex。CUST0/6、本番保留。",
+    "小林さん6手順、先生との合同テスト、教室Google環境の準備と移行判断。AT-28保護設定復旧は未確認。"
+  ],
+  "matching": true,
+  "protectedUnchanged": true,
+  "protectedRanges": [
+    "'顧客確認6件'!E6:I11",
+    "'進捗概要'!A1:I12"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "state": "PREPARED_WAITING_FOR_VERIFIED_RELEASE",
+  "guardCheck": "PASS",
+  "missingEvidenceExitCode": 1,
+  "noPptxCreated": true,
+  "manifestUnchanged": true,
+  "manifestSha256": "354c760ac1cfd9b98234b0ec152e52e1324bd6ef610119241f8f0d19360149f1",
+  "preparationScriptSha256": "00f2834ced8b41703770adefba87b103ee772d9848ac6cd63b2e7b57e12ffe7a",
+  "plannedDecks": 6,
+  "successClaimWritten": false
+}

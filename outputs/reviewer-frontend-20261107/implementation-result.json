@@ -1,0 +1,70 @@
+{
+  "status": "PASS",
+  "executedAt": "2026-11-07T09:06:40.1577110Z",
+  "mode": "Local frontend implementation and synthetic integration; not live Google or customer acceptance",
+  "checks": [
+    {
+      "evidence": "outputs/reviewer-frontend-20261107/contracts-final/frontend-contract.json",
+      "passed": 31,
+      "status": "PASS",
+      "total": 31,
+      "name": "API and portal contracts",
+      "id": "FRONT-CONTRACT"
+    },
+    {
+      "evidence": "outputs/reviewer-frontend-20261107/ui-verified/results.json",
+      "passed": 8,
+      "status": "PASS",
+      "total": 8,
+      "name": "Real App local synthetic UI",
+      "id": "FRONT-UI"
+    },
+    {
+      "name": "TypeScript tsc -b",
+      "id": "FRONT-TYPES",
+      "exitCode": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "Vite real frontend build into isolated output",
+      "output": "outputs/reviewer-frontend-20261107/app-build-verified",
+      "id": "FRONT-BUILD",
+      "exitCode": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "oxlint five changed frontend source files",
+      "id": "FRONT-LINT",
+      "exitCode": 0,
+      "status": "PASS"
+    }
+  ],
+  "sourceHashes": {
+    "src/services/api.ts": "62cfcc488be0eb1b104cf70e2afd1c9c7c4eef9136e1d950f2fb768479ebc30a",
+    "src/App.tsx": "30d9a0d99648a09cd5891a6aea5e4d310ca97f9514e13bcbdd1bf8ceda60cb5f",
+    "src/components/AccountManagement.tsx": "b5473029c444e6dedd6c310bb4927ffdb543bc53b332912908e4df08e850c0f7",
+    "src/components/Navbar.tsx": "2c544b44e4d40a06d723a69b434862f214c1ea320a1806446c5dbd59ccf561de",
+    "src/components/TeacherDashboard.tsx": "1316fbc950664e43614387bea8bf614c98374c2bc1fcf6e7f3c97c9b01334ea4",
+    "scripts/test_portals.cjs": "22f6ce09d925a27267efb6ab27442ea2a15660a6d29fdabc4ad2e087611e805c",
+    "tests/reviewer-ui/index.html": "2d7db98c97e0a6deb9fc3fa905d25584e8a51f11d852a9a71f0e73a2c0231138",
+    "tests/reviewer-ui/main.tsx": "dd8aad05777bf2c56aaa461b6212ccbd8abd9858b32cc21fcf0d130aeac54e07",
+    "tests/reviewer-ui/google-auth.ts": "d517d9747c524c019041aee3d55376eaad1873976aa0c923244ada3b9c4463e6",
+    "tests/reviewer-ui/run.mjs": "cf03da35c60113d2ec55fa7a016fd503bdc5e87854dfd58bb5d2be2cdf514de3",
+    "tests/reviewer-ui/README.md": "4e0cd9e034c330b3e2b9d075d90e794949777842550700bbc05378ad699ecc81"
+  },
+  "sourceHashesRechecked": true,
+  "externalRequests": 0,
+  "pageErrors": 0,
+  "visualReview": [
+    "REVIEW-UI-01.png",
+    "REVIEW-UI-02.png"
+  ],
+  "noGoogleSignIn": true,
+  "noExternalMutation": true,
+  "noDeployment": true,
+  "limitations": [
+    "Backend remains the authority for reviewer gate and student access; frontend is defense in depth.",
+    "Real Google reviewer login and live deployment are not claimed by these local tests.",
+    "Reviewer operations change assigned fictional fixture state; reviewOnly does not mean read-only."
+  ]
+}

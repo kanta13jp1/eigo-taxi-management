@@ -1,0 +1,16 @@
+{
+  "reviewer": "lead agent independently reviewing routed worker implementation",
+  "baselineRelease": "a97d95510290c92b",
+  "file": "src/components/AddTicketModal.tsx",
+  "sha256": "23374856ac5ce0b39e5ac1827f5a5f71b1f59f2397756a3f421b919513d184b3",
+  "sourceDigest": "5f652531b5aea67c7295084e025563b4c32010cd3d4e5791abd0f8b06f65672f",
+  "checks": [
+    "Only modal layout classes change: dynamic viewport maximum height and vertical overflow scrolling; mutation, permissions and ticket arithmetic unchanged",
+    "Existing 16px overlay padding preserved; inner panel remains within screen at 390x360, 375x600 and 844x390",
+    "Independent actual-browser rerun after passed all three sizes, wheel-reachable submit, required-field refusal, 10 tickets at zero amount, 7 to 17 balance, one purchase, reopen/close without mutation and parent demo balance",
+    "Regression evidence preserves before-case offscreen bounds and unreachable submit at short heights",
+    "Fresh anonymous profiles and external request blocking preserve customer fixtures"
+  ],
+  "pass": true,
+  "scope": "AT-21 and AT-05 re-verification in anonymous demo and changed viewport sizes, not physical device, software keyboard, real Google or customer acceptance. Distinct AT IDs remain 24."
+}

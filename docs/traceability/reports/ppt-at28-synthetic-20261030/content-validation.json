@@ -1,0 +1,20 @@
+{
+  "tasks": {
+    "pages": 10,
+    "changedPages": [
+      7
+    ],
+    "unchangedPagesPixelIdentical": 9,
+    "notes": 10,
+    "sha256": "a8e3a9a5851ec54bf8efa8a002f5f5deacce1bf680153a2359f7464a7965c0f3"
+  },
+  "progress": {
+    "pages": 7,
+    "changedPages": [
+      5
+    ],
+    "unchangedPagesPixelIdentical": 6,
+    "notes": 7,
+    "sha256": "392893ab0dbed2ad7865b033adb8790d3f94a0e9fcc847f73427639f8990fe34"
+  }
+}

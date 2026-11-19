@@ -1,0 +1,962 @@
+[
+  {
+    "id": "v15-1",
+    "path": "deliverables\\operation-manual-2026-10-22-v15-acceptance.pptx",
+    "sha256": "fe4e6936817a3e01c84b79ace833d14c0f3531c5edbfd53e2041e96a397960df",
+    "source": "docs\\deliverables\\2026-10-22-manuals\\operation-manual-2026-10-22-v15-acceptance.pptx",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-2",
+    "path": "deliverables\\portal-spec-supplement-2026-10-22-v15-acceptance.pptx",
+    "sha256": "6657034b41e16ba1df453de01805481896ae487df163e68fe5b094726a20909a",
+    "source": "docs\\deliverables\\2026-10-22-manuals\\portal-spec-supplement-2026-10-22-v15-acceptance.pptx",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-3",
+    "path": "deliverables\\progress-report-role-portals-2026-10-22-v15-acceptance.pptx",
+    "sha256": "82fd0c6c20f6b91887480a6fa772f27a7b9c1df109858f2fdfd8aa73e6cdf7db",
+    "source": "docs\\deliverables\\2026-10-22-manuals\\progress-report-role-portals-2026-10-22-v15-acceptance.pptx",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-4",
+    "path": "deliverables\\README.md",
+    "sha256": "48692d87d275b26a1e50a4df30b136eae111ad3d0f5463f663db5c8392d94c68",
+    "source": "docs\\deliverables\\2026-10-22-manuals\\README.md",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-5",
+    "path": "deliverables\\remaining-tasks-2026-10-22-v15-acceptance.pptx",
+    "sha256": "28052cfa6e533de30a4d39020e1b46ba82dc6649ac9aaad77d40470bd2bf2af8",
+    "source": "docs\\deliverables\\2026-10-22-manuals\\remaining-tasks-2026-10-22-v15-acceptance.pptx",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-6",
+    "path": "deliverables\\user-manual-2026-10-22-v15-acceptance.pptx",
+    "sha256": "bff786dba4de913fbcf0e43857e997f352f5beba3f47c6e9ee8edf1c4d5aa7d9",
+    "source": "docs\\deliverables\\2026-10-22-manuals\\user-manual-2026-10-22-v15-acceptance.pptx",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-7",
+    "path": "verification\\operation-manual-montage.png",
+    "sha256": "452e0ff2258c023432dfc5bd4a7d211b0ffd78b2f0633aa3ec09d9cfbc6d63dc",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\operation-manual-montage.png",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-8",
+    "path": "verification\\portal-spec-supplement-montage.png",
+    "sha256": "7063ba71283a04e44d614d3c3cf5a4730b53ff80857c0b1098b096509f2dc5dd",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\portal-spec-supplement-montage.png",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-9",
+    "path": "verification\\progress-report-role-portals-montage.png",
+    "sha256": "0f02faa573250a0514d1e5b416307ec07144d9c6c82424e8d32fbb6c81a81fe3",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\progress-report-role-portals-montage.png",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-10",
+    "path": "verification\\remaining-tasks-montage.png",
+    "sha256": "9c3779f94b9af57f1fd52276150954aa61388c0ed7990bbf243d9db555dcc46b",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\remaining-tasks-montage.png",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-11",
+    "path": "verification\\user-manual-montage.png",
+    "sha256": "d084f5552e750cb72fa36ead1444ef867ee54e115c2510f5dc634939ae4b58c7",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\user-manual-montage.png",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-12",
+    "path": "verification\\operation-manual\\01.png",
+    "sha256": "867d53f4e3761caa86078b2dc130633638ea63b6c69251582a7df72a874acdbc",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\operation-manual\\01.png",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-13",
+    "path": "verification\\operation-manual\\02.png",
+    "sha256": "ea4d4ecd4e453d2b08434e6eaf648e8a08b14c5b4a7ba1d76027fa739858bd87",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\operation-manual\\02.png",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-14",
+    "path": "verification\\operation-manual\\03.png",
+    "sha256": "d00a10cedd5aa29fcc8bff582a9d27193160b4246b79d6582791f4ee03c0bca6",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\operation-manual\\03.png",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-15",
+    "path": "verification\\operation-manual\\04.png",
+    "sha256": "79784e3b2543373a2f6c3aa7e1ff1019a2de96b700ec68efda10676bab44ed7a",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\operation-manual\\04.png",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-16",
+    "path": "verification\\operation-manual\\05.png",
+    "sha256": "9516624001c74acdc9338ec2e6964f53bf82c7bb1ba83bf4b520784553a67d60",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\operation-manual\\05.png",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-17",
+    "path": "verification\\operation-manual\\06.png",
+    "sha256": "b19adb744a0491f43759170385a0efb9327e62e7936d1c201010af74c31e196a",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\operation-manual\\06.png",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-18",
+    "path": "verification\\operation-manual\\07.png",
+    "sha256": "cabc96a94f0341e74e0054c15705f9d41a3ce86b272e70302a45c11f22f68362",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\operation-manual\\07.png",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-19",
+    "path": "verification\\operation-manual\\08.png",
+    "sha256": "236ddfbd26a74fc1c7040113fe636bf57cacdd8cf1a3b6f156a8543b58d5d7d0",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\operation-manual\\08.png",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-20",
+    "path": "verification\\operation-manual\\09.png",
+    "sha256": "1690c07214ceff8eccee7e08af9ddd82a77caeed43650029e1f7f9da56d89f4a",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\operation-manual\\09.png",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-21",
+    "path": "verification\\operation-manual\\10.png",
+    "sha256": "5b19e2e69762796029157e8d986e7c9f6efa891610f698f0ee973e4b7c57681a",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\operation-manual\\10.png",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-22",
+    "path": "verification\\operation-manual\\11.png",
+    "sha256": "5f748d4bb25dc982257d35dde968e40ef29b4e20736f5623e17ee9ff0d0d2236",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\operation-manual\\11.png",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-23",
+    "path": "verification\\operation-manual\\12.png",
+    "sha256": "36afcb9d9c3228a72f842be04fb2913e76fd5c3ccf179f2dfe3820f0e0dd6838",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\operation-manual\\12.png",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-24",
+    "path": "verification\\operation-manual\\13.png",
+    "sha256": "a3022332789892777d400ed96cec4c5c9f6171e33f890f9eac41db7d4da87b99",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\operation-manual\\13.png",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-25",
+    "path": "verification\\operation-manual\\14.png",
+    "sha256": "0d8a0379d6d1d39051b2d55f54facfc480445f188700d7af0ea3f278c36576b5",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\operation-manual\\14.png",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-26",
+    "path": "verification\\operation-manual\\15.png",
+    "sha256": "0ccc5c556540bbc907f65fb50489e612cc336bce2281cdff1f7273da2663fd58",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\operation-manual\\15.png",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-27",
+    "path": "verification\\operation-manual\\16.png",
+    "sha256": "80b0afd1e0aa3021058cd94b955e49f6bd2257e6e288ebadd1bee44ac76e523c",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\operation-manual\\16.png",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-28",
+    "path": "verification\\operation-manual\\17.png",
+    "sha256": "e1ade6d246a49d1668dd7d7d12a64a3818c19338dc7b469d45f5b2f96d7c7487",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\operation-manual\\17.png",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-29",
+    "path": "verification\\operation-manual\\18.png",
+    "sha256": "0b4ef6ebfaf4b981e4e79f7078950e1daa940f67652fecf6d36680b0da01f93b",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\operation-manual\\18.png",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-30",
+    "path": "verification\\operation-manual\\19.png",
+    "sha256": "48ca0e02fa8ebfaa9425630c570b60e0d737676f71af2f066df596ed9d705edc",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\operation-manual\\19.png",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-31",
+    "path": "verification\\operation-manual\\20.png",
+    "sha256": "2290b65850261d6de1a908e1ceb6254a1aa5a8ff6a9a5009fbc260223c2b27ff",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\operation-manual\\20.png",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-32",
+    "path": "verification\\operation-manual\\21.png",
+    "sha256": "cea5d2acd21f4a06300baecc17a2308ae481b9f36f175e1ebddf9c16042e5450",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\operation-manual\\21.png",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-33",
+    "path": "verification\\operation-manual\\22.png",
+    "sha256": "3f84310c68443738dea7a4aa36f66019238b1e1e175b2a01de844a36185cbd9b",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\operation-manual\\22.png",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-34",
+    "path": "verification\\operation-manual\\23.png",
+    "sha256": "0fbc5c6c4bc0ec9e897990bc258e90b60fb7d71d81db93c83331f78eba86fe90",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\operation-manual\\23.png",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-35",
+    "path": "verification\\operation-manual\\24.png",
+    "sha256": "11ddb5f89baba47bbd7161f5f7983950f1de5c1e19cb75eb1f36003254910162",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\operation-manual\\24.png",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-36",
+    "path": "verification\\operation-manual\\25.png",
+    "sha256": "d87e7ae092f8994bba18bbeed3e5771300da82a56c51930d9828b48a389a5dd7",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\operation-manual\\25.png",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-37",
+    "path": "verification\\operation-manual\\26.png",
+    "sha256": "1134992556323cb81687b4d01c801bb86f219019afc565fabd355089b697ef6c",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\operation-manual\\26.png",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-38",
+    "path": "verification\\operation-manual\\27.png",
+    "sha256": "2d486d57d9d2c6edaca382f11fa603f9f59474f35bf6c2b89a49e2dcc9003848",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\operation-manual\\27.png",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-39",
+    "path": "verification\\operation-manual\\28.png",
+    "sha256": "88a828de9958e5de168ed8b5136caa2d9d609e69b64fdba31b3b4bde817b1e45",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\operation-manual\\28.png",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-40",
+    "path": "verification\\operation-manual\\candidate.pptx",
+    "sha256": "fe4e6936817a3e01c84b79ace833d14c0f3531c5edbfd53e2041e96a397960df",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\operation-manual\\candidate.pptx",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-41",
+    "path": "verification\\operation-manual\\candidate.pptx.inspect.ndjson",
+    "sha256": "2998888f2664f1ed448440d99e0a7306446747dfbf5f528f393ef81eb1f40f19",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\operation-manual\\candidate.pptx.inspect.ndjson",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-42",
+    "path": "verification\\operation-manual\\content.json",
+    "sha256": "54becc1b9e213d7d2fdf3007e0d017a78e1ca9e0e05d1d5e238a1da6b99d9720",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\operation-manual\\content.json",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-43",
+    "path": "verification\\operation-manual\\validation.json",
+    "sha256": "d2933d31ee3bb1739425c9972eb84ae291b8b8f411f99458e483ee6485934183",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\operation-manual\\validation.json",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-44",
+    "path": "verification\\portal-spec-supplement\\01.png",
+    "sha256": "70fef42c48b6da2b257f6545f976f9f17a079d05b2d90fc4664e6ae5fa725a31",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\portal-spec-supplement\\01.png",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-45",
+    "path": "verification\\portal-spec-supplement\\02.png",
+    "sha256": "5d8a4d829103ca78970bba239269b869508b21082ff03b9e993101e5bfe26d67",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\portal-spec-supplement\\02.png",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-46",
+    "path": "verification\\portal-spec-supplement\\03.png",
+    "sha256": "9cb42be8eb335e51be5f39828cdf795ee5b45d60d3d8e329935d3d5bdce00274",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\portal-spec-supplement\\03.png",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-47",
+    "path": "verification\\portal-spec-supplement\\04.png",
+    "sha256": "4ac733ba558cc1f6cb6a6bd055ec961e72d3f5e6a14cb31bd031b61518453f20",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\portal-spec-supplement\\04.png",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-48",
+    "path": "verification\\portal-spec-supplement\\05.png",
+    "sha256": "9f143be18f0941022f86921681eb522e4d2425bb3877f9987c86d26b9ed7a144",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\portal-spec-supplement\\05.png",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-49",
+    "path": "verification\\portal-spec-supplement\\06.png",
+    "sha256": "3b387912ea84dd1e4f1d3527f4da552bad9f30627fbc20059d67765275a020c3",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\portal-spec-supplement\\06.png",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-50",
+    "path": "verification\\portal-spec-supplement\\candidate.pptx",
+    "sha256": "6657034b41e16ba1df453de01805481896ae487df163e68fe5b094726a20909a",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\portal-spec-supplement\\candidate.pptx",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-51",
+    "path": "verification\\portal-spec-supplement\\candidate.pptx.inspect.ndjson",
+    "sha256": "74090e3248a1e9a68aaea2c161f802ade568ab37ca657a36949e5136fe6c86da",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\portal-spec-supplement\\candidate.pptx.inspect.ndjson",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-52",
+    "path": "verification\\portal-spec-supplement\\content.json",
+    "sha256": "bd0d33592d236491dc4cbdc019d3a0653ef106a5ff56d3a8b15a7b0c45545f20",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\portal-spec-supplement\\content.json",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-53",
+    "path": "verification\\portal-spec-supplement\\validation.json",
+    "sha256": "52d1de48708516a1b2e72a19dea70ecef214b87cb32705920560b75e30e96ccd",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\portal-spec-supplement\\validation.json",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-54",
+    "path": "verification\\progress-report-role-portals\\01.png",
+    "sha256": "c21d438b6e2def99faa52fb297cc10765ffd1b6cff79ec3ae355e087e81ff9df",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\progress-report-role-portals\\01.png",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-55",
+    "path": "verification\\progress-report-role-portals\\02.png",
+    "sha256": "2e7a467280c6d7ff52fa9042c49d9b11155dcb9d49b92bca86afe49a457ed39f",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\progress-report-role-portals\\02.png",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-56",
+    "path": "verification\\progress-report-role-portals\\03.png",
+    "sha256": "675118c2a3ae0ef1268917aa95cab4e4c225768c610a63e83663a46b3f662994",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\progress-report-role-portals\\03.png",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-57",
+    "path": "verification\\progress-report-role-portals\\04.png",
+    "sha256": "902411cc442cea9a5680d4ad666017940f92a8b5279c0bdaa76523b05572b45d",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\progress-report-role-portals\\04.png",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-58",
+    "path": "verification\\progress-report-role-portals\\05.png",
+    "sha256": "b14990cf95829adc24243ca04381df74939da613cddba35c4e55e9757c7991db",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\progress-report-role-portals\\05.png",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-59",
+    "path": "verification\\progress-report-role-portals\\06.png",
+    "sha256": "5e78230ad40e7a688136f3f8c51b3c1160ca6df56571e7e2fcd366ae5a9fc238",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\progress-report-role-portals\\06.png",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-60",
+    "path": "verification\\progress-report-role-portals\\candidate.pptx",
+    "sha256": "82fd0c6c20f6b91887480a6fa772f27a7b9c1df109858f2fdfd8aa73e6cdf7db",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\progress-report-role-portals\\candidate.pptx",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-61",
+    "path": "verification\\progress-report-role-portals\\candidate.pptx.inspect.ndjson",
+    "sha256": "4f7a19477588982e7d870e105f9ba8eed84e59860616229eafb2cdc5021327c9",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\progress-report-role-portals\\candidate.pptx.inspect.ndjson",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-62",
+    "path": "verification\\progress-report-role-portals\\content.json",
+    "sha256": "f432f22202f063223f5c8f5a87d7e668535ead7f45fb387c99d189bd628b924b",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\progress-report-role-portals\\content.json",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-63",
+    "path": "verification\\progress-report-role-portals\\validation.json",
+    "sha256": "88411f42316bc2a3adc653a18fe65836c57178f3065fb8565aa314c0d889ec05",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\progress-report-role-portals\\validation.json",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-64",
+    "path": "verification\\remaining-tasks\\01.png",
+    "sha256": "caff9d2b3300fd509ac1105b078cfcfe7de1ffa0d1d386e9325f2320c51eabaa",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\remaining-tasks\\01.png",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-65",
+    "path": "verification\\remaining-tasks\\02.png",
+    "sha256": "d6f2eab66eb070d7434561a20973c33e97a0af5a2c42a105f61d5c9db5133194",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\remaining-tasks\\02.png",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-66",
+    "path": "verification\\remaining-tasks\\03.png",
+    "sha256": "b1404dcc5c37c7fa33f128256f0e1eee754921d9591e8cc17f5374ae00590d7f",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\remaining-tasks\\03.png",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-67",
+    "path": "verification\\remaining-tasks\\04.png",
+    "sha256": "563144245b6cb87420977ceb8d21bc6c9aa2d2db51127001fe17262f4f68aa82",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\remaining-tasks\\04.png",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-68",
+    "path": "verification\\remaining-tasks\\05.png",
+    "sha256": "2b98db3a17278fafebed65acb271a8e73bf667182bb1aebeca1b2448adfe398f",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\remaining-tasks\\05.png",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-69",
+    "path": "verification\\remaining-tasks\\06.png",
+    "sha256": "69be1524bc7f2f900b893145af79e767967c7b4c1d25aa3d9860c4cfba56dd5b",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\remaining-tasks\\06.png",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-70",
+    "path": "verification\\remaining-tasks\\07.png",
+    "sha256": "a991de70ac3d8f1a0a9bdabc62617c52550a620e1acb9547dba2f5e581770e88",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\remaining-tasks\\07.png",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-71",
+    "path": "verification\\remaining-tasks\\08.png",
+    "sha256": "3b809333484434d6d74de9490b8590efc8979b6224500d397d0eb2a8036c1f43",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\remaining-tasks\\08.png",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-72",
+    "path": "verification\\remaining-tasks\\09.png",
+    "sha256": "048147d8e25c63366d156f6b10e0cca8b11ee2b4ec74d2b9943e7e8074bc4976",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\remaining-tasks\\09.png",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-73",
+    "path": "verification\\remaining-tasks\\10.png",
+    "sha256": "8c7fe089ae900e9d66151919e90696f7058e23fea09d1a611ccc8abbd5b437e4",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\remaining-tasks\\10.png",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-74",
+    "path": "verification\\remaining-tasks\\11.png",
+    "sha256": "a9b1ec086cb5b09aa6dea9b3e50833c2611ce64113d4eaa16ce443f10c56a0d8",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\remaining-tasks\\11.png",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-75",
+    "path": "verification\\remaining-tasks\\candidate.pptx",
+    "sha256": "28052cfa6e533de30a4d39020e1b46ba82dc6649ac9aaad77d40470bd2bf2af8",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\remaining-tasks\\candidate.pptx",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-76",
+    "path": "verification\\remaining-tasks\\candidate.pptx.inspect.ndjson",
+    "sha256": "daf79d464716e827b3710173c2f48927d20a50f8a1cfa79d1c7dd96bf5b18dc2",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\remaining-tasks\\candidate.pptx.inspect.ndjson",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-77",
+    "path": "verification\\remaining-tasks\\content.json",
+    "sha256": "494e212503769c576167cb5c919776f5fd92a70490d75517ca7d2d68d6579c7d",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\remaining-tasks\\content.json",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-78",
+    "path": "verification\\remaining-tasks\\validation.json",
+    "sha256": "6a270af816ac0cb52c76671f49e0a7a113e9a8a41aa60fa2e3b894a6962ed989",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\remaining-tasks\\validation.json",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-79",
+    "path": "verification\\user-manual\\01.png",
+    "sha256": "57d00da3bc00f176953dcb65b3497b9c2528531e89fa937fed6ab047288e4302",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\user-manual\\01.png",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-80",
+    "path": "verification\\user-manual\\02.png",
+    "sha256": "c550baec7e28aa468c5fa0e4b37364d35a5b37a0b757cdca0f7bb78bee7884f4",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\user-manual\\02.png",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-81",
+    "path": "verification\\user-manual\\03.png",
+    "sha256": "4620fa512bbfe2c9afecf43d7fb79409cc89d5d0db4d9c4c9711a379189bd9de",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\user-manual\\03.png",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-82",
+    "path": "verification\\user-manual\\04.png",
+    "sha256": "86a2f6cf6b06adf6892ce576c1712886e96ddcfc858d8d73ae09af7a9d8af7a9",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\user-manual\\04.png",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-83",
+    "path": "verification\\user-manual\\05.png",
+    "sha256": "2b04f9b16d1e3da0b411e2e4d7ba5849ab9d7bd8889006cb6179d099bbddf45a",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\user-manual\\05.png",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-84",
+    "path": "verification\\user-manual\\06.png",
+    "sha256": "d509172f0fe2cb5eae2ef0029f188aaa149ba5e093fad25b9044e0e522dd2259",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\user-manual\\06.png",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-85",
+    "path": "verification\\user-manual\\07.png",
+    "sha256": "272c7a1e154f6c7059205905a107408a9c7f21b42534958c491f1e21841a4215",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\user-manual\\07.png",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-86",
+    "path": "verification\\user-manual\\08.png",
+    "sha256": "55fcd2cc2339d34e54f95235105a75f326c88c91098130411db3f9e03e7eccbb",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\user-manual\\08.png",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-87",
+    "path": "verification\\user-manual\\09.png",
+    "sha256": "50af8d8074cb8d531217ada595a071287f1b3e690d9e3a725421ac7c9c09e1ca",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\user-manual\\09.png",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-88",
+    "path": "verification\\user-manual\\10.png",
+    "sha256": "9bcf63d978b175d8e394c0ec643aa3376d02c3c4187b285aaacdc6cdeca79b99",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\user-manual\\10.png",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-89",
+    "path": "verification\\user-manual\\11.png",
+    "sha256": "16c0e37745bd092b5cedbbcec4376012e0a3a75a58bd273c7f0db23d83ea58e8",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\user-manual\\11.png",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-90",
+    "path": "verification\\user-manual\\12.png",
+    "sha256": "765a1231a7f4060a52686f98ec73be78abf98cb22327d0e09a3938797b0eb15c",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\user-manual\\12.png",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-91",
+    "path": "verification\\user-manual\\13.png",
+    "sha256": "102134ccda676d7fa394896214fdde852a36eb826490da2c1d48e2aafb840111",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\user-manual\\13.png",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-92",
+    "path": "verification\\user-manual\\14.png",
+    "sha256": "fd97b04a79f932f2156c153159df0761a4fab83b3d489ba89ff20f69cd804e5b",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\user-manual\\14.png",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-93",
+    "path": "verification\\user-manual\\candidate.pptx",
+    "sha256": "bff786dba4de913fbcf0e43857e997f352f5beba3f47c6e9ee8edf1c4d5aa7d9",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\user-manual\\candidate.pptx",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-94",
+    "path": "verification\\user-manual\\candidate.pptx.inspect.ndjson",
+    "sha256": "69e942952f3ec7da138d272cfa21b6f37c242b6a6d2008c4674d9b2ffd3f8c77",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\user-manual\\candidate.pptx.inspect.ndjson",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-95",
+    "path": "verification\\user-manual\\content.json",
+    "sha256": "fd7bae36d59f446aa7e9c79cc74fbe22590804d556022f98ca1e638321f7c3e7",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\user-manual\\content.json",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  },
+  {
+    "id": "v15-96",
+    "path": "verification\\user-manual\\validation.json",
+    "sha256": "1a5e36e0ba7bb1fdbe7a6bed7992be7edc00db78403121e2c4476f18832c9973",
+    "source": "docs\\acceptance\\google-login-2026-10-22\\presentations-v15\\user-manual\\validation.json",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v13",
+    "commercialUse": "review-required",
+    "visibility": "private"
+  }
+]

@@ -1,0 +1,104 @@
+{
+  "id": "DEV29-IOS-OBS-01",
+  "date": "2026-10-24",
+  "source": "user-provided physical iPhone screenshots; not agent-operated device",
+  "browser": "Safari (user-confirmed)",
+  "osVersion": "26.6.2",
+  "principalRole": "registered-admin-2",
+  "observations": {
+    "adminAuthenticatedScreen": true,
+    "studentsCount": 3,
+    "rideHistoryCount": 3,
+    "visibleTicketBalances": [
+      7,
+      1,
+      10
+    ],
+    "differentTabsAndScrollPositions": true,
+    "loginScreenShownAtEnd": true,
+    "horizontalRightmostColumnsVisible": true,
+    "qrNoRegisteredHouseholdsMessageVisible": true
+  },
+  "notEstablished": [
+    "Google chooser sequence",
+    "parent authenticated access",
+    "Android",
+    "reservation and cancellation"
+  ],
+  "thirdPartyAcceptanceCounted": false,
+  "calendarPermissionAdded": false,
+  "productionStarted": false,
+  "images": [
+    {
+      "id": "IOS-IMG-01",
+      "name": "1-写真1.jpg",
+      "sha256": "1a3c69092ba505d4fef4d3a99536e6aaf1e81ba90ee13c0b0dd3e8e5786bbbb1"
+    },
+    {
+      "id": "IOS-IMG-02",
+      "name": "2-写真2.jpg",
+      "sha256": "cf1d969862d16b5b957a75b0e6f3c11b2d399895e01854c2fcbb23923d892a09"
+    },
+    {
+      "id": "IOS-IMG-03",
+      "name": "3-写真3.jpg",
+      "sha256": "8d505cc012d71df132ab1cee347601fe9feb82a3365c2fa2f796d4621495c536"
+    },
+    {
+      "id": "IOS-IMG-04",
+      "name": "4-写真4.jpg",
+      "sha256": "56e0e27753d592e4fb26e60e4ec9483b2030c0083bc2defade9c446f61277381"
+    },
+    {
+      "id": "IOS-IMG-05",
+      "name": "5-写真5.jpg",
+      "sha256": "8b48de035b2d62e6e883916f87dcc133165161974165d5a1b0a9cd751421490b"
+    }
+  ],
+  "deviceModel": "iPhone 16 Pro Max",
+  "logoutState": "CONFIRMED_BY_USER",
+  "reloadAfterLogout": "CONFIRMED_USER_REPORT_LOGIN_ONLY_NO_LEDGER",
+  "deviceInfoEvidence": {
+    "id": "IOS-DEVICE-01",
+    "sha256": "5416e273611522d098e092b1cee05084548de470151c409d72f9c7bc57d2be0b",
+    "retainedFields": [
+      "iOS version",
+      "device model"
+    ],
+    "excludedFields": [
+      "device name",
+      "serial number",
+      "network addresses",
+      "storage and media counts"
+    ]
+  },
+  "followupImages": [
+    {
+      "id": "IOS-FOLLOWUP-01",
+      "name": "1-写真1.jpg",
+      "sha256": "b03cfadfb026406c48b2a5dc1062dc80871cea4a93a05201cd17872def28a4db"
+    },
+    {
+      "id": "IOS-FOLLOWUP-02",
+      "name": "2-写真2.jpg",
+      "sha256": "b1a457794ed463da1769a597dfc7b933bd83c8ac1f450857b25f21400e30bfc9"
+    },
+    {
+      "id": "IOS-FOLLOWUP-03",
+      "name": "3-写真3.jpg",
+      "sha256": "e6b895098e23abf8c3097b60d0263a7a8979a7337a5975065182dbf63bc35d62"
+    },
+    {
+      "id": "IOS-FOLLOWUP-04",
+      "name": "4-写真4.jpg",
+      "sha256": "b5c33818bd1d65dbc55fa00ed4d6f0e3af88a353ff1a371263c7d03cc8eae37f"
+    },
+    {
+      "id": "IOS-FOLLOWUP-05",
+      "name": "5-写真5.jpg",
+      "sha256": "d20c96b061effab5c0920f9d796924859f6add2777dd62c31d3957d88435c935"
+    }
+  ],
+  "readonlyAdminScope": "CONFIRMED_USER_IMAGES_AND_EXPLICIT_REPORT",
+  "reloadEvidenceType": "Explicit user answer; no additional reload screenshot or direct agent observation"
+}

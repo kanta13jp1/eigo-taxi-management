@@ -1,0 +1,13 @@
+{
+  "checkedAt": "2026-11-11T10:17:56.303387+00:00",
+  "file": "docs/deliverables/2026-11-10-premeeting/progress-2026-11-11-cumulative-twelve.pptx",
+  "sha256": "c9a44df3775a6ed9e1360587aa30173bb60e80b9c632f8dda981b8b709d840d1",
+  "scope": "Rendered slides; slide 1 and 4 inspected on original v1. Unchanged 2 and 3 also visually inspected. Native PowerPoint display not tested.",
+  "pass": true,
+  "slides": {
+    "1": "All 12 rows on each side visible. Attribution and customer 0/6 visible. 保護設定は戻らず agrees with AT28MS-C02 range-paste result.",
+    "2": "Teacher booking heading and public example visible.",
+    "3": "Public confirmation vs synthetic cancellation scopes explicitly visible.",
+    "4": "Green focus ring and selected 往復 visible; screenshot and heading distinguish demo from customer environment. 3→4 and balance 32 match public test."
+  }
+}

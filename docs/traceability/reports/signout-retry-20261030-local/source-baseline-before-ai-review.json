@@ -1,0 +1,20 @@
+{
+  "gas/Code.gs": "245805f16feed96cb78cf8686fa04c2a49c3a398bb131e30eb32001ca9473ae6",
+  "scripts/prepare_test_release.cjs": "e960b0e41e8e7b9d00877b3ecdbf336b7a94d9728859faff7a4407fe635de51b",
+  "scripts/test_gas.cjs": "55f8696c2763e6053f712d32ed8896888dc6c6d413839368bc51c179737a664e",
+  "scripts/test_google_auth.cjs": "2c4dd2ef19c0b7137b66307c622d5a5daf08457f9fda01b52e109efafa5c76bc",
+  "scripts/test_portals.cjs": "cc538b7fe355db16bc30d9a3bc5ca268aead3296391c1cdbbe040437c3a39d06",
+  "scripts/test_release_contract.cjs": "c6ed405f3f9696dff834ed09efdd0de1fe1df1454d2e7a9805ea6b482c23e770",
+  "scripts/test_trace_ui.mjs": "735181c2cc2bec4e1b6dfe8f1e26495274ead473fa6ee89aaae25caef17d064a",
+  "scripts/test_traceability.py": "bc10d851f410975b35e6cba857471c1bd3f75503fb28c09f0f5736330dde97e2",
+  "scripts/traceability.py": "286dc3251f6c3d5a2c7aee69f5d55e5705611415093ab7d8976826347e36b85e",
+  "src/App.tsx": "743821c58e31ea615ef8a53f3151eae58a14928c465bbde4484f807be9e824db",
+  "src/components/AddRideModal.tsx": "8a666bfb82041702fa349182e0bde01a3e0051df5ddc2716fef5f357d950a2fa",
+  "src/components/LoginScreen.tsx": "fb9cdf1ece68eab9cc98db9f8030bf91a9476015cefe83262068cde7e63ad132",
+  "src/components/ParentPortal.tsx": "998083755ce72d50be3aee89665d36106acdb1c1d61a0ad8b76e83e4287ae48e",
+  "src/components/PortalInvitations.tsx": "ea4e25e8b56937a653ca5080953785ac7c3e70236985efe7bd19c69e049cbfb1",
+  "src/components/TeacherDashboard.tsx": "9a9d6474bf2c0fd3b62522b8ffcdba4ed3356dd212d7a24fe160fa67c9273627",
+  "src/portal.ts": "2cb1dc0aed33b27a24ef6ed804a6ae1e01b44e07f0814c12044dc1d3525cbeec",
+  "src/services/api.ts": "7d19ad4889cadd4e831bc4af6ad5aa139a2dacd52363f57e4431f6c543eeaf89",
+  "src/services/google-auth.ts": "718010acfe44b5ff95a48a02fcedf5471558cf67c563d8872fdfccb8f45d8229"
+}

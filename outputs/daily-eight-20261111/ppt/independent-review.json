@@ -1,0 +1,18 @@
+{
+  "checkedAt": "2026-11-11T16:07:01.1431870+09:00",
+  "reviewer": "independent staged-fix worker",
+  "revised": "final-v2.png",
+  "pass": true,
+  "initialFinding": "Missing first two vs six contributor attribution",
+  "nativePowerPointChecked": false,
+  "checks": [
+    "Eight fixes and eight developer cases",
+    "Contributor names and counts shown",
+    "4 per day",
+    "Restore partial, customer 0/6, production held",
+    "Earlier screenshot explicitly labeled",
+    "No clipped text at native render",
+    "File SHA equals structural validation"
+  ],
+  "pptxSha256": "fa8fa4e4dda49135939ff548b547a85a336849829df1878bc459c9475ce88b7c"
+}

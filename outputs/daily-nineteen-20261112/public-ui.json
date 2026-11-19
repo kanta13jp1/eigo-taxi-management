@@ -1,0 +1,35 @@
+{
+  "checkedAt": "2026-11-12T09:06:08.700Z",
+  "url": "https://eigo-taxi-test.web.app/#/parent",
+  "release": "5424438ebd36deb1",
+  "mode": "explicit parent browser demo (no Google)",
+  "balanceBefore": 32,
+  "balanceAfter": 32,
+  "existingReservations": 4,
+  "initialDefaultDateTimeTrials": 3,
+  "initialTrialDateTime": "2026-11-12 16:00",
+  "verifiedNewReservations": 3,
+  "finalReservations": 10,
+  "submitted": [
+    "2026-10-20 16:30",
+    "2026-10-21 18:00",
+    "2026-10-21 15:30"
+  ],
+  "immediateOrder": [
+    "2026-10-20 16:30",
+    "2026-10-21 15:30",
+    "2026-10-21 18:00"
+  ],
+  "reloadedOrder": [
+    "2026-10-20 16:30",
+    "2026-10-21 15:30",
+    "2026-10-21 18:00"
+  ],
+  "normalFlow": "Registered fictional student and prefilled address preserved. A/B/C visible once each in upcoming pickups.",
+  "evidence": [
+    "public-before.png",
+    "public-immediate.png",
+    "public-reloaded.png",
+    "public-order.png"
+  ]
+}

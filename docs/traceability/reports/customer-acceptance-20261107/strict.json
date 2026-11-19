@@ -1,0 +1,181 @@
+{
+  "structuralStatus": "FAIL",
+  "errors": [
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "GAS-63 gas/Code.gs"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "GAS-63 scripts/test_gas.cjs"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "GAS-64 gas/Code.gs"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "GAS-64 scripts/test_gas.cjs"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "GAS-65 gas/Code.gs"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "GAS-65 scripts/test_gas.cjs"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "GAS-66 gas/Code.gs"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "GAS-66 scripts/test_gas.cjs"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "GAS-67 gas/Code.gs"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "GAS-67 scripts/test_gas.cjs"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "GAS-68 gas/Code.gs"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "GAS-68 scripts/test_gas.cjs"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "GAS-69 gas/Code.gs"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "GAS-69 scripts/test_gas.cjs"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "GAS-70 gas/Code.gs"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "GAS-70 scripts/test_gas.cjs"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "TRACE-15 scripts/traceability.py"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "TRACE-16 scripts/traceability.py"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "TRACE-17 scripts/traceability.py"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "TRACE-18 scripts/traceability.py"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "TRACE-19 scripts/traceability.py"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "TRACE-20 scripts/traceability.py"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "TRACE-21 scripts/traceability.py"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "TRACE-22 scripts/traceability.py"
+    },
+    {
+      "code": "SOURCE_REVIEW_REQUIRED",
+      "message": "gas/Code.gs"
+    },
+    {
+      "code": "SOURCE_REVIEW_REQUIRED",
+      "message": "scripts/test_gas.cjs"
+    },
+    {
+      "code": "SOURCE_REVIEW_REQUIRED",
+      "message": "scripts/traceability.py"
+    },
+    {
+      "code": "PRESENTATION_CONTENT_REVIEW",
+      "message": "docs/deliverables/2026-10-23-traceability/business-2026-11-03-v27.pptx"
+    },
+    {
+      "code": "PRESENTATION_CONTENT_REVIEW",
+      "message": "docs/deliverables/2026-10-23-traceability/requirements-2026-11-03-v27.pptx"
+    },
+    {
+      "code": "PRESENTATION_CONTENT_REVIEW",
+      "message": "docs/deliverables/2026-10-23-traceability/design-2026-11-06-v30.pptx"
+    },
+    {
+      "code": "PRESENTATION_CONTENT_REVIEW",
+      "message": "docs/deliverables/2026-10-23-traceability/test-spec-2026-11-06-v30.pptx"
+    },
+    {
+      "code": "PRESENTATION_CONTENT_REVIEW",
+      "message": "docs/deliverables/2026-10-23-traceability/tasks-2026-11-06-v30.pptx"
+    },
+    {
+      "code": "PRESENTATION_CONTENT_REVIEW",
+      "message": "docs/deliverables/2026-10-23-traceability/implementation-2026-11-06-v30.pptx"
+    },
+    {
+      "code": "PRESENTATION_CONTENT_REVIEW",
+      "message": "docs/deliverables/2026-10-23-traceability/test-code-2026-11-06-v30.pptx"
+    },
+    {
+      "code": "PRESENTATION_CONTENT_REVIEW",
+      "message": "docs/deliverables/2026-10-23-traceability/acceptance-2026-11-03-v27.pptx"
+    },
+    {
+      "code": "PRESENTATION_CONTENT_REVIEW",
+      "message": "docs/deliverables/2026-10-23-traceability/operations-2026-11-03-v27.pptx"
+    },
+    {
+      "code": "PRESENTATION_CONTENT_REVIEW",
+      "message": "docs/deliverables/2026-10-23-traceability/user-2026-11-03-v27.pptx"
+    },
+    {
+      "code": "PRESENTATION_CONTENT_REVIEW",
+      "message": "docs/deliverables/2026-10-23-traceability/matrix-2026-11-03-v27.pptx"
+    },
+    {
+      "code": "PRESENTATION_CONTENT_REVIEW",
+      "message": "docs/deliverables/2026-10-23-traceability/progress-2026-11-06-v30.pptx"
+    },
+    {
+      "code": "BINARY_DOCUMENT_DRIFT",
+      "message": "docs/traceability/matrix.csv"
+    },
+    {
+      "code": "BINARY_DOCUMENT_DRIFT",
+      "message": "docs/acceptance/third-party-acceptance-checklist.csv"
+    }
+  ],
+  "coverageGaps": [],
+  "counts": {
+    "requirements": 38,
+    "flows": 11,
+    "testCases": 158,
+    "screens": 20,
+    "interfaces": 16,
+    "coverageGaps": 0
+  },
+  "release": "HOLD",
+  "semanticReview": "REQUIRED",
+  "thirdPartyPassed": 0
+}

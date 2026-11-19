@@ -1,0 +1,535 @@
+{
+  "spreadsheetId": "1PqUq7BoBBVlPolivap0eg1UPik47vNNWphyBd0DNwvU",
+  "spreadsheetUrl": "https://docs.google.com/spreadsheets/d/1PqUq7BoBBVlPolivap0eg1UPik47vNNWphyBd0DNwvU/edit",
+  "properties": {
+    "title": "英語教室送迎管理｜残タスク・受入確認（2026-10-24）",
+    "locale": "ja_JP",
+    "timeZone": "Asia/Tokyo"
+  },
+  "sheets": [
+    {
+      "properties": {
+        "sheetId": 2012604155,
+        "title": "進捗概要",
+        "index": 0,
+        "sheetType": "GRID",
+        "gridProperties": {
+          "rowCount": 1000,
+          "columnCount": 26,
+          "hideGridlines": true,
+          "rowGroupControlAfter": true,
+          "columnGroupControlAfter": true
+        }
+      },
+      "data": [
+        {
+          "startRow": 6,
+          "startColumn": 1,
+          "rowData": [
+            {
+              "values": [
+                {
+                  "formattedValue": "0",
+                  "userEnteredValue": {
+                    "formulaValue": "=COUNTIF('顧客確認6件'!F6:F11,\"合格\")"
+                  }
+                }
+              ]
+            },
+            {
+              "values": [
+                {
+                  "formattedValue": "6",
+                  "userEnteredValue": {
+                    "numberValue": 6
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "startRow": 10,
+          "startColumn": 1,
+          "rowData": [
+            {
+              "values": [
+                {
+                  "formattedValue": "登録時の通信エラーを調査。取消は台帳・専用Calendar・サイト・残数5枚を照合済み。Calendar閲覧共有も完了。顧客実施日を調整して完了用予約2件を準備。",
+                  "userEnteredValue": {
+                    "stringValue": "登録時の通信エラーを調査。取消は台帳・専用Calendar・サイト・残数5枚を照合済み。Calendar閲覧共有も完了。顧客実施日を調整して完了用予約2件を準備。"
+                  }
+                }
+              ]
+            },
+            {
+              "values": [
+                {
+                  "formattedValue": "先生本人の実ログイン、取消・精算ルール、バックアップ運用、AT-30の判定時点、教室所有の運用用アカウントの準備。",
+                  "userEnteredValue": {
+                    "stringValue": "先生本人の実ログイン、取消・精算ルール、バックアップ運用、AT-30の判定時点、教室所有の運用用アカウントの準備。"
+                  }
+                }
+              ]
+            },
+            {
+              "values": [
+                {
+                  "formattedValue": "検証専用Calendarの実権限と読取を確認し、検証GAS v5を配備済み。本番運用開始は禁止を維持。",
+                  "userEnteredValue": {
+                    "stringValue": "検証専用Calendarの実権限と読取を確認し、検証GAS v5を配備済み。本番運用開始は禁止を維持。"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "properties": {
+        "sheetId": 1014039656,
+        "title": "残タスク・確認事項",
+        "index": 1,
+        "sheetType": "GRID",
+        "gridProperties": {
+          "rowCount": 1000,
+          "columnCount": 26,
+          "frozenRowCount": 5,
+          "frozenColumnCount": 2,
+          "hideGridlines": true,
+          "rowGroupControlAfter": true,
+          "columnGroupControlAfter": true
+        }
+      },
+      "data": [
+        {
+          "startRow": 5,
+          "startColumn": 3,
+          "rowData": [
+            {
+              "values": [
+                {
+                  "formattedValue": "部分確認済み",
+                  "userEnteredValue": {
+                    "stringValue": "部分確認済み"
+                  }
+                },
+                {
+                  "formattedValue": "v5で架空予約1件の台帳・専用Calendar・予約ID・日時・場所と残数5枚を照合。登録直後は汎用通信エラー、再読込後は表示。",
+                  "userEnteredValue": {
+                    "stringValue": "v5で架空予約1件の台帳・専用Calendar・予約ID・日時・場所と残数5枚を照合。登録直後は汎用通信エラー、再読込後は表示。"
+                  }
+                },
+                {
+                  "formattedValue": "通信エラーの原因と通常成功表示、保護者からの片道・往復等を確認。AT-24全体は未合格。",
+                  "userEnteredValue": {
+                    "stringValue": "通信エラーの原因と通常成功表示、保護者からの片道・往復等を確認。AT-24全体は未合格。"
+                  }
+                },
+                {
+                  "formattedValue": "開発担当",
+                  "userEnteredValue": {
+                    "stringValue": "開発担当"
+                  }
+                },
+                {
+                  "formattedValue": "登録後の応答調査・顧客実施日時の調整",
+                  "userEnteredValue": {
+                    "stringValue": "登録後の応答調査・顧客実施日時の調整"
+                  }
+                }
+              ]
+            },
+            {
+              "values": [
+                {
+                  "formattedValue": "部分確認済み",
+                  "userEnteredValue": {
+                    "stringValue": "部分確認済み"
+                  }
+                },
+                {
+                  "formattedValue": "同じ架空予約の取消確定後、台帳cancelled・専用Calendar予定消失・再読込後のサイト取消と残数5枚を照合。",
+                  "userEnteredValue": {
+                    "stringValue": "同じ架空予約の取消確定後、台帳cancelled・専用Calendar予定消失・再読込後のサイト取消と残数5枚を照合。"
+                  }
+                },
+                {
+                  "formattedValue": "保護者からの取消と同一予約の再試行等、残る技術受入範囲を確認。",
+                  "userEnteredValue": {
+                    "stringValue": "保護者からの取消と同一予約の再試行等、残る技術受入範囲を確認。"
+                  }
+                },
+                {
+                  "formattedValue": "開発担当",
+                  "userEnteredValue": {
+                    "stringValue": "開発担当"
+                  }
+                },
+                {
+                  "formattedValue": "顧客用の事前準備と実施調整",
+                  "userEnteredValue": {
+                    "stringValue": "顧客用の事前準備と実施調整"
+                  }
+                }
+              ]
+            },
+            {
+              "values": [
+                {
+                  "formattedValue": "部分確認済み",
+                  "userEnteredValue": {
+                    "stringValue": "部分確認済み"
+                  }
+                },
+                {
+                  "formattedValue": "既存管理者2名を維持し、顧客確認用の保護者を1名追加。対象は架空生徒1名だけ、初回本人Googleログイン待ち。",
+                  "userEnteredValue": {
+                    "stringValue": "既存管理者2名を維持し、顧客確認用の保護者を1名追加。対象は架空生徒1名だけ、初回本人Googleログイン待ち。"
+                  }
+                },
+                {
+                  "formattedValue": "小林さんの同一登録を段階的に役割変更し、顧客6件で確認。従来の技術受入の未確認範囲は別管理。",
+                  "userEnteredValue": {
+                    "stringValue": "小林さんの同一登録を段階的に役割変更し、顧客6件で確認。従来の技術受入の未確認範囲は別管理。"
+                  }
+                },
+                {
+                  "formattedValue": "開発担当／小林さん",
+                  "userEnteredValue": {
+                    "stringValue": "開発担当／小林さん"
+                  }
+                },
+                {
+                  "formattedValue": "実施日・役割切替の調整",
+                  "userEnteredValue": {
+                    "stringValue": "実施日・役割切替の調整"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "startRow": 12,
+          "startColumn": 4,
+          "rowData": [
+            {
+              "values": [
+                {
+                  "formattedValue": "旧第三者30件から6件へ代替、顧客0/6。保護者登録・架空生徒5枚・専用Calendar・GAS v5は準備済み。",
+                  "userEnteredValue": {
+                    "stringValue": "旧第三者30件から6件へ代替、顧客0/6。保護者登録・架空生徒5枚・専用Calendar・GAS v5は準備済み。"
+                  }
+                },
+                {
+                  "formattedValue": "登録応答の調査、本人側Calendar閲覧の確認。実施日に合わせた片道・往復の完了用予約と模擬実績表を準備。",
+                  "userEnteredValue": {
+                    "stringValue": "登録応答の調査、本人側Calendar閲覧の確認。実施日に合わせた片道・往復の完了用予約と模擬実績表を準備。"
+                  }
+                },
+                {
+                  "formattedValue": "小林さん／開発担当",
+                  "userEnteredValue": {
+                    "stringValue": "小林さん／開発担当"
+                  }
+                },
+                {
+                  "formattedValue": "検証準備と実施日時の調整",
+                  "userEnteredValue": {
+                    "stringValue": "検証準備と実施日時の調整"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "properties": {
+        "sheetId": 110706,
+        "title": "顧客確認6件",
+        "index": 2,
+        "sheetType": "GRID",
+        "gridProperties": {
+          "rowCount": 60,
+          "columnCount": 9,
+          "frozenRowCount": 5,
+          "hideGridlines": true
+        }
+      },
+      "data": [
+        {
+          "startRow": 3,
+          "rowData": [
+            {
+              "values": [
+                {
+                  "formattedValue": "本人の同じ会社Googleアカウントを使用。保護者登録・架空生徒（残5）と家庭URL発行済み。開発担当が区切りごとに保護者→管理者→保護者→管理者→保護者へ切替。専用Calendarは閲覧共有済み。実施日・完了用2予約は調整中。パスワード共有不要。",
+                  "userEnteredValue": {
+                    "stringValue": "本人の同じ会社Googleアカウントを使用。保護者登録・架空生徒（残5）と家庭URL発行済み。開発担当が区切りごとに保護者→管理者→保護者→管理者→保護者へ切替。専用Calendarは閲覧共有済み。実施日・完了用2予約は調整中。パスワード共有不要。"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "properties": {
+        "sheetId": 1920826968,
+        "title": "検証結果履歴",
+        "index": 4,
+        "sheetType": "GRID",
+        "gridProperties": {
+          "rowCount": 100,
+          "columnCount": 9,
+          "frozenRowCount": 1,
+          "hideGridlines": true
+        }
+      },
+      "data": [
+        {
+          "startRow": 50,
+          "rowData": [
+            {
+              "values": [
+                {
+                  "formattedValue": "VR-20261107-06",
+                  "userEnteredValue": {
+                    "stringValue": "VR-20261107-06"
+                  }
+                },
+                {
+                  "formattedValue": "2026-11-07",
+                  "userEnteredValue": {
+                    "stringValue": "2026-11-07"
+                  }
+                },
+                {
+                  "formattedValue": "AT-24・AT-25",
+                  "userEnteredValue": {
+                    "stringValue": "AT-24・AT-25"
+                  }
+                },
+                {
+                  "formattedValue": "専用Calendarの実認可とGAS v5",
+                  "userEnteredValue": {
+                    "stringValue": "専用Calendarの実認可とGAS v5"
+                  }
+                },
+                {
+                  "formattedValue": "会社の検証環境だけを更新",
+                  "userEnteredValue": {
+                    "stringValue": "会社の検証環境だけを更新"
+                  }
+                },
+                {
+                  "formattedValue": "専用サブカレンダーの実読取で設定先一致・会社所有・非primary・Asia/Tokyoを確認。17:15に既存検証Webアプリをv5へ更新。URL・実行者・アクセス設定を維持。",
+                  "userEnteredValue": {
+                    "stringValue": "専用サブカレンダーの実読取で設定先一致・会社所有・非primary・Asia/Tokyoを確認。17:15に既存検証Webアプリをv5へ更新。URL・実行者・アクセス設定を維持。"
+                  }
+                },
+                {
+                  "formattedValue": "PROGRESS-20261107-CUSTREADY-01〜02／Calendar読取ログ・GAS v5配備証跡",
+                  "userEnteredValue": {
+                    "stringValue": "PROGRESS-20261107-CUSTREADY-01〜02／Calendar読取ログ・GAS v5配備証跡"
+                  }
+                },
+                {
+                  "formattedValue": "読取合格を予約・取消・顧客確認の全合格にしない。本番未開始。",
+                  "userEnteredValue": {
+                    "stringValue": "読取合格を予約・取消・顧客確認の全合格にしない。本番未開始。"
+                  }
+                },
+                {
+                  "formattedValue": "架空予約で登録・取消と台帳・予定を照合。",
+                  "userEnteredValue": {
+                    "stringValue": "架空予約で登録・取消と台帳・予定を照合。"
+                  }
+                }
+              ]
+            },
+            {
+              "values": [
+                {
+                  "formattedValue": "VR-20261107-07",
+                  "userEnteredValue": {
+                    "stringValue": "VR-20261107-07"
+                  }
+                },
+                {
+                  "formattedValue": "2026-11-07",
+                  "userEnteredValue": {
+                    "stringValue": "2026-11-07"
+                  }
+                },
+                {
+                  "formattedValue": "CUST-01〜06",
+                  "userEnteredValue": {
+                    "stringValue": "CUST-01〜06"
+                  }
+                },
+                {
+                  "formattedValue": "小林さんの事前利用登録",
+                  "userEnteredValue": {
+                    "stringValue": "小林さんの事前利用登録"
+                  }
+                },
+                {
+                  "formattedValue": "同一Googleアカウントを段階的に役割変更",
+                  "userEnteredValue": {
+                    "stringValue": "同一Googleアカウントを段階的に役割変更"
+                  }
+                },
+                {
+                  "formattedValue": "保護者として事前登録し、架空生徒1名だけを対象に家庭URL発行。初回本人ログイン待ち。開始残数5枚を読み戻し、元の生徒3行は変更なし。管理者2名を維持。",
+                  "userEnteredValue": {
+                    "stringValue": "保護者として事前登録し、架空生徒1名だけを対象に家庭URL発行。初回本人ログイン待ち。開始残数5枚を読み戻し、元の生徒3行は変更なし。管理者2名を維持。"
+                  }
+                },
+                {
+                  "formattedValue": "PROGRESS-20261107-CUSTREADY-03／登録・台帳読戻し証跡",
+                  "userEnteredValue": {
+                    "stringValue": "PROGRESS-20261107-CUSTREADY-03／登録・台帳読戻し証跡"
+                  }
+                },
+                {
+                  "formattedValue": "顧客確認0/6。2役同時利用ではなく、開発担当が保護者→管理者→保護者→管理者→保護者と切り替える。",
+                  "userEnteredValue": {
+                    "stringValue": "顧客確認0/6。2役同時利用ではなく、開発担当が保護者→管理者→保護者→管理者→保護者と切り替える。"
+                  }
+                },
+                {
+                  "formattedValue": "実施日確定後に当日完了用2予約と模擬実績表を準備。専用Calendar閲覧共有を調整。",
+                  "userEnteredValue": {
+                    "stringValue": "実施日確定後に当日完了用2予約と模擬実績表を準備。専用Calendar閲覧共有を調整。"
+                  }
+                }
+              ]
+            },
+            {
+              "values": [
+                {
+                  "formattedValue": "VR-20261107-08",
+                  "userEnteredValue": {
+                    "stringValue": "VR-20261107-08"
+                  }
+                },
+                {
+                  "formattedValue": "2026-11-07",
+                  "userEnteredValue": {
+                    "stringValue": "2026-11-07"
+                  }
+                },
+                {
+                  "formattedValue": "AT-24・AT-25",
+                  "userEnteredValue": {
+                    "stringValue": "AT-24・AT-25"
+                  }
+                },
+                {
+                  "formattedValue": "実予約と取消の事前確認",
+                  "userEnteredValue": {
+                    "stringValue": "実予約と取消の事前確認"
+                  }
+                },
+                {
+                  "formattedValue": "開発担当による架空予約1件・GAS v5",
+                  "userEnteredValue": {
+                    "stringValue": "開発担当による架空予約1件・GAS v5"
+                  }
+                },
+                {
+                  "formattedValue": "登録1回で台帳1行と専用Calendar予定を作成。予定説明の予約ID・日時・場所が一致し、再読込後も表示。取消確定後は台帳cancelled・Calendar予定消失・サイト取消と残数5枚を確認。",
+                  "userEnteredValue": {
+                    "stringValue": "登録1回で台帳1行と専用Calendar予定を作成。予定説明の予約ID・日時・場所が一致し、再読込後も表示。取消確定後は台帳cancelled・Calendar予定消失・サイト取消と残数5枚を確認。"
+                  }
+                },
+                {
+                  "formattedValue": "PROGRESS-20261107-CUSTREADY-04〜05／同一予約IDの前後証跡",
+                  "userEnteredValue": {
+                    "stringValue": "PROGRESS-20261107-CUSTREADY-04〜05／同一予約IDの前後証跡"
+                  }
+                },
+                {
+                  "formattedValue": "登録直後にサイトが汎用通信エラーを表示。再送せず保存を照合。応答失敗の原因は未確定でAT-24全体は未合格。顧客確認へ加算しない。",
+                  "userEnteredValue": {
+                    "stringValue": "登録直後にサイトが汎用通信エラーを表示。再送せず保存を照合。応答失敗の原因は未確定でAT-24全体は未合格。顧客確認へ加算しない。"
+                  }
+                },
+                {
+                  "formattedValue": "登録直後の応答を追加確認。顧客実施の前に通常操作での成功表示を確認。",
+                  "userEnteredValue": {
+                    "stringValue": "登録直後の応答を追加確認。顧客実施の前に通常操作での成功表示を確認。"
+                  }
+                }
+              ]
+            },
+            {
+              "values": [
+                {
+                  "formattedValue": "VR-20261107-09",
+                  "userEnteredValue": {
+                    "stringValue": "VR-20261107-09"
+                  }
+                },
+                {
+                  "formattedValue": "2026-11-07",
+                  "userEnteredValue": {
+                    "stringValue": "2026-11-07"
+                  }
+                },
+                {
+                  "formattedValue": "CUST-02・CUST-03",
+                  "userEnteredValue": {
+                    "stringValue": "CUST-02・CUST-03"
+                  }
+                },
+                {
+                  "formattedValue": "小林さんへの検証Calendar共有",
+                  "userEnteredValue": {
+                    "stringValue": "小林さんへの検証Calendar共有"
+                  }
+                },
+                {
+                  "formattedValue": "Google共有通知を明示許可後に送信",
+                  "userEnteredValue": {
+                    "stringValue": "Google共有通知を明示許可後に送信"
+                  }
+                },
+                {
+                  "formattedValue": "架空予定だけを扱う専用Calendarを「予定の詳細の表示」で個別共有。再読込後も同権限、一般公開・組織全体共有なしを確認。",
+                  "userEnteredValue": {
+                    "stringValue": "架空予定だけを扱う専用Calendarを「予定の詳細の表示」で個別共有。再読込後も同権限、一般公開・組織全体共有なしを確認。"
+                  }
+                },
+                {
+                  "formattedValue": "PROGRESS-20261107-CUSTREADY-06／Calendar共有の保存証跡",
+                  "userEnteredValue": {
+                    "stringValue": "PROGRESS-20261107-CUSTREADY-06／Calendar共有の保存証跡"
+                  }
+                },
+                {
+                  "formattedValue": "編集権限は付けていない。本人側の通知受領・閲覧と顧客操作は未確認。顧客0/6、本番未開始。",
+                  "userEnteredValue": {
+                    "stringValue": "編集権限は付けていない。本人側の通知受領・閲覧と顧客操作は未確認。顧客0/6、本番未開始。"
+                  }
+                },
+                {
+                  "formattedValue": "依頼文で実施日時を調整。開始前に応答問題を確認し、当日の完了用予約2件を準備。",
+                  "userEnteredValue": {
+                    "stringValue": "依頼文で実施日時を調整。開始前に応答問題を確認し、当日の完了用予約2件を準備。"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

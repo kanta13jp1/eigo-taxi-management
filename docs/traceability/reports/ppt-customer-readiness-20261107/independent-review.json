@@ -1,0 +1,292 @@
+{
+  "schemaVersion": 1,
+  "status": "PASS",
+  "findings": [],
+  "date": "2026-11-07",
+  "reviewer": "independent AI worker /root/modern_runner_1106/ppt_final_review",
+  "scope": "Read-only review of finalized v32 candidate PPTX files, proposed manifest, saved operational evidence and rendering. No current manifest, README, binary promotion, source or external application was changed by reviewer.",
+  "registryVersion": "2026-11-07-r16",
+  "registrySha256": "f2d307b7a61cfcbf13cc48221cd58ca73c910b499b30a1ed46f7e163773e36fd",
+  "registeredTests": 172,
+  "decks": 12,
+  "slides": 160,
+  "historicalBodyPagesPixelIdentical": 136,
+  "oldNotesPreserved": 160,
+  "replacedDiagramPages": 24,
+  "checks": {
+    "candidateHashesMatchProposedManifestAndReceipts": true,
+    "currentRegistryLockAndGeneratedDocumentHashesMatch": true,
+    "currentCustomerCanonicalHashMatches": true,
+    "all160FinalPagesRenderedAndReimported": true,
+    "old136BodyRegionsBelowHeaderPixelIdentical": true,
+    "all160OldNotesAndImagesPreserved": true,
+    "all24NewDiagramBodiesMatchTwoFullSizeReviewedPrototypes": true,
+    "allCurrentCanonicalDocumentsAndCustomerFullTextInNotes": true,
+    "newStateAndHistoricalStateSeparated": true,
+    "calendarActualReadScopeLimitedAndNoNewConsentDialogClaim": true,
+    "gasVersion5DeploymentAndUnchangedEndpointSettingsMatchRecord": true,
+    "temporaryReadProbeRemovedAndCurrentCodeManifestHashesMatchDeploymentRecord": true,
+    "oneSyntheticStudentBalance5AndExisting3Retained": true,
+    "activeParentLimitedToOneSyntheticStudentOriginal2AdminsRetained": true,
+    "oneCreateSubmissionWithGenericErrorIsPartialOnly": true,
+    "ledgerCalendarReservationIdDatetimeLocationReloadBalanceReconciled": true,
+    "cancelConfirmationThenCancelledLedgerCalendarRemovalSiteAndBalance5LimitedCheck": true,
+    "normalCreateSuccessUiOriginalResponseAndRootCauseUnverified": true,
+    "readerSharingPersistedButRecipientOpenUnverified": true,
+    "customerFirstLoginAndAllCUST6RemainNotRun": true,
+    "dateUnsetCompletionTestReservationsAndMockResultsStillPending": true,
+    "singleIdentityParentAdminParentAdminParentPlanMatchesCanonical": true,
+    "technicalAT01to30RetainedAndOldThirdParty30Historical": true,
+    "productionNotStartedAndOverallHoldMaintained": true,
+    "privateEmailCalendarIdentifierHouseholdUrlNotInPPTTextOrNotes": true
+  },
+  "rows": [
+    {
+      "id": "PKG-01",
+      "name": "business",
+      "sha256": "6f0e927127cbc71a5d267c16501a5a000cb77d556f6fb7001b4fbb9a39a82a21",
+      "slides": 23,
+      "historicalBodyPagesPixelIdentical": 21,
+      "oldNotesPreserved": 23,
+      "oldImagesPreserved": true,
+      "currentGeneratedCanonicalAndCustomerCanonicalInNotes": true,
+      "packageFindings": 0,
+      "layoutFindings": 0,
+      "inheritedLayoutWarnings": 21,
+      "newLayoutWarnings": 0,
+      "reimportPassed": true
+    },
+    {
+      "id": "PKG-02",
+      "name": "requirements",
+      "sha256": "8cd0ad39e5c5add32d8cdd6deb4d3d644e64e5ca1ec91d67614d14ccca63f61a",
+      "slides": 12,
+      "historicalBodyPagesPixelIdentical": 10,
+      "oldNotesPreserved": 12,
+      "oldImagesPreserved": true,
+      "currentGeneratedCanonicalAndCustomerCanonicalInNotes": true,
+      "packageFindings": 0,
+      "layoutFindings": 0,
+      "inheritedLayoutWarnings": 0,
+      "newLayoutWarnings": 0,
+      "reimportPassed": true
+    },
+    {
+      "id": "PKG-03",
+      "name": "design",
+      "sha256": "4782645107ef2bbc33ab42ee36430d387cdb64d4090cc7ab50e902623651cfff",
+      "slides": 13,
+      "historicalBodyPagesPixelIdentical": 11,
+      "oldNotesPreserved": 13,
+      "oldImagesPreserved": true,
+      "currentGeneratedCanonicalAndCustomerCanonicalInNotes": true,
+      "packageFindings": 0,
+      "layoutFindings": 0,
+      "inheritedLayoutWarnings": 0,
+      "newLayoutWarnings": 0,
+      "reimportPassed": true
+    },
+    {
+      "id": "PKG-04",
+      "name": "test-spec",
+      "sha256": "96ef8991e1da755544976371d5fda0a9f90df8505373ef0ce0a4a8b055ed9aa6",
+      "slides": 13,
+      "historicalBodyPagesPixelIdentical": 11,
+      "oldNotesPreserved": 13,
+      "oldImagesPreserved": true,
+      "currentGeneratedCanonicalAndCustomerCanonicalInNotes": true,
+      "packageFindings": 0,
+      "layoutFindings": 0,
+      "inheritedLayoutWarnings": 0,
+      "newLayoutWarnings": 0,
+      "reimportPassed": true
+    },
+    {
+      "id": "PKG-05",
+      "name": "tasks",
+      "sha256": "fd6b63454cc18df884123085822643dd186bfa39c9ba982e747980e111fc5581",
+      "slides": 15,
+      "historicalBodyPagesPixelIdentical": 13,
+      "oldNotesPreserved": 15,
+      "oldImagesPreserved": true,
+      "currentGeneratedCanonicalAndCustomerCanonicalInNotes": true,
+      "packageFindings": 0,
+      "layoutFindings": 0,
+      "inheritedLayoutWarnings": 0,
+      "newLayoutWarnings": 0,
+      "reimportPassed": true
+    },
+    {
+      "id": "PKG-06",
+      "name": "implementation",
+      "sha256": "fa74c0e5d6617edb232138d1f0c7658080a7f1dfee83aa99b8e0ec01a3b2a42b",
+      "slides": 13,
+      "historicalBodyPagesPixelIdentical": 11,
+      "oldNotesPreserved": 13,
+      "oldImagesPreserved": true,
+      "currentGeneratedCanonicalAndCustomerCanonicalInNotes": true,
+      "packageFindings": 0,
+      "layoutFindings": 0,
+      "inheritedLayoutWarnings": 0,
+      "newLayoutWarnings": 0,
+      "reimportPassed": true
+    },
+    {
+      "id": "PKG-07",
+      "name": "test-code",
+      "sha256": "9fe98e631116c04c5d063fbf5c3a797f02237d88bb45039112f8ece6f750892f",
+      "slides": 13,
+      "historicalBodyPagesPixelIdentical": 11,
+      "oldNotesPreserved": 13,
+      "oldImagesPreserved": true,
+      "currentGeneratedCanonicalAndCustomerCanonicalInNotes": true,
+      "packageFindings": 0,
+      "layoutFindings": 0,
+      "inheritedLayoutWarnings": 0,
+      "newLayoutWarnings": 0,
+      "reimportPassed": true
+    },
+    {
+      "id": "PKG-08",
+      "name": "acceptance",
+      "sha256": "a101ca71362a60ed8ada2096ed1b99a84b0202aa105c65cf3c84515c68f091d0",
+      "slides": 12,
+      "historicalBodyPagesPixelIdentical": 10,
+      "oldNotesPreserved": 12,
+      "oldImagesPreserved": true,
+      "currentGeneratedCanonicalAndCustomerCanonicalInNotes": true,
+      "packageFindings": 0,
+      "layoutFindings": 0,
+      "inheritedLayoutWarnings": 0,
+      "newLayoutWarnings": 0,
+      "reimportPassed": true
+    },
+    {
+      "id": "PKG-09",
+      "name": "operations",
+      "sha256": "74b5e44894cb4fce386cd5140cedf16c7d9eeff5b1ea310772b3043210ecefee",
+      "slides": 12,
+      "historicalBodyPagesPixelIdentical": 10,
+      "oldNotesPreserved": 12,
+      "oldImagesPreserved": true,
+      "currentGeneratedCanonicalAndCustomerCanonicalInNotes": true,
+      "packageFindings": 0,
+      "layoutFindings": 0,
+      "inheritedLayoutWarnings": 0,
+      "newLayoutWarnings": 0,
+      "reimportPassed": true
+    },
+    {
+      "id": "PKG-10",
+      "name": "user",
+      "sha256": "6dcdea8a82d32bd7c3c56c34593c66b9c77482aa8a4bda15fe249b952250c0f4",
+      "slides": 12,
+      "historicalBodyPagesPixelIdentical": 10,
+      "oldNotesPreserved": 12,
+      "oldImagesPreserved": true,
+      "currentGeneratedCanonicalAndCustomerCanonicalInNotes": true,
+      "packageFindings": 0,
+      "layoutFindings": 0,
+      "inheritedLayoutWarnings": 0,
+      "newLayoutWarnings": 0,
+      "reimportPassed": true
+    },
+    {
+      "id": "PKG-11",
+      "name": "matrix",
+      "sha256": "a99f21f517fb35be55a4d18aa46716ecc6b986e2a0df8794493e3e1909de890b",
+      "slides": 10,
+      "historicalBodyPagesPixelIdentical": 8,
+      "oldNotesPreserved": 10,
+      "oldImagesPreserved": true,
+      "currentGeneratedCanonicalAndCustomerCanonicalInNotes": true,
+      "packageFindings": 0,
+      "layoutFindings": 0,
+      "inheritedLayoutWarnings": 0,
+      "newLayoutWarnings": 0,
+      "reimportPassed": true
+    },
+    {
+      "id": "PKG-12",
+      "name": "progress",
+      "sha256": "c4f3155e1dd2747ca1ec44e489379355103f8f02f7ae8bc640226fc78fc59c8a",
+      "slides": 12,
+      "historicalBodyPagesPixelIdentical": 10,
+      "oldNotesPreserved": 12,
+      "oldImagesPreserved": true,
+      "currentGeneratedCanonicalAndCustomerCanonicalInNotes": true,
+      "packageFindings": 0,
+      "layoutFindings": 0,
+      "inheritedLayoutWarnings": 0,
+      "newLayoutWarnings": 0,
+      "reimportPassed": true
+    }
+  ],
+  "evidence": [
+    {
+      "path": "docs/progress/2026-11-07-customer-readiness.md",
+      "sha256": "97d39320ed2319b9671f3fe2cdc53b9a7900a37e94f141454ec76e6723215a60"
+    },
+    {
+      "path": "docs/acceptance/CUSTOMER_ACCEPTANCE_MINIMUM_20261107.md",
+      "sha256": "9fe72b0bfe8f910d089ab955222287c004228f7e91abe459e424073d54923dcd"
+    },
+    {
+      "path": "outputs/customer-ready-20261107/calendar-read-result.json",
+      "sha256": "84e69f48bab9c43fa0399abc93a60e9e2f60f72e6dc882e4864dcf3e8860d20c"
+    },
+    {
+      "path": "outputs/customer-ready-20261107/gas-deployment-v5.json",
+      "sha256": "a6ea0b81c2a6038e232861a13bf49c979412ccfb183494ef0f96714fdf2d625e"
+    },
+    {
+      "path": "outputs/customer-ready-20261107/booking-smoke-result.json",
+      "sha256": "f7563f4fa4333044635738786fd9e520d6923d2df49616304859c772e69fab18"
+    },
+    {
+      "path": "outputs/customer-ready-20261107/account-registration.json",
+      "sha256": "8cb1428096f816e588353dd2fb486bd9cf2f9a97996a632e1c608d3ca9427466"
+    },
+    {
+      "path": "outputs/customer-ready-20261107/calendar-sharing.json",
+      "sha256": "8fd67d4936eec4bb4660a95867a4901829fecd560ae941cc1916cccfd54a99c5"
+    },
+    {
+      "path": "outputs/customer-ready-20261107/students-before.tsv",
+      "sha256": "0573bece3403da61ddc3e0cfc838ae6bdb81b9e6df1e5cf80f9d0764fdf02fd1"
+    },
+    {
+      "path": "outputs/customer-ready-20261107/students-after.tsv",
+      "sha256": "fb9a63d7b96dbb3d3fcbbdbf4a82200dac5f8c061661144fc112063504e7546e"
+    },
+    {
+      "path": "outputs/customer-ready-20261107/rides-after-first-attempt.tsv",
+      "sha256": "857a01f45e2e18175c49b8e31414d14fd340d60dffb73fd1a267932f40383397"
+    },
+    {
+      "path": "outputs/customer-ready-20261107/rides-after-cancel-attempt.tsv",
+      "sha256": "857a01f45e2e18175c49b8e31414d14fd340d60dffb73fd1a267932f40383397"
+    },
+    {
+      "path": "outputs/customer-ready-20261107/rides-cancelled-final.tsv",
+      "sha256": "83f4739e355014f047ec4cc29e0b4ff506e6878c986cb0820ce4eee5e9728051"
+    }
+  ],
+  "fullSizeVisualReview": [
+    "outputs/customer-prep-ppt-20261107-v32/finalized/progress/roundtrip/11.png",
+    "outputs/customer-prep-ppt-20261107-v32/finalized/progress/roundtrip/12.png"
+  ],
+  "observations": [
+    "Read probe PASS demonstrates the specific owned, non-primary, expected Asia/Tokyo test Calendar and available Apps Script grant; it does not prove new consent-dialog interaction.",
+    "GAS v5 deployment and account/calendar preparation do not make customer preparation complete: normal creation success UI and response failure cause, customer first login, recipient Calendar opening, customer date and completion-test records remain pending.",
+    "Registration was submitted once and its persisted backend state was reconciled after a generic UI error; cancellation reconciliation is a limited developer test, not full AT24/25 or customer acceptance.",
+    "PPT preserves v31 and earlier notes as history while r16 current notes and the final two figures supersede old pending-Calendar or undeployed-GAS statements.",
+    "Current private account addresses, Calendar IDs and household URLs were not copied into PPT text or notes."
+  ],
+  "limits": [
+    "No live Google consent, app operation, account role switch, Calendar sharing or external send was performed by this reviewer; saved operation records and result files were inspected.",
+    "Native PowerPoint application rendering remains unverified.",
+    "Business deck retains 21 inherited layout warnings; no new layout warnings were introduced.",
+    "The proposed docs/v32 paths may await root-owned binary promotion; this review validates actual finalized candidate bytes and matching proposed metadata."
+  ]
+}

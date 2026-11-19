@@ -1,0 +1,266 @@
+{
+  "schemaVersion": 1,
+  "mode": "LOCAL_MOCK_UI_REHEARSAL",
+  "runStartedAt": "2026-11-06T05:50:01.585Z",
+  "finishedAt": "2026-11-06T05:51:44.724Z",
+  "nodeVersion": "24.22.1",
+  "timezone": "Asia/Tokyo",
+  "testDate": "2026-11-06",
+  "sourceHashes": {
+    "src/App.css": "6e25a776d3e8102da5bacb3cb99f4a5fc662a2e01e6143140671a556d28c3d5c",
+    "src/App.tsx": "743821c58e31ea615ef8a53f3151eae58a14928c465bbde4484f807be9e824db",
+    "src/assets/hero.png": "881ffbcaafc212e49addad08846a5b82761355fa20624253af3477ba33262c5c",
+    "src/assets/react.svg": "35ef61ed53b323ae94a16a8ec659b3d0af3880698791133f23b084085ab1c2e5",
+    "src/assets/vite.svg": "5be21acd42eb7b896e517f4e0f0f11eb5c5d9e54fbbcebe9453f033008fcca6f",
+    "src/components/AccountManagement.tsx": "ead0bff5c9108bec18fac42bc1dc31f5a03c1f7c5fe38c5ea94f678ff5839e70",
+    "src/components/AddRideModal.tsx": "b4a3001504d344c099c89064681ec80c21a0f5d8a69520e3a73954e094ab563f",
+    "src/components/AddStudentModal.tsx": "2c87f49df6388b808a5ce11776166bec79f46400aa615b3f59837cb68cbabf5e",
+    "src/components/AddTicketModal.tsx": "965c827bbab6e2105299543a06c77e521494e6b1af982f05e2f7ea1a96b93b0e",
+    "src/components/GoogleSettings.tsx": "c4ee8f86601d05ee1cf052a437dbbaa253e24bf412ea4e1f5ae5492caab7ed69",
+    "src/components/LoginScreen.tsx": "fff15f0ad096c08a59d28a8d14d43d2d67c819b5d92a7551a7deb510f4234bb2",
+    "src/components/Navbar.tsx": "6c0659a3c08a34e755bdabd92d7b7a70f7f675d02d30ddf1be2ac897a1d96fde",
+    "src/components/ParentPortal.tsx": "998083755ce72d50be3aee89665d36106acdb1c1d61a0ad8b76e83e4287ae48e",
+    "src/components/PortalInvitations.tsx": "ea4e25e8b56937a653ca5080953785ac7c3e70236985efe7bd19c69e049cbfb1",
+    "src/components/TeacherDashboard.tsx": "9a9d6474bf2c0fd3b62522b8ffcdba4ed3356dd212d7a24fe160fa67c9273627",
+    "src/components/TermsModal.tsx": "96f10c3cfc69d3652946837ef4c2f04ed30e4319c7d2f4a605e1a490a9a91cca",
+    "src/deployment-config.ts": "5c30aad36376487fcf2fbb664f2574bdd430890191675ca9813b5fdea516b6f1",
+    "src/index.css": "66baff8b6d7a116920270aba8584dd856cf5de345b59b511b849b96152ce91d8",
+    "src/main.tsx": "6e9e5807fcbd48b75a96db5cbef36c996262196be42e6d4760dc86babbe61ad2",
+    "src/portal.ts": "2cb1dc0aed33b27a24ef6ed804a6ae1e01b44e07f0814c12044dc1d3525cbeec",
+    "src/services/api.ts": "7d19ad4889cadd4e831bc4af6ad5aa139a2dacd52363f57e4431f6c543eeaf89",
+    "src/services/google-auth.ts": "01667af44fce383f3763c8bb73497dafc690381592ddcf383d46aaafe90fe0d8",
+    "src/types/index.ts": "bf24cc2caa853a440a5abe9fad2d78645f5720491f48e00f2a0e49b5776abe20",
+    "scripts/run_local_acceptance.mjs": "880360cec162276247b099183955062b5dcda905b548ac8023a3ec31fbfc8e80",
+    "scripts/local_acceptance_safety.mjs": "a7c512fdc80788c246aa1eb5a6dbca9ad7573859fc8dab0a1b0a2d099e370b34",
+    "scripts/fixtures/local-acceptance/harness.tsx": "7aa13ea63e4b0087d625f5421368caa35423e6c45211656d9831426964b0c39a",
+    "scripts/fixtures/local-acceptance/google-auth.ts": "cdf798e20c6329ea53de6e037ef41fdb26754a8412d67f2d45fb1d6747bca40a",
+    "scripts/fixtures/local-acceptance/index.html": "a0030c371776b189471b5e18df159b04706dba1659ab740055c2d1954b62eb0b"
+  },
+  "changedSources": [
+    "scripts/run_local_acceptance.mjs"
+  ],
+  "externalRequests": [],
+  "pageErrors": [],
+  "fatalError": null,
+  "results": [
+    {
+      "id": "LOCAL-UI-01",
+      "relatedCases": [
+        "AT-01",
+        "AT-19"
+      ],
+      "name": "Current admin login has no endpoint/key fields and no ledger before demo login",
+      "status": "PASS",
+      "screenshot": {
+        "file": "LOCAL-UI-01.png",
+        "sha256": "36a7f1adc8745c2770ac40760ea3fedb7535c7b9799887efbcb7ae79e3b05b59"
+      },
+      "startedAt": "2026-11-06T05:50:03.403Z",
+      "finishedAt": "2026-11-06T05:50:05.010Z"
+    },
+    {
+      "id": "LOCAL-UI-02",
+      "relatedCases": [
+        "AT-03",
+        "AT-20"
+      ],
+      "name": "Parent demo displays only its assigned student and the one-way rule",
+      "status": "PASS",
+      "screenshot": {
+        "file": "LOCAL-UI-02.png",
+        "sha256": "5769a05d0cee0ab0e8e178eb810be00e9a8045b25b197c0b6a3d5c6f8018ca8e"
+      },
+      "startedAt": "2026-11-06T05:50:05.010Z",
+      "finishedAt": "2026-11-06T05:50:06.261Z"
+    },
+    {
+      "id": "LOCAL-UI-03",
+      "relatedCases": [
+        "AT-06"
+      ],
+      "name": "pickup booking uses current form, JST run date, and preserves balance",
+      "status": "FAIL",
+      "error": "locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('form').locator('label').filter({ has: locator('form').locator('input[name=rideType][value=pickup]') })\u001b[22m\n",
+      "screenshot": {
+        "file": "LOCAL-UI-03.png",
+        "sha256": "7abafe604829d24c29a3f99aacb86cfe33880f6f03854564a78ab86d9b56a8ac"
+      },
+      "startedAt": "2026-11-06T05:50:06.261Z",
+      "finishedAt": "2026-11-06T05:50:17.367Z"
+    },
+    {
+      "id": "LOCAL-UI-04",
+      "relatedCases": [
+        "AT-07"
+      ],
+      "name": "dropoff booking uses current form, JST run date, and preserves balance",
+      "status": "FAIL",
+      "error": "locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('form').locator('label').filter({ has: locator('form').locator('input[name=rideType][value=dropoff]') })\u001b[22m\n",
+      "screenshot": {
+        "file": "LOCAL-UI-04.png",
+        "sha256": "7abafe604829d24c29a3f99aacb86cfe33880f6f03854564a78ab86d9b56a8ac"
+      },
+      "startedAt": "2026-11-06T05:50:17.367Z",
+      "finishedAt": "2026-11-06T05:50:28.696Z"
+    },
+    {
+      "id": "LOCAL-UI-05",
+      "relatedCases": [
+        "AT-08"
+      ],
+      "name": "roundtrip booking uses current form, JST run date, and preserves balance",
+      "status": "FAIL",
+      "error": "locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('form').locator('label').filter({ has: locator('form').locator('input[name=rideType][value=roundtrip]') })\u001b[22m\n",
+      "screenshot": {
+        "file": "LOCAL-UI-05.png",
+        "sha256": "7abafe604829d24c29a3f99aacb86cfe33880f6f03854564a78ab86d9b56a8ac"
+      },
+      "startedAt": "2026-11-06T05:50:28.696Z",
+      "finishedAt": "2026-11-06T05:50:39.785Z"
+    },
+    {
+      "id": "LOCAL-UI-06",
+      "relatedCases": [
+        "AT-09"
+      ],
+      "name": "Admin booking uses admin entry and records teacher origin",
+      "status": "FAIL",
+      "error": "locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('form').locator('label').filter({ has: locator('form').locator('input[name=rideType][value=pickup]') })\u001b[22m\n",
+      "screenshot": {
+        "file": "LOCAL-UI-06.png",
+        "sha256": "3cade36a7be484c8137b856b86341d35a6b07a8e444f26c4dcf41508765bc851"
+      },
+      "startedAt": "2026-11-06T05:50:39.785Z",
+      "finishedAt": "2026-11-06T05:50:50.937Z"
+    },
+    {
+      "id": "LOCAL-UI-07",
+      "relatedCases": [
+        "AT-10",
+        "AT-22"
+      ],
+      "name": "Parent cancels a newly booked reservation through its current UI; balance unchanged after reload",
+      "status": "FAIL",
+      "error": "locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('form').locator('label').filter({ has: locator('form').locator('input[name=rideType][value=pickup]') })\u001b[22m\n",
+      "screenshot": {
+        "file": "LOCAL-UI-07.png",
+        "sha256": "7abafe604829d24c29a3f99aacb86cfe33880f6f03854564a78ab86d9b56a8ac"
+      },
+      "startedAt": "2026-11-06T05:50:50.937Z",
+      "finishedAt": "2026-11-06T05:51:01.983Z"
+    },
+    {
+      "id": "LOCAL-UI-08",
+      "relatedCases": [
+        "AT-13",
+        "AT-15"
+      ],
+      "name": "pickup completion consumes 1 and replay consumes zero",
+      "status": "FAIL",
+      "error": "locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('form').locator('label').filter({ has: locator('form').locator('input[name=rideType][value=pickup]') })\u001b[22m\n",
+      "screenshot": {
+        "file": "LOCAL-UI-08.png",
+        "sha256": "3cade36a7be484c8137b856b86341d35a6b07a8e444f26c4dcf41508765bc851"
+      },
+      "startedAt": "2026-11-06T05:51:01.984Z",
+      "finishedAt": "2026-11-06T05:51:13.058Z"
+    },
+    {
+      "id": "LOCAL-UI-09",
+      "relatedCases": [
+        "AT-14",
+        "AT-15"
+      ],
+      "name": "roundtrip completion consumes 2 and replay consumes zero",
+      "status": "FAIL",
+      "error": "locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('form').locator('label').filter({ has: locator('form').locator('input[name=rideType][value=roundtrip]') })\u001b[22m\n",
+      "screenshot": {
+        "file": "LOCAL-UI-09.png",
+        "sha256": "3cade36a7be484c8137b856b86341d35a6b07a8e444f26c4dcf41508765bc851"
+      },
+      "startedAt": "2026-11-06T05:51:13.058Z",
+      "finishedAt": "2026-11-06T05:51:24.190Z"
+    },
+    {
+      "id": "LOCAL-UI-10",
+      "relatedCases": [
+        "AT-16"
+      ],
+      "name": "Cancelled reservation cannot complete or consume tickets",
+      "status": "PASS",
+      "screenshot": {
+        "file": "LOCAL-UI-10.png",
+        "sha256": "00e7c332a1979e648ca688f61ef2bcb7686206ba0f9883500ce1043762ce2cd0"
+      },
+      "startedAt": "2026-11-06T05:51:24.190Z",
+      "finishedAt": "2026-11-06T05:51:25.185Z"
+    },
+    {
+      "id": "LOCAL-UI-11",
+      "relatedCases": [
+        "AT-17",
+        "AT-20"
+      ],
+      "name": "Invalid ticket input and parent administration are rejected",
+      "status": "PASS",
+      "screenshot": {
+        "file": "LOCAL-UI-11.png",
+        "sha256": "5769a05d0cee0ab0e8e178eb810be00e9a8045b25b197c0b6a3d5c6f8018ca8e"
+      },
+      "startedAt": "2026-11-06T05:51:25.185Z",
+      "finishedAt": "2026-11-06T05:51:27.127Z"
+    },
+    {
+      "id": "LOCAL-UI-12",
+      "relatedCases": [
+        "AT-21",
+        "AT-29"
+      ],
+      "name": "375px touch-emulated parent form can submit; document stays inside viewport",
+      "status": "FAIL",
+      "error": "locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('form').locator('label').filter({ has: locator('form').locator('input[name=rideType][value=pickup]') })\u001b[22m\n",
+      "screenshot": {
+        "file": "LOCAL-UI-12.png",
+        "sha256": "51c6ccdec1fd9b81b30039855246ad23837a0551b8a4c6e88aaa03bd1cc704cb"
+      },
+      "startedAt": "2026-11-06T05:51:27.127Z",
+      "finishedAt": "2026-11-06T05:51:38.169Z"
+    },
+    {
+      "id": "LOCAL-UI-13",
+      "relatedCases": [
+        "AT-01",
+        "SAT-34"
+      ],
+      "name": "Logout and reload hide ledger and require new login",
+      "status": "PASS",
+      "screenshot": {
+        "file": "LOCAL-UI-13.png",
+        "sha256": "36a7f1adc8745c2770ac40760ea3fedb7535c7b9799887efbcb7ae79e3b05b59"
+      },
+      "startedAt": "2026-11-06T05:51:38.169Z",
+      "finishedAt": "2026-11-06T05:51:39.878Z"
+    },
+    {
+      "id": "LOCAL-UI-14",
+      "relatedCases": [
+        "AT-04"
+      ],
+      "name": "Low ticket warning is present only at balances 2, 1, 0",
+      "status": "PASS",
+      "screenshot": {
+        "file": "LOCAL-UI-14.png",
+        "sha256": "fc5ebb6329cadcb50c5471258eebd4440dc8e43502fc69a26298e4b98c67f2c6"
+      },
+      "startedAt": "2026-11-06T05:51:39.878Z",
+      "finishedAt": "2026-11-06T05:51:44.347Z"
+    }
+  ],
+  "thirdPartyPassed": 0,
+  "limitations": [
+    "Actual App and ApiService demo paths with Google auth disabled; no real Google, GAS, Sheets or Calendar calls.",
+    "Chromium touch emulation is not a physical iPhone or Android test.",
+    "Local rehearsal only; these results must not be counted as AT-01〜30 acceptance or independent third-party acceptance."
+  ],
+  "status": "FAIL"
+}

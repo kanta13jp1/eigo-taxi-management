@@ -1,0 +1,1 @@
+oxlint src/components/AddTicketModal.tsx exit 0

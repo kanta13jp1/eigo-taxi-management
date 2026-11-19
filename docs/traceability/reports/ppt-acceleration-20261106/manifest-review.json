@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "registrySha256": "4ed4441d2e6c1ee792955450f96b3579167031f5cedfda2d25ae2ea4b045482b",
+  "manifestDecksChecked": 12,
+  "slideCount": 136,
+  "receiptHashAndSlideCountMatched": true,
+  "currentGeneratedNotes": [
+    {
+      "name": "design",
+      "currentGeneratedSectionsInNotes": 38,
+      "sourceSha256": "872f309984ea3e9683588fd4233ca7ac20a1f8b9d878d9739f758fa5b772b739"
+    },
+    {
+      "name": "implementation",
+      "currentGeneratedSectionsInNotes": 38,
+      "sourceSha256": "0bbc1dc3b401a52062b0ced9bea201c86fc1f342143ba6f4b5f87a28f1c84b7a"
+    },
+    {
+      "name": "test-spec",
+      "currentGeneratedSectionsInNotes": 38,
+      "sourceSha256": "9a7689738155ee970d060f437b7c8922b6289766bdfe1115a044400a73b8dbd7"
+    },
+    {
+      "name": "test-code",
+      "currentGeneratedSectionsInNotes": 38,
+      "sourceSha256": "9b8a78e7e8e662f832be2677d2baf41c5c6a5b67eb2535096ea5c5e71a9b972e"
+    }
+  ],
+  "readmeAndVisualIndexLocalLinksResolve": true
+}

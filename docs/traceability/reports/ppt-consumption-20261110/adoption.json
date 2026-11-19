@@ -1,0 +1,12 @@
+{
+  "status": "ADOPTED",
+  "adoptedAt": "2026-11-09T16:26:06.684016+00:00",
+  "rootApproval": "ADOPT12v34 reviewedmanifestproposal SHA f0096599...",
+  "registryVersion": "2026-11-10-r18",
+  "registrySha256": "0f6b53a352a8549cc4a66a34af7932c8e692f4dbe0280f0b13920a4eede35719",
+  "decks": 12,
+  "slides": 184,
+  "oldBinaryIdsPreserved": true,
+  "customerPassed": 0,
+  "productionStarted": false
+}

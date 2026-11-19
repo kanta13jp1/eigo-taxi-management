@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "mode": "LOCAL_MOCK_UI_REHEARSAL",
+  "runStartedAt": "2026-11-06T06:00:00.098Z",
+  "finishedAt": "2026-11-06T06:13:09.568Z",
+  "nodeVersion": "24.22.1",
+  "browserVersion": "154.0.8037.57",
+  "timezone": "Asia/Tokyo",
+  "testDate": "2026-11-06",
+  "sourceHashes": {
+    "src/App.css": "6e25a776d3e8102da5bacb3cb99f4a5fc662a2e01e6143140671a556d28c3d5c",
+    "src/App.tsx": "743821c58e31ea615ef8a53f3151eae58a14928c465bbde4484f807be9e824db",
+    "src/assets/hero.png": "881ffbcaafc212e49addad08846a5b82761355fa20624253af3477ba33262c5c",
+    "src/assets/react.svg": "35ef61ed53b323ae94a16a8ec659b3d0af3880698791133f23b084085ab1c2e5",
+    "src/assets/vite.svg": "5be21acd42eb7b896e517f4e0f0f11eb5c5d9e54fbbcebe9453f033008fcca6f",
+    "src/components/AccountManagement.tsx": "ead0bff5c9108bec18fac42bc1dc31f5a03c1f7c5fe38c5ea94f678ff5839e70",
+    "src/components/AddRideModal.tsx": "b4a3001504d344c099c89064681ec80c21a0f5d8a69520e3a73954e094ab563f",
+    "src/components/AddStudentModal.tsx": "2c87f49df6388b808a5ce11776166bec79f46400aa615b3f59837cb68cbabf5e",
+    "src/components/AddTicketModal.tsx": "965c827bbab6e2105299543a06c77e521494e6b1af982f05e2f7ea1a96b93b0e",
+    "src/components/GoogleSettings.tsx": "c4ee8f86601d05ee1cf052a437dbbaa253e24bf412ea4e1f5ae5492caab7ed69",
+    "src/components/LoginScreen.tsx": "fff15f0ad096c08a59d28a8d14d43d2d67c819b5d92a7551a7deb510f4234bb2",
+    "src/components/Navbar.tsx": "6c0659a3c08a34e755bdabd92d7b7a70f7f675d02d30ddf1be2ac897a1d96fde",
+    "src/components/ParentPortal.tsx": "998083755ce72d50be3aee89665d36106acdb1c1d61a0ad8b76e83e4287ae48e",
+    "src/components/PortalInvitations.tsx": "ea4e25e8b56937a653ca5080953785ac7c3e70236985efe7bd19c69e049cbfb1",
+    "src/components/TeacherDashboard.tsx": "9a9d6474bf2c0fd3b62522b8ffcdba4ed3356dd212d7a24fe160fa67c9273627",
+    "src/components/TermsModal.tsx": "96f10c3cfc69d3652946837ef4c2f04ed30e4319c7d2f4a605e1a490a9a91cca",
+    "src/deployment-config.ts": "5c30aad36376487fcf2fbb664f2574bdd430890191675ca9813b5fdea516b6f1",
+    "src/index.css": "66baff8b6d7a116920270aba8584dd856cf5de345b59b511b849b96152ce91d8",
+    "src/main.tsx": "6e9e5807fcbd48b75a96db5cbef36c996262196be42e6d4760dc86babbe61ad2",
+    "src/portal.ts": "2cb1dc0aed33b27a24ef6ed804a6ae1e01b44e07f0814c12044dc1d3525cbeec",
+    "src/services/api.ts": "7d19ad4889cadd4e831bc4af6ad5aa139a2dacd52363f57e4431f6c543eeaf89",
+    "src/services/google-auth.ts": "01667af44fce383f3763c8bb73497dafc690381592ddcf383d46aaafe90fe0d8",
+    "src/types/index.ts": "bf24cc2caa853a440a5abe9fad2d78645f5720491f48e00f2a0e49b5776abe20",
+    "package.json": "20528469ab1c1c2bd32f8f95b071a36ba9ea4eafcf62f2eccf683da755901375",
+    "package-lock.json": "ad3a4848723b7b1dc3ce3c840ffdf44ae8c9ea8cb58fb793cf5b5d58f2f3b805",
+    "scripts/run_local_acceptance.mjs": "bbf98d8ac266683e6239a6391f081c7a73af0ff3d22387495847fb8290bdb603",
+    "scripts/local_acceptance_safety.mjs": "a7c512fdc80788c246aa1eb5a6dbca9ad7573859fc8dab0a1b0a2d099e370b34",
+    "scripts/fixtures/local-acceptance/harness.tsx": "9ba68515c51b783d8ce17d81015993391e4bd3ec1ff85e9f881513117fb07cc2",
+    "scripts/fixtures/local-acceptance/google-auth.ts": "cdf798e20c6329ea53de6e037ef41fdb26754a8412d67f2d45fb1d6747bca40a",
+    "scripts/fixtures/local-acceptance/index.html": "a0030c371776b189471b5e18df159b04706dba1659ab740055c2d1954b62eb0b"
+  },
+  "buildHashes": {
+    "assets/index-BvaBSnhA.css": "06784942d4e6777783436b8a3f2b30ca2c8eaacf9aa2c4a6d9040433b5233149",
+    "assets/index-C6J9gZ6z.js": "1f5996454b9f83f612152436c1b3d48bcbc20db8bd2a9e9b417ee83e8b1588c0",
+    "index.html": "572462bd2a6d2873d0d4a85366c2e7dfc7dc577678dfb1f8d3321228f06fdbdc"
+  },
+  "changedSources": [],
+  "externalRequests": [],
+  "blockedSockets": [],
+  "guardSelfTest": {
+    "http": [
+      {
+        "url": "https://eigo-local-probe.invalid",
+        "resourceType": "fetch"
+      }
+    ],
+    "sockets": [
+      {
+        "origin": "wss://eigo-local-probe.invalid"
+      }
+    ],
+    "status": "PASS"
+  },
+  "pageErrors": [],
+  "fatalError": {
+    "message": "page.screenshot: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n",
+    "stack": "page.screenshot: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\n    at check (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_local_acceptance.mjs:75:42)\n    at async run (C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\run_local_acceptance.mjs:143:5)\n    at async file:///C:/Users/kanta/GitHub/eigo-taxi-management/scripts/run_local_acceptance.mjs:206:7"
+  },
+  "results": [
+    {
+      "id": "LOCAL-UI-01",
+      "relatedCases": [
+        "AT-01",
+        "AT-19"
+      ],
+      "name": "Current admin login has no endpoint/key fields and no ledger before demo login",
+      "status": "PASS",
+      "screenshot": {
+        "file": "LOCAL-UI-01.png",
+        "sha256": "36a7f1adc8745c2770ac40760ea3fedb7535c7b9799887efbcb7ae79e3b05b59"
+      },
+      "startedAt": "2026-11-06T06:00:02.983Z",
+      "finishedAt": "2026-11-06T06:00:03.732Z"
+    },
+    {
+      "id": "LOCAL-UI-02",
+      "relatedCases": [
+        "AT-03",
+        "AT-20"
+      ],
+      "name": "Parent demo displays only its assigned student and the one-way rule",
+      "status": "PASS",
+      "screenshot": {
+        "file": "LOCAL-UI-02.png",
+        "sha256": "9afcedac25403a1352e72c4d6d8144f2387d9e4e2905129efa703107c3cd66e4"
+      },
+      "startedAt": "2026-11-06T06:00:03.732Z",
+      "finishedAt": "2026-11-06T06:00:04.738Z"
+    }
+  ],
+  "thirdPartyPassed": 0,
+  "limitations": [
+    "Actual App and ApiService demo paths with Google auth disabled; no real Google, GAS, Sheets or Calendar calls.",
+    "Chromium touch emulation is not a physical iPhone or Android test.",
+    "Local rehearsal only; these results must not be counted as AT-01〜30 acceptance or independent third-party acceptance."
+  ],
+  "status": "FAIL"
+}

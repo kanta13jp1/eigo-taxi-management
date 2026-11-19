@@ -1,0 +1,16 @@
+{
+  "release": "54178ee8e9d61c91",
+  "baseline": "5b9271233ac9309f",
+  "inputs": 32,
+  "diff": [
+    "src/App.tsx"
+  ],
+  "build": "npm run build:firebase (tsc -b and vite build), exit 0",
+  "lint": "oxlint src/App.tsx, exit 0",
+  "sourceDigest": "3bca6d8557a81f7478071486f8b7489e1e5dd9235865ed92d134078dfa63c476",
+  "appHash": "4dbf2a0a39b52b055edce996495b2e9c4dac8f478d15d8f8d1f1cd114fd8263e",
+  "publicHashMatches": 7,
+  "publicUI": "public-ui.json",
+  "scenarios": 6,
+  "physicalDevice": false
+}

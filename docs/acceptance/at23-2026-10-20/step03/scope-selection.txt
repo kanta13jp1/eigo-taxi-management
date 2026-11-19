@@ -1,0 +1,50 @@
+	1 container
+		2 container yDmH0d
+			3 container
+				4 text Google でログイン
+				5 heading 無題のプロジェクト が Google アカウントへのアクセスを求めています, Value: 1, ID: headingText
+					6 text 無題のプロジェクト が Google アカウントへのアクセスを求めています
+				7 text k-umezawa@ml-mightylink.com
+				8 container
+					9 heading 無題のプロジェクト がアクセスできる情報を選択してください, Value: 2
+						10 button 無題のプロジェクト
+							11 text 無題のプロジェクト
+						12 text  がアクセスできる情報を選択してください
+					13 container
+						14 checkbox (settable, integer) Description: すべて選択, Value: 2
+					15 text すべて選択
+					16 container selectioni10
+						17 text Google スプレッドシートのすべてのスプレッドシートの参照、編集、作成、削除。
+						18 button アクセス権の詳細を表示
+							19 text アクセス権の詳細を表示
+					20 container
+						21 checkbox (settable, integer) Description: Google スプレッドシートのすべてのスプレッドシートの参照、編集、作成、削除。 アクセス権の詳細を表示, Value: 1
+					22 container selectioni11
+						23 text Google カレンダーを使用してアクセスできるすべてのカレンダーの表示、編集、共有、完全な削除。
+						24 button アクセス権の詳細を表示
+							25 text アクセス権の詳細を表示
+					26 container
+						27 checkbox (settable, integer) Description: Google カレンダーを使用してアクセスできるすべてのカレンダーの表示、編集、共有、完全な削除。 アクセス権の詳細を表示, Value: 0
+				28 container
+					29 heading 無題のプロジェクト を信頼できるかどうかをご確認ください, Value: 2
+						30 text 無題のプロジェクト を信頼できるかどうかをご確認ください
+					31 link Description: 無題のプロジェクト のプライバシー ポリシーや利用規約へのリンクが表示されない理由をご確認ください, Value: support.google.com/accounts?p=oauth_notos
+					32 text 無題のプロジェクト の
+					33 link Description: プライバシー ポリシー, Value: example.com/privacy
+					34 text と利用規約を読み、無題のプロジェクト でお客様のデータがどのように処理、保護されるかをご確認ください。 変更は 
+					35 link Description: Google アカウント, Value: myaccount.google.com/connections
+					36 text からいつでもできます。 Google が
+					37 link Description: データを安全に共有する, Value: support.google.com/accounts/answer/14012355
+					38 text 仕組みについて知る。
+				39 button キャンセル
+					40 text キャンセル
+				41 button 次へ
+					42 text 次へ
+		43 container
+			44 combo box (collapsed) 言語の変更 日本語, Value: 日本語, Secondary Actions: Expand
+			45 content list
+				46 link Description: Google アカウント ヘルプセンターを開く（別サイト、新しいウィンドウで開きます）, Value: support.google.com/accounts?hl=ja&p=account_iph
+				47 link Description: プライバシー ポリシー（別サイト、新しいウィンドウで開きます）, Value: accounts.google.com/TOS?loc=JP&hl=ja&privacy=true
+				48 link Description: Google 利用規約（別サイト、新しいウィンドウで開きます）, Value: accounts.google.com/TOS?loc=JP&hl=ja
+
+The focused UI element is 21 checkbox (settable, integer) Description: Google スプレッドシートのすべてのスプレッドシートの参照、編集、作成、削除。 アクセス権の詳細を表示, Value: 1

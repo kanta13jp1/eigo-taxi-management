@@ -1,0 +1,11 @@
+{
+  "reviewer": "/root",
+  "dateJst": "2026-11-10",
+  "result": "PASS_VISUAL",
+  "v34PagesViewed": ["progress13", "progress14", "business24", "operations14"],
+  "meetingFile": "docs/deliverables/2026-11-10-premeeting/premeeting-2026-11-11-v1.pptx",
+  "meetingSha256": "590cf407be6f7428b0eb89a7dfaf3dbb6869d6dca54d1a3c8209ed3c16bfd2d3",
+  "meetingPagesViewed": [1, 2, 3, 4],
+  "checks": ["Common reference colors/logo/sky frame retained", "Text and editable diagrams/tables legible without visible clipping or overlap", "Nov11 Wednesday16:00 is the agreed start;20–30minutes is only a proposal", "Teacher anonymous demo and actualGoogle/customer6 checks kept distinct", "Decrement example5to4to2 distinguished from observed demo7to7to6to4to2", "Customer0/6 and productionHOLD shown"],
+  "nativePowerPointVerified": false
+}

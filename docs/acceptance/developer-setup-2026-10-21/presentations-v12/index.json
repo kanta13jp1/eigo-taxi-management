@@ -1,0 +1,32 @@
+[
+  {
+    "name": "operation-manual",
+    "slides": 28,
+    "path": "docs/deliverables/2026-10-21-manuals/operation-manual-2026-10-21-v12-setup.pptx",
+    "sha256": "0fd62ed47767c88fb52e7bc28f530e35e0bc4751c5f551afee02ea9443c7db39"
+  },
+  {
+    "name": "portal-spec-supplement",
+    "slides": 6,
+    "path": "docs/deliverables/2026-10-21-manuals/portal-spec-supplement-2026-10-21-v12-setup.pptx",
+    "sha256": "30155acb77a5b44ef8f8d9bdcb0d5173389130cfea37efc56ab6c28a9407173a"
+  },
+  {
+    "name": "progress-report-role-portals",
+    "slides": 6,
+    "path": "docs/deliverables/2026-10-21-manuals/progress-report-role-portals-2026-10-21-v12-setup.pptx",
+    "sha256": "5b67c86e42f8cab7a48d51599c2738057572ee7b46fb524102ef07a55dfe2ad1"
+  },
+  {
+    "name": "remaining-tasks",
+    "slides": 11,
+    "path": "docs/deliverables/2026-10-21-manuals/remaining-tasks-2026-10-21-v12-setup.pptx",
+    "sha256": "2d1c1781674d26fe8efbb403a16fc16a421eee05318c08d0cff4f5b4a5796d91"
+  },
+  {
+    "name": "user-manual",
+    "slides": 14,
+    "path": "docs/deliverables/2026-10-21-manuals/user-manual-2026-10-21-v12-setup.pptx",
+    "sha256": "95e97c3482b4258220e7b029a17b1bd60f9e3dd6d83ab93caa6d72e43a89af1f"
+  }
+]

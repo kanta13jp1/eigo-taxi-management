@@ -1,0 +1,430 @@
+{
+  "summary": {
+    "checkedAt": "2026-11-07T09:28:35.399Z",
+    "updatedBlocks": 17,
+    "mismatches": [],
+    "customerResultAndValidationPreserved": true,
+    "customerPassFormulaPreserved": true,
+    "customerPassed": 0,
+    "customerTotal": 6,
+    "sharedSheet": "https://docs.google.com/spreadsheets/d/1PqUq7BoBBVlPolivap0eg1UPik47vNNWphyBd0DNwvU/edit#gid=110706",
+    "productionStarted": false
+  },
+  "updatedValues": [
+    {
+      "sheetId": 110706,
+      "row": 4,
+      "col": 1,
+      "values": [
+        [
+          "準備完了：ご都合のよい時に同じ会社Googleアカウントで6件を確認できます。日程調整・開発担当による役割切替は不要です。初期状態は5枚、固定の完了用予約2件。途中で中断して別日に再開できます。ご本人の結果は未実施0/6。下部の「随時実施ガイド」もご参照ください。"
+        ]
+      ]
+    },
+    {
+      "sheetId": 2012604155,
+      "row": 11,
+      "col": 2,
+      "values": [
+        [
+          "次は小林さんが都合のよい時に「顧客確認6件」を実施。固定2URL・完了用2予約・開始5枚・検証専用Calendarの準備済み。事前の日程調整や実施中の権限切替は不要。"
+        ]
+      ]
+    },
+    {
+      "sheetId": 2012604155,
+      "row": 13,
+      "col": 2,
+      "values": [
+        [
+          "検証GAS v6・サイト43d4ac9b2a065441を配備し公開7応答一致。検証担当の対象は架空生徒1名のみ。固定2予約を台帳・Calendar・再読込で照合済み。本人初回ログイン・6件は未実施、本番未開始。"
+        ]
+      ]
+    },
+    {
+      "sheetId": 1014039656,
+      "row": 8,
+      "col": 5,
+      "values": [
+        [
+          "既存管理者2名を維持。検証専用台帳でのみ有効な検証担当を登録・読戻し。両画面とも対象は架空生徒1名のみ。通常の管理者・保護者の分離は維持。",
+          "小林さん本人が固定の家庭用・管理者用URLへ同じGoogleでログインし6件を確認。実施中の登録変更は不要。原AT-26全体は別管理。",
+          "開発担当／小林さん",
+          "本人の随時実施待ち（日程調整不要）",
+          "日付指定なし"
+        ]
+      ]
+    },
+    {
+      "sheetId": 1014039656,
+      "row": 13,
+      "col": 5,
+      "values": [
+        [
+          "随時実施の準備完了。検証担当・架空生徒5枚・固定2予約・GAS v6／サイト配備を実環境で照合。本人の顧客確認は未実施0/6。",
+          "小林さんが6件を順番に実施し判定・日時・実測値を記録。中断後は未実施だけ再開。Calendar共有通知の受領・表示と初回本人Googleログインも本人が確認。",
+          "小林さん／開発担当",
+          "本人の随時実施待ち。立会い・当日の準備不要。",
+          "日付指定なし"
+        ]
+      ]
+    },
+    {
+      "sheetId": 1920826968,
+      "row": 57,
+      "col": 1,
+      "values": [
+        [
+          "VR-20261107-12",
+          "2026-11-07",
+          "REQ-39／CUST準備",
+          "固定2予約の台帳・実Calendar・サイト照合",
+          "開発側の実環境準備完了",
+          "2026-11-07 16:00のA片道・B往復を1回ずつ登録し正常応答。両方の予約ID・日時・場所を台帳とCalendarで照合。サイト再読込で予定中2件・残数5枚を確認。",
+          "outputs/async-review-20261107/live/fixed-fixtures.json／hosted-delivery.json",
+          "本人の初回Googleログイン・Calendar閲覧・顧客6件は未実施0/6。v5の一時通信エラー原因は未確定で今回の正常応答と区別。本番未開始。",
+          "固定2URLの手順を案内し、本人が時間のある時に実施。"
+        ]
+      ]
+    },
+    {
+      "sheetId": 110706,
+      "row": 13,
+      "col": 1,
+      "values": [
+        [
+          "随時実施ガイド（準備完了／2026-11-07）"
+        ]
+      ]
+    },
+    {
+      "sheetId": 110706,
+      "row": 14,
+      "col": 1,
+      "values": [
+        [
+          "保護者用URL",
+          "https://eigo-taxi-test.web.app/#/parent/24db89d1-e687-4535-900a-559e6ebca0b7"
+        ]
+      ]
+    },
+    {
+      "sheetId": 110706,
+      "row": 15,
+      "col": 1,
+      "values": [
+        [
+          "管理者用URL",
+          "https://eigo-taxi-test.web.app/#/admin"
+        ]
+      ]
+    },
+    {
+      "sheetId": 110706,
+      "row": 16,
+      "col": 1,
+      "values": [
+        [
+          "カレンダー",
+          "Googleの共有通知から「Mighty 送迎管理 受入検証専用 2026-11-07」を会社アカウントに追加・表示します。自分で作る取消確認用の予約は実施日または翌日の任意時刻です。"
+        ]
+      ]
+    },
+    {
+      "sheetId": 110706,
+      "row": 17,
+      "col": 1,
+      "values": [
+        [
+          "準備済みA",
+          "2026-11-07 16:00／お迎え／乗車場所「CUST-04 完了用A・片道／実在しない場所」。模擬の送迎済み実績として1回完了し、5→4枚を確認します。"
+        ]
+      ]
+    },
+    {
+      "sheetId": 110706,
+      "row": 18,
+      "col": 1,
+      "values": [
+        [
+          "準備済みB",
+          "2026-11-07 16:00／往復／乗車場所「CUST-04 完了用B・往復／実在しない場所」。Aの後に1回完了し、4→2枚を確認します。実際の送迎・決済はありません。"
+        ]
+      ]
+    },
+    {
+      "sheetId": 110706,
+      "row": 19,
+      "col": 1,
+      "values": [
+        [
+          "画面の切替",
+          "現在の画面からログアウト→もう一方の固定URLを開く→同じ会社Googleを選びます。開発担当への切替依頼は不要です。完了用は「本日の送迎」ではなく「送迎スケジュール一覧」で扱います。"
+        ]
+      ]
+    },
+    {
+      "sheetId": 110706,
+      "row": 20,
+      "col": 1,
+      "values": [
+        [
+          "中断・再開",
+          "終えた項目・残数・日時をこの表へ記録してログアウト。再開時は未実施だけ進めます。5枚＝2件未完了、4枚＝片道完了、2枚＝両方完了、12枚＝10枚追加済み。完了・追加を繰り返さないでください。"
+        ]
+      ]
+    },
+    {
+      "sheetId": 110706,
+      "row": 21,
+      "col": 1,
+      "values": [
+        [
+          "予約から再開",
+          "5枚でも取消確認用を作成済みなら作り直しません。自分の予約日時・カレンダーの予約ID・取消履歴を表と照合し、残っていればその1件だけ取消。取消済みなら次へ進みます。不明なら止めます。"
+        ]
+      ]
+    },
+    {
+      "sheetId": 110706,
+      "row": 22,
+      "col": 1,
+      "values": [
+        [
+          "エラー時",
+          "結果が不明な時は連打・再登録をせず「要確認」にして、表示内容と時刻をご記入ください。通常の実施は立会い不要ですが、異常時の調査はこちらで行います。"
+        ]
+      ]
+    },
+    {
+      "sheetId": 110706,
+      "row": 23,
+      "col": 1,
+      "values": [
+        [
+          "結果の記入",
+          "上のCUST-01〜06のF列で判定し、G列に日時、H列に見えた残数・気になった点を記録します。6件終了後に一言お知らせください。ご本人が見ていない項目は合格にしません。"
+        ]
+      ]
+    }
+  ],
+  "customerResultsAndValidation": [
+    [
+      {
+        "v": {
+          "stringValue": "未実施"
+        },
+        "d": {
+          "condition": {
+            "type": "ONE_OF_LIST",
+            "values": [
+              {
+                "userEnteredValue": "未実施"
+              },
+              {
+                "userEnteredValue": "合格"
+              },
+              {
+                "userEnteredValue": "要確認"
+              },
+              {
+                "userEnteredValue": "保留"
+              }
+            ]
+          },
+          "strict": true,
+          "showCustomUi": true
+        }
+      },
+      {
+        "v": null,
+        "d": null
+      },
+      {
+        "v": null,
+        "d": null
+      }
+    ],
+    [
+      {
+        "v": {
+          "stringValue": "未実施"
+        },
+        "d": {
+          "condition": {
+            "type": "ONE_OF_LIST",
+            "values": [
+              {
+                "userEnteredValue": "未実施"
+              },
+              {
+                "userEnteredValue": "合格"
+              },
+              {
+                "userEnteredValue": "要確認"
+              },
+              {
+                "userEnteredValue": "保留"
+              }
+            ]
+          },
+          "strict": true,
+          "showCustomUi": true
+        }
+      },
+      {
+        "v": null,
+        "d": null
+      },
+      {
+        "v": null,
+        "d": null
+      }
+    ],
+    [
+      {
+        "v": {
+          "stringValue": "未実施"
+        },
+        "d": {
+          "condition": {
+            "type": "ONE_OF_LIST",
+            "values": [
+              {
+                "userEnteredValue": "未実施"
+              },
+              {
+                "userEnteredValue": "合格"
+              },
+              {
+                "userEnteredValue": "要確認"
+              },
+              {
+                "userEnteredValue": "保留"
+              }
+            ]
+          },
+          "strict": true,
+          "showCustomUi": true
+        }
+      },
+      {
+        "v": null,
+        "d": null
+      },
+      {
+        "v": null,
+        "d": null
+      }
+    ],
+    [
+      {
+        "v": {
+          "stringValue": "未実施"
+        },
+        "d": {
+          "condition": {
+            "type": "ONE_OF_LIST",
+            "values": [
+              {
+                "userEnteredValue": "未実施"
+              },
+              {
+                "userEnteredValue": "合格"
+              },
+              {
+                "userEnteredValue": "要確認"
+              },
+              {
+                "userEnteredValue": "保留"
+              }
+            ]
+          },
+          "strict": true,
+          "showCustomUi": true
+        }
+      },
+      {
+        "v": null,
+        "d": null
+      },
+      {
+        "v": null,
+        "d": null
+      }
+    ],
+    [
+      {
+        "v": {
+          "stringValue": "未実施"
+        },
+        "d": {
+          "condition": {
+            "type": "ONE_OF_LIST",
+            "values": [
+              {
+                "userEnteredValue": "未実施"
+              },
+              {
+                "userEnteredValue": "合格"
+              },
+              {
+                "userEnteredValue": "要確認"
+              },
+              {
+                "userEnteredValue": "保留"
+              }
+            ]
+          },
+          "strict": true,
+          "showCustomUi": true
+        }
+      },
+      {
+        "v": null,
+        "d": null
+      },
+      {
+        "v": null,
+        "d": null
+      }
+    ],
+    [
+      {
+        "v": {
+          "stringValue": "未実施"
+        },
+        "d": {
+          "condition": {
+            "type": "ONE_OF_LIST",
+            "values": [
+              {
+                "userEnteredValue": "未実施"
+              },
+              {
+                "userEnteredValue": "合格"
+              },
+              {
+                "userEnteredValue": "要確認"
+              },
+              {
+                "userEnteredValue": "保留"
+              }
+            ]
+          },
+          "strict": true,
+          "showCustomUi": true
+        }
+      },
+      {
+        "v": null,
+        "d": null
+      },
+      {
+        "v": null,
+        "d": null
+      }
+    ]
+  ],
+  "readbackMatchedAllPlannedValues": true
+}

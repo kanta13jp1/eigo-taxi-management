@@ -1,0 +1,35 @@
+{
+  "status": "CANDIDATES_VERIFIED_INDEPENDENT_REVIEW_PASS",
+  "date": "2026-11-07",
+  "registryVersion": "2026-11-07-r17",
+  "registrySha256": "d6aa48ce6e5bd18c89db3cde4c465f44b3dd088d52c0e5208cebaaf49d2d1adf",
+  "decks": 12,
+  "pages": 160,
+  "historicalBodyPagesPreserved": 136,
+  "oldNotesPreserved": 160,
+  "currentCanonicalNotesReconciled": [
+    "PKG-01",
+    "PKG-02",
+    "PKG-03"
+  ],
+  "sharedChangedDiagramBodiesPixelEquivalent": 24,
+  "visualReview": {
+    "changedDiagramTypes": 2,
+    "fullSizeRepresentativePaths": [
+      "outputs/async-customer-ppt-20261107-v33/finalized/business/roundtrip/22.png",
+      "outputs/async-customer-ppt-20261107-v33/finalized/business/roundtrip/23.png"
+    ],
+    "unchangedHistoricalVisualReviewReusedViaExactPixelComparison": 136,
+    "nativePowerPointVerified": false
+  },
+  "packageOrLayoutFindings": 0,
+  "newLayoutWarnings": 0,
+  "inheritedBusinessLayoutWarnings": 21,
+  "currentManifestUpdated": false,
+  "currentReadmeUpdated": false,
+  "currentBinaryPromoted": false,
+  "authoringResults": "docs/traceability/reports/ppt-async-customer-20261107/authoring-results.json",
+  "proposal": "docs/traceability/reports/ppt-async-customer-20261107/proposed-presentations.json",
+  "independentReview": "docs/traceability/reports/ppt-async-customer-20261107/independent-review.json",
+  "independentReviewSha256": "565b985ceeb925559dfd69e10628590fda13c4f6e22ccdefb594dc3bb325a55f"
+}

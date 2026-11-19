@@ -1,0 +1,5 @@
+{
+  "summary": "公開デモ：対象の生徒・日時・区分を確認。最初のフォーカスは「戻る」。",
+  "result": "戻る・Escapeは予定を維持。確定した対象だけ取消、再読込後も7枚。",
+  "image": "outputs/daily-seventeen-20261112/public-confirm.png"
+}

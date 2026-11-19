@@ -1,0 +1,34 @@
+[
+  {
+    "path": "business-flow-swimlane-2026-10-22-v2.pptx",
+    "sha256": "087C2C0AD157F5103991E62CE11A8D845D24CC80F4C4734DD9BEC416DBC3C2F4",
+    "provider": "artifact-tool",
+    "rights": "review-required",
+    "publication": "private",
+    "brief": "添付サンプルの工程横軸・担当者縦軸のフロー図3枚。元のビジネスフローv3を再構成。"
+  },
+  {
+    "path": "README.md",
+    "sha256": "72EDB92AA0EFEE4B7C5B23D3DDAA64D90A6E119E4A6071C24B17E0743ED60805",
+    "provider": "artifact-tool",
+    "rights": "review-required",
+    "publication": "private",
+    "brief": "添付サンプルの工程横軸・担当者縦軸のフロー図3枚。元のビジネスフローv3を再構成。"
+  },
+  {
+    "path": "swimlane-flow.mjs",
+    "sha256": "38E86E2822934B1B4C15B2D9305FC8CF7DC4E7CCB0F374F5B6D72244D5566836",
+    "provider": "artifact-tool",
+    "rights": "review-required",
+    "publication": "private",
+    "brief": "添付サンプルの工程横軸・担当者縦軸のフロー図3枚。元のビジネスフローv3を再構成。"
+  },
+  {
+    "path": "validation-v2.json",
+    "sha256": "FBE7200650A3795894F9AEB2177C096AD22F89526F5E487943AF7F06F3F2DE78",
+    "provider": "artifact-tool",
+    "rights": "review-required",
+    "publication": "private",
+    "brief": "添付サンプルの工程横軸・担当者縦軸のフロー図3枚。元のビジネスフローv3を再構成。"
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "registeredChanges": {
+    "scripts/run_local_acceptance.mjs": "bbf98d8ac266683e6239a6391f081c7a73af0ff3d22387495847fb8290bdb603",
+    "scripts/test_booking_modal_scroll.mjs": "33bac2031ba62f38b0053d1e0ab5a22e33fe047ac432d477011e5a43a4eb0917",
+    "src/components/AddRideModal.tsx": "b4a3001504d344c099c89064681ec80c21a0f5d8a69520e3a73954e094ab563f",
+    "tests/local_acceptance_safety.test.mjs": "fa9cece28e43ac588b0706d7c9afc1763a22fe6549075288d15113b9eb332317"
+  },
+  "retired": [],
+  "allChangesMatchIndependentReviewAndCurrentSource": true,
+  "reviewPolicy": "docs/traceability/AI_SOURCE_REVIEW_POLICY.md",
+  "scope": "Source review and local tests only; no deployment or real acceptance approval"
+}

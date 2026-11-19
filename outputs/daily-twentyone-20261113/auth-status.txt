@@ -1,0 +1,1 @@
+authenticated company account exit=0

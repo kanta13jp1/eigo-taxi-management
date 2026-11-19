@@ -1,0 +1,317 @@
+{
+  "structuralStatus": "FAIL",
+  "errors": [
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "UI-01 src/services/api.ts"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "UI-02 src/services/api.ts"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "UI-03 src/services/api.ts"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "UI-04 src/services/api.ts"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "UI-05 src/services/api.ts"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "PT-21 src/services/api.ts"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "PT-21 scripts/test_portals.cjs"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "UI-06 src/services/api.ts"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-01 src/App.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-01 src/services/api.ts"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-02 src/App.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-02 src/services/api.ts"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-03 src/App.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-03 src/services/api.ts"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-04 src/App.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-04 src/services/api.ts"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-05 src/App.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-05 src/services/api.ts"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-06 src/App.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-06 src/services/api.ts"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-07 src/App.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-07 src/services/api.ts"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-08 src/App.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-08 src/services/api.ts"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-09 src/App.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-09 src/services/api.ts"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-10 src/App.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-10 src/services/api.ts"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-11 src/App.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-11 src/services/api.ts"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-12 src/App.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-12 src/services/api.ts"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-13 src/App.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-13 src/services/api.ts"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-14 src/App.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-14 src/services/api.ts"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "PT-22 src/services/api.ts"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "PT-22 scripts/test_portals.cjs"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "PT-23 src/services/api.ts"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "PT-23 scripts/test_portals.cjs"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "PT-24 src/services/api.ts"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "PT-24 scripts/test_portals.cjs"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "PT-25 src/services/api.ts"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "PT-25 scripts/test_portals.cjs"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "PT-26 src/services/api.ts"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "PT-26 scripts/test_portals.cjs"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "PT-27 src/services/api.ts"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "PT-27 scripts/test_portals.cjs"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "PT-28 src/services/api.ts"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "PT-28 scripts/test_portals.cjs"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "PT-29 src/services/api.ts"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "PT-29 scripts/test_portals.cjs"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "PT-30 src/services/api.ts"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "PT-30 scripts/test_portals.cjs"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "PT-31 src/services/api.ts"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "PT-31 scripts/test_portals.cjs"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "REVIEW-UI-01 src/services/api.ts"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "REVIEW-UI-01 src/App.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "REVIEW-UI-02 src/services/api.ts"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "REVIEW-UI-02 src/App.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "REVIEW-UI-03 src/services/api.ts"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "REVIEW-UI-03 src/App.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "REVIEW-UI-04 src/services/api.ts"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "REVIEW-UI-04 src/App.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "REVIEW-UI-05 src/services/api.ts"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "REVIEW-UI-05 src/App.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "REVIEW-UI-06 src/services/api.ts"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "REVIEW-UI-06 src/App.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "REVIEW-UI-07 src/services/api.ts"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "REVIEW-UI-07 src/App.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "REVIEW-UI-08 src/services/api.ts"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "REVIEW-UI-08 src/App.tsx"
+    },
+    {
+      "code": "SOURCE_REVIEW_REQUIRED",
+      "message": "scripts/test_portals.cjs"
+    },
+    {
+      "code": "SOURCE_REVIEW_REQUIRED",
+      "message": "src/App.tsx"
+    },
+    {
+      "code": "SOURCE_REVIEW_REQUIRED",
+      "message": "src/services/api.ts"
+    }
+  ],
+  "coverageGaps": [],
+  "counts": {
+    "requirements": 39,
+    "flows": 11,
+    "testCases": 203,
+    "screens": 20,
+    "interfaces": 16,
+    "coverageGaps": 0
+  },
+  "release": "HOLD",
+  "semanticReview": "REQUIRED",
+  "thirdPartyPassed": 0
+}

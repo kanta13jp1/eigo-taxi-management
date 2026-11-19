@@ -1,0 +1,327 @@
+Browser tab: 1750959487, Title: "株式会社Mighty LINK - カレンダー - 2026年 11月 7日 (土曜日)、今日", URL: "https://calendar.google.com/calendar/u/2/r/day".
+0 AXWebArea 株式会社Mighty LINK - カレンダー - 2026年 11月 7日 (土曜日)、今日, URL: calendar.google.com/calendar/u/2/r/day
+	1 container
+		2 container
+			3 button メイン コンテンツにスキップ
+				4 text メイン コンテンツにスキップ
+			5 button キーボード ショートカット
+				6 text キーボード ショートカット
+			7 button ユーザー補助に関するフィードバック
+				8 text ユーザー補助に関するフィードバック
+		9 container gb
+			10 container
+				11 button (expanded) Description: メインドロワー, Secondary Actions: Collapse
+					12 image
+				13 container カレンダー
+					14 heading カレンダー, Value: 1
+						15 text カレンダー
+				16 button 今日（11月 7日 (土曜日)）
+				17 button 前日
+				18 button 翌日
+				196 text 2026年 11月 7日
+				19 button 検索
+				20 button サポート
+				21 pop up button (collapsed) Description: 設定メニュー, Secondary Actions: Expand
+				197 pop up button (collapsed) 日, Secondary Actions: Expand
+				23 button Google カレンダーに切り替える
+				24 button [ToDo リスト] に切り替える
+				25 button (collapsed) Description: Google アプリ, Secondary Actions: Expand
+				26 button (collapsed)  Google アカウント: 寛太梅澤 (k-umezawa@ml-mightylink.com), Secondary Actions: Expand
+					27 button Google アカウント: 寛太梅澤 (k-umezawa@ml-mightylink.com)
+		28 pop up button (collapsed) 作成, Secondary Actions: Expand
+			29 text 作成
+		30 container
+			31 container
+				32 heading ドロワー, Value: 1
+					33 text ドロワー
+				34 container drawerMiniMonthNavigator
+					35 heading ナビゲーション カレンダー, Value: 2
+						36 text ナビゲーション カレンダー
+					37 container
+						38 text 2026年 11月
+						39 button 前月
+						40 button 翌月
+						41 table 2026年 11月
+							42 row 日曜日 月曜日 火曜日 水曜日 木曜日 金曜日 土曜日
+								43 cell
+									44 text 日曜日
+								45 cell
+									46 text 月曜日
+								47 cell
+									48 text 火曜日
+								49 cell
+									50 text 水曜日
+								51 cell
+									52 text 木曜日
+								53 cell
+									54 text 金曜日
+								55 cell
+									56 text 土曜日
+							57 row 1、日曜日 2、月曜日 3、火曜日 4、水曜日 5、木曜日 6、金曜日 7、土曜日、今日
+								58 cell
+									59 checkbox Description: 1、日曜日, Value: 0
+										60 text 1
+								61 cell
+									62 checkbox Description: 2、月曜日, Value: 0
+										63 text 2
+								64 cell
+									65 checkbox Description: 3、火曜日, Value: 0
+										66 text 3
+								67 cell
+									68 checkbox Description: 4、水曜日, Value: 0
+										69 text 4
+								70 cell
+									71 checkbox Description: 5、木曜日, Value: 0
+										72 text 5
+								73 cell
+									74 checkbox Description: 6、金曜日, Value: 0
+										75 text 6
+								76 cell
+									77 checkbox Description: 7、土曜日、今日, Value: 1
+										78 text 7
+							79 row 8、日曜日 9、月曜日 10、火曜日 11、水曜日 12、木曜日 13、金曜日 14、土曜日
+								80 cell
+									81 checkbox Description: 8、日曜日, Value: 0
+										82 text 8
+								83 cell
+									84 checkbox Description: 9、月曜日, Value: 0
+										85 text 9
+								86 cell
+									87 checkbox Description: 10、火曜日, Value: 0
+										88 text 10
+								89 cell
+									90 checkbox Description: 11、水曜日, Value: 0
+										91 text 11
+								92 cell
+									93 checkbox Description: 12、木曜日, Value: 0
+										94 text 12
+								95 cell
+									96 checkbox Description: 13、金曜日, Value: 0
+										97 text 13
+								98 cell
+									99 checkbox Description: 14、土曜日, Value: 0
+										100 text 14
+							101 row 15、日曜日 16、月曜日 17、火曜日 18、水曜日 19、木曜日 20、金曜日 21、土曜日
+								102 cell
+									103 checkbox Description: 15、日曜日, Value: 0
+										104 text 15
+								105 cell
+									106 checkbox Description: 16、月曜日, Value: 0
+										107 text 16
+								108 cell
+									109 checkbox Description: 17、火曜日, Value: 0
+										110 text 17
+								111 cell
+									112 checkbox Description: 18、水曜日, Value: 0
+										113 text 18
+								114 cell
+									115 checkbox Description: 19、木曜日, Value: 0
+										116 text 19
+								117 cell
+									118 checkbox Description: 20、金曜日, Value: 0
+										119 text 20
+								120 cell
+									121 checkbox Description: 21、土曜日, Value: 0
+										122 text 21
+							123 row 22、日曜日 23、月曜日 24、火曜日 25、水曜日 26、木曜日 27、金曜日 28、土曜日
+								124 cell
+									125 checkbox Description: 22、日曜日, Value: 0
+										126 text 22
+								127 cell
+									128 checkbox Description: 23、月曜日, Value: 0
+										129 text 23
+								130 cell
+									131 checkbox Description: 24、火曜日, Value: 0
+										132 text 24
+								133 cell
+									134 checkbox Description: 25、水曜日, Value: 0
+										135 text 25
+								136 cell
+									137 checkbox Description: 26、木曜日, Value: 0
+										138 text 26
+								139 cell
+									140 checkbox Description: 27、金曜日, Value: 0
+										141 text 27
+								142 cell
+									143 checkbox Description: 28、土曜日, Value: 0
+										144 text 28
+							145 row 29、日曜日 30、月曜日 12月 1日、火曜日 12月 2日、水曜日 12月 3日、木曜日 12月 4日、金曜日 12月 5日、土曜日
+								146 cell
+									147 checkbox Description: 29、日曜日, Value: 0
+										148 text 29
+								149 cell
+									150 checkbox Description: 30、月曜日, Value: 0
+										151 text 30
+								152 cell
+									153 checkbox Description: 12月 1日、火曜日, Value: 0
+										154 text 1
+								155 cell
+									156 checkbox Description: 12月 2日、水曜日, Value: 0
+										157 text 2
+								158 cell
+									159 checkbox Description: 12月 3日、木曜日, Value: 0
+										160 text 3
+								161 cell
+									162 checkbox Description: 12月 4日、金曜日, Value: 0
+										163 text 4
+								164 cell
+									165 checkbox Description: 12月 5日、土曜日, Value: 0
+										166 text 5
+							167 row 12月 6日、日曜日 12月 7日、月曜日 12月 8日、火曜日 12月 9日、水曜日 12月 10日、木曜日 12月 11日、金曜日 12月 12日、土曜日
+								168 cell
+									169 checkbox Description: 12月 6日、日曜日, Value: 0
+										170 text 6
+								171 cell
+									172 checkbox Description: 12月 7日、月曜日, Value: 0
+										173 text 7
+								174 cell
+									175 checkbox Description: 12月 8日、火曜日, Value: 0
+										176 text 8
+								177 cell
+									178 checkbox Description: 12月 9日、水曜日, Value: 0
+										179 text 9
+								180 cell
+									181 checkbox Description: 12月 10日、木曜日, Value: 0
+										182 text 10
+								183 cell
+									184 checkbox Description: 12月 11日、金曜日, Value: 0
+										185 text 11
+								186 cell
+									187 checkbox Description: 12月 12日、土曜日, Value: 0
+										188 text 12
+				189 text ゲスト
+				190 container
+					191 combo box (collapsed, settable) Description: 予定に招待するユーザーを検索, ID: i8, Secondary Actions: Expand
+				192 heading 予約可能なページ, Value: 2
+					193 text 予約可能なページ
+				198 container 予約ページ
+					199 container
+						200 button (expanded) 予約ページ, Secondary Actions: Collapse
+							201 text 予約ページ
+						202 button 予約スケジュールを作成
+					203 content list 予約可能なページ
+						204 container 梅澤 と 30 分間の予定
+							205 pop up button 梅澤 と 30 分間の予定 新規
+								206 text 梅澤 と 30 分間の予定
+								207 text 新規
+							208 container
+								209 button リンクをコピー
+								210 pop up button (collapsed) Description: 梅澤 と 30 分間の予定 のオプション, Secondary Actions: Expand
+				211 heading 時間の分析情報, Value: 2
+					212 text 時間の分析情報
+				213 button (expanded) 時間の分析情報, Secondary Actions: Collapse
+					214 text 時間の分析情報
+				215 container cwtVXb
+					216 text 2026年 11月 7日 (土曜日)
+					217 container
+						218 text 会議に割いた総時間  0 時間
+					219 button その他の分析情報
+						220 text その他の分析情報
+				194 heading カレンダー リスト, Value: 2
+					195 text カレンダー リスト
+				221 button (expanded) マイカレンダー, Secondary Actions: Collapse
+					222 text マイカレンダー
+				223 content list マイカレンダー
+					224 container
+						225 container
+							226 checkbox (settable, integer) Description: 寛太梅澤, Value: 1
+						227 text 寛太梅澤
+					228 container
+						229 container
+							230 checkbox (settable, integer) Description: AI Park イベント, Value: 1
+						231 text AI Park イベント
+					232 container
+						233 container
+							234 checkbox (settable, integer) Description: Mighty Skill-Bridge 開発計画, Value: 1
+						235 text Mighty Skill-Bridge 開発計画
+					236 container
+						237 container
+							238 checkbox (settable, integer) Description: Mighty 送迎管理 受入検証専用 2026-11-07, Value: 1
+						239 text Mighty 送迎管理 受入検証専用 2026-11-07
+					240 container
+						241 container
+							242 checkbox (settable, integer) Description: ToDo リスト, Value: 1
+						243 text ToDo リスト
+					244 container
+						245 container
+							246 checkbox (settable, integer) Description: 誕生日, Value: 1
+						247 text 誕生日
+				248 container
+					249 button (expanded) 他のカレンダー, Secondary Actions: Collapse
+						250 text 他のカレンダー
+					251 pop up button (collapsed) Description: 他のカレンダーを追加, Secondary Actions: Expand
+				252 content list 他のカレンダー
+					253 container
+						254 container
+							255 checkbox (settable, integer) Description: 小林雅水, Value: 1
+						256 text 小林雅水
+					257 container
+						258 container
+							259 checkbox (settable, integer) Description: 日本の祝日, Value: 1
+						260 text 日本の祝日
+			261 container
+				262 heading Description:  2026年 11月 7日 (土曜日)、今日、2 件の予定, Value: 1, ID: c257
+					263 text 2026年 11月 7日 (土曜日)、今日、2 件の予定
+				264 table
+					265 row 寛太梅澤 勤務場所を追加、「寛太梅澤」、2026年 11月 7日。 小林雅水
+						266 cell
+							267 container
+								268 heading Description: 寛太梅澤, Value: 2
+								269 button (disabled) 勤務場所を追加、「寛太梅澤」、2026年 11月 7日。
+									270 image
+									271 text 場所を追加
+						272 cell
+							273 container
+								274 heading Description: 小林雅水, Value: 2
+					275 row 2 件の予定、寛太梅澤 予定はありません、小林雅水, ID: c260
+						276 cell 2 件の予定、寛太梅澤
+							277 heading 2 件の予定、寛太梅澤, Value: 2, ID: tsc-0
+								278 text 2 件の予定、寛太梅澤
+							279 container
+								280 button 午後4時～午後4:30、「🚗【送迎】顧客確認_架空生徒 (お迎え)」、カレンダー: Mighty 送迎管理 受入検証専用 2026-11-07、場所: CUST-04 完了用A・片道／実在しない場所、2026年 11月 7日
+									281 text 午後4時～午後4:30、「🚗【送迎】顧客確認_架空生徒 (お迎え)」、カレンダー: Mighty 送迎管理 受入検証専用 2026-11-07、場所: CUST-04 完了用A・片道／実在しない場所、2026年 11月 7日
+								282 button 午後4時～午後4:30、「🚗【送迎】顧客確認_架空生徒 (往復)」、カレンダー: Mighty 送迎管理 受入検証専用 2026-11-07、場所: CUST-04 完了用B・往復／実在しない場所、2026年 11月 7日
+									283 text 午後4時～午後4:30、「🚗【送迎】顧客確認_架空生徒 (往復)」、カレンダー: Mighty 送迎管理 受入検証専用 2026-11-07、場所: CUST-04 完了用B・往復／実在しない場所、2026年 11月 7日
+						284 cell 予定はありません、小林雅水
+							285 heading 予定はありません、小林雅水, Value: 2, ID: tsc-1
+								286 text 予定はありません、小林雅水
+			287 container サイドパネル
+				288 tab group
+					289 tab (selectable, settable, boolean) Description: Keep, Value: 0, ID: gsc-gab-2
+					290 tab (selectable, settable, boolean) Description: ToDo リスト, Value: 0, ID: gsc-gab-4
+					291 tab (selectable, settable, boolean) Description: コンタクト, Value: 0, ID: gsc-gab-9
+					292 tab (selectable, settable, boolean) Description: マップ, Value: 0, ID: gsc-gab-8
+					293 tab (selectable, settable, boolean) Description: アドオンを取得, Value: 0, ID: qJTzr
+			294 button サイドパネルを表示しない
+		295 container 🚗【送迎】顧客確認_架空生徒 (お迎え)
+			296 container xDetDlg
+				297 container
+					298 button Description: 閉じる, ID: xDetDlgCloseBu
+					299 button 編集
+					300 button Description: 予定を削除, ID: xDetDlgDelBu
+					301 button Description: 予約の詳細をメールで送信, ID: xDetDlgEmailBu
+					302 pop up button (collapsed) Description: オプション, Secondary Actions: Expand
+				303 container xDetDlgWhen
+					304 heading 🚗【送迎】顧客確認_架空生徒 (お迎え), Value: 1, ID: rAECCd
+						305 text 🚗【送迎】顧客確認_架空生徒 (お迎え)
+					306 container
+						307 text 11月 7日 (土曜日) ⋅ 午後4:00～4:30
+				308 container
+					309 button 会議メモを使用
+					310 text 新しいドキュメントを作ってメモを取る
+					311 pop up button (collapsed) Description: その他の会議メモ オプション, Secondary Actions: Expand
+				312 button 「CUST-04 完了用A・片道／実在しない場所」をマップで開く
+					313 container xDetDlgLoc
+						314 text 場所:
+						315 text CUST-04 完了用A・片道／実在しない場所
+				316 container xDetDlgDesc
+					317 text 説明:
+					318 text 予約ID: RIDE-1724e731-bce7-4f5c-9808-b6e38f2b5d8b
+送迎場所: CUST-04 完了用A・片道／実在しない場所
+連絡先/メモ: CUST-04 完了確認用・片道／模擬実績：実施済みとする／実送迎・決済なし／担当者の立会い不要
+予約者: 先生登録
+				319 container xDetDlgCal
+					320 text 主催者: Mighty 送迎管理 受入検証専用 2026-11-07 作成者: 寛太梅澤
+					321 pop up button 作成者: 寛太梅澤
+
+The focused UI element is 298 button Description: 閉じる, ID: xDetDlgCloseBu

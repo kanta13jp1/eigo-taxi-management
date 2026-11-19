@@ -1,0 +1,22 @@
+Browser tab: 1750956564, Title: "無題のプロジェクト - プロジェクト編集者 - Apps Script", URL: "https://script.google.com/u/2/home/projects/1AnWQ_1itiEgyEYpmfTFM7HkgmTXu5RsW4H-ahnf3N-TplINguEgCaTrh/edit".
+The following is a diff from the previous accessibility tree with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
+Removed element IDs: 77-78, 80-81
+~						54 button 選択した関数を実行
+~						56 button 選択した関数をデバッグ
+~						59 list 実行する関数を選択
+~							60 (selected) initSpreadsheet
++								80 container ログ 1。 14:47:30. お知らせ. 実行開始.
++									81 text 14:47:30
++									82 text お知らせ
++									83 text 実行開始
++								84 container ログ 2。 14:47:31. お知らせ. 実行完了.
++									85 text 14:47:31
++									86 text お知らせ
++									87 text 実行完了
++		88 text 選択した関数を実行
+The focused UI element is 67 ã¨ãã£ã¿ã¼ (settable) Description: エディターのコンテンツ;アクティビティ オプションを表示するには、Alt+F1 キーを押します。, Value: r[0]), studentId: String(r[1]), studentName: String(r[2]), rideDate: formatted_(r[3], "yyyy-MM-dd"),
+    rideTime: formatted_(r[4], "HH:mm"), rideType: String(r[5]), pickupLocation: String(r[6]), status: String(r[7]),
+    calendarEventId: String(r[8] || ""), reservedBy: String(r[9]), note: String(r[10] || ""), completedAt: formatted_(r[11], "yyyy/MM/dd HH:mm:ss") || undefined };
+}
+function fail_(code, message) { const error = new Error(message); error.apiCode = code; throw error; }
+function jsonResponse(data) { return ContentService.createTextOutput(JSON.stringify(data)).setMimeType(ContentService.MimeType.JSON); }

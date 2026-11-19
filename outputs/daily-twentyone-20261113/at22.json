@@ -1,0 +1,40 @@
+{
+  "mode": "after",
+  "checkedAt": "2026-11-13T06:32:17.705Z",
+  "test": "AT-22",
+  "freshAnonymousAdminDemo": true,
+  "base": "http://127.0.0.1:63229",
+  "student": {
+    "name": "架空生徒 AT22",
+    "parentName": "",
+    "phone": "",
+    "address": "架空の送迎場所 AT22",
+    "pickupNote": "",
+    "ticketBalance": 7,
+    "id": "STU-0f33a729-d656-43ba-a8e2-a627e27a5ba3",
+    "createdAt": "2026-11-13"
+  },
+  "ride": {
+    "studentId": "STU-0f33a729-d656-43ba-a8e2-a627e27a5ba3",
+    "rideDate": "2026-11-23",
+    "rideTime": "15:22",
+    "rideType": "pickup",
+    "pickupLocation": "架空の送迎場所 AT22",
+    "note": "AT22永続化",
+    "reservedBy": "teacher",
+    "id": "RIDE-1d0669dc-11a6-41e9-a05a-e1a97ab53c70",
+    "studentName": "架空生徒 AT22",
+    "status": "scheduled",
+    "calendarEventId": ""
+  },
+  "normalReloadExact": true,
+  "malformedInjectedInIsolatedProfile": true,
+  "malformedBytesUnchanged": true,
+  "errorVisible": true,
+  "formRetained": true,
+  "reloadError": true,
+  "recoveryExact": true,
+  "oldLostPreviouslySavedReservation": false,
+  "blockedRequests": [],
+  "scope": "This browser only. No Google/customer/account/ledger writes; no physical device or customer acceptance."
+}

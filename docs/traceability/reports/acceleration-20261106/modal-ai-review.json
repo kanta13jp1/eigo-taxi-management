@@ -1,0 +1,49 @@
+{
+  "date": "2026-11-06",
+  "reviewer": "Primary AI /root, independent of worker /root/app_blocker_fix_1106 for modal implementation",
+  "scope": [
+    "src/components/AddRideModal.tsx",
+    "scripts/test_booking_modal_scroll.mjs"
+  ],
+  "sourceHashes": {
+    "src/components/AddRideModal.tsx": "b4a3001504d344c099c89064681ec80c21a0f5d8a69520e3a73954e094ab563f",
+    "scripts/test_booking_modal_scroll.mjs": "33bac2031ba62f38b0053d1e0ab5a22e33fe047ac432d477011e5a43a4eb0917"
+  },
+  "diffChecks": {
+    "reversingOnlyCSSChangeMatchesPriorBaseline": true
+  },
+  "findings": [
+    {
+      "status": "CLARIFIED",
+      "detail": "Closing button reachability tested; no-op fixture does not test close handler. Report and scope explicitly distinguish this."
+    }
+  ],
+  "evidenceChecks": {
+    "outputs/local-acceptance-independent-final-20261106/results.json": {
+      "pass": true,
+      "count": 14,
+      "sourceHashMatch": true
+    },
+    "outputs/local-ui-safety-20261106-final/results.json": {
+      "pass": true,
+      "count": 4,
+      "sourceHashMatch": true
+    },
+    "outputs/booking-modal-scroll-20261106-green/results.json": {
+      "pass": true,
+      "count": 2,
+      "sourceHashMatch": true
+    },
+    "outputs/booking-modal-existing-ui-20261106/results.json": {
+      "pass": true,
+      "count": 6,
+      "sourceHashMatch": true
+    }
+  },
+  "conclusion": "No unresolved blocking finding in this local UI change and regression test scope",
+  "limits": [
+    "Not deployed",
+    "No physical-device or Google acceptance",
+    "Source baseline adoption is performed only after all registered changes and hashes are reviewed"
+  ]
+}

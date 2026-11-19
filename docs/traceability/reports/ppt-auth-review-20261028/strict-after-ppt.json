@@ -1,0 +1,29 @@
+{
+  "structuralStatus": "FAIL",
+  "errors": [
+    {
+      "code": "SOURCE_REVIEW_REQUIRED",
+      "message": "scripts/test_google_auth.cjs"
+    },
+    {
+      "code": "SOURCE_REVIEW_REQUIRED",
+      "message": "src/components/LoginScreen.tsx"
+    },
+    {
+      "code": "SOURCE_REVIEW_REQUIRED",
+      "message": "src/services/google-auth.ts"
+    }
+  ],
+  "coverageGaps": [],
+  "counts": {
+    "requirements": 38,
+    "flows": 11,
+    "testCases": 120,
+    "screens": 20,
+    "interfaces": 16,
+    "coverageGaps": 0
+  },
+  "release": "HOLD",
+  "semanticReview": "REQUIRED",
+  "thirdPartyPassed": 0
+}

@@ -1,0 +1,65 @@
+diff --git a/docs/acceptance/deployment/releases/b10cd21819d6c229/source/src/components/TeacherDashboard.tsx b/outputs/daily-seventeen-20261112/stage/src/components/TeacherDashboard.tsx
+index 3f1e0df..415834d 100644
+--- a/docs/acceptance/deployment/releases/b10cd21819d6c229/source/src/components/TeacherDashboard.tsx
++++ b/outputs/daily-seventeen-20261112/stage/src/components/TeacherDashboard.tsx
+@@ -47,6 +47,20 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
+ 
+   const [filterStatus, setFilterStatus] = useState<string>('all');
+   const [completionError, setCompletionError] = useState('');
++  const [cancelRideId, setCancelRideId] = useState<string | null>(null);
++  const cancelDialog = useRef<HTMLDialogElement>(null);
++  const cancelTarget = safeRides.find(ride => ride.id === cancelRideId && ride.status === 'scheduled');
++  const activeCancelId = cancelTarget?.id;
++  useEffect(() => {
++    if (!activeCancelId) return;
++    const dialog = cancelDialog.current;
++    dialog?.showModal();
++    return () => { dialog?.close(); };
++  }, [activeCancelId]);
++  const dismissCancellation = () => {
++    cancelDialog.current?.close();
++    setCancelRideId(null);
++  };
+   const inFlightCompletions = useRef(new Set<string>());
+   const [pendingRideIds, setPendingRideIds] = useState<ReadonlySet<string>>(new Set());
+   const [activeTab, setActiveTab] = useState<'today' | 'allRides' | 'students'>(() => reviewOnly ? 'allRides' : 'today');
+@@ -458,11 +472,9 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
+                                   {pendingRideIds.has(ride.id) ? '完了処理中' : '完了'}
+                                 </button>
+                                 <button
+-                                  onClick={() => {
+-                                    if (window.confirm(isDemo ? 'このブラウザ内のデモ予約を取り消しますか？ 教室の予定は変わりません。' : 'この送迎予定をキャンセルしますか？ 台帳を取消にし、対応するカレンダーの予定を削除します。')) {
+-                                      onCancelRide(ride.id);
+-                                    }
+-                                  }}
++                                  onClick={() => setCancelRideId(ride.id)}
++                                  disabled={pendingRideIds.has(ride.id)}
++                                  aria-label={`${ride.studentName} ${ride.rideDate} ${ride.rideTime} ${typeInfo.text} の予約を取消`}
+                                   className="text-xs text-rose-600 hover:bg-rose-50 py-1 px-2 rounded-lg font-bold transition-colors"
+                                 >
+                                   取消
+@@ -481,6 +493,24 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
+         </div>
+       )}
+ 
++      {cancelTarget && (
++        <dialog ref={cancelDialog} aria-labelledby="admin-cancel-heading"
++          onCancel={() => setCancelRideId(null)}
++          className="m-auto w-11/12 max-w-md rounded-2xl p-5 shadow-xl backdrop:bg-slate-900/50">
++          <h2 id="admin-cancel-heading" className="text-lg font-bold">予約取消の確認</h2>
++          <p className="mt-3 font-semibold">{cancelTarget.studentName}</p>
++          <p>{cancelTarget.rideDate} {cancelTarget.rideTime}・{getRideTypeLabel(cancelTarget.rideType).text}</p>
++          <p className="mt-3 text-sm">{isDemo ? 'このブラウザ内のデモ予約を取り消します。教室の予定は変わりません。' : '台帳の予約を取消にし、対応するカレンダーの予定を削除します。'}</p>
++          <div className="mt-5 flex justify-end gap-2">
++            <button className="rounded-lg border px-3 py-2" onClick={dismissCancellation}>戻る</button>
++            <button className="rounded-lg bg-rose-700 px-3 py-2 font-bold text-white" onClick={() => {
++              dismissCancellation();
++              void onCancelRide(cancelTarget.id);
++            }}>取消を確定</button>
++          </div>
++        </dialog>
++      )}
++
+       {/* タブ3: 生徒台帳＆チケット管理 */}
+       {activeTab === 'students' && (
+         <div className="space-y-4">

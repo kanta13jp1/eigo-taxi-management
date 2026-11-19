@@ -1,0 +1,38 @@
+{
+  "status": "COMPLETE_CONFIGURATION_AND_INVITATION_PREPARATION",
+  "route": {
+    "model": "gpt-6-astra",
+    "effort": "medium",
+    "execution": "read-only planning and independent QA worker; root performed authorized UI registration"
+  },
+  "registrationRecord": "registration-result.json",
+  "preservationStatus": "PASS",
+  "sharedSheetReadback": "PASS",
+  "independentReview": "PASS",
+  "traceability": {
+    "structuralStatus": "PASS",
+    "errors": [],
+    "coverageGaps": [],
+    "counts": {
+      "requirements": 39,
+      "flows": 11,
+      "testCases": 203,
+      "screens": 20,
+      "interfaces": 16,
+      "coverageGaps": 0
+    },
+    "release": "HOLD",
+    "semanticReview": "REQUIRED",
+    "thirdPartyPassed": 0
+  },
+  "originalTwelvePresentationsUnchanged": true,
+  "teacherGuide": "docs/deliverables/2026-11-07-teacher-review/teacher-review-guide-2026-11-07-v1.pptx",
+  "teacherGoogleLogin": "NOT_RUN",
+  "teacherBothPortalActualUse": "NOT_RUN",
+  "invitationSent": false,
+  "calendarSharingAdded": false,
+  "customerAcceptancePassed": 0,
+  "customerAcceptanceTotal": 6,
+  "productionStarted": false,
+  "cleanup": "Closed only the fresh shared-sheet proof tab; existing admin/user tabs preserved; no helper services started."
+}

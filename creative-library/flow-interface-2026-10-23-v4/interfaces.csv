@@ -1,0 +1,17 @@
+﻿id,endpoints,action,description
+IF-01,A01/P01→E01→GAS,Firebase認証＋login,Google本人確認、役割・家庭・有効状態照合
+IF-02,D01→GAS,createReservation,生徒・日時・区分・場所・メモ→予定／結果
+IF-03,A02〜04/P02→GAS,getStudents / getRides,権限に応じた生徒・送迎一覧を取得
+IF-04,D03→GAS,createStudent,生徒情報・初期残数→生徒台帳
+IF-05,D05→GAS,cancelReservation,送迎ID→取消状態・予定削除
+IF-06,A02/A03→GAS,completeRide,送迎ID→片道1／往復2消費・完了履歴
+IF-07,A05→GAS／端末内,getPortalInvitations,専用URL取得。QRは端末内生成・コピー
+IF-08,A06/D04→GAS,getManagedUsers / saveManagedUser / deleteManagedUser,一覧取得・保存・削除・再発行（管理者限定）
+IF-09,GAS→Script Properties,PropertiesService,Google許可設定・更新ガードを保存
+IF-10,D02→GAS,addTickets,生徒・枚数・金額→残数・購入履歴更新
+IF-11,GAS→台帳,SpreadsheetApp,生徒・送迎・購入の各シートを読書き
+IF-12,ログアウト操作→SDK,session消去＋signOut,アプリ状態消去・Firebaseログアウト
+IF-13,GAS⇄Google Calendar,CalendarApp,予定作成・ID指定削除。実受入未完了
+IF-14,人→E03→サイト再読込,外部画面で直接編集,保守修正。自動計算・予定同期は実行しない
+IF-15,人→E04,導入担当の外部画面操作,初期Google接続・認証・初期管理者設定
+IF-16,送迎担当→E02,Google Calendarの画面,予定を人が閲覧。当アプリのAPI呼出しなし

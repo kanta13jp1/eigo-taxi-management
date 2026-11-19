@@ -1,0 +1,12 @@
+{
+  "pass": true,
+  "reviewer": "root independent of isolated build worker",
+  "sourceDelta": [
+    "src/components/AddRideModal.tsx"
+  ],
+  "allCandidateHashesMatched": true,
+  "onlyHostingConfig": true,
+  "targetSite": "eigo-taxi-test",
+  "gasSourceIsPriorArchive": true,
+  "sourceDigest": "b7e510688a6e81268331db6d7d88db8875bf5ce443dbc90f52b4f647f39d1979"
+}

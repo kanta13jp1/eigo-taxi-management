@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import type { Student, RideReservation, RideType } from '../types';
 import { getLocalDateString } from '../services/api';
 import {
@@ -19,6 +19,7 @@ import {
 } from 'lucide-react';
 
 interface TeacherDashboardProps {
+  isDemo: boolean;
   students: Student[];
   rides: RideReservation[];
   onCompleteRide: (rideId: string) => Promise<void>;
@@ -26,9 +27,12 @@ interface TeacherDashboardProps {
   onOpenAddRide: (studentId?: string) => void;
   onOpenAddTicket: (studentId?: string) => void;
   onOpenAddStudent: () => void;
+  reviewOnly?: boolean;
 }
 
+// @trace CODE-12 REQ-12
 export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
+  isDemo,
   students,
   rides,
   onCompleteRide,
@@ -36,21 +40,56 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
   onOpenAddRide,
   onOpenAddTicket,
   onOpenAddStudent,
+  reviewOnly = false,
 }) => {
   const safeStudents = Array.isArray(students) ? students : [];
   const safeRides = Array.isArray(rides) ? rides : [];
 
   const [filterStatus, setFilterStatus] = useState<string>('all');
-  const [activeTab, setActiveTab] = useState<'today' | 'allRides' | 'students'>('today');
+  const [completionError, setCompletionError] = useState('');
+  const [cancelRideId, setCancelRideId] = useState<string | null>(null);
+  const cancelDialog = useRef<HTMLDialogElement>(null);
+  const cancelTarget = safeRides.find(ride => ride.id === cancelRideId && ride.status === 'scheduled');
+  const activeCancelId = cancelTarget?.id;
+  useEffect(() => {
+    if (!activeCancelId) return;
+    const dialog = cancelDialog.current;
+    dialog?.showModal();
+    return () => { dialog?.close(); };
+  }, [activeCancelId]);
+  const dismissCancellation = () => {
+    cancelDialog.current?.close();
+    setCancelRideId(null);
+  };
+  const inFlightCompletions = useRef(new Set<string>());
+  const [pendingRideIds, setPendingRideIds] = useState<ReadonlySet<string>>(new Set());
+  const [activeTab, setActiveTab] = useState<'today' | 'allRides' | 'students'>(() => reviewOnly ? 'allRides' : 'today');
 
-  // 今日（JST基準）
-  const [todayStr] = useState(() => getLocalDateString());
+  // 予約日と同じ端末の暦日を使用し、画面を開いたままでも翌日に切り替える。
+  const [todayStr, setTodayStr] = useState(() => getLocalDateString());
+  useEffect(() => {
+    let timer: number;
+    const syncDate = () => {
+      window.clearTimeout(timer);
+      const now = new Date();
+      setTodayStr(getLocalDateString(now));
+      const midnight = new Date(now);
+      midnight.setHours(24, 0, 0, 0);
+      timer = window.setTimeout(syncDate, midnight.getTime() - now.getTime());
+    };
+    syncDate();
+    document.addEventListener('visibilitychange', syncDate);
+    return () => {
+      window.clearTimeout(timer);
+      document.removeEventListener('visibilitychange', syncDate);
+    };
+  }, []);
   const todayRides = safeRides.filter((r) => r.rideDate === todayStr);
   const todayPendingRides = todayRides.filter((r) => r.status === 'scheduled');
   const todayCompletedRides = todayRides.filter((r) => r.status === 'completed');
 
   // チケット残少・ゼロの生徒
-  const lowTicketStudents = safeStudents.filter((s) => s.ticketBalance <= 1);
+  const lowTicketStudents = safeStudents.filter((s) => s.ticketBalance <= 2);
 
   // フィルタ済み送迎
   const filteredRides = safeRides.filter((r) => {
@@ -69,13 +108,37 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
     }
   };
 
+  const completionLabel = (ride: RideReservation) => {
+    const { text, consume } = getRideTypeLabel(ride.rideType);
+    const action = pendingRideIds.has(ride.id) ? '完了処理中' : `送迎完了（${consume}回消費）`;
+    return `${action} ${ride.studentName} ${ride.rideDate} ${ride.rideTime} ${text}`;
+  };
+
+  const completeRide = async (ride: RideReservation) => {
+    const inFlight = inFlightCompletions.current;
+    if (inFlight.has(ride.id)) return;
+    inFlight.add(ride.id);
+    setPendingRideIds(new Set(inFlight));
+    setCompletionError('');
+    try {
+      await onCompleteRide(ride.id);
+    } catch (error) {
+      const reason = error instanceof Error ? error.message : '完了処理できませんでした';
+      setCompletionError(`${ride.studentName}（${ride.rideDate} ${ride.rideTime}）: ${reason}`);
+    } finally {
+      inFlight.delete(ride.id);
+      setPendingRideIds(new Set(inFlight));
+    }
+  };
+
   return (
     <div className="space-y-6">
+      {completionError && <p role="alert" className="rounded-xl border border-rose-200 bg-rose-50 p-4 text-sm text-rose-800">{completionError}</p>}
       {/* 管理者バナー */}
       <div className="bg-emerald-50/80 border border-emerald-200 rounded-2xl p-3.5 px-4 flex flex-col sm:flex-row sm:items-center justify-between gap-2 shadow-xs">
         <div className="flex items-center gap-2 text-emerald-900 font-bold text-sm">
-          <span className="bg-emerald-600 text-white text-[10px] font-black px-2 py-0.5 rounded-md">管理者画面</span>
-          <span>Mauro・Brenda 先生用管理ダッシュボード</span>
+          <span className="bg-emerald-600 text-white text-[10px] font-black px-2 py-0.5 rounded-md">{reviewOnly ? '検証専用画面' : '管理者画面'}</span>
+          <span>{reviewOnly ? '指定した架空生徒の送迎・チケットだけを確認できます' : 'Mauro・Brenda 先生用管理ダッシュボード'}</span>
         </div>
         <p className="text-xs text-emerald-700 font-medium">
           ※完全予約制対応：送迎完了時に「送迎完了」を押すと片道1枚（往復は2枚）が自動消化されます
@@ -106,7 +169,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
           className="bg-white p-4 rounded-2xl border border-slate-200/80 shadow-xs flex items-center justify-between cursor-pointer hover:border-amber-300 transition-colors"
         >
           <div>
-            <p className="text-xs font-semibold text-slate-500">チケット残少・残ゼロ</p>
+            <p className="text-xs font-semibold text-slate-500">チケット残り2枚以下</p>
             <div className="flex items-baseline gap-2 mt-1">
               <span
                 className={`text-2xl font-black ${
@@ -196,7 +259,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
               <Calendar className="w-4 h-4 text-emerald-600" />
               本日（{todayStr}）の送迎予定
             </h2>
-            <span className="text-xs text-slate-500">Googleカレンダー・シートと自動同期</span>
+            <span className="text-xs text-slate-500">{isDemo ? 'デモの予定はこのブラウザ内にだけ保存されます' : 'Googleカレンダー・シートと自動同期'}</span>
           </div>
 
           {todayRides.length === 0 ? (
@@ -260,7 +323,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
                           保護者: {student.parentName}（残チケット:{' '}
                           <span
                             className={`font-bold ${
-                              student.ticketBalance <= 1 ? 'text-amber-600' : 'text-emerald-600'
+                              student.ticketBalance <= 2 ? 'text-amber-600' : 'text-emerald-600'
                             }`}
                           >
                             {student.ticketBalance}枚
@@ -299,11 +362,13 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
 
                       {isScheduled && (
                         <button
-                          onClick={() => onCompleteRide(ride.id)}
+                          onClick={() => completeRide(ride)}
+                          disabled={pendingRideIds.has(ride.id)}
+                          aria-label={completionLabel(ride)}
                           className="bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs py-2 px-3.5 rounded-xl shadow-xs inline-flex items-center gap-1.5 transition-colors"
                         >
                           <CheckCircle2 className="w-4 h-4" />
-                          送迎完了（{typeInfo.consume}回消費）
+                          {pendingRideIds.has(ride.id) ? '完了処理中' : `送迎完了（${typeInfo.consume}回消費）`}
                         </button>
                       )}
                     </div>
@@ -399,17 +464,17 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
                             {ride.status === 'scheduled' && (
                               <div className="flex items-center justify-end gap-1.5">
                                 <button
-                                  onClick={() => onCompleteRide(ride.id)}
+                                  onClick={() => completeRide(ride)}
+                                  disabled={pendingRideIds.has(ride.id)}
+                                  aria-label={completionLabel(ride)}
                                   className="text-xs bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-1 px-2.5 rounded-lg"
                                 >
-                                  完了
+                                  {pendingRideIds.has(ride.id) ? '完了処理中' : '完了'}
                                 </button>
                                 <button
-                                  onClick={() => {
-                                    if (window.confirm('この送迎予定をキャンセルしますか？（Googleカレンダーおよびスプレッドシートからも自動で更新・削除されます）')) {
-                                      onCancelRide(ride.id);
-                                    }
-                                  }}
+                                  onClick={() => setCancelRideId(ride.id)}
+                                  disabled={pendingRideIds.has(ride.id)}
+                                  aria-label={`${ride.studentName} ${ride.rideDate} ${ride.rideTime} ${typeInfo.text} の予約を取消`}
                                   className="text-xs text-rose-600 hover:bg-rose-50 py-1 px-2 rounded-lg font-bold transition-colors"
                                 >
                                   取消
@@ -428,24 +493,43 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
         </div>
       )}
 
+      {cancelTarget && (
+        <dialog ref={cancelDialog} aria-labelledby="admin-cancel-heading"
+          onCancel={() => setCancelRideId(null)}
+          className="m-auto w-11/12 max-w-md rounded-2xl p-5 shadow-xl backdrop:bg-slate-900/50">
+          <h2 id="admin-cancel-heading" className="text-lg font-bold">予約取消の確認</h2>
+          <p className="mt-3 font-semibold">{cancelTarget.studentName}</p>
+          <p>{cancelTarget.rideDate} {cancelTarget.rideTime}・{getRideTypeLabel(cancelTarget.rideType).text}</p>
+          <p className="mt-3 text-sm">{isDemo ? 'このブラウザ内のデモ予約を取り消します。教室の予定は変わりません。' : '台帳の予約を取消にし、対応するカレンダーの予定を削除します。'}</p>
+          <div className="mt-5 flex justify-end gap-2">
+            <button className="rounded-lg border px-3 py-2" onClick={dismissCancellation}>戻る</button>
+            <button className="rounded-lg bg-rose-700 px-3 py-2 font-bold text-white" onClick={() => {
+              dismissCancellation();
+              void onCancelRide(cancelTarget.id);
+            }}>取消を確定</button>
+          </div>
+        </dialog>
+      )}
+
       {/* タブ3: 生徒台帳＆チケット管理 */}
       {activeTab === 'students' && (
         <div className="space-y-4">
           <div className="flex items-center justify-between">
             <h2 className="text-base font-bold text-slate-800">生徒台帳・チケット残数状況</h2>
-            <button
+            {!reviewOnly && <button
               onClick={onOpenAddStudent}
               className="inline-flex items-center gap-1.5 bg-slate-900 hover:bg-slate-800 text-white px-3 py-1.5 rounded-xl text-xs font-bold transition-colors"
             >
               <UserPlus className="w-3.5 h-3.5" />
               新規生徒を登録
-            </button>
+            </button>}
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
             {students.map((student) => {
               const isZero = student.ticketBalance === 0;
-              const isLow = student.ticketBalance === 1;
+              // Same threshold as the "チケット残り2枚以下" summary card and the booking form.
+              const isLow = student.ticketBalance > 0 && student.ticketBalance <= 2;
 
               return (
                 <div
@@ -475,7 +559,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
                           <span className="text-xs font-normal ml-0.5">回</span>
                         </span>
                         {isZero && <p className="text-[10px] font-bold text-rose-600 mt-0.5">チケット切れ</p>}
-                        {isLow && <p className="text-[10px] font-bold text-amber-600 mt-0.5">残り1回</p>}
+                        {isLow && <p className="text-[10px] font-bold text-amber-600 mt-0.5">残り{student.ticketBalance}回</p>}
                       </div>
                     </div>
 

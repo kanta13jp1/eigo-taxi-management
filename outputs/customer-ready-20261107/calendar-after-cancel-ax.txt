@@ -1,0 +1,529 @@
+Browser tab: 1750959471, Title: "株式会社Mighty LINK - カレンダー - 2026年 11月", URL: "https://calendar.google.com/calendar/u/2/r?pli=1".
+0 AXWebArea 株式会社Mighty LINK - カレンダー - 2026年 11月, URL: calendar.google.com/calendar/u/2/r?pli=1
+	1 container
+		2 container
+			3 button メイン コンテンツにスキップ
+				4 text メイン コンテンツにスキップ
+			5 button キーボード ショートカット
+				6 text キーボード ショートカット
+			7 button ユーザー補助に関するフィードバック
+				8 text ユーザー補助に関するフィードバック
+		9 container gb
+			10 container
+				11 button (expanded) Description: メインドロワー, Secondary Actions: Collapse
+					12 image
+				13 container カレンダー
+					14 heading カレンダー, Value: 1
+						15 text カレンダー
+				193 button 今日（11月 7日 (土曜日)）
+				194 button 前月
+				195 button 翌月
+				196 text 2026年 11月
+				16 button 検索
+				17 button サポート
+				18 pop up button (collapsed) Description: 設定メニュー, Secondary Actions: Expand
+				197 pop up button (collapsed) 月, Secondary Actions: Expand
+				20 button Google カレンダーに切り替える
+				21 button [ToDo リスト] に切り替える
+				22 button (collapsed) Description: Google アプリ, Secondary Actions: Expand
+				23 button (collapsed)  Google アカウント: 寛太梅澤 (k-umezawa@ml-mightylink.com), Secondary Actions: Expand
+					24 button Google アカウント: 寛太梅澤 (k-umezawa@ml-mightylink.com)
+		198 pop up button (collapsed) 作成, Secondary Actions: Expand
+			199 text 作成
+		27 container
+			28 container
+				29 heading ドロワー, Value: 1
+					30 text ドロワー
+				31 container drawerMiniMonthNavigator
+					32 heading ナビゲーション カレンダー, Value: 2
+						33 text ナビゲーション カレンダー
+					34 container
+						35 text 2026年 11月
+						36 button 前月
+						37 button 翌月
+						38 table 2026年 11月
+							39 row 日曜日 月曜日 火曜日 水曜日 木曜日 金曜日 土曜日
+								40 cell
+									41 text 日曜日
+								42 cell
+									43 text 月曜日
+								44 cell
+									45 text 火曜日
+								46 cell
+									47 text 水曜日
+								48 cell
+									49 text 木曜日
+								50 cell
+									51 text 金曜日
+								52 cell
+									53 text 土曜日
+							54 row 1、日曜日 2、月曜日 3、火曜日 4、水曜日 5、木曜日 6、金曜日 7、土曜日、今日
+								55 cell
+									56 checkbox Description: 1、日曜日, Value: 0
+										57 text 1
+								58 cell
+									59 checkbox Description: 2、月曜日, Value: 0
+										60 text 2
+								61 cell
+									62 checkbox Description: 3、火曜日, Value: 0
+										63 text 3
+								64 cell
+									65 checkbox Description: 4、水曜日, Value: 0
+										66 text 4
+								67 cell
+									68 checkbox Description: 5、木曜日, Value: 0
+										69 text 5
+								70 cell
+									71 checkbox Description: 6、金曜日, Value: 0
+										72 text 6
+								73 cell
+									74 checkbox Description: 7、土曜日、今日, Value: 1
+										75 text 7
+							76 row 8、日曜日 9、月曜日 10、火曜日 11、水曜日 12、木曜日 13、金曜日 14、土曜日
+								77 cell
+									78 checkbox Description: 8、日曜日, Value: 0
+										79 text 8
+								80 cell
+									81 checkbox Description: 9、月曜日, Value: 0
+										82 text 9
+								83 cell
+									84 checkbox Description: 10、火曜日, Value: 0
+										85 text 10
+								86 cell
+									87 checkbox Description: 11、水曜日, Value: 0
+										88 text 11
+								89 cell
+									90 checkbox Description: 12、木曜日, Value: 0
+										91 text 12
+								92 cell
+									93 checkbox Description: 13、金曜日, Value: 0
+										94 text 13
+								95 cell
+									96 checkbox Description: 14、土曜日, Value: 0
+										97 text 14
+							98 row 15、日曜日 16、月曜日 17、火曜日 18、水曜日 19、木曜日 20、金曜日 21、土曜日
+								99 cell
+									100 checkbox Description: 15、日曜日, Value: 0
+										101 text 15
+								102 cell
+									103 checkbox Description: 16、月曜日, Value: 0
+										104 text 16
+								105 cell
+									106 checkbox Description: 17、火曜日, Value: 0
+										107 text 17
+								108 cell
+									109 checkbox Description: 18、水曜日, Value: 0
+										110 text 18
+								111 cell
+									112 checkbox Description: 19、木曜日, Value: 0
+										113 text 19
+								114 cell
+									115 checkbox Description: 20、金曜日, Value: 0
+										116 text 20
+								117 cell
+									118 checkbox Description: 21、土曜日, Value: 0
+										119 text 21
+							120 row 22、日曜日 23、月曜日 24、火曜日 25、水曜日 26、木曜日 27、金曜日 28、土曜日
+								121 cell
+									122 checkbox Description: 22、日曜日, Value: 0
+										123 text 22
+								124 cell
+									125 checkbox Description: 23、月曜日, Value: 0
+										126 text 23
+								127 cell
+									128 checkbox Description: 24、火曜日, Value: 0
+										129 text 24
+								130 cell
+									131 checkbox Description: 25、水曜日, Value: 0
+										132 text 25
+								133 cell
+									134 checkbox Description: 26、木曜日, Value: 0
+										135 text 26
+								136 cell
+									137 checkbox Description: 27、金曜日, Value: 0
+										138 text 27
+								139 cell
+									140 checkbox Description: 28、土曜日, Value: 0
+										141 text 28
+							142 row 29、日曜日 30、月曜日 12月 1日、火曜日 12月 2日、水曜日 12月 3日、木曜日 12月 4日、金曜日 12月 5日、土曜日
+								143 cell
+									144 checkbox Description: 29、日曜日, Value: 0
+										145 text 29
+								146 cell
+									147 checkbox Description: 30、月曜日, Value: 0
+										148 text 30
+								149 cell
+									150 checkbox Description: 12月 1日、火曜日, Value: 0
+										151 text 1
+								152 cell
+									153 checkbox Description: 12月 2日、水曜日, Value: 0
+										154 text 2
+								155 cell
+									156 checkbox Description: 12月 3日、木曜日, Value: 0
+										157 text 3
+								158 cell
+									159 checkbox Description: 12月 4日、金曜日, Value: 0
+										160 text 4
+								161 cell
+									162 checkbox Description: 12月 5日、土曜日, Value: 0
+										163 text 5
+							164 row 12月 6日、日曜日 12月 7日、月曜日 12月 8日、火曜日 12月 9日、水曜日 12月 10日、木曜日 12月 11日、金曜日 12月 12日、土曜日
+								165 cell
+									166 checkbox Description: 12月 6日、日曜日, Value: 0
+										167 text 6
+								168 cell
+									169 checkbox Description: 12月 7日、月曜日, Value: 0
+										170 text 7
+								171 cell
+									172 checkbox Description: 12月 8日、火曜日, Value: 0
+										173 text 8
+								174 cell
+									175 checkbox Description: 12月 9日、水曜日, Value: 0
+										176 text 9
+								177 cell
+									178 checkbox Description: 12月 10日、木曜日, Value: 0
+										179 text 10
+								180 cell
+									181 checkbox Description: 12月 11日、金曜日, Value: 0
+										182 text 11
+								183 cell
+									184 checkbox Description: 12月 12日、土曜日, Value: 0
+										185 text 12
+				186 text ゲスト
+				187 container
+					188 combo box (collapsed, settable) Description: 予定に招待するユーザーを検索, ID: i8, Secondary Actions: Expand
+				189 heading 予約可能なページ, Value: 2
+					190 text 予約可能なページ
+				200 container 予約ページ
+					201 container
+						202 button (expanded) 予約ページ, Secondary Actions: Collapse
+							203 text 予約ページ
+						204 button 予約スケジュールを作成
+					205 content list 予約可能なページ
+						206 container 梅澤 と 30 分間の予定
+							207 pop up button 梅澤 と 30 分間の予定 新規
+								208 text 梅澤 と 30 分間の予定
+								209 text 新規
+							210 container
+								211 button リンクをコピー
+								212 pop up button (collapsed) Description: 梅澤 と 30 分間の予定 のオプション, Secondary Actions: Expand
+				213 heading 時間の分析情報, Value: 2
+					214 text 時間の分析情報
+				215 button (expanded) 時間の分析情報, Secondary Actions: Collapse
+					216 text 時間の分析情報
+				217 container cwtVXb
+					218 text 2026年 11月 1日 ～ 30日
+					219 container
+						220 text 会議に割いた総時間  0 時間
+					221 button その他の分析情報
+						222 text その他の分析情報
+				191 heading カレンダー リスト, Value: 2
+					192 text カレンダー リスト
+				223 button (expanded) マイカレンダー, Secondary Actions: Collapse
+					224 text マイカレンダー
+				225 content list マイカレンダー
+					226 container
+						227 container
+							228 checkbox (settable, integer) Description: 寛太梅澤, Value: 1
+						229 text 寛太梅澤
+					230 container
+						231 container
+							232 checkbox (settable, integer) Description: AI Park イベント, Value: 1
+						233 text AI Park イベント
+					234 container
+						235 container
+							236 checkbox (settable, integer) Description: Mighty Skill-Bridge 開発計画, Value: 1
+						237 text Mighty Skill-Bridge 開発計画
+					238 container
+						239 container
+							240 checkbox (settable, integer) Description: Mighty 送迎管理 受入検証専用 2026-11-07, Value: 1
+						241 text Mighty 送迎管理 受入検証専用 2026-11-07
+					242 container
+						243 container
+							244 checkbox (settable, integer) Description: ToDo リスト, Value: 1
+						245 text ToDo リスト
+					246 container
+						247 container
+							248 checkbox (settable, integer) Description: 誕生日, Value: 1
+						249 text 誕生日
+				250 container
+					251 button (expanded) 他のカレンダー, Secondary Actions: Collapse
+						252 text 他のカレンダー
+					253 pop up button (collapsed) Description: 他のカレンダーを追加, Secondary Actions: Expand
+				254 content list 他のカレンダー
+					255 container
+						256 container
+							257 checkbox (settable, integer) Description: 日本の祝日, Value: 1
+						258 text 日本の祝日
+					259 container
+						260 container
+							261 checkbox (settable, integer) Description: 小林雅水, Value: 0
+						262 text 小林雅水
+			263 container
+				264 heading Description:  2026年 11月、8 件の予定, Value: 1, ID: c417
+					265 text 2026年 11月、8 件の予定
+				266 table
+					267 row 日曜日 月曜日 火曜日 水曜日 木曜日 金曜日 土曜日
+						268 cell
+							269 text 日曜日
+						270 cell
+							271 text 月曜日
+						272 cell
+							273 text 火曜日
+						274 cell
+							275 text 水曜日
+						276 cell
+							277 text 木曜日
+						278 cell
+							279 text 金曜日
+						280 cell
+							281 text 土曜日
+					282 row 勤務場所を追加、「寛太梅澤」、2026年 11月 1日。 勤務場所: 「自宅」、寛太梅澤、2026年 11月 2日 ～ 6日 勤務場所を変更、「寛太梅澤」、2026年 11月 2日。現在の設定は「自宅」 勤務場所を変更、「寛太梅澤」、2026年 11月 3日。現在の設定は「自宅」 勤務場所を変更、「寛太梅澤」、2026年 11月 4日。現在の設定は「自宅」 勤務場所を変更、「寛太梅澤」、2026年 11月 5日。現在の設定は「自宅」 勤務場所を変更、「寛太梅澤」、2026年 11月 6日。現在の設定は「自宅」 勤務場所を追加、「寛太梅澤」、2026年 11月 7日。 予定はありません、11月 1日 (日曜日) 予定はありません、11月 2日 (月曜日) 1 件の予定、11月 3日 (火曜日) 予定はありません、11月 4日 (水曜日) 予定はありません、11月 5日 (木曜日) 予定はありません、11月 6日 (金曜日) 予定はありません、11月 7日 (土曜日)、今日
+						283 cell
+							284 container
+								285 button 勤務場所を追加、「寛太梅澤」、2026年 11月 1日。
+									286 image
+									287 text 場所を追加
+								288 button 勤務場所: 「自宅」、寛太梅澤、2026年 11月 2日 ～ 6日
+									289 image
+									290 text 自宅
+								291 button 勤務場所を変更、「寛太梅澤」、2026年 11月 2日。現在の設定は「自宅」
+									292 image
+								293 button 勤務場所を変更、「寛太梅澤」、2026年 11月 3日。現在の設定は「自宅」
+									294 image
+									295 text 変更
+								296 button 勤務場所を変更、「寛太梅澤」、2026年 11月 4日。現在の設定は「自宅」
+									297 image
+									298 text 変更
+								299 button 勤務場所を変更、「寛太梅澤」、2026年 11月 5日。現在の設定は「自宅」
+									300 image
+									301 text 変更
+								302 button 勤務場所を変更、「寛太梅澤」、2026年 11月 6日。現在の設定は「自宅」
+									303 image
+									304 text 変更
+								305 button 勤務場所を追加、「寛太梅澤」、2026年 11月 7日。
+									306 image
+									307 text 場所を追加
+						308 cell 予定はありません、11月 1日 (日曜日)
+							309 heading 予定はありません、11月 1日 (日曜日), Value: 2, ID: c420
+								310 text 予定はありません、11月 1日 (日曜日)
+						311 cell 予定はありません、11月 2日 (月曜日)
+							312 heading 予定はありません、11月 2日 (月曜日), Value: 2, ID: c421
+								313 text 予定はありません、11月 2日 (月曜日)
+						314 cell 1 件の予定、11月 3日 (火曜日)
+							315 heading 1 件の予定、11月 3日 (火曜日), Value: 2, ID: c422
+								316 text 1 件の予定、11月 3日 (火曜日)
+							317 button 終日、「文化の日」、カレンダー: 日本の祝日、2026年 11月 3日
+						318 cell 予定はありません、11月 4日 (水曜日)
+							319 heading 予定はありません、11月 4日 (水曜日), Value: 2, ID: c423
+								320 text 予定はありません、11月 4日 (水曜日)
+						321 cell 予定はありません、11月 5日 (木曜日)
+							322 heading 予定はありません、11月 5日 (木曜日), Value: 2, ID: c424
+								323 text 予定はありません、11月 5日 (木曜日)
+						324 cell 予定はありません、11月 6日 (金曜日)
+							325 heading 予定はありません、11月 6日 (金曜日), Value: 2, ID: c425
+								326 text 予定はありません、11月 6日 (金曜日)
+						327 cell 予定はありません、11月 7日 (土曜日)、今日
+							328 heading 予定はありません、11月 7日 (土曜日)、今日, Value: 2, ID: c426
+								329 text 予定はありません、11月 7日 (土曜日)、今日
+					330 row 勤務場所を追加、「寛太梅澤」、2026年 11月 8日。 勤務場所: 「自宅」、寛太梅澤、2026年 11月 9日 ～ 13日 勤務場所を変更、「寛太梅澤」、2026年 11月 9日。現在の設定は「自宅」 勤務場所を変更、「寛太梅澤」、2026年 11月 10日。現在の設定は「自宅」 勤務場所を変更、「寛太梅澤」、2026年 11月 11日。現在の設定は「自宅」 勤務場所を変更、「寛太梅澤」、2026年 11月 12日。現在の設定は「自宅」 勤務場所を変更、「寛太梅澤」、2026年 11月 13日。現在の設定は「自宅」 勤務場所を追加、「寛太梅澤」、2026年 11月 14日。 予定はありません、11月 8日 (日曜日) 予定はありません、11月 9日 (月曜日) 予定はありません、11月 10日 (火曜日) 予定はありません、11月 11日 (水曜日) 予定はありません、11月 12日 (木曜日) 予定はありません、11月 13日 (金曜日) 予定はありません、11月 14日 (土曜日)
+						331 cell
+							332 container
+								333 button 勤務場所を追加、「寛太梅澤」、2026年 11月 8日。
+									334 image
+									335 text 場所を追加
+								336 button 勤務場所: 「自宅」、寛太梅澤、2026年 11月 9日 ～ 13日
+									337 image
+									338 text 自宅
+								339 button 勤務場所を変更、「寛太梅澤」、2026年 11月 9日。現在の設定は「自宅」
+									340 image
+								341 button 勤務場所を変更、「寛太梅澤」、2026年 11月 10日。現在の設定は「自宅」
+									342 image
+									343 text 変更
+								344 button 勤務場所を変更、「寛太梅澤」、2026年 11月 11日。現在の設定は「自宅」
+									345 image
+									346 text 変更
+								347 button 勤務場所を変更、「寛太梅澤」、2026年 11月 12日。現在の設定は「自宅」
+									348 image
+									349 text 変更
+								350 button 勤務場所を変更、「寛太梅澤」、2026年 11月 13日。現在の設定は「自宅」
+									351 image
+									352 text 変更
+								353 button 勤務場所を追加、「寛太梅澤」、2026年 11月 14日。
+									354 image
+									355 text 場所を追加
+						356 cell 予定はありません、11月 8日 (日曜日)
+							357 heading 予定はありません、11月 8日 (日曜日), Value: 2, ID: c427
+								358 text 予定はありません、11月 8日 (日曜日)
+						359 cell 予定はありません、11月 9日 (月曜日)
+							360 heading 予定はありません、11月 9日 (月曜日), Value: 2, ID: c428
+								361 text 予定はありません、11月 9日 (月曜日)
+						362 cell 予定はありません、11月 10日 (火曜日)
+							363 heading 予定はありません、11月 10日 (火曜日), Value: 2, ID: c429
+								364 text 予定はありません、11月 10日 (火曜日)
+						365 cell 予定はありません、11月 11日 (水曜日)
+							366 heading 予定はありません、11月 11日 (水曜日), Value: 2, ID: c430
+								367 text 予定はありません、11月 11日 (水曜日)
+						368 cell 予定はありません、11月 12日 (木曜日)
+							369 heading 予定はありません、11月 12日 (木曜日), Value: 2, ID: c431
+								370 text 予定はありません、11月 12日 (木曜日)
+						371 cell 予定はありません、11月 13日 (金曜日)
+							372 heading 予定はありません、11月 13日 (金曜日), Value: 2, ID: c432
+								373 text 予定はありません、11月 13日 (金曜日)
+						374 cell 予定はありません、11月 14日 (土曜日)
+							375 heading 予定はありません、11月 14日 (土曜日), Value: 2, ID: c433
+								376 text 予定はありません、11月 14日 (土曜日)
+					377 row 勤務場所を追加、「寛太梅澤」、2026年 11月 15日。 勤務場所: 「自宅」、寛太梅澤、2026年 11月 16日 ～ 20日 勤務場所を変更、「寛太梅澤」、2026年 11月 16日。現在の設定は「自宅」 勤務場所を変更、「寛太梅澤」、2026年 11月 17日。現在の設定は「自宅」 勤務場所を変更、「寛太梅澤」、2026年 11月 18日。現在の設定は「自宅」 勤務場所を変更、「寛太梅澤」、2026年 11月 19日。現在の設定は「自宅」 勤務場所を変更、「寛太梅澤」、2026年 11月 20日。現在の設定は「自宅」 勤務場所を追加、「寛太梅澤」、2026年 11月 21日。 1 件の予定、11月 15日 (日曜日) 予定はありません、11月 16日 (月曜日) 予定はありません、11月 17日 (火曜日) 予定はありません、11月 18日 (水曜日) 予定はありません、11月 19日 (木曜日) 予定はありません、11月 20日 (金曜日) 予定はありません、11月 21日 (土曜日)
+						378 cell
+							379 container
+								380 button 勤務場所を追加、「寛太梅澤」、2026年 11月 15日。
+									381 image
+									382 text 場所を追加
+								383 button 勤務場所: 「自宅」、寛太梅澤、2026年 11月 16日 ～ 20日
+									384 image
+									385 text 自宅
+								386 button 勤務場所を変更、「寛太梅澤」、2026年 11月 16日。現在の設定は「自宅」
+									387 image
+								388 button 勤務場所を変更、「寛太梅澤」、2026年 11月 17日。現在の設定は「自宅」
+									389 image
+									390 text 変更
+								391 button 勤務場所を変更、「寛太梅澤」、2026年 11月 18日。現在の設定は「自宅」
+									392 image
+									393 text 変更
+								394 button 勤務場所を変更、「寛太梅澤」、2026年 11月 19日。現在の設定は「自宅」
+									395 image
+									396 text 変更
+								397 button 勤務場所を変更、「寛太梅澤」、2026年 11月 20日。現在の設定は「自宅」
+									398 image
+									399 text 変更
+								400 button 勤務場所を追加、「寛太梅澤」、2026年 11月 21日。
+									401 image
+									402 text 場所を追加
+						403 cell 1 件の予定、11月 15日 (日曜日)
+							404 heading 1 件の予定、11月 15日 (日曜日), Value: 2, ID: c434
+								405 text 1 件の予定、11月 15日 (日曜日)
+							406 button 終日、「七五三」、カレンダー: 日本の祝日、2026年 11月 15日
+						407 cell 予定はありません、11月 16日 (月曜日)
+							408 heading 予定はありません、11月 16日 (月曜日), Value: 2, ID: c435
+								409 text 予定はありません、11月 16日 (月曜日)
+						410 cell 予定はありません、11月 17日 (火曜日)
+							411 heading 予定はありません、11月 17日 (火曜日), Value: 2, ID: c436
+								412 text 予定はありません、11月 17日 (火曜日)
+						413 cell 予定はありません、11月 18日 (水曜日)
+							414 heading 予定はありません、11月 18日 (水曜日), Value: 2, ID: c437
+								415 text 予定はありません、11月 18日 (水曜日)
+						416 cell 予定はありません、11月 19日 (木曜日)
+							417 heading 予定はありません、11月 19日 (木曜日), Value: 2, ID: c438
+								418 text 予定はありません、11月 19日 (木曜日)
+						419 cell 予定はありません、11月 20日 (金曜日)
+							420 heading 予定はありません、11月 20日 (金曜日), Value: 2, ID: c439
+								421 text 予定はありません、11月 20日 (金曜日)
+						422 cell 予定はありません、11月 21日 (土曜日)
+							423 heading 予定はありません、11月 21日 (土曜日), Value: 2, ID: c440
+								424 text 予定はありません、11月 21日 (土曜日)
+					425 row 勤務場所を追加、「寛太梅澤」、2026年 11月 22日。 勤務場所: 「自宅」、寛太梅澤、2026年 11月 23日 ～ 27日 勤務場所を変更、「寛太梅澤」、2026年 11月 23日。現在の設定は「自宅」 勤務場所を変更、「寛太梅澤」、2026年 11月 24日。現在の設定は「自宅」 勤務場所を変更、「寛太梅澤」、2026年 11月 25日。現在の設定は「自宅」 勤務場所を変更、「寛太梅澤」、2026年 11月 26日。現在の設定は「自宅」 勤務場所を変更、「寛太梅澤」、2026年 11月 27日。現在の設定は「自宅」 勤務場所を追加、「寛太梅澤」、2026年 11月 28日。 予定はありません、11月 22日 (日曜日) 1 件の予定、11月 23日 (月曜日) 予定はありません、11月 24日 (火曜日) 予定はありません、11月 25日 (水曜日) 予定はありません、11月 26日 (木曜日) 予定はありません、11月 27日 (金曜日) 予定はありません、11月 28日 (土曜日)
+						426 cell
+							427 container
+								428 button 勤務場所を追加、「寛太梅澤」、2026年 11月 22日。
+									429 image
+									430 text 場所を追加
+								431 button 勤務場所: 「自宅」、寛太梅澤、2026年 11月 23日 ～ 27日
+									432 image
+									433 text 自宅
+								434 button 勤務場所を変更、「寛太梅澤」、2026年 11月 23日。現在の設定は「自宅」
+									435 image
+								436 button 勤務場所を変更、「寛太梅澤」、2026年 11月 24日。現在の設定は「自宅」
+									437 image
+									438 text 変更
+								439 button 勤務場所を変更、「寛太梅澤」、2026年 11月 25日。現在の設定は「自宅」
+									440 image
+									441 text 変更
+								442 button 勤務場所を変更、「寛太梅澤」、2026年 11月 26日。現在の設定は「自宅」
+									443 image
+									444 text 変更
+								445 button 勤務場所を変更、「寛太梅澤」、2026年 11月 27日。現在の設定は「自宅」
+									446 image
+									447 text 変更
+								448 button 勤務場所を追加、「寛太梅澤」、2026年 11月 28日。
+									449 image
+									450 text 場所を追加
+						451 cell 予定はありません、11月 22日 (日曜日)
+							452 heading 予定はありません、11月 22日 (日曜日), Value: 2, ID: c441
+								453 text 予定はありません、11月 22日 (日曜日)
+						454 cell 1 件の予定、11月 23日 (月曜日)
+							455 heading 1 件の予定、11月 23日 (月曜日), Value: 2, ID: c442
+								456 text 1 件の予定、11月 23日 (月曜日)
+							457 button 終日、「勤労感謝の日」、カレンダー: 日本の祝日、2026年 11月 23日
+						458 cell 予定はありません、11月 24日 (火曜日)
+							459 heading 予定はありません、11月 24日 (火曜日), Value: 2, ID: c443
+								460 text 予定はありません、11月 24日 (火曜日)
+						461 cell 予定はありません、11月 25日 (水曜日)
+							462 heading 予定はありません、11月 25日 (水曜日), Value: 2, ID: c444
+								463 text 予定はありません、11月 25日 (水曜日)
+						464 cell 予定はありません、11月 26日 (木曜日)
+							465 heading 予定はありません、11月 26日 (木曜日), Value: 2, ID: c445
+								466 text 予定はありません、11月 26日 (木曜日)
+						467 cell 予定はありません、11月 27日 (金曜日)
+							468 heading 予定はありません、11月 27日 (金曜日), Value: 2, ID: c446
+								469 text 予定はありません、11月 27日 (金曜日)
+						470 cell 予定はありません、11月 28日 (土曜日)
+							471 heading 予定はありません、11月 28日 (土曜日), Value: 2, ID: c447
+								472 text 予定はありません、11月 28日 (土曜日)
+					473 row 勤務場所を追加、「寛太梅澤」、2026年 11月 29日。 勤務場所: 「自宅」、寛太梅澤、2026年 11月 30日 ～ 12月 4日 勤務場所を変更、「寛太梅澤」、2026年 11月 30日。現在の設定は「自宅」 勤務場所を変更、「寛太梅澤」、2026年 12月 1日。現在の設定は「自宅」 勤務場所を変更、「寛太梅澤」、2026年 12月 2日。現在の設定は「自宅」 勤務場所を変更、「寛太梅澤」、2026年 12月 3日。現在の設定は「自宅」 勤務場所を変更、「寛太梅澤」、2026年 12月 4日。現在の設定は「自宅」 勤務場所を追加、「寛太梅澤」、2026年 12月 5日。 予定はありません、11月 29日 (日曜日) 予定はありません、11月 30日 (月曜日) 予定はありません、12月 1日 (火曜日) 予定はありません、12月 2日 (水曜日) 予定はありません、12月 3日 (木曜日) 予定はありません、12月 4日 (金曜日) 予定はありません、12月 5日 (土曜日)
+						474 cell
+							475 container
+								476 button 勤務場所を追加、「寛太梅澤」、2026年 11月 29日。
+									477 image
+									478 text 場所を追加
+								479 button 勤務場所: 「自宅」、寛太梅澤、2026年 11月 30日 ～ 12月 4日
+									480 image
+									481 text 自宅
+								482 button 勤務場所を変更、「寛太梅澤」、2026年 11月 30日。現在の設定は「自宅」
+									483 image
+								484 button 勤務場所を変更、「寛太梅澤」、2026年 12月 1日。現在の設定は「自宅」
+									485 image
+									486 text 変更
+								487 button 勤務場所を変更、「寛太梅澤」、2026年 12月 2日。現在の設定は「自宅」
+									488 image
+									489 text 変更
+								490 button 勤務場所を変更、「寛太梅澤」、2026年 12月 3日。現在の設定は「自宅」
+									491 image
+									492 text 変更
+								493 button 勤務場所を変更、「寛太梅澤」、2026年 12月 4日。現在の設定は「自宅」
+									494 image
+									495 text 変更
+								496 button 勤務場所を追加、「寛太梅澤」、2026年 12月 5日。
+									497 image
+									498 text 場所を追加
+						499 cell 予定はありません、11月 29日 (日曜日)
+							500 heading 予定はありません、11月 29日 (日曜日), Value: 2, ID: c448
+								501 text 予定はありません、11月 29日 (日曜日)
+						502 cell 予定はありません、11月 30日 (月曜日)
+							503 heading 予定はありません、11月 30日 (月曜日), Value: 2, ID: c449
+								504 text 予定はありません、11月 30日 (月曜日)
+						505 cell 予定はありません、12月 1日 (火曜日)
+							506 heading 予定はありません、12月 1日 (火曜日), Value: 2, ID: c450
+								507 text 予定はありません、12月 1日 (火曜日)
+						508 cell 予定はありません、12月 2日 (水曜日)
+							509 heading 予定はありません、12月 2日 (水曜日), Value: 2, ID: c451
+								510 text 予定はありません、12月 2日 (水曜日)
+						511 cell 予定はありません、12月 3日 (木曜日)
+							512 heading 予定はありません、12月 3日 (木曜日), Value: 2, ID: c452
+								513 text 予定はありません、12月 3日 (木曜日)
+						514 cell 予定はありません、12月 4日 (金曜日)
+							515 heading 予定はありません、12月 4日 (金曜日), Value: 2, ID: c453
+								516 text 予定はありません、12月 4日 (金曜日)
+						517 cell 予定はありません、12月 5日 (土曜日)
+							518 heading 予定はありません、12月 5日 (土曜日), Value: 2, ID: c454
+								519 text 予定はありません、12月 5日 (土曜日)
+			520 container サイドパネル
+				521 tab group
+					522 tab (selectable, settable, boolean) Description: Keep, Value: 0, ID: gsc-gab-2
+					523 tab (selectable, settable, boolean) Description: ToDo リスト, Value: 0, ID: gsc-gab-4
+					524 tab (selectable, settable, boolean) Description: コンタクト, Value: 0, ID: gsc-gab-9
+					525 tab (selectable, settable, boolean) Description: マップ, Value: 0, ID: gsc-gab-8
+					526 tab (selectable, settable, boolean) Description: アドオンを取得, Value: 0, ID: qJTzr
+			527 button サイドパネルを表示しない
+		528 text 読み込みました
+
+The focused UI element is 0 AXWebArea 株式会社Mighty LINK - カレンダー - 2026年 11月, URL: calendar.google.com/calendar/u/2/r?pli=1

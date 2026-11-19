@@ -1,0 +1,133 @@
+{
+  "startedAt": "2026-11-06T11:07:08.483Z",
+  "finishedAt": "2026-11-06T11:07:15.542Z",
+  "date": "2026-11-06",
+  "base": "https://eigo-taxi-test.web.app",
+  "scope": "Published frontend using anonymous browser-local demo only; no Google identity, live spreadsheet, Calendar, physical device or third-party acceptance",
+  "browser": "Microsoft Edge headless mobile/touch emulation",
+  "testScriptSha256": "4b84ce5c40f10cbdb8fc29fc86c27a2098fb8a92d082d22c3045f3b2b182bfdb",
+  "release": {
+    "environment": "mighty-test",
+    "projectId": "eigo-taxi-app",
+    "siteId": "eigo-taxi-test",
+    "builtAt": "2026-10-29T16:02:19.761Z",
+    "baseCommit": "2fa6127715017d52ae0c9bd80be39c4db90a47c3",
+    "sourceDigest": "5dd9373bc151e7a8f99065092b8f780b461c99b74bf7fcdb870ab17a4ebe8baa"
+  },
+  "releaseSha256": "e685ef816493df268fec36e1d49fcca4332b10bf7b9234b8584fd446d204c991",
+  "releaseUnchangedDuringRun": true,
+  "results": [
+    {
+      "id": "HOSTED-SCROLL-admin-375x500",
+      "role": "admin",
+      "viewport": {
+        "width": 375,
+        "height": 500
+      },
+      "status": "FAIL",
+      "submitBox": {
+        "x": 194.5,
+        "y": 483,
+        "width": 139.5,
+        "height": 60
+      },
+      "panel": {
+        "maxHeight": "none",
+        "overflowY": "hidden",
+        "clientHeight": 634,
+        "scrollHeight": 634,
+        "scrollTop": 0
+      },
+      "error": "Registration button must be within viewport after scrolling",
+      "screenshot": {
+        "file": "HOSTED-SCROLL-admin-375x500.png",
+        "sha256": "faeeadbd4fc9489f164540bb7982f400b794df980a62e778008f0baf1b1e3137"
+      }
+    },
+    {
+      "id": "HOSTED-SCROLL-admin-812x375",
+      "role": "admin",
+      "viewport": {
+        "width": 812,
+        "height": 375
+      },
+      "status": "FAIL",
+      "submitBox": {
+        "x": 413,
+        "y": 421.5,
+        "width": 224,
+        "height": 42
+      },
+      "panel": {
+        "maxHeight": "none",
+        "overflowY": "hidden",
+        "clientHeight": 600,
+        "scrollHeight": 600,
+        "scrollTop": 0
+      },
+      "error": "Registration button must be within viewport after scrolling",
+      "screenshot": {
+        "file": "HOSTED-SCROLL-admin-812x375.png",
+        "sha256": "d7e1bbfbef9742412961bfb3956efaa0c816cefda9ea608f78ad679fb9f40757"
+      }
+    },
+    {
+      "id": "HOSTED-SCROLL-parent-375x500",
+      "role": "parent",
+      "viewport": {
+        "width": 375,
+        "height": 500
+      },
+      "status": "FAIL",
+      "submitBox": {
+        "x": 194.5,
+        "y": 483,
+        "width": 139.5,
+        "height": 60
+      },
+      "panel": {
+        "maxHeight": "none",
+        "overflowY": "hidden",
+        "clientHeight": 634,
+        "scrollHeight": 634,
+        "scrollTop": 0
+      },
+      "error": "Registration button must be within viewport after scrolling",
+      "screenshot": {
+        "file": "HOSTED-SCROLL-parent-375x500.png",
+        "sha256": "ffa0767a89f56f100a02da2dc4170ec07c8d9fe828a8a0bccafd74b51f728944"
+      }
+    },
+    {
+      "id": "HOSTED-SCROLL-parent-812x375",
+      "role": "parent",
+      "viewport": {
+        "width": 812,
+        "height": 375
+      },
+      "status": "FAIL",
+      "submitBox": {
+        "x": 413,
+        "y": 421.5,
+        "width": 224,
+        "height": 42
+      },
+      "panel": {
+        "maxHeight": "none",
+        "overflowY": "hidden",
+        "clientHeight": 600,
+        "scrollHeight": 600,
+        "scrollTop": 0
+      },
+      "error": "Registration button must be within viewport after scrolling",
+      "screenshot": {
+        "file": "HOSTED-SCROLL-parent-812x375.png",
+        "sha256": "8511a7af6d1a2042bb658897369412cb989d10c3996dba4cc798220bb0fb8b99"
+      }
+    }
+  ],
+  "blockedMutations": [],
+  "blockedSockets": [],
+  "pageErrors": [],
+  "pass": false
+}

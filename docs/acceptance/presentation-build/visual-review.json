@@ -1,0 +1,15 @@
+{
+  "nativePowerPointOpened": false,
+  "individuallyViewedSlideRange": "1-143",
+  "slides": 143,
+  "sha256": "85137464b43fc5f04dafd7847d796526603893e47837abc9d19df5eaadcc120a",
+  "finalFile": "deliverables/eigo-taxi-acceptance-2026-10-20-v2.pptx",
+  "limitations": [
+    "Long full-page mobile captures are small when fit to slide; originals are embedded and indexed.",
+    "Actual Google/device/production acceptance AT23-30 is blocked.",
+    "AT07 uses 16:30 rather than specification 17:30; documented input variation."
+  ],
+  "renderedSlides": 143,
+  "unresolvedLayoutOverlap": 0,
+  "revisedLocalScreenshotCaptionsRechecked": 29
+}

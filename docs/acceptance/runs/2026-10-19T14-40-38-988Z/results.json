@@ -1,0 +1,22 @@
+{
+  "runId": "2026-10-19T14-40-38-988Z",
+  "url": "http://127.0.0.1:4179",
+  "mode": "Vite source / isolated Chromium / demo LocalStorage; external requests blocked",
+  "timezone": "Asia/Tokyo",
+  "commit": "2fa6127715017d52ae0c9bd80be39c4db90a47c3",
+  "sourceHashes": {
+    "src/services/api.ts": "32550d6b8befdc467fd8774900336f7ae96ab0a06d2832dc7b6b0999bdcadb38",
+    "src/components/AddStudentModal.tsx": "b3d122fa603cb600810a7a6a68880847543aa163629d1eea5980431cf1753469",
+    "src/components/ParentPortal.tsx": "df72cd65cf6f8c0303908e24a14eb778bd3f6ea9a445e1f179f051918fdf4745",
+    "src/components/AddRideModal.tsx": "de3defe9b920c6fdfd02b0f2c2e62b6de912169cb563b1e3249becc2fa8685dd",
+    "src/components/TeacherDashboard.tsx": "083624341d2ff0e355619cf33a126a2519af2e194f47545222c1b13166198400",
+    "src/App.tsx": "4704aa17513ac85c8b91383298382a06cf650a1ef5f2d47b310d371714c2a963",
+    "src/components/Navbar.tsx": "2cb17237d1631950e3ac9d1df017c60bb89934af9963231fa4dd806eed4d0c7c",
+    "gas/Code.gs": "7cad92cb26034e9ac40f9d8beecbe5d7e13e03a0e0172d7f71b92a1c65cc22f6",
+    ".github/workflows/deploy.yml": "c336192a2d4c1542a222767d4c6b859935f447b4df59d7a6b242ac317eb338c7",
+    "scripts/run_acceptance.cjs": "cfc5c4f936df6feade0414dc002c061372d5361c2469410f1405988deb404ab3",
+    "scripts/acceptance-catalog.cjs": "2b4f1759c3e6e4f66a7faf77e2103aef8c962479c2874ce505a88590a41e324d"
+  },
+  "browser": "C:\\Users\\kanta\\.cache\\puppeteer\\chrome\\win64-154.0.8037.57\\chrome-win64\\chrome.exe",
+  "results": []
+}

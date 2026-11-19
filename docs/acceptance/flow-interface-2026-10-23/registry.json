@@ -1,0 +1,242 @@
+{
+  "screens": [
+    {
+      "id": "C01",
+      "name": "入口案内",
+      "role": "未ログイン",
+      "implementation": "#/ ／ 不正URL",
+      "operation": "管理者・保護者入口へ"
+    },
+    {
+      "id": "C02",
+      "name": "利用規約・個人情報・免責",
+      "role": "共通",
+      "implementation": "TermsModal内タブ",
+      "operation": "元画面へ閉じる"
+    },
+    {
+      "id": "A01",
+      "name": "管理者ログイン",
+      "role": "管理者",
+      "implementation": "#/admin",
+      "operation": "Google認証後A02"
+    },
+    {
+      "id": "A02",
+      "name": "本日の送迎",
+      "role": "管理者",
+      "implementation": "TeacherDashboard today",
+      "operation": "完了・予約・購入"
+    },
+    {
+      "id": "A03",
+      "name": "送迎予定・履歴一覧",
+      "role": "管理者",
+      "implementation": "同allRidesタブ",
+      "operation": "一覧・完了・取消"
+    },
+    {
+      "id": "A04",
+      "name": "生徒・チケット管理",
+      "role": "管理者",
+      "implementation": "同studentsタブ",
+      "operation": "生徒登録・追加購入"
+    },
+    {
+      "id": "A05",
+      "name": "個別URL・QR",
+      "role": "管理者",
+      "implementation": "PortalInvitations",
+      "operation": "コピー・QR表示"
+    },
+    {
+      "id": "A06",
+      "name": "アカウント一覧・編集",
+      "role": "管理者",
+      "implementation": "AccountManagement",
+      "operation": "追加・停止・削除・再発行"
+    },
+    {
+      "id": "A07",
+      "name": "Google連携情報",
+      "role": "管理者",
+      "implementation": "GoogleSettings",
+      "operation": "接続情報表示／デモ初期化"
+    },
+    {
+      "id": "P01",
+      "name": "保護者ログイン",
+      "role": "保護者",
+      "implementation": "#/parent[/個別ID]",
+      "operation": "Google認証後P02"
+    },
+    {
+      "id": "P02",
+      "name": "家庭専用ページ",
+      "role": "保護者",
+      "implementation": "ParentPortal",
+      "operation": "兄弟選択・予約・残数・取消"
+    },
+    {
+      "id": "D01",
+      "name": "送迎予約入力",
+      "role": "両者",
+      "implementation": "AddRideModal",
+      "operation": "送信後、呼出元へ"
+    },
+    {
+      "id": "D02",
+      "name": "チケット追加入力",
+      "role": "管理者",
+      "implementation": "AddTicketModal",
+      "operation": "送信後、呼出元へ"
+    },
+    {
+      "id": "D03",
+      "name": "生徒新規入力",
+      "role": "管理者",
+      "implementation": "AddStudentModal",
+      "operation": "送信後、呼出元へ"
+    },
+    {
+      "id": "D04",
+      "name": "アカウント変更確認",
+      "role": "管理者",
+      "implementation": "A06内の確認dialog",
+      "operation": "保存／削除→A06"
+    },
+    {
+      "id": "D05",
+      "name": "取消確認",
+      "role": "両者",
+      "implementation": "window.confirm",
+      "operation": "OK→取消、戻る→元画面"
+    },
+    {
+      "id": "E01",
+      "name": "Googleアカウント選択",
+      "role": "外部",
+      "implementation": "Firebase Auth popup",
+      "operation": "認証成功／中止を返す"
+    },
+    {
+      "id": "E02",
+      "name": "Googleカレンダー",
+      "role": "外部",
+      "implementation": "Google Calendar",
+      "operation": "当日の予定を人が確認"
+    },
+    {
+      "id": "E03",
+      "name": "Googleスプレッドシート",
+      "role": "外部",
+      "implementation": "Google Sheets",
+      "operation": "保守修正・保全・照合"
+    },
+    {
+      "id": "E04",
+      "name": "導入・保守設定",
+      "role": "外部",
+      "implementation": "Firebase Console／GAS",
+      "operation": "初期設定・緊急復旧"
+    }
+  ],
+  "interfaces": [
+    {
+      "id": "IF-01",
+      "endpoints": "A01/P01→E01→GAS",
+      "action": "Firebase認証＋login",
+      "description": "Google本人確認、役割・家庭・有効状態照合"
+    },
+    {
+      "id": "IF-02",
+      "endpoints": "D01→GAS",
+      "action": "createReservation",
+      "description": "生徒・日時・区分・場所・メモ→予定／結果"
+    },
+    {
+      "id": "IF-03",
+      "endpoints": "A02〜04/P02→GAS",
+      "action": "getStudents / getRides",
+      "description": "権限に応じた生徒・送迎一覧を取得"
+    },
+    {
+      "id": "IF-04",
+      "endpoints": "D03→GAS",
+      "action": "createStudent",
+      "description": "生徒情報・初期残数→生徒台帳"
+    },
+    {
+      "id": "IF-05",
+      "endpoints": "D05→GAS",
+      "action": "cancelReservation",
+      "description": "送迎ID→取消状態・予定削除"
+    },
+    {
+      "id": "IF-06",
+      "endpoints": "A02/A03→GAS",
+      "action": "completeRide",
+      "description": "送迎ID→片道1／往復2消費・完了履歴"
+    },
+    {
+      "id": "IF-07",
+      "endpoints": "A05→GAS／端末内",
+      "action": "getPortalInvitations",
+      "description": "専用URL取得。QRは端末内生成・コピー"
+    },
+    {
+      "id": "IF-08",
+      "endpoints": "A06/D04→GAS",
+      "action": "getManagedUsers / saveManagedUser / deleteManagedUser",
+      "description": "一覧取得・保存・削除・再発行（管理者限定）"
+    },
+    {
+      "id": "IF-09",
+      "endpoints": "GAS→Script Properties",
+      "action": "PropertiesService",
+      "description": "Google許可設定・更新ガードを保存"
+    },
+    {
+      "id": "IF-10",
+      "endpoints": "D02→GAS",
+      "action": "addTickets",
+      "description": "生徒・枚数・金額→残数・購入履歴更新"
+    },
+    {
+      "id": "IF-11",
+      "endpoints": "GAS→台帳",
+      "action": "SpreadsheetApp",
+      "description": "生徒・送迎・購入の各シートを読書き"
+    },
+    {
+      "id": "IF-12",
+      "endpoints": "ログアウト操作→SDK",
+      "action": "session消去＋signOut",
+      "description": "アプリ状態消去・Firebaseログアウト"
+    },
+    {
+      "id": "IF-13",
+      "endpoints": "GAS⇄Google Calendar",
+      "action": "CalendarApp",
+      "description": "予定作成・ID指定削除。実受入未完了"
+    },
+    {
+      "id": "IF-14",
+      "endpoints": "人→E03→サイト再読込",
+      "action": "外部画面で直接編集",
+      "description": "保守修正。自動計算・予定同期は実行しない"
+    },
+    {
+      "id": "IF-15",
+      "endpoints": "人→E04",
+      "action": "導入担当の外部画面操作",
+      "description": "初期Google接続・認証・初期管理者設定"
+    },
+    {
+      "id": "IF-16",
+      "endpoints": "送迎担当→E02",
+      "action": "Google Calendarの画面",
+      "description": "予定を人が閲覧。当アプリのAPI呼出しなし"
+    }
+  ]
+}

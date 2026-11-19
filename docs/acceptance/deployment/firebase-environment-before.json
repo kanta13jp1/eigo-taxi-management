@@ -1,0 +1,77 @@
+{
+  "checkedAt": "2026-10-19T16:40:54.118Z",
+  "account": "k-umezawa@ml-mightylink.com",
+  "projectId": "eigo-taxi-app",
+  "required": [
+    "resourcemanager.projects.get",
+    "firebase.projects.get",
+    "firebasehosting.sites.get",
+    "firebasehosting.sites.list",
+    "firebasehosting.sites.create",
+    "firebasehosting.sites.update"
+  ],
+  "checks": {
+    "project": {
+      "ok": true,
+      "data": {
+        "name": "projects/753038429305",
+        "parent": "organizations/943535207512",
+        "projectId": "eigo-taxi-app",
+        "state": "ACTIVE",
+        "displayName": "eigo-taxi-app",
+        "createTime": "2026-10-19T16:17:50.486Z",
+        "updateTime": "2026-10-19T16:18:08.646055Z",
+        "etag": "W/\"c91aaa58c5a84724\"",
+        "labels": {
+          "firebase": "enabled",
+          "firebase-core": "disabled"
+        }
+      }
+    },
+    "permissions": {
+      "ok": true,
+      "data": {
+        "permissions": [
+          "firebase.projects.get",
+          "firebasehosting.sites.create",
+          "firebasehosting.sites.get",
+          "firebasehosting.sites.list",
+          "firebasehosting.sites.update",
+          "resourcemanager.projects.get"
+        ]
+      }
+    },
+    "sites": {
+      "ok": true,
+      "data": {
+        "sites": [
+          {
+            "name": "projects/eigo-taxi-app/sites/eigo-taxi-app",
+            "defaultUrl": "https://eigo-taxi-app.web.app",
+            "type": "DEFAULT_SITE"
+          }
+        ]
+      }
+    },
+    "defaultReleases": {
+      "ok": true,
+      "data": {}
+    },
+    "testReleases": {
+      "ok": false,
+      "error": "Request to https://firebasehosting.googleapis.com/v1beta1/sites/eigo-taxi-test/releases?pageSize=5 had HTTP Error: 404, Requested entity was not found."
+    },
+    "parent": {
+      "ok": true,
+      "data": {
+        "name": "organizations/943535207512",
+        "displayName": "ml-mightylink.com",
+        "directoryCustomerId": "C044ll126",
+        "state": "ACTIVE",
+        "createTime": "2026-05-21T04:27:23.416246Z",
+        "updateTime": "2026-05-21T04:27:23.416246Z",
+        "etag": "W/\"8e2c6017e93c692f\""
+      }
+    }
+  }
+}

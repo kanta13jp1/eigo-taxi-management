@@ -1,0 +1,37 @@
+検証記録（ツール実行結果の要約、2026-10-19 JST）
+
+対象: 2fa6127715017d52ae0c9bd80be39c4db90a47c3 を基準とする作業ツリー。
+製品コードは変更していない。実際の対象ソース/distハッシュは最新runのresults.json参照。
+
+BUILD: PASS
+実行: RAYON_NUM_THREADS=1, UV_THREADPOOL_SIZE=2 を設定し npm run build
+内容: tsc -b && vite build
+出力: 1905 modules transformed; dist/index.html, dist/assets/index-DZOl_Wzw.css,
+      dist/assets/index-a4NOS63R.js を生成。exit_code=0。
+初回の並列制限なしビルドはmemory allocation failedで失敗。並列制限後の再実行で成功。
+
+LINT: PASS
+実行: npm run lint -- --threads=1
+内容: oxlint --threads=1
+exit_code=0。並列制限なしの試行にはWindowsシステムリソース不足が発生。
+
+TRACEABILITY: PASS
+実行: node scripts/generate_acceptance_docs.cjs
+      node scripts/validate_acceptance.cjs
+8業務フロー、30追跡行、30結果、文書リンク/アンカー、関連コード、テストハンドラ、
+ソースと画面キャプチャのSHA-256を検証。
+
+ACCEPTANCE: NOT ACCEPTED
+全30件: PASS 16 / FAIL 6 / BLOCKED 8。
+実行可能な22件を実施し画面28枚を取得。
+実Google連携・独立端末・実機・復旧・公開後の8件は未実施。
+ビルド/lint/参照整合性が合格でも受入合格・リリース可能を意味しない。
+
+VISUAL SPOT CHECK:
+AT-06、AT-15、AT-21-form の画像を表示し、予約・二重減算後の残高・モバイルフォームを確認。
+28画像の一括人手承認や実機検証とは区別する。
+
+CLEANUP:
+テスト起動のブラウザをclose、ローカルHTTPサーバーをclose。
+最終確認で4179番の待受・該当テスト起動のheadless-shellプロセスなし。
+他の作業・ユーザーアプリ・ブラウザタブを終了していない。

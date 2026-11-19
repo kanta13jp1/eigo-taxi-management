@@ -1,0 +1,67 @@
+Browser tab: 1750959453, Title: "Mauro & Brenda 送迎チケット管理 | Eigo Taxi Link", URL: "https://eigo-taxi-test.web.app/#/admin".
+1 AXWebArea Mauro & Brenda 送迎チケット管理 | Eigo Taxi Link, URL: eigo-taxi-test.web.app/#/admin
+	2 container root
+		3 container
+			4 heading Mauro & Brenda Taxi Link, Value: 1
+				5 text Mauro & Brenda Taxi Link
+			6 text 管理者専用ページ
+			7 container 管理者メニュー
+				8 button 管理者用 (Mauro・Brenda)
+				9 button 個別URL・QR
+				10 button アカウント管理
+				11 button Google連携
+		12 container
+			13 text 教室の連携環境  /  Mighty 検証管理者
+		14 button ログアウト
+		15 container
+			16 text 管理者画面 Mauro・Brenda 先生用管理ダッシュボード ※完全予約制対応：送迎完了時に「送迎完了」を押すと片道1枚（往復は2枚）が自動消化されます 本日の送迎 2 件 予定
+			17 text チケット残少・残ゼロ
+			18 text 1 名 登録生徒数 4 名
+			19 button 本日の送迎 (3)
+				20 text 本日の送迎 (
+				21 text 3
+				22 text )
+			23 button 送迎スケジュール一覧 (6)
+				24 text 送迎スケジュール一覧 (
+				25 text 6
+				26 text )
+			27 button 生徒・チケット管理 (4)
+				28 text 生徒・チケット管理 (
+				29 text 4
+				30 text )
+			31 button 送迎予定を追加
+			32 button チケット追加
+			33 heading 本日（2026-11-07）の送迎予定, Value: 2
+				34 text 本日（ 2026-11-07 ）の送迎予定
+			35 text Googleカレンダー・シートと自動同期 16:00 お迎え キャンセル
+			36 heading 顧客確認_架空生徒, Value: 4
+				37 text 顧客確認_架空生徒
+			38 text 保護者:  顧客確認用_架空保護者 （残チケット: 5 枚 ） 検証専用・実在しない乗車場所 💬 メモ:  DEV-CAL-SMOKE-20261107／登録取消の事前確認・実送迎なし
+			39 link Description: 地図アプリ, Value: google.com/maps/search/?api=1&query=%E6%A4%9C%E8%A8%BC%E5%B0%82%E7%94%A8%E3%83%BB%E5%AE%9F%E5%9C%A8%E3%81%97%E3%81%AA%E3%81%84%E4%B9%97%E8%BB%8A%E5%A0%B4%E6%89%80
+			40 text 16:00 お迎え
+			41 heading 顧客確認_架空生徒, Value: 4
+				42 text 顧客確認_架空生徒
+			43 text 保護者:  顧客確認用_架空保護者 （残チケット: 5 枚 ） CUST-04 完了用A・片道／実在しない場所 💬 メモ:  CUST-04 完了確認用・片道／模擬実績：実施済みとする／実送迎・決済なし／担当者の立会い不要
+			44 link Description: 地図アプリ, Value: google.com/maps/search/?api=1&query=CUST-04%20%E5%AE%8C%E4%BA%86%E7%94%A8A%E3%83%BB%E7%89%87%E9%81%93%EF%BC%8F%E5%AE%9F%E5%9C%A8%E3%81%97%E3%81%AA%E3%81%84%E5%A0%B4%E6%89%80
+			45 button 送迎完了（1回消費）
+				46 text 送迎完了（
+				47 text 1
+				48 text 回消費）
+			49 text 16:00 往復
+			50 heading 顧客確認_架空生徒, Value: 4
+				51 text 顧客確認_架空生徒
+			52 text 保護者:  顧客確認用_架空保護者 （残チケット: 5 枚 ） CUST-04 完了用B・往復／実在しない場所 💬 メモ:  CUST-04 完了確認用・往復／模擬実績：実施済みとする／実送迎・決済なし／担当者の立会い不要
+			53 link Description: 地図アプリ, Value: google.com/maps/search/?api=1&query=CUST-04%20%E5%AE%8C%E4%BA%86%E7%94%A8B%E3%83%BB%E5%BE%80%E5%BE%A9%EF%BC%8F%E5%AE%9F%E5%9C%A8%E3%81%97%E3%81%AA%E3%81%84%E5%A0%B4%E6%89%80
+			54 button 送迎完了（2回消費）
+				55 text 送迎完了（
+				56 text 2
+				57 text 回消費）
+		58 container
+			59 text © 2026 Mauro & Brenda English School. All rights reserved.
+			60 button 利用規約
+			61 text |
+			62 button 個人情報の取扱い
+			63 text |
+			64 button 免責事項
+
+The focused UI element is 1 AXWebArea Mauro & Brenda 送迎チケット管理 | Eigo Taxi Link, URL: eigo-taxi-test.web.app/#/admin

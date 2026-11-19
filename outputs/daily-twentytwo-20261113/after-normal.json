@@ -1,0 +1,19 @@
+{
+  "mode": "after",
+  "scenario": "normal",
+  "checkedAt": "2026-11-13T11:02:10.858Z",
+  "test": "AT-18",
+  "base": "http://127.0.0.1:65370",
+  "freshAnonymousAdminDemo": true,
+  "studentId": "STU-7d12fd8d-6b35-468d-8346-6fead88cacad",
+  "rideId": "RIDE-745c76cd-6f6b-46b2-9788-e78a7f484626",
+  "successVisible": true,
+  "alert": [],
+  "reloadOnlyRecovery": false,
+  "cancelledInLedger": true,
+  "onlyChangedTargetStatus": true,
+  "studentBalancesUnchanged": true,
+  "writeCount": 1,
+  "blockedRequests": [],
+  "scope": "Isolated synthetic browser demo; simulated read response, no Google or customer records."
+}

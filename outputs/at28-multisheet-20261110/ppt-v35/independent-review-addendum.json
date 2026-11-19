@@ -1,0 +1,44 @@
+{
+  "reviewer": "/root/heartbeat18_readonly_audit",
+  "status": "REQUIRES_REVISION",
+  "priorReview": {
+    "file": "independent-review.json",
+    "sha256": "d296960d3c7cddc2f3189af6ac415e77825c6807e746db32bcbb8168f2f6b71e",
+    "preserved": true
+  },
+  "scope": "Follow-up semantic review of operational misreading risk in the common copy/rename/delete diagram. All three current candidates are held pending a clarified caution.",
+  "candidates": [
+    {
+      "name": "tasks",
+      "sha256": "f2a363e0cd16cc0871b5fd8713a6a96e04a1e1f48e34fe3699fbdc12613ed3ad",
+      "slide": 19,
+      "adoption": "HOLD_REVISION_REQUIRED"
+    },
+    {
+      "name": "operations",
+      "sha256": "980d6ca10dc797121c2266ed9afa74d9f3cb4f8fda3e569ee5e78eadec7fccf4",
+      "slide": 16,
+      "adoption": "HOLD_REVISION_REQUIRED"
+    },
+    {
+      "name": "progress",
+      "sha256": "ec6113844a6b2b09545392eb2aa4fa7a6156c00348f28884f9bc2ffd3d6364a3",
+      "slide": 16,
+      "adoption": "HOLD_REVISION_REQUIRED"
+    }
+  ],
+  "finding": {
+    "severity": "medium",
+    "primaryLocation": {
+      "deck": "operations",
+      "slide": 16
+    },
+    "issue": "The current operations caution asks to check formulas/protection/named ranges before deletion. A reader could infer that checking makes sheet replacement a recommended procedure. The diagram in all three decks depicts copy/rename/delete, so its conclusion should explicitly reject copy/rename alone as a restoration method for referenced sheets.",
+    "sourceBoundary": "Do not use copy/rename replacement alone for referenced sheets. The restoration method remains unconfirmed. The experiment is partial and does not prove complete restoration.",
+    "observedWordingDifference": "The tasks and progress last-page guidance differs from operations; the precise before-deletion wording occurs in operations. Apply a clear common caution to the diagram in all three candidates for consistent interpretation.",
+    "suggestedCaution": "復元の注意：参照されているシートは、複写・改名だけで入れ替えない。復元方法は未確定です。"
+  },
+  "retainedResults": "Package integrity, source hashes, old45page pixels/text/notes/media preservation, existing factual observations, and visible 0/6/HOLD scope remain valid.",
+  "requiredNext": "Revise the common diagram caution in all three candidate decks, rerender/reimport and independently inspect changed last pages; preserve prior artifacts and reviews. Do not adopt current candidates.",
+  "changesMadeByReviewer": "Only this addendum written; original PASS receipt restored to its exact hash. No source, PPT, metadata, customer fixture or external changes."
+}

@@ -1,0 +1,11 @@
+{
+  "result": "PASS",
+  "reviewer": "Independent root Codex AI",
+  "reviewedAt": "2026-11-10T23:13:20.6746837+09:00",
+  "file": "docs/deliverables/2026-11-10-premeeting/progress-2026-11-10-night-supplement.pptx",
+  "sha256": "66ddf05d5441e02c1103a6c3e3772d789e3afaa1a9190e771c92c2c8e8e3769b",
+  "render": "outputs/demo-scope-20261110/ppt/final.png",
+  "renderSha256": "2c14882b4ecf41e62deefd27301bc40cb74ca258c9472f7b4ea62f6e90b911df",
+  "findings": "One slide, readable, no clipping. Three daily fixes and three developer acceptance items, trial scope, partial recovery, 0 of 6 customer cases, and no production launch are accurately distinguished.",
+  "limitations": "PowerPoint native rendering not inspected; separate daily supplement, not registry adoption."
+}

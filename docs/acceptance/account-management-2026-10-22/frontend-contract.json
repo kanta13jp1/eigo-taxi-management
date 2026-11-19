@@ -1,0 +1,95 @@
+{
+  "executedAt": "2026-10-22T12:09:03.949Z",
+  "mode": "Node VM; Firebase SDK and GAS responses stubbed; no real Google sign-in claim",
+  "passed": 20,
+  "total": 20,
+  "sourceHashes": {
+    "src/deployment-config.ts": "5c30aad36376487fcf2fbb664f2574bdd430890191675ca9813b5fdea516b6f1",
+    "src/services/api.ts": "a6c14347020f0c2ab31854313018e04e22b5c120a0dc6769a7e2a68f78b9b0c3",
+    "src/services/google-auth.ts": "d932afd3fea9eaa016d92e9e9e123b5090c78ad30e98faa8ac8540655f18cb9d",
+    "src/portal.ts": "48fa67c182d2422f9e79e51b774d5c229311504beb74c2d5fc27d46850b674fa",
+    "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\test_portals.cjs": "ed87f03f21137f18fdd5b8c0b5d7fedf8f388923c736b6525def99c50b7679a4"
+  },
+  "results": [
+    {
+      "name": "Strict hash routes, including unknown and malformed entry IDs",
+      "status": "PASS"
+    },
+    {
+      "name": "Roles and personal-link identity mismatch fail closed",
+      "status": "PASS"
+    },
+    {
+      "name": "QR payload has only canonical app URL and opaque ID, preserving GitHub base",
+      "status": "PASS"
+    },
+    {
+      "name": "Admin response refused at parent entry with no saved session",
+      "status": "PASS"
+    },
+    {
+      "name": "Individual ID mismatch refused even against old server without binding",
+      "status": "PASS"
+    },
+    {
+      "name": "Parent request carries ID and role, directory and admin writes are rejected locally",
+      "status": "PASS"
+    },
+    {
+      "name": "Stored role tampering cannot pass server identity validation",
+      "status": "PASS"
+    },
+    {
+      "name": "Rotated individual ID response clears live session",
+      "status": "PASS"
+    },
+    {
+      "name": "Demo parent data limited to assigned family and demo role entry mismatch refused",
+      "status": "PASS"
+    },
+    {
+      "name": "Only a valid developer GAS exec endpoint is accepted",
+      "status": "PASS"
+    },
+    {
+      "name": "Missing Google setup prevents any sign-in request",
+      "status": "PASS"
+    },
+    {
+      "name": "Saved endpoint overrides are ignored and tokens travel only in a POST body",
+      "status": "PASS"
+    },
+    {
+      "name": "Tampered saved endpoint or project cannot send a Google token",
+      "status": "PASS"
+    },
+    {
+      "name": "Each data call obtains a current Google token without persisting it in app session",
+      "status": "PASS"
+    },
+    {
+      "name": "Missing Google user clears the application session before sending data requests",
+      "status": "PASS"
+    },
+    {
+      "name": "Demo-only entry can never start a real Google login",
+      "status": "PASS"
+    },
+    {
+      "name": "Logout invalidates an outstanding login response and signs out Firebase",
+      "status": "PASS"
+    },
+    {
+      "name": "Account management refuses parent and demo admin without sending requests",
+      "status": "PASS"
+    },
+    {
+      "name": "Account management sends revision with each write and rejects malformed directory",
+      "status": "PASS"
+    },
+    {
+      "name": "Malformed successful list responses are rejected, including health-only payloads",
+      "status": "PASS"
+    }
+  ]
+}

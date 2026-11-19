@@ -1,0 +1,13 @@
+{
+  "id": "AT-26",
+  "pass": true,
+  "scope": "Offline GAS simulated Google and shared ledger, three synthetic principals",
+  "scheduledSeenByAdminA": true,
+  "completedSeenByAdminBAndParent": true,
+  "ticketBalance": [
+    7,
+    6
+  ],
+  "parentIsolation": true,
+  "externalWrites": 0
+}

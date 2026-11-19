@@ -1,0 +1,46 @@
+{
+  "pass": true,
+  "spreadsheetId": "1PqUq7BoBBVlPolivap0eg1UPik47vNNWphyBd0DNwvU",
+  "changedRanges": [
+    "検証結果履歴!A92:I93",
+    "進捗概要!A3",
+    "進捗概要!B11",
+    "進捗概要!B13"
+  ],
+  "customerCellsAndValidationPreserved": true,
+  "customerPasses": 0,
+  "overviewFormulaAndOtherCellsPreserved": true,
+  "previousRow91Preserved": true,
+  "newValues": {
+    "p": {
+      "A3": "更新：2026-11-14 ／ 本日計2修正・AT-10再検証とAT-19/20。累計24修正・異なる技術試験ID24項目。先行2修正Claude Code Fable 5.2、追加22修正Codex。検証版a97d95510290c92b。再ログイン案内を反映し公開確認。",
+      "B11": "開発側：架空ファイルで保護設定・参照式を含む復旧手順を検証する。認証・家庭別制限の実Google/GASでの確認は模擬検証と別管理。顧客側：小林さん6手順確認後、先生方との合同テストへ進む。",
+      "B13": "検証Hosting a97d95510290c92b・公開7応答一致。累計24修正・24試験IDは実施数で全範囲合格数ではない。AT-19/20は模擬・デモの限定確認。実Google/GAS・実機・顧客本人確認は別管理。正本r19・配布v36（12冊214頁）維持、第7〜24件後の全工程横断検査は未実施。顧客データ維持・顧客0/6・本番HOLD。"
+    },
+    "rows": [
+      [
+        "VR-20261114-02",
+        "2026-11-14",
+        "AT-19・未認証管理操作拒否/失効時の案内",
+        "24件目の修正・23番目の異なる技術試験ID",
+        "認証を確認できずログイン画面に戻ったとき、登録済みGoogleアカウントで入り直す案内を表示するようにしました。通常の入口と自分でログアウトした直後には表示しません。",
+        "ローカル：未認証の読取/管理操作拒否・台帳未生成、模擬UNAUTHORIZED後のセッション/個人情報消去・案内、再ログイン後消去、起動時失効、画面切替、手動ログアウトを確認。公開：復元できない架空保存セッションを消し案内。本人Googleログインは未実施。",
+        "docs/progress/2026-11-14-cumulative-twentyfour.md／outputs/daily-twentyfour-20261114/after-ui.json／public-ui.json／public-expired-wide.png",
+        "検証Hosting a97d95510290c92b、公開7応答SHA一致。24修正（先行2件Claude Code Fable 5.2、追加22件Codex）、24技術試験ID。実Google/GAS・実機・顧客合格を追加しない。本番保留。",
+        "AT-28保護設定・参照式の復旧手順。小林さん6手順→先生合同テスト→教室Google環境準備・移行判断。"
+      ],
+      [
+        "VR-20261114-03",
+        "2026-11-14",
+        "AT-20・家庭別アクセス制限（架空ローカルデモ）",
+        "24番目の異なる技術試験ID（追加修正の二重計上なし）",
+        "今回の実装修正はAT-19に記録した再ログイン案内1件。AT-20は既存の家庭別制限を新規実施して確認。",
+        "ローカル：自家庭STU-001だけの生徒/予約一覧、他家庭の参照・予約・取消と管理者の完了・チケット追加を拒否し、保存台帳/セッション不変。公開：保護者デモの自家庭のみ表示と他家庭/管理操作の非表示。実GASのサーバー側拒否は未確認。",
+        "docs/progress/2026-11-14-cumulative-twentyfour.md／outputs/daily-twentyfour-20261114/after-ui.json／public-ui.json／public-expired-wide.png",
+        "検証Hosting a97d95510290c92b、公開7応答SHA一致。24修正（先行2件Claude Code Fable 5.2、追加22件Codex）、24技術試験ID。実Google/GAS・実機・顧客合格を追加しない。本番保留。",
+        "AT-28保護設定・参照式の復旧手順。小林さん6手順→先生合同テスト→教室Google環境準備・移行判断。"
+      ]
+    ]
+  },
+  "visualVerification": "Google-rendered at 100% on progress overview and both history rows92/93. Changed text wraps without clipping; other wide columns reachable by horizontal scroll. Restored user-owned tab to customer sheet without editing it."
+}

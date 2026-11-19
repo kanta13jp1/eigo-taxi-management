@@ -1,0 +1,87 @@
+{
+  "checkedAt": "2026-11-11T07:02:50.341Z",
+  "before": true,
+  "case": "AT-17",
+  "scope": "React + actual demo API in JSDOM with synthetic storage",
+  "invalid": [
+    {
+      "field": "ticketCount",
+      "value": "-1",
+      "balance": 7,
+      "historyUnchanged": true
+    },
+    {
+      "field": "ticketCount",
+      "value": "0",
+      "balance": 7,
+      "historyUnchanged": true
+    },
+    {
+      "field": "ticketCount",
+      "value": "1.5",
+      "balance": 7,
+      "historyUnchanged": true
+    },
+    {
+      "field": "ticketCount",
+      "value": "NaN",
+      "balance": 7,
+      "historyUnchanged": true
+    },
+    {
+      "field": "ticketCount",
+      "value": "Infinity",
+      "balance": 7,
+      "historyUnchanged": true
+    },
+    {
+      "field": "ticketCount",
+      "value": "101",
+      "balance": 7,
+      "historyUnchanged": true
+    },
+    {
+      "field": "amount",
+      "value": "-1",
+      "balance": 7,
+      "historyUnchanged": true
+    },
+    {
+      "field": "amount",
+      "value": "1.5",
+      "balance": 7,
+      "historyUnchanged": true
+    },
+    {
+      "field": "amount",
+      "value": "NaN",
+      "balance": 7,
+      "historyUnchanged": true
+    },
+    {
+      "field": "amount",
+      "value": "Infinity",
+      "balance": 7,
+      "historyUnchanged": true
+    }
+  ],
+  "displayed": "0",
+  "afterInvalid": 17,
+  "historyAfterInvalid": [
+    {
+      "studentId": "STU-001",
+      "ticketCount": 10,
+      "amount": 0,
+      "note": "",
+      "id": "PUR-ec05d6d7-ec35-48c4-9499-9d7b7c7a80d6",
+      "studentName": "田中 陽菜 (ひな)",
+      "purchaseDate": "2026-11-11"
+    },
+    {
+      "id": "prior"
+    }
+  ],
+  "calls": [
+    0
+  ]
+}

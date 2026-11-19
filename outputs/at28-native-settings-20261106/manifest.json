@@ -1,0 +1,40 @@
+{
+  "record": "docs/progress/2026-11-06-at28-native-settings.md",
+  "files": [
+    {
+      "name": "after-range-paste-width-100.png",
+      "bytes": 56682,
+      "sha256": "5965e0a9563e3e0152e21d3e3447804ae86ee4ca2f76d3a48711ef67aed22a84"
+    },
+    {
+      "name": "backup-conditional-rule.png",
+      "bytes": 59480,
+      "sha256": "a3edc4d6511854fb09a30133c062f523089a64ae43debbef774b8a0c3c459c35"
+    },
+    {
+      "name": "sheet-copy-conditional-rule.png",
+      "bytes": 59089,
+      "sha256": "9d11c1ec72afb8bd5eadaaad7572e463f9ae16cd2b401479ce0761bce86a532a"
+    },
+    {
+      "name": "sheet-copy-final.png",
+      "bytes": 69698,
+      "sha256": "42f5476baab3014a4a41a8cd870c51c1ff9d0a11f4b3a9d3cce31b43a9c690b6"
+    },
+    {
+      "name": "sheet-copy-height-42.png",
+      "bytes": 52184,
+      "sha256": "2f106651ca836991c99a2392d49d3d63ff2d7a8f25c3823020c951c364bf3d66"
+    },
+    {
+      "name": "sheet-copy-validation.png",
+      "bytes": 70306,
+      "sha256": "3709012bd51f3d7eefec2db3b841b003c37df9bce989fbe19ae9f0325a288bc9"
+    },
+    {
+      "name": "sheet-copy-width-160.png",
+      "bytes": 52798,
+      "sha256": "ce4149738494ef46b792bcd97b98f82f48b8b08e547e768bd76954a9989f5a9f"
+    }
+  ]
+}

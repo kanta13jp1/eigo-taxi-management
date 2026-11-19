@@ -1,0 +1,32 @@
+{
+  "recordedAt": "2026-10-20T13:53:15.306Z",
+  "checks": {
+    "typescriptBuild": "PASS: node node_modules/typescript/bin/tsc -b",
+    "targetedLint": "PASS: zero warnings for six changed frontend modules",
+    "viteBuild": "PASS: node node_modules/vite/bin/vite.js build --base=/",
+    "gasRegression": "PASS 42/42; service-checks/2026-10-20T10-49-53-308Z/gas-results.json",
+    "frontendContract": "PASS 9/9; frontend-contract.json",
+    "actualQrPixelDecode": "PASS local PNG, plus root live 2-family PNG decode",
+    "hosting": "PASS release digest, deployed JS, and all six payload hashes"
+  },
+  "sourceHashes": {
+    "src/App.tsx": "3ea6385c2b4449bf813c85a330af6450f5b0f5dd1180bdd9ce01d99ec67599ab",
+    "src/portal.ts": "48fa67c182d2422f9e79e51b774d5c229311504beb74c2d5fc27d46850b674fa",
+    "src/components/Navbar.tsx": "cb616a7e41c4ec614945929b471e08983fb2670962a700751b132120e24ed7d6",
+    "src/components/LoginScreen.tsx": "418dd07855f725acd8904b8320ac4ca0163056fb86d929a427b3fb750c86adec",
+    "src/components/PortalInvitations.tsx": "14db0cba7230c0520c673031df569b9413411e955a632fd069c092d7106b28a9",
+    "src/services/api.ts": "b7b8d5132c0ef0bcfe7b5d59adb1e17b320d1f6200f8f50b99cd2be89db603d3",
+    "gas/Code.gs": "f717fa0c28623894c62b6564367d5733bac36d0fc39a507c70d00cd31a037854"
+  },
+  "limitations": [
+    "No production deployment or real-data modification",
+    "Calendar permission and AT-24 through AT-30 remain pending",
+    "Actual device QR download completion and phone camera test remain pending",
+    "PPTX native PowerPoint app not opened"
+  ],
+  "cleanup": {
+    "workerCreatedBrowserTabClosed": true,
+    "workerPreviewServerStopped": true,
+    "archivedThread": false
+  }
+}

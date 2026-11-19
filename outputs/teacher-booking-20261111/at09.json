@@ -1,0 +1,20 @@
+{
+  "checkedAt": "2026-11-11T09:13:55.757Z",
+  "case": "AT-09",
+  "scope": "JSDOM / anonymous teacher demo",
+  "names": [
+    "生徒",
+    "送迎日",
+    "お迎え時間",
+    "送迎場所・住所",
+    "連絡事項・メモ（任意）"
+  ],
+  "studentId": "STU-002",
+  "rideDate": "2026-11-12",
+  "rideTime": "16:45",
+  "location": "AT09 西門",
+  "reservedBy": "teacher",
+  "prior": 3,
+  "after": 4,
+  "balancesUnchanged": true
+}

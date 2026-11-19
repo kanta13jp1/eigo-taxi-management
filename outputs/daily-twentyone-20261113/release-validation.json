@@ -1,0 +1,16 @@
+{
+  "release": "5b9271233ac9309f",
+  "baseline": "c9cd711d551ccc77",
+  "inputs": 32,
+  "diff": [
+    "src/services/api.ts"
+  ],
+  "build": "npm run build:firebase (tsc -b and vite build), exit 0",
+  "lint": "oxlint src/services/api.ts, exit 0",
+  "sourceDigest": "b531e64e461b8a28e918b3a6c338685a8d14c537cd8d3f11a7f220ba4677021f",
+  "apiHash": "8b6cd31a746a0015764025814df2b750d3cda210151f2d8fb8292fc3311fd103",
+  "publicHashMatches": 7,
+  "publicUI": "public-ui.json",
+  "matrix": "matrix.json",
+  "physicalDevice": false
+}

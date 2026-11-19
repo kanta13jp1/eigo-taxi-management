@@ -1,0 +1,21 @@
+{
+  "reviewer": "authoring session (Claude Code); visual check by the author of the appended pages, not an independent review",
+  "reviewedAt": "2026-11-11T07:24:54.310278+09:00",
+  "result": "PASS",
+  "proposalSha256": "109e8002ce7d8a127200d88e79c673c02552c45bcad6aba6fe7ece0a75684ebb",
+  "viewed": [
+    "operations/current-18.png (second attempt, corrected row \"AT-24〜30は継続\")",
+    "first attempt: business/current-26.png, business/current-27.png, progress/contact.png; the first appended page is unchanged between attempts"
+  ],
+  "observations": [
+    "Header, sky band, title frame, footer ID and page number render as in earlier supplement pages",
+    "No clipped or overlapping text; table fits above the note box",
+    "Corrected cell now lists AT-24 to AT-30 as remaining"
+  ],
+  "reliesOnMachineCheck": "Other decks were not opened individually; review.json asserts that the body area of both appended pages is pixel-equivalent to the business deck in all 12 decks and that all 190 preserved pages are pixel-identical to a same-run render of their source",
+  "history": "First attempt failed independent review (P-01, P-02); retained under ppt-r19-20261111-attempt1-review-failed",
+  "notVerified": [
+    "Display in the PowerPoint application",
+    "Speaker notes rendering"
+  ]
+}

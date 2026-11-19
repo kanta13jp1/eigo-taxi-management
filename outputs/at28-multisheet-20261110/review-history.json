@@ -1,0 +1,15 @@
+{
+  "dateJst": "2026-11-10",
+  "initialCandidateSet": "ppt-v35/authoring-results.json",
+  "initialIndependentReview": "ppt-v35/independent-review.json",
+  "initialReviewSha256": "d296960d3c7cddc2f3189af6ac415e77825c6807e746db32bcbb8168f2f6b71e",
+  "additionalOperationalReadingReview": "ppt-v35/independent-review-addendum.json",
+  "additionalReviewSha256": "d31207c5a6ffdfc5742fe4f413f4ff05551849e4eaffa1acc612a11cc7fcdc64",
+  "additionalFinding": "Operations note could imply replacement by sheet copy/rename is acceptable after checks, while observed formulas follow old sheets and break on deletion",
+  "decision": "Initial adoption withdrawn; restore pre-adoption manifest, README and catalog bytes, preserve initial candidates and adoption receipt, revise then re-review before final adoption",
+  "withdrawnEvidence": "ppt-v35/withdrawn-adoption/",
+  "preAdoptionManifestSha256": "f009659912859bc4f1db4e4f204e878eee6dfec31722aa79cd2f7d0e10027ada",
+  "productionStarted": false,
+  "siteChanged": false,
+  "customerFixturesChanged": false
+}

@@ -1,0 +1,1 @@
+export async function prepareGoogleSignIn(){} export async function signInGoogle(){return {uid:"qa-uid",idToken:"synthetic-only"}} export async function getGoogleIdToken(){return "synthetic-only"} export async function signOutGoogle(){}

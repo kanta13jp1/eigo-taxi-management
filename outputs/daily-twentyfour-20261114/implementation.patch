@@ -1,0 +1,102 @@
+--- a/src/App.tsx
++++ b/src/App.tsx
+@@ -20,6 +20,7 @@
+ export function App() {
+   const [session, setSession] = useState<AppSession | null>(null);
+   const [route, setRoute] = useState(() => parsePortal(window.location.hash));
++  const [requiresLogin, setRequiresLogin] = useState(false);
+   const [checkingSession, setCheckingSession] = useState(true);
+   const [errorMessage, setErrorMessage] = useState('');
+   const [currentTab, setCurrentTab] = useState<'teacher' | 'invitations' | 'accounts' | 'settings'>('teacher');
+@@ -54,7 +55,7 @@
+     const changed = () => {
+       setSession(null); setStudents([]); setRides([]); setToastMessage(null); setErrorMessage('');
+       setIsAddRideOpen(false); setIsAddTicketOpen(false); setIsAddStudentOpen(false);
+-      setCheckingSession(true); setRoute(parsePortal(window.location.hash));
++      setRequiresLogin(false); setCheckingSession(true); setRoute(parsePortal(window.location.hash));
+     };
+     window.addEventListener('hashchange', changed);
+     return () => window.removeEventListener('hashchange', changed);
+@@ -74,13 +75,14 @@
+     ApiService.verifySession(route).then(next => {
+       if (active) { setIsLoading(true); setSession(next); setCheckingSession(false); }
+     }).catch(() => {
+-      if (active) { ApiService.logout(); setSession(null); setCheckingSession(false); }
++      if (active) { ApiService.logout(); setRequiresLogin(stored.mode === 'live'); setSession(null); setCheckingSession(false); }
+     });
+     return () => { active = false; };
+   }, [route]);
+ 
+   useEffect(() => {
+-    const ended = () => {
++    const ended = (event: Event) => {
++      setRequiresLogin(event instanceof CustomEvent && event.detail === 'reauthenticate');
+       setSession(null); setStudents([]); setRides([]); setToastMessage(null);
+       setIsAddRideOpen(false); setIsAddTicketOpen(false); setIsAddStudentOpen(false);
+     };
+@@ -219,10 +221,10 @@
+   };
+ 
+   if (checkingSession) return <main className="p-12 text-center">ログイン状態を確認しています…</main>;
+-  if (!session) return <LoginScreen key={JSON.stringify(route)} route={route} onLogin={next => {
++  if (!session) return <LoginScreen key={JSON.stringify(route)} route={route} requiresLogin={requiresLogin} onLogin={next => {
+     try { assertPortal(parsePortal(window.location.hash),next.user); }
+     catch (error) { ApiService.logout(); throw error; }
+-    setIsLoading(true); setErrorMessage('');
++    setRequiresLogin(false); setIsLoading(true); setErrorMessage('');
+     setCurrentTab('teacher');
+     setSession(next);
+   }} />;
+--- a/src/components/LoginScreen.tsx
++++ b/src/components/LoginScreen.tsx
+@@ -7,7 +7,7 @@
+ import { prepareGoogleSignIn } from '../services/google-auth';
+ 
+ // @trace CODE-01 REQ-01
+-export function LoginScreen({ onLogin, route }: { onLogin: (session: AppSession) => void; route: PortalRoute }) {
++export function LoginScreen({ onLogin, route, requiresLogin }: { requiresLogin?: boolean; onLogin: (session: AppSession) => void; route: PortalRoute }) {
+   const [error, setError] = useState('');
+   const [busy, setBusy] = useState(false);
+   const [googleReady, setGoogleReady] = useState(false);
+@@ -36,6 +36,7 @@
+           <a className="block rounded-lg border p-3 text-center" href="#/admin">管理者専用の入口</a>
+         </> : <>
+           <h2 className="text-lg font-bold">{role === 'admin' ? '管理者専用ログイン' : '生徒・保護者専用ログイン'}</h2>
++          {requiresLogin && !demoEntry && <p role="status" className="rounded-lg bg-amber-50 p-3 text-sm">ログイン状態を確認できませんでした。教室に登録したGoogleアカウントでもう一度ログインしてください。</p>}
+           {demoEntry ? <p className="rounded-lg bg-amber-50 p-3 text-sm">こちらは架空データで試す体験用の入口です。実際の予約には、教室から届いたご家庭専用URLを開いてください。</p> : <>
+             <p className="text-sm">教室に登録したGoogleアカウントでログインしてください。初期設定は開発担当者が行います。</p>
+             {route.kind === 'parent' && route.entryId && <p className="rounded-lg bg-emerald-50 p-3 text-sm">ご家庭専用の入口です。登録されたご本人のアカウントで確認します。</p>}
+--- a/src/services/api.ts
++++ b/src/services/api.ts
+@@ -190,11 +190,11 @@
+ }
+ function isDemo(session:AppSession): boolean { return session.mode === 'demo'; }
+ // @trace CODE-34 REQ-34
+-function endSession(): void {
++function endSession(reason: 'logout' | 'reauthenticate' = 'logout'): void {
+   sessionRevision++;
+   sessionStorage.removeItem(SESSION_KEY);
+   void signOutGoogle().catch(() => {});
+-  window.dispatchEvent(new Event('eigo-taxi-session-ended'));
++  window.dispatchEvent(new CustomEvent('eigo-taxi-session-ended', { detail: reason }));
+ }
+ // @trace CODE-18 REQ-18
+ export class InactiveReservationError extends Error {}
+@@ -208,7 +208,7 @@
+       const active=getSession();
+       if (['UNAUTHORIZED','AUTH_NOT_CONFIGURED','ACCOUNT_NOT_REGISTERED','PORTAL_MISMATCH','ENTRY_REVOKED','REVIEW_UNAVAILABLE'].includes(json?.code) &&
+           expectedSession && JSON.stringify(active) === JSON.stringify(expectedSession)) {
+-        endSession();
++        endSession('reauthenticate');
+       }
+       if (action === 'completeRide' && json?.code === 'INVALID_STATE') {
+         throw new InactiveReservationError(json.error || 'この予約は完了処理できません');
+@@ -226,7 +226,7 @@
+   let idToken: string;
+   try { idToken = await getGoogleIdToken(session.firebaseUid); }
+   catch {
+-    if (JSON.stringify(getSession()) === JSON.stringify(session)) endSession();
++    if (JSON.stringify(getSession()) === JSON.stringify(session)) endSession('reauthenticate');
+     throw new Error('もう一度ログインしてください。');
+   }
+   if (JSON.stringify(getSession()) !== JSON.stringify(session)) throw new Error('ログイン状態が変わりました。');

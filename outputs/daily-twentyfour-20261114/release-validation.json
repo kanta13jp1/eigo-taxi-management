@@ -1,0 +1,18 @@
+{
+  "release": "a97d95510290c92b",
+  "baseline": "9028a05806171c13",
+  "sourceDigest": "38f4d5cc36a770b13e904bfbd8c8dc8430a0d0a23f405a102739fe8af6ded906",
+  "inputs": 32,
+  "diff": [
+    "src/App.tsx",
+    "src/components/LoginScreen.tsx",
+    "src/services/api.ts"
+  ],
+  "publicHashMatches": 7,
+  "payloads": 6,
+  "build": "tsc -b and vite build passed",
+  "lint": "three changed inputs: oxlint exit 0",
+  "publicUI": "public-ui.json",
+  "physicalDevice": false,
+  "liveGoogleAcceptance": false
+}

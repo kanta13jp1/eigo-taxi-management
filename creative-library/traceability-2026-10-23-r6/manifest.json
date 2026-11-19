@@ -1,0 +1,100 @@
+{
+  "provenance": "Requested acceptance evidence and common-theme deck revision. No publication or production authorization.",
+  "files": [
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/business-2026-10-23-v6.pptx",
+      "file": "business-2026-10-23-v6.pptx",
+      "sha256": "267ded7dde16b2aa10072a2eee9105bf08ad3254fceba7200e088864c13bd3c1"
+    },
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/requirements-2026-10-23-v6.pptx",
+      "file": "requirements-2026-10-23-v6.pptx",
+      "sha256": "9af98ed241194f0c55c9da51e153ee4967ef7d0c3b131c5a30958ad175e8acc7"
+    },
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/design-2026-10-23-v6.pptx",
+      "file": "design-2026-10-23-v6.pptx",
+      "sha256": "14b6ad3a6d5e206a3ea5b064063191f5f2e92fb86cc13b938004858324706e29"
+    },
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/test-spec-2026-10-23-v6.pptx",
+      "file": "test-spec-2026-10-23-v6.pptx",
+      "sha256": "c1ad61266a9a1fd2747a336e3efe4e0337f83323e04e012e2cae8fd4a12e597a"
+    },
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/tasks-2026-10-23-v6.pptx",
+      "file": "tasks-2026-10-23-v6.pptx",
+      "sha256": "9e04d4183c1337633f8eecd3662829ee8b12d85c7100d52e92101117793c5167"
+    },
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/implementation-2026-10-23-v6.pptx",
+      "file": "implementation-2026-10-23-v6.pptx",
+      "sha256": "153d240a8682c38ba97a4ed8b7bdf9c49944df5273d90c00fd507f5208d9a2f9"
+    },
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/test-code-2026-10-23-v6.pptx",
+      "file": "test-code-2026-10-23-v6.pptx",
+      "sha256": "1a29e09de5f7432b4f054c6a13c3a5e0710db39f5d84aa717b91d789c80c2c6b"
+    },
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/acceptance-2026-10-23-v6.pptx",
+      "file": "acceptance-2026-10-23-v6.pptx",
+      "sha256": "4b4cfaa68b723d9e135ce96b91b257409e93e17f2303d7a7eeb02cceb5b3a2a0"
+    },
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/operations-2026-10-23-v6.pptx",
+      "file": "operations-2026-10-23-v6.pptx",
+      "sha256": "8d345639b97913d959a6e582b37bb1c635859912152802ccf901a5f80a767aef"
+    },
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/user-2026-10-23-v6.pptx",
+      "file": "user-2026-10-23-v6.pptx",
+      "sha256": "3d156309f4a6397528a3c43f66865a804697c834353a4c84ea354560525ef5b9"
+    },
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/matrix-2026-10-23-v6.pptx",
+      "file": "matrix-2026-10-23-v6.pptx",
+      "sha256": "a0ec8be0a0ab06f6415d0fd3ee4e399dbfdc5da9e6e2fc8f9ca59de202cbe210"
+    },
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/progress-2026-10-23-v6.pptx",
+      "file": "progress-2026-10-23-v6.pptx",
+      "sha256": "ed725e10bc0de64bb8dbdf6dfb5646335be89a9ed1459fdafd40eee96ffb4605"
+    },
+    {
+      "source": "docs/traceability/registry.json",
+      "file": "registry.json",
+      "sha256": "1d3c484ae6b506ec0c24193469e0fe2566c1171a639596e5721adcfded228e94"
+    },
+    {
+      "source": "docs/traceability/matrix.csv",
+      "file": "matrix.csv",
+      "sha256": "c9066deb638efa33be6d866194c5c703044ba79884b569e6b772cfcf4aec85f1"
+    },
+    {
+      "source": "docs/traceability/SELF_REVIEW_R6.md",
+      "file": "SELF_REVIEW_R6.md",
+      "sha256": "2566fe048d1f631cc33d7680d0b67f149f31eb75cfd927bdc54b074ebcf7e2ef"
+    },
+    {
+      "source": "docs/acceptance/concurrent-completion-plan-2026-10-23/live-results.json",
+      "file": "live-results.json",
+      "sha256": "be37c579e4cc9f600194d87565171aff4f762e043cd11c8ebfda026f9cb71526"
+    },
+    {
+      "source": ".manual-build-20261020/traceability-decks-r6.mjs",
+      "file": "traceability-decks-r6.mjs",
+      "sha256": "4e5a56272cb6078666d09f5119b0d393978fcd8520202bbbbf584c27e07bd9e3"
+    },
+    {
+      "source": ".manual-build-20261020/finalize-traceability-r6.mjs",
+      "file": "finalize-traceability-r6.mjs",
+      "sha256": "ae58e2f05c92ed63ceed07633a0cd147f69b8d3d4a730ec43972acd22316350b"
+    },
+    {
+      "source": "docs/progress/2026-10-23-at27-concurrent-completion.md",
+      "file": "2026-10-23-at27-concurrent-completion.md",
+      "sha256": "ddf9a23ce4367babc06bd7b53a3263a4c4fd7b6994cb1742faa5250dbbbac4c2"
+    }
+  ]
+}

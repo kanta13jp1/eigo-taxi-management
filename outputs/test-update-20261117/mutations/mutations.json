@@ -1,0 +1,9 @@
+{
+  "note": "Each mutation was applied to the working tree, the named suites were run, and the file was restored; the restored file's sha256 was checked against the original each time (logs: *-trace.log, *-local.log, C-reviewer.log).",
+  "mutations": [
+    {"id": "A-no-confirmation", "file": "src/components/ParentPortal.tsx", "change": "cancel button: onClick={() => setCancelRideId(ride.id)}  ->  onClick={() => onCancelRide(ride.id)}  (cancels immediately, no dialog)", "suites": ["scripts/test_trace_ui.mjs", "scripts/run_local_acceptance.mjs"], "result": "UI-06 FAIL, LOCAL-UI-07 FAIL"},
+    {"id": "B-confirm-does-nothing", "file": "src/components/ParentPortal.tsx", "change": "confirmCancellation: '      await onCancelRide(cancelTarget.id);'  ->  '      void 0;'", "suites": ["scripts/test_trace_ui.mjs", "scripts/run_local_acceptance.mjs"], "result": "UI-06 FAIL, LOCAL-UI-07 FAIL"},
+    {"id": "C-complete-does-nothing", "file": "src/components/TeacherDashboard.tsx", "line": 467, "change": "all-rides complete button: onClick={() => completeRide(ride)}  ->  onClick={() => undefined}", "suites": ["tests/reviewer-ui/run.mjs"], "result": "REVIEW-UI-02 FAIL (REVIEW-UI-03 FAIL as a dependent); a first attempt did not run because its output folder was missing and is not counted"}
+  ],
+  "limitation": "Mutations A and B ran against scripts/test_trace_ui.mjs with LF line endings; the logic is identical to the final CRLF file."
+}

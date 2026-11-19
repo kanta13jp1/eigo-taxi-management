@@ -1,0 +1,21 @@
+{
+  "dateJst": "2026-11-10",
+  "reviewer": "/root/heartbeat18_readonly_audit",
+  "scope": "Independent read-only review of local observation report and six saved native Google Sheets screenshots; no re-execution",
+  "imagesReviewed": ["00", "02", "04", "06", "07", "08"],
+  "imageHashSet": "outputs/at28-multisheet-20261110/SHA256SUMS.txt",
+  "allTenSavedImageHashesMatched": true,
+  "observationsSupported": [
+    "Named-reference formula is rewritten to =#REF!*3 after deletion and remains broken after range paste",
+    "Specific ordinary cross-sheet formula yields 20 after range paste",
+    "Formula follows the old renamed sheet; deleting that sheet yields #REF!",
+    "Copied sheets have no corresponding protection shown, while the existing summary protection remains"
+  ],
+  "finding": "C01 only supports the observed cell formula, not runtime GAS or gid-link preservation. Range paste cannot be declared a finalized full recovery procedure.",
+  "remediation": "Report corrected to tentative range-paste candidate and explicitly labels GAS, gid links, all formulas and settings as not measured.",
+  "reviewedCorrectedReportSha256": "9bfc4456cfef8922d0607998312762f92bb5479c4c43427e29273dc02f45f981",
+  "status": "OBSERVATIONS_SUPPORTED_WITH_SCOPE_CORRECTED",
+  "at28FullAcceptance": "NOT_PASSED",
+  "customerAcceptance": "0/6",
+  "productionStarted": false
+}

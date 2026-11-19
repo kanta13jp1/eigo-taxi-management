@@ -1,0 +1,14 @@
+const fs=require('node:fs'),p=require('node:path'),assert=require('node:assert/strict'),crypto=require('node:crypto');
+const out=__dirname,base='c9cd711d551ccc77',stage=p.join(out,'stage'),dir='docs/acceptance/deployment',destination=p.resolve(out,'../..',dir),source=p.join(stage,dir);
+const read=f=>JSON.parse(fs.readFileSync(f,'utf8').replace(/^\uFEFF/,''));
+const prior=read(p.join(destination,'releases',base,'build-manifest.json')),current=read(p.join(source,'build-manifest.json')),receipt=read(p.join(source,'firebase-deploy.json')),publicCheck=read(p.join(source,'public-verification.json')),publicUI=read(p.join(out,'public.json'));
+const id=receipt.result.hosting.match(/^projects\/753038429305\/sites\/eigo-taxi-test\/versions\/([a-z0-9]+)$/)[1];
+assert.equal(receipt.status,'success');assert.equal(publicCheck.pass,true);assert.equal(publicCheck.results.length,7);assert.ok(publicCheck.results.every(r=>r.match));assert.ok(publicUI.formRetained && publicUI.recoveryExact && publicUI.reloadError);assert.deepEqual(publicUI.blockedRequests,[]);
+const diff=Object.keys(current.sourceHashes).filter(k=>current.sourceHashes[k]!==prior.sourceHashes[k]);
+assert.deepEqual(Object.keys(current.sourceHashes),Object.keys(prior.sourceHashes));assert.deepEqual(diff,['src/services/api.ts']);assert.equal(current.release.sourceDigest,'b531e64e461b8a28e918b3a6c338685a8d14c537cd8d3f11a7f220ba4677021f');
+const releaseDir=p.join(destination,'releases',id);assert.ok(!fs.existsSync(releaseDir));fs.cpSync(p.join(source,'releases',id),releaseDir,{recursive:true,errorOnExist:true,force:false});
+const digest=f=>crypto.createHash('sha256').update(fs.readFileSync(f)).digest('hex');
+for(const [side,hashes] of [['source',current.sourceHashes],['payload',current.distHashes]]) for(const [f,v] of Object.entries(hashes))assert.equal(digest(p.join(releaseDir,side,f)),v);
+for(const f of ['firebase-deploy.json','build-manifest.json','public-verification.json'])fs.copyFileSync(p.join(source,f),p.join(destination,f));
+fs.writeFileSync(p.join(out,'public-ui.json'),JSON.stringify({...publicUI,release:id,pass:true,physicalDevice:false},null,2));
+fs.writeFileSync(p.join(out,'release-validation.json'),JSON.stringify({release:id,baseline:base,inputs:Object.keys(current.sourceHashes).length,diff,build:'npm run build:firebase (tsc -b and vite build), exit 0',lint:'oxlint src/services/api.ts, exit 0',sourceDigest:current.release.sourceDigest,apiHash:current.sourceHashes[diff[0]],publicHashMatches:7,publicUI:'public-ui.json',matrix:'matrix.json',physicalDevice:false},null,2));console.log('Verified and archived '+id);

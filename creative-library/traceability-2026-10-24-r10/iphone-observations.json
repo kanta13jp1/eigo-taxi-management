@@ -1,0 +1,59 @@
+{
+  "id": "DEV29-IOS-OBS-01",
+  "date": "2026-10-24",
+  "source": "user-provided physical iPhone screenshots; not agent-operated device",
+  "browser": "UNCONFIRMED",
+  "osVersion": "UNCONFIRMED",
+  "principalRole": "registered-admin-2",
+  "observations": {
+    "adminAuthenticatedScreen": true,
+    "studentsCount": 3,
+    "rideHistoryCount": 3,
+    "visibleTicketBalances": [
+      7,
+      1
+    ],
+    "differentTabsAndScrollPositions": true,
+    "loginScreenShownAtEnd": true
+  },
+  "notEstablished": [
+    "browser identity",
+    "iOS version",
+    "Google chooser sequence",
+    "reload after logout",
+    "horizontal access to rightmost ride columns",
+    "parent authenticated access",
+    "Android",
+    "reservation and cancellation"
+  ],
+  "thirdPartyAcceptanceCounted": false,
+  "calendarPermissionAdded": false,
+  "productionStarted": false,
+  "images": [
+    {
+      "id": "IOS-IMG-01",
+      "name": "1-写真1.jpg",
+      "sha256": "1a3c69092ba505d4fef4d3a99536e6aaf1e81ba90ee13c0b0dd3e8e5786bbbb1"
+    },
+    {
+      "id": "IOS-IMG-02",
+      "name": "2-写真2.jpg",
+      "sha256": "cf1d969862d16b5b957a75b0e6f3c11b2d399895e01854c2fcbb23923d892a09"
+    },
+    {
+      "id": "IOS-IMG-03",
+      "name": "3-写真3.jpg",
+      "sha256": "8d505cc012d71df132ab1cee347601fe9feb82a3365c2fa2f796d4621495c536"
+    },
+    {
+      "id": "IOS-IMG-04",
+      "name": "4-写真4.jpg",
+      "sha256": "56e0e27753d592e4fb26e60e4ec9483b2030c0083bc2defade9c446f61277381"
+    },
+    {
+      "id": "IOS-IMG-05",
+      "name": "5-写真5.jpg",
+      "sha256": "8b48de035b2d62e6e883916f87dcc133165161974165d5a1b0a9cd751421490b"
+    }
+  ]
+}

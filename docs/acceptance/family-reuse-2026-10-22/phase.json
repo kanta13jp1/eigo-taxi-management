@@ -1,0 +1,31 @@
+{
+  "updatedAt": "2026-10-22T14:27:02.653Z",
+  "stage": "COMPLETE_LIMITED_SCOPE",
+  "temporaryRoles": {
+    "admin": "original-company-admin",
+    "familyA": "former-second-admin",
+    "familyB": "temporary-new-registration"
+  },
+  "companyAdminRetained": true,
+  "restorationRequired": false,
+  "restorationCompleted": true,
+  "checks": {
+    "familyALogin": "PASS",
+    "familyBLogin": "PASS",
+    "crossFamilyDenial": "PASS",
+    "adminPortalDenial": "PASS",
+    "restoreTwoAdmins": "PASS",
+    "familyAReload": "PASS",
+    "familyAOnlyAssignedStudent": "PASS",
+    "familyAOtherUrlClearsView": "PASS",
+    "familyAOtherUrlAuthenticatedDenial": "PASS",
+    "familyBReload": "PASS",
+    "familyBOnlyAssignedStudent": "PASS",
+    "familyBOtherUrlAuthenticatedDenial": "PASS",
+    "familyBFirstUidBinding": "PASS"
+  },
+  "calendarPermissionsAdded": false,
+  "productionStarted": false,
+  "documentationVersion": "v21",
+  "postRestorationAdminLogin": "NOT_EXECUTED_EXISTING_TAB_ATTACHMENT_TIMEOUT"
+}

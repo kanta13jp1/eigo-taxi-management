@@ -1,0 +1,47 @@
+{
+  "id": "AT27-PREP-01",
+  "status": "PREPARED_NOT_EXECUTED",
+  "environment": "mighty-test only",
+  "studentId": "STU-AT27-a67d20b4",
+  "rideId": "RIDE-AT27-3f85e0af",
+  "initialBalance": 3,
+  "expectedAfterOneWayCompletion": 2,
+  "rideType": "pickup",
+  "sheetFixtureOnly": true,
+  "calendarEventId": "",
+  "constraints": [
+    "Never import into original or production ledger.",
+    "Create and verify backup of all 3 validation sheets before writing fixture.",
+    "Use dedicated fixture student and reservation; never complete existing history rows.",
+    "Inspect current app deployment and confirm independent registered admin sessions.",
+    "After test compare both admin views and raw sheet balance/status, retry same ID once to prove no second consumption.",
+    "Restore from before-test evidence and verify no fixture rows remain.",
+    "Do not add Calendar permissions or start production."
+  ],
+  "columnsAreIllustrative": false,
+  "studentRow": [
+    "STU-AT27-a67d20b4",
+    "AT27 isolated fixture",
+    "Test guardian",
+    "000-0000-0000",
+    "Synthetic test location",
+    "Disposable AT27 fixture",
+    3,
+    "2026-10-23"
+  ],
+  "rideRow": [
+    "RIDE-AT27-3f85e0af",
+    "STU-AT27-a67d20b4",
+    "AT27 isolated fixture",
+    "2026-10-23",
+    "16:30",
+    "pickup",
+    "Synthetic test location",
+    "scheduled",
+    "",
+    "teacher",
+    "Manual fixture for completion-only concurrency check",
+    ""
+  ],
+  "acceptanceBoundary": "This tests completion-only race on explicitly seeded fixture, not real Calendar booking/cancellation or full AT26."
+}

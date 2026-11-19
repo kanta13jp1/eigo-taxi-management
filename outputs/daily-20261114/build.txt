@@ -1,0 +1,22 @@
+
+> eigo-taxi-management@0.0.0 build:firebase
+> tsc -b && vite build --base=/ && node scripts/prepare_test_release.cjs
+
+vite v8.3.3 building client environment for production...
+transforming...
+✓ 1950 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.50 kB │ gzip:   0.36 kB
+dist/assets/index-BrKsRKPR.css   23.31 kB │ gzip:   5.22 kB
+dist/assets/index-Cxy6RW-Q.js   450.02 kB │ gzip: 135.29 kB
+
+✓ built in 1.29s
+{
+  "environment": "mighty-test",
+  "projectId": "eigo-taxi-app",
+  "siteId": "eigo-taxi-test",
+  "builtAt": "2026-11-14T09:01:43.284Z",
+  "baseCommit": "2fa6127715017d52ae0c9bd80be39c4db90a47c3",
+  "sourceDigest": "b4d158cdd387ec1bc2095d79a5aac492337c7351ba84acd5c98236c770b3511d"
+}

@@ -1,0 +1,14 @@
+{
+  "executedAt": "2026-10-22T12:41:02.603Z",
+  "identity": "検証家庭B",
+  "assignedStudentCount": 1,
+  "balance": 1,
+  "remainingTicketContactShown": true,
+  "reloadSameScope": true,
+  "otherFamilyStudentsVisible": false,
+  "adminNavigationVisible": false,
+  "authenticatedAdminRouteShowsLogin": true,
+  "reverseAuthenticatedFamilyDenial": "PENDING",
+  "calendarPermissionsAdded": false,
+  "productionStarted": false
+}

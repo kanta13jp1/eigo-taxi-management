@@ -1,0 +1,51 @@
+{
+  "nodeVersion": "24.22.1",
+  "environment": {
+    "EIGO_CHROMIUM_EXECUTABLE": "C:/Program Files/Google/Chrome/Application/chrome.exe",
+    "EIGO_UI_TEST_OUTPUT_DIR": "outputs/reservation-retry-20261109/regression/trace-ui"
+  },
+  "commands": {
+    "trace-ui": "& \"C:/Program Files/WindowsApps/OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt/dependencies/node/bin/node.exe\" scripts/test_trace_ui.mjs",
+    "local": "& \"C:/Program Files/WindowsApps/OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt/dependencies/node/bin/node.exe\" scripts/run_local_acceptance.mjs --out outputs/reservation-retry-20261109/regression/local",
+    "reviewer": "& \"C:/Program Files/WindowsApps/OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt/dependencies/node/bin/node.exe\" tests/reviewer-ui/run.mjs outputs/reservation-retry-20261109/regression/reviewer"
+  },
+  "suites": {
+    "trace-ui": {
+      "report": "outputs/reservation-retry-20261109/regression/trace-ui/results.json",
+      "sha256": "aaf68fea4db482f20a61e404f541f1393c58b31939bf4561e6c571a23ececf80",
+      "passed": 6,
+      "matchedSourceFiles": 10,
+      "sourceHashMismatches": [],
+      "screenshots": 6
+    },
+    "local": {
+      "report": "outputs/reservation-retry-20261109/regression/local/results.json",
+      "sha256": "64aca52df5b81eed5d01bf20b76fbc6809bd008810ba40a596e09f038462fc12",
+      "passed": 14,
+      "matchedSourceFiles": 30,
+      "sourceHashMismatches": [],
+      "screenshots": 14
+    },
+    "reviewer": {
+      "report": "outputs/reservation-retry-20261109/regression/reviewer/results.json",
+      "sha256": "b563449dbe46b82faa51554bf53fb72ccead4f00414ab3a0d54b240b1bff0380",
+      "passed": 8,
+      "matchedSourceFiles": 8,
+      "sourceHashMismatches": [],
+      "screenshots": 8
+    },
+    "portal": {
+      "report": "outputs/reservation-retry-20261109/frontend-contract.json",
+      "sha256": "85a20edd32fcae278d0b82f3aa482b5bcbc16d8c46116c15b453df7f78dcc163",
+      "passed": 33,
+      "matchedSourceFiles": 5,
+      "sourceHashMismatches": [],
+      "screenshots": 0
+    }
+  },
+  "applicationSourceHashes": {
+    "src/services/api.ts": "159c91b9ead700c8e32bc17ce978145c81bd4419d10a3104be72db9730902264",
+    "src/App.tsx": "6522d074f89b06b80518110529cdacc922d6e35c8ccf00f8536f4f1c07bdc584",
+    "scripts/test_portals.cjs": "4c533b888e2a0be7c1404f68e54d8dd1fc4e6ba088e265ba6ea5fa0226edca21"
+  }
+}

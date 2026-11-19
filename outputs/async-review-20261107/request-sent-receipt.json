@@ -1,0 +1,28 @@
+{
+  "mode": "user-provided-communication-evidence",
+  "date": "2026-11-07",
+  "timezone": "Asia/Tokyo",
+  "recordedAt": "2026-11-07T10:21:50.799924+00:00",
+  "channel": "Google Chat",
+  "sender": "user",
+  "recipientLabel": "小林さん",
+  "status": "REQUEST_SENT_ONLY",
+  "userSentRequestConfirmed": true,
+  "codexSentMessage": false,
+  "sourceScreenshot": "C:\\Users\\kanta\\AppData\\Local\\Temp\\codex-clipboard-0255179d-1c25-4048-9f6c-dddaefb8ad8c.png",
+  "sourceScreenshotSha256": "9ef8ba088358f9b7a5b79940002290f5966204d35bd7fc55e58ed0a32e3895d0",
+  "relativeTimeLabel": "10分",
+  "exactSentAt": null,
+  "recipientReadConfirmed": false,
+  "customerFirstGoogleLoginConfirmed": false,
+  "calendarRecipientAccessConfirmed": false,
+  "customerExecutionResultsProvided": false,
+  "customerPassed": 0,
+  "customerTotal": 6,
+  "productionStarted": false,
+  "notes": [
+    "The user supplied their sent six-case request and screenshot; the relative timestamp is not converted to an exact send time.",
+    "The historical access-denied preview from 2026-10-24 is not evidence of the current sharing state.",
+    "Teacher Google-account use was reported in the conversation, but actual teacher login and classroom operating-account ownership remain unverified."
+  ]
+}

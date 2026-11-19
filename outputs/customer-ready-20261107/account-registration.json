@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "status": "REGISTERED_WAITING_FIRST_GOOGLE_LOGIN",
+  "checkedAt": "2026-11-07T08:25:24.572Z",
+  "displayName": "小林さん顧客確認",
+  "email": "kobayashi-masami@ml-mightylink.com",
+  "role": "parent",
+  "active": true,
+  "studentIds": [
+    "STU-CUST-20261107"
+  ],
+  "parentUrl": "https://eigo-taxi-test.web.app/#/parent/24db89d1-e687-4535-900a-559e6ebca0b7",
+  "originalAdminsRetained": 2,
+  "customerAcceptancePassed": 0,
+  "productionStarted": false
+}

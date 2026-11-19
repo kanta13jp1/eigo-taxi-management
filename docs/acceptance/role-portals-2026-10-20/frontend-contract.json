@@ -1,0 +1,44 @@
+{
+  "executedAt": "2026-10-20T13:43:04.717Z",
+  "mode": "Node VM, synthetic auth responses; no live browser/server claim",
+  "passed": 9,
+  "total": 9,
+  "results": [
+    {
+      "name": "Strict hash routes, including unknown and malformed entry IDs",
+      "status": "PASS"
+    },
+    {
+      "name": "Roles and personal-link identity mismatch fail closed",
+      "status": "PASS"
+    },
+    {
+      "name": "QR payload has only canonical app URL and opaque ID, preserving GitHub base",
+      "status": "PASS"
+    },
+    {
+      "name": "Admin response refused at parent entry with no saved session",
+      "status": "PASS"
+    },
+    {
+      "name": "Individual ID mismatch refused even against old server without binding",
+      "status": "PASS"
+    },
+    {
+      "name": "Parent request carries ID and role, directory and admin writes are rejected locally",
+      "status": "PASS"
+    },
+    {
+      "name": "Stored role tampering cannot pass server identity validation",
+      "status": "PASS"
+    },
+    {
+      "name": "Rotated individual ID response clears live session",
+      "status": "PASS"
+    },
+    {
+      "name": "Demo parent data limited to assigned family and demo role entry mismatch refused",
+      "status": "PASS"
+    }
+  ]
+}

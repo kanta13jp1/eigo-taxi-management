@@ -1,0 +1,47 @@
+[
+  {
+    "path": "business-flow-review-2026-10-23-v1.pptx",
+    "sha256": "2EEA56AD6D1FB1F949052783C33E1502ADB383A0CF7EDD10E1ABA0DD2A9E3C0A",
+    "provider": "artifact-tool",
+    "rights": "review-required",
+    "publication": "private",
+    "parent": "business-flow-hp-2026-10-23-v1",
+    "brief": "業務と例外をソース照合し7枚追加、全10枚。未確定・未実装・未検証を区別。"
+  },
+  {
+    "path": "README.md",
+    "sha256": "EFCFBC92F9AD19A29D6E7ED1CC476B4370A90A943E40156B35A6153D9AE73300",
+    "provider": "artifact-tool",
+    "rights": "review-required",
+    "publication": "private",
+    "parent": "business-flow-hp-2026-10-23-v1",
+    "brief": "業務と例外をソース照合し7枚追加、全10枚。未確定・未実装・未検証を区別。"
+  },
+  {
+    "path": "review-flow.mjs",
+    "sha256": "A07EBEE92E82AEF95548DE3D693D1ACF5D7BEC18E6DFB4BD1D6DC3BC44BDF1F7",
+    "provider": "artifact-tool",
+    "rights": "review-required",
+    "publication": "private",
+    "parent": "business-flow-hp-2026-10-23-v1",
+    "brief": "業務と例外をソース照合し7枚追加、全10枚。未確定・未実装・未検証を区別。"
+  },
+  {
+    "path": "review.md",
+    "sha256": "4A100715F58F726C92BF3C86739D477EF810541E6D44457B19DF172BE7A92037",
+    "provider": "artifact-tool",
+    "rights": "review-required",
+    "publication": "private",
+    "parent": "business-flow-hp-2026-10-23-v1",
+    "brief": "業務と例外をソース照合し7枚追加、全10枚。未確定・未実装・未検証を区別。"
+  },
+  {
+    "path": "validation-v1.json",
+    "sha256": "FD9F0B6FC5555D462C1B09EE9B6247BD64495EE06F432610678C8F37CADADE84",
+    "provider": "artifact-tool",
+    "rights": "review-required",
+    "publication": "private",
+    "parent": "business-flow-hp-2026-10-23-v1",
+    "brief": "業務と例外をソース照合し7枚追加、全10枚。未確定・未実装・未検証を区別。"
+  }
+]

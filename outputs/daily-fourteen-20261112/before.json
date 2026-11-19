@@ -1,0 +1,6 @@
+{
+  "case": "AT-13",
+  "checkedAt": "2026-11-11T21:28:03.612Z",
+  "scope": "local synthetic admin React and ApiService",
+  "bothListsExposeRideSpecificNames": false
+}

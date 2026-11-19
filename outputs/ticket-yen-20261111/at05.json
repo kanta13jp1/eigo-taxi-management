@@ -1,0 +1,22 @@
+{
+  "checkedAt": "2026-11-10T15:19:50.744Z",
+  "case": "AT-05",
+  "scope": "real React form and demo API in JSDOM, synthetic browser storage",
+  "before": false,
+  "step": "1",
+  "valid": true,
+  "stepMismatch": false,
+  "submits": 1,
+  "balanceBefore": 7,
+  "balanceAfter": 17,
+  "historyDelta": 1,
+  "record": {
+    "studentId": "STU-001",
+    "ticketCount": 10,
+    "amount": 4980,
+    "note": "AT-05 架空の入金",
+    "id": "PUR-d305613e-0beb-4347-9253-239637021e61",
+    "studentName": "田中 陽菜 (ひな)",
+    "purchaseDate": "2026-11-11"
+  }
+}

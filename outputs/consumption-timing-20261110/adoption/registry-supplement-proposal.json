@@ -1,0 +1,41 @@
+{
+  "status": "SUPPLEMENT_READY_FOR_REVIEW",
+  "date": "2026-11-10",
+  "initialApprovedRegistrySha256": "b29c2efe14ac2ecde7267afd77a50d3f8b131dcd7e2a8ccfb0778dcd88d77a3a",
+  "registryVersion": "2026-11-10-r18",
+  "registrySha256": "0f6b53a352a8549cc4a66a34af7932c8e692f4dbe0280f0b13920a4eede35719",
+  "candidate": "outputs/consumption-timing-20261110/adoption/registry-r18-final-candidate.json",
+  "additionalEvidencePaths": [
+    {
+      "id": "UI-SCROLL-01",
+      "before": "outputs/booking-modal-scroll-20261106-green/results.json",
+      "after": "outputs/consumption-timing-20261110/regression/modal-scroll/results.json"
+    },
+    {
+      "id": "UI-SCROLL-02",
+      "before": "outputs/booking-modal-scroll-20261106-green/results.json",
+      "after": "outputs/consumption-timing-20261110/regression/modal-scroll/results.json"
+    }
+  ],
+  "evidenceValidation": {
+    "modalScrollPassed": 2,
+    "externalRequests": 0,
+    "allSourceHashesMatched": true
+  },
+  "csv": {
+    "path": "docs/acceptance/third-party-acceptance-checklist.csv",
+    "oldPreserved": "outputs/consumption-timing-20261110/adoption/third-party-acceptance-checklist-r17.csv",
+    "before": "c7500bb39515001fe9bf929e8ec577a8c70012b4df59efeda59b3d121a323f3c",
+    "after": "88db073aafe8e40f29333632900d1db79ceba7d31f9674c752e4fd28ccb91472",
+    "reason": "Only AT-18 expected text changes. All 30 execution fields remain exactly equal to r17: 27 未実施 and 3 BLOCKED, no added execution or PASS."
+  },
+  "binaryCandidate": "outputs/consumption-timing-20261110/adoption/binary-documents-csv-candidate.json",
+  "canonicalRegistryChangedByThisSupplement": false,
+  "requirements": 39,
+  "flows": 11,
+  "tests": 206,
+  "screens": 20,
+  "interfaces": 16,
+  "customerPassed": 0,
+  "productionStarted": false
+}

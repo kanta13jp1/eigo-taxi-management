@@ -1,0 +1,285 @@
+{
+  "reviewedAt": "2026-11-07T07:06:25.160Z",
+  "reviewer": "independent post-deployment review subagent",
+  "pass": true,
+  "checks": {
+    "deploymentSuccessful": true,
+    "deploymentTargetAndVersionExact": true,
+    "testScriptUnchanged": true,
+    "candidateSourceHashesStillMatch": true,
+    "candidatePayloadHashesStillMatch": true,
+    "manifestHashMatchesPublicReport": true,
+    "releaseEqualsCandidate": true,
+    "releaseHashMatchesCandidate": true,
+    "releaseStableDuringRun": true,
+    "publicReportPass": true,
+    "sameTestUrl": true,
+    "afterAllFourPass": true,
+    "beforeAllFourExpectedFailures": true,
+    "noBlockedMutationsSocketsOrPageErrors": true,
+    "allCasesSameScenario": true,
+    "allButtonBoundsAndScrollPass": true,
+    "allEvidenceImagesHashMatch": true,
+    "independentCurrentPublicBytesMatch": true
+  },
+  "hostingVersion": "679ec43146aecd55",
+  "sourceDigest": "b7e510688a6e81268331db6d7d88db8875bf5ce443dbc90f52b4f647f39d1979",
+  "scriptHash": "4b84ce5c40f10cbdb8fc29fc86c27a2098fb8a92d082d22c3045f3b2b182bfdb",
+  "before": {
+    "startedAt": "2026-11-06T11:07:08.483Z",
+    "sourceDigest": "5dd9373bc151e7a8f99065092b8f780b461c99b74bf7fcdb870ab17a4ebe8baa",
+    "passCount": 0
+  },
+  "after": {
+    "startedAt": "2026-11-07T07:01:18.895Z",
+    "finishedAt": "2026-11-07T07:01:32.571Z",
+    "sourceDigest": "b7e510688a6e81268331db6d7d88db8875bf5ce443dbc90f52b4f647f39d1979",
+    "passCount": 4
+  },
+  "cases": [
+    {
+      "id": "HOSTED-SCROLL-admin-375x500",
+      "role": "admin",
+      "viewport": {
+        "width": 375,
+        "height": 500
+      },
+      "beforeStatus": "FAIL",
+      "afterStatus": "PASS",
+      "sameViewportAndRole": true,
+      "beforeButtonBottom": 543,
+      "afterButtonBottom": 459,
+      "buttonWithinViewport": true,
+      "beforePanel": {
+        "maxHeight": "none",
+        "overflowY": "hidden",
+        "clientHeight": 634,
+        "scrollHeight": 634,
+        "scrollTop": 0
+      },
+      "afterPanel": {
+        "maxHeight": "468px",
+        "overflowY": "auto",
+        "clientHeight": 466,
+        "scrollHeight": 634,
+        "scrollTop": 168
+      },
+      "scrollablePanel": true,
+      "screenshotHashMatch": true,
+      "beforeScreenshotHashMatch": true,
+      "buttonScreenshot": {
+        "file": "HOSTED-SCROLL-admin-375x500-button.png",
+        "sha256": "e0b486b05994d50711f25c546b4571fe3881c22125b83589588db6e0f4fcb29f"
+      },
+      "assertions": [
+        "published demo mode",
+        "button reachable",
+        "submission closes form",
+        "one local reservation added",
+        "JST date and role match",
+        "balance unchanged",
+        "reload preserves reservation",
+        "logout and reload hide ledger"
+      ]
+    },
+    {
+      "id": "HOSTED-SCROLL-admin-812x375",
+      "role": "admin",
+      "viewport": {
+        "width": 812,
+        "height": 375
+      },
+      "beforeStatus": "FAIL",
+      "afterStatus": "PASS",
+      "sameViewportAndRole": true,
+      "beforeButtonBottom": 463.5,
+      "afterButtonBottom": 334,
+      "buttonWithinViewport": true,
+      "beforePanel": {
+        "maxHeight": "none",
+        "overflowY": "hidden",
+        "clientHeight": 600,
+        "scrollHeight": 600,
+        "scrollTop": 0
+      },
+      "afterPanel": {
+        "maxHeight": "343px",
+        "overflowY": "auto",
+        "clientHeight": 341,
+        "scrollHeight": 600,
+        "scrollTop": 259
+      },
+      "scrollablePanel": true,
+      "screenshotHashMatch": true,
+      "beforeScreenshotHashMatch": true,
+      "buttonScreenshot": {
+        "file": "HOSTED-SCROLL-admin-812x375-button.png",
+        "sha256": "341f696a70b8377715743b529db3707867736276880a569bf57110dda89a8ac9"
+      },
+      "assertions": [
+        "published demo mode",
+        "button reachable",
+        "submission closes form",
+        "one local reservation added",
+        "JST date and role match",
+        "balance unchanged",
+        "reload preserves reservation",
+        "logout and reload hide ledger"
+      ]
+    },
+    {
+      "id": "HOSTED-SCROLL-parent-375x500",
+      "role": "parent",
+      "viewport": {
+        "width": 375,
+        "height": 500
+      },
+      "beforeStatus": "FAIL",
+      "afterStatus": "PASS",
+      "sameViewportAndRole": true,
+      "beforeButtonBottom": 543,
+      "afterButtonBottom": 459,
+      "buttonWithinViewport": true,
+      "beforePanel": {
+        "maxHeight": "none",
+        "overflowY": "hidden",
+        "clientHeight": 634,
+        "scrollHeight": 634,
+        "scrollTop": 0
+      },
+      "afterPanel": {
+        "maxHeight": "468px",
+        "overflowY": "auto",
+        "clientHeight": 466,
+        "scrollHeight": 634,
+        "scrollTop": 168
+      },
+      "scrollablePanel": true,
+      "screenshotHashMatch": true,
+      "beforeScreenshotHashMatch": true,
+      "buttonScreenshot": {
+        "file": "HOSTED-SCROLL-parent-375x500-button.png",
+        "sha256": "0e40d0ffe6350c37e2c20297fc782a7ae9f8872e6b3c3e90092df37e5f6a40b2"
+      },
+      "assertions": [
+        "published demo mode",
+        "button reachable",
+        "submission closes form",
+        "one local reservation added",
+        "JST date and role match",
+        "balance unchanged",
+        "reload preserves reservation",
+        "logout and reload hide ledger"
+      ]
+    },
+    {
+      "id": "HOSTED-SCROLL-parent-812x375",
+      "role": "parent",
+      "viewport": {
+        "width": 812,
+        "height": 375
+      },
+      "beforeStatus": "FAIL",
+      "afterStatus": "PASS",
+      "sameViewportAndRole": true,
+      "beforeButtonBottom": 463.5,
+      "afterButtonBottom": 334,
+      "buttonWithinViewport": true,
+      "beforePanel": {
+        "maxHeight": "none",
+        "overflowY": "hidden",
+        "clientHeight": 600,
+        "scrollHeight": 600,
+        "scrollTop": 0
+      },
+      "afterPanel": {
+        "maxHeight": "343px",
+        "overflowY": "auto",
+        "clientHeight": 341,
+        "scrollHeight": 600,
+        "scrollTop": 259
+      },
+      "scrollablePanel": true,
+      "screenshotHashMatch": true,
+      "beforeScreenshotHashMatch": true,
+      "buttonScreenshot": {
+        "file": "HOSTED-SCROLL-parent-812x375-button.png",
+        "sha256": "7dcc9c83842c7489f10af4edcf53e8bec71136f7ded100044e557ef655bef8d5"
+      },
+      "assertions": [
+        "published demo mode",
+        "button reachable",
+        "submission closes form",
+        "one local reservation added",
+        "JST date and role match",
+        "balance unchanged",
+        "reload preserves reservation",
+        "logout and reload hide ledger"
+      ]
+    }
+  ],
+  "independentPublicRecheck": [
+    {
+      "path": "/assets/index-BvaBSnhA.css",
+      "status": 200,
+      "expected": "06784942d4e6777783436b8a3f2b30ca2c8eaacf9aa2c4a6d9040433b5233149",
+      "actual": "06784942d4e6777783436b8a3f2b30ca2c8eaacf9aa2c4a6d9040433b5233149",
+      "match": true
+    },
+    {
+      "path": "/assets/index-Csor4OR1.js",
+      "status": 200,
+      "expected": "7a854832a91d74473430062a56bd34f8ed1fe839881ddaff8eb577c2d3c37e61",
+      "actual": "7a854832a91d74473430062a56bd34f8ed1fe839881ddaff8eb577c2d3c37e61",
+      "match": true
+    },
+    {
+      "path": "/favicon.svg",
+      "status": 200,
+      "expected": "61bc9a161de58248288e6905425d7180f0624c2865007b97d763fdac12043a66",
+      "actual": "61bc9a161de58248288e6905425d7180f0624c2865007b97d763fdac12043a66",
+      "match": true
+    },
+    {
+      "path": "/icons.svg",
+      "status": 200,
+      "expected": "b45fa506195cfcdef406ba9f0c77b36ddc1a7c224040926ec70abc2fdea7b93a",
+      "actual": "b45fa506195cfcdef406ba9f0c77b36ddc1a7c224040926ec70abc2fdea7b93a",
+      "match": true
+    },
+    {
+      "path": "/index.html",
+      "status": 200,
+      "expected": "a411bcd8c07bf4f340175daae94b7a9ac228ddbac2234eb328e644d02065b386",
+      "actual": "a411bcd8c07bf4f340175daae94b7a9ac228ddbac2234eb328e644d02065b386",
+      "match": true
+    },
+    {
+      "path": "/release.json",
+      "status": 200,
+      "expected": "cc5e02f0e18394a600de1631af9d828aec777be81d2887c1927616ec4f3e848d",
+      "actual": "cc5e02f0e18394a600de1631af9d828aec777be81d2887c1927616ec4f3e848d",
+      "match": true
+    }
+  ],
+  "visualInspection": {
+    "afterButtonImages": 4,
+    "afterLogoutImages": 4,
+    "beforeFailureImages": 4,
+    "findings": [
+      "All four after button images show the form footer and register/cancel actions.",
+      "All four after final images show the corresponding login screen after logout and reload.",
+      "Images use fullPage:true; full image height is not the emulated viewport height. Button reachability is supported by the recorded DOM bounding box within the 375x500 or 812x375 viewport.",
+      "results.json screenshot fields reference final logout images; form reachability images are separate *-button.png files, hashed in this review."
+    ]
+  },
+  "scope": "Published frontend anonymous browser-local demo; Microsoft Edge headless touch/mobile emulation; admin and parent, 375x500 and 812x375.",
+  "limits": [
+    "Google identity authentication was not exercised.",
+    "No live spreadsheet or Calendar acceptance.",
+    "No physical mobile device, software keyboard or browser toolbar variability acceptance.",
+    "No independent human third-party acceptance.",
+    "The four cases prove button reachability, local demo save/role/JST date, unchanged ticket balances, reload persistence and logout hiding; they do not constitute all AT-01 through AT-30."
+  ],
+  "mutations": "Only this new local review JSON is written. No deployment, reauthentication, backend operation or root source/manifest/PPT modification."
+}

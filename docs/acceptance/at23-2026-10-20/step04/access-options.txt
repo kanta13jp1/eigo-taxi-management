@@ -1,0 +1,47 @@
+Browser tab: 1750956564, Title: "Mighty 送迎管理API｜受入検証用 - プロジェクトの設定 - Apps Script", URL: "https://script.google.com/u/2/home/projects/1AnWQ_1itiEgyEYpmfTFM7HkgmTXu5RsW4H-ahnf3N-TplINguEgCaTrh/settings".
+0 AXWebArea Mighty 送迎管理API｜受入検証用 - プロジェクトの設定 - Apps Script, URL: script.google.com/u/2/home/projects/1AnWQ_1itiEgyEYpmfTFM7HkgmTXu5RsW4H-ahnf3N-TplINguEgCaTrh/settings
+	1 container
+		2 container yDmH0d
+			3 container gb
+				4 container
+					5 link Description: Google Apps Script, Value: script.google.com/home, ID: sdgBod
+					6 button 名前を変更
+					7 pop up button (collapsed) デプロイ, ID: ow15, Secondary Actions: Expand
+					8 pop up button (collapsed) Description: サポート, Secondary Actions: Expand
+					9 button (collapsed) Description: Google アプリ, Secondary Actions: Expand
+					10 button (collapsed) Description: Google アカウント: 寛太梅澤 (k-umezawa@ml-mightylink.com), Secondary Actions: Expand
+			61 container
+				62 container 新しいデプロイ
+					63 heading 新しいデプロイ, Value: 2, ID: c34
+						64 text 新しいデプロイ
+					65 container
+						66 text 種類の選択
+						67 pop up button (collapsed) Description: デプロイタイプを有効にする, Secondary Actions: Expand
+						68 list デプロイタイプのリストボックス
+							69 ウェブアプリ
+						70 text 設定
+						71 link Description: Deployment について詳しく学習する, Value: developers.google.com/apps-script/concepts/deployments
+						72 container
+							73 text 説明
+							74 container
+								75 text 新しい説明文
+								76 text field (settable) 新しい説明文, Value: AT23 検証専用 2026-10-20｜Sheetsのみ承認済み, ID: c36
+							77 text ウェブアプリ
+							78 combo box (collapsed) 次のユーザーとして実行: 自分（k-umezawa@ml-mightylink.com）, Value: 自分（k-umezawa@ml-mightylink.com）, Secondary Actions: Expand
+							79 text このウェブ アプリケーションを実行するために、あなたのアカウント データを使用することを許可します。
+							87 container
+								88 combo box (expanded) アクセスできるユーザー 全員, Value: 全員, Secondary Actions: Collapse
+								89 list ウェブ アプリケーションにアクセスできるユーザー
+									90 自分のみ
+									91 株式会社Mighty LINK 内の全員
+									92 Google アカウントを持つ全員
+									93 (selected) 全員
+							81 text ライブラリとしても利用できます。
+							82 link Description: 詳細, Value: developers.google.com/apps-script/guides/libraries#using_a_library
+						83 button キャンセル
+							84 text キャンセル
+						85 button デプロイ
+							86 text デプロイ
+		60 text プロジェクト名を変更しました。
+
+The focused UI element is 93 (selected) 全員

@@ -1,0 +1,5 @@
+{
+  "summary": "公開デモ：残数1枚では拒否し、管理画面と追加操作を維持。",
+  "result": "その場で6枚追加して7枚に。再試行で往復完了、再読込後も5枚。",
+  "image": "outputs/daily-fifteen-20261112/public-insufficient.png"
+}

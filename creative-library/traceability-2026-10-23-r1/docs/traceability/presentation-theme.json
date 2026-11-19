@@ -1,0 +1,18 @@
+{
+  "id": "mighty-hp-v1",
+  "font": "Yu Gothic",
+  "slideSize": [
+    1280,
+    720
+  ],
+  "colors": {
+    "cyan": "00A5E3",
+    "orange": "EF7E00",
+    "ink": "333333",
+    "background": "FCF9F4"
+  },
+  "logo": "docs/acceptance/business-flow-hp-2026-10-23/assets/logo.jpg",
+  "backgroundImage": "docs/acceptance/business-flow-hp-2026-10-23/assets/clouds.jpeg",
+  "reference": "https://mighty-link.com/",
+  "rights": "private-company-document; review-required-for-publication"
+}

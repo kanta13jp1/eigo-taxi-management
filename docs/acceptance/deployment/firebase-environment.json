@@ -1,0 +1,225 @@
+{
+  "checkedAt": "2026-10-19T16:49:37.477Z",
+  "account": "k-umezawa@ml-mightylink.com",
+  "projectId": "eigo-taxi-app",
+  "required": [
+    "resourcemanager.projects.get",
+    "firebase.projects.get",
+    "firebasehosting.sites.get",
+    "firebasehosting.sites.list",
+    "firebasehosting.sites.create",
+    "firebasehosting.sites.update"
+  ],
+  "checks": {
+    "project": {
+      "ok": true,
+      "data": {
+        "name": "projects/753038429305",
+        "parent": "organizations/943535207512",
+        "projectId": "eigo-taxi-app",
+        "state": "ACTIVE",
+        "displayName": "eigo-taxi-app",
+        "createTime": "2026-10-19T16:17:50.486Z",
+        "updateTime": "2026-10-19T16:18:08.646055Z",
+        "etag": "W/\"c91aaa58c5a84724\"",
+        "labels": {
+          "firebase": "enabled",
+          "firebase-core": "disabled"
+        }
+      }
+    },
+    "permissions": {
+      "ok": true,
+      "data": {
+        "permissions": [
+          "firebase.projects.get",
+          "firebasehosting.sites.create",
+          "firebasehosting.sites.get",
+          "firebasehosting.sites.list",
+          "firebasehosting.sites.update",
+          "resourcemanager.projects.get"
+        ]
+      }
+    },
+    "sites": {
+      "ok": true,
+      "data": {
+        "sites": [
+          {
+            "name": "projects/eigo-taxi-app/sites/eigo-taxi-app",
+            "defaultUrl": "https://eigo-taxi-app.web.app",
+            "type": "DEFAULT_SITE"
+          },
+          {
+            "name": "projects/eigo-taxi-app/sites/eigo-taxi-test",
+            "defaultUrl": "https://eigo-taxi-test.web.app",
+            "type": "USER_SITE"
+          }
+        ]
+      }
+    },
+    "defaultReleases": {
+      "ok": true,
+      "data": {}
+    },
+    "testReleases": {
+      "ok": true,
+      "data": {
+        "releases": [
+          {
+            "name": "sites/eigo-taxi-test/releases/1792428525637000",
+            "version": {
+              "name": "sites/eigo-taxi-test/versions/deed2fc3d9a96297",
+              "status": "FINALIZED",
+              "config": {
+                "headers": [
+                  {
+                    "headers": {
+                      "Cache-Control": "no-cache, max-age=0, must-revalidate"
+                    },
+                    "glob": "/"
+                  },
+                  {
+                    "headers": {
+                      "Cache-Control": "no-cache, max-age=0, must-revalidate"
+                    },
+                    "glob": "/index.html"
+                  },
+                  {
+                    "headers": {
+                      "Cache-Control": "no-cache, max-age=0, must-revalidate"
+                    },
+                    "glob": "/release.json"
+                  },
+                  {
+                    "headers": {
+                      "Cache-Control": "public, max-age=31536000, immutable"
+                    },
+                    "glob": "/assets/**"
+                  },
+                  {
+                    "headers": {
+                      "Referrer-Policy": "no-referrer",
+                      "X-Frame-Options": "DENY",
+                      "X-Content-Type-Options": "nosniff"
+                    },
+                    "glob": "**"
+                  }
+                ],
+                "rewrites": [
+                  {
+                    "glob": "**",
+                    "path": "/index.html"
+                  }
+                ]
+              },
+              "labels": {
+                "deployment-tool": "cli-firebase"
+              },
+              "createTime": "2026-10-19T16:48:41.979020Z",
+              "createUser": {
+                "email": "k-umezawa@ml-mightylink.com",
+                "imageUrl": "https://lh3.googleusercontent.com/a/ACg8ocKi3b_B5096m5Eh8i6nlXQKxn4wlFNxz7W_VbLDpjES_S0--g=mo"
+              },
+              "finalizeTime": "2026-10-19T16:48:45.519991Z",
+              "finalizeUser": {
+                "email": "k-umezawa@ml-mightylink.com",
+                "imageUrl": "https://lh3.googleusercontent.com/a/ACg8ocKi3b_B5096m5Eh8i6nlXQKxn4wlFNxz7W_VbLDpjES_S0--g=mo"
+              }
+            },
+            "type": "DEPLOY",
+            "releaseTime": "2026-10-19T16:48:45.637Z",
+            "message": "Mighty test mobile overflow fix; source 14159ecc8b8a28e5618b802cad65d64778c63c22ab2b8db5417475e926081c35",
+            "releaseUser": {
+              "email": "k-umezawa@ml-mightylink.com",
+              "imageUrl": "https://lh3.googleusercontent.com/a/ACg8ocKi3b_B5096m5Eh8i6nlXQKxn4wlFNxz7W_VbLDpjES_S0--g=mo"
+            }
+          },
+          {
+            "name": "sites/eigo-taxi-test/releases/1792428158139000",
+            "version": {
+              "name": "sites/eigo-taxi-test/versions/54b056d14d7a5630",
+              "status": "FINALIZED",
+              "config": {
+                "headers": [
+                  {
+                    "headers": {
+                      "Cache-Control": "no-cache, max-age=0, must-revalidate"
+                    },
+                    "glob": "/"
+                  },
+                  {
+                    "headers": {
+                      "Cache-Control": "no-cache, max-age=0, must-revalidate"
+                    },
+                    "glob": "/index.html"
+                  },
+                  {
+                    "headers": {
+                      "Cache-Control": "no-cache, max-age=0, must-revalidate"
+                    },
+                    "glob": "/release.json"
+                  },
+                  {
+                    "headers": {
+                      "Cache-Control": "public, max-age=31536000, immutable"
+                    },
+                    "glob": "/assets/**"
+                  },
+                  {
+                    "headers": {
+                      "X-Frame-Options": "DENY",
+                      "X-Content-Type-Options": "nosniff",
+                      "Referrer-Policy": "no-referrer"
+                    },
+                    "glob": "**"
+                  }
+                ],
+                "rewrites": [
+                  {
+                    "glob": "**",
+                    "path": "/index.html"
+                  }
+                ]
+              },
+              "labels": {
+                "deployment-tool": "cli-firebase"
+              },
+              "createTime": "2026-10-19T16:42:32.441562Z",
+              "createUser": {
+                "email": "k-umezawa@ml-mightylink.com",
+                "imageUrl": "https://lh3.googleusercontent.com/a/ACg8ocKi3b_B5096m5Eh8i6nlXQKxn4wlFNxz7W_VbLDpjES_S0--g=mo"
+              },
+              "finalizeTime": "2026-10-19T16:42:38.076402Z",
+              "finalizeUser": {
+                "email": "k-umezawa@ml-mightylink.com",
+                "imageUrl": "https://lh3.googleusercontent.com/a/ACg8ocKi3b_B5096m5Eh8i6nlXQKxn4wlFNxz7W_VbLDpjES_S0--g=mo"
+              },
+              "fileCount": "8",
+              "versionBytes": "103687"
+            },
+            "type": "DEPLOY",
+            "releaseTime": "2026-10-19T16:42:38.139Z",
+            "message": "Mighty test: six acceptance fixes; source 2d755063f1dc2c279e17c80743cc4b6ebe0a4f956cbcf3fd14bf4f74a40bbdae",
+            "releaseUser": {
+              "email": "k-umezawa@ml-mightylink.com",
+              "imageUrl": "https://lh3.googleusercontent.com/a/ACg8ocKi3b_B5096m5Eh8i6nlXQKxn4wlFNxz7W_VbLDpjES_S0--g=mo"
+            }
+          }
+        ]
+      }
+    },
+    "parent": {
+      "ok": true,
+      "data": {
+        "name": "organizations/943535207512",
+        "displayName": "ml-mightylink.com",
+        "directoryCustomerId": "C044ll126",
+        "state": "ACTIVE",
+        "createTime": "2026-05-21T04:27:23.416246Z",
+        "updateTime": "2026-05-21T04:27:23.416246Z",
+        "etag": "W/\"8e2c6017e93c692f\""
+      }
+    }
+  }
+}

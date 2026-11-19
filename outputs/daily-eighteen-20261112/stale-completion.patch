@@ -1,0 +1,59 @@
+diff --git a/docs/acceptance/deployment/releases/254b10bb3bf3744a/source/src/App.tsx b/outputs/daily-eighteen-20261112/stage/src/App.tsx
+index 00c58cc..dd4dd6f 100644
+--- a/docs/acceptance/deployment/releases/254b10bb3bf3744a/source/src/App.tsx
++++ b/outputs/daily-eighteen-20261112/stage/src/App.tsx
+@@ -1,6 +1,6 @@
+ import { useState, useEffect, useCallback } from 'react';
+ import type { Student, RideReservation, RideType } from './types';
+-import { ApiService } from './services/api';
++import { ApiService, InactiveReservationError } from './services/api';
+ import type { AppSession } from './services/api';
+ import { LoginScreen } from './components/LoginScreen';
+ import { Navbar } from './components/Navbar';
+@@ -170,8 +170,14 @@ export function App() {
+ 
+   // 送迎完了＆チケット消化ハンドラ
+   const handleCompleteRide = async (rideId: string) => {
+-    const res = await ApiService.completeRide(rideId);
+-    if (!res.success) throw new Error('この予約は完了処理できません');
++    let res;
++    try {
++      res = await ApiService.completeRide(rideId);
++      if (!res.success) throw new InactiveReservationError('この予約は完了処理できません');
++    } catch (error) {
++      if (error instanceof InactiveReservationError) await loadData();
++      throw error;
++    }
+     await loadData();
+     const consumed = res.consumedTickets ?? 1;
+     showToast(`🎉 送迎が完了しました！チケットを${consumed}回分消化しました（残数: ${res.remainingBalance}回）`);
+diff --git a/docs/acceptance/deployment/releases/254b10bb3bf3744a/source/src/services/api.ts b/outputs/daily-eighteen-20261112/stage/src/services/api.ts
+index 642e18a..4d71306 100644
+--- a/docs/acceptance/deployment/releases/254b10bb3bf3744a/source/src/services/api.ts
++++ b/outputs/daily-eighteen-20261112/stage/src/services/api.ts
+@@ -194,6 +194,8 @@ function endSession(): void {
+   window.dispatchEvent(new Event('eigo-taxi-session-ended'));
+ }
+ // @trace CODE-18 REQ-18
++export class InactiveReservationError extends Error {}
++
+ async function request(endpoint:string, idToken:string, action:string, params:object = {}, expectedSession?:AppSession): Promise<Record<string, unknown>> {
+   try {
+     const res = await fetch(endpoint, {method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify({...params,action,idToken}),signal:AbortSignal.timeout(20000),credentials:'omit',referrerPolicy:'no-referrer'});
+@@ -205,12 +207,15 @@ async function request(endpoint:string, idToken:string, action:string, params:ob
+           expectedSession && JSON.stringify(active) === JSON.stringify(expectedSession)) {
+         endSession();
+       }
++      if (action === 'completeRide' && json?.code === 'INVALID_STATE') {
++        throw new InactiveReservationError(json.error || 'この予約は完了処理できません');
++      }
+       throw new Error(json?.error || failureMessage);
+     }
+     return json;
+   } catch (error) {
+     if (error instanceof TypeError || error instanceof SyntaxError || (error instanceof DOMException && error.name === 'TimeoutError')) throw new Error(failureMessage);
+-    throw new Error(error instanceof Error ? error.message : failureMessage);
++    throw error instanceof Error ? error : new Error(failureMessage);
+   }
+ }
+ async function live(session:AppSession,action:string,params:object = {}) {

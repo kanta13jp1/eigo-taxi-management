@@ -1,0 +1,33 @@
+{
+  "dateJst": "2026-10-21",
+  "projectId": "eigo-taxi-app",
+  "webAppId": "1:753038429305:web:9fce8459b09dbd4e2318a8",
+  "googleProviderEnabled": true,
+  "testDomainSaved": true,
+  "gasEditorSaved": true,
+  "gasNewVersionDeployed": false,
+  "frontendNewVersionDeployed": false,
+  "calendarAdded": false,
+  "productionStarted": false,
+  "gasApprovedScopes": [
+    "https://www.googleapis.com/auth/spreadsheets.currentonly",
+    "https://www.googleapis.com/auth/script.external_request"
+  ],
+  "gasInitExecution": "completed in editor",
+  "firebaseReadOnlyExport": {
+    "accounts": 1,
+    "companyAccountMatches": 1,
+    "googleProviderMatches": 1,
+    "emailVerified": true
+  },
+  "gasUidAllowlistSaved": false,
+  "gasGoogleConfigSaveAttempted": true,
+  "gasGoogleConfigIndependentlyReRead": false,
+  "realApplicationLoginPassed": false,
+  "browserBlocker": "Debugger detached while attaching; existing+fresh tab and one reset failed",
+  "sourceSha256": {
+    "src/deployment-config.ts": "5c30aad36376487fcf2fbb664f2574bdd430890191675ca9813b5fdea516b6f1",
+    "gas/Code.gs": "ab3e6de2c13286ecc811ea725d84b30bec4493848f6bc7736ee4d9ff33aead54",
+    "gas/appsscript.json": "03958a7d625f7e98fe2331b0c9648b677c2cda12a1d829636e0d8c5cf5ee8065"
+  }
+}

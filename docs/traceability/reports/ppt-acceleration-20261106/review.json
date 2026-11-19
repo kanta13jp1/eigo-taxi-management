@@ -1,0 +1,141 @@
+{
+  "status": "PASS",
+  "reviewDate": "2026-11-06",
+  "reviewer": "AI worker /root/modern_runner_1106",
+  "rows": [
+    {
+      "name": "design",
+      "source": "docs/deliverables/2026-10-23-traceability/design-2026-11-03-v27.pptx",
+      "final": "outputs/ppt-20261106-v30-final2/design/final/design-2026-11-06-v30.pptx",
+      "sha256": "f9f814d47ffb335456bba176264a23d9ab8c4b6c404a814454f5a8db1b6ab818",
+      "slides": 11,
+      "oldSlideCount": 10,
+      "oldBodyRegionPixelChanges": [
+        6
+      ],
+      "oldNotesPreserved": 10,
+      "oldMediaPreserved": true,
+      "encodedFonts": [
+        "Yu Gothic"
+      ],
+      "packageFindings": 0,
+      "layoutFindings": 0,
+      "layoutWarnings": 0,
+      "roundtripImport": true,
+      "renderedAllPagesAfterRoundtrip": true
+    },
+    {
+      "name": "implementation",
+      "source": "docs/deliverables/2026-10-23-traceability/implementation-2026-11-03-v27.pptx",
+      "final": "outputs/ppt-20261106-v30-final2/implementation/final/implementation-2026-11-06-v30.pptx",
+      "sha256": "89cb1a81657221ca14cad0a58b25a0d2f2e61c815e89fe3da68873ea52734b22",
+      "slides": 11,
+      "oldSlideCount": 10,
+      "oldBodyRegionPixelChanges": [
+        6
+      ],
+      "oldNotesPreserved": 10,
+      "oldMediaPreserved": true,
+      "encodedFonts": [
+        "Yu Gothic"
+      ],
+      "packageFindings": 0,
+      "layoutFindings": 0,
+      "layoutWarnings": 0,
+      "roundtripImport": true,
+      "renderedAllPagesAfterRoundtrip": true
+    },
+    {
+      "name": "test-spec",
+      "source": "docs/deliverables/2026-10-23-traceability/test-spec-2026-11-03-v27.pptx",
+      "final": "outputs/ppt-20261106-v30-final2/test-spec/final/test-spec-2026-11-06-v30.pptx",
+      "sha256": "754caaac674d36d0835593cf19d164e5d443b0504d2dfe5b980258722cafe87b",
+      "slides": 11,
+      "oldSlideCount": 10,
+      "oldBodyRegionPixelChanges": [],
+      "oldNotesPreserved": 10,
+      "oldMediaPreserved": true,
+      "encodedFonts": [
+        "Yu Gothic"
+      ],
+      "packageFindings": 0,
+      "layoutFindings": 0,
+      "layoutWarnings": 0,
+      "roundtripImport": true,
+      "renderedAllPagesAfterRoundtrip": true
+    },
+    {
+      "name": "test-code",
+      "source": "docs/deliverables/2026-10-23-traceability/test-code-2026-11-03-v27.pptx",
+      "final": "outputs/ppt-20261106-v30-final2/test-code/final/test-code-2026-11-06-v30.pptx",
+      "sha256": "3c4f24572606afa57e88e59f0297dd3a8e5f22df44d4fda0ae164c064aa9a8db",
+      "slides": 11,
+      "oldSlideCount": 10,
+      "oldBodyRegionPixelChanges": [],
+      "oldNotesPreserved": 10,
+      "oldMediaPreserved": true,
+      "encodedFonts": [
+        "Yu Gothic"
+      ],
+      "packageFindings": 0,
+      "layoutFindings": 0,
+      "layoutWarnings": 0,
+      "roundtripImport": true,
+      "renderedAllPagesAfterRoundtrip": true
+    },
+    {
+      "name": "tasks",
+      "source": "docs/deliverables/2026-10-23-traceability/tasks-2026-11-06-v29.pptx",
+      "final": "outputs/ppt-20261106-v30-final2/tasks/final/tasks-2026-11-06-v30.pptx",
+      "sha256": "d4d18f7ebedd08aa3fe63d5f27bdc3680c746bf8a674ad347daaf9faa4b58d4f",
+      "slides": 13,
+      "oldSlideCount": 11,
+      "oldBodyRegionPixelChanges": [],
+      "oldNotesPreserved": 11,
+      "oldMediaPreserved": true,
+      "encodedFonts": [
+        "Yu Gothic"
+      ],
+      "packageFindings": 0,
+      "layoutFindings": 0,
+      "layoutWarnings": 0,
+      "roundtripImport": true,
+      "renderedAllPagesAfterRoundtrip": true
+    },
+    {
+      "name": "progress",
+      "source": "docs/deliverables/2026-10-23-traceability/progress-2026-11-06-v29.pptx",
+      "final": "outputs/ppt-20261106-v30-final2/progress/final/progress-2026-11-06-v30.pptx",
+      "sha256": "3c8d17eceee5b728a3e0be9e3a02b19bcbaae6333d94edbb5d8b84ab1f25b4da",
+      "slides": 10,
+      "oldSlideCount": 8,
+      "oldBodyRegionPixelChanges": [],
+      "oldNotesPreserved": 8,
+      "oldMediaPreserved": true,
+      "encodedFonts": [
+        "Yu Gothic"
+      ],
+      "packageFindings": 0,
+      "layoutFindings": 0,
+      "layoutWarnings": 0,
+      "roundtripImport": true,
+      "renderedAllPagesAfterRoundtrip": true
+    }
+  ],
+  "fullSizeVisualReview": [
+    "design p6,p11",
+    "implementation p6,p11",
+    "test-spec p11",
+    "test-code p11",
+    "tasks p12,p13",
+    "progress p9,p10"
+  ],
+  "contactSheetReview": "all 67 pages",
+  "nativePowerPointVerified": false,
+  "limits": [
+    "Old dated content is preserved as history; current references are in header/notes and appended pages",
+    "Local mock rehearsal is not real Google/device/third-party acceptance",
+    "AT28 new Google Sheets test covers a new synthetic single sheet only",
+    "No Calendar scopes, public deployment, or production start"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "reviewer": "lead agent independent of implementation worker",
+  "deck": "progress-2026-11-11-cumulative-ten.pptx",
+  "sha256": "fbd077a6a1ea785199d5191788da1617dca6c16109a33be057804f0afb1fabea",
+  "renderedSlides": ["final-v2.png", "final-2.png"],
+  "checks": [
+    "Both rendered slides inspected visually",
+    "Summary has ten fixes and ten executed developer test items",
+    "Claude 2 and Codex 8 separated from daily total 4 plus 6",
+    "Partial backup result and customer 0/6 and production hold remain explicit",
+    "Second slide shows readable public demo evidence including teacher reservation",
+    "No slide text clipping or overlaps observed"
+  ],
+  "pass": true,
+  "nativePowerPointVerified": false
+}

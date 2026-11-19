@@ -1,0 +1,16 @@
+{
+  "label": "baseline-typecheck-node",
+  "cwd": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\outputs\\booking-modal-release-20261106\\baseline",
+  "executable": "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1104-709-0_26.1104.709.0_x64__3k8sg7r9htsxt\\dependencies\\node\\bin\\node.exe",
+  "arguments": [
+    "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\node_modules\\typescript\\bin\\tsc",
+    "--project",
+    "tsconfig.node.json",
+    "--incremental",
+    "--tsBuildInfoFile",
+    "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\outputs\\booking-modal-release-20261106\\baseline\\typecheck\\node.tsbuildinfo"
+  ],
+  "exitCode": 0,
+  "stdout": "",
+  "stderr": ""
+}

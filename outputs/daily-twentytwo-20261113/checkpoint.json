@@ -1,0 +1,20 @@
+{
+  "reportDateJST": "2026-11-13",
+  "cumulativeFixes": 22,
+  "distinctDeveloperATItems": 22,
+  "todayNew": 2,
+  "attribution": {
+    "Claude Code Fable 5.2": 2,
+    "Codex": 20
+  },
+  "publicRelease": "54178ee8e9d61c91",
+  "publicHashesMatched": 7,
+  "publicScenarios": 6,
+  "scope": "Partial AT18 cancellation/readback in isolated synthetic demo, not real Google network acceptance",
+  "codeReview": "pass",
+  "presentationReview": "pass",
+  "sharedSheetReadback": "pass",
+  "customerDataChanged": false,
+  "productionStarted": false,
+  "pendingWork": []
+}

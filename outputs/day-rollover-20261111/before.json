@@ -1,0 +1,32 @@
+{
+  "at": "2026-11-10T15:09:34.243Z",
+  "case": "AT-12",
+  "mode": "actual React DOM; simulated Asia/Tokyo clock, synthetic reservations, no external maps visit",
+  "before": true,
+  "rows": [
+    {
+      "phase": "initial",
+      "title": "本日（2026-11-11）の送迎予定",
+      "names": [
+        "架空生徒11"
+      ],
+      "links": [
+        "https://www.google.com/maps/search/?api=1&query=%E6%9E%B6%E7%A9%BA%20%E5%81%9C%E7%95%99%E6%89%80%2011"
+      ]
+    },
+    {
+      "phase": "stale after midnight and rerender",
+      "title": "本日（2026-11-11）の送迎予定",
+      "names": [
+        "架空生徒11"
+      ],
+      "links": [
+        "https://www.google.com/maps/search/?api=1&query=%E6%9E%B6%E7%A9%BA%20%E5%81%9C%E7%95%99%E6%89%80%2011"
+      ]
+    }
+  ],
+  "afterUnmount": {
+    "timers": 0,
+    "visibilityListeners": 0
+  }
+}

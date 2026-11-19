@@ -1,0 +1,16 @@
+{
+  "structuralStatus": "PASS",
+  "errors": [],
+  "coverageGaps": [],
+  "counts": {
+    "requirements": 39,
+    "flows": 11,
+    "testCases": 203,
+    "screens": 20,
+    "interfaces": 16,
+    "coverageGaps": 0
+  },
+  "release": "HOLD",
+  "semanticReview": "REQUIRED",
+  "thirdPartyPassed": 0
+}

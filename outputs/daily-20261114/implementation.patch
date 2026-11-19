@@ -1,0 +1,87 @@
+diff --git a/docs/acceptance/deployment/releases/54178ee8e9d61c91/source/src/components/ParentPortal.tsx b/src/components/ParentPortal.tsx
+index 2daeca6..42ce3d7 100644
+--- a/docs/acceptance/deployment/releases/54178ee8e9d61c91/source/src/components/ParentPortal.tsx
++++ b/src/components/ParentPortal.tsx
+@@ -1,4 +1,4 @@
+-import React, { useState } from 'react';
++import React, { useEffect, useRef, useState } from 'react';
+ import type { Student, RideReservation, RideType } from '../types';
+ import {
+   Ticket,
+@@ -44,6 +44,34 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({
+       || a.rideTime.localeCompare(b.rideTime)
+       || a.id.localeCompare(b.id));
+   const pastRides = studentRides.filter((r) => r.status !== 'scheduled');
++  const [cancelRideId, setCancelRideId] = useState<string | null>(null);
++  const [cancelPending, setCancelPending] = useState(false);
++  const cancellationInFlight = useRef(false);
++  const cancelDialog = useRef<HTMLDialogElement>(null);
++  const cancelTarget = upcomingRides.find(ride => ride.id === cancelRideId);
++  const activeCancelId = cancelTarget?.id;
++  useEffect(() => {
++    if (!activeCancelId) return;
++    const dialog = cancelDialog.current;
++    dialog?.showModal();
++    return () => dialog?.close();
++  }, [activeCancelId]);
++  const dismissCancellation = () => {
++    cancelDialog.current?.close();
++    setCancelRideId(null);
++  };
++  const confirmCancellation = async () => {
++    if (!cancelTarget || cancellationInFlight.current) return;
++    cancellationInFlight.current = true;
++    setCancelPending(true);
++    dismissCancellation();
++    try {
++      await onCancelRide(cancelTarget.id);
++    } finally {
++      cancellationInFlight.current = false;
++      setCancelPending(false);
++    }
++  };
+ 
+   const getRideTypeLabel = (type: RideType) => {
+     switch (type) {
+@@ -184,12 +212,9 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({
+ 
+                         {/* キャンセルボタン */}
+                         <button
+-                          aria-label={target + ' の予約をキャンセル'}
+-                          onClick={() => {
+-                            if (window.confirm(target + '\n' + (isDemo ? 'このブラウザ内のデモ予約を取り消しますか？ 教室の予定は変わりません。' : 'この送迎予約をキャンセルしますか？（先生のカレンダーからも自動で削除されます）'))) {
+-                              onCancelRide(ride.id);
+-                            }
+-                          }}
++                          aria-label={target + ' ' + ride.pickupLocation + ' の予約をキャンセル'}
++                          disabled={cancelPending}
++                          onClick={() => setCancelRideId(ride.id)}
+                           className="shrink-0 text-xs text-rose-600 hover:text-rose-700 bg-rose-50 hover:bg-rose-100 font-bold px-2.5 py-1.5 rounded-lg border border-rose-200 transition-colors flex items-center gap-1"
+                         >
+                           <XCircle className="w-3.5 h-3.5" />
+@@ -203,6 +228,25 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({
+             )}
+           </div>
+ 
++          {cancelTarget && (
++            <dialog ref={cancelDialog} aria-labelledby="parent-cancel-heading"
++              aria-describedby="parent-cancel-details parent-cancel-effect" onCancel={dismissCancellation}
++              className="m-auto w-11/12 max-w-md rounded-2xl p-5 shadow-xl backdrop:bg-slate-900/50">
++              <h2 id="parent-cancel-heading" className="text-lg font-bold">予約取消の確認</h2>
++              <div id="parent-cancel-details" className="mt-3 space-y-1 [overflow-wrap:anywhere]">
++                <p className="font-semibold">{student.name}</p>
++                <p>{cancelTarget.rideDate} {cancelTarget.rideTime}・{getRideTypeLabel(cancelTarget.rideType).text}</p>
++                <p>送迎先: {cancelTarget.pickupLocation}</p>
++                {cancelTarget.note && <p>備考: {cancelTarget.note}</p>}
++              </div>
++              <p id="parent-cancel-effect" className="mt-3 text-sm">{isDemo ? 'このブラウザ内のデモ予約を取り消します。教室の予定は変わりません。' : '台帳の予約を取消にし、対応するカレンダーの予定を削除します。'}</p>
++              <div className="mt-5 flex justify-end gap-2">
++                <button className="rounded-lg border px-3 py-2" onClick={dismissCancellation}>戻る</button>
++                <button className="rounded-lg bg-rose-700 px-3 py-2 font-bold text-white" onClick={confirmCancellation}>取消を確定</button>
++              </div>
++            </dialog>
++          )}
++
+           {/* これまでの利用履歴 */}
+           <div className="bg-white rounded-2xl border border-slate-200 p-5 shadow-xs">
+             <h4 className="font-bold text-slate-800 text-sm mb-3 flex items-center gap-2">

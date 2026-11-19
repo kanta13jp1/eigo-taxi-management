@@ -1,0 +1,100 @@
+{
+  "provenance": "AT28 sheet value restoration and cleanup verified. Calendar integration and full acceptance remain unverified. No publication or production authorization.",
+  "files": [
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/business-2026-10-23-v9.pptx",
+      "file": "business-2026-10-23-v9.pptx",
+      "sha256": "22e5185cd73f662edebea554a5e3d365a220f817d92b49e6c18cc2f4d77b28de"
+    },
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/requirements-2026-10-23-v9.pptx",
+      "file": "requirements-2026-10-23-v9.pptx",
+      "sha256": "adbd6b5e5ac8bd624b0e1f7e016c4072f8d79b1fe5d2d65f7263ddba54cd789d"
+    },
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/design-2026-10-23-v9.pptx",
+      "file": "design-2026-10-23-v9.pptx",
+      "sha256": "69f5ed5c88f4850877a7ccb987b2eead2f3b2e09499f33c2991312e0ffe3a856"
+    },
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/test-spec-2026-10-23-v9.pptx",
+      "file": "test-spec-2026-10-23-v9.pptx",
+      "sha256": "5590de1c086de02e63c5425b8fe5cbd4ae985a39d0b6bc9e7f2fa0b3b817203a"
+    },
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/tasks-2026-10-23-v9.pptx",
+      "file": "tasks-2026-10-23-v9.pptx",
+      "sha256": "94dfb3c3d1e91e3a22a046a9be241eecf46d302ec3d5e83503cee084af119618"
+    },
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/implementation-2026-10-23-v9.pptx",
+      "file": "implementation-2026-10-23-v9.pptx",
+      "sha256": "6a81a6124eb56b538e8237de19922d43779291a3583030b3aedb2a7d98f2a55e"
+    },
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/test-code-2026-10-23-v9.pptx",
+      "file": "test-code-2026-10-23-v9.pptx",
+      "sha256": "34882d955648ddeccb0ba8737791e76bc0e361cb1b7dda68342291c6a7dbe788"
+    },
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/acceptance-2026-10-23-v9.pptx",
+      "file": "acceptance-2026-10-23-v9.pptx",
+      "sha256": "cd8786ffc2cbccffc278ff7de2d6e2b0ceac0bcbb8844e8a92e16929994e4ae2"
+    },
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/operations-2026-10-23-v9.pptx",
+      "file": "operations-2026-10-23-v9.pptx",
+      "sha256": "50cdd44e31b1d7eab1506bea9ebd46e9d20daee24b48dd9c41b5651f9338cf67"
+    },
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/user-2026-10-23-v9.pptx",
+      "file": "user-2026-10-23-v9.pptx",
+      "sha256": "5768b36413437408bd82fadacb66a5a22e436e7f153133890fcc997bd19cb166"
+    },
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/matrix-2026-10-23-v9.pptx",
+      "file": "matrix-2026-10-23-v9.pptx",
+      "sha256": "c10ad370a45e51e4924fe5ab160da50d6740e6f531db41ac2f2d6f41ee1e7f00"
+    },
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/progress-2026-10-23-v9.pptx",
+      "file": "progress-2026-10-23-v9.pptx",
+      "sha256": "ace037ea3bf12fe3928cc4a3776948b8f593dd79340970941a50e02dadfa4e30"
+    },
+    {
+      "source": "docs/traceability/registry.json",
+      "file": "registry.json",
+      "sha256": "14571209e88ee6221a09ff264866602ca0ff9d5ee2022404cd903b4384baa6c8"
+    },
+    {
+      "source": "docs/traceability/matrix.csv",
+      "file": "matrix.csv",
+      "sha256": "c9066deb638efa33be6d866194c5c703044ba79884b569e6b772cfcf4aec85f1"
+    },
+    {
+      "source": "docs/traceability/SELF_REVIEW_R9.md",
+      "file": "SELF_REVIEW_R9.md",
+      "sha256": "0bde0040d378dbb94def9c78954d7af2e742dc0e568972a50b03f8e147c3f051"
+    },
+    {
+      "source": "docs/acceptance/backup-restore-2026-10-23/results.json",
+      "file": "results.json",
+      "sha256": "2548c70579291459ebdcc0ca409f77820975c3bbe6b453464dd1d71b652b2b4f"
+    },
+    {
+      "source": ".manual-build-20261020/traceability-decks-r9.mjs",
+      "file": "traceability-decks-r9.mjs",
+      "sha256": "21601cf0da1dd2c978befd9f29ef5b53db7e1c473eb7894c99bdb4c14af99bca"
+    },
+    {
+      "source": ".manual-build-20261020/finalize-traceability-r9.mjs",
+      "file": "finalize-traceability-r9.mjs",
+      "sha256": "ee3abfd0a4560ce24c69806027ed91b1e17441565706628cfc82cd931bb268ea"
+    },
+    {
+      "source": "docs/progress/2026-10-23-at28-sheet-scope-complete.md",
+      "file": "2026-10-23-at28-sheet-scope-complete.md",
+      "sha256": "5a9bb4492a622a3583c5d7d9b5792cf06cc5653f3e7bae4050c2562cdbb6adc5"
+    }
+  ]
+}

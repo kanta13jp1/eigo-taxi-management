@@ -1,0 +1,25 @@
+{
+  "id": "AT28-LIVE-01",
+  "date": "2026-10-23",
+  "backupSpreadsheetId": "1Jis1Q8bHWPcLt9ehxFBTrVLbIHebc6Y1kaoOPlGiiqw",
+  "fixture": {
+    "student": "STU-AT28-restore01",
+    "ride": "RIDE-AT28-restore01",
+    "purchase": "PUR-AT28-restore01"
+  },
+  "restoredMatches": {
+    "生徒台帳": true,
+    "送迎予定履歴": true,
+    "チケット購入履歴": true
+  },
+  "baselineHashes": {
+    "studentsA1H8": "66bc6b6a44399b387e73289d3827ed98401dbb9cc1b52536e5198d4b5d3ee43a",
+    "ridesA1L8": "19139731a2ca88d492db8641a82b6b083aa9b44aed18f38d6780996fac2b055c",
+    "purchasesA1G8": "e1b5331a3a487c302e6d5bed29e04c6372126d4fed289b2aba45024915bac836"
+  },
+  "webRead": "WAITING_FOR_MANUAL_GOOGLE_SELECTION",
+  "cleanup": "NOT_RUN_FIXTURES_RESTORED_AND_RETAINED",
+  "calendarVerification": "NOT_RUN",
+  "calendarPermissionAdded": false,
+  "productionStarted": false
+}

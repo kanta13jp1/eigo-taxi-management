@@ -1,0 +1,4 @@
+Browser tab: 1750956564, Title: "Mighty 送迎管理API｜受入検証用 - プロジェクトの設定 - Apps Script", URL: "https://script.google.com/u/2/home/projects/1AnWQ_1itiEgyEYpmfTFM7HkgmTXu5RsW4H-ahnf3N-TplINguEgCaTrh/settings".
+The following is a diff from the previous accessibility tree with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
+~								134 text field (settable) 新しい説明文, Value: AT23 検証専用 2026-10-20｜Sheetsのみ承認済み, ID: c49
+The focused UI element is 134 text field (settable) 新しい説明文, Value: AT23 検証専用 2026-10-20｜Sheetsのみ承認済み, ID: c49

@@ -1,0 +1,46 @@
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import {pathToFileURL} from 'node:url';
+import {FileBlob,PresentationFile} from '@oai/artifact-tool';
+const root=process.cwd(),dir=path.resolve('outputs/daily-fifteen-20261112/ppt');
+const runtime=path.resolve(path.dirname(process.execPath),'../..');
+const skill='C:/Users/kanta/.codex/plugins/cache/openai-primary-runtime/presentations/26.1110.11258/skills/presentations';
+process.env.RUNTIME_NODE_MODULES=runtime+'/node/node_modules';
+const {finalizePresentation}=await import(pathToFileURL(skill+'/container_tools/artifact_tool_utils.mjs').href);
+const base=path.resolve('docs/deliverables/2026-11-10-premeeting');
+const p=await PresentationFile.importPptx(await FileBlob.load(path.join(base,'progress-2026-11-12-cumulative-fourteen.pptx'))),s=p.slides.items[0];
+function label(slide,t,x,y,w,h,sz,bold=false){const sh=slide.shapes.add({geometry:'rect',position:{left:x,top:y,width:w,height:h},fill:'none',line:{fill:'none',width:0}});sh.text=t;sh.text.style={typeface:'Yu Gothic',fontSize:sz,bold,color:'#102D52',verticalAlignment:'middle',insets:0};return sh;}
+for(const sh of s.shapes.items){
+ const text=sh.text.toString();
+ if(sh.position.top<150 && text.includes('修正') && text.includes('受入試験'))sh.text='11月10～12日の実装修正15件';
+ if(text.includes('画面の修正'))sh.text='修正 1～8';
+ if(text.includes('開発側の受入試験'))sh.text='修正 9～15';
+ if(sh.position.top>=210 && sh.position.top<=580 && text && (Math.abs(sh.position.left-65)<1 || Math.abs(sh.position.left-675)<1))sh.text='';
+ if(text.includes('追加12件'))sh.text.replace('追加12件','追加13件');
+ if(text.startsWith('全14件の日別内訳'))sh.text='全15件の日別内訳：11月10日4件、11日8件、12日3件';
+}
+const fixes=['予約時は残数不変、完了時の消費を明記。','入口を間違えたときに正しい入口を案内。','デモの保存先をブラウザー内と明記。','管理者集計・当日行・予約欄の残少警告。','日付変更・タブ復帰で当日一覧を更新。','チケット金額を1円単位で入力可能に。','生徒登録の小数枚数切捨てを修正。','不正な金額入力を0円に変換しない。','送り予約の見出しを「お送り時間」に。','代理予約の項目名と入力欄を関連付け。','取消確認に対象の生徒・日時・区分を表示。','送迎区分に名前とキーボード選択枠を表示。','保護者の生徒選択と残数・予約を一致。','完了操作名に対象と消費数を付与。','完了エラーでも画面を保ち、追加後に再試行。'];
+fixes.forEach((x,i)=>label(s,`${i+1}. ${x}`,i<8?65:675,220+(i<8?i:i-8)*45,i<8?565:550,44,21));
+s.speakerNotes.text='修正15件。先行2件はユーザー申告によるClaude Code Fable 5.2、追加13件Codex。11月10日4件、11日8件、12日3件。顧客本人確認0/6、本番保留。';
+const {slide:t}=p.slides.insert({after:s});
+label(t,'開発側で実施した受入試験15項目',55,24,1190,65,38,true);
+label(t,'各試験の対象版・実測値・範囲は検証記録に掲載',55,101,1190,43,24);
+const cases=['AT-24 予約と検証カレンダー一致','AT-25 取消で予定削除・残数不変','AT-28 復旧は一部。保護・参照に課題','AT-04 残り3・2・1・0枚の案内境界','AT-12 当日一覧の日付・地図リンク','AT-05 チケット金額・履歴・残数','AT-02 初期1.5枚拒否・10枚登録','AT-17 不正追加拒否・明示0円許可','AT-07 送り17:30・再表示・残数不変','AT-09 先生の代理予約・再表示','AT-10 対象だけ取消（模擬）','AT-08 往復選択・予約保持・残数不変','AT-03 残数表示の部分確認','AT-13 片道完了7回→6回・対象外不変','AT-14 残数不足→追加→往復完了7回→5回'];
+cases.forEach((x,i)=>label(t,`${i+1}. ${x}`,i<8?65:675,175+(i<8?i:i-8)*49,i<8?565:550,47,21));
+label(t,'AT-28・AT-03は部分確認。AT-10の公開画面での取消確定は未確認。',65,598,1150,43,21);
+label(t,'AT-24・25は実Googleの限定確認。その他も各記録に記載した検証範囲に限ります。',65,642,1150,32,19);
+label(t,'小林さんの確認は0/6件。本番運用は開始していません。',65,680,1150,32,21,true);
+t.speakerNotes.text='開発側で実施した15項目。全範囲の実Google受入や顧客合格ではない。AT-14は模擬と公開匿名デモ。';
+const data=JSON.parse(await fs.readFile(path.join(dir,'slide-copy.json'),'utf8'));
+const e=p.slides.add();
+label(e,'残数不足でも画面を保って再試行',55,18,1190,55,34,true);
+label(e,data.summary,55,82,1180,38,24);
+label(e,data.result,55,125,1190,38,22);
+e.images.add({blob:await fs.readFile(path.resolve(data.image)),contentType:'image/png',fit:'contain',alt:'公開管理者デモの往復完了結果。',position:{left:90,top:170,width:1100,height:500}});
+label(e,'今回作成した架空生徒・予約だけで確認。顧客用データは維持。本番運用は未開始。',65,675,1150,30,19);
+e.speakerNotes.text='AT-14。残数不足時に画面を隠さず、その場で追加後に往復完了を再試行。初期台帳取得失敗の扱いは維持。実Google受入・顧客本人確認を代替しない。';
+const candidate=path.join(dir,'candidate.pptx'),final=path.join(base,'progress-2026-11-12-cumulative-fifteen.pptx');
+await(await PresentationFile.exportPptx(p)).save(candidate);
+await finalizePresentation({workspaceDir:root,candidatePath:candidate,finalPath:final,pythonExecutable:runtime+'/python/python.exe',integrityValidatorPath:skill+'/container_tools/inspect_presentation_package_integrity.py',layoutValidatorPath:skill+'/container_tools/inspect_presentation_layout_geometry.py',layoutArgs:['--expected-slide-size-emu','12192000,6858000','--validate-heading-fit'],verifyArtifactToolImport:true,explicitTotalSlideCount:8,receiptPath:path.join(dir,'validation.json')});
+const q=await PresentationFile.importPptx(await FileBlob.load(final));
+for(let i=0;i<q.slides.items.length;i++)await fs.writeFile(path.join(dir,'final-'+(i+1)+'.png'),new Uint8Array(await(await q.export({slide:q.slides.items[i],format:'png',scale:1})).arrayBuffer()));

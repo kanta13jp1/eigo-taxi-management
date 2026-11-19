@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "status": "PASS",
+  "reviewer": "independent AI worker /root/modern_runner_1106/ppt_final_review",
+  "date": "2026-11-06",
+  "scope": "Read-only review of six revised v30 decks and 12-deck manifest/README consistency. No deck, source, registry or baseline was edited.",
+  "registrySha256": "4ed4441d2e6c1ee792955450f96b3579167031f5cedfda2d25ae2ea4b045482b",
+  "checks": {
+    "manifestDecks": 12,
+    "manifestSlides": 136,
+    "pptManifestReceiptHashesMatched": true,
+    "registryHashesMatched": true,
+    "slideCountsMatched": true,
+    "revisedDecks": 6,
+    "revisedSlides": 67,
+    "revisedPackageAndLayoutFindings": 0,
+    "revisedLayoutWarnings": 0,
+    "firstPartyReimportPassed": true,
+    "oldNotesAndImagesPreserved": true,
+    "oldBodyPixelChangesLimitedToDesignAndImplementationPage6": true,
+    "apiServiceDirectCallsDisclosedInNotes": true,
+    "localMockNotClaimedAsRealAcceptance": true,
+    "at28SyntheticSingleSheetScopePreserved": true,
+    "rangePasteMissingConditionalRuleAndColumnWidthMatchesRecord": true,
+    "sheetCopySettingsMatchRecord": true,
+    "noPrivateAccountAddressOrNewPrivateSheetUrlInAppendices": true,
+    "thirdParty0of30AndProductionHoldPreserved": true,
+    "nativePowerPointUnverifiedDisclosed": true,
+    "readmeCurrentLinksAndCountsMatchManifest": true
+  },
+  "resultEvidence": [
+    {"path": "outputs/booking-modal-scroll-20261106-green/results.json", "passed": 2},
+    {"path": "outputs/local-acceptance-independent-final-20261106/results.json", "passed": 14},
+    {"path": "outputs/local-ui-safety-20261106-final/results.json", "passed": 4}
+  ],
+  "contentSources": [
+    "docs/progress/2026-11-06-booking-modal-scroll.md",
+    "docs/progress/2026-11-06-local-ui-runner.md",
+    "docs/progress/2026-11-06-at28-native-settings.md"
+  ],
+  "independentExtraction": "outputs/ppt-acceleration-independent-extract-20261106.json",
+  "fullSizeImagesInspected": [
+    "outputs/ppt-20261106-v30-final2/progress/roundtrip/9.png",
+    "outputs/ppt-20261106-v30-final2/progress/roundtrip/10.png",
+    "outputs/ppt-20261106-v30-final2/design/roundtrip/6.png",
+    "outputs/ppt-20261106-v30-final2/implementation/roundtrip/6.png"
+  ],
+  "findings": [],
+  "observations": [
+    "Current v30 body and notes identify the modal change as undeployed and all 20 additional tests as local mock checks.",
+    "AT28 is confined to one new synthetic sheet and does not attest whole real-ledger restoration or Calendar consistency.",
+    "Old dated pages remain with current-reference headers and notes; only design and implementation page 6 body was deliberately updated.",
+    "Unchanged business v27 retains 21 historical layout warnings; the zero-warning claim in this review applies to the six revised v30 decks."
+  ],
+  "limits": [
+    "Application tests and Google Sheets operations were not rerun by this reviewer; preserved result files and contemporaneous records were read.",
+    "Rendering in the native PowerPoint application was not verified.",
+    "No Calendar scope addition, external sending, deployment or production start was performed."
+  ]
+}

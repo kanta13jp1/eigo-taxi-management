@@ -1,0 +1,16 @@
+{
+  "release": "9028a05806171c13",
+  "baseline": "54178ee8e9d61c91",
+  "sourceDigest": "b4d158cdd387ec1bc2095d79a5aac492337c7351ba84acd5c98236c770b3511d",
+  "inputs": 32,
+  "diff": [
+    "src/components/ParentPortal.tsx"
+  ],
+  "changedFileHash": "7b3ce4bc964456536cf33eb09a7abca93ec6679b33720941c40e01affcf4cba6",
+  "build": "tsc -b and vite build passed",
+  "lint": "oxlint src/components/ParentPortal.tsx passed",
+  "publicHashMatches": 7,
+  "publicUI": "public-ui.json",
+  "physicalDevice": false,
+  "liveGoogleAcceptance": false
+}

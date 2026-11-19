@@ -1,0 +1,28 @@
+{
+  "mode": "after",
+  "checkedAt": "2026-11-14T09:04:37.852Z",
+  "base": "http://127.0.0.1:65062",
+  "width": 375,
+  "height": 812,
+  "engine": "Chromium (Edge) mobile emulation",
+  "profiles": "fresh anonymous browser-local demo",
+  "geometry": {},
+  "cancelWrites": 1,
+  "safeDismissals": [
+    "Escape",
+    "initial Enter",
+    "戻る"
+  ],
+  "initialFocus": "戻る",
+  "focusRestored": true,
+  "targetOnlyCancelled": true,
+  "doubleConfirmSingleWrite": true,
+  "persistedAfterReload": true,
+  "studentBalancesUnchanged": true,
+  "blockedRequests": [],
+  "fixtureIds": [
+    "RIDE-55645ac1-06fb-4a14-b7a2-eba4602b627f",
+    "RIDE-f534d3ca-1567-4807-b53e-f0bcb8967d12"
+  ],
+  "scope": "Isolated anonymous parent demo, mobile Edge emulation. No live Google/calendar or customer data."
+}

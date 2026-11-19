@@ -1,0 +1,51 @@
+{
+  "reviewedAtUtc": "2026-11-09T16:28:15.400826+00:00",
+  "reviewer": "/root/consumption_review_1110",
+  "result": "PASS",
+  "finalPath": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\docs\\deliverables\\2026-11-10-premeeting\\premeeting-2026-11-11-v1.pptx",
+  "finalSha256": "590cf407be6f7428b0eb89a7dfaf3dbb6869d6dca54d1a3c8209ed3c16bfd2d3",
+  "sourceSha256": "2c575989b20e016a958c538ce3766af33821c754cf7b3775daea95e075ce5c19",
+  "briefSha256": "fa579064203b5064abe0fb3a290338c9ecfd934deaf6ae8bd5d9bb5ac506b35d",
+  "registryVersion": "2026-11-10-r18",
+  "registrySha256": "0f6b53a352a8549cc4a66a34af7932c8e692f4dbe0280f0b13920a4eede35719",
+  "checks": {
+    "final_ppt_bytes_and_receipt": true,
+    "v34_reference_and_brief_hash": true,
+    "registry_r18_hash": true,
+    "meeting_agreed_date_and_proposed_duration": true,
+    "customer_and_release_bounds": true,
+    "package_layout_font_and_reimport": true,
+    "four_native_slides_and_notes": true,
+    "page4_native_editable_table": true,
+    "no_private_email_family_or_google_resource_ids": true,
+    "duration_is_proposed_on_slide1": true,
+    "demo_and_customer_scopes_separated": true,
+    "consumption_is_explicit_manual_sequential": true,
+    "public_and_mock_results_distinct_no_customer_pass": true,
+    "full_current_meeting_brief_preserved_in_notes": true,
+    "all_notes_show_r18_and_boundaries": true,
+    "all_four_roundtrip_images_exist": true
+  },
+  "findings": [],
+  "visualReview": {
+    "pagesViewed": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "result": "PASS",
+    "notes": [
+      "All4 reimported full-page images legible",
+      "No visible clipping or overlapping text",
+      "Shared MightyLINK frame, sky, color and typography preserved",
+      "Meeting duration marked proposal; formal customer checks separate from demo",
+      "Sequential consumption example 5 to4 to2 clearly explained"
+    ]
+  },
+  "limitations": [
+    "Native PowerPoint execution and font rendering not verified",
+    "No real Google integration, physical device or customer acceptance added",
+    "Only this independent review receipt written; no source/PPT/manifest/canonical edits"
+  ]
+}

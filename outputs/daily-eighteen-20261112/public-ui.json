@@ -1,0 +1,32 @@
+{
+  "case": "AT-16",
+  "hostingVersion": "4296a542a2ae8491",
+  "checkedAt": "2026-11-12T06:42:25.298Z",
+  "url": "https://eigo-taxi-test.web.app/#/admin",
+  "scope": "two anonymous admin demo tabs in the same browser; no live Google calls",
+  "student": "AT-16 取消後完了確認用",
+  "studentId": "STU-bffba65f-ff1f-4f8e-afc5-c4814946b466",
+  "date": "2026-11-12",
+  "time": "16:00",
+  "rideType": "お迎え",
+  "newStudents": 1,
+  "newReservations": 1,
+  "secondTabCancelled": true,
+  "firstTabShowedStaleButton": true,
+  "staleCompletionRejected": true,
+  "firstTabUpdatedWithoutManualReload": true,
+  "completionButtonAfterRejection": false,
+  "statusAfterRejection": "キャンセル",
+  "balanceBefore": 7,
+  "balanceAfter": 7,
+  "priorAt13At14At15At11Balances": [
+    6,
+    5,
+    6,
+    7
+  ],
+  "images": [
+    "public-stale.png",
+    "public-reconciled.png"
+  ]
+}

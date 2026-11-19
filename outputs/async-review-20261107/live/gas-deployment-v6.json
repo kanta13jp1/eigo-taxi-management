@@ -1,0 +1,11 @@
+{
+  "deployedAtJst": "2026-11-07T18:06:00+09:00",
+  "version": 6,
+  "sourceSha256": "3a2bce6188a99daf331cad60a01759d6414c99f07e9d8f47a43ad28102ec336c",
+  "priorVersion": 5,
+  "sameDeploymentId": true,
+  "sameExecuteAsAndAudience": true,
+  "review": "docs/traceability/reports/async-review-20261107/backend-review.json",
+  "googleGrantAdded": false,
+  "productionStarted": false
+}

@@ -1,0 +1,258 @@
+{
+  "status": "CANDIDATE_NOT_ADOPTED",
+  "createdAt": "2026-11-10T12:52:08.295173+00:00",
+  "registryVersion": "2026-11-10-r19",
+  "registrySha256": "745a54cdce6360866d3b5d04162c65a97417eb384e4a3885969235a7148d3b2c",
+  "candidate": "outputs/portal-mismatch-20261110/adoption/registry-r19-candidate.json",
+  "canonicalRegistryChanged": false,
+  "counts": {
+    "requirements": 39,
+    "flows": 11,
+    "testCases": 211,
+    "screens": 20,
+    "interfaces": 16
+  },
+  "repointedEvidence": [
+    {
+      "id": "UI-07",
+      "before": "docs/traceability/reports/signout-retry-20261030-local/google-auth-retry-ui.json",
+      "after": "outputs/portal-mismatch-20261110/google-auth-retry-ui.json"
+    },
+    {
+      "id": "UI-01",
+      "before": "outputs/consumption-timing-20261110/regression/trace-ui-serial/results.json",
+      "after": "outputs/portal-mismatch-20261110/adoption/regression/trace-ui/results.json"
+    },
+    {
+      "id": "UI-02",
+      "before": "outputs/consumption-timing-20261110/regression/trace-ui-serial/results.json",
+      "after": "outputs/portal-mismatch-20261110/adoption/regression/trace-ui/results.json"
+    },
+    {
+      "id": "UI-03",
+      "before": "outputs/consumption-timing-20261110/regression/trace-ui-serial/results.json",
+      "after": "outputs/portal-mismatch-20261110/adoption/regression/trace-ui/results.json"
+    },
+    {
+      "id": "UI-04",
+      "before": "outputs/consumption-timing-20261110/regression/trace-ui-serial/results.json",
+      "after": "outputs/portal-mismatch-20261110/adoption/regression/trace-ui/results.json"
+    },
+    {
+      "id": "UI-05",
+      "before": "outputs/consumption-timing-20261110/regression/trace-ui-serial/results.json",
+      "after": "outputs/portal-mismatch-20261110/adoption/regression/trace-ui/results.json"
+    },
+    {
+      "id": "PT-21",
+      "before": "outputs/consumption-timing-20261110/adoption/frontend-contract-normalized.json",
+      "after": "outputs/portal-mismatch-20261110/adoption/frontend-contract-normalized.json"
+    },
+    {
+      "id": "UI-06",
+      "before": "outputs/consumption-timing-20261110/regression/trace-ui-serial/results.json",
+      "after": "outputs/portal-mismatch-20261110/adoption/regression/trace-ui/results.json"
+    },
+    {
+      "id": "UI-08",
+      "before": "docs/traceability/reports/signout-retry-20261030-local/google-auth-retry-ui.json",
+      "after": "outputs/portal-mismatch-20261110/google-auth-retry-ui.json"
+    },
+    {
+      "id": "LOCAL-UI-01",
+      "before": "outputs/consumption-timing-20261110/regression/local/results.json",
+      "after": "outputs/portal-mismatch-20261110/adoption/regression/local/results.json"
+    },
+    {
+      "id": "LOCAL-UI-02",
+      "before": "outputs/consumption-timing-20261110/regression/local/results.json",
+      "after": "outputs/portal-mismatch-20261110/adoption/regression/local/results.json"
+    },
+    {
+      "id": "LOCAL-UI-03",
+      "before": "outputs/consumption-timing-20261110/regression/local/results.json",
+      "after": "outputs/portal-mismatch-20261110/adoption/regression/local/results.json"
+    },
+    {
+      "id": "LOCAL-UI-04",
+      "before": "outputs/consumption-timing-20261110/regression/local/results.json",
+      "after": "outputs/portal-mismatch-20261110/adoption/regression/local/results.json"
+    },
+    {
+      "id": "LOCAL-UI-05",
+      "before": "outputs/consumption-timing-20261110/regression/local/results.json",
+      "after": "outputs/portal-mismatch-20261110/adoption/regression/local/results.json"
+    },
+    {
+      "id": "LOCAL-UI-06",
+      "before": "outputs/consumption-timing-20261110/regression/local/results.json",
+      "after": "outputs/portal-mismatch-20261110/adoption/regression/local/results.json"
+    },
+    {
+      "id": "LOCAL-UI-07",
+      "before": "outputs/consumption-timing-20261110/regression/local/results.json",
+      "after": "outputs/portal-mismatch-20261110/adoption/regression/local/results.json"
+    },
+    {
+      "id": "LOCAL-UI-08",
+      "before": "outputs/consumption-timing-20261110/regression/local/results.json",
+      "after": "outputs/portal-mismatch-20261110/adoption/regression/local/results.json"
+    },
+    {
+      "id": "LOCAL-UI-09",
+      "before": "outputs/consumption-timing-20261110/regression/local/results.json",
+      "after": "outputs/portal-mismatch-20261110/adoption/regression/local/results.json"
+    },
+    {
+      "id": "LOCAL-UI-10",
+      "before": "outputs/consumption-timing-20261110/regression/local/results.json",
+      "after": "outputs/portal-mismatch-20261110/adoption/regression/local/results.json"
+    },
+    {
+      "id": "LOCAL-UI-11",
+      "before": "outputs/consumption-timing-20261110/regression/local/results.json",
+      "after": "outputs/portal-mismatch-20261110/adoption/regression/local/results.json"
+    },
+    {
+      "id": "LOCAL-UI-12",
+      "before": "outputs/consumption-timing-20261110/regression/local/results.json",
+      "after": "outputs/portal-mismatch-20261110/adoption/regression/local/results.json"
+    },
+    {
+      "id": "LOCAL-UI-13",
+      "before": "outputs/consumption-timing-20261110/regression/local/results.json",
+      "after": "outputs/portal-mismatch-20261110/adoption/regression/local/results.json"
+    },
+    {
+      "id": "LOCAL-UI-14",
+      "before": "outputs/consumption-timing-20261110/regression/local/results.json",
+      "after": "outputs/portal-mismatch-20261110/adoption/regression/local/results.json"
+    },
+    {
+      "id": "PT-22",
+      "before": "outputs/consumption-timing-20261110/adoption/frontend-contract-normalized.json",
+      "after": "outputs/portal-mismatch-20261110/adoption/frontend-contract-normalized.json"
+    },
+    {
+      "id": "PT-23",
+      "before": "outputs/consumption-timing-20261110/adoption/frontend-contract-normalized.json",
+      "after": "outputs/portal-mismatch-20261110/adoption/frontend-contract-normalized.json"
+    },
+    {
+      "id": "PT-24",
+      "before": "outputs/consumption-timing-20261110/adoption/frontend-contract-normalized.json",
+      "after": "outputs/portal-mismatch-20261110/adoption/frontend-contract-normalized.json"
+    },
+    {
+      "id": "PT-25",
+      "before": "outputs/consumption-timing-20261110/adoption/frontend-contract-normalized.json",
+      "after": "outputs/portal-mismatch-20261110/adoption/frontend-contract-normalized.json"
+    },
+    {
+      "id": "PT-26",
+      "before": "outputs/consumption-timing-20261110/adoption/frontend-contract-normalized.json",
+      "after": "outputs/portal-mismatch-20261110/adoption/frontend-contract-normalized.json"
+    },
+    {
+      "id": "PT-27",
+      "before": "outputs/consumption-timing-20261110/adoption/frontend-contract-normalized.json",
+      "after": "outputs/portal-mismatch-20261110/adoption/frontend-contract-normalized.json"
+    },
+    {
+      "id": "PT-28",
+      "before": "outputs/consumption-timing-20261110/adoption/frontend-contract-normalized.json",
+      "after": "outputs/portal-mismatch-20261110/adoption/frontend-contract-normalized.json"
+    },
+    {
+      "id": "PT-29",
+      "before": "outputs/consumption-timing-20261110/adoption/frontend-contract-normalized.json",
+      "after": "outputs/portal-mismatch-20261110/adoption/frontend-contract-normalized.json"
+    },
+    {
+      "id": "PT-30",
+      "before": "outputs/consumption-timing-20261110/adoption/frontend-contract-normalized.json",
+      "after": "outputs/portal-mismatch-20261110/adoption/frontend-contract-normalized.json"
+    },
+    {
+      "id": "PT-31",
+      "before": "outputs/consumption-timing-20261110/adoption/frontend-contract-normalized.json",
+      "after": "outputs/portal-mismatch-20261110/adoption/frontend-contract-normalized.json"
+    },
+    {
+      "id": "PT-32",
+      "before": "outputs/consumption-timing-20261110/adoption/frontend-contract-normalized.json",
+      "after": "outputs/portal-mismatch-20261110/adoption/frontend-contract-normalized.json"
+    },
+    {
+      "id": "PT-33",
+      "before": "outputs/consumption-timing-20261110/adoption/frontend-contract-normalized.json",
+      "after": "outputs/portal-mismatch-20261110/adoption/frontend-contract-normalized.json"
+    }
+  ],
+  "newTests": [
+    "PM-01",
+    "PM-02",
+    "PM-03",
+    "PM-04",
+    "PM-05"
+  ],
+  "freshReportCounts": {
+    "outputs/portal-mismatch-20261110/adoption/regression/trace-ui/results.json": 6,
+    "outputs/portal-mismatch-20261110/adoption/regression/local/results.json": 14,
+    "outputs/portal-mismatch-20261110/adoption/frontend-contract-normalized.json": 33,
+    "outputs/portal-mismatch-20261110/google-auth-retry-ui.json": 2
+  },
+  "capabilityTextChanged": [
+    "REQ-20 designText/operationText/userText/implementation/tests"
+  ],
+  "observationsAdded": [
+    "REQ-24 latestObservation",
+    "REQ-25 latestObservation"
+  ],
+  "statusesChanged": [],
+  "factsChanged": false,
+  "sourceBaselineUpdates": [
+    {
+      "path": "scripts/test_google_auth_retry_ui.cjs",
+      "before": "e8b1ba91546d3a3d33b0ca2ee4fe8967f94f41da89afaf7936c74982a90289ef",
+      "after": "6b9819277a497984c64ded87c9fbe5e72e7fd6b1b7bdc0c97d890ee0a94d4e99"
+    },
+    {
+      "path": "scripts/test_portal_mismatch_ui.cjs",
+      "before": null,
+      "after": "8cb6e7f873ec42895e4629962f176a22ad5de9ae20192ea1b1997112caa0e9f2"
+    },
+    {
+      "path": "src/components/LoginScreen.tsx",
+      "before": "fff15f0ad096c08a59d28a8d14d43d2d67c819b5d92a7551a7deb510f4234bb2",
+      "after": "3bcfd41e89347be94c72e13e7c6503b621bd2221c6b366311f0c4bcdf1894e3d"
+    },
+    {
+      "path": "src/portal.ts",
+      "before": "2cb1dc0aed33b27a24ef6ed804a6ae1e01b44e07f0814c12044dc1d3525cbeec",
+      "after": "874dce7f269e59073b75d6ae47c7fb3b682686fa2ab214d8cb0eacb48c59cac7"
+    }
+  ],
+  "sourceBaselineCandidate": "outputs/portal-mismatch-20261110/adoption/source-baseline-r19-candidate.json",
+  "dryRun": {
+    "errorCounts": {
+      "GENERATED_DRIFT": 26,
+      "SOURCE_REVIEW_REQUIRED": 4,
+      "PRESENTATION_STALE": 12
+    },
+    "unexpectedCodes": []
+  },
+  "customerPassed": 0,
+  "customerTotal": 6,
+  "productionStarted": false,
+  "pendingBeforeAdoption": [
+    "Independent AI review of the four changed/new source files (REVIEW-POL-02); the implementer has not self-approved",
+    "Independent review of this registry candidate",
+    "Twelve presentation packages must be reviewed and reissued against r19"
+  ],
+  "limits": [
+    "First trace UI attempt failed to launch a browser (no bundled Chromium); retained as trace-ui-attempt1-no-browser.log; rerun with installed Chrome adopted",
+    "Frontend contract report key normalized from an absolute path",
+    "Actual Google and customer checks are separate"
+  ]
+}

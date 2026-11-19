@@ -1,0 +1,14 @@
+{
+  "executedAt": "2026-10-28T10:42:41.095Z",
+  "mode": "Node VM; synthetic React hooks and stubbed setup; no browser or real Google login",
+  "sourceHashes": {
+    "src/components/LoginScreen.tsx": "11c5c7dfe127014842c8e2d88e5d6e3948607f12b54f9438020625165bd62f57",
+    "scripts/test_google_auth_retry_ui.cjs": "b882cc464c85f690c1d09e1a6786d69e8f73bc7c25275ad2820641f68ed923b1"
+  },
+  "results": [
+    {
+      "id": "UI-07",
+      "status": "PASS"
+    }
+  ]
+}

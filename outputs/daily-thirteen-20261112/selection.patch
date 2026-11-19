@@ -1,0 +1,50 @@
+diff --git a/docs/acceptance/deployment/releases/47d533a917506138/source/src/components/ParentPortal.tsx b/outputs/daily-thirteen-20261112/stage/src/components/ParentPortal.tsx
+index ee89e64..2d6fdc2 100644
+--- a/docs/acceptance/deployment/releases/47d533a917506138/source/src/components/ParentPortal.tsx
++++ b/outputs/daily-thirteen-20261112/stage/src/components/ParentPortal.tsx
+@@ -33,14 +33,11 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({
+   const safeStudents = Array.isArray(students) ? students : [];
+   const safeRides = Array.isArray(rides) ? rides : [];
+ 
+-  const [selectedStudentId, setSelectedStudentId] = useState<string>(
+-    safeStudents[0]?.id || ''
+-  );
+-
+-  const student = safeStudents.find((s) => s.id === selectedStudentId);
++  const [preferredStudentId, setPreferredStudentId] = useState('');
++  const student = safeStudents.find((s) => s.id === preferredStudentId) ?? safeStudents[0];
+ 
+   // この生徒の送迎データ
+-  const studentRides = safeRides.filter((r) => r.studentId === selectedStudentId);
++  const studentRides = safeRides.filter((r) => r.studentId === student?.id);
+   const upcomingRides = studentRides.filter((r) => r.status === 'scheduled');
+   const pastRides = studentRides.filter((r) => r.status !== 'scheduled');
+ 
+@@ -55,7 +52,7 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({
+     }
+   };
+ 
+-  if (students.length === 0) {
++  if (!student) {
+     return (
+       <div className="bg-white rounded-2xl p-8 text-center border border-slate-200">
+         <p className="text-slate-500">登録されている生徒がいません。先生側で登録を行ってください。</p>
+@@ -67,13 +64,14 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({
+     <div className="max-w-xl mx-auto space-y-5 pb-8">
+       {/* 生徒選択バー（保護者が複数の兄弟姉妹を通わせている場合もスムーズに切替可能） */}
+       <div className="bg-white p-3 rounded-2xl border border-slate-200 shadow-xs flex items-center justify-between gap-3">
+-        <label className="text-xs font-bold text-slate-500 whitespace-nowrap">表示する生徒:</label>
++        <label htmlFor="parent-portal-student" className="text-xs font-bold text-slate-500 whitespace-nowrap">表示する生徒:</label>
+         <select
+-          value={selectedStudentId}
+-          onChange={(e) => setSelectedStudentId(e.target.value)}
++          id="parent-portal-student"
++          value={student.id}
++          onChange={(e) => setPreferredStudentId(e.target.value)}
+           className="bg-slate-50 border border-slate-200 font-bold text-slate-800 text-sm rounded-xl px-3 py-1.5 focus:outline-hidden focus:ring-2 focus:ring-emerald-500 w-full"
+         >
+-          {students.map((s) => (
++          {safeStudents.map((s) => (
+             <option key={s.id} value={s.id}>
+               {s.name} さん
+             </option>

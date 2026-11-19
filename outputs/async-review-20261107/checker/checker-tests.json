@@ -1,0 +1,148 @@
+{
+  "suite": "traceability-negative-tests",
+  "total": 34,
+  "passed": 34,
+  "results": [
+    {
+      "id": "TRACE-01",
+      "status": "PASS"
+    },
+    {
+      "id": "TRACE-02",
+      "status": "PASS"
+    },
+    {
+      "id": "TRACE-03",
+      "status": "PASS"
+    },
+    {
+      "id": "TRACE-04",
+      "status": "PASS"
+    },
+    {
+      "id": "TRACE-05",
+      "status": "PASS"
+    },
+    {
+      "id": "TRACE-06",
+      "status": "PASS"
+    },
+    {
+      "id": "TRACE-07",
+      "status": "PASS"
+    },
+    {
+      "id": "TRACE-08",
+      "status": "PASS"
+    },
+    {
+      "id": "TRACE-09",
+      "status": "PASS"
+    },
+    {
+      "id": "TRACE-10",
+      "status": "PASS"
+    },
+    {
+      "id": "TRACE-11",
+      "status": "PASS"
+    },
+    {
+      "id": "TRACE-12",
+      "status": "PASS"
+    },
+    {
+      "id": "TRACE-13",
+      "status": "PASS"
+    },
+    {
+      "id": "TRACE-14",
+      "status": "PASS"
+    },
+    {
+      "id": "TRACE-15",
+      "status": "PASS"
+    },
+    {
+      "id": "TRACE-16",
+      "status": "PASS"
+    },
+    {
+      "id": "TRACE-17",
+      "status": "PASS"
+    },
+    {
+      "id": "TRACE-18",
+      "status": "PASS"
+    },
+    {
+      "id": "TRACE-19",
+      "status": "PASS"
+    },
+    {
+      "id": "TRACE-20",
+      "status": "PASS"
+    },
+    {
+      "id": "TRACE-21",
+      "status": "PASS"
+    },
+    {
+      "id": "TRACE-22",
+      "status": "PASS"
+    },
+    {
+      "id": "TRACE-23",
+      "status": "PASS"
+    },
+    {
+      "id": "TRACE-24",
+      "status": "PASS"
+    },
+    {
+      "id": "TRACE-25",
+      "status": "PASS"
+    },
+    {
+      "id": "TRACE-26",
+      "status": "PASS"
+    },
+    {
+      "id": "TRACE-27",
+      "status": "PASS"
+    },
+    {
+      "id": "TRACE-28",
+      "status": "PASS"
+    },
+    {
+      "id": "TRACE-29",
+      "status": "PASS"
+    },
+    {
+      "id": "TRACE-30",
+      "status": "PASS"
+    },
+    {
+      "id": "TRACE-31",
+      "status": "PASS"
+    },
+    {
+      "id": "TRACE-32",
+      "status": "PASS"
+    },
+    {
+      "id": "TRACE-33",
+      "status": "PASS"
+    },
+    {
+      "id": "TRACE-34",
+      "status": "PASS"
+    }
+  ],
+  "mode": "offline local; deliberate registry/source defects in copies",
+  "sourceHashes": {
+    "scripts/traceability.py": "7ccb350b060222223244e86f692d931612db40d9d30c79aedba098529de5853b",
+    "scripts/test_traceability.py": "b000bbf09178f0453bd36947d56b64908a385802f077eb4dedb112b10dac3714"
+  }
+}

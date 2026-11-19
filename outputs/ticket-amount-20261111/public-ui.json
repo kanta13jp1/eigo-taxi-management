@@ -1,0 +1,24 @@
+{
+  "site": "https://eigo-taxi-test.web.app/#/admin",
+  "old": {
+    "balanceBefore": 12,
+    "balanceAfter": 22,
+    "validationMessage": "",
+    "release": "5b8000b179c3f5f1",
+    "keys": "1 then e",
+    "inputValue": "0"
+  },
+  "date": "2026-11-11T16:06:28.4336157+09:00",
+  "updated": {
+    "visibleValue": "1e",
+    "release": "aeb3c6dc735ff84d",
+    "balanceBefore": 22,
+    "validationMessage": "数字を入力してください。",
+    "explicitZeroBalanceAfter": 32,
+    "keys": "1 then e",
+    "invalidRejected": true,
+    "inputValue": ""
+  },
+  "customerRecordsWritten": 0,
+  "scope": "anonymous demo in browser storage"
+}

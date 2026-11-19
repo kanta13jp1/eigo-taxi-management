@@ -1,0 +1,10 @@
+{
+  "status": "ADOPTED",
+  "date": "2026-11-07",
+  "registrySha256": "d6aa48ce6e5bd18c89db3cde4c465f44b3dd088d52c0e5208cebaaf49d2d1adf",
+  "decks": 12,
+  "slides": 160,
+  "oldBinaryIdsPreserved": true,
+  "customerPassed": 0,
+  "productionStarted": false
+}

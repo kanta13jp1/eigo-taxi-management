@@ -1,0 +1,19 @@
+{
+  "url": "https://eigo-taxi-test.web.app/#/parent",
+  "hostingVersion": "47d533a917506138",
+  "scope": "public anonymous parent demo; local browser storage only",
+  "group": "送迎区分（フレックス予約） 片道1回＝チケット1枚",
+  "keyboard": "ArrowLeft from pickup selected and focused 往復 チケット2枚",
+  "date": "2026-11-11",
+  "time": "16:00",
+  "location": "AT-08 往復確認用の停留所",
+  "upcomingBefore": 3,
+  "upcomingAfterReload": 4,
+  "balanceBefore": 32,
+  "balanceAfterReload": 32,
+  "screenshots": [
+    "public-form.png",
+    "public-list.png"
+  ],
+  "actualScreenReaderSpeechTested": false
+}

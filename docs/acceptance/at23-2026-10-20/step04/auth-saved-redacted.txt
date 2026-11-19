@@ -1,0 +1,64 @@
+Browser tab: 1750956564, Title: "Mighty 送迎管理API｜受入検証用 - プロジェクトの設定 - Apps Script", URL: "https://script.google.com/u/2/home/projects/1AnWQ_1itiEgyEYpmfTFM7HkgmTXu5RsW4H-ahnf3N-TplINguEgCaTrh/settings".
+0 AXWebArea Mighty 送迎管理API｜受入検証用 - プロジェクトの設定 - Apps Script, URL: script.google.com/u/2/home/projects/1AnWQ_1itiEgyEYpmfTFM7HkgmTXu5RsW4H-ahnf3N-TplINguEgCaTrh/settings
+	1 container
+		2 container yDmH0d
+			3 container gb
+				4 container
+					5 link Description: Google Apps Script, Value: script.google.com/home, ID: sdgBod
+					6 button 名前を変更
+					7 pop up button (collapsed) デプロイ, Secondary Actions: Expand
+					8 pop up button (collapsed) Description: サポート, Secondary Actions: Expand
+					9 button (collapsed) Description: Google アプリ, Secondary Actions: Expand
+					10 button (collapsed) Description: Google アカウント: 寛太梅澤 (k-umezawa@ml-mightylink.com), Secondary Actions: Expand
+			11 container
+				12 container Apps Script プロジェクト ページ
+					13 link 概要
+						14 text 概要
+					15 link エディタ
+						16 text エディタ
+					17 link プロジェクト履歴
+						18 text プロジェクト履歴
+					19 link トリガー
+						20 text トリガー
+					21 link 実行数
+						22 text 実行数
+					23 link プロジェクトの設定
+						24 text プロジェクトの設定
+				25 container
+					26 heading プロジェクトの設定, Value: 1
+						27 text プロジェクトの設定
+					28 heading 全般設定, Value: 2
+						29 text 全般設定
+					30 text Apps Script プロジェクト全体に関係する設定です。これらの設定を変更しても既存のデプロイメントは影響を受けません。
+					31 combo box (collapsed) タイムゾーン (GMT+09:00) 日本標準時 – 東京, Value: (GMT+09:00) 日本標準時 – 東京, Secondary Actions: Expand
+					32 checkbox (settable, integer) Description: キャッチされなかった例外を Cloud のログに記録する, Value: 1, ID: c5
+					33 checkbox (settable, integer) Description: Chrome V8 ランタイムを有効にする, Value: 1, ID: c6
+					34 checkbox (settable, integer) Description: 「appsscript.json」マニフェスト ファイルをエディタで表示する, Value: 0, ID: c7
+					35 heading ID, Value: 2
+						36 text ID
+					37 text ID は、Apps Script プロジェクトの一意の識別子です。 スクリプト ID 1AnWQ_1itiEgyEYpmfTFM7HkgmTXu5RsW4H-ahnf3N-TplINguEgCaTrh
+					38 button スクリプト ID をコピー
+						39 text コピー
+					40 heading Google Cloud Platform（GCP）プロジェクト, Value: 2
+						41 text Google Cloud Platform（GCP）プロジェクト
+					42 text Apps Script プロジェクトでは、Google Cloud Platform を使用して承認、高度なサービス、その他の詳細が管理されます。詳しくは、
+					43 link Description: Google Cloud Platform, Value: developers.google.com/apps-script/guides/cloud-platform-projects
+					44 text  をご覧ください。 GCP デフォルト
+					45 button プロジェクトを変更
+						46 text プロジェクトを変更
+					47 heading スクリプト プロパティ, Value: 2
+						48 text スクリプト プロパティ
+					49 text スクリプト プロパティを使用すると、特定のオブジェクト インスタンスに対して簡単にカスタム プロパティを定義および公開できます。詳しくは、
+					50 link Description: スクリプト プロパティに関するドキュメント, Value: developers.google.com/apps-script/reference/properties
+					51 text をご覧ください。
+					52 container
+						53 text プロパティ
+						54 text field (disabled) プロパティ, Value: AUTH_USERS_JSON, ID: propertyName0
+					55 container
+						56 text 値
+						57 text field (disabled) 値, ID: propertyValue0, Value: {"[HASH REDACTED]":{"id":"admin-01","name":"AT23 Admin 1","role":"admin","studentIds":[]},"[HASH REDACTED]":{"id":"admin-02","name":"AT23 Admin 2","role":"admin","studentIds":[]},"[HASH REDACTED]":{"id":"parent-01","name":"AT23 Family A","role":"parent","studentIds":["STU-001"]},"[HASH REDACTED]":{"id":"parent-02","name":"AT23 Family B","role":"parent","studentIds":["STU-002"]}}
+					58 button スクリプト プロパティを編集
+						59 text スクリプト プロパティを編集
+		60 text プロジェクト名を変更しました。
+
+The focused UI element is 0 AXWebArea Mighty 送迎管理API｜受入検証用 - プロジェクトの設定 - Apps Script, URL: script.google.com/u/2/home/projects/1AnWQ_1itiEgyEYpmfTFM7HkgmTXu5RsW4H-ahnf3N-TplINguEgCaTrh/settings

@@ -1,0 +1,15 @@
+{
+  "checkedAt": "2026-10-20T16:06:26.631Z",
+  "scope": "Local source; Firebase unconfigured; no real Google sign-in performed",
+  "checks": {
+    "adminNoEndpointOrKeyInput": true,
+    "parentNoEndpointOrKeyInput": true,
+    "unconfiguredGoogleDisabled": true,
+    "demoEntryNoGoogleLogin": true,
+    "parentDemoHasOneStudent": true,
+    "parentCannotChangeToAdmin": true,
+    "adminSettingsNoTechnicalInputsOrCode": true,
+    "qrInstructionsGoogleAccount": true
+  },
+  "externalChanges": false
+}

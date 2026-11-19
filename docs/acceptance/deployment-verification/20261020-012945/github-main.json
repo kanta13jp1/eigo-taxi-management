@@ -1,0 +1,1 @@
+{"authorDate":"2026-10-18T07:14:14Z","message":"fix: complete bidirectional GAS sync, roundtrip ticket deduction, JST date handling, and resolve lint warnings (Closes #1, Closes #2, Closes #3)","sha":"2fa6127715017d52ae0c9bd80be39c4db90a47c3"}

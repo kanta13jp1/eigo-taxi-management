@@ -1,0 +1,132 @@
+{
+  "refusals": [
+    {
+      "table": "students",
+      "input": "",
+      "denied": true,
+      "allBytesPreserved": true
+    },
+    {
+      "table": "students",
+      "input": "[{\"id\":1}",
+      "denied": true,
+      "allBytesPreserved": true
+    },
+    {
+      "table": "students",
+      "input": "null",
+      "denied": true,
+      "allBytesPreserved": true
+    },
+    {
+      "table": "students",
+      "input": "{}",
+      "denied": true,
+      "allBytesPreserved": true
+    },
+    {
+      "table": "students",
+      "input": "\"text\"",
+      "denied": true,
+      "allBytesPreserved": true
+    },
+    {
+      "table": "students",
+      "input": "2",
+      "denied": true,
+      "allBytesPreserved": true
+    },
+    {
+      "table": "students",
+      "input": "false",
+      "denied": true,
+      "allBytesPreserved": true
+    },
+    {
+      "table": "rides",
+      "input": "",
+      "denied": true,
+      "allBytesPreserved": true
+    },
+    {
+      "table": "rides",
+      "input": "[{\"id\":1}",
+      "denied": true,
+      "allBytesPreserved": true
+    },
+    {
+      "table": "rides",
+      "input": "null",
+      "denied": true,
+      "allBytesPreserved": true
+    },
+    {
+      "table": "rides",
+      "input": "{}",
+      "denied": true,
+      "allBytesPreserved": true
+    },
+    {
+      "table": "rides",
+      "input": "\"text\"",
+      "denied": true,
+      "allBytesPreserved": true
+    },
+    {
+      "table": "rides",
+      "input": "2",
+      "denied": true,
+      "allBytesPreserved": true
+    },
+    {
+      "table": "rides",
+      "input": "false",
+      "denied": true,
+      "allBytesPreserved": true
+    },
+    {
+      "table": "purchases",
+      "input": "",
+      "denied": true,
+      "allBytesPreserved": true
+    },
+    {
+      "table": "purchases",
+      "input": "[{\"id\":1}",
+      "denied": true,
+      "allBytesPreserved": true
+    },
+    {
+      "table": "purchases",
+      "input": "null",
+      "denied": true,
+      "allBytesPreserved": true
+    },
+    {
+      "table": "purchases",
+      "input": "{}",
+      "denied": true,
+      "allBytesPreserved": true
+    },
+    {
+      "table": "purchases",
+      "input": "\"text\"",
+      "denied": true,
+      "allBytesPreserved": true
+    },
+    {
+      "table": "purchases",
+      "input": "2",
+      "denied": true,
+      "allBytesPreserved": true
+    },
+    {
+      "table": "purchases",
+      "input": "false",
+      "denied": true,
+      "allBytesPreserved": true
+    }
+  ],
+  "emptyArrayAllowsCreation": 3,
+  "absentSeedsAndAllowsCreation": 3
+}

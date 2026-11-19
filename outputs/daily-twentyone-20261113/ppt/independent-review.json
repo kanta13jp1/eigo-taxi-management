@@ -1,0 +1,32 @@
+{
+  "dailyCounts": [
+    4,
+    8,
+    8,
+    1
+  ],
+  "sha256": "127d063dbc0f1d18d2d65b8cd5e85bd437feb312a8256cf91a298802a46f496c",
+  "changes": 21,
+  "attribution": {
+    "Codex": 19,
+    "ClaudeCodeFable52": 2
+  },
+  "changedCarryForwardPNGs": [],
+  "nativePowerPointViewed": false,
+  "pass": true,
+  "renderedSlidesVisuallyReviewed": [
+    1,
+    2,
+    14
+  ],
+  "checks": [
+    "Numbered implementation and acceptance rows 1–21 each listed once",
+    "Partial AT-28/03 and public cancellation limit AT-10 are explicit",
+    "Slide 14 shows the isolated public demo form, error, retained date/time/place/note, and states normal reload and isolated test scope",
+    "No Google backup recovery or production acceptance claim",
+    "No visible overlap or clipping on revised rendered slides. Native PowerPoint not inspected."
+  ],
+  "distinctATs": 21,
+  "slides": 14,
+  "customerAcceptance": "0/6"
+}

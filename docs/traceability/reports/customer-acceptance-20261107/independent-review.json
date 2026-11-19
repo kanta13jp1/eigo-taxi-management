@@ -1,0 +1,107 @@
+{
+  "reviewedAt": "2026-11-07T07:44:54.261Z",
+  "reviewer": "independent customer-policy reviewer; authorized focused checker remediation",
+  "policyAndCheckerPass": true,
+  "fullStrictPass": false,
+  "checks": {
+    "original30ATIdsPreserved": true,
+    "sixUniqueCustomerCases": true,
+    "customerZeroOfSix": true,
+    "oldThirdPartyGateRemoved": true,
+    "oldLedgerKept": true,
+    "ticketRulesPreserved": true,
+    "productionStillHeld": true,
+    "all31CheckerCasesPass": true,
+    "checkerEvidenceHashesMatchCurrent": true
+  },
+  "sourceHashes": {
+    "scripts/traceability.py": "a086073a11009c6062755fafcb57f158e7d237de7cc89104769076b22dbeae8b",
+    "scripts/test_traceability.py": "1bf80878ed7bf012289ce8aa40c7974d3f177e6903f746afa6a12c772e41988a",
+    "docs/traceability/registry.json": "b7bd76dc8f424e951dd5540d1f174e5b1efc6948582c48e919e67aa467ec8604",
+    "docs/acceptance/CUSTOMER_ACCEPTANCE_MINIMUM_20261107.md": "643b20dcd32913bf6aabe27be0a6f0ac00ca972028eff19105c2b8753b06502e",
+    "docs/progress/2026-11-07-customer-acceptance-policy.md": "0c49d0ea08093052713b0beb5223196be132f49611256364c698d9aad8048f40",
+    "docs/remaining-work-tracker.md": "a6a1e2fab7ed1768b7b8b1b94c95e83a5905501a71c956d11e58e7ede2cffd0c",
+    "docs/DELIVERY_CHECKLIST.md": "c001c9f9ebc0206db58f2256b777bdf39003fe919f1936dcd2f8e5980f066ff2",
+    "docs/acceptance/06_ACCEPTANCE_TEST_SPEC.md": "f6372095eab3982728e9b870fdbfe7e488c98f48621e93ddaa75277f8cea0861",
+    "docs/acceptance/THIRD_PARTY_ACCEPTANCE.md": "c486bd914e4403e8a1515889d7c4275ea58cb3e492284852c3c8e06892e6c93b",
+    "docs/traceability/state.json": "4b52ae7db1dd1cfee8658a300f76140ed180745dd979ed90f7fc0da38c5296e0"
+  },
+  "registryVersion": "2026-11-07-r15",
+  "findings": [
+    {
+      "priority": "P2",
+      "status": "FIXED",
+      "title": "Customer PASS accepted unverified or missing evidence",
+      "before": "Only truthiness of five registry metadata fields was checked; no referenced-file existence, record mode, customer identity or matching case evidence was required.",
+      "after": "An existing JSON record with mode=real-customer-check, a unique matching case ID/status, exact reviewer/testedAt/release/observed fields, configured customer reviewer, timezone-qualified ISO timestamp, and googleIdentityVerified=true is required. Demo/offline modes, missing/malformed records, mismatched metadata and unverified identity are rejected.",
+      "tests": [
+        "TRACE-24",
+        "TRACE-25",
+        "TRACE-26",
+        "TRACE-27",
+        "TRACE-28",
+        "TRACE-29",
+        "TRACE-30"
+      ]
+    }
+  ],
+  "permanentTestsAdded": {
+    "TRACE-23": "Customer total and passed counters disagree with actual cases",
+    "TRACE-24": "Absent, blank or wrong-type required PASS metadata",
+    "TRACE-25": "Referenced result record missing",
+    "TRACE-26": "Malformed JSON or wrong evidence schema",
+    "TRACE-27": "Demo/offline/missing record mode",
+    "TRACE-28": "ID/status/person/time/release/observed mismatch or duplicate ID",
+    "TRACE-29": "Wrong customer reviewer or missing/invalid timestamp timezone",
+    "TRACE-30": "Google identity not explicitly verified",
+    "TRACE-31": "Valid matching real-customer record accepted without promoting old technical AT statuses"
+  },
+  "policyReview": {
+    "steps": "CUST-01 real Google login and own-family visibility; 02 one-off reservation and dedicated calendar matching; 03 cancellation with balance unchanged; 04 completion 5→4→2 for one-way/roundtrip; 05 low-ticket notice, synthetic zero-yen +10, both screens12; 06 both-role logout/reload hides ledger.",
+    "separation": "Original AT-01 through AT-30 remain developer technical checks. Old third-party0/30 is historical. Customer checks stay0/6 NOT_RUN. Daily frontend demo checks are not customer results or real Google acceptance.",
+    "preconditions": "Customer guide explicitly leaves the two-role setup unconfirmed and waits for developer preparation of synthetic family, initial5 tickets, test rides, URLs, dedicated calendar and release."
+  },
+  "evidence": {
+    "independentInitial22": "outputs/customer-acceptance-20261107-independent/checker-tests.json",
+    "independentFinal31": "docs/traceability/reports/customer-acceptance-20261107/independent/checker-tests.json",
+    "final31Sha256": "500d09c2038cbfa2094b3c7cf6bb11e31de41bd68018ad153d06145cf6a9079c",
+    "strict": "docs/traceability/reports/customer-acceptance-20261107/independent/strict.json",
+    "strictErrorCounts": {
+      "TEST_EVIDENCE_STALE": 16,
+      "DOCUMENT_DRIFT": 25,
+      "SOURCE_REVIEW_REQUIRED": 2,
+      "PRESENTATION_CONTENT_REVIEW": 12,
+      "PRESENTATION_STALE": 12,
+      "BINARY_DOCUMENT_DRIFT": 2
+    }
+  },
+  "pendingRootFinalization": [
+    "Point registry checker evidence references at the new31-case report and review the two current checker hashes before updating source-baseline.",
+    "Regenerate/re-index documents and finish presentation/binary refresh as appropriate; current full strict report still fails for stale evidence/baseline/index/presentation records.",
+    "Do not reuse the old baseline or mark customer cases PASS."
+  ],
+  "recordContractExample": {
+    "mode": "real-customer-check",
+    "results": [
+      {
+        "id": "CUST-01",
+        "status": "PASS",
+        "reviewer": "小林さん",
+        "testedAt": "2026-11-07T17:00:00+09:00",
+        "release": "ACTUAL_VERIFIED_RELEASE",
+        "observed": "ACTUAL_CUSTOMER_OBSERVATION",
+        "googleIdentityVerified": true
+      }
+    ]
+  },
+  "limits": [
+    "The validator checks explicit local evidence structure and consistency; it does not independently authenticate the reporter or prove the truth of a manually authored record. Human semantic review and actual Google/browser observations remain required.",
+    "Fixture timestamps, names and observations in the permanent tests are synthetic; they are not customer acceptance results.",
+    "This task did not perform customer checks, deploy, change OAuth or edit registry/source-baseline."
+  ],
+  "writes": [
+    "scripts/traceability.py focused customer PASS guard",
+    "scripts/test_traceability.py nine permanent additional cases",
+    "docs/traceability/reports/customer-acceptance-20261107/** evidence/review only"
+  ]
+}

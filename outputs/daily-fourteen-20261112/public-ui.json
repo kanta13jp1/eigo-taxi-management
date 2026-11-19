@@ -1,0 +1,26 @@
+{
+  "case": "AT-13",
+  "checkedAt": "2026-11-11T21:29:53.402Z",
+  "url": "https://eigo-taxi-test.web.app/#/admin",
+  "hostingVersion": "383ff85ce1a54688",
+  "scope": "anonymous admin demo; browser data only",
+  "student": "田中 陽菜 (ひな)",
+  "date": "2026-11-12",
+  "time": "16:00",
+  "location": "AT-13 片道完了確認用の停留所",
+  "rideType": "お迎え",
+  "accessibleNameBothLists": "送迎完了（1回消費） 田中 陽菜 (ひな) 2026-11-12 16:00 お迎え",
+  "priorExistingRides": 3,
+  "scheduledNewRides": 1,
+  "completedNewRides": 1,
+  "balanceBefore": 7,
+  "balanceAfterReload": 6,
+  "consumed": 1,
+  "completedAfterReload": true,
+  "remainingScheduledToday": 0,
+  "actualScreenReaderSpeechTested": false,
+  "images": [
+    "public-list-before.png",
+    "public-completed.png"
+  ]
+}

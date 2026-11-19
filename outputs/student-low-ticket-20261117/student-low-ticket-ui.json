@@ -1,0 +1,35 @@
+{
+  "executedAt": "2026-11-17T10:47:42.085Z",
+  "mode": "React server rendering with a synthetic fixture and the internal tab state opened by the test; no browser, network or Google",
+  "sourceHashes": {
+    "src/components/TeacherDashboard.tsx": "3e46370730b4663cbdcd9002b4273b5c902e8d0f1bc64fb50cc4986bb11ed654",
+    "scripts/test_student_low_ticket_ui.cjs": "35698cf662e42f540301c56f23c866b92e158abf5f7091819adaa59c684204fe"
+  },
+  "results": [
+    {
+      "id": "LOWUI-01",
+      "name": "Students tab is the tab rendered",
+      "status": "PASS"
+    },
+    {
+      "id": "LOWUI-02",
+      "name": "Balances 2 and 1 get the amber badge and a 残りN回 label",
+      "status": "PASS"
+    },
+    {
+      "id": "LOWUI-03",
+      "name": "Balance 0 keeps the red badge and チケット切れ, with no 残りN回 label",
+      "status": "PASS"
+    },
+    {
+      "id": "LOWUI-04",
+      "name": "Balances 5 and 3 stay green with no warning label",
+      "status": "PASS"
+    },
+    {
+      "id": "LOWUI-05",
+      "name": "Each warned student in the list is counted by the summary card, and only those",
+      "status": "PASS"
+    }
+  ]
+}

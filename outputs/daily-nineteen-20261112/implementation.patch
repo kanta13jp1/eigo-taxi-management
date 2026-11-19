@@ -1,0 +1,17 @@
+diff --git a/docs/acceptance/deployment/releases/4296a542a2ae8491/source/src/components/ParentPortal.tsx b/outputs/daily-nineteen-20261112/stage/src/components/ParentPortal.tsx
+index 2d6fdc2..9670a1c 100644
+--- a/docs/acceptance/deployment/releases/4296a542a2ae8491/source/src/components/ParentPortal.tsx
++++ b/outputs/daily-nineteen-20261112/stage/src/components/ParentPortal.tsx
+@@ -38,7 +38,11 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({
+ 
+   // この生徒の送迎データ
+   const studentRides = safeRides.filter((r) => r.studentId === student?.id);
+-  const upcomingRides = studentRides.filter((r) => r.status === 'scheduled');
++  const upcomingRides = studentRides
++    .filter((r) => r.status === 'scheduled')
++    .sort((a, b) => a.rideDate.localeCompare(b.rideDate)
++      || a.rideTime.localeCompare(b.rideTime)
++      || a.id.localeCompare(b.id));
+   const pastRides = studentRides.filter((r) => r.status !== 'scheduled');
+ 
+   const getRideTypeLabel = (type: RideType) => {

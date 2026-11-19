@@ -1,0 +1,91 @@
+{
+  "business": {
+    "pages": 21,
+    "changedPages": [],
+    "unchangedPagesPixelIdentical": 21,
+    "notes": 21,
+    "sha256": "b86078e42dec83746896164e8b7b65d8495790104b01dd01b34249de3bd8ec46"
+  },
+  "requirements": {
+    "pages": 10,
+    "changedPages": [],
+    "unchangedPagesPixelIdentical": 10,
+    "notes": 10,
+    "sha256": "dd71ba5767a681156f6e207ddc6b40feb42dce9be8e84789dd21bd6dc2207d40"
+  },
+  "design": {
+    "pages": 10,
+    "changedPages": [],
+    "unchangedPagesPixelIdentical": 10,
+    "notes": 10,
+    "sha256": "b8b9fea7cb072700f187c9c53918b6d8e9215cb382066802a8754e59344db440"
+  },
+  "test-spec": {
+    "pages": 10,
+    "changedPages": [],
+    "unchangedPagesPixelIdentical": 10,
+    "notes": 10,
+    "sha256": "e8cbf6ef61fc81656f7bb39aadc39f6392abb87647991055f1c84ddd4d056125"
+  },
+  "tasks": {
+    "pages": 10,
+    "changedPages": [
+      9
+    ],
+    "unchangedPagesPixelIdentical": 9,
+    "notes": 10,
+    "sha256": "b051b57f6e68d08e5b4ede353717b429ec1d2b575ebb222b365317be8e991dd9"
+  },
+  "implementation": {
+    "pages": 10,
+    "changedPages": [],
+    "unchangedPagesPixelIdentical": 10,
+    "notes": 10,
+    "sha256": "2ecb00071127b4e48b113c5f78154dac62585e8c433b260e33412176260c58a5"
+  },
+  "test-code": {
+    "pages": 10,
+    "changedPages": [],
+    "unchangedPagesPixelIdentical": 10,
+    "notes": 10,
+    "sha256": "57ca183edecd2270c1fd98e026798cfe1e8644dce632fdc3e7d49a94ff8af57b"
+  },
+  "acceptance": {
+    "pages": 10,
+    "changedPages": [],
+    "unchangedPagesPixelIdentical": 10,
+    "notes": 10,
+    "sha256": "46186077fb3d3012680e0d2aa222d8bee2fdff11c6072dab4b5db3f2e92fea17"
+  },
+  "operations": {
+    "pages": 10,
+    "changedPages": [],
+    "unchangedPagesPixelIdentical": 10,
+    "notes": 10,
+    "sha256": "c714cf1ce2cab504188ba9d467d3e80e57d057db755a25f73d81b36d45e463a6"
+  },
+  "user": {
+    "pages": 10,
+    "changedPages": [],
+    "unchangedPagesPixelIdentical": 10,
+    "notes": 10,
+    "sha256": "202471e4fc9e4588e687c055dbe422be5845eedfa8c399f9c38be075d8684b3e"
+  },
+  "matrix": {
+    "pages": 8,
+    "changedPages": [],
+    "unchangedPagesPixelIdentical": 8,
+    "notes": 8,
+    "sha256": "ab32ced8427275a290940fdb0eb3ad1fd95f8c13dd3f1d2716c5e38dfa063b2f"
+  },
+  "progress": {
+    "pages": 7,
+    "changedPages": [
+      1,
+      7
+    ],
+    "unchangedPagesPixelIdentical": 5,
+    "notes": 7,
+    "sha256": "f00b98bf383e7e7a21fa1ce05021892863780ef9fed9d24e00a0deb950a20d2d"
+  }
+}

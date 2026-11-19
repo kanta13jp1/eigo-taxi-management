@@ -1,0 +1,57 @@
+{
+  "stage": "VERIFIED_BLOCKER_NOTICE_NO_RELEASE_ADOPTION",
+  "slides": 4,
+  "themeId": "mighty-hp-v1",
+  "sourcePath": "docs/deliverables/2026-10-23-traceability/user-2026-11-07-v33.pptx",
+  "sourceSha256": "a66b5ff7fea5c2d1475d87218cf83bd779f58e164cce640e16c881cfd0b5ffeb",
+  "registryVersion": "2026-11-07-r17",
+  "registrySha256": "d6aa48ce6e5bd18c89db3cde4c465f44b3dd088d52c0e5208cebaaf49d2d1adf",
+  "mainManifestSha256": "3392146bc6cac583513e85cc338e160caec9fc74d89854dbd753f32188f004ba",
+  "mainManifestModified": false,
+  "existingTwelvePptModified": false,
+  "factPath": "outputs/reservation-retry-20261109/ppt/facts.json",
+  "factsSha256": "35fcab4cdf37c9e09d7f289bdce7d18f130aa21ea6a1b12c41e0aa4f3a8187f5",
+  "final": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\outputs\\reservation-retry-20261109\\ppt\\final-candidate-v2\\final\\progress-retry-2026-11-09-v2-blocked.pptx",
+  "delivered": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\docs\\deliverables\\2026-11-09-reservation-retry\\progress-retry-2026-11-09-v2-blocked.pptx",
+  "sha256": "d661cfd3dec1ff18b19e382d4ebdfaf18915afe0693ab3fc6c2319b0e770f5bc",
+  "layoutValidation": {
+    "finding_count": 0,
+    "findings": [],
+    "font_policy": {
+      "checked_text_script_count": 99,
+      "native_font_rendering_verified": false,
+      "observed_font_families": [
+        "Yu Gothic"
+      ],
+      "observed_font_use_counts": {
+        "Yu Gothic": 99
+      },
+      "passed": true,
+      "performed": true
+    },
+    "slide_count": 4,
+    "slide_size_in": [
+      13.3333,
+      7.5
+    ],
+    "warning_count": 0,
+    "warnings": [],
+    "exitCode": 0,
+    "findingCount": 0,
+    "fontPolicy": {
+      "checked_text_script_count": 99,
+      "native_font_rendering_verified": false,
+      "observed_font_families": [
+        "Yu Gothic"
+      ],
+      "observed_font_use_counts": {
+        "Yu Gothic": 99
+      },
+      "passed": true,
+      "performed": true
+    }
+  },
+  "visualReview": "PASS_ALL_FOUR_ROUNDTRIP_RENDERS",
+  "nativePowerPointReview": "NOT_RUN",
+  "renderReviewReceipt": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\outputs\\reservation-retry-20261109\\ppt\\final-candidate-v2\\render-review-receipt.json"
+}

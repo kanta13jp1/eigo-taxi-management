@@ -1,0 +1,14 @@
+{
+  "reviewer": "lead agent independent of implementation worker",
+  "baseline": "b88aec3501218a21",
+  "file": "src/components/TeacherDashboard.tsx",
+  "stagedSha256": "20a603ac7ffdc8107657bec480b6ab2f32c3bef2453d9edd3679599bf9e9e2b6",
+  "checks": [
+    "Only a descriptive completion-label helper and two aria-label properties added",
+    "Both completion actions include visible action name, actual consumption, student, date, time and ride type",
+    "Existing reservation-id callbacks and scheduled-only action conditions retained",
+    "No API, consumption logic, authentication, Google data or visible button behavior changed"
+  ],
+  "pass": true,
+  "limitation": "Actual screen-reader speech is not validated by this code review; local and public behavior require separate evidence."
+}

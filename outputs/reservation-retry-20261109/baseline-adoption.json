@@ -1,0 +1,25 @@
+{
+  "scope": "Candidate hashes independently reviewed; authoritative r17 baseline restored unchanged while deployment is blocked",
+  "productionStarted": false,
+  "adoptedAt": "2026-11-09T00:51:56.5133805Z",
+  "deployed": false,
+  "updates": {
+    "src/App.tsx": {
+      "before": "30d9a0d99648a09cd5891a6aea5e4d310ca97f9514e13bcbdd1bf8ceda60cb5f",
+      "after": "6522d074f89b06b80518110529cdacc922d6e35c8ccf00f8536f4f1c07bdc584"
+    },
+    "src/services/api.ts": {
+      "before": "62cfcc488be0eb1b104cf70e2afd1c9c7c4eef9136e1d950f2fb768479ebc30a",
+      "after": "159c91b9ead700c8e32bc17ce978145c81bd4419d10a3104be72db9730902264"
+    },
+    "scripts/test_portals.cjs": {
+      "before": "22f6ce09d925a27267efb6ab27442ea2a15660a6d29fdabc4ad2e087611e805c",
+      "after": "4c533b888e2a0be7c1404f68e54d8dd1fc4e6ba088e265ba6ea5fa0226edca21"
+    }
+  },
+  "review": "outputs/reservation-retry-20261109/independent-review.json",
+  "excludedFromRegistryBaseline": "scripts/test_reservation_retry_ui.cjs remains reviewed in independent-review.json but is not a registry-declared file",
+  "status": "CANDIDATE_REVIEWED_NOT_ADOPTED",
+  "adopted": false,
+  "restoredCanonicalBaselineAt": "2026-11-09T00:56:51.3244271Z"
+}

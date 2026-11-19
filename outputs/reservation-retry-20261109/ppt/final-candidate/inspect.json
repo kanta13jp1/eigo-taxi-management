@@ -1,0 +1,1137 @@
+{
+  "recordCount": 58,
+  "records": [
+    {
+      "kind": "textbox",
+      "id": "sh/xcryxg7y",
+      "slideIndex": 0,
+      "position": {
+        "left": 265,
+        "top": 25,
+        "width": 820,
+        "height": 26
+      },
+      "text": "送迎管理システム　開発進捗の補足",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 18,
+        "typeface": "Yu Gothic",
+        "color": "#3E5366",
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/98rytw72",
+      "slideIndex": 0,
+      "position": {
+        "left": 70,
+        "top": 127,
+        "width": 1120,
+        "height": 53
+      },
+      "text": "応答が不完全でも、予約を重ねない",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 32,
+        "typeface": "Yu Gothic",
+        "color": "#102D52",
+        "bold": true,
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/72t03qp0",
+      "slideIndex": 0,
+      "position": {
+        "left": 70,
+        "top": 672,
+        "width": 820,
+        "height": 20
+      },
+      "text": "予約再送の修正　2026-11-09補足　正本r17とは別冊",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 12,
+        "typeface": "Yu Gothic",
+        "color": "#3E5366",
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/61kzalof",
+      "slideIndex": 0,
+      "position": {
+        "left": 960,
+        "top": 672,
+        "width": 280,
+        "height": 20
+      },
+      "text": "1 / 4　2026年11月9日",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 14,
+        "typeface": "Yu Gothic",
+        "color": "#3E5366",
+        "alignment": "right"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/4zyhofml",
+      "slideIndex": 0,
+      "position": {
+        "left": 70,
+        "top": 231,
+        "width": 1140,
+        "height": 45
+      },
+      "text": "登録結果が返らない場合の、同じ内容の再操作を改善しました",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 25,
+        "typeface": "Yu Gothic",
+        "color": "#102D52",
+        "bold": true,
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/m58fih43",
+      "slideIndex": 0,
+      "position": {
+        "left": 70,
+        "top": 298,
+        "width": 180,
+        "height": 35
+      },
+      "text": "修正前",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 25,
+        "typeface": "Yu Gothic",
+        "color": "#F78C1E",
+        "bold": true,
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/o7axk7m9",
+      "slideIndex": 0,
+      "position": {
+        "left": 251,
+        "top": 304,
+        "width": 243,
+        "height": 40
+      },
+      "text": "予約を送信",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 26,
+        "typeface": "Yu Gothic",
+        "color": "#102D52",
+        "bold": true,
+        "alignment": "center"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/98jedc3u",
+      "slideIndex": 0,
+      "position": {
+        "left": 255,
+        "top": 356,
+        "width": 235,
+        "height": 69
+      },
+      "text": "予約そのものは\n登録済み",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 22,
+        "typeface": "Yu Gothic",
+        "color": "#3E5366",
+        "alignment": "center"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/eh8fex47",
+      "slideIndex": 0,
+      "position": {
+        "left": 521,
+        "top": 343,
+        "width": 50,
+        "height": 40
+      },
+      "text": "→",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 31,
+        "typeface": "Yu Gothic",
+        "color": "#F78C1E",
+        "bold": true,
+        "alignment": "center"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/03qxg7mx",
+      "slideIndex": 0,
+      "position": {
+        "left": 596,
+        "top": 304,
+        "width": 598,
+        "height": 40
+      },
+      "text": "結果が不完全",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 26,
+        "typeface": "Yu Gothic",
+        "color": "#102D52",
+        "bold": true,
+        "alignment": "center"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/14ze9c3i",
+      "slideIndex": 0,
+      "position": {
+        "left": 600,
+        "top": 356,
+        "width": 590,
+        "height": 69
+      },
+      "text": "もう一度送ると\n別の予約になることがある",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 22,
+        "typeface": "Yu Gothic",
+        "color": "#3E5366",
+        "alignment": "center"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/ydcfq1kb",
+      "slideIndex": 0,
+      "position": {
+        "left": 70,
+        "top": 475,
+        "width": 180,
+        "height": 35
+      },
+      "text": "修正後",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 25,
+        "typeface": "Yu Gothic",
+        "color": "#00A6DF",
+        "bold": true,
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/3qhsfypc",
+      "slideIndex": 0,
+      "position": {
+        "left": 251,
+        "top": 481,
+        "width": 243,
+        "height": 40
+      },
+      "text": "同じ受付番号",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 26,
+        "typeface": "Yu Gothic",
+        "color": "#102D52",
+        "bold": true,
+        "alignment": "center"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/ip8bmtor",
+      "slideIndex": 0,
+      "position": {
+        "left": 255,
+        "top": 533,
+        "width": 235,
+        "height": 64
+      },
+      "text": "同じタブ・同じ内容の\n再操作に使う",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 22,
+        "typeface": "Yu Gothic",
+        "color": "#3E5366",
+        "alignment": "center"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/5sjah872",
+      "slideIndex": 0,
+      "position": {
+        "left": 521,
+        "top": 516,
+        "width": 50,
+        "height": 40
+      },
+      "text": "→",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 31,
+        "typeface": "Yu Gothic",
+        "color": "#F78C1E",
+        "bold": true,
+        "alignment": "center"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/v2hsbyp0",
+      "slideIndex": 0,
+      "position": {
+        "left": 596,
+        "top": 481,
+        "width": 598,
+        "height": 40
+      },
+      "text": "同じ予約1件に集約",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 26,
+        "typeface": "Yu Gothic",
+        "color": "#102D52",
+        "bold": true,
+        "alignment": "center"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/u18bit8f",
+      "slideIndex": 0,
+      "position": {
+        "left": 600,
+        "top": 533,
+        "width": 590,
+        "height": 64
+      },
+      "text": "結果を照合してから確定\n一覧も予約番号ごとに更新",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 22,
+        "typeface": "Yu Gothic",
+        "color": "#3E5366",
+        "alignment": "center"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/g3qtkj6l",
+      "slideIndex": 0,
+      "position": {
+        "left": 86,
+        "top": 626,
+        "width": 1108,
+        "height": 29
+      },
+      "text": "再現と修正の検証は架空応答を使った模擬試験です。実Google連携の全受入とは別に管理します。",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 18,
+        "typeface": "Yu Gothic",
+        "color": "#102D52",
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "notes",
+      "id": "nt/jetc3ut0",
+      "slideIndex": 0,
+      "text": "2026年11月9日の予約再送修正の補足資料。既存12冊の仕様正本r17・v33を置き換えず、当日の修正と検証結果を説明する別冊。今回の開発試験では小林さん用・先生用の固定データを操作しない。本番運用を開始しない。通信が不完全な場合の再送制御は模擬試験で確認し、公開画面での通常操作の確認と区別する。2026-11-07のGAS v5で起きた事象との因果関係は未確定。\n根拠: outputs/reservation-retry-20261109/ppt/facts.json; outputs/reservation-retry-20261109/api-before-duplicate.log; ui-before.log; frontend-contract.json; ui-after.log; gas-after.log; src/services/api.ts; src/App.tsx。共通デザイン: docs/deliverables/2026-10-23-traceability/user-2026-11-07-v33.pptx、docs/traceability/presentation-theme.json。\n修正前の試験では不完全な成功応答後の同一内容2回送信に対し異なる予約IDを2件生成した。修正後は予約ID・生徒・日付・時刻・区分・予約者・場所・備考・状態を照合するまで同じタブの再送用IDを保持する。同じ予約IDは一覧上1件に集約し、既に完了・取消で読み戻した状態を遅延した予約中応答で上書きしない。新規IDの正常な予約を妨げない。"
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/1o7e9wfu",
+      "slideIndex": 1,
+      "position": {
+        "left": 265,
+        "top": 25,
+        "width": 820,
+        "height": 26
+      },
+      "text": "送迎管理システム　開発進捗の補足",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 18,
+        "typeface": "Yu Gothic",
+        "color": "#3E5366",
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/dk7u5wfy",
+      "slideIndex": 1,
+      "position": {
+        "left": 70,
+        "top": 127,
+        "width": 1120,
+        "height": 53
+      },
+      "text": "結果が分からないときの確認手順",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 32,
+        "typeface": "Yu Gothic",
+        "color": "#102D52",
+        "bold": true,
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/3u5czmxg",
+      "slideIndex": 1,
+      "position": {
+        "left": 70,
+        "top": 672,
+        "width": 820,
+        "height": 20
+      },
+      "text": "予約再送の修正　2026-11-09補足　正本r17とは別冊",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 12,
+        "typeface": "Yu Gothic",
+        "color": "#3E5366",
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/2twvqhgv",
+      "slideIndex": 1,
+      "position": {
+        "left": 960,
+        "top": 672,
+        "width": 280,
+        "height": 20
+      },
+      "text": "2 / 4　2026年11月9日",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 14,
+        "typeface": "Yu Gothic",
+        "color": "#3E5366",
+        "alignment": "right"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/cja5sji9",
+      "slideIndex": 1,
+      "position": {
+        "left": 70,
+        "top": 231,
+        "width": 1140,
+        "height": 45
+      },
+      "text": "エラーの後は、まず登録済みの予約と残数を確認します",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 25,
+        "typeface": "Yu Gothic",
+        "color": "#102D52",
+        "bold": true,
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/nqxkbaxc",
+      "slideIndex": 1,
+      "position": {
+        "left": 80,
+        "top": 544,
+        "width": 270,
+        "height": 20
+      },
+      "text": "説明用イメージ",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 12,
+        "typeface": "Yu Gothic",
+        "color": "#3E5366",
+        "alignment": "right"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/orql4fyx",
+      "slideIndex": 1,
+      "position": {
+        "left": 405,
+        "top": 298,
+        "width": 790,
+        "height": 36
+      },
+      "text": "1　同じタブを開いたまま",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 25,
+        "typeface": "Yu Gothic",
+        "color": "#102D52",
+        "bold": true,
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/psz2dkfi",
+      "slideIndex": 1,
+      "position": {
+        "left": 438,
+        "top": 338,
+        "width": 755,
+        "height": 47
+      },
+      "text": "画面の案内を読み、結果が分からない操作を控えます。",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 21,
+        "typeface": "Yu Gothic",
+        "color": "#3E5366",
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/e1o3y5gv",
+      "slideIndex": 1,
+      "position": {
+        "left": 405,
+        "top": 394,
+        "width": 790,
+        "height": 36
+      },
+      "text": "2　一覧を読み直す",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 25,
+        "typeface": "Yu Gothic",
+        "color": "#102D52",
+        "bold": true,
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/fmxk7axg",
+      "slideIndex": 1,
+      "position": {
+        "left": 438,
+        "top": 434,
+        "width": 755,
+        "height": 47
+      },
+      "text": "同じ日時・場所の予約があるか確認します。",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 21,
+        "typeface": "Yu Gothic",
+        "color": "#3E5366",
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/0n6l0fy1",
+      "slideIndex": 1,
+      "position": {
+        "left": 405,
+        "top": 490,
+        "width": 790,
+        "height": 36
+      },
+      "text": "3　同じ内容を再操作する場合",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 25,
+        "typeface": "Yu Gothic",
+        "color": "#102D52",
+        "bold": true,
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/1of290f6",
+      "slideIndex": 1,
+      "position": {
+        "left": 438,
+        "top": 530,
+        "width": 755,
+        "height": 47
+      },
+      "text": "同じタブなら、システムが同じ受付番号を使います。",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 21,
+        "typeface": "Yu Gothic",
+        "color": "#3E5366",
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/rydk3qx4",
+      "slideIndex": 1,
+      "position": {
+        "left": 86,
+        "top": 626,
+        "width": 1108,
+        "height": 29
+      },
+      "text": "別のタブや別の内容への変更は、同じ再送用IDの対象になりません。迷うときは表示と時刻を記録します。",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 18,
+        "typeface": "Yu Gothic",
+        "color": "#102D52",
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "notes",
+      "id": "nt/o6hqr0",
+      "slideIndex": 1,
+      "text": "2026年11月9日の予約再送修正の補足資料。既存12冊の仕様正本r17・v33を置き換えず、当日の修正と検証結果を説明する別冊。今回の開発試験では小林さん用・先生用の固定データを操作しない。本番運用を開始しない。通信が不完全な場合の再送制御は模擬試験で確認し、公開画面での通常操作の確認と区別する。2026-11-07のGAS v5で起きた事象との因果関係は未確定。\n根拠: outputs/reservation-retry-20261109/ppt/facts.json; outputs/reservation-retry-20261109/api-before-duplicate.log; ui-before.log; frontend-contract.json; ui-after.log; gas-after.log; src/services/api.ts; src/App.tsx。共通デザイン: docs/deliverables/2026-10-23-traceability/user-2026-11-07-v33.pptx、docs/traceability/presentation-theme.json。\n利用者向けの説明。sessionStorageは同じタブ内に限定され、タブを閉じた後や別タブの重複防止を保証しない。先に画面・一覧を確認する。完了やチケット追加を繰り返す案内ではなく、新規予約の不完全な応答に対する同一内容の再送を扱う。イラスト: creative-library/progress-illustrations-2026-11-05/calendar-checklist-flat.png、生成された説明用架空画像。"
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/or2h4v2t",
+      "slideIndex": 2,
+      "position": {
+        "left": 265,
+        "top": 25,
+        "width": 820,
+        "height": 26
+      },
+      "text": "送迎管理システム　開発進捗の補足",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 18,
+        "typeface": "Yu Gothic",
+        "color": "#3E5366",
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/wf2h8v2p",
+      "slideIndex": 2,
+      "position": {
+        "left": 70,
+        "top": 127,
+        "width": 1120,
+        "height": 53
+      },
+      "text": "試験と公開画面の結果を分けて確認",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 32,
+        "typeface": "Yu Gothic",
+        "color": "#102D52",
+        "bold": true,
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/qx0zu1kf",
+      "slideIndex": 2,
+      "position": {
+        "left": 70,
+        "top": 672,
+        "width": 820,
+        "height": 20
+      },
+      "text": "予約再送の修正　2026-11-09補足　正本r17とは別冊",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 12,
+        "typeface": "Yu Gothic",
+        "color": "#3E5366",
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/ri9gn6l0",
+      "slideIndex": 2,
+      "position": {
+        "left": 960,
+        "top": 672,
+        "width": 280,
+        "height": 20
+      },
+      "text": "3 / 4　2026年11月9日",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 14,
+        "typeface": "Yu Gothic",
+        "color": "#3E5366",
+        "alignment": "right"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/je9w3ehg",
+      "slideIndex": 2,
+      "position": {
+        "left": 70,
+        "top": 231,
+        "width": 1140,
+        "height": 45
+      },
+      "text": "試験とレビューは完了。修正版は検証サイトへ未反映です",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 25,
+        "typeface": "Yu Gothic",
+        "color": "#102D52",
+        "bold": true,
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/872hkn2d",
+      "slideIndex": 2,
+      "position": {
+        "left": 70,
+        "top": 591,
+        "width": 1140,
+        "height": 29
+      },
+      "text": "Firebaseの再認証待ち。公開中の旧版は変更していません。",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 19,
+        "typeface": "Yu Gothic",
+        "color": "#3E5366",
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/6lkzidk7",
+      "slideIndex": 2,
+      "position": {
+        "left": 86,
+        "top": 626,
+        "width": 1108,
+        "height": 29
+      },
+      "text": "公開デモの操作確認、実Google連携、実機、顧客6件は区別します。今回だけで受入全体を合格にしません。",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 18,
+        "typeface": "Yu Gothic",
+        "color": "#102D52",
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "table",
+      "id": "tb/udw7u5on",
+      "slideIndex": 2,
+      "position": {
+        "left": 70,
+        "top": 294,
+        "width": 1140,
+        "height": 285
+      },
+      "name": "",
+      "rows": 5,
+      "cols": 3,
+      "preview": "確認範囲 | 結果 | 確認したこと"
+    },
+    {
+      "kind": "notes",
+      "id": "nt/j1fpzf",
+      "slideIndex": 2,
+      "text": "2026年11月9日の予約再送修正の補足資料。既存12冊の仕様正本r17・v33を置き換えず、当日の修正と検証結果を説明する別冊。今回の開発試験では小林さん用・先生用の固定データを操作しない。本番運用を開始しない。通信が不完全な場合の再送制御は模擬試験で確認し、公開画面での通常操作の確認と区別する。2026-11-07のGAS v5で起きた事象との因果関係は未確定。\n根拠: outputs/reservation-retry-20261109/ppt/facts.json; outputs/reservation-retry-20261109/api-before-duplicate.log; ui-before.log; frontend-contract.json; ui-after.log; gas-after.log; src/services/api.ts; src/App.tsx。共通デザイン: docs/deliverables/2026-10-23-traceability/user-2026-11-07-v33.pptx、docs/traceability/presentation-theme.json。\n対象版と公開証跡: {\"status\":\"BLOCKED_REAUTH\",\"hostingVersion\":null,\"currentHostingVersion\":\"43d4ac9b2a065441\",\"sourceDigest\":\"9474523b706d44f520a627c1c1611824ed8d0b3e2347687d35fa98dbf61e0d27\",\"matchedResponses\":0,\"expectedResponses\":7}\n公開画面: {\"status\":\"NOT_RUN\",\"summary\":\"修正版は未反映・公開画面は未確認\",\"evidence\":null}\nローカル試験: {\"frontendPassed\":33,\"frontendTotal\":33,\"gasPassed\":85,\"gasTotal\":85,\"uiMerge\":\"PASS\",\"typecheck\":\"PASS\",\"lint\":\"PASS\"}\n独立レビュー: PASS。公開画面で意図的な通信不良を再現したと記載しない。修正前後の不完全応答分岐はNode模擬試験の記録を根拠とする。"
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/fatsfq1k",
+      "slideIndex": 3,
+      "position": {
+        "left": 265,
+        "top": 25,
+        "width": 820,
+        "height": 26
+      },
+      "text": "送迎管理システム　開発進捗の補足",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 18,
+        "typeface": "Yu Gothic",
+        "color": "#3E5366",
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/3ydsjq1w",
+      "slideIndex": 3,
+      "position": {
+        "left": 70,
+        "top": 127,
+        "width": 1120,
+        "height": 53
+      },
+      "text": "お客様の確認用データを保ちながら進めます",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 32,
+        "typeface": "Yu Gothic",
+        "color": "#102D52",
+        "bold": true,
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/54ba9g3i",
+      "slideIndex": 3,
+      "position": {
+        "left": 70,
+        "top": 672,
+        "width": 820,
+        "height": 20
+      },
+      "text": "予約再送の修正　2026-11-09補足　正本r17とは別冊",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 12,
+        "typeface": "Yu Gothic",
+        "color": "#3E5366",
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/43i9gb2x",
+      "slideIndex": 3,
+      "position": {
+        "left": 960,
+        "top": 672,
+        "width": 280,
+        "height": 20
+      },
+      "text": "4 / 4　2026年11月9日",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 14,
+        "typeface": "Yu Gothic",
+        "color": "#3E5366",
+        "alignment": "right"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/axcritkb",
+      "slideIndex": 3,
+      "position": {
+        "left": 70,
+        "top": 231,
+        "width": 1140,
+        "height": 45
+      },
+      "text": "開発側の改善と、お客様ご本人の確認を並行して進めます",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 25,
+        "typeface": "Yu Gothic",
+        "color": "#102D52",
+        "bold": true,
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/l4j6lkju",
+      "slideIndex": 3,
+      "position": {
+        "left": 86,
+        "top": 317,
+        "width": 308,
+        "height": 40
+      },
+      "text": "顧客確認6件",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 26,
+        "typeface": "Yu Gothic",
+        "color": "#102D52",
+        "bold": true,
+        "alignment": "center"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/y18nqp03",
+      "slideIndex": 3,
+      "position": {
+        "left": 90,
+        "top": 369,
+        "width": 300,
+        "height": 114
+      },
+      "text": "0 / 6 件合格\nご本人の実操作を待つ",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 22,
+        "typeface": "Yu Gothic",
+        "color": "#3E5366",
+        "alignment": "center"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/8ra5wzi5",
+      "slideIndex": 3,
+      "position": {
+        "left": 486,
+        "top": 317,
+        "width": 308,
+        "height": 40
+      },
+      "text": "実Google連携",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 26,
+        "typeface": "Yu Gothic",
+        "color": "#102D52",
+        "bold": true,
+        "alignment": "center"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/9sj6p4jq",
+      "slideIndex": 3,
+      "position": {
+        "left": 490,
+        "top": 369,
+        "width": 300,
+        "height": 114
+      },
+      "text": "予約・取消・残数など\n残る受入範囲を確認",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 22,
+        "typeface": "Yu Gothic",
+        "color": "#3E5366",
+        "alignment": "center"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/n61onu1k",
+      "slideIndex": 3,
+      "position": {
+        "left": 886,
+        "top": 317,
+        "width": 308,
+        "height": 40
+      },
+      "text": "バックアップ",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 26,
+        "typeface": "Yu Gothic",
+        "color": "#102D52",
+        "bold": true,
+        "alignment": "center"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/ovq5kvi1",
+      "slideIndex": 3,
+      "position": {
+        "left": 890,
+        "top": 369,
+        "width": 300,
+        "height": 114
+      },
+      "text": "複数シートの数式参照や\n保護設定を含めて確認",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 22,
+        "typeface": "Yu Gothic",
+        "color": "#3E5366",
+        "alignment": "center"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/pwz6d0jm",
+      "slideIndex": 3,
+      "position": {
+        "left": 70,
+        "top": 530,
+        "width": 280,
+        "height": 35
+      },
+      "text": "次の開発作業",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 25,
+        "typeface": "Yu Gothic",
+        "color": "#00A6DF",
+        "bold": true,
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/hsbyt0jq",
+      "slideIndex": 3,
+      "position": {
+        "left": 360,
+        "top": 525,
+        "width": 850,
+        "height": 58
+      },
+      "text": "Google再ログイン後に検証サイトへ反映・画面確認",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 24,
+        "typeface": "Yu Gothic",
+        "color": "#102D52",
+        "bold": true,
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/wr2xkvi5",
+      "slideIndex": 3,
+      "position": {
+        "left": 70,
+        "top": 585,
+        "width": 1140,
+        "height": 32
+      },
+      "text": "小林さん用・先生用の生徒、残数、固定予約を開発試験には使いません。",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 21,
+        "typeface": "Yu Gothic",
+        "color": "#3E5366",
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/up0fi50f",
+      "slideIndex": 3,
+      "position": {
+        "left": 86,
+        "top": 626,
+        "width": 1108,
+        "height": 29
+      },
+      "text": "本番運用は未開始です。本人操作・対象版・日時・実測値がそろうまで顧客確認を合格にしません。",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 18,
+        "typeface": "Yu Gothic",
+        "color": "#102D52",
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "notes",
+      "id": "nt/uih462",
+      "slideIndex": 3,
+      "text": "2026年11月9日の予約再送修正の補足資料。既存12冊の仕様正本r17・v33を置き換えず、当日の修正と検証結果を説明する別冊。今回の開発試験では小林さん用・先生用の固定データを操作しない。本番運用を開始しない。通信が不完全な場合の再送制御は模擬試験で確認し、公開画面での通常操作の確認と区別する。2026-11-07のGAS v5で起きた事象との因果関係は未確定。\n根拠: outputs/reservation-retry-20261109/ppt/facts.json; outputs/reservation-retry-20261109/api-before-duplicate.log; ui-before.log; frontend-contract.json; ui-after.log; gas-after.log; src/services/api.ts; src/App.tsx。共通デザイン: docs/deliverables/2026-10-23-traceability/user-2026-11-07-v33.pptx、docs/traceability/presentation-theme.json。\n顧客確認の読戻し日時: 2026-11-09。この資料では顧客のメール・個別URL・学生ID・Calendar ID・アクセス情報を記載しない。小林さんと先生の実操作結果を開発模擬試験やAIレビューで代替しない。旧第三者30件は履歴、原AT-01〜30は開発側の技術検証として継続。本番の開始判断と教室所有の運用用Googleアカウントなど残る条件は継続管理する。"
+    }
+  ],
+  "truncated": false,
+  "metadata": {
+    "target": {
+      "id": "pr/awpygg"
+    },
+    "omittedRecords": 0,
+    "abbreviatedRecords": 0,
+    "notices": []
+  }
+}

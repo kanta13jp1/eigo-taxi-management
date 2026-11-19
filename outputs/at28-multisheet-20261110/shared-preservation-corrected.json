@@ -1,0 +1,11 @@
+{
+  "pass": true,
+  "failures": [],
+  "changedCells": 9,
+  "historyRow": 65,
+  "customerPreserved": true,
+  "formatPreserved": true,
+  "answerFieldsPreserved": true,
+  "customerNativeStatePreserved": true,
+  "note": "Normalize the same CellData fields; whole-object comparison of reads with different masks is not a preservation test. The initial raw comparison is retained in shared-initial-readback.json."
+}

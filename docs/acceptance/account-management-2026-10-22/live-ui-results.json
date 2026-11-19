@@ -1,0 +1,22 @@
+{
+  "executedAt": "2026-10-22T12:09:16.602Z",
+  "environment": "mighty-test",
+  "gasVersion": 4,
+  "checks": {
+    "adminDirectory": "PASS",
+    "syntheticParentCreated": "PASS",
+    "disabled": "PASS",
+    "enabled": "PASS",
+    "familyUrlQr": "PASS",
+    "urlRotated": "PASS",
+    "syntheticParentDeleted": "PASS",
+    "freshDirectoryHasOnlyOriginalAdmins": "PASS"
+  },
+  "businessRowsMutated": false,
+  "calendarPermissionsAdded": false,
+  "productionStarted": false,
+  "limitations": [
+    "Pending-email binding tested offline only; no real family account supplied",
+    "Real parent denial, cross-family sessions and third-party acceptance remain pending"
+  ]
+}

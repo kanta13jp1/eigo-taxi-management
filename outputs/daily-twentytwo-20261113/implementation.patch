@@ -1,0 +1,43 @@
+diff --git a/docs/acceptance/deployment/releases/5b9271233ac9309f/source/src/App.tsx b/outputs/daily-twentytwo-20261113/stage/src/App.tsx
+index dd4dd6f..7437062 100644
+--- a/docs/acceptance/deployment/releases/5b9271233ac9309f/source/src/App.tsx
++++ b/outputs/daily-twentytwo-20261113/stage/src/App.tsx
+@@ -106,9 +106,12 @@ export function App() {
+         setStudents(studentsData);
+         setRides(ridesData);
+         setErrorMessage('');
++        return ridesData;
+       }
+     } catch (err) {
+-      setErrorMessage(err instanceof Error ? err.message : 'データを取得できませんでした');
++      if (JSON.stringify(ApiService.getSession()) === expectedSession) {
++        setErrorMessage(err instanceof Error ? err.message : 'データを取得できませんでした');
++      }
+     } finally {
+       setIsLoading(false);
+     }
+@@ -159,12 +162,22 @@ export function App() {
+ 
+   // 送迎キャンセルハンドラ
+   const handleCancelRide = async (rideId: string) => {
++    const expectedSession = JSON.stringify(ApiService.getSession());
++    setToastMessage(null);
+     try {
+       await ApiService.cancelReservation(rideId);
+-      await loadData();
++      if (JSON.stringify(ApiService.getSession()) !== expectedSession) return;
++      const refreshed = await loadData();
++      if (JSON.stringify(ApiService.getSession()) !== expectedSession) return;
++      if (refreshed?.find(ride => ride.id === rideId)?.status !== 'cancelled') {
++        setErrorMessage('予約の取消結果を確認できませんでした。台帳を再取得して、対象の予約の状態を確認してください。');
++        return;
++      }
+       showToast('送迎予約のキャンセルが完了しました');
+     } catch (e) {
+-      setErrorMessage(e instanceof Error ? e.message : 'キャンセルできませんでした');
++      if (JSON.stringify(ApiService.getSession()) === expectedSession) {
++        setErrorMessage(e instanceof Error ? e.message : 'キャンセルできませんでした');
++      }
+     }
+   };
+ 

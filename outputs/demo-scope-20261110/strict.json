@@ -1,0 +1,529 @@
+{
+  "structuralStatus": "FAIL",
+  "errors": [
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "UI-07 src/components/LoginScreen.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "UI-07 scripts/test_google_auth_retry_ui.cjs"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "UI-01 src/components/ParentPortal.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "UI-01 src/components/TeacherDashboard.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "UI-01 src/portal.ts"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "UI-02 src/components/ParentPortal.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "UI-02 src/components/TeacherDashboard.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "UI-02 src/portal.ts"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "UI-03 src/components/ParentPortal.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "UI-03 src/components/TeacherDashboard.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "UI-03 src/portal.ts"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "UI-04 src/components/ParentPortal.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "UI-04 src/components/TeacherDashboard.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "UI-04 src/portal.ts"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "UI-05 src/components/ParentPortal.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "UI-05 src/components/TeacherDashboard.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "UI-05 src/portal.ts"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "PT-21 src/portal.ts"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "UI-06 src/components/ParentPortal.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "UI-06 src/components/TeacherDashboard.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "UI-06 src/portal.ts"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "UI-08 src/components/LoginScreen.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "UI-08 scripts/test_google_auth_retry_ui.cjs"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-01 src/App.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-01 src/components/LoginScreen.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-01 src/components/ParentPortal.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-01 src/components/TeacherDashboard.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-01 src/portal.ts"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-02 src/App.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-02 src/components/LoginScreen.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-02 src/components/ParentPortal.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-02 src/components/TeacherDashboard.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-02 src/portal.ts"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-03 src/App.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-03 src/components/LoginScreen.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-03 src/components/ParentPortal.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-03 src/components/TeacherDashboard.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-03 src/portal.ts"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-04 src/App.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-04 src/components/LoginScreen.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-04 src/components/ParentPortal.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-04 src/components/TeacherDashboard.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-04 src/portal.ts"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-05 src/App.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-05 src/components/LoginScreen.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-05 src/components/ParentPortal.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-05 src/components/TeacherDashboard.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-05 src/portal.ts"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-06 src/App.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-06 src/components/LoginScreen.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-06 src/components/ParentPortal.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-06 src/components/TeacherDashboard.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-06 src/portal.ts"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-07 src/App.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-07 src/components/LoginScreen.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-07 src/components/ParentPortal.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-07 src/components/TeacherDashboard.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-07 src/portal.ts"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-08 src/App.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-08 src/components/LoginScreen.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-08 src/components/ParentPortal.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-08 src/components/TeacherDashboard.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-08 src/portal.ts"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-09 src/App.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-09 src/components/LoginScreen.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-09 src/components/ParentPortal.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-09 src/components/TeacherDashboard.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-09 src/portal.ts"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-10 src/App.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-10 src/components/LoginScreen.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-10 src/components/ParentPortal.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-10 src/components/TeacherDashboard.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-10 src/portal.ts"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-11 src/App.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-11 src/components/LoginScreen.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-11 src/components/ParentPortal.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-11 src/components/TeacherDashboard.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-11 src/portal.ts"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-12 src/App.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-12 src/components/LoginScreen.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-12 src/components/ParentPortal.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-12 src/components/TeacherDashboard.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-12 src/portal.ts"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-13 src/App.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-13 src/components/LoginScreen.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-13 src/components/ParentPortal.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-13 src/components/TeacherDashboard.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-13 src/portal.ts"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-14 src/App.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-14 src/components/LoginScreen.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-14 src/components/ParentPortal.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-14 src/components/TeacherDashboard.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "LOCAL-UI-14 src/portal.ts"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "PT-22 src/portal.ts"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "PT-23 src/portal.ts"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "PT-24 src/portal.ts"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "PT-25 src/portal.ts"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "PT-26 src/portal.ts"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "PT-27 src/portal.ts"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "PT-28 src/portal.ts"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "PT-29 src/portal.ts"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "PT-30 src/portal.ts"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "PT-31 src/portal.ts"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "REVIEW-UI-01 src/App.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "REVIEW-UI-01 src/components/TeacherDashboard.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "REVIEW-UI-02 src/App.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "REVIEW-UI-02 src/components/TeacherDashboard.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "REVIEW-UI-03 src/App.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "REVIEW-UI-03 src/components/TeacherDashboard.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "REVIEW-UI-04 src/App.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "REVIEW-UI-04 src/components/TeacherDashboard.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "REVIEW-UI-05 src/App.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "REVIEW-UI-05 src/components/TeacherDashboard.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "REVIEW-UI-06 src/App.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "REVIEW-UI-06 src/components/TeacherDashboard.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "REVIEW-UI-07 src/App.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "REVIEW-UI-07 src/components/TeacherDashboard.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "REVIEW-UI-08 src/App.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "REVIEW-UI-08 src/components/TeacherDashboard.tsx"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "PT-32 src/portal.ts"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "PT-33 src/portal.ts"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "RETRY-UI-01 src/App.tsx"
+    },
+    {
+      "code": "SOURCE_REVIEW_REQUIRED",
+      "message": "scripts/test_google_auth_retry_ui.cjs"
+    },
+    {
+      "code": "SOURCE_REVIEW_REQUIRED",
+      "message": "src/App.tsx"
+    },
+    {
+      "code": "SOURCE_REVIEW_REQUIRED",
+      "message": "src/components/LoginScreen.tsx"
+    },
+    {
+      "code": "SOURCE_REVIEW_REQUIRED",
+      "message": "src/components/ParentPortal.tsx"
+    },
+    {
+      "code": "SOURCE_REVIEW_REQUIRED",
+      "message": "src/components/TeacherDashboard.tsx"
+    },
+    {
+      "code": "SOURCE_REVIEW_REQUIRED",
+      "message": "src/portal.ts"
+    }
+  ],
+  "coverageGaps": [],
+  "counts": {
+    "requirements": 39,
+    "flows": 11,
+    "testCases": 206,
+    "screens": 20,
+    "interfaces": 16,
+    "coverageGaps": 0
+  },
+  "release": "HOLD",
+  "semanticReview": "REQUIRED",
+  "thirdPartyPassed": 0
+}

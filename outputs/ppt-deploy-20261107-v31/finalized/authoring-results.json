@@ -1,0 +1,780 @@
+{
+  "date": "2026-11-07",
+  "registrySha256": "2e7c85880aa8e9c2bbf57700ec9ba3a5a6ed6307287b9af778c86552ef7cf545",
+  "registryVersion": "2026-11-07-r15",
+  "evidencePath": "outputs/booking-modal-release-20261107-evidence.json",
+  "evidenceSha256": "51d370f6276d8439ef8ae5ba18f8e0ab4035f39503135a77bb07a0b84cb18eb7",
+  "records": [
+    {
+      "id": "PKG-01",
+      "name": "business",
+      "label": "業務フロー",
+      "source": "docs/deliverables/2026-10-23-traceability/business-2026-11-03-v27.pptx",
+      "sourceSha256": "939abfe6124039571e1f220d69c17116bd7973e20b1f5d1677928949ecbbd570",
+      "sourceSlides": 21,
+      "sourceMdPath": "docs/acceptance/01_BUSINESS_FLOWS.md",
+      "sourceMdSha256": "fc6a6f144559369752c47fb4155286cf2a4b2bc876ec7107aa0a47ba4a59f915",
+      "final": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\outputs\\ppt-deploy-20261107-v31\\finalized\\business\\final\\business-2026-11-07-v31.pptx",
+      "sha256": "3fac3c423b603e51fe33a9085b9c0e0b2ade825b6892b0747d989265e3905362",
+      "slides": 23,
+      "validation": {
+        "finding_count": 0,
+        "findings": [],
+        "font_policy": {
+          "checked_text_script_count": 921,
+          "native_font_rendering_verified": false,
+          "observed_font_families": [
+            "Yu Gothic"
+          ],
+          "observed_font_use_counts": {
+            "Yu Gothic": 921
+          },
+          "passed": true,
+          "performed": true
+        },
+        "slide_count": 23,
+        "slide_size_in": [
+          13.3333,
+          7.5
+        ],
+        "warning_count": 21,
+        "warnings": [
+          {
+            "kind": "substantial_text_frame_overlap",
+            "left_object_id": "30",
+            "overlap_height_in": 0.1458,
+            "overlap_width_in": 11.9271,
+            "right_object_id": "59",
+            "slide": 1
+          },
+          {
+            "kind": "substantial_text_frame_overlap",
+            "left_object_id": "30",
+            "overlap_height_in": 0.1458,
+            "overlap_width_in": 11.9271,
+            "right_object_id": "80",
+            "slide": 2
+          },
+          {
+            "kind": "substantial_text_frame_overlap",
+            "left_object_id": "37",
+            "overlap_height_in": 0.0938,
+            "overlap_width_in": 1.6042,
+            "right_object_id": "78",
+            "slide": 2
+          },
+          {
+            "kind": "substantial_text_frame_overlap",
+            "left_object_id": "30",
+            "overlap_height_in": 0.1458,
+            "overlap_width_in": 11.9271,
+            "right_object_id": "58",
+            "slide": 3
+          },
+          {
+            "kind": "substantial_text_frame_overlap",
+            "left_object_id": "30",
+            "overlap_height_in": 0.1458,
+            "overlap_width_in": 11.9271,
+            "right_object_id": "57",
+            "slide": 4
+          },
+          {
+            "kind": "substantial_text_frame_overlap",
+            "left_object_id": "30",
+            "overlap_height_in": 0.1458,
+            "overlap_width_in": 11.9271,
+            "right_object_id": "55",
+            "slide": 5
+          },
+          {
+            "kind": "substantial_text_frame_overlap",
+            "left_object_id": "30",
+            "overlap_height_in": 0.1458,
+            "overlap_width_in": 11.9271,
+            "right_object_id": "56",
+            "slide": 6
+          },
+          {
+            "kind": "substantial_text_frame_overlap",
+            "left_object_id": "30",
+            "overlap_height_in": 0.1458,
+            "overlap_width_in": 11.9271,
+            "right_object_id": "57",
+            "slide": 7
+          },
+          {
+            "kind": "substantial_text_frame_overlap",
+            "left_object_id": "30",
+            "overlap_height_in": 0.1458,
+            "overlap_width_in": 11.9271,
+            "right_object_id": "56",
+            "slide": 8
+          },
+          {
+            "kind": "substantial_text_frame_overlap",
+            "left_object_id": "30",
+            "overlap_height_in": 0.1458,
+            "overlap_width_in": 11.9271,
+            "right_object_id": "55",
+            "slide": 9
+          },
+          {
+            "kind": "substantial_text_frame_overlap",
+            "left_object_id": "30",
+            "overlap_height_in": 0.1458,
+            "overlap_width_in": 11.9271,
+            "right_object_id": "54",
+            "slide": 10
+          },
+          {
+            "kind": "substantial_text_frame_overlap",
+            "left_object_id": "30",
+            "overlap_height_in": 0.1458,
+            "overlap_width_in": 11.9271,
+            "right_object_id": "64",
+            "slide": 11
+          },
+          {
+            "kind": "substantial_text_frame_overlap",
+            "left_object_id": "10",
+            "overlap_height_in": 0.1562,
+            "overlap_width_in": 11.9271,
+            "right_object_id": "16",
+            "slide": 12
+          },
+          {
+            "kind": "substantial_text_frame_overlap",
+            "left_object_id": "10",
+            "overlap_height_in": 0.1562,
+            "overlap_width_in": 11.9271,
+            "right_object_id": "13",
+            "slide": 13
+          },
+          {
+            "kind": "substantial_text_frame_overlap",
+            "left_object_id": "10",
+            "overlap_height_in": 0.1562,
+            "overlap_width_in": 11.9271,
+            "right_object_id": "13",
+            "slide": 14
+          },
+          {
+            "kind": "substantial_text_frame_overlap",
+            "left_object_id": "10",
+            "overlap_height_in": 0.1562,
+            "overlap_width_in": 11.9271,
+            "right_object_id": "13",
+            "slide": 15
+          },
+          {
+            "kind": "substantial_text_frame_overlap",
+            "left_object_id": "10",
+            "overlap_height_in": 0.1562,
+            "overlap_width_in": 11.9271,
+            "right_object_id": "13",
+            "slide": 16
+          },
+          {
+            "kind": "substantial_text_frame_overlap",
+            "left_object_id": "10",
+            "overlap_height_in": 0.1562,
+            "overlap_width_in": 11.9271,
+            "right_object_id": "13",
+            "slide": 17
+          },
+          {
+            "kind": "substantial_text_frame_overlap",
+            "left_object_id": "10",
+            "overlap_height_in": 0.1562,
+            "overlap_width_in": 11.9271,
+            "right_object_id": "54",
+            "slide": 18
+          },
+          {
+            "kind": "substantial_text_frame_overlap",
+            "left_object_id": "10",
+            "overlap_height_in": 0.1562,
+            "overlap_width_in": 11.9271,
+            "right_object_id": "42",
+            "slide": 19
+          },
+          {
+            "kind": "substantial_text_frame_overlap",
+            "left_object_id": "10",
+            "overlap_height_in": 0.1562,
+            "overlap_width_in": 11.9271,
+            "right_object_id": "36",
+            "slide": 20
+          }
+        ],
+        "exitCode": 0,
+        "findingCount": 0,
+        "fontPolicy": {
+          "checked_text_script_count": 921,
+          "native_font_rendering_verified": false,
+          "observed_font_families": [
+            "Yu Gothic"
+          ],
+          "observed_font_use_counts": {
+            "Yu Gothic": 921
+          },
+          "passed": true,
+          "performed": true
+        }
+      }
+    },
+    {
+      "id": "PKG-02",
+      "name": "requirements",
+      "label": "要件定義",
+      "source": "docs/deliverables/2026-10-23-traceability/requirements-2026-11-03-v27.pptx",
+      "sourceSha256": "ed48f883f41da2df9e9b735ee2098ab6449057b5d3ef082f83179e637c7d4761",
+      "sourceSlides": 10,
+      "sourceMdPath": "docs/acceptance/03_REQUIREMENTS.md",
+      "sourceMdSha256": "2072248ee76fcac1991cffb45a3c5f9c662789842556dc42d9789d7e0fca1d42",
+      "final": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\outputs\\ppt-deploy-20261107-v31\\finalized\\requirements\\final\\requirements-2026-11-07-v31.pptx",
+      "sha256": "ca81c4c6d679ce0d4a82d5bcee6f06ab7637b56cd56a0379e9d8b3066cd41339",
+      "slides": 12,
+      "validation": {
+        "finding_count": 0,
+        "findings": [],
+        "font_policy": {
+          "checked_text_script_count": 275,
+          "native_font_rendering_verified": false,
+          "observed_font_families": [
+            "Yu Gothic"
+          ],
+          "observed_font_use_counts": {
+            "Yu Gothic": 275
+          },
+          "passed": true,
+          "performed": true
+        },
+        "slide_count": 12,
+        "slide_size_in": [
+          13.3333,
+          7.5
+        ],
+        "warning_count": 0,
+        "warnings": [],
+        "exitCode": 0,
+        "findingCount": 0,
+        "fontPolicy": {
+          "checked_text_script_count": 275,
+          "native_font_rendering_verified": false,
+          "observed_font_families": [
+            "Yu Gothic"
+          ],
+          "observed_font_use_counts": {
+            "Yu Gothic": 275
+          },
+          "passed": true,
+          "performed": true
+        }
+      }
+    },
+    {
+      "id": "PKG-03",
+      "name": "design",
+      "label": "設計",
+      "source": "docs/deliverables/2026-10-23-traceability/design-2026-11-06-v30.pptx",
+      "sourceSha256": "f9f814d47ffb335456bba176264a23d9ab8c4b6c404a814454f5a8db1b6ab818",
+      "sourceSlides": 11,
+      "sourceMdPath": "docs/acceptance/04_FUNCTIONAL_SPEC.md",
+      "sourceMdSha256": "0edfd18cb89ca20bf76a74470b74c7bc72b82c37a15b0c9b9665ba58fdb42cd6",
+      "final": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\outputs\\ppt-deploy-20261107-v31\\finalized\\design\\final\\design-2026-11-07-v31.pptx",
+      "sha256": "d6045c3ecc2d2e90a67f1ecfee0fd43000396fa1986697e506f6e210311ceacc",
+      "slides": 13,
+      "validation": {
+        "finding_count": 0,
+        "findings": [],
+        "font_policy": {
+          "checked_text_script_count": 312,
+          "native_font_rendering_verified": false,
+          "observed_font_families": [
+            "Yu Gothic"
+          ],
+          "observed_font_use_counts": {
+            "Yu Gothic": 312
+          },
+          "passed": true,
+          "performed": true
+        },
+        "slide_count": 13,
+        "slide_size_in": [
+          13.3333,
+          7.5
+        ],
+        "warning_count": 0,
+        "warnings": [],
+        "exitCode": 0,
+        "findingCount": 0,
+        "fontPolicy": {
+          "checked_text_script_count": 312,
+          "native_font_rendering_verified": false,
+          "observed_font_families": [
+            "Yu Gothic"
+          ],
+          "observed_font_use_counts": {
+            "Yu Gothic": 312
+          },
+          "passed": true,
+          "performed": true
+        }
+      }
+    },
+    {
+      "id": "PKG-04",
+      "name": "test-spec",
+      "label": "テスト仕様書",
+      "source": "docs/deliverables/2026-10-23-traceability/test-spec-2026-11-06-v30.pptx",
+      "sourceSha256": "754caaac674d36d0835593cf19d164e5d443b0504d2dfe5b980258722cafe87b",
+      "sourceSlides": 11,
+      "sourceMdPath": "docs/acceptance/17_TEST_SPEC.md",
+      "sourceMdSha256": "60e4e6e828cf647fc34b43ab2c3a0e29f8d4cd9cbda823850d0b3a6cecb9a9e1",
+      "final": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\outputs\\ppt-deploy-20261107-v31\\finalized\\test-spec\\final\\test-spec-2026-11-07-v31.pptx",
+      "sha256": "fe5460918287c0c4a7b81a5e4cf922a1b4116a7144cf44608c0a6a1fcc54549f",
+      "slides": 13,
+      "validation": {
+        "finding_count": 0,
+        "findings": [],
+        "font_policy": {
+          "checked_text_script_count": 295,
+          "native_font_rendering_verified": false,
+          "observed_font_families": [
+            "Yu Gothic"
+          ],
+          "observed_font_use_counts": {
+            "Yu Gothic": 295
+          },
+          "passed": true,
+          "performed": true
+        },
+        "slide_count": 13,
+        "slide_size_in": [
+          13.3333,
+          7.5
+        ],
+        "warning_count": 0,
+        "warnings": [],
+        "exitCode": 0,
+        "findingCount": 0,
+        "fontPolicy": {
+          "checked_text_script_count": 295,
+          "native_font_rendering_verified": false,
+          "observed_font_families": [
+            "Yu Gothic"
+          ],
+          "observed_font_use_counts": {
+            "Yu Gothic": 295
+          },
+          "passed": true,
+          "performed": true
+        }
+      }
+    },
+    {
+      "id": "PKG-05",
+      "name": "tasks",
+      "label": "タスクリスト",
+      "source": "docs/deliverables/2026-10-23-traceability/tasks-2026-11-06-v30.pptx",
+      "sourceSha256": "d4d18f7ebedd08aa3fe63d5f27bdc3680c746bf8a674ad347daaf9faa4b58d4f",
+      "sourceSlides": 13,
+      "sourceMdPath": "docs/acceptance/05_TASKS.md",
+      "sourceMdSha256": "f2500cd2e21c0faefa2120284bd29757aa94dcf7c4ef072f499f1d2dc43e2399",
+      "final": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\outputs\\ppt-deploy-20261107-v31\\finalized\\tasks\\final\\tasks-2026-11-07-v31.pptx",
+      "sha256": "bd6a4784d04f8e568c9ff3bbf3fc7c87e0fcedbea2719d5e88a20edb2d23b3f7",
+      "slides": 15,
+      "validation": {
+        "finding_count": 0,
+        "findings": [],
+        "font_policy": {
+          "checked_text_script_count": 340,
+          "native_font_rendering_verified": false,
+          "observed_font_families": [
+            "Yu Gothic"
+          ],
+          "observed_font_use_counts": {
+            "Yu Gothic": 340
+          },
+          "passed": true,
+          "performed": true
+        },
+        "slide_count": 15,
+        "slide_size_in": [
+          13.3333,
+          7.5
+        ],
+        "warning_count": 0,
+        "warnings": [],
+        "exitCode": 0,
+        "findingCount": 0,
+        "fontPolicy": {
+          "checked_text_script_count": 340,
+          "native_font_rendering_verified": false,
+          "observed_font_families": [
+            "Yu Gothic"
+          ],
+          "observed_font_use_counts": {
+            "Yu Gothic": 340
+          },
+          "passed": true,
+          "performed": true
+        }
+      }
+    },
+    {
+      "id": "PKG-06",
+      "name": "implementation",
+      "label": "実装コード対応",
+      "source": "docs/deliverables/2026-10-23-traceability/implementation-2026-11-06-v30.pptx",
+      "sourceSha256": "89cb1a81657221ca14cad0a58b25a0d2f2e61c815e89fe3da68873ea52734b22",
+      "sourceSlides": 11,
+      "sourceMdPath": "docs/acceptance/18_IMPLEMENTATION_INDEX.md",
+      "sourceMdSha256": "05f291035af4e69a387a3b7e39afb2884e494d4aa8de35dede12e271dd3c8f26",
+      "final": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\outputs\\ppt-deploy-20261107-v31\\finalized\\implementation\\final\\implementation-2026-11-07-v31.pptx",
+      "sha256": "01a400b16c57513e1563ab2e722a50d324d54864d2b04507bc85182a8ef0bdef",
+      "slides": 13,
+      "validation": {
+        "finding_count": 0,
+        "findings": [],
+        "font_policy": {
+          "checked_text_script_count": 278,
+          "native_font_rendering_verified": false,
+          "observed_font_families": [
+            "Yu Gothic"
+          ],
+          "observed_font_use_counts": {
+            "Yu Gothic": 278
+          },
+          "passed": true,
+          "performed": true
+        },
+        "slide_count": 13,
+        "slide_size_in": [
+          13.3333,
+          7.5
+        ],
+        "warning_count": 0,
+        "warnings": [],
+        "exitCode": 0,
+        "findingCount": 0,
+        "fontPolicy": {
+          "checked_text_script_count": 278,
+          "native_font_rendering_verified": false,
+          "observed_font_families": [
+            "Yu Gothic"
+          ],
+          "observed_font_use_counts": {
+            "Yu Gothic": 278
+          },
+          "passed": true,
+          "performed": true
+        }
+      }
+    },
+    {
+      "id": "PKG-07",
+      "name": "test-code",
+      "label": "テストコード対応",
+      "source": "docs/deliverables/2026-10-23-traceability/test-code-2026-11-06-v30.pptx",
+      "sourceSha256": "3c4f24572606afa57e88e59f0297dd3a8e5f22df44d4fda0ae164c064aa9a8db",
+      "sourceSlides": 11,
+      "sourceMdPath": "docs/acceptance/19_TEST_CODE_INDEX.md",
+      "sourceMdSha256": "93ffe0a858aa7ba134a8b2d60ef9b013eaf8ec3f8f6e3f612c05a0aa86c42fa7",
+      "final": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\outputs\\ppt-deploy-20261107-v31\\finalized\\test-code\\final\\test-code-2026-11-07-v31.pptx",
+      "sha256": "5e54230c680175bcc0a8a8b9e033cbbeb050bdaa69c620d6e7b48929987bf033",
+      "slides": 13,
+      "validation": {
+        "finding_count": 0,
+        "findings": [],
+        "font_policy": {
+          "checked_text_script_count": 275,
+          "native_font_rendering_verified": false,
+          "observed_font_families": [
+            "Yu Gothic"
+          ],
+          "observed_font_use_counts": {
+            "Yu Gothic": 275
+          },
+          "passed": true,
+          "performed": true
+        },
+        "slide_count": 13,
+        "slide_size_in": [
+          13.3333,
+          7.5
+        ],
+        "warning_count": 0,
+        "warnings": [],
+        "exitCode": 0,
+        "findingCount": 0,
+        "fontPolicy": {
+          "checked_text_script_count": 275,
+          "native_font_rendering_verified": false,
+          "observed_font_families": [
+            "Yu Gothic"
+          ],
+          "observed_font_use_counts": {
+            "Yu Gothic": 275
+          },
+          "passed": true,
+          "performed": true
+        }
+      }
+    },
+    {
+      "id": "PKG-08",
+      "name": "acceptance",
+      "label": "受入テスト仕様書",
+      "source": "docs/deliverables/2026-10-23-traceability/acceptance-2026-11-03-v27.pptx",
+      "sourceSha256": "2e9283b0d7995581aace4b788830c8a2253692ee9f4a3a041768232f9a11be81",
+      "sourceSlides": 10,
+      "sourceMdPath": "docs/acceptance/06_ACCEPTANCE_TEST_SPEC.md",
+      "sourceMdSha256": "f6372095eab3982728e9b870fdbfe7e488c98f48621e93ddaa75277f8cea0861",
+      "final": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\outputs\\ppt-deploy-20261107-v31\\finalized\\acceptance\\final\\acceptance-2026-11-07-v31.pptx",
+      "sha256": "670df4f75588ab87104338488c8f3827b3e301d4893e3ca339d5f9fb126be6f2",
+      "slides": 12,
+      "validation": {
+        "finding_count": 0,
+        "findings": [],
+        "font_policy": {
+          "checked_text_script_count": 274,
+          "native_font_rendering_verified": false,
+          "observed_font_families": [
+            "Yu Gothic"
+          ],
+          "observed_font_use_counts": {
+            "Yu Gothic": 274
+          },
+          "passed": true,
+          "performed": true
+        },
+        "slide_count": 12,
+        "slide_size_in": [
+          13.3333,
+          7.5
+        ],
+        "warning_count": 0,
+        "warnings": [],
+        "exitCode": 0,
+        "findingCount": 0,
+        "fontPolicy": {
+          "checked_text_script_count": 274,
+          "native_font_rendering_verified": false,
+          "observed_font_families": [
+            "Yu Gothic"
+          ],
+          "observed_font_use_counts": {
+            "Yu Gothic": 274
+          },
+          "passed": true,
+          "performed": true
+        }
+      }
+    },
+    {
+      "id": "PKG-09",
+      "name": "operations",
+      "label": "運用手順書",
+      "source": "docs/deliverables/2026-10-23-traceability/operations-2026-11-03-v27.pptx",
+      "sourceSha256": "ccbbe157383f60fa963ff1f1b696dcce14db20641b4a8627dd65e6682edfa4e5",
+      "sourceSlides": 10,
+      "sourceMdPath": "docs/acceptance/20_OPERATIONS.md",
+      "sourceMdSha256": "e1d305409d848e2130913178e6b5a7185ba76ca0cd560318ef1ee17bf4434b0d",
+      "final": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\outputs\\ppt-deploy-20261107-v31\\finalized\\operations\\final\\operations-2026-11-07-v31.pptx",
+      "sha256": "10436adf52c7cab9430ebd1351786cceebefa0e94ef71d4231721db3534b0f2a",
+      "slides": 12,
+      "validation": {
+        "finding_count": 0,
+        "findings": [],
+        "font_policy": {
+          "checked_text_script_count": 273,
+          "native_font_rendering_verified": false,
+          "observed_font_families": [
+            "Yu Gothic"
+          ],
+          "observed_font_use_counts": {
+            "Yu Gothic": 273
+          },
+          "passed": true,
+          "performed": true
+        },
+        "slide_count": 12,
+        "slide_size_in": [
+          13.3333,
+          7.5
+        ],
+        "warning_count": 0,
+        "warnings": [],
+        "exitCode": 0,
+        "findingCount": 0,
+        "fontPolicy": {
+          "checked_text_script_count": 273,
+          "native_font_rendering_verified": false,
+          "observed_font_families": [
+            "Yu Gothic"
+          ],
+          "observed_font_use_counts": {
+            "Yu Gothic": 273
+          },
+          "passed": true,
+          "performed": true
+        }
+      }
+    },
+    {
+      "id": "PKG-10",
+      "name": "user",
+      "label": "ユーザーマニュアル",
+      "source": "docs/deliverables/2026-10-23-traceability/user-2026-11-03-v27.pptx",
+      "sourceSha256": "f1a55746f3ce3d2bb512ad6b33c20db351b051829283cee27ccb0928e061773e",
+      "sourceSlides": 10,
+      "sourceMdPath": "docs/acceptance/21_USER_MANUAL.md",
+      "sourceMdSha256": "cfd6a7e071dfda7dcc3f2ba21fdf87f660bd5442f13886b785e3dae8d91ec5ac",
+      "final": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\outputs\\ppt-deploy-20261107-v31\\finalized\\user\\final\\user-2026-11-07-v31.pptx",
+      "sha256": "8810f5b7f0c687c991e968af9c571b117459cb3608f92efe309c6c989efdb249",
+      "slides": 12,
+      "validation": {
+        "finding_count": 0,
+        "findings": [],
+        "font_policy": {
+          "checked_text_script_count": 267,
+          "native_font_rendering_verified": false,
+          "observed_font_families": [
+            "Yu Gothic"
+          ],
+          "observed_font_use_counts": {
+            "Yu Gothic": 267
+          },
+          "passed": true,
+          "performed": true
+        },
+        "slide_count": 12,
+        "slide_size_in": [
+          13.3333,
+          7.5
+        ],
+        "warning_count": 0,
+        "warnings": [],
+        "exitCode": 0,
+        "findingCount": 0,
+        "fontPolicy": {
+          "checked_text_script_count": 267,
+          "native_font_rendering_verified": false,
+          "observed_font_families": [
+            "Yu Gothic"
+          ],
+          "observed_font_use_counts": {
+            "Yu Gothic": 267
+          },
+          "passed": true,
+          "performed": true
+        }
+      }
+    },
+    {
+      "id": "PKG-11",
+      "name": "matrix",
+      "label": "トレーサビリティ",
+      "source": "docs/deliverables/2026-10-23-traceability/matrix-2026-11-03-v27.pptx",
+      "sourceSha256": "78730e7d3a51da250fda3cc73bfd3385ad0cfbb30b7e752e3c7a08217047f85c",
+      "sourceSlides": 8,
+      "sourceMdPath": "docs/acceptance/07_TRACEABILITY_MATRIX.md",
+      "sourceMdSha256": "d75f18e69ed001db88bcd96c0ce65069ffad60286d7193ac37405984a8e8b530",
+      "final": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\outputs\\ppt-deploy-20261107-v31\\finalized\\matrix\\final\\matrix-2026-11-07-v31.pptx",
+      "sha256": "320be7f686dfdd195a85281c6449d59f8b5b51f6b801acd37bff66893f4a5362",
+      "slides": 10,
+      "validation": {
+        "finding_count": 0,
+        "findings": [],
+        "font_policy": {
+          "checked_text_script_count": 538,
+          "native_font_rendering_verified": false,
+          "observed_font_families": [
+            "Yu Gothic"
+          ],
+          "observed_font_use_counts": {
+            "Yu Gothic": 538
+          },
+          "passed": true,
+          "performed": true
+        },
+        "slide_count": 10,
+        "slide_size_in": [
+          13.3333,
+          7.5
+        ],
+        "warning_count": 0,
+        "warnings": [],
+        "exitCode": 0,
+        "findingCount": 0,
+        "fontPolicy": {
+          "checked_text_script_count": 538,
+          "native_font_rendering_verified": false,
+          "observed_font_families": [
+            "Yu Gothic"
+          ],
+          "observed_font_use_counts": {
+            "Yu Gothic": 538
+          },
+          "passed": true,
+          "performed": true
+        }
+      }
+    },
+    {
+      "id": "PKG-12",
+      "name": "progress",
+      "label": "進捗・残課題",
+      "source": "docs/deliverables/2026-10-23-traceability/progress-2026-11-06-v30.pptx",
+      "sourceSha256": "3c8d17eceee5b728a3e0be9e3a02b19bcbaae6333d94edbb5d8b84ab1f25b4da",
+      "sourceSlides": 10,
+      "sourceMdPath": "docs/acceptance/08_ACCEPTANCE_RESULTS.md",
+      "sourceMdSha256": "0c14b33e092d101c8463101d1731a93cf9e47402d5070db67639c9254a44e1e1",
+      "final": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\outputs\\ppt-deploy-20261107-v31\\finalized\\progress\\final\\progress-2026-11-07-v31.pptx",
+      "sha256": "acf5e805b00d1a14c9d43144e058f6bb637130fccadb84a79b5789dc724fa261",
+      "slides": 12,
+      "validation": {
+        "finding_count": 0,
+        "findings": [],
+        "font_policy": {
+          "checked_text_script_count": 240,
+          "native_font_rendering_verified": false,
+          "observed_font_families": [
+            "Yu Gothic"
+          ],
+          "observed_font_use_counts": {
+            "Yu Gothic": 240
+          },
+          "passed": true,
+          "performed": true
+        },
+        "slide_count": 12,
+        "slide_size_in": [
+          13.3333,
+          7.5
+        ],
+        "warning_count": 0,
+        "warnings": [],
+        "exitCode": 0,
+        "findingCount": 0,
+        "fontPolicy": {
+          "checked_text_script_count": 240,
+          "native_font_rendering_verified": false,
+          "observed_font_families": [
+            "Yu Gothic"
+          ],
+          "observed_font_use_counts": {
+            "Yu Gothic": 240
+          },
+          "passed": true,
+          "performed": true
+        }
+      }
+    }
+  ],
+  "manifestUpdated": false,
+  "customerPolicySha256": "643b20dcd32913bf6aabe27be0a6f0ac00ca972028eff19105c2b8753b06502e"
+}

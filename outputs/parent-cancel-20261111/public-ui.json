@@ -1,0 +1,12 @@
+{
+  "release": "985193fa8987e002",
+  "case": "AT-10",
+  "scope": "public anonymous parent demo",
+  "prior": 2,
+  "afterNewFixture": 3,
+  "balanceBeforeCancel": 32,
+  "correctNamedButtons": true,
+  "confirmation": "田中 陽菜 (ひな) 2026-11-11 16:00 往復送迎\nこのブラウザ内のデモ予約を取り消しますか？ 教室の予定は変わりません。",
+  "publicCancellationOutcome": "unverified: native dialog handle unavailable and subsequent keyboard action timed out; no state readback",
+  "customerGoogleWrites": 0
+}

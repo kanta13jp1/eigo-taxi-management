@@ -1,0 +1,12 @@
+{
+  "case": "AT-03",
+  "checkedAt": "2026-11-11T20:42:34.801Z",
+  "scope": "local parent demo API and synthetic React refresh/sibling fixtures",
+  "allowedDemoOptions": 1,
+  "ownBalance": 7,
+  "labelled": true,
+  "cardAfterLoading": true,
+  "switchedSiblingBalance": 4,
+  "cardAfterRemoval": true,
+  "emptyState": true
+}

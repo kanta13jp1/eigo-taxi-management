@@ -1,0 +1,86 @@
+{
+  "pass": true,
+  "checks": {
+    "history": true,
+    "overview": true,
+    "customer": true,
+    "formula": true
+  },
+  "ranges": [
+    "検証結果履歴!A85:I85",
+    "進捗概要!A3"
+  ],
+  "historyRow": [
+    "VR-20261112-05",
+    "2026-11-12",
+    "AT-11・管理者の予約取消",
+    "17件目の実装修正・17項目目の開発側試験",
+    "管理者の汎用window.confirmを対象情報付きHTML modal dialogへ変更。生徒・日時・区分と影響を表示し、戻る/Escapeでは変更せず明示確定。対象予約の完了処理中は取消も無効。",
+    "実App模擬：確認対象、戻る/Escape不変、確定IDのみ取消・他予約/残数7不変。公開匿名管理者デモ：新規架空生徒・送り予約で対象/デモ影響・初期フォーカス戻るを確認。戻ると実際のEscapeは予定中維持、確定のみ取消、再読込後も取消・7枚。既存AT13/14/15の6/5/6は不変。",
+    "docs/progress/2026-11-12-cumulative-seventeen.md／outputs/daily-seventeen-20261112/public-confirm.png／public-cancelled.png",
+    "検証Hosting 254b10bb3bf3744a・公開7応答SHA一致。11/10各4件・11/11各8件・11/12各5件で累計17。先行2件Claude Code Fable 5.2、追加15件Codex。今回AT-11管理者のみで、保護者AT-10の公開取消確定・実Googleカレンダー削除は代替合格にしない。顧客確認0/6・本番保留。",
+    "AT-28保護設定・参照式の復旧手順と、保護者側AT-10公開取消確定を継続。小林さん6件→先生との合同テスト→教室Google環境の準備・移行判断。"
+  ],
+  "overviewSummary": "更新：2026-11-12 ／ 本日累計5修正・開発側5項目。11/10各4件・11/11各8件と合わせ全体累計17。検証版254b10bb3bf3744a。管理者の対象情報付き取消確認を公開デモで確認。戻る/Escapeは不変、確定した1件のみ取消、再読込後も7枚。",
+  "protectedRange": "顧客確認6件!E6:I11",
+  "customerReadback": {
+    "5,4": {
+      "stringValue": "表示されるのは割り当てた検証生徒だけで、初期状態は5枚。別の家庭のお子様は選択肢に出ない。"
+    },
+    "5,5": {
+      "stringValue": "未実施"
+    },
+    "5,8": {
+      "stringValue": "AT-01・AT-03・AT-20"
+    },
+    "6,4": {
+      "stringValue": "事前準備した完了確認用2件とは別に、取消確認用が1件増える（初期2件→3件）。生徒・日付・時刻・場所がカレンダーと一致する。繰返しのない1回分の予約で、チケットは5枚のまま。"
+    },
+    "6,5": {
+      "stringValue": "未実施"
+    },
+    "6,8": {
+      "stringValue": "AT-06・AT-24"
+    },
+    "7,4": {
+      "stringValue": "自分で作成した取消確認用だけが「現在予約中の送迎」とカレンダーから消える（3件→2件）。完了確認用の2件は残る。取消前も取消後もチケットは5枚。"
+    },
+    "7,5": {
+      "stringValue": "未実施"
+    },
+    "7,8": {
+      "stringValue": "AT-10・AT-25"
+    },
+    "8,4": {
+      "stringValue": "準備時に残数5枚。片道の完了後は4枚、往復の完了後は2枚。2件とも完了として表示される。"
+    },
+    "8,5": {
+      "stringValue": "未実施"
+    },
+    "8,8": {
+      "stringValue": "AT-13・AT-14"
+    },
+    "9,4": {
+      "stringValue": "残り2枚でMauro・Brendaに連絡する案内が表示される。追加後は両方の画面で12枚となり、家庭画面の残少案内が消える。"
+    },
+    "9,5": {
+      "stringValue": "未実施"
+    },
+    "9,8": {
+      "stringValue": "AT-04・AT-05"
+    },
+    "10,4": {
+      "stringValue": "両方ともログイン画面に戻り、氏名・チケット残数・予約履歴・生徒台帳が表示されない。"
+    },
+    "10,5": {
+      "stringValue": "未実施"
+    },
+    "10,8": {
+      "stringValue": "AT-01・AT-19・AT-26"
+    }
+  },
+  "formulaReadback": {
+    "formulaValue": "=COUNTIF('顧客確認6件'!F6:F11,\"合格\")"
+  },
+  "visualCheck": "Inherited preceding row format; wrapped text; only appended row resized. API formatting verification; no rendered Sheet inspection."
+}

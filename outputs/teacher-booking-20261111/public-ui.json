@@ -1,0 +1,17 @@
+{
+  "recordedAt": "2026-11-11T09:18:53.119193+00:00",
+  "release": "5204dfe9fc36b599",
+  "case": "AT-09",
+  "scope": "public anonymous admin demo",
+  "namedFields": 5,
+  "locationLabelFocused": "ride-location",
+  "beforeCount": 7,
+  "afterReloadCount": 8,
+  "student": "山本 颯太 (そうた)",
+  "location": "AT09 西門",
+  "actualDate": "2026-11-11",
+  "actualTime": "16:00",
+  "storedRoleDisplay": "先生登録",
+  "timeControlObservation": "Programmatic fill did not change the displayed date/time; published run used the displayed defaults.",
+  "customerGoogleWrites": 0
+}

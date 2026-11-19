@@ -1,0 +1,31 @@
+{
+  "case": "AT-11",
+  "hostingVersion": "254b10bb3bf3744a",
+  "checkedAt": "2026-11-12T06:04:53.901Z",
+  "url": "https://eigo-taxi-test.web.app/#/admin",
+  "scope": "anonymous admin demo only; public native HTML dialog",
+  "student": "AT-11 管理者取消確認用",
+  "studentId": "STU-6241469f-801d-4617-acca-698169354a2d",
+  "date": "2026-11-12",
+  "time": "16:00",
+  "rideType": "送り",
+  "newStudents": 1,
+  "newReservations": 1,
+  "initialDialogFocus": "戻る",
+  "returnedAndRemainedScheduled": true,
+  "escapeAndRemainedScheduled": true,
+  "confirmed": true,
+  "cancelledAfterReload": true,
+  "balanceBefore": 7,
+  "balanceAfterReload": 7,
+  "priorAt13At14At15Balances": [
+    6,
+    5,
+    6
+  ],
+  "publicGoogleCalendarTested": false,
+  "images": [
+    "public-confirm.png",
+    "public-cancelled.png"
+  ]
+}

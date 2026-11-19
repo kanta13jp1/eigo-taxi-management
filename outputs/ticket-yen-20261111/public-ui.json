@@ -1,0 +1,10 @@
+{
+  "checkedAt": "2026-11-10T15:21:10.744Z",
+  "hosting": "f645f61220bdc2bb",
+  "scope": "public anonymous demo, browser-local fixture",
+  "count": 10,
+  "amount": 4980,
+  "note": "AT-05 架空の入金",
+  "balanceBefore": 2,
+  "observed": "Browser tab: 1, Title: \"Mauro & Brenda 送迎チケット管理 | Eigo Taxi Link\", URL: \"https://eigo-taxi-test.web.app/#/admin\".\nThe following is a diff from the previous accessibility tree with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.\nRemoved element IDs: 51-74\n~\t\t\t17 text 2 名 登録生徒数 3 名\n~\t\t\t37 text 保護者:  田中 美咲 （残チケット: 12 枚 ） 架空の試験停留所 AT-12\n~\t\t50 text 🎟️ チケットを+10回分追加しました！（新残高: 12回）\nThe focused UI element is 0 AXWebArea Mauro & Brenda 送迎チケット管理 | Eigo Taxi Link, URL: eigo-taxi-test.web.app/#/admin"
+}

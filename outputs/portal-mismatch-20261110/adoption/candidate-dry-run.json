@@ -1,0 +1,17 @@
+{
+  "errorCounts": {
+    "GENERATED_DRIFT": 26,
+    "SOURCE_REVIEW_REQUIRED": 4,
+    "PRESENTATION_STALE": 12
+  },
+  "unexpected": {},
+  "counts": {
+    "requirements": 39,
+    "flows": 11,
+    "testCases": 211,
+    "screens": 20,
+    "interfaces": 16,
+    "coverageGaps": 0
+  },
+  "coverageGaps": []
+}

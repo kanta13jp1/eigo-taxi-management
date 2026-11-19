@@ -1,0 +1,74 @@
+[
+  {
+    "path": "flow-interface-2026-10-23-v4.pptx",
+    "sha256": "C2AAD13AA900B11F12D42E70C12EB27692E05363A4ACC0005EBB68C6380005A6",
+    "provider": "artifact-tool",
+    "rights": "review-required",
+    "publication": "private",
+    "parent": "business-flow-operations-2026-10-23-v1",
+    "brief": "手動・画面・自動の区別、画面20件・I/F16件、遷移図3枚。全20枚。"
+  },
+  {
+    "path": "interface-flow.mjs",
+    "sha256": "B53904F655BDD5A2F54B0F72192A34570E6CAA80AD565C7A84E1BB70381A6C10",
+    "provider": "artifact-tool",
+    "rights": "review-required",
+    "publication": "private",
+    "parent": "business-flow-operations-2026-10-23-v1",
+    "brief": "手動・画面・自動の区別、画面20件・I/F16件、遷移図3枚。全20枚。"
+  },
+  {
+    "path": "interfaces.csv",
+    "sha256": "5B8598893F3D6C88C1084B65D7106B63442F796E9FB4780B6D4377F880C47901",
+    "provider": "artifact-tool",
+    "rights": "review-required",
+    "publication": "private",
+    "parent": "business-flow-operations-2026-10-23-v1",
+    "brief": "手動・画面・自動の区別、画面20件・I/F16件、遷移図3枚。全20枚。"
+  },
+  {
+    "path": "README.md",
+    "sha256": "A60303B45B93C47E8392D6FD6F5BF9085B9218C1B13D773ECA98AA1AAA65B86F",
+    "provider": "artifact-tool",
+    "rights": "review-required",
+    "publication": "private",
+    "parent": "business-flow-operations-2026-10-23-v1",
+    "brief": "手動・画面・自動の区別、画面20件・I/F16件、遷移図3枚。全20枚。"
+  },
+  {
+    "path": "registry.json",
+    "sha256": "D6F7D29025989427D7DC16FA1092EA37692BBF48CD2B1C9E72205CCF08AD6543",
+    "provider": "artifact-tool",
+    "rights": "review-required",
+    "publication": "private",
+    "parent": "business-flow-operations-2026-10-23-v1",
+    "brief": "手動・画面・自動の区別、画面20件・I/F16件、遷移図3枚。全20枚。"
+  },
+  {
+    "path": "SCREEN_INTERFACE_DESIGN.md",
+    "sha256": "C29AA22FC33884E3DB0E9728214C7FC620D8D5A5251590E83460298A1D14A5C7",
+    "provider": "artifact-tool",
+    "rights": "review-required",
+    "publication": "private",
+    "parent": "business-flow-operations-2026-10-23-v1",
+    "brief": "手動・画面・自動の区別、画面20件・I/F16件、遷移図3枚。全20枚。"
+  },
+  {
+    "path": "screens.csv",
+    "sha256": "FF7EE23641A9E248B2DE1244095DB229FDB1BBA86D9F755ACCA727070DDCF583",
+    "provider": "artifact-tool",
+    "rights": "review-required",
+    "publication": "private",
+    "parent": "business-flow-operations-2026-10-23-v1",
+    "brief": "手動・画面・自動の区別、画面20件・I/F16件、遷移図3枚。全20枚。"
+  },
+  {
+    "path": "validation-v4.json",
+    "sha256": "1739BC54A43C25A9A6858F11CD2A28EB5D8BD6E72C8294E0B6D08369B3179D2A",
+    "provider": "artifact-tool",
+    "rights": "review-required",
+    "publication": "private",
+    "parent": "business-flow-operations-2026-10-23-v1",
+    "brief": "手動・画面・自動の区別、画面20件・I/F16件、遷移図3枚。全20枚。"
+  }
+]

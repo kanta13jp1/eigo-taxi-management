@@ -1,0 +1,46 @@
+{
+  "mode": "public",
+  "at": "2026-11-17T20:45:08.369Z",
+  "cases": [
+    {
+      "width": 390,
+      "height": 360,
+      "outer": {
+        "x": 16,
+        "y": 16,
+        "width": 358,
+        "height": 328
+      },
+      "registered": 1,
+      "balance": 10,
+      "reloadRetained": true
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "outer": {
+        "x": 166,
+        "y": 16,
+        "width": 512,
+        "height": 358
+      },
+      "registered": 1,
+      "balance": 10,
+      "reloadRetained": true
+    },
+    {
+      "width": 1200,
+      "height": 900,
+      "outer": {
+        "x": 344,
+        "y": 215.5,
+        "width": 512,
+        "height": 469
+      },
+      "registered": 1,
+      "balance": 10,
+      "reloadRetained": true
+    }
+  ],
+  "writesSent": 0
+}

@@ -1,0 +1,39 @@
+{
+  "reviewer": "independent AI worker /root/app_blocker_fix_1106; not implementation author for runner",
+  "scope": "Local acceptance runner and fixture; AddRideModal fix explicitly excluded from this review",
+  "sourceHashes": {
+    "scripts/run_local_acceptance.mjs": "bbf98d8ac266683e6239a6391f081c7a73af0ff3d22387495847fb8290bdb603",
+    "scripts/local_acceptance_safety.mjs": "a7c512fdc80788c246aa1eb5a6dbca9ad7573859fc8dab0a1b0a2d099e370b34",
+    "scripts/fixtures/local-acceptance/harness.tsx": "9ba68515c51b783d8ce17d81015993391e4bd3ec1ff85e9f881513117fb07cc2",
+    "scripts/fixtures/local-acceptance/google-auth.ts": "cdf798e20c6329ea53de6e037ef41fdb26754a8412d67f2d45fb1d6747bca40a",
+    "scripts/fixtures/local-acceptance/index.html": "a0030c371776b189471b5e18df159b04706dba1659ab740055c2d1954b62eb0b",
+    "tests/local_acceptance_safety.test.mjs": "fa9cece28e43ac588b0706d7c9afc1763a22fe6549075288d15113b9eb332317"
+  },
+  "findings": [
+    {
+      "issue": "HTTP request routing does not cover WebSockets",
+      "resolution": "Added explicit WebSocket routing that closes all sockets; intentional HTTP and WebSocket probes self-test the guard; built fixture removes HMR",
+      "status": "RESOLVED"
+    },
+    {
+      "issue": "Completion cases invoke ApiService rather than clicking complete UI",
+      "resolution": "Review and limitations distinguish API behavior from full completion UI acceptance",
+      "status": "SCOPE_CLARIFICATION"
+    }
+  ],
+  "validation": {
+    "helperTests": "4/4 PASS",
+    "independentRunner": "14/14 PASS; exit 0",
+    "independentResults": "outputs/local-acceptance-independent-final-20261106/results.json",
+    "guardSelfTest": "PASS",
+    "browserVersion": "156.0.4314.58",
+    "existingOutputRefusal": "exit 1 EEXIST; results SHA256 unchanged",
+    "resultsSha256": "c828705d8ca174db988ae520b230a6389684ee4a631d46e9ea090824c4b819fe"
+  },
+  "conclusion": "No unresolved blocking finding in the reviewed runner scope",
+  "limits": [
+    "Demo App and ApiService paths with Google auth stubbed",
+    "No real Google, Calendar, physical-device or third-party acceptance",
+    "Reference runner run before final source stabilization is not used as this final review evidence"
+  ]
+}

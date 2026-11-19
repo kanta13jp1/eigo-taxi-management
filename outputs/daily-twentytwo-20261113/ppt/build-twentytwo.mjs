@@ -1,0 +1,36 @@
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import {pathToFileURL} from 'node:url';
+import {FileBlob,PresentationFile} from '@oai/artifact-tool';
+const root=process.cwd(),dir=path.resolve('outputs/daily-twentytwo-20261113/ppt');
+const runtime=path.resolve(path.dirname(process.execPath),'../..');
+const skill='C:/Users/kanta/.codex/plugins/cache/openai-primary-runtime/presentations/26.1112.11011/skills/presentations';
+process.env.RUNTIME_NODE_MODULES=runtime+'/node/node_modules';
+const {finalizePresentation}=await import(pathToFileURL(skill+'/container_tools/artifact_tool_utils.mjs').href);
+const base=path.resolve('docs/deliverables/2026-11-10-premeeting');
+const p=await PresentationFile.importPptx(await FileBlob.load(path.join(base,'progress-2026-11-13-cumulative-twentyone.pptx'))),s=p.slides.items[0],t=p.slides.items[1];
+function label(slide,text,x,y,w,h,sz,bold=false){const sh=slide.shapes.add({geometry:'rect',position:{left:x,top:y,width:w,height:h},fill:'none',line:{fill:'none',width:0}});sh.text=text;sh.text.style={typeface:'Yu Gothic',fontSize:sz,bold,color:'#102D52',verticalAlignment:'middle',insets:0};return sh;}
+const d=JSON.parse(await fs.readFile(path.join(dir,'slide-copy.json'),'utf8'));
+for(const sh of s.shapes.items){const text=sh.text.toString();
+ if(text.includes('実装修正21件'))sh.text='11月10～13日の実装修正22件';
+ if(text.startsWith('修正 12'))sh.text='修正 12～22';
+ if(text.includes('追加19件'))sh.text.replace('追加19件','追加20件');
+ if(text.startsWith('全21件の日別内訳'))sh.text='全22件の日別内訳：10日4件、11日8件、12日8件、13日2件';
+}
+label(s,'22. '+d.fixLabel,675,530,550,32,21);
+for(const sh of t.shapes.items)if(sh.text.toString().includes('受入試験21項目'))sh.text='開発側で実施した受入試験22項目';
+label(t,'22. '+d.atLabel,675,525,550,36,21);
+s.speakerNotes.text='修正22件。先行2件ユーザー申告のClaude Code Fable 5.2、追加20件Codex。日別11/10=4、11/11=8、11/12=8、11/13=2。顧客0/6、本番保留。';
+t.speakerNotes.text='開発側試験22項目。AT-28/AT-03部分確認、AT-10保護者側の公開取消確定は未確認。AT-21は画面幅による試験。AT-18は取消後の再取得失敗時の表示を模擬・匿名デモで部分確認。全5更新操作の通信障害、実Google、実機、顧客確認を代替しない。';
+const e=p.slides.add();
+label(e,d.title,55,18,1190,55,34,true);
+label(e,d.summary,55,82,1180,38,24);
+label(e,d.result,55,125,1190,38,22);
+e.images.add({blob:await fs.readFile(path.resolve(d.image)),contentType:'image/png',fit:'contain',alt:d.alt,position:{left:90,top:170,width:1100,height:500}});
+label(e,'隔離した匿名デモで異常を再現。実Google連携は別確認。顧客用データ維持・本番未開始。',65,675,1150,30,19);
+e.speakerNotes.text=d.notes;
+const candidate=path.join(dir,'candidate.pptx'),final=path.join(base,'progress-2026-11-13-cumulative-twentytwo.pptx');
+await(await PresentationFile.exportPptx(p)).save(candidate);
+await finalizePresentation({workspaceDir:root,candidatePath:candidate,finalPath:final,pythonExecutable:runtime+'/python/python.exe',integrityValidatorPath:skill+'/container_tools/inspect_presentation_package_integrity.py',layoutValidatorPath:skill+'/container_tools/inspect_presentation_layout_geometry.py',layoutArgs:['--expected-slide-size-emu','12192000,6858000','--validate-heading-fit'],verifyArtifactToolImport:true,explicitTotalSlideCount:15,receiptPath:path.join(dir,'validation.json')});
+const q=await PresentationFile.importPptx(await FileBlob.load(final));
+for(let i=0;i<q.slides.items.length;i++)await fs.writeFile(path.join(dir,'final-'+(i+1)+'.png'),new Uint8Array(await(await q.export({slide:q.slides.items[i],format:'png',scale:1})).arrayBuffer()));

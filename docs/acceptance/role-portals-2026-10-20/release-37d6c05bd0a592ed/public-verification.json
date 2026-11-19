@@ -1,0 +1,50 @@
+{
+  "verifiedAt": "2026-10-20T13:52:12.771Z",
+  "sourceDigest": "37d6c05bd0a592ed7feaa3f3d852ca75a61bb539678739e0e6b6e09da143fb9a",
+  "scope": "existing Firebase mighty-test public bytes; immutable local source and payload snapshot",
+  "results": [
+    {
+      "path": "dist/assets/index-DDJ43gjW.js",
+      "status": 200,
+      "expectedSha256": "7a77396ffe6d4c8567f38286ce5f13d3b205006e03180edf1ee4349cc576e92c",
+      "sha256": "7a77396ffe6d4c8567f38286ce5f13d3b205006e03180edf1ee4349cc576e92c",
+      "match": true
+    },
+    {
+      "path": "dist/assets/index-DsddZuho.css",
+      "status": 200,
+      "expectedSha256": "6dd214aa7bc4e83f105b4b75fb9c5b0bb6f21c71b4399043b1160e0efde22829",
+      "sha256": "6dd214aa7bc4e83f105b4b75fb9c5b0bb6f21c71b4399043b1160e0efde22829",
+      "match": true
+    },
+    {
+      "path": "dist/favicon.svg",
+      "status": 200,
+      "expectedSha256": "61bc9a161de58248288e6905425d7180f0624c2865007b97d763fdac12043a66",
+      "sha256": "61bc9a161de58248288e6905425d7180f0624c2865007b97d763fdac12043a66",
+      "match": true
+    },
+    {
+      "path": "dist/icons.svg",
+      "status": 200,
+      "expectedSha256": "b45fa506195cfcdef406ba9f0c77b36ddc1a7c224040926ec70abc2fdea7b93a",
+      "sha256": "b45fa506195cfcdef406ba9f0c77b36ddc1a7c224040926ec70abc2fdea7b93a",
+      "match": true
+    },
+    {
+      "path": "dist/index.html",
+      "status": 200,
+      "expectedSha256": "a40b783517b33b8ea1c2f9991a23a90be5986afc26cedf26abc9c10329041bfe",
+      "sha256": "a40b783517b33b8ea1c2f9991a23a90be5986afc26cedf26abc9c10329041bfe",
+      "match": true
+    },
+    {
+      "path": "dist/release.json",
+      "status": 200,
+      "expectedSha256": "c6634146fe538d729f020d81e946196389fbe2cfb003e611e455914a22af85f1",
+      "sha256": "c6634146fe538d729f020d81e946196389fbe2cfb003e611e455914a22af85f1",
+      "match": true
+    }
+  ],
+  "passed": true
+}

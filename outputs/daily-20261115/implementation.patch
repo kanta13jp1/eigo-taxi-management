@@ -1,0 +1,13 @@
+diff --git a/docs/acceptance/deployment/releases/a97d95510290c92b/source/src/components/AddTicketModal.tsx b/src/components/AddTicketModal.tsx
+index 4d98b4f..1f12741 100644
+--- a/docs/acceptance/deployment/releases/a97d95510290c92b/source/src/components/AddTicketModal.tsx
++++ b/src/components/AddTicketModal.tsx
+@@ -69,7 +69,7 @@ export const AddTicketModal: React.FC<AddTicketModalProps> = ({
+ 
+   return (
+     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs">
+-      <div className="bg-white rounded-2xl shadow-xl w-full max-w-md overflow-hidden border border-slate-100 animate-in fade-in zoom-in-95 duration-150">
++      <div className="bg-white rounded-2xl shadow-xl w-full max-w-md max-h-[calc(100dvh-2rem)] overflow-y-auto overscroll-contain border border-slate-100 animate-in fade-in zoom-in-95 duration-150">
+         <div className="px-6 py-4 border-b border-slate-100 flex items-center justify-between bg-emerald-50/50">
+           <div className="flex items-center gap-2">
+             <div className="p-2 rounded-xl bg-emerald-100 text-emerald-700">

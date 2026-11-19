@@ -1,0 +1,18 @@
+{
+  "reviewer": "lead agent independent of implementation worker",
+  "baseline": "383ff85ce1a54688",
+  "files": {
+    "src/App.tsx": "9af7d9c2c2cc5b85aa563d632997a994ffe95cd07bb9ed52064096388f98d277",
+    "src/components/TeacherDashboard.tsx": "7d20517345dc8b3f4e5237920f5f4716647aa724978de8ea6e2a92a1da81d122"
+  },
+  "checks": [
+    "Completion mutation rejection propagates from App and is caught by the invoking dashboard action",
+    "Both completion buttons use the same reservation-id-preserving error handler",
+    "Inline role=alert contains the affected displayed reservation, while keeping the dashboard and top-up action mounted",
+    "A new completion attempt clears the prior action error; component unmount clears its local state",
+    "Initial and refresh ledger load failures retain their existing global error handling",
+    "Service, authentication and ticket consumption code unchanged"
+  ],
+  "pass": true,
+  "limitation": "Focused behavior tests must verify insufficient-balance retry and preserved fatal ledger loading errors."
+}

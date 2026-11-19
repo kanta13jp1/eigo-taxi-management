@@ -1,0 +1,19 @@
+{
+  "at": "2026-11-17T20:53:10.311Z",
+  "hosting": "603f482f7709d354",
+  "pass": true,
+  "fictionalBalance": [
+    1,
+    2
+  ],
+  "warning": "残り2回",
+  "amber": true,
+  "zeroRed": true,
+  "sevenGreen": true,
+  "summary": [
+    2,
+    2
+  ],
+  "reloadRetained": true,
+  "externalWrites": 0
+}

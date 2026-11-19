@@ -1,0 +1,21 @@
+{
+  "mode": "public",
+  "scenario": "missing-target",
+  "checkedAt": "2026-11-13T11:04:21.196Z",
+  "test": "AT-18",
+  "base": "https://eigo-taxi-test.web.app",
+  "freshAnonymousAdminDemo": true,
+  "studentId": "STU-951a09e6-4651-4458-9fdf-7d459feda7c6",
+  "rideId": "RIDE-60e41453-2e6c-4335-886d-ab930e01757a",
+  "successVisible": false,
+  "alert": [
+    "予約の取消結果を確認できませんでした。台帳を再取得して、対象の予約の状態を確認してください。"
+  ],
+  "reloadOnlyRecovery": true,
+  "cancelledInLedger": true,
+  "onlyChangedTargetStatus": true,
+  "studentBalancesUnchanged": true,
+  "writeCount": 1,
+  "blockedRequests": [],
+  "scope": "Isolated synthetic browser demo; simulated read response, no Google or customer records."
+}

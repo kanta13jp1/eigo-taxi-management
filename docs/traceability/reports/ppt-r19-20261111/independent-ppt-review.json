@@ -1,0 +1,66 @@
+{
+  "reviewer": "independent AI subagent (not the author of the decks)",
+  "reviewedAt": "2026-11-11T07:25:23+09:00",
+  "result": "PASS",
+  "proposalSha256": "109e8002ce7d8a127200d88e79c673c02552c45bcad6aba6fe7ece0a75684ebb",
+  "registrySha256": "cfd1a14aa71f637e2cc770bca08caa3758ddff8d6605d669d2341f343ff912e4",
+  "previousReview": {
+    "path": "docs/traceability/reports/ppt-r19-20261111-attempt1-review-failed/independent-ppt-review.json",
+    "sha256": "18a6e7e608c69cec4c1892463d7f979652c1ba28565cedd9f7384a8c016ad127",
+    "result": "FAIL",
+    "proposalSha256": "870b1364fd18e2bdd15f68688c96c8751372341f6b447a87ecd8a05e8daef9c0",
+    "note": "P-01 (major) resolved, P-02 (major) resolved, P-03 (minor) resolved, P-05 (minor) resolved; P-04 unchanged and kept below as a note (R-01), not considered a problem for adoption."
+  },
+  "decksChecked": {
+    "1_hashes_counts_registry": "all 12: final sha256 == proposal sha256 == validation.json finalSha256 == authoring-results sha256; source deck sha256 == authoring-results sourceSha256; slide count == source + 2 == proposal slides (214 total: 190 pre-existing + 24 appended); every proposal entry has registryVersion 2026-11-11-r19 and registrySha256 cfd1a14a...912e4, equal to docs/traceability/registry.json on disk. None of the 12 target paths exists yet in docs/deliverables/2026-10-23-traceability/ (adoption not run).",
+    "2_appended_slide_text": "all 12, read from slide XML in sldIdLst order. The corrected cell reads '顧客0/6。AT-24〜30は継続' in all 12 decks (body text of both appended pages is identical across the 12). Everything else on both pages is unchanged from attempt 1: wrong-entrance description matches LoginScreen.tsx; AT-24/25 rows say '条件に一致' under the heading '検証環境での1回の実施結果' with the lines '保護者の操作・実機は未確認です' and '受入の合格ではありません。顧客確認は0/6件、本番運用は開始していません。'; '71件成功' equals my count of the frozen reports (6+14+33+2+5+2+8+1, all 15 frozen evidence hashes match, freeze.json sha equals authoring-results freezeSha256). Header title is each deck's own; footer is '<PKG-id>　2026-11-11 r19追補' with correct PKG-01..12 and page numbers n+1 / n+2 and n+2 / n+2.",
+    "3_notes": "all 12: notes prefix identical across decks and read in full; second-page notes identical across decks and read in full. The reworded scope sentence now says the demo label, low-ticket and day-rollover fixes are inside the source-baseline review but not in this supplement's description or registered tests, that the ticket-amount input change is in a file outside the source baseline and outside the independent review, and that AT-24〜30 remain as real acceptance — all accurate. First appended page's notes contain the complete current docs/acceptance/<doc>.md in all 12 decks (whitespace-normalized containment; md sha256 equals authoring-results sourceMdSha256). No e-mail address, http(s) URL, #/parent/<id>, RIDE-<id> or STU-<uuid> on the appended pages or their notes that is not already in the same source deck (0 new in all 12).",
+    "4_preservation": "all 12: every pre-existing slide's text paragraphs, notes text and referenced image hashes are identical between source and final (190/190); roundtrip/<i>.png is byte-identical to source-render/<i>.png for all 190 pre-existing pages; current-N.png equals the roundtrip render for all 24 appended pages.",
+    "5_rendered_pages_viewed": "corrected second appended page: business current-27, acceptance current-16, matrix current-14; first appended page: requirements current-15. No clipping or overlap; the corrected cell fits on one line; header titles, footer ids and page numbers correct.",
+    "6_adoption_script": "adopt.py re-read in full (not executed). State change simulated in memory against docs/traceability/binary-documents.json: exactly 12 entries would flip current -> historical (BIN-0345, 0346, 0347, 0348, 0350, 0351, 0352, 0354, 0355, 0358, 0359, 0360 — the 12 paths in finalized/source-manifest.json, which is byte-identical to docs/traceability/presentations.json); BIN-0357 premeeting-2026-11-11-v1.pptx, matrix.csv and third-party-acceptance-checklist.csv stay current; the script's own assertion (set of changed states == superseded set) would hold; none of the 12 new paths is already in the index."
+  },
+  "findings": [
+    {
+      "id": "R-01",
+      "severity": "note",
+      "where": "outputs/r19-adoption-20261111/ppt-v36/adopt.py (former P-04)",
+      "summary": "Adoption still has side effects beyond the 12 copies, presentations.json, binary-documents.json and the README. I do not consider them a problem.",
+      "evidence": "(a) Three before-adoption-* backups under outputs/r19-adoption-20261111/ppt-v36/ — written only if absent, outside docs, useful for rollback. (b) docs/traceability/reports/ppt-r19-20261111/adoption.json with status ADOPTED, customerPassed 0, productionStarted false — an accurate record. (c) The sha256 of the existing index entries for docs/traceability/matrix.csv and docs/acceptance/third-party-acceptance-checklist.csv is recomputed; both already match the files on disk (verified), so it is a no-op now, but it would silently absorb a change made to either CSV between now and adoption.",
+      "suggestedFix": "Optional: replace (c) with an assertion that the recorded hash already equals the file, and mention (a) and (b) in the adoption record."
+    },
+    {
+      "id": "R-02",
+      "severity": "note",
+      "where": "adopt.py README text",
+      "summary": "README text is accurate and no longer overstated.",
+      "evidence": "It states: r19, 12 decks at v36 with 2 pages appended; the wrong-entrance guidance as implemented, server decision and permissions unchanged; AT-24/25 run once each by the developer in the verification environment with fictitious student, not an acceptance pass, parent operations/real devices/customer confirmation not included; pre-existing pages match a same-time render of the previous decks by the same rendering tool and their text and notes strings match; layout warning count equals the previous count; PowerPoint application display unverified; customer 0/6, production on hold; ticket-amount input change outside the source baseline and outside the independent review; AT-24〜30 remain. Total page count is computed from the proposal (214). The old README is appended below a '直前の配布一覧（以下は履歴）' heading, so its own H1 becomes a second H1 in the file (cosmetic). The README links this review file; that is only correct because this result is PASS for proposal 109e8002..., which adopt.py asserts.",
+      "suggestedFix": "None required."
+    },
+    {
+      "id": "R-03",
+      "severity": "note",
+      "where": "Preservation method (unchanged from attempt 1, P-09)",
+      "summary": "Slide XML of pre-existing slides is re-serialized (0 of 190 slide parts byte-identical), so preservation rests on extracted text, notes text, image hashes and a same-run, same-renderer comparison.",
+      "evidence": "That basis is adequate to show the build did not change how the old pages draw in this renderer. It cannot show properties the renderer ignores (animations, transitions, hyperlink targets, hidden flags, alt text) or the display in the PowerPoint application. review.json and the README state these limits.",
+      "suggestedFix": "Optional structural comparison of pre-existing slides in review_and_propose.py."
+    },
+    {
+      "id": "R-04",
+      "severity": "note",
+      "where": "docs/traceability/reports/ppt-r19-20261111/root-visual-review.json",
+      "summary": "The companion visual review is by the authoring session and is labelled as such; for this attempt it viewed one corrected page (operations 18) and relies on attempt-1 views and the machine check for the rest.",
+      "evidence": "reviewer: 'authoring session (Claude Code); ... not an independent review'; proposalSha256 109e8002... matches the current proposal.",
+      "suggestedFix": "None; keep the label."
+    }
+  ],
+  "notVerified": [
+    "Display of any deck in the PowerPoint application, other machines or fonts; notes-page rendering.",
+    "Rendered images of appended pages other than the four opened in this attempt (business 27, acceptance 16, matrix 14, requirements 15); their XML body text is identical across decks and their current-N.png files equal the roundtrip renders. review.json's pixel-equivalence claim against the business deck was not recomputed.",
+    "Structural properties of pre-existing slides beyond text, notes text, image hashes and the local render.",
+    "That source-render PNGs were produced from the untouched source decks: nothing was re-rendered by me; I relied on build.mjs as written and on file contents.",
+    "Individual layout warnings versus the previous receipts (only finalSha256 in validation.json was used).",
+    "adopt.py, build.mjs and review_and_propose.py were not executed; the adopt.py state change was simulated in memory only.",
+    "Content of the 12 generated documents embedded in the notes (checked for presence and new private strings only)."
+  ],
+  "notes": "Re-review of the rebuilt set after the attempt-1 FAIL. Both major findings are fixed and verified in the deck XML, in the rendered pages and by simulating the adoption state change; the two minor wording findings are fixed; nothing else regressed (appended text otherwise identical, 190/190 pages preserved, 71 PASS, no new private strings). No blocking or major finding remains. This PASS covers proposal sha256 109e8002ce7d8a127200d88e79c673c02552c45bcad6aba6fe7ece0a75684ebb only. It is an AI review, not a human review and not a customer acceptance: customer acceptance remains 0/6, AT-24 to AT-30 remain outstanding, production is not started. The reviewer wrote only this file."
+}

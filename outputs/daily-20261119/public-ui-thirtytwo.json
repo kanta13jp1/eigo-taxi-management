@@ -1,0 +1,28 @@
+{
+  "url": "https://eigo-taxi-test.web.app",
+  "checkedAt": "2026-11-19T14:52:05.000Z",
+  "release": {
+    "environment": "mighty-test",
+    "projectId": "eigo-taxi-app",
+    "siteId": "eigo-taxi-test",
+    "builtAt": "2026-11-19T14:51:32.851Z",
+    "sourceDigest": "cbbad1e31a2282580f8a85d9262be454fb0fe7254cd88125a39e32e3612d928c"
+  },
+  "publicVerification": "docs/acceptance/deployment-verification/public-2026-11-19T14-51-55-134Z.json",
+  "cumulativeCounts": {
+    "fixesTotal": 32,
+    "fable52PriorFixes": 2,
+    "subsequentFixes": 30,
+    "acceptanceTestsTotal": 32
+  },
+  "results": {
+    "SAT-34": {
+      "status": "PASS",
+      "scope": "Isolated anonymous admin & parent sessions on live Firebase Hosting; aria-current=page verification, reload persistence, and post-logout ledger protection",
+      "sessions": [
+        { "role": "admin", "status": "PASS", "errors": [] },
+        { "role": "parent", "status": "PASS", "errors": [] }
+      ]
+    }
+  }
+}

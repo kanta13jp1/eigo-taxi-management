@@ -1,0 +1,280 @@
+{
+  "schemaVersion": 1,
+  "mode": "LOCAL_MOCK_UI_REHEARSAL",
+  "runStartedAt": "2026-11-17T14:35:35.429Z",
+  "finishedAt": "2026-11-17T14:36:09.389Z",
+  "nodeVersion": "24.22.1",
+  "browserVersion": "157.0.8103.50",
+  "timezone": "Asia/Tokyo",
+  "testDate": "2026-11-17",
+  "sourceHashes": {
+    "src/App.css": "6e25a776d3e8102da5bacb3cb99f4a5fc662a2e01e6143140671a556d28c3d5c",
+    "src/App.tsx": "1f6251c7c70b403b25e9a4cd55bd8d22d6881d42735bd964f93b99105ca87cb1",
+    "src/assets/hero.png": "881ffbcaafc212e49addad08846a5b82761355fa20624253af3477ba33262c5c",
+    "src/assets/react.svg": "35ef61ed53b323ae94a16a8ec659b3d0af3880698791133f23b084085ab1c2e5",
+    "src/assets/vite.svg": "5be21acd42eb7b896e517f4e0f0f11eb5c5d9e54fbbcebe9453f033008fcca6f",
+    "src/components/AccountManagement.tsx": "b5473029c444e6dedd6c310bb4927ffdb543bc53b332912908e4df08e850c0f7",
+    "src/components/AddRideModal.tsx": "91314bb29d083cd2a0dc9b5bd43322185d37f8b8fbd815d674fa86b01f4bf687",
+    "src/components/AddStudentModal.tsx": "8617f0e64563a23b5965eaa78d1f8fafe2be766cd4408ab3e148d897b4c0ac90",
+    "src/components/AddTicketModal.tsx": "23374856ac5ce0b39e5ac1827f5a5f71b1f59f2397756a3f421b919513d184b3",
+    "src/components/GoogleSettings.tsx": "c4ee8f86601d05ee1cf052a437dbbaa253e24bf412ea4e1f5ae5492caab7ed69",
+    "src/components/LoginScreen.tsx": "cc4c8e967093422d34225f67aacd8b4ec86bc51b5079c444b1e510026f19973d",
+    "src/components/Navbar.tsx": "2c544b44e4d40a06d723a69b434862f214c1ea320a1806446c5dbd59ccf561de",
+    "src/components/ParentPortal.tsx": "351625be52b6632f565d1b21cc3067faf3c66543a8787c0f57566751ef4107b1",
+    "src/components/PortalInvitations.tsx": "ea4e25e8b56937a653ca5080953785ac7c3e70236985efe7bd19c69e049cbfb1",
+    "src/components/TeacherDashboard.tsx": "3e46370730b4663cbdcd9002b4273b5c902e8d0f1bc64fb50cc4986bb11ed654",
+    "src/components/TermsModal.tsx": "96f10c3cfc69d3652946837ef4c2f04ed30e4319c7d2f4a605e1a490a9a91cca",
+    "src/deployment-config.ts": "5c30aad36376487fcf2fbb664f2574bdd430890191675ca9813b5fdea516b6f1",
+    "src/index.css": "66baff8b6d7a116920270aba8584dd856cf5de345b59b511b849b96152ce91d8",
+    "src/main.tsx": "6e9e5807fcbd48b75a96db5cbef36c996262196be42e6d4760dc86babbe61ad2",
+    "src/portal.ts": "874dce7f269e59073b75d6ae47c7fb3b682686fa2ab214d8cb0eacb48c59cac7",
+    "src/services/api.ts": "9de6da24a594b1bb37d12d1dc4b2910a8cfdadf9124ed4abf22ac8104cd35e28",
+    "src/services/google-auth.ts": "01667af44fce383f3763c8bb73497dafc690381592ddcf383d46aaafe90fe0d8",
+    "src/types/index.ts": "bf24cc2caa853a440a5abe9fad2d78645f5720491f48e00f2a0e49b5776abe20",
+    "package.json": "20528469ab1c1c2bd32f8f95b071a36ba9ea4eafcf62f2eccf683da755901375",
+    "package-lock.json": "ad3a4848723b7b1dc3ce3c840ffdf44ae8c9ea8cb58fb793cf5b5d58f2f3b805",
+    "scripts/run_local_acceptance.mjs": "33bf5b1add2104eac2f7ac2298ee0a607e1f84cf994507cc213fa97fd5be9f89",
+    "scripts/local_acceptance_safety.mjs": "a7c512fdc80788c246aa1eb5a6dbca9ad7573859fc8dab0a1b0a2d099e370b34",
+    "scripts/fixtures/local-acceptance/harness.tsx": "9ba68515c51b783d8ce17d81015993391e4bd3ec1ff85e9f881513117fb07cc2",
+    "scripts/fixtures/local-acceptance/google-auth.ts": "cdf798e20c6329ea53de6e037ef41fdb26754a8412d67f2d45fb1d6747bca40a",
+    "scripts/fixtures/local-acceptance/index.html": "a0030c371776b189471b5e18df159b04706dba1659ab740055c2d1954b62eb0b"
+  },
+  "buildHashes": {
+    "assets/index-Bb9ei4XO.js": "6d0cc42a5ab0aad030c42f3f80a9a30ae52f0299254492db4c696fad939c392a",
+    "assets/index-j9C27HUZ.css": "9afe98275b7d66dc458ee063382538546665a6ee4535bf89cc88e8953fa98c12",
+    "index.html": "5fc21cbc1ad63bdded93b70b848214d10225fcd195677347185fd2838485a3c4"
+  },
+  "changedSources": [],
+  "externalRequests": [],
+  "blockedSockets": [],
+  "guardSelfTest": {
+    "http": [
+      {
+        "url": "https://eigo-local-probe.invalid",
+        "resourceType": "fetch"
+      }
+    ],
+    "sockets": [
+      {
+        "origin": "wss://eigo-local-probe.invalid"
+      }
+    ],
+    "status": "PASS"
+  },
+  "pageErrors": [],
+  "fatalError": null,
+  "results": [
+    {
+      "id": "LOCAL-UI-01",
+      "relatedCases": [
+        "AT-01",
+        "AT-19"
+      ],
+      "name": "Current admin login has no endpoint/key fields and no ledger before demo login",
+      "status": "PASS",
+      "screenshot": {
+        "file": "LOCAL-UI-01.png",
+        "sha256": "36a7f1adc8745c2770ac40760ea3fedb7535c7b9799887efbcb7ae79e3b05b59"
+      },
+      "startedAt": "2026-11-17T14:35:37.760Z",
+      "finishedAt": "2026-11-17T14:35:38.512Z"
+    },
+    {
+      "id": "LOCAL-UI-02",
+      "relatedCases": [
+        "AT-03",
+        "AT-20"
+      ],
+      "name": "Parent demo displays only its assigned student and the one-way rule",
+      "status": "PASS",
+      "screenshot": {
+        "file": "LOCAL-UI-02.png",
+        "sha256": "6d639c6b78af218c86f3ed63a2696d34cc3ace2295680b073ed4ba9da0ea4f39"
+      },
+      "startedAt": "2026-11-17T14:35:38.512Z",
+      "finishedAt": "2026-11-17T14:35:39.460Z"
+    },
+    {
+      "id": "LOCAL-UI-03",
+      "relatedCases": [
+        "AT-06"
+      ],
+      "name": "pickup booking uses current form, JST run date, and preserves balance",
+      "status": "PASS",
+      "screenshot": {
+        "file": "LOCAL-UI-03.png",
+        "sha256": "a0fc87785bcb44b168083e49e3996c51e23dc77d88329f1578544254e5fe086e"
+      },
+      "startedAt": "2026-11-17T14:35:39.460Z",
+      "finishedAt": "2026-11-17T14:35:41.089Z"
+    },
+    {
+      "id": "LOCAL-UI-04",
+      "relatedCases": [
+        "AT-07"
+      ],
+      "name": "dropoff booking uses current form, JST run date, and preserves balance",
+      "status": "PASS",
+      "screenshot": {
+        "file": "LOCAL-UI-04.png",
+        "sha256": "8e17807babe905d8121a7c32e49512b9bae9536cb9fe111fe35421522d49f90c"
+      },
+      "startedAt": "2026-11-17T14:35:41.089Z",
+      "finishedAt": "2026-11-17T14:35:42.966Z"
+    },
+    {
+      "id": "LOCAL-UI-05",
+      "relatedCases": [
+        "AT-08"
+      ],
+      "name": "roundtrip booking uses current form, JST run date, and preserves balance",
+      "status": "PASS",
+      "screenshot": {
+        "file": "LOCAL-UI-05.png",
+        "sha256": "7273f9947d08fbc8e6be1011db9366bb9b25a0fe49e57abc1542d68a5cc946d9"
+      },
+      "startedAt": "2026-11-17T14:35:42.966Z",
+      "finishedAt": "2026-11-17T14:35:44.769Z"
+    },
+    {
+      "id": "LOCAL-UI-06",
+      "relatedCases": [
+        "AT-09"
+      ],
+      "name": "Admin booking uses admin entry and records teacher origin",
+      "status": "PASS",
+      "screenshot": {
+        "file": "LOCAL-UI-06.png",
+        "sha256": "dc6095ef08e7ebb739784b5aba7178fce6a3dae4c70d8d3a782232d713dcdbcd"
+      },
+      "startedAt": "2026-11-17T14:35:44.770Z",
+      "finishedAt": "2026-11-17T14:35:45.889Z"
+    },
+    {
+      "id": "LOCAL-UI-07",
+      "relatedCases": [
+        "AT-10",
+        "AT-22"
+      ],
+      "name": "Parent cancels a newly booked reservation through its current UI; balance unchanged after reload",
+      "status": "FAIL",
+      "error": "locator.waitFor: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('dialog', { name: '予約取消の確認' }) to be visible\u001b[22m\n",
+      "screenshot": {
+        "file": "LOCAL-UI-07.png",
+        "sha256": "e0e62c74439d07872d2e7c3ff3462673a4d220fe8435d20377fc0e84407eaaf3"
+      },
+      "startedAt": "2026-11-17T14:35:45.889Z",
+      "finishedAt": "2026-11-17T14:35:57.091Z"
+    },
+    {
+      "id": "LOCAL-UI-08",
+      "relatedCases": [
+        "AT-13",
+        "AT-15"
+      ],
+      "name": "pickup completion consumes 1 and replay consumes zero",
+      "status": "PASS",
+      "screenshot": {
+        "file": "LOCAL-UI-08.png",
+        "sha256": "683a4215a4857e298fd854911a2889651308468bbb98baea876f85b32ca05211"
+      },
+      "startedAt": "2026-11-17T14:35:57.092Z",
+      "finishedAt": "2026-11-17T14:35:58.745Z"
+    },
+    {
+      "id": "LOCAL-UI-09",
+      "relatedCases": [
+        "AT-14",
+        "AT-15"
+      ],
+      "name": "roundtrip completion consumes 2 and replay consumes zero",
+      "status": "PASS",
+      "screenshot": {
+        "file": "LOCAL-UI-09.png",
+        "sha256": "6d00230f1d68bcb28e6a69f0ea55854ffa066636ba3c81a38e122b10b7d390f4"
+      },
+      "startedAt": "2026-11-17T14:35:58.746Z",
+      "finishedAt": "2026-11-17T14:36:00.389Z"
+    },
+    {
+      "id": "LOCAL-UI-10",
+      "relatedCases": [
+        "AT-16"
+      ],
+      "name": "Cancelled reservation cannot complete or consume tickets",
+      "status": "PASS",
+      "screenshot": {
+        "file": "LOCAL-UI-10.png",
+        "sha256": "d67190a1d3a72d57ee73478874c4bc778ae2d76ad1fbabd4cfd08546d73d4d18"
+      },
+      "startedAt": "2026-11-17T14:36:00.389Z",
+      "finishedAt": "2026-11-17T14:36:01.232Z"
+    },
+    {
+      "id": "LOCAL-UI-11",
+      "relatedCases": [
+        "AT-17",
+        "AT-20"
+      ],
+      "name": "Invalid ticket input and parent administration are rejected",
+      "status": "PASS",
+      "screenshot": {
+        "file": "LOCAL-UI-11.png",
+        "sha256": "6d639c6b78af218c86f3ed63a2696d34cc3ace2295680b073ed4ba9da0ea4f39"
+      },
+      "startedAt": "2026-11-17T14:36:01.232Z",
+      "finishedAt": "2026-11-17T14:36:02.903Z"
+    },
+    {
+      "id": "LOCAL-UI-12",
+      "relatedCases": [
+        "AT-21",
+        "AT-29"
+      ],
+      "name": "375px touch-emulated parent form can submit; document stays inside viewport",
+      "status": "PASS",
+      "screenshot": {
+        "file": "LOCAL-UI-12.png",
+        "sha256": "a21d74297fd937a394dca246c0f040cd4694cd0aef62f396c7a974a0db280990"
+      },
+      "startedAt": "2026-11-17T14:36:02.903Z",
+      "finishedAt": "2026-11-17T14:36:04.019Z"
+    },
+    {
+      "id": "LOCAL-UI-13",
+      "relatedCases": [
+        "AT-01",
+        "SAT-34"
+      ],
+      "name": "Logout and reload hide ledger and require new login",
+      "status": "PASS",
+      "screenshot": {
+        "file": "LOCAL-UI-13.png",
+        "sha256": "36a7f1adc8745c2770ac40760ea3fedb7535c7b9799887efbcb7ae79e3b05b59"
+      },
+      "startedAt": "2026-11-17T14:36:04.019Z",
+      "finishedAt": "2026-11-17T14:36:05.473Z"
+    },
+    {
+      "id": "LOCAL-UI-14",
+      "relatedCases": [
+        "AT-04"
+      ],
+      "name": "Low ticket warning is present only at balances 2, 1, 0",
+      "status": "PASS",
+      "screenshot": {
+        "file": "LOCAL-UI-14.png",
+        "sha256": "62b14a873b611b2d5aa0d8a32340076127cf401e8d6105d01e26b229309eec86"
+      },
+      "startedAt": "2026-11-17T14:36:05.473Z",
+      "finishedAt": "2026-11-17T14:36:09.109Z"
+    }
+  ],
+  "thirdPartyPassed": 0,
+  "limitations": [
+    "Actual App and ApiService demo paths with Google auth disabled; no real Google, GAS, Sheets or Calendar calls.",
+    "Chromium touch emulation is not a physical iPhone or Android test.",
+    "Local rehearsal only; these results must not be counted as AT-01〜30 acceptance or independent third-party acceptance."
+  ],
+  "status": "FAIL"
+}

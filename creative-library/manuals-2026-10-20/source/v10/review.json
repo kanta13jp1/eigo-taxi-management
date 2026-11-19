@@ -1,0 +1,11 @@
+{
+  "reviewedAt": "2026-10-20T13:52:34.536Z",
+  "decks": 5,
+  "slides": 65,
+  "visualReview": "All 65 slides inspected individually at 1280x720. Content/date/source-reference and line-wrapping corrections applied. Unchanged rerenders compared byte-for-byte; final changed slides re-inspected.",
+  "validation": "5 decks passed package, geometry, font, slide-count and first-party re-import checks",
+  "limitations": [
+    "PowerPoint native application not opened",
+    "Real mobile QR/camera and device download completion remain AT-29"
+  ]
+}

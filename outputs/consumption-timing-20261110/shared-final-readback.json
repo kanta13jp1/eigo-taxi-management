@@ -1,0 +1,15 @@
+{
+  "checkedAt": "2026-11-09T16:30:19.174Z",
+  "spreadsheetId": "1PqUq7BoBBVlPolivap0eg1UPik47vNNWphyBd0DNwvU",
+  "checks": {
+    "formulaPreserved": true,
+    "customerZero": true,
+    "overviewMatches": true,
+    "customerFieldsAndValidationPreserved": true,
+    "adoptionHistoryMatches": true
+  },
+  "pass": true,
+  "preservedCustomerPassed": 0,
+  "customerTotal": 6,
+  "visualVerification": "Values, formula, dropdown and wrapping-format readback via connector; authenticated Google-rendered sheet visual not independently inspected"
+}

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import type { Student, RideReservation, RideType } from '../types';
 import {
   Ticket,
@@ -13,13 +13,18 @@ import {
 } from 'lucide-react';
 
 interface ParentPortalProps {
+  isDemo: boolean;
   students: Student[];
   rides: RideReservation[];
   onOpenAddRide: (studentId: string) => void;
   onCancelRide: (rideId: string) => Promise<void>;
 }
 
+// @trace CODE-03 REQ-03
+// @trace CODE-04 REQ-04
+// @trace CODE-21 REQ-21
 export const ParentPortal: React.FC<ParentPortalProps> = ({
+  isDemo,
   students,
   rides,
   onOpenAddRide,
@@ -28,16 +33,45 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({
   const safeStudents = Array.isArray(students) ? students : [];
   const safeRides = Array.isArray(rides) ? rides : [];
 
-  const [selectedStudentId, setSelectedStudentId] = useState<string>(
-    safeStudents[0]?.id || ''
-  );
-
-  const student = safeStudents.find((s) => s.id === selectedStudentId);
+  const [preferredStudentId, setPreferredStudentId] = useState('');
+  const student = safeStudents.find((s) => s.id === preferredStudentId) ?? safeStudents[0];
 
   // この生徒の送迎データ
-  const studentRides = safeRides.filter((r) => r.studentId === selectedStudentId);
-  const upcomingRides = studentRides.filter((r) => r.status === 'scheduled');
+  const studentRides = safeRides.filter((r) => r.studentId === student?.id);
+  const upcomingRides = studentRides
+    .filter((r) => r.status === 'scheduled')
+    .sort((a, b) => a.rideDate.localeCompare(b.rideDate)
+      || a.rideTime.localeCompare(b.rideTime)
+      || a.id.localeCompare(b.id));
   const pastRides = studentRides.filter((r) => r.status !== 'scheduled');
+  const [cancelRideId, setCancelRideId] = useState<string | null>(null);
+  const [cancelPending, setCancelPending] = useState(false);
+  const cancellationInFlight = useRef(false);
+  const cancelDialog = useRef<HTMLDialogElement>(null);
+  const cancelTarget = upcomingRides.find(ride => ride.id === cancelRideId);
+  const activeCancelId = cancelTarget?.id;
+  useEffect(() => {
+    if (!activeCancelId) return;
+    const dialog = cancelDialog.current;
+    dialog?.showModal();
+    return () => dialog?.close();
+  }, [activeCancelId]);
+  const dismissCancellation = () => {
+    cancelDialog.current?.close();
+    setCancelRideId(null);
+  };
+  const confirmCancellation = async () => {
+    if (!cancelTarget || cancellationInFlight.current) return;
+    cancellationInFlight.current = true;
+    setCancelPending(true);
+    dismissCancellation();
+    try {
+      await onCancelRide(cancelTarget.id);
+    } finally {
+      cancellationInFlight.current = false;
+      setCancelPending(false);
+    }
+  };
 
   const getRideTypeLabel = (type: RideType) => {
     switch (type) {
@@ -50,7 +84,7 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({
     }
   };
 
-  if (students.length === 0) {
+  if (!student) {
     return (
       <div className="bg-white rounded-2xl p-8 text-center border border-slate-200">
         <p className="text-slate-500">登録されている生徒がいません。先生側で登録を行ってください。</p>
@@ -62,13 +96,14 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({
     <div className="max-w-xl mx-auto space-y-5 pb-8">
       {/* 生徒選択バー（保護者が複数の兄弟姉妹を通わせている場合もスムーズに切替可能） */}
       <div className="bg-white p-3 rounded-2xl border border-slate-200 shadow-xs flex items-center justify-between gap-3">
-        <label className="text-xs font-bold text-slate-500 whitespace-nowrap">表示する生徒:</label>
+        <label htmlFor="parent-portal-student" className="text-xs font-bold text-slate-500 whitespace-nowrap">表示する生徒:</label>
         <select
-          value={selectedStudentId}
-          onChange={(e) => setSelectedStudentId(e.target.value)}
+          id="parent-portal-student"
+          value={student.id}
+          onChange={(e) => setPreferredStudentId(e.target.value)}
           className="bg-slate-50 border border-slate-200 font-bold text-slate-800 text-sm rounded-xl px-3 py-1.5 focus:outline-hidden focus:ring-2 focus:ring-emerald-500 w-full"
         >
-          {students.map((s) => (
+          {safeStudents.map((s) => (
             <option key={s.id} value={s.id}>
               {s.name} さん
             </option>
@@ -98,7 +133,16 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({
                 </div>
               </div>
 
-              {student.ticketBalance <= 2 ? (
+              <p className="mt-4 text-xs leading-relaxed text-emerald-100/90 flex items-start gap-1.5">
+                <Sparkles className="w-4 h-4 text-amber-300 shrink-0 mt-0.5" />
+                <span>
+                  <span className="block font-semibold">予約しただけでは残数は減りません。</span>
+                  <span className="block">先生・管理者が「完了」にすると減ります。</span>
+                  <span className="block">片道1回につきチケット1枚、往復は2枚です。</span>
+                </span>
+              </p>
+
+              {student.ticketBalance <= 2 && (
                 <div className="mt-4 bg-amber-500/25 border border-amber-300/50 rounded-xl p-3 flex items-start gap-2.5 text-xs text-amber-100">
                   <AlertCircle className="w-5 h-5 text-amber-300 shrink-0 mt-0.5" />
                   <div>
@@ -108,17 +152,13 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({
                     <span>Mauro・Brenda に連絡してね！ 次回のチケットをご用意します。</span>
                   </div>
                 </div>
-              ) : (
-                <p className="mt-4 text-xs text-emerald-100/90 flex items-center gap-1.5">
-                  <Sparkles className="w-4 h-4 text-amber-300 shrink-0" />
-                  <span>片道1回につきチケット1枚消費です。当日の送迎完了後に引かれるため、キャンセル時も安心です。</span>
-                </p>
               )}
             </div>
           </div>
 
           {/* 予約アクションボタン */}
           <button
+            type="button"
             onClick={() => onOpenAddRide(student.id)}
             className="w-full py-3.5 px-4 bg-slate-900 hover:bg-slate-800 text-white font-bold rounded-2xl shadow-sm flex items-center justify-center gap-2 text-base transition-transform active:scale-[0.98]"
           >
@@ -128,13 +168,16 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({
 
           {/* 予約中の送迎（キャンセル可能） */}
           <div className="bg-white rounded-2xl border border-slate-200 p-5 shadow-xs">
-            <div className="flex items-center justify-between mb-3">
+            <div className="flex items-center justify-between mb-1">
               <h4 className="font-bold text-slate-800 text-sm flex items-center gap-2">
                 <Calendar className="w-4 h-4 text-emerald-600" />
                 現在予約中の送迎
               </h4>
               <span className="text-xs text-slate-400">{upcomingRides.length} 件</span>
             </div>
+            <p className="text-[11px] text-slate-500 mb-3">
+              ※ 日時・送迎場所を変更する場合は、元の予約をキャンセルしてから新しくお申し込みください。
+            </p>
 
             {upcomingRides.length === 0 ? (
               <div className="text-center py-6 text-slate-400 text-xs">
@@ -144,14 +187,15 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({
               <div className="space-y-3">
                 {upcomingRides.map((ride) => {
                   const typeInfo = getRideTypeLabel(ride.rideType);
+                  const target = [student.name, ride.rideDate, ride.rideTime, typeInfo.text].join(' ');
                   return (
                     <div
                       key={ride.id}
                       className="border border-slate-100 bg-slate-50/70 rounded-xl p-3.5 flex flex-col gap-2"
                     >
-                      <div className="flex items-start justify-between">
-                        <div>
-                          <div className="flex items-center gap-2">
+                      <div className="flex items-start justify-between gap-2">
+                        <div className="min-w-0 flex-1">
+                          <div className="flex flex-wrap items-center gap-2">
                             <span className="font-black text-slate-800 text-sm">
                               {ride.rideDate} {ride.rideTime}
                             </span>
@@ -159,12 +203,12 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({
                               {typeInfo.text}
                             </span>
                           </div>
-                          <div className="flex items-center gap-1 text-xs text-slate-600 mt-1">
+                          <div className="min-w-0 flex items-center gap-1 text-xs text-slate-600 mt-1">
                             <MapPin className="w-3.5 h-3.5 text-slate-400 shrink-0" />
-                            <span className="truncate">{ride.pickupLocation}</span>
+                            <span className="min-w-0 [overflow-wrap:anywhere]">{ride.pickupLocation}</span>
                           </div>
                           {ride.note && (
-                            <p className="text-[11px] text-slate-500 mt-1 pl-4 border-l-2 border-slate-300">
+                            <p className="break-words text-[11px] text-slate-500 mt-1 pl-4 border-l-2 border-slate-300">
                               {ride.note}
                             </p>
                           )}
@@ -172,11 +216,9 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({
 
                         {/* キャンセルボタン */}
                         <button
-                          onClick={() => {
-                            if (window.confirm('この送迎予約をキャンセルしますか？（先生のカレンダーからも自動で削除されます）')) {
-                              onCancelRide(ride.id);
-                            }
-                          }}
+                          aria-label={target + ' ' + ride.pickupLocation + ' の予約をキャンセル'}
+                          disabled={cancelPending}
+                          onClick={() => setCancelRideId(ride.id)}
                           className="shrink-0 text-xs text-rose-600 hover:text-rose-700 bg-rose-50 hover:bg-rose-100 font-bold px-2.5 py-1.5 rounded-lg border border-rose-200 transition-colors flex items-center gap-1"
                         >
                           <XCircle className="w-3.5 h-3.5" />
@@ -189,6 +231,25 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({
               </div>
             )}
           </div>
+
+          {cancelTarget && (
+            <dialog ref={cancelDialog} aria-labelledby="parent-cancel-heading"
+              aria-describedby="parent-cancel-details parent-cancel-effect" onCancel={dismissCancellation}
+              className="m-auto w-11/12 max-w-md rounded-2xl p-5 shadow-xl backdrop:bg-slate-900/50">
+              <h2 id="parent-cancel-heading" className="text-lg font-bold">予約取消の確認</h2>
+              <div id="parent-cancel-details" className="mt-3 space-y-1 [overflow-wrap:anywhere]">
+                <p className="font-semibold">{student.name}</p>
+                <p>{cancelTarget.rideDate} {cancelTarget.rideTime}・{getRideTypeLabel(cancelTarget.rideType).text}</p>
+                <p>送迎先: {cancelTarget.pickupLocation}</p>
+                {cancelTarget.note && <p>備考: {cancelTarget.note}</p>}
+              </div>
+              <p id="parent-cancel-effect" className="mt-3 text-sm">{isDemo ? 'このブラウザ内のデモ予約を取り消します。教室の予定は変わりません。' : '台帳の予約を取消にし、対応するカレンダーの予定を削除します。'}</p>
+              <div className="mt-5 flex justify-end gap-2">
+                <button className="rounded-lg border px-3 py-2" onClick={dismissCancellation}>戻る</button>
+                <button className="rounded-lg bg-rose-700 px-3 py-2 font-bold text-white" onClick={confirmCancellation}>取消を確定</button>
+              </div>
+            </dialog>
+          )}
 
           {/* これまでの利用履歴 */}
           <div className="bg-white rounded-2xl border border-slate-200 p-5 shadow-xs">

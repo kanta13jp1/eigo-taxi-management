@@ -1,0 +1,85 @@
+Browser tab: 1750959453, Title: "Mauro & Brenda 送迎チケット管理 | Eigo Taxi Link", URL: "https://eigo-taxi-test.web.app/#/admin".
+1 AXWebArea Mauro & Brenda 送迎チケット管理 | Eigo Taxi Link, URL: eigo-taxi-test.web.app/#/admin
+	2 container root
+		3 container
+			4 heading Mauro & Brenda Taxi Link, Value: 1
+				5 text Mauro & Brenda Taxi Link
+			6 text 管理者専用ページ
+			7 container 管理者メニュー
+				8 button 管理者用 (Mauro・Brenda)
+				9 button 個別URL・QR
+				10 button アカウント管理
+				11 button Google連携
+		12 container
+			13 text 教室の連携環境  /  Mighty 検証管理者
+		14 button ログアウト
+		65 container
+			66 text 管理者画面 Mauro・Brenda 先生用管理ダッシュボード ※完全予約制対応：送迎完了時に「送迎完了」を押すと片道1枚（往復は2枚）が自動消化されます 本日の送迎 2 件 予定
+			67 text チケット残少・残ゼロ
+			68 text 1 名 登録生徒数 5 名
+			69 button 本日の送迎 (3)
+				70 text 本日の送迎 (
+				71 text 3
+				72 text )
+			73 button 送迎スケジュール一覧 (6)
+				74 text 送迎スケジュール一覧 (
+				75 text 6
+				76 text )
+			77 button 生徒・チケット管理 (5)
+				78 text 生徒・チケット管理 (
+				79 text 5
+				80 text )
+			81 button 送迎予定を追加
+			82 button チケット追加
+			83 heading 生徒台帳・チケット残数状況, Value: 2
+				84 text 生徒台帳・チケット残数状況
+			85 button 新規生徒を登録
+			86 text STU-001
+			87 heading 田中 陽菜, Value: 4
+				88 text 田中 陽菜
+			89 text 保護者:  田中 美咲 7 回
+			90 link Description: 090-1111-2222, Value: tel:090-1111-2222
+			91 text 東京都世田谷区桜新町1-10-5
+			92 button チケット追加
+			93 button 予約登録
+			94 text STU-002
+			95 heading 山本 颯太, Value: 4
+				96 text 山本 颯太
+			97 text 保護者:  山本 健一 1 回 残り1回
+			98 link Description: 080-3333-4444, Value: tel:080-3333-4444
+			99 text 東京都世田谷区用賀2-5-12
+			100 button チケット追加
+			101 button 予約登録
+			102 text STU-57635b29-c850-40b4-b0ca-80d16ace0e20
+			103 heading AT23検証_20261020_1514, Value: 4
+				104 text AT23検証_20261020_1514
+			105 text 保護者:  AT23架空保護者 10 回
+			106 link Description: 000-0000-0000, Value: tel:000-0000-0000
+			107 text 検証専用・実在住所なし
+			108 button チケット追加
+			109 button 予約登録
+			110 text STU-CUST-20261107
+			111 heading 顧客確認_架空生徒, Value: 4
+				112 text 顧客確認_架空生徒
+			113 text 保護者:  顧客確認用_架空保護者 5 回
+			114 link Description: 000-0000-0000, Value: tel:000-0000-0000
+			115 text 検証専用・実在しない乗車場所
+			116 button チケット追加
+			117 button 予約登録
+			118 text STU-d7c0ac11-49f0-408d-970c-978ef2c8325e
+			119 heading 先生確認用・架空生徒, Value: 4
+				120 text 先生確認用・架空生徒
+			121 text 保護者:  先生確認用・架空保護者 5 回
+			122 link Description: 000-0000-0000, Value: tel:000-0000-0000
+			123 text 先生確認用・実在しない乗車場所
+			124 button チケット追加
+			125 button 予約登録
+		58 container
+			59 text © 2026 Mauro & Brenda English School. All rights reserved.
+			60 button 利用規約
+			61 text |
+			62 button 個人情報の取扱い
+			63 text |
+			64 button 免責事項
+
+The focused UI element is 1 AXWebArea Mauro & Brenda 送迎チケット管理 | Eigo Taxi Link, URL: eigo-taxi-test.web.app/#/admin

@@ -1,0 +1,82 @@
+{
+  "date": "2026-11-07",
+  "status": "ADOPTED",
+  "review": "docs/traceability/reports/ppt-delivery-20261107/independent-review.json",
+  "registrySha256": "2e7c85880aa8e9c2bbf57700ec9ba3a5a6ed6307287b9af778c86552ef7cf545",
+  "decks": 12,
+  "slides": 160,
+  "binaryUpdates": [
+    {
+      "path": "docs/deliverables/2026-10-23-traceability/acceptance-2026-10-24-v13.pptx",
+      "stateBefore": "current",
+      "stateAfter": "historical"
+    },
+    {
+      "path": "docs/deliverables/2026-10-23-traceability/business-2026-10-24-v13.pptx",
+      "stateBefore": "current",
+      "stateAfter": "historical"
+    },
+    {
+      "path": "docs/deliverables/2026-10-23-traceability/design-2026-10-24-v13.pptx",
+      "stateBefore": "current",
+      "stateAfter": "historical"
+    },
+    {
+      "path": "docs/deliverables/2026-10-23-traceability/implementation-2026-10-24-v13.pptx",
+      "stateBefore": "current",
+      "stateAfter": "historical"
+    },
+    {
+      "path": "docs/deliverables/2026-10-23-traceability/matrix-2026-10-24-v13.pptx",
+      "stateBefore": "current",
+      "stateAfter": "historical"
+    },
+    {
+      "path": "docs/deliverables/2026-10-23-traceability/operations-2026-10-24-v13.pptx",
+      "stateBefore": "current",
+      "stateAfter": "historical"
+    },
+    {
+      "path": "docs/deliverables/2026-10-23-traceability/progress-2026-10-24-v13.pptx",
+      "stateBefore": "current",
+      "stateAfter": "historical"
+    },
+    {
+      "path": "docs/deliverables/2026-10-23-traceability/requirements-2026-10-24-v13.pptx",
+      "stateBefore": "current",
+      "stateAfter": "historical"
+    },
+    {
+      "path": "docs/deliverables/2026-10-23-traceability/tasks-2026-10-24-v13.pptx",
+      "stateBefore": "current",
+      "stateAfter": "historical"
+    },
+    {
+      "path": "docs/deliverables/2026-10-23-traceability/test-code-2026-10-24-v13.pptx",
+      "stateBefore": "current",
+      "stateAfter": "historical"
+    },
+    {
+      "path": "docs/deliverables/2026-10-23-traceability/test-spec-2026-10-24-v13.pptx",
+      "stateBefore": "current",
+      "stateAfter": "historical"
+    },
+    {
+      "path": "docs/deliverables/2026-10-23-traceability/user-2026-10-24-v13.pptx",
+      "stateBefore": "current",
+      "stateAfter": "historical"
+    },
+    {
+      "path": "docs/traceability/matrix.csv",
+      "before": "c9066deb638efa33be6d866194c5c703044ba79884b569e6b772cfcf4aec85f1",
+      "after": "c0d4cdd87e950cd3389be783ca220fec1d59fce40af7a7dc25a4739ab2db2c6a"
+    },
+    {
+      "path": "docs/acceptance/third-party-acceptance-checklist.csv",
+      "before": "634ec625e85de711d0a0ef35bfa5fbbd54bf47d43b4c8d1fda9dc5bcc67bdb19",
+      "after": "c7500bb39515001fe9bf929e8ec577a8c70012b4df59efeda59b3d121a323f3c"
+    }
+  ],
+  "oldItemsPreserved": true,
+  "newBinaryItems": 2794
+}

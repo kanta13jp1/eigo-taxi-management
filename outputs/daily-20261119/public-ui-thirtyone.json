@@ -1,0 +1,34 @@
+{
+  "url": "https://eigo-taxi-test.web.app",
+  "checkedAt": "2026-11-19T14:49:34.000Z",
+  "release": {
+    "environment": "mighty-test",
+    "projectId": "eigo-taxi-app",
+    "siteId": "eigo-taxi-test",
+    "builtAt": "2026-11-19T14:47:33.949Z",
+    "sourceDigest": "db34cb6bb3ccec853fd3dd413481fca9a2253316ab5fbacead8c741fa879b437"
+  },
+  "publicVerification": "docs/acceptance/deployment-verification/public-2026-11-19T14-48-38-337Z.json",
+  "cumulativeCounts": {
+    "fixesTotal": 31,
+    "fable52PriorFixes": 2,
+    "subsequentFixes": 29,
+    "acceptanceTestsTotal": 31
+  },
+  "results": {
+    "SAT-37": {
+      "status": "PASS",
+      "scope": "Isolated anonymous parent demo on live Firebase Hosting; cancel old ride, rebook with new date/time/location/note, reload and verify single active reservation without ticket consumption",
+      "hasGuide": true,
+      "summary": {
+        "scheduledCount": 1,
+        "rideDate": "2026-11-25",
+        "rideTime": "18:15",
+        "pickupLocation": "世田谷区桜新町駅 西口ロータリー",
+        "note": "SAT-37 直前場所変更連絡",
+        "ticketBalance": 7
+      },
+      "errors": []
+    }
+  }
+}

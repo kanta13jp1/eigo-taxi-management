@@ -1,0 +1,30 @@
+{
+  "case": "AT-15",
+  "hostingVersion": "b10cd21819d6c229",
+  "checkedAt": "2026-11-12T03:41:13.127Z",
+  "url": "https://eigo-taxi-test.web.app/#/admin",
+  "scope": "anonymous administrator demo; browser storage only",
+  "student": "AT-15 二重完了確認用",
+  "studentId": "STU-822b4eee-d284-4e70-811b-7962a5326ebd",
+  "date": "2026-11-12",
+  "time": "16:00",
+  "rideType": "お迎え",
+  "newStudents": 1,
+  "newReservations": 1,
+  "publicInput": "double click on completion button",
+  "balanceBefore": 7,
+  "consumed": 1,
+  "balanceAfterReload": 6,
+  "completedAfterReload": true,
+  "completionButtonAfterReload": false,
+  "pendingStateObservedPublicly": false,
+  "networkRequestCountMeasuredPublicly": false,
+  "priorFixtureBalancesAfterReload": {
+    "AT14": 5,
+    "AT13": 6
+  },
+  "images": [
+    "public-before.png",
+    "public-completed.png"
+  ]
+}

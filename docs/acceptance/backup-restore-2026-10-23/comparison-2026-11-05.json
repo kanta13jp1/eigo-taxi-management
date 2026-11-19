@@ -1,0 +1,29 @@
+{
+  "id": "AT28-LIVE-09",
+  "date": "2026-11-05",
+  "source": "Two Google Sheets opened with the company account and exported to XLSX for read-only comparison",
+  "exportSha256": {
+    "backup": "9963633f2806d7611d88604871f5a3cf927d95651479911b1cd43aac1f5bbf7d",
+    "testLedger": "d17dc5dfce86c9acf2a11b4e136b9612eae8cb1769e4c71fcaa3ebf885e81358"
+  },
+  "sameSheetNamesAndOrder": true,
+  "scope": [
+    {"sheet": "生徒台帳", "range": "A1:H8", "excludedFixtureRow": 5, "cellsCompared": 56},
+    {"sheet": "送迎予定履歴", "range": "A1:L8", "excludedFixtureRow": 5, "cellsCompared": 84},
+    {"sheet": "チケット購入履歴", "range": "A1:G8", "excludedFixtureRow": 2, "cellsCompared": 49}
+  ],
+  "excludedFixtureIdsVerified": true,
+  "activeFixtureRowsEmpty": true,
+  "cellsCompared": 189,
+  "valueOrTypeDifferences": 0,
+  "formulaCells": 0,
+  "formulaDifferences": 0,
+  "comparedExportedFormats": ["font", "fill", "border", "alignment", "protection", "number_format"],
+  "formatDifferences": 0,
+  "independentlyRechecked": true,
+  "limitations": ["XLSX export may not preserve all native Google Sheets features", "conditional formatting, validation, row heights and column widths not compared", "formula restoration not verified in these actual ledger ranges", "whole workbook, Calendar consistency, and independent acceptance not verified", "no restoration performed in this comparison"],
+  "overallAcceptance": "PARTIAL",
+  "thirdPartyAcceptancePassed": 0,
+  "calendarPermissionAdded": false,
+  "productionStarted": false
+}

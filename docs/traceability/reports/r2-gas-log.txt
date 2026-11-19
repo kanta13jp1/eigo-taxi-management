@@ -1,0 +1,71 @@
+PASS GAS-01 Initialization keeps 8/12/7 columns, preserves data, adds no sample students
+PASS GAS-02 GET cannot expose students/rides or invoke mutations
+PASS GAS-03 Every POST action rejects missing/invalid keys before accessing data
+PASS GAS-04 Missing/malformed/empty authentication configuration fails closed
+PASS GAS-05 Login returns server principal and ignores client-supplied role/scopes
+PASS GAS-06 Parent reads expose only mapped students and rides despite forged filters
+PASS GAS-07 A parent with no assignments receives no student or ride data
+PASS GAS-08 Parent cannot register students, add tickets or complete rides
+PASS GAS-09 Cross-family booking/cancellation uses authoritative student mapping
+PASS GAS-10 Parent booking derives stored name/role and ignores supplied event ID
+PASS GAS-11 Cancellation affects only stored event ID and is idempotent
+PASS GAS-12 Revocation and remapping take effect on the next request
+PASS GAS-13 Duplicate completion consumes only once, including after other purchases
+PASS GAS-14 Roundtrip consumption is derived from stored type and tampering rejected
+PASS GAS-15 Cancelled completion and completed cancellation have no side effects
+PASS GAS-16 Insufficient/corrupt balances and missing targets never complete a ride
+PASS GAS-17 Contending completion cannot enter locked mutation, retry becomes replay
+PASS GAS-18 Negative/fraction/nonfinite/nonnumeric ticket quantities rejected before writes
+PASS GAS-19 Invalid amounts and initial balances rejected, zero amount allowed
+PASS GAS-20 Safe-integer overflow, missing students and unknown IDs cause no writes
+PASS GAS-21 Invalid reservation date/time/type and empty fields precede calendar work
+PASS GAS-22 Reservation retry creates one event/row and rejects changed-payload collision
+PASS GAS-23 Purchase retry credits once and collision never overwrites a previous purchase
+PASS GAS-24 Student registration has stable-ID replay and rejects conflicting IDs
+PASS GAS-25 Calendar creation exception is never success and retains an uncertainty guard
+PASS GAS-26 Reservation append failure before/after write removes event/row and allows retry
+PASS GAS-27 Completion rollback restores balance/status/timestamp for every failed write
+PASS GAS-28 Purchase failures compensate both history and balance, retries credit once
+PASS GAS-29 Student create append failure compensates, no fabricated success row
+PASS GAS-30 Calendar deletion failure never claims cancellation, blocks unsafe replay
+PASS GAS-31 Cancellation sheet failure does not delete the calendar event
+PASS GAS-32 Read/calendar-lookup/missing-sheet errors propagate without data or mutation
+PASS GAS-33 Failed compensation keeps durable guard; login works but data/mutations block
+PASS GAS-34 Guard write failure prevents writes; failed guard deletion compensates safely
+PASS GAS-35 After irreversible calendar deletion, guard-delete failure restores guard even if applied
+PASS GAS-36 Malformed JSON, unknown/prototype actions and remote init are rejected
+PASS GAS-37 Duplicate authoritative IDs fail closed instead of updating an arbitrary row
+PASS GAS-38 User text is stored as literal text and date cells normalize to JST
+PASS GAS-39 Role-specific entries reject opposite roles and personal URL is bound to authenticated user
+PASS GAS-40 Admin invitation directory exposes public metadata only and refuses parents
+PASS GAS-41 Rotated entry and disabled account are refused on the next request
+PASS GAS-42 Duplicate or malformed configured public IDs fail closed
+PASS GAS-43 Legacy keys disabled by default; mixed Google/key credentials never downgrade
+PASS GAS-44 Google token verified by fixed configured project endpoint before allowlist role is returned
+PASS GAS-45 A decoded-looking token still needs Google verification; invalid signature response is refused
+PASS GAS-46 Wrong project/issuer, expired/future tokens and wrong provider fail closed before lookup
+PASS GAS-47 Lookup must resolve one enabled matching UID with verified Google identity
+PASS GAS-48 Revocation rejects tokens and refreshed tokens from an older login session
+PASS GAS-49 Unregistered/disabled UID cannot access; malformed allowlist does not grant permissions
+PASS GAS-50 Parent identity remains restricted to its assigned records; admin API and mismatched entry refused
+PASS GAS-51 Every API call rereads server allowlist; submitted roles/projects/keys cannot override it
+PASS GAS-52 Google admin invitation directory exposes only public user metadata
+PASS GAS-53 Lookup outage/HTTP failure/bad JSON returns failure without reading application data
+PASS GAS-54 Missing server setup fails closed and demo-only URL cannot be registered for real access
+PASS GAS-55 Parents and legacy admins cannot manage Google accounts
+PASS GAS-56 Admin pre-registers a parent email, generates opaque URL, returns no UID
+PASS GAS-57 First verified Google sign-in binds pending email to UID once; role cannot be self-selected
+PASS GAS-58 Unverified/mismatched email or disabled pending account cannot claim registration
+PASS GAS-59 Self deletion/demotion/disable refused and stale revision cannot overwrite changes
+PASS GAS-60 Unknown students, duplicate emails and invalid input refused without config writes
+PASS GAS-61 Disable/delete applies to next request; URL rotation rejects old URL and keeps assigned family
+PASS GAS-62 Revoked admin while waiting for lock cannot mutate account permissions
+PASS GAS-63 Ten tickets credit 7 to 17 with exactly one matching purchase record
+PASS GAS-64 Dropoff persists time and type without consuming a ticket
+PASS GAS-65 Roundtrip is one scheduled record with balance 7 until completion then 5
+PASS GAS-66 Admin cancellation updates only target status and preserves both balances
+PASS GAS-67 Calendar adapter contract binds event ID name JST time and location to sheet row
+PASS GAS-68 Calendar cancellation adapter removes target event once preserving other event and balance
+PASS GAS-69 Direct sheet edit is read on next request without calculating balances or touching original copy and calendar
+PASS GAS-70 Rescheduling is cancellation then separate creation with failure reconciliation and idempotent retry
+GAS: 70/70 passed; evidence: docs\traceability\reports\r2\offline\2026-10-22T17-51-00-899Z\gas-results.json

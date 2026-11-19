@@ -1,0 +1,875 @@
+[
+  {
+    "id": "manuals-v20-1",
+    "path": "brief-and-spec.md",
+    "sha256": "2dc32aea791329117a13706d5916a105f7e4dbd58457b74f3de50c08ca0fd811",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-2",
+    "path": "deliverables\\operation-manual-2026-10-22-v20-account-management.pptx",
+    "sha256": "cc63bd3063b4d3064f2f3d3f61198cf78c2628972e4842ba19cfa55a2144fe37",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-3",
+    "path": "deliverables\\portal-spec-supplement-2026-10-22-v20-account-management.pptx",
+    "sha256": "397e63762c893be6923600ee0268ed88b8d7196f89154ddc387feb3446aafa5b",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-4",
+    "path": "deliverables\\progress-report-role-portals-2026-10-22-v20-account-management.pptx",
+    "sha256": "bed22692128bdb25d005f6927848a863cd9c99905e8b0c07c5acea6aa59cfb93",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-5",
+    "path": "deliverables\\README.md",
+    "sha256": "b6482ab65b04cd0e70b08d31dcf3a5e6f49bcb86035ba72973488b7ec3c71390",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-6",
+    "path": "deliverables\\remaining-tasks-2026-10-22-v20-account-management.pptx",
+    "sha256": "fb177a3c6444bf68837b6287ee0038c1097cc3225eedf914abe85fa0705edea7",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-7",
+    "path": "deliverables\\user-manual-2026-10-22-v20-account-management.pptx",
+    "sha256": "a3191f3006052d79a11f92385c5add9afbea69d4f0d0684a1efd5f4fa4f24405",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-8",
+    "path": "verification\\operation-manual-montage.png",
+    "sha256": "49122ef46414a41033cd479bc51d268dfd3b6ae0cf991a20c19de436d1cad4f3",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-9",
+    "path": "verification\\operation-manual\\01.png",
+    "sha256": "489fd8feebd3a910a3374413265fcdfe0edd0e5ee3233a6a14e84e6b54d95820",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-10",
+    "path": "verification\\operation-manual\\02.png",
+    "sha256": "ea4d4ecd4e453d2b08434e6eaf648e8a08b14c5b4a7ba1d76027fa739858bd87",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-11",
+    "path": "verification\\operation-manual\\03.png",
+    "sha256": "ff616d9829545706da92c6d125ff283061b5992cfdbdd3e271ee50fa2681b139",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-12",
+    "path": "verification\\operation-manual\\04.png",
+    "sha256": "79784e3b2543373a2f6c3aa7e1ff1019a2de96b700ec68efda10676bab44ed7a",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-13",
+    "path": "verification\\operation-manual\\05.png",
+    "sha256": "9516624001c74acdc9338ec2e6964f53bf82c7bb1ba83bf4b520784553a67d60",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-14",
+    "path": "verification\\operation-manual\\06.png",
+    "sha256": "0a65a1c7d0669aae9195c64076184d666d86a1c2709904f4863047e102e1de6d",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-15",
+    "path": "verification\\operation-manual\\07.png",
+    "sha256": "cabc96a94f0341e74e0054c15705f9d41a3ce86b272e70302a45c11f22f68362",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-16",
+    "path": "verification\\operation-manual\\08.png",
+    "sha256": "71f1898d0c36aaff91dd08ae570ce5dddba7ff31814a55e7936103f580c26d40",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-17",
+    "path": "verification\\operation-manual\\09.png",
+    "sha256": "1690c07214ceff8eccee7e08af9ddd82a77caeed43650029e1f7f9da56d89f4a",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-18",
+    "path": "verification\\operation-manual\\10.png",
+    "sha256": "5b19e2e69762796029157e8d986e7c9f6efa891610f698f0ee973e4b7c57681a",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-19",
+    "path": "verification\\operation-manual\\11.png",
+    "sha256": "7226294de0e40c7f8eec9bf866bb70b19601115cb461d54150c597dae492f5d5",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-20",
+    "path": "verification\\operation-manual\\12.png",
+    "sha256": "36afcb9d9c3228a72f842be04fb2913e76fd5c3ccf179f2dfe3820f0e0dd6838",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-21",
+    "path": "verification\\operation-manual\\13.png",
+    "sha256": "a3022332789892777d400ed96cec4c5c9f6171e33f890f9eac41db7d4da87b99",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-22",
+    "path": "verification\\operation-manual\\14.png",
+    "sha256": "0d8a0379d6d1d39051b2d55f54facfc480445f188700d7af0ea3f278c36576b5",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-23",
+    "path": "verification\\operation-manual\\15.png",
+    "sha256": "0ccc5c556540bbc907f65fb50489e612cc336bce2281cdff1f7273da2663fd58",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-24",
+    "path": "verification\\operation-manual\\16.png",
+    "sha256": "80b0afd1e0aa3021058cd94b955e49f6bd2257e6e288ebadd1bee44ac76e523c",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-25",
+    "path": "verification\\operation-manual\\17.png",
+    "sha256": "e1ade6d246a49d1668dd7d7d12a64a3818c19338dc7b469d45f5b2f96d7c7487",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-26",
+    "path": "verification\\operation-manual\\18.png",
+    "sha256": "0b4ef6ebfaf4b981e4e79f7078950e1daa940f67652fecf6d36680b0da01f93b",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-27",
+    "path": "verification\\operation-manual\\19.png",
+    "sha256": "48ca0e02fa8ebfaa9425630c570b60e0d737676f71af2f066df596ed9d705edc",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-28",
+    "path": "verification\\operation-manual\\20.png",
+    "sha256": "2290b65850261d6de1a908e1ceb6254a1aa5a8ff6a9a5009fbc260223c2b27ff",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-29",
+    "path": "verification\\operation-manual\\21.png",
+    "sha256": "cea5d2acd21f4a06300baecc17a2308ae481b9f36f175e1ebddf9c16042e5450",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-30",
+    "path": "verification\\operation-manual\\22.png",
+    "sha256": "3f84310c68443738dea7a4aa36f66019238b1e1e175b2a01de844a36185cbd9b",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-31",
+    "path": "verification\\operation-manual\\23.png",
+    "sha256": "0fbc5c6c4bc0ec9e897990bc258e90b60fb7d71d81db93c83331f78eba86fe90",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-32",
+    "path": "verification\\operation-manual\\24.png",
+    "sha256": "0996c7d26e949363304675b09d1ae510a6229a9c6426dc8996b2473244f9280d",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-33",
+    "path": "verification\\operation-manual\\25.png",
+    "sha256": "784bca3dfae5a15b51bef81e12d3b0d521a51f742c4f065ed41cc59a54bc3c1d",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-34",
+    "path": "verification\\operation-manual\\26.png",
+    "sha256": "58d61396b3dc2d4ca1b8a12116eab5f517c46547207f1218ba77aecd4e284468",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-35",
+    "path": "verification\\operation-manual\\27.png",
+    "sha256": "2d486d57d9d2c6edaca382f11fa603f9f59474f35bf6c2b89a49e2dcc9003848",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-36",
+    "path": "verification\\operation-manual\\28.png",
+    "sha256": "e289a2fbf93e0a78ac7f9050a96ff439f4c167cd4684eb538bb8c11aa53b2380",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-37",
+    "path": "verification\\operation-manual\\candidate.pptx",
+    "sha256": "cc63bd3063b4d3064f2f3d3f61198cf78c2628972e4842ba19cfa55a2144fe37",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-38",
+    "path": "verification\\operation-manual\\candidate.pptx.inspect.ndjson",
+    "sha256": "5640e909064ce73f85737792c49a5b024c6b9742aa5062e71fbec62fabba6b05",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-39",
+    "path": "verification\\operation-manual\\content.json",
+    "sha256": "9062ef49016a5d565f54701ad2cfdcd951df0a57d874c4abd265143bf3f1e999",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-40",
+    "path": "verification\\operation-manual\\validation.json",
+    "sha256": "9e92c73eb12362231ac02596033163168672ab288a171984cf6964782bc62141",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-41",
+    "path": "verification\\portal-spec-supplement-montage.png",
+    "sha256": "c2e0cc5ae7d30577f9b1e2b2855c6b12d88f7d13947755c2c07db5038c474004",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-42",
+    "path": "verification\\portal-spec-supplement\\01.png",
+    "sha256": "3b72c562988537bcca906cec576e68dd3033a358d8b442b13969b474029ee1b7",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-43",
+    "path": "verification\\portal-spec-supplement\\02.png",
+    "sha256": "e1ede2257437862a38ab99feb63c0caded01ceecc4de0649c0f98326f9020371",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-44",
+    "path": "verification\\portal-spec-supplement\\03.png",
+    "sha256": "9cb42be8eb335e51be5f39828cdf795ee5b45d60d3d8e329935d3d5bdce00274",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-45",
+    "path": "verification\\portal-spec-supplement\\04.png",
+    "sha256": "d9140afc1cada7b68f1c2c0fd9a5cf5d59bdfe59a6f1141d41fc4826fb9eaf93",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-46",
+    "path": "verification\\portal-spec-supplement\\05.png",
+    "sha256": "9f143be18f0941022f86921681eb522e4d2425bb3877f9987c86d26b9ed7a144",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-47",
+    "path": "verification\\portal-spec-supplement\\06.png",
+    "sha256": "c41040238933c79e7007ac586aeee9819390b80a02ec540b8f1e7ec5f0a20f1a",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-48",
+    "path": "verification\\portal-spec-supplement\\candidate.pptx",
+    "sha256": "397e63762c893be6923600ee0268ed88b8d7196f89154ddc387feb3446aafa5b",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-49",
+    "path": "verification\\portal-spec-supplement\\candidate.pptx.inspect.ndjson",
+    "sha256": "82eec74ea1f1226eaf78c8b45b2db54abe24d9da36cbbcce942a93c833e06558",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-50",
+    "path": "verification\\portal-spec-supplement\\content.json",
+    "sha256": "4bdd2620417f47106aff67ccb6a064d9f573c592a9a6652ba26250344fb498fa",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-51",
+    "path": "verification\\portal-spec-supplement\\validation.json",
+    "sha256": "e595eccedc3030a3567d65f102abaf6866c17a3894cb0ce12a1141da838c66f9",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-52",
+    "path": "verification\\progress-report-role-portals-montage.png",
+    "sha256": "96915a8de249aad49c5428376fba111708f729e3071494a2ac9dae297f170797",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-53",
+    "path": "verification\\progress-report-role-portals\\01.png",
+    "sha256": "522a1fa3784e710fb12797da181206713caa8ae15a991242d5b92c54e326a7f8",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-54",
+    "path": "verification\\progress-report-role-portals\\02.png",
+    "sha256": "fcaee8341d43e2f618acfa2d30bb23ffaead7393c220b69c562ae07811ea0eb3",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-55",
+    "path": "verification\\progress-report-role-portals\\03.png",
+    "sha256": "2938c5b57daa1b891eb6c63d36f9e491f074536fb5c96250a06407a7556c864a",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-56",
+    "path": "verification\\progress-report-role-portals\\04.png",
+    "sha256": "745bd07580a3d943ff3550f92063770689b1a91e35cd8964ca2f3301f6f87738",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-57",
+    "path": "verification\\progress-report-role-portals\\05.png",
+    "sha256": "b14990cf95829adc24243ca04381df74939da613cddba35c4e55e9757c7991db",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-58",
+    "path": "verification\\progress-report-role-portals\\06.png",
+    "sha256": "842f6aab84fe7c9c86288964c1c2aea0b7e51c5df715accc864dd339611aa93b",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-59",
+    "path": "verification\\progress-report-role-portals\\candidate.pptx",
+    "sha256": "bed22692128bdb25d005f6927848a863cd9c99905e8b0c07c5acea6aa59cfb93",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-60",
+    "path": "verification\\progress-report-role-portals\\candidate.pptx.inspect.ndjson",
+    "sha256": "96fb5bee0b5becbc4630cfe16f90d55390f294d7114cacf14a99a6bba66a74e9",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-61",
+    "path": "verification\\progress-report-role-portals\\content.json",
+    "sha256": "6308fade2ed9aa5d918567e9c74e249235f635980b958da677e57078af7613d1",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-62",
+    "path": "verification\\progress-report-role-portals\\validation.json",
+    "sha256": "0948d8dc111e6c40776c58d9d31b05e6a475969d69f8f68404a9125cb7de2225",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-63",
+    "path": "verification\\remaining-tasks-montage.png",
+    "sha256": "f94a4477cb9b4c41bad5da6b093814bdff3fef325c067841226287401c7b4fee",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-64",
+    "path": "verification\\remaining-tasks\\01.png",
+    "sha256": "8bb28f3bab05de7ac03658f694cee80e22063a50f4b603ebc5dd1f101be99cbb",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-65",
+    "path": "verification\\remaining-tasks\\02.png",
+    "sha256": "b31bd670c2f3f38ba8a6544c34373bc802bff3e466b4af3b18da912fa1bfeecf",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-66",
+    "path": "verification\\remaining-tasks\\03.png",
+    "sha256": "b1404dcc5c37c7fa33f128256f0e1eee754921d9591e8cc17f5374ae00590d7f",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-67",
+    "path": "verification\\remaining-tasks\\04.png",
+    "sha256": "563144245b6cb87420977ceb8d21bc6c9aa2d2db51127001fe17262f4f68aa82",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-68",
+    "path": "verification\\remaining-tasks\\05.png",
+    "sha256": "2b98db3a17278fafebed65acb271a8e73bf667182bb1aebeca1b2448adfe398f",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-69",
+    "path": "verification\\remaining-tasks\\06.png",
+    "sha256": "69be1524bc7f2f900b893145af79e767967c7b4c1d25aa3d9860c4cfba56dd5b",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-70",
+    "path": "verification\\remaining-tasks\\07.png",
+    "sha256": "a991de70ac3d8f1a0a9bdabc62617c52550a620e1acb9547dba2f5e581770e88",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-71",
+    "path": "verification\\remaining-tasks\\08.png",
+    "sha256": "3b809333484434d6d74de9490b8590efc8979b6224500d397d0eb2a8036c1f43",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-72",
+    "path": "verification\\remaining-tasks\\09.png",
+    "sha256": "048147d8e25c63366d156f6b10e0cca8b11ee2b4ec74d2b9943e7e8074bc4976",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-73",
+    "path": "verification\\remaining-tasks\\10.png",
+    "sha256": "c544502473853ede747e333ea9d6f006a01fa3f9574e5ab48b7cf69c2b0868ee",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-74",
+    "path": "verification\\remaining-tasks\\11.png",
+    "sha256": "adf37fc7aee00491402c071aa0eabc9786ee0372fe4aa524d0e41e08287de257",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-75",
+    "path": "verification\\remaining-tasks\\candidate.pptx",
+    "sha256": "fb177a3c6444bf68837b6287ee0038c1097cc3225eedf914abe85fa0705edea7",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-76",
+    "path": "verification\\remaining-tasks\\candidate.pptx.inspect.ndjson",
+    "sha256": "cea0c039fc101ea0e4c516194004373bfd4955e7c0db0f3ef5f8ace81b74f0d4",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-77",
+    "path": "verification\\remaining-tasks\\content.json",
+    "sha256": "832439c991c3998936e3d21206863128891f1fd0c602ee2e766e7f7d15c104ca",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-78",
+    "path": "verification\\remaining-tasks\\validation.json",
+    "sha256": "672788c9e72b26b00dd28ac3e7ddce736aa9e7d4739da60150290fe16f26cad0",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-79",
+    "path": "verification\\user-manual-montage.png",
+    "sha256": "93090c33a852b0dfa3f88e67dc77cb2926a9eb64cd99c9d8b5a1a315992a9c33",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-80",
+    "path": "verification\\user-manual\\01.png",
+    "sha256": "93f4bcfc52fdcd094e7dfe60672c0b147868bb504e823e04ff0b8cc1acd050da",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-81",
+    "path": "verification\\user-manual\\02.png",
+    "sha256": "c550baec7e28aa468c5fa0e4b37364d35a5b37a0b757cdca0f7bb78bee7884f4",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-82",
+    "path": "verification\\user-manual\\03.png",
+    "sha256": "4620fa512bbfe2c9afecf43d7fb79409cc89d5d0db4d9c4c9711a379189bd9de",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-83",
+    "path": "verification\\user-manual\\04.png",
+    "sha256": "86a2f6cf6b06adf6892ce576c1712886e96ddcfc858d8d73ae09af7a9d8af7a9",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-84",
+    "path": "verification\\user-manual\\05.png",
+    "sha256": "2b04f9b16d1e3da0b411e2e4d7ba5849ab9d7bd8889006cb6179d099bbddf45a",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-85",
+    "path": "verification\\user-manual\\06.png",
+    "sha256": "d509172f0fe2cb5eae2ef0029f188aaa149ba5e093fad25b9044e0e522dd2259",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-86",
+    "path": "verification\\user-manual\\07.png",
+    "sha256": "272c7a1e154f6c7059205905a107408a9c7f21b42534958c491f1e21841a4215",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-87",
+    "path": "verification\\user-manual\\08.png",
+    "sha256": "55fcd2cc2339d34e54f95235105a75f326c88c91098130411db3f9e03e7eccbb",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-88",
+    "path": "verification\\user-manual\\09.png",
+    "sha256": "50af8d8074cb8d531217ada595a071287f1b3e690d9e3a725421ac7c9c09e1ca",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-89",
+    "path": "verification\\user-manual\\10.png",
+    "sha256": "9bcf63d978b175d8e394c0ec643aa3376d02c3c4187b285aaacdc6cdeca79b99",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-90",
+    "path": "verification\\user-manual\\11.png",
+    "sha256": "16c0e37745bd092b5cedbbcec4376012e0a3a75a58bd273c7f0db23d83ea58e8",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-91",
+    "path": "verification\\user-manual\\12.png",
+    "sha256": "765a1231a7f4060a52686f98ec73be78abf98cb22327d0e09a3938797b0eb15c",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-92",
+    "path": "verification\\user-manual\\13.png",
+    "sha256": "102134ccda676d7fa394896214fdde852a36eb826490da2c1d48e2aafb840111",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-93",
+    "path": "verification\\user-manual\\14.png",
+    "sha256": "fd97b04a79f932f2156c153159df0761a4fab83b3d489ba89ff20f69cd804e5b",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-94",
+    "path": "verification\\user-manual\\candidate.pptx",
+    "sha256": "a3191f3006052d79a11f92385c5add9afbea69d4f0d0684a1efd5f4fa4f24405",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-95",
+    "path": "verification\\user-manual\\candidate.pptx.inspect.ndjson",
+    "sha256": "9fa435c7e1fe45c4cc206dc77b189faba4434c33d6de45e32f90f25d190c26f0",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-96",
+    "path": "verification\\user-manual\\content.json",
+    "sha256": "ba3f4a36debfcaf63ea7cb1b7f6f29ae8e262445e0a589110ebaef1d1da70607",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  },
+  {
+    "id": "manuals-v20-97",
+    "path": "verification\\user-manual\\validation.json",
+    "sha256": "dbc23928bcb64401b215b8d8e40a7b6a2754fe50f4c5f3b713716ab2b5250ed2",
+    "provider": "ArtifactTool",
+    "parent": "manuals-2026-10-22-v17",
+    "visibility": "private",
+    "commercialUse": "review-required"
+  }
+]

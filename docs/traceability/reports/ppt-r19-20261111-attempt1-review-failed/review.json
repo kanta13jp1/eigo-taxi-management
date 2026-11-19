@@ -1,0 +1,1058 @@
+{
+  "status": "PASS_MACHINE_PRESERVATION_PENDING_VISUAL_REVIEW",
+  "date": "2026-11-11",
+  "registryVersion": "2026-11-11-r19",
+  "registrySha256": "cfd1a14aa71f637e2cc770bca08caa3758ddff8d6605d669d2341f343ff912e4",
+  "decks": 12,
+  "slides": 214,
+  "preservedPagesPixelIdentical": 190,
+  "preservedNotesIdentical": 190,
+  "oldImagesPreserved": true,
+  "newCurrentPages": 24,
+  "newCurrentBodiesPixelEquivalent": [
+    {
+      "name": "business",
+      "page": 1,
+      "pixelEquivalentToReference": true
+    },
+    {
+      "name": "business",
+      "page": 2,
+      "pixelEquivalentToReference": true
+    },
+    {
+      "name": "requirements",
+      "page": 1,
+      "pixelEquivalentToReference": true
+    },
+    {
+      "name": "requirements",
+      "page": 2,
+      "pixelEquivalentToReference": true
+    },
+    {
+      "name": "design",
+      "page": 1,
+      "pixelEquivalentToReference": true
+    },
+    {
+      "name": "design",
+      "page": 2,
+      "pixelEquivalentToReference": true
+    },
+    {
+      "name": "test-spec",
+      "page": 1,
+      "pixelEquivalentToReference": true
+    },
+    {
+      "name": "test-spec",
+      "page": 2,
+      "pixelEquivalentToReference": true
+    },
+    {
+      "name": "tasks",
+      "page": 1,
+      "pixelEquivalentToReference": true
+    },
+    {
+      "name": "tasks",
+      "page": 2,
+      "pixelEquivalentToReference": true
+    },
+    {
+      "name": "implementation",
+      "page": 1,
+      "pixelEquivalentToReference": true
+    },
+    {
+      "name": "implementation",
+      "page": 2,
+      "pixelEquivalentToReference": true
+    },
+    {
+      "name": "test-code",
+      "page": 1,
+      "pixelEquivalentToReference": true
+    },
+    {
+      "name": "test-code",
+      "page": 2,
+      "pixelEquivalentToReference": true
+    },
+    {
+      "name": "acceptance",
+      "page": 1,
+      "pixelEquivalentToReference": true
+    },
+    {
+      "name": "acceptance",
+      "page": 2,
+      "pixelEquivalentToReference": true
+    },
+    {
+      "name": "operations",
+      "page": 1,
+      "pixelEquivalentToReference": true
+    },
+    {
+      "name": "operations",
+      "page": 2,
+      "pixelEquivalentToReference": true
+    },
+    {
+      "name": "user",
+      "page": 1,
+      "pixelEquivalentToReference": true
+    },
+    {
+      "name": "user",
+      "page": 2,
+      "pixelEquivalentToReference": true
+    },
+    {
+      "name": "matrix",
+      "page": 1,
+      "pixelEquivalentToReference": true
+    },
+    {
+      "name": "matrix",
+      "page": 2,
+      "pixelEquivalentToReference": true
+    },
+    {
+      "name": "progress",
+      "page": 1,
+      "pixelEquivalentToReference": true
+    },
+    {
+      "name": "progress",
+      "page": 2,
+      "pixelEquivalentToReference": true
+    }
+  ],
+  "nativePowerPointVerified": false,
+  "comparisonMethod": "Preserved pages are compared against a render of the untouched source deck made in the same run with the same renderer; notes and slide text are compared as extracted text.",
+  "limits": [
+    "Preserved pages are historical; current status is in the r19 notes and the 24 appended pages",
+    "AT-24/25 are single developer runs, not acceptance passes",
+    "Customer 0/6, production HOLD; no customer fixture writes",
+    "Existing layout warnings are unchanged; no new warnings",
+    "Display in the PowerPoint application is not verified"
+  ],
+  "rows": [
+    {
+      "id": "PKG-01",
+      "name": "business",
+      "source": "docs/deliverables/2026-10-23-traceability/business-2026-11-10-v34.pptx",
+      "sourceSha256": "0ec9f200039757ca071ce3dbe3c7f832c1eab7f39eef419a581a2d5a47e5a14e",
+      "sourceSlides": 25,
+      "referenceSlide": 24,
+      "sourceMdPath": "docs/acceptance/01_BUSINESS_FLOWS.md",
+      "sourceMdSha256": "e051e45c44f1276b0290e9056fe06b250ef13e01b86ca4cb7fa8558b589fb44f",
+      "final": "outputs/r19-adoption-20261111/ppt-v36/finalized/business/final/business-2026-11-11-v36.pptx",
+      "sha256": "de44f156b0e3273096432036b07bacb1743a53fee6e94e9eca0671738c2dceb0",
+      "slides": 27,
+      "validation": {
+        "finding_count": 0,
+        "findings": [],
+        "font_policy": {
+          "checked_text_script_count": 1039,
+          "native_font_rendering_verified": false,
+          "observed_font_families": [
+            "Yu Gothic"
+          ],
+          "observed_font_use_counts": {
+            "Yu Gothic": 1039
+          },
+          "passed": true,
+          "performed": true
+        },
+        "slide_count": 27,
+        "slide_size_in": [
+          13.3333,
+          7.5
+        ],
+        "warning_count": 21,
+        "warnings": [
+          {
+            "kind": "substantial_text_frame_overlap",
+            "left_object_id": "30",
+            "overlap_height_in": 0.1458,
+            "overlap_width_in": 11.9271,
+            "right_object_id": "59",
+            "slide": 1
+          },
+          {
+            "kind": "substantial_text_frame_overlap",
+            "left_object_id": "30",
+            "overlap_height_in": 0.1458,
+            "overlap_width_in": 11.9271,
+            "right_object_id": "80",
+            "slide": 2
+          },
+          {
+            "kind": "substantial_text_frame_overlap",
+            "left_object_id": "37",
+            "overlap_height_in": 0.0938,
+            "overlap_width_in": 1.6042,
+            "right_object_id": "78",
+            "slide": 2
+          },
+          {
+            "kind": "substantial_text_frame_overlap",
+            "left_object_id": "30",
+            "overlap_height_in": 0.1458,
+            "overlap_width_in": 11.9271,
+            "right_object_id": "58",
+            "slide": 3
+          },
+          {
+            "kind": "substantial_text_frame_overlap",
+            "left_object_id": "30",
+            "overlap_height_in": 0.1458,
+            "overlap_width_in": 11.9271,
+            "right_object_id": "57",
+            "slide": 4
+          },
+          {
+            "kind": "substantial_text_frame_overlap",
+            "left_object_id": "30",
+            "overlap_height_in": 0.1458,
+            "overlap_width_in": 11.9271,
+            "right_object_id": "55",
+            "slide": 5
+          },
+          {
+            "kind": "substantial_text_frame_overlap",
+            "left_object_id": "30",
+            "overlap_height_in": 0.1458,
+            "overlap_width_in": 11.9271,
+            "right_object_id": "56",
+            "slide": 6
+          },
+          {
+            "kind": "substantial_text_frame_overlap",
+            "left_object_id": "30",
+            "overlap_height_in": 0.1458,
+            "overlap_width_in": 11.9271,
+            "right_object_id": "57",
+            "slide": 7
+          },
+          {
+            "kind": "substantial_text_frame_overlap",
+            "left_object_id": "30",
+            "overlap_height_in": 0.1458,
+            "overlap_width_in": 11.9271,
+            "right_object_id": "56",
+            "slide": 8
+          },
+          {
+            "kind": "substantial_text_frame_overlap",
+            "left_object_id": "30",
+            "overlap_height_in": 0.1458,
+            "overlap_width_in": 11.9271,
+            "right_object_id": "55",
+            "slide": 9
+          },
+          {
+            "kind": "substantial_text_frame_overlap",
+            "left_object_id": "30",
+            "overlap_height_in": 0.1458,
+            "overlap_width_in": 11.9271,
+            "right_object_id": "54",
+            "slide": 10
+          },
+          {
+            "kind": "substantial_text_frame_overlap",
+            "left_object_id": "30",
+            "overlap_height_in": 0.1458,
+            "overlap_width_in": 11.9271,
+            "right_object_id": "64",
+            "slide": 11
+          },
+          {
+            "kind": "substantial_text_frame_overlap",
+            "left_object_id": "10",
+            "overlap_height_in": 0.1562,
+            "overlap_width_in": 11.9271,
+            "right_object_id": "16",
+            "slide": 12
+          },
+          {
+            "kind": "substantial_text_frame_overlap",
+            "left_object_id": "10",
+            "overlap_height_in": 0.1562,
+            "overlap_width_in": 11.9271,
+            "right_object_id": "13",
+            "slide": 13
+          },
+          {
+            "kind": "substantial_text_frame_overlap",
+            "left_object_id": "10",
+            "overlap_height_in": 0.1562,
+            "overlap_width_in": 11.9271,
+            "right_object_id": "13",
+            "slide": 14
+          },
+          {
+            "kind": "substantial_text_frame_overlap",
+            "left_object_id": "10",
+            "overlap_height_in": 0.1562,
+            "overlap_width_in": 11.9271,
+            "right_object_id": "13",
+            "slide": 15
+          },
+          {
+            "kind": "substantial_text_frame_overlap",
+            "left_object_id": "10",
+            "overlap_height_in": 0.1562,
+            "overlap_width_in": 11.9271,
+            "right_object_id": "13",
+            "slide": 16
+          },
+          {
+            "kind": "substantial_text_frame_overlap",
+            "left_object_id": "10",
+            "overlap_height_in": 0.1562,
+            "overlap_width_in": 11.9271,
+            "right_object_id": "13",
+            "slide": 17
+          },
+          {
+            "kind": "substantial_text_frame_overlap",
+            "left_object_id": "10",
+            "overlap_height_in": 0.1562,
+            "overlap_width_in": 11.9271,
+            "right_object_id": "54",
+            "slide": 18
+          },
+          {
+            "kind": "substantial_text_frame_overlap",
+            "left_object_id": "10",
+            "overlap_height_in": 0.1562,
+            "overlap_width_in": 11.9271,
+            "right_object_id": "42",
+            "slide": 19
+          },
+          {
+            "kind": "substantial_text_frame_overlap",
+            "left_object_id": "10",
+            "overlap_height_in": 0.1562,
+            "overlap_width_in": 11.9271,
+            "right_object_id": "36",
+            "slide": 20
+          }
+        ],
+        "exitCode": 0,
+        "findingCount": 0,
+        "fontPolicy": {
+          "checked_text_script_count": 1039,
+          "native_font_rendering_verified": false,
+          "observed_font_families": [
+            "Yu Gothic"
+          ],
+          "observed_font_use_counts": {
+            "Yu Gothic": 1039
+          },
+          "passed": true,
+          "performed": true
+        }
+      },
+      "preservedPagesPixelIdentical": 25,
+      "preservedNotesIdentical": 25,
+      "preservedSlideTextIdentical": 25,
+      "oldImagesPreserved": true,
+      "currentGeneratedSourceInNotes": true,
+      "renderedFinalPages": 27,
+      "packageFindings": 0,
+      "layoutFindings": 0,
+      "layoutWarnings": 21,
+      "newWarnings": 0,
+      "reimportPassed": true,
+      "newPrivateStrings": 0
+    },
+    {
+      "id": "PKG-02",
+      "name": "requirements",
+      "source": "docs/deliverables/2026-10-23-traceability/requirements-2026-11-10-v34.pptx",
+      "sourceSha256": "cdd09b4d4e05e48131d4fa31db6dc1a8b03e6be8a959ce9c85fb05dd6e34131f",
+      "sourceSlides": 14,
+      "referenceSlide": 13,
+      "sourceMdPath": "docs/acceptance/03_REQUIREMENTS.md",
+      "sourceMdSha256": "afd6e88954936f9db3389338d8bc4f351a25c51c3f3436940c53be77fb5c8915",
+      "final": "outputs/r19-adoption-20261111/ppt-v36/finalized/requirements/final/requirements-2026-11-11-v36.pptx",
+      "sha256": "9465ed0e70c81f891137149621c58d1384c486c9877560d2264a625565cb577f",
+      "slides": 16,
+      "validation": {
+        "finding_count": 0,
+        "findings": [],
+        "font_policy": {
+          "checked_text_script_count": 393,
+          "native_font_rendering_verified": false,
+          "observed_font_families": [
+            "Yu Gothic"
+          ],
+          "observed_font_use_counts": {
+            "Yu Gothic": 393
+          },
+          "passed": true,
+          "performed": true
+        },
+        "slide_count": 16,
+        "slide_size_in": [
+          13.3333,
+          7.5
+        ],
+        "warning_count": 0,
+        "warnings": [],
+        "exitCode": 0,
+        "findingCount": 0,
+        "fontPolicy": {
+          "checked_text_script_count": 393,
+          "native_font_rendering_verified": false,
+          "observed_font_families": [
+            "Yu Gothic"
+          ],
+          "observed_font_use_counts": {
+            "Yu Gothic": 393
+          },
+          "passed": true,
+          "performed": true
+        }
+      },
+      "preservedPagesPixelIdentical": 14,
+      "preservedNotesIdentical": 14,
+      "preservedSlideTextIdentical": 14,
+      "oldImagesPreserved": true,
+      "currentGeneratedSourceInNotes": true,
+      "renderedFinalPages": 16,
+      "packageFindings": 0,
+      "layoutFindings": 0,
+      "layoutWarnings": 0,
+      "newWarnings": 0,
+      "reimportPassed": true,
+      "newPrivateStrings": 0
+    },
+    {
+      "id": "PKG-03",
+      "name": "design",
+      "source": "docs/deliverables/2026-10-23-traceability/design-2026-11-10-v34.pptx",
+      "sourceSha256": "3d94a0b0599edf886793e17d3e032de681c068debad77c0da49cf66a4ae5aa29",
+      "sourceSlides": 15,
+      "referenceSlide": 14,
+      "sourceMdPath": "docs/acceptance/04_FUNCTIONAL_SPEC.md",
+      "sourceMdSha256": "a39aed9cf724b716a068c0b27a85973d54775f8faa999dd6f6c1f25611653727",
+      "final": "outputs/r19-adoption-20261111/ppt-v36/finalized/design/final/design-2026-11-11-v36.pptx",
+      "sha256": "7706f6bf8f34a00e8eac26dcd20e0b5bcaaf3b6bbde178e1b2233c752a2562ee",
+      "slides": 17,
+      "validation": {
+        "finding_count": 0,
+        "findings": [],
+        "font_policy": {
+          "checked_text_script_count": 430,
+          "native_font_rendering_verified": false,
+          "observed_font_families": [
+            "Yu Gothic"
+          ],
+          "observed_font_use_counts": {
+            "Yu Gothic": 430
+          },
+          "passed": true,
+          "performed": true
+        },
+        "slide_count": 17,
+        "slide_size_in": [
+          13.3333,
+          7.5
+        ],
+        "warning_count": 0,
+        "warnings": [],
+        "exitCode": 0,
+        "findingCount": 0,
+        "fontPolicy": {
+          "checked_text_script_count": 430,
+          "native_font_rendering_verified": false,
+          "observed_font_families": [
+            "Yu Gothic"
+          ],
+          "observed_font_use_counts": {
+            "Yu Gothic": 430
+          },
+          "passed": true,
+          "performed": true
+        }
+      },
+      "preservedPagesPixelIdentical": 15,
+      "preservedNotesIdentical": 15,
+      "preservedSlideTextIdentical": 15,
+      "oldImagesPreserved": true,
+      "currentGeneratedSourceInNotes": true,
+      "renderedFinalPages": 17,
+      "packageFindings": 0,
+      "layoutFindings": 0,
+      "layoutWarnings": 0,
+      "newWarnings": 0,
+      "reimportPassed": true,
+      "newPrivateStrings": 0
+    },
+    {
+      "id": "PKG-04",
+      "name": "test-spec",
+      "source": "docs/deliverables/2026-10-23-traceability/test-spec-2026-11-10-v34.pptx",
+      "sourceSha256": "f998fc3bc5db8a126f1a769faac892d2bb23f6e2eb2595d737f051fb95378fae",
+      "sourceSlides": 15,
+      "referenceSlide": 14,
+      "sourceMdPath": "docs/acceptance/17_TEST_SPEC.md",
+      "sourceMdSha256": "992e7e7771178b58805460e082a363e2b754807932040bd00576dd881b1e325b",
+      "final": "outputs/r19-adoption-20261111/ppt-v36/finalized/test-spec/final/test-spec-2026-11-11-v36.pptx",
+      "sha256": "f5214e4556478bd63cc988e435c0b33918f1afa35239dbcc4dda450f96e64105",
+      "slides": 17,
+      "validation": {
+        "finding_count": 0,
+        "findings": [],
+        "font_policy": {
+          "checked_text_script_count": 413,
+          "native_font_rendering_verified": false,
+          "observed_font_families": [
+            "Yu Gothic"
+          ],
+          "observed_font_use_counts": {
+            "Yu Gothic": 413
+          },
+          "passed": true,
+          "performed": true
+        },
+        "slide_count": 17,
+        "slide_size_in": [
+          13.3333,
+          7.5
+        ],
+        "warning_count": 0,
+        "warnings": [],
+        "exitCode": 0,
+        "findingCount": 0,
+        "fontPolicy": {
+          "checked_text_script_count": 413,
+          "native_font_rendering_verified": false,
+          "observed_font_families": [
+            "Yu Gothic"
+          ],
+          "observed_font_use_counts": {
+            "Yu Gothic": 413
+          },
+          "passed": true,
+          "performed": true
+        }
+      },
+      "preservedPagesPixelIdentical": 15,
+      "preservedNotesIdentical": 15,
+      "preservedSlideTextIdentical": 15,
+      "oldImagesPreserved": true,
+      "currentGeneratedSourceInNotes": true,
+      "renderedFinalPages": 17,
+      "packageFindings": 0,
+      "layoutFindings": 0,
+      "layoutWarnings": 0,
+      "newWarnings": 0,
+      "reimportPassed": true,
+      "newPrivateStrings": 0
+    },
+    {
+      "id": "PKG-05",
+      "name": "tasks",
+      "source": "docs/deliverables/2026-10-23-traceability/tasks-2026-11-10-v35.pptx",
+      "sourceSha256": "77af43a418032f40945471923354b4edfda0870002e93cea0838c4392f536884",
+      "sourceSlides": 19,
+      "referenceSlide": 16,
+      "sourceMdPath": "docs/acceptance/05_TASKS.md",
+      "sourceMdSha256": "8dff8fbbffa7778ee266ccce8b924e7ffc5c5d5d6c9834f8fe3e17c5c35f8b58",
+      "final": "outputs/r19-adoption-20261111/ppt-v36/finalized/tasks/final/tasks-2026-11-11-v36.pptx",
+      "sha256": "4b5ad1d798c91f24b3e2a857a3033b8c3bd67459a8b1a059f16bc883bdf99a32",
+      "slides": 21,
+      "validation": {
+        "finding_count": 0,
+        "findings": [],
+        "font_policy": {
+          "checked_text_script_count": 518,
+          "native_font_rendering_verified": false,
+          "observed_font_families": [
+            "Yu Gothic"
+          ],
+          "observed_font_use_counts": {
+            "Yu Gothic": 518
+          },
+          "passed": true,
+          "performed": true
+        },
+        "slide_count": 21,
+        "slide_size_in": [
+          13.3333,
+          7.5
+        ],
+        "warning_count": 0,
+        "warnings": [],
+        "exitCode": 0,
+        "findingCount": 0,
+        "fontPolicy": {
+          "checked_text_script_count": 518,
+          "native_font_rendering_verified": false,
+          "observed_font_families": [
+            "Yu Gothic"
+          ],
+          "observed_font_use_counts": {
+            "Yu Gothic": 518
+          },
+          "passed": true,
+          "performed": true
+        }
+      },
+      "preservedPagesPixelIdentical": 19,
+      "preservedNotesIdentical": 19,
+      "preservedSlideTextIdentical": 19,
+      "oldImagesPreserved": true,
+      "currentGeneratedSourceInNotes": true,
+      "renderedFinalPages": 21,
+      "packageFindings": 0,
+      "layoutFindings": 0,
+      "layoutWarnings": 0,
+      "newWarnings": 0,
+      "reimportPassed": true,
+      "newPrivateStrings": 0
+    },
+    {
+      "id": "PKG-06",
+      "name": "implementation",
+      "source": "docs/deliverables/2026-10-23-traceability/implementation-2026-11-10-v34.pptx",
+      "sourceSha256": "f4f4faecfc240f7dbe4828c325a77e119314d21d8cadd58c337fad3939d80d04",
+      "sourceSlides": 15,
+      "referenceSlide": 14,
+      "sourceMdPath": "docs/acceptance/18_IMPLEMENTATION_INDEX.md",
+      "sourceMdSha256": "f326ec22a4cf112ef0dcd08f2e88f707ad4b419dc5006ba7a21c7bbedfc0c647",
+      "final": "outputs/r19-adoption-20261111/ppt-v36/finalized/implementation/final/implementation-2026-11-11-v36.pptx",
+      "sha256": "e5db6b1b6e7d9f4ad9367cf4ebe0a5c2194f8c1d2a764e0e6dc9485a73e41ec0",
+      "slides": 17,
+      "validation": {
+        "finding_count": 0,
+        "findings": [],
+        "font_policy": {
+          "checked_text_script_count": 396,
+          "native_font_rendering_verified": false,
+          "observed_font_families": [
+            "Yu Gothic"
+          ],
+          "observed_font_use_counts": {
+            "Yu Gothic": 396
+          },
+          "passed": true,
+          "performed": true
+        },
+        "slide_count": 17,
+        "slide_size_in": [
+          13.3333,
+          7.5
+        ],
+        "warning_count": 0,
+        "warnings": [],
+        "exitCode": 0,
+        "findingCount": 0,
+        "fontPolicy": {
+          "checked_text_script_count": 396,
+          "native_font_rendering_verified": false,
+          "observed_font_families": [
+            "Yu Gothic"
+          ],
+          "observed_font_use_counts": {
+            "Yu Gothic": 396
+          },
+          "passed": true,
+          "performed": true
+        }
+      },
+      "preservedPagesPixelIdentical": 15,
+      "preservedNotesIdentical": 15,
+      "preservedSlideTextIdentical": 15,
+      "oldImagesPreserved": true,
+      "currentGeneratedSourceInNotes": true,
+      "renderedFinalPages": 17,
+      "packageFindings": 0,
+      "layoutFindings": 0,
+      "layoutWarnings": 0,
+      "newWarnings": 0,
+      "reimportPassed": true,
+      "newPrivateStrings": 0
+    },
+    {
+      "id": "PKG-07",
+      "name": "test-code",
+      "source": "docs/deliverables/2026-10-23-traceability/test-code-2026-11-10-v34.pptx",
+      "sourceSha256": "e25f1dde7aec034df3c4d258a8eb92e6804a2df8381d72fa46468c127a9282a8",
+      "sourceSlides": 15,
+      "referenceSlide": 14,
+      "sourceMdPath": "docs/acceptance/19_TEST_CODE_INDEX.md",
+      "sourceMdSha256": "b48ff8484b41c19a348ec40b6290170e3b4689c7a1f46dd3ba644fe29f2248c6",
+      "final": "outputs/r19-adoption-20261111/ppt-v36/finalized/test-code/final/test-code-2026-11-11-v36.pptx",
+      "sha256": "90382c8adcb4ff588904fe8e9991746dc769292f28a80cc21fe6862ad375b80c",
+      "slides": 17,
+      "validation": {
+        "finding_count": 0,
+        "findings": [],
+        "font_policy": {
+          "checked_text_script_count": 393,
+          "native_font_rendering_verified": false,
+          "observed_font_families": [
+            "Yu Gothic"
+          ],
+          "observed_font_use_counts": {
+            "Yu Gothic": 393
+          },
+          "passed": true,
+          "performed": true
+        },
+        "slide_count": 17,
+        "slide_size_in": [
+          13.3333,
+          7.5
+        ],
+        "warning_count": 0,
+        "warnings": [],
+        "exitCode": 0,
+        "findingCount": 0,
+        "fontPolicy": {
+          "checked_text_script_count": 393,
+          "native_font_rendering_verified": false,
+          "observed_font_families": [
+            "Yu Gothic"
+          ],
+          "observed_font_use_counts": {
+            "Yu Gothic": 393
+          },
+          "passed": true,
+          "performed": true
+        }
+      },
+      "preservedPagesPixelIdentical": 15,
+      "preservedNotesIdentical": 15,
+      "preservedSlideTextIdentical": 15,
+      "oldImagesPreserved": true,
+      "currentGeneratedSourceInNotes": true,
+      "renderedFinalPages": 17,
+      "packageFindings": 0,
+      "layoutFindings": 0,
+      "layoutWarnings": 0,
+      "newWarnings": 0,
+      "reimportPassed": true,
+      "newPrivateStrings": 0
+    },
+    {
+      "id": "PKG-08",
+      "name": "acceptance",
+      "source": "docs/deliverables/2026-10-23-traceability/acceptance-2026-11-10-v34.pptx",
+      "sourceSha256": "887c4175f34e66d8c09243195375369b1588f2844952cb4ea2112c29d92bc4b1",
+      "sourceSlides": 14,
+      "referenceSlide": 13,
+      "sourceMdPath": "docs/acceptance/06_ACCEPTANCE_TEST_SPEC.md",
+      "sourceMdSha256": "693fd38867c3c3f3d2464098a951e7ab3dbb62c2360cf446e5093cbcf1970353",
+      "final": "outputs/r19-adoption-20261111/ppt-v36/finalized/acceptance/final/acceptance-2026-11-11-v36.pptx",
+      "sha256": "7b2bd5993ea54fbea6031c6f14d1e3bcee8eeddf58d35b59a9c6ce7c94afd973",
+      "slides": 16,
+      "validation": {
+        "finding_count": 0,
+        "findings": [],
+        "font_policy": {
+          "checked_text_script_count": 392,
+          "native_font_rendering_verified": false,
+          "observed_font_families": [
+            "Yu Gothic"
+          ],
+          "observed_font_use_counts": {
+            "Yu Gothic": 392
+          },
+          "passed": true,
+          "performed": true
+        },
+        "slide_count": 16,
+        "slide_size_in": [
+          13.3333,
+          7.5
+        ],
+        "warning_count": 0,
+        "warnings": [],
+        "exitCode": 0,
+        "findingCount": 0,
+        "fontPolicy": {
+          "checked_text_script_count": 392,
+          "native_font_rendering_verified": false,
+          "observed_font_families": [
+            "Yu Gothic"
+          ],
+          "observed_font_use_counts": {
+            "Yu Gothic": 392
+          },
+          "passed": true,
+          "performed": true
+        }
+      },
+      "preservedPagesPixelIdentical": 14,
+      "preservedNotesIdentical": 14,
+      "preservedSlideTextIdentical": 14,
+      "oldImagesPreserved": true,
+      "currentGeneratedSourceInNotes": true,
+      "renderedFinalPages": 16,
+      "packageFindings": 0,
+      "layoutFindings": 0,
+      "layoutWarnings": 0,
+      "newWarnings": 0,
+      "reimportPassed": true,
+      "newPrivateStrings": 0
+    },
+    {
+      "id": "PKG-09",
+      "name": "operations",
+      "source": "docs/deliverables/2026-10-23-traceability/operations-2026-11-10-v35.pptx",
+      "sourceSha256": "fc1dbe9cb8ee1c649213c3c65babed1c28141be0fbab088d76119c406e5b4a97",
+      "sourceSlides": 16,
+      "referenceSlide": 13,
+      "sourceMdPath": "docs/acceptance/20_OPERATIONS.md",
+      "sourceMdSha256": "85948b7568125eb8d917fd61b61737a305545a277b984e571c6ef72201bc401f",
+      "final": "outputs/r19-adoption-20261111/ppt-v36/finalized/operations/final/operations-2026-11-11-v36.pptx",
+      "sha256": "e0fd8304ac12c161d6057f4c4477bad23f46c2e3f35c186c4de7e7d49d96af01",
+      "slides": 18,
+      "validation": {
+        "finding_count": 0,
+        "findings": [],
+        "font_policy": {
+          "checked_text_script_count": 451,
+          "native_font_rendering_verified": false,
+          "observed_font_families": [
+            "Yu Gothic"
+          ],
+          "observed_font_use_counts": {
+            "Yu Gothic": 451
+          },
+          "passed": true,
+          "performed": true
+        },
+        "slide_count": 18,
+        "slide_size_in": [
+          13.3333,
+          7.5
+        ],
+        "warning_count": 0,
+        "warnings": [],
+        "exitCode": 0,
+        "findingCount": 0,
+        "fontPolicy": {
+          "checked_text_script_count": 451,
+          "native_font_rendering_verified": false,
+          "observed_font_families": [
+            "Yu Gothic"
+          ],
+          "observed_font_use_counts": {
+            "Yu Gothic": 451
+          },
+          "passed": true,
+          "performed": true
+        }
+      },
+      "preservedPagesPixelIdentical": 16,
+      "preservedNotesIdentical": 16,
+      "preservedSlideTextIdentical": 16,
+      "oldImagesPreserved": true,
+      "currentGeneratedSourceInNotes": true,
+      "renderedFinalPages": 18,
+      "packageFindings": 0,
+      "layoutFindings": 0,
+      "layoutWarnings": 0,
+      "newWarnings": 0,
+      "reimportPassed": true,
+      "newPrivateStrings": 0
+    },
+    {
+      "id": "PKG-10",
+      "name": "user",
+      "source": "docs/deliverables/2026-10-23-traceability/user-2026-11-10-v34.pptx",
+      "sourceSha256": "dbb7a67f0c6b0bcaa21656742e039f850e2f51d02303d4c16b6362ed841ec8a7",
+      "sourceSlides": 14,
+      "referenceSlide": 13,
+      "sourceMdPath": "docs/acceptance/21_USER_MANUAL.md",
+      "sourceMdSha256": "dd94f9a2df34c5920969e42066d33460927795b71394d29ef1765893bb51c596",
+      "final": "outputs/r19-adoption-20261111/ppt-v36/finalized/user/final/user-2026-11-11-v36.pptx",
+      "sha256": "74804387bef7b085d149240958ead42d83cea4e0be564097bda9e73021d89c55",
+      "slides": 16,
+      "validation": {
+        "finding_count": 0,
+        "findings": [],
+        "font_policy": {
+          "checked_text_script_count": 385,
+          "native_font_rendering_verified": false,
+          "observed_font_families": [
+            "Yu Gothic"
+          ],
+          "observed_font_use_counts": {
+            "Yu Gothic": 385
+          },
+          "passed": true,
+          "performed": true
+        },
+        "slide_count": 16,
+        "slide_size_in": [
+          13.3333,
+          7.5
+        ],
+        "warning_count": 0,
+        "warnings": [],
+        "exitCode": 0,
+        "findingCount": 0,
+        "fontPolicy": {
+          "checked_text_script_count": 385,
+          "native_font_rendering_verified": false,
+          "observed_font_families": [
+            "Yu Gothic"
+          ],
+          "observed_font_use_counts": {
+            "Yu Gothic": 385
+          },
+          "passed": true,
+          "performed": true
+        }
+      },
+      "preservedPagesPixelIdentical": 14,
+      "preservedNotesIdentical": 14,
+      "preservedSlideTextIdentical": 14,
+      "oldImagesPreserved": true,
+      "currentGeneratedSourceInNotes": true,
+      "renderedFinalPages": 16,
+      "packageFindings": 0,
+      "layoutFindings": 0,
+      "layoutWarnings": 0,
+      "newWarnings": 0,
+      "reimportPassed": true,
+      "newPrivateStrings": 0
+    },
+    {
+      "id": "PKG-11",
+      "name": "matrix",
+      "source": "docs/deliverables/2026-10-23-traceability/matrix-2026-11-10-v34.pptx",
+      "sourceSha256": "dd378018e2e6d8e07e05c05f9c2353d8d3f8477d0e5b96231633e5a4af6c6037",
+      "sourceSlides": 12,
+      "referenceSlide": 11,
+      "sourceMdPath": "docs/acceptance/07_TRACEABILITY_MATRIX.md",
+      "sourceMdSha256": "30673c14b13697fd93764035f806c681020dd41deadd9d888de9b67e8529f8af",
+      "final": "outputs/r19-adoption-20261111/ppt-v36/finalized/matrix/final/matrix-2026-11-11-v36.pptx",
+      "sha256": "06c9d65b667b4b3683607e2378bfc115d491b9d8d61ac954585dcb4952652c5c",
+      "slides": 14,
+      "validation": {
+        "finding_count": 0,
+        "findings": [],
+        "font_policy": {
+          "checked_text_script_count": 656,
+          "native_font_rendering_verified": false,
+          "observed_font_families": [
+            "Yu Gothic"
+          ],
+          "observed_font_use_counts": {
+            "Yu Gothic": 656
+          },
+          "passed": true,
+          "performed": true
+        },
+        "slide_count": 14,
+        "slide_size_in": [
+          13.3333,
+          7.5
+        ],
+        "warning_count": 0,
+        "warnings": [],
+        "exitCode": 0,
+        "findingCount": 0,
+        "fontPolicy": {
+          "checked_text_script_count": 656,
+          "native_font_rendering_verified": false,
+          "observed_font_families": [
+            "Yu Gothic"
+          ],
+          "observed_font_use_counts": {
+            "Yu Gothic": 656
+          },
+          "passed": true,
+          "performed": true
+        }
+      },
+      "preservedPagesPixelIdentical": 12,
+      "preservedNotesIdentical": 12,
+      "preservedSlideTextIdentical": 12,
+      "oldImagesPreserved": true,
+      "currentGeneratedSourceInNotes": true,
+      "renderedFinalPages": 14,
+      "packageFindings": 0,
+      "layoutFindings": 0,
+      "layoutWarnings": 0,
+      "newWarnings": 0,
+      "reimportPassed": true,
+      "newPrivateStrings": 0
+    },
+    {
+      "id": "PKG-12",
+      "name": "progress",
+      "source": "docs/deliverables/2026-10-23-traceability/progress-2026-11-10-v35.pptx",
+      "sourceSha256": "7f98070673e741b86a3a3abece129b1072b651f2fbffad7ad37c8b82446db479",
+      "sourceSlides": 16,
+      "referenceSlide": 13,
+      "sourceMdPath": "docs/acceptance/08_ACCEPTANCE_RESULTS.md",
+      "sourceMdSha256": "0c14b33e092d101c8463101d1731a93cf9e47402d5070db67639c9254a44e1e1",
+      "final": "outputs/r19-adoption-20261111/ppt-v36/finalized/progress/final/progress-2026-11-11-v36.pptx",
+      "sha256": "a883a49234ca6db614b20ce0b322e0f49a1b7783a25f489a27e0646903276c77",
+      "slides": 18,
+      "validation": {
+        "finding_count": 0,
+        "findings": [],
+        "font_policy": {
+          "checked_text_script_count": 418,
+          "native_font_rendering_verified": false,
+          "observed_font_families": [
+            "Yu Gothic"
+          ],
+          "observed_font_use_counts": {
+            "Yu Gothic": 418
+          },
+          "passed": true,
+          "performed": true
+        },
+        "slide_count": 18,
+        "slide_size_in": [
+          13.3333,
+          7.5
+        ],
+        "warning_count": 0,
+        "warnings": [],
+        "exitCode": 0,
+        "findingCount": 0,
+        "fontPolicy": {
+          "checked_text_script_count": 418,
+          "native_font_rendering_verified": false,
+          "observed_font_families": [
+            "Yu Gothic"
+          ],
+          "observed_font_use_counts": {
+            "Yu Gothic": 418
+          },
+          "passed": true,
+          "performed": true
+        }
+      },
+      "preservedPagesPixelIdentical": 16,
+      "preservedNotesIdentical": 16,
+      "preservedSlideTextIdentical": 16,
+      "oldImagesPreserved": true,
+      "currentGeneratedSourceInNotes": true,
+      "renderedFinalPages": 18,
+      "packageFindings": 0,
+      "layoutFindings": 0,
+      "layoutWarnings": 0,
+      "newWarnings": 0,
+      "reimportPassed": true,
+      "newPrivateStrings": 0
+    }
+  ]
+}

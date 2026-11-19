@@ -1,0 +1,606 @@
+{
+  "id": "ACCEL-SHARE-20261106",
+  "date": "2026-11-06",
+  "spreadsheetId": "1PqUq7BoBBVlPolivap0eg1UPik47vNNWphyBd0DNwvU",
+  "writes": [
+    "検証結果履歴!A45:I45",
+    "残タスク・確認事項!E10:F10",
+    "残タスク・確認事項!H10",
+    "進捗概要!A3",
+    "進捗概要!B11:B12"
+  ],
+  "readback": {
+    "spreadsheetId": "1PqUq7BoBBVlPolivap0eg1UPik47vNNWphyBd0DNwvU",
+    "spreadsheetUrl": "https://docs.google.com/spreadsheets/d/1PqUq7BoBBVlPolivap0eg1UPik47vNNWphyBd0DNwvU/edit",
+    "properties": {
+      "title": "英語教室送迎管理｜残タスク・受入確認（2026-10-24）",
+      "locale": "ja_JP",
+      "timeZone": "Asia/Tokyo"
+    },
+    "sheets": [
+      {
+        "properties": {
+          "sheetId": 2012604155,
+          "title": "進捗概要",
+          "index": 0,
+          "sheetType": "GRID",
+          "gridProperties": {
+            "rowCount": 1000,
+            "columnCount": 26,
+            "hideGridlines": true,
+            "rowGroupControlAfter": true,
+            "columnGroupControlAfter": true
+          }
+        },
+        "data": [
+          {
+            "startRow": 2,
+            "rowData": [
+              {
+                "values": [
+                  {
+                    "formattedValue": "更新：2026-11-06 ／ 原受入仕様r14。ローカル補助試験と実Google・第三者受入を区別。",
+                    "userEnteredValue": {
+                      "stringValue": "更新：2026-11-06 ／ 原受入仕様r14。ローカル補助試験と実Google・第三者受入を区別。"
+                    },
+                    "userEnteredFormat": {
+                      "textFormat": {
+                        "foregroundColor": {
+                          "red": 0.37254903,
+                          "green": 0.3882353,
+                          "blue": 0.40784314
+                        },
+                        "fontFamily": "Arial",
+                        "fontSize": 10,
+                        "foregroundColorStyle": {
+                          "rgbColor": {
+                            "red": 0.37254903,
+                            "green": 0.3882353,
+                            "blue": 0.40784314
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "startRow": 10,
+            "startColumn": 1,
+            "rowData": [
+              {
+                "values": [
+                  {
+                    "formattedValue": "架空コピーで複数シート参照・保護等の復元を確認し、復元方式を確定する。第三者受入の実施者・時期は未定。",
+                    "userEnteredValue": {
+                      "stringValue": "架空コピーで複数シート参照・保護等の復元を確認し、復元方式を確定する。第三者受入の実施者・時期は未定。"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "foregroundColor": {
+                          "red": 0.1254902,
+                          "green": 0.12941177,
+                          "blue": 0.14117648
+                        },
+                        "fontFamily": "Arial",
+                        "fontSize": 11,
+                        "foregroundColorStyle": {
+                          "rgbColor": {
+                            "red": 0.1254902,
+                            "green": 0.12941177,
+                            "blue": 0.14117648
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "values": [
+                  {
+                    "formattedValue": "先生本人の実ログイン、取消・精算ルール、バックアップ運用、AT-30の判定時点、教室所有の運用用アカウントの準備。",
+                    "userEnteredValue": {
+                      "stringValue": "先生本人の実ログイン、取消・精算ルール、バックアップ運用、AT-30の判定時点、教室所有の運用用アカウントの準備。"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "foregroundColor": {
+                          "red": 0.1254902,
+                          "green": 0.12941177,
+                          "blue": 0.14117648
+                        },
+                        "fontFamily": "Arial",
+                        "fontSize": 11,
+                        "foregroundColorStyle": {
+                          "rgbColor": {
+                            "red": 0.1254902,
+                            "green": 0.12941177,
+                            "blue": 0.14117648
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "startRow": 6,
+            "startColumn": 1,
+            "rowData": [
+              {
+                "values": [
+                  {
+                    "formattedValue": "0",
+                    "userEnteredValue": {
+                      "formulaValue": "=COUNTIFS('第三者受入30件'!F6:F35,\"合格\")"
+                    },
+                    "userEnteredFormat": {
+                      "numberFormat": {
+                        "type": "NUMBER",
+                        "pattern": "0"
+                      },
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "foregroundColor": {
+                          "red": 0.1254902,
+                          "green": 0.12941177,
+                          "blue": 0.14117648
+                        },
+                        "fontFamily": "Arial",
+                        "fontSize": 11,
+                        "foregroundColorStyle": {
+                          "rgbColor": {
+                            "red": 0.1254902,
+                            "green": 0.12941177,
+                            "blue": 0.14117648
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "properties": {
+          "sheetId": 1014039656,
+          "title": "残タスク・確認事項",
+          "index": 1,
+          "sheetType": "GRID",
+          "gridProperties": {
+            "rowCount": 1000,
+            "columnCount": 26,
+            "frozenRowCount": 5,
+            "frozenColumnCount": 2,
+            "hideGridlines": true,
+            "rowGroupControlAfter": true,
+            "columnGroupControlAfter": true
+          }
+        },
+        "data": [
+          {
+            "startRow": 9,
+            "startColumn": 4,
+            "rowData": [
+              {
+                "values": [
+                  {
+                    "formattedValue": "10/23に試験3行の値復元・除去を確認。11/05の189セル照合に加え、11/06は架空1シートで数式・表示形式・入力規則を復元。シート単位複写後に条件付きルール・列幅160px・行高42pxも確認。",
+                    "userEnteredValue": {
+                      "stringValue": "10/23に試験3行の値復元・除去を確認。11/05の189セル照合に加え、11/06は架空1シートで数式・表示形式・入力規則を復元。シート単位複写後に条件付きルール・列幅160px・行高42pxも確認。"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "foregroundColor": {
+                          "red": 0.1254902,
+                          "green": 0.12941177,
+                          "blue": 0.14117648
+                        },
+                        "fontFamily": "Arial",
+                        "fontSize": 11,
+                        "foregroundColorStyle": {
+                          "rgbColor": {
+                            "red": 0.1254902,
+                            "green": 0.12941177,
+                            "blue": 0.14117648
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "formattedValue": "範囲貼り戻しでは条件付き書式ルールと列幅が戻らなかった。シート単位複写は新gid。複数シート参照・GAS名参照・保護・名前付き範囲・全ブック・サイト再取得・Calendar整合・第三者受入は未確認。",
+                    "userEnteredValue": {
+                      "stringValue": "範囲貼り戻しでは条件付き書式ルールと列幅が戻らなかった。シート単位複写は新gid。複数シート参照・GAS名参照・保護・名前付き範囲・全ブック・サイト再取得・Calendar整合・第三者受入は未確認。"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "foregroundColor": {
+                          "red": 0.1254902,
+                          "green": 0.12941177,
+                          "blue": 0.14117648
+                        },
+                        "fontFamily": "Arial",
+                        "fontSize": 11,
+                        "foregroundColorStyle": {
+                          "rgbColor": {
+                            "red": 0.1254902,
+                            "green": 0.12941177,
+                            "blue": 0.14117648
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "formattedValue": "開発担当／運用担当（案）",
+                    "userEnteredValue": {
+                      "stringValue": "開発担当／運用担当（案）"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "foregroundColor": {
+                          "red": 0.1254902,
+                          "green": 0.12941177,
+                          "blue": 0.14117648
+                        },
+                        "fontFamily": "Arial",
+                        "fontSize": 11,
+                        "foregroundColorStyle": {
+                          "rgbColor": {
+                            "red": 0.1254902,
+                            "green": 0.12941177,
+                            "blue": 0.14117648
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "formattedValue": "OPEN-02の運用回答待ち。架空コピー内の複数シート参照・保護等の検証は先行可能。",
+                    "userEnteredValue": {
+                      "stringValue": "OPEN-02の運用回答待ち。架空コピー内の複数シート参照・保護等の検証は先行可能。"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "foregroundColor": {
+                          "red": 0.1254902,
+                          "green": 0.12941177,
+                          "blue": 0.14117648
+                        },
+                        "fontFamily": "Arial",
+                        "fontSize": 11,
+                        "foregroundColorStyle": {
+                          "rgbColor": {
+                            "red": 0.1254902,
+                            "green": 0.12941177,
+                            "blue": 0.14117648
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "historyReadback": {
+    "spreadsheetId": "1PqUq7BoBBVlPolivap0eg1UPik47vNNWphyBd0DNwvU",
+    "spreadsheetUrl": "https://docs.google.com/spreadsheets/d/1PqUq7BoBBVlPolivap0eg1UPik47vNNWphyBd0DNwvU/edit",
+    "properties": {
+      "title": "英語教室送迎管理｜残タスク・受入確認（2026-10-24）",
+      "locale": "ja_JP",
+      "timeZone": "Asia/Tokyo"
+    },
+    "sheets": [
+      {
+        "properties": {
+          "sheetId": 1920826968,
+          "title": "検証結果履歴",
+          "index": 3,
+          "sheetType": "GRID",
+          "gridProperties": {
+            "rowCount": 100,
+            "columnCount": 9,
+            "frozenRowCount": 1,
+            "hideGridlines": true
+          }
+        },
+        "data": [
+          {
+            "startRow": 43,
+            "rowData": [
+              {
+                "values": [
+                  {
+                    "formattedValue": "VR-20261106-04",
+                    "userEnteredValue": {
+                      "stringValue": "VR-20261106-04"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  },
+                  {
+                    "formattedValue": "2026-11-06",
+                    "userEnteredValue": {
+                      "stringValue": "2026-11-06"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  },
+                  {
+                    "formattedValue": "AT-01〜22（事前確認）",
+                    "userEnteredValue": {
+                      "stringValue": "AT-01〜22（事前確認）"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  },
+                  {
+                    "formattedValue": "開発側・隔離ローカル模擬",
+                    "userEnteredValue": {
+                      "stringValue": "開発側・隔離ローカル模擬"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  },
+                  {
+                    "formattedValue": "現行画面向け新ランナー・安全ヘルパー・独立AIレビュー",
+                    "userEnteredValue": {
+                      "stringValue": "現行画面向け新ランナー・安全ヘルパー・独立AIレビュー"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  },
+                  {
+                    "formattedValue": "独立担当の最終実行14/14成功、安全ヘルパー4/4成功。想定外外部通信・ブラウザー例外0。",
+                    "userEnteredValue": {
+                      "stringValue": "独立担当の最終実行14/14成功、安全ヘルパー4/4成功。想定外外部通信・ブラウザー例外0。"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  },
+                  {
+                    "formattedValue": "PROGRESS-20261106-RUNNER-01〜06／LOCAL_UI_REHEARSAL_20261106",
+                    "userEnteredValue": {
+                      "stringValue": "PROGRESS-20261106-RUNNER-01〜06／LOCAL_UI_REHEARSAL_20261106"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  },
+                  {
+                    "formattedValue": "ローカル模擬であり実Google・実機・Calendar・第三者受入ではない。第三者0/30。本番未開始・Calendar権限未追加。",
+                    "userEnteredValue": {
+                      "stringValue": "ローカル模擬であり実Google・実機・Calendar・第三者受入ではない。第三者0/30。本番未開始・Calendar権限未追加。"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  },
+                  {
+                    "formattedValue": "独立した第三者の実施者・端末・環境を調整",
+                    "userEnteredValue": {
+                      "stringValue": "独立した第三者の実施者・端末・環境を調整"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "values": [
+                  {
+                    "formattedValue": "VR-20261106-05",
+                    "userEnteredValue": {
+                      "stringValue": "VR-20261106-05"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  },
+                  {
+                    "formattedValue": "2026-11-06",
+                    "userEnteredValue": {
+                      "stringValue": "2026-11-06"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  },
+                  {
+                    "formattedValue": "AT-28・REM-05",
+                    "userEnteredValue": {
+                      "stringValue": "AT-28・REM-05"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  },
+                  {
+                    "formattedValue": "会社アカウント・架空シート限定の実Google確認",
+                    "userEnteredValue": {
+                      "stringValue": "会社アカウント・架空シート限定の実Google確認"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  },
+                  {
+                    "formattedValue": "数式・表示形式・入力規則・条件付き書式・列幅／行高",
+                    "userEnteredValue": {
+                      "stringValue": "数式・表示形式・入力規則・条件付き書式・列幅／行高"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  },
+                  {
+                    "formattedValue": "範囲貼り戻しでは条件付き書式ルールと列幅が戻らず。バックアップのシート単位複写後、ルール・入力規則・寸法・数式・通貨／日付表示を確認。",
+                    "userEnteredValue": {
+                      "stringValue": "範囲貼り戻しでは条件付き書式ルールと列幅が戻らず。バックアップのシート単位複写後、ルール・入力規則・寸法・数式・通貨／日付表示を確認。"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  },
+                  {
+                    "formattedValue": "PROGRESS-20261106-AT28SET-01〜08／証跡画像7枚",
+                    "userEnteredValue": {
+                      "stringValue": "PROGRESS-20261106-AT28SET-01〜08／証跡画像7枚"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  },
+                  {
+                    "formattedValue": "架空1シート限定・新gid。複数シート参照・GAS名参照・保護・全ブック・サイト再取得・Calendar整合は未確認。AT-28全体は部分確認。第三者0/30。",
+                    "userEnteredValue": {
+                      "stringValue": "架空1シート限定・新gid。複数シート参照・GAS名参照・保護・全ブック・サイト再取得・Calendar整合は未確認。AT-28全体は部分確認。第三者0/30。"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  },
+                  {
+                    "formattedValue": "複数シート参照・保護等を確認し、復元方式を確定",
+                    "userEnteredValue": {
+                      "stringValue": "複数シート参照・保護等を確認し、復元方式を確定"
+                    },
+                    "userEnteredFormat": {
+                      "verticalAlignment": "TOP",
+                      "wrapStrategy": "WRAP",
+                      "textFormat": {
+                        "fontFamily": "Arial",
+                        "fontSize": 11
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "historyRowMatches": true,
+  "verification": "API値・数式・書式の再読込。更新後のSheetsネイティブ画面の目視確認とは区別。"
+}

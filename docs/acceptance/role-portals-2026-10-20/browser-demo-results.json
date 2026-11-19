@@ -1,0 +1,48 @@
+{
+  "executedAt": "2026-10-20T13:46:37.852Z",
+  "tool": "CUA Edge",
+  "data": "synthetic demo only",
+  "checks": [
+    {
+      "name": "Admin entry shows admin demo only",
+      "status": "PASS"
+    },
+    {
+      "name": "Admin authenticated menu has no parent view",
+      "status": "PASS"
+    },
+    {
+      "name": "QR page shows local generated image and public URL",
+      "status": "PASS"
+    },
+    {
+      "name": "Admin session entering parent URL returns to login",
+      "status": "PASS"
+    },
+    {
+      "name": "Parent portal has one assigned synthetic student and no admin menu",
+      "status": "PASS"
+    },
+    {
+      "name": "Parent reload retains own family only (local)",
+      "status": "PASS"
+    },
+    {
+      "name": "Parent session entering admin URL returns to login (local)",
+      "status": "PASS"
+    },
+    {
+      "name": "Malformed entry ID displays URL error (local)",
+      "status": "PASS"
+    },
+    {
+      "name": "Logout clears family data and retains dedicated entry",
+      "status": "PASS"
+    }
+  ],
+  "limitations": [
+    "No real mobile device or camera QR reading",
+    "Live API checks are separate",
+    "No Calendar writes"
+  ]
+}

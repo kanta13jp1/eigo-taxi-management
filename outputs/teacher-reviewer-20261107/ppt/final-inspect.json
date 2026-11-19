@@ -1,0 +1,1094 @@
+{
+  "recordCount": 56,
+  "records": [
+    {
+      "kind": "textbox",
+      "id": "sh/xcryxg7y",
+      "slideIndex": 0,
+      "position": {
+        "left": 265,
+        "top": 25,
+        "width": 820,
+        "height": 26
+      },
+      "text": "送迎管理システム　先生向けテストガイド",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 18,
+        "typeface": "Yu Gothic",
+        "color": "#3E5366",
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/98rytw72",
+      "slideIndex": 0,
+      "position": {
+        "left": 70,
+        "top": 127,
+        "width": 1120,
+        "height": 53
+      },
+      "text": "先生のテスト用アカウント",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 32,
+        "typeface": "Yu Gothic",
+        "color": "#102D52",
+        "bold": true,
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/72t03qp0",
+      "slideIndex": 0,
+      "position": {
+        "left": 70,
+        "top": 672,
+        "width": 820,
+        "height": 20
+      },
+      "text": "TEACHER-REVIEW　2026-11-07補足　正本r17とは別冊",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 12,
+        "typeface": "Yu Gothic",
+        "color": "#3E5366",
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/61kzalof",
+      "slideIndex": 0,
+      "position": {
+        "left": 960,
+        "top": 672,
+        "width": 280,
+        "height": 20
+      },
+      "text": "1 / 4　2026年11月7日",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 14,
+        "typeface": "Yu Gothic",
+        "color": "#3E5366",
+        "alignment": "right"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/ofqtgnyt",
+      "slideIndex": 0,
+      "position": {
+        "left": 70,
+        "top": 226,
+        "width": 1140,
+        "height": 40
+      },
+      "text": "同じGoogleで、保護者用と先生用の両画面を確認できます",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 24,
+        "typeface": "Yu Gothic",
+        "color": "#102D52",
+        "bold": true,
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/mdobedg3",
+      "slideIndex": 0,
+      "position": {
+        "left": 85,
+        "top": 299,
+        "width": 305,
+        "height": 35
+      },
+      "text": "同じGoogle",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 26,
+        "typeface": "Yu Gothic",
+        "color": "#102D52",
+        "bold": true,
+        "alignment": "center"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/nehs7iho",
+      "slideIndex": 0,
+      "position": {
+        "left": 85,
+        "top": 353,
+        "width": 305,
+        "height": 30
+      },
+      "text": "案内文のアカウント",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 21,
+        "typeface": "Yu Gothic",
+        "color": "#3E5366",
+        "alignment": "center"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/0b6tc3yx",
+      "slideIndex": 0,
+      "position": {
+        "left": 417,
+        "top": 320,
+        "width": 47,
+        "height": 40
+      },
+      "text": "→",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 32,
+        "typeface": "Yu Gothic",
+        "color": "#F78C1E",
+        "bold": true,
+        "alignment": "center"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/epobatgr",
+      "slideIndex": 0,
+      "position": {
+        "left": 485,
+        "top": 299,
+        "width": 305,
+        "height": 35
+      },
+      "text": "2つのURL",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 26,
+        "typeface": "Yu Gothic",
+        "color": "#102D52",
+        "bold": true,
+        "alignment": "center"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/zaxs3yhc",
+      "slideIndex": 0,
+      "position": {
+        "left": 485,
+        "top": 353,
+        "width": 305,
+        "height": 30
+      },
+      "text": "保護者用・先生用",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 21,
+        "typeface": "Yu Gothic",
+        "color": "#3E5366",
+        "alignment": "center"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/cn6t83y1",
+      "slideIndex": 0,
+      "position": {
+        "left": 817,
+        "top": 320,
+        "width": 47,
+        "height": 40
+      },
+      "text": "→",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 32,
+        "typeface": "Yu Gothic",
+        "color": "#F78C1E",
+        "bold": true,
+        "alignment": "center"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/tsnip0ny",
+      "slideIndex": 0,
+      "position": {
+        "left": 885,
+        "top": 299,
+        "width": 305,
+        "height": 35
+      },
+      "text": "専用の架空生徒",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 26,
+        "typeface": "Yu Gothic",
+        "color": "#102D52",
+        "bold": true,
+        "alignment": "center"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/87ehgv6d",
+      "slideIndex": 0,
+      "position": {
+        "left": 885,
+        "top": 353,
+        "width": 305,
+        "height": 30
+      },
+      "text": "先生確認用・架空生徒",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 21,
+        "typeface": "Yu Gothic",
+        "color": "#3E5366",
+        "alignment": "center"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/65wzelo7",
+      "slideIndex": 0,
+      "position": {
+        "left": 280,
+        "top": 433,
+        "width": 920,
+        "height": 38
+      },
+      "text": "実際の送迎・請求は発生しません",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 25,
+        "typeface": "Yu Gothic",
+        "color": "#00A6DF",
+        "bold": true,
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/l43ilgn2",
+      "slideIndex": 0,
+      "position": {
+        "left": 280,
+        "top": 489,
+        "width": 920,
+        "height": 65
+      },
+      "text": "対象は「先生確認用・架空生徒」1名です。\n別の生徒が見えたら、操作を止めてご連絡ください。",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 23,
+        "typeface": "Yu Gothic",
+        "color": "#102D52",
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/k3uhcb6h",
+      "slideIndex": 0,
+      "position": {
+        "left": 70,
+        "top": 579,
+        "width": 1140,
+        "height": 40
+      },
+      "text": "この検証用登録では、アカウント管理・教室設定・新規生徒登録は利用できません。",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 21,
+        "typeface": "Yu Gothic",
+        "color": "#3E5366",
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/y1czalob",
+      "slideIndex": 0,
+      "position": {
+        "left": 88,
+        "top": 628,
+        "width": 1100,
+        "height": 31
+      },
+      "text": "検証用登録の保存・再取得を確認。先生のGoogleログインは未実施（NOT_RUN）。",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 18,
+        "typeface": "Yu Gothic",
+        "color": "#102D52",
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "notes",
+      "id": "nt/jetc3ut0",
+      "slideIndex": 0,
+      "text": "先生向けの任意の使い勝手確認用ガイド。小林さんの顧客確認とは別の補足資料で、顧客確認0/6と本番HOLDは変更しない。先生のGoogle本人ログインと本人操作はNOT_RUN。検証専用の保存role reviewerにより、固定した家庭用と管理者用の画面で、先生専用の架空生徒1名だけを扱う。Google認証は本人が行う。通知・案内送信・Calendar共有・本番操作は行っていない。個人メール、家庭の個別URL、Calendar ID、認証情報を本資料には収録しない。実際の送迎・支払い・請求は発生しない。\n根拠: outputs/teacher-reviewer-20261107/registration-result.json（登録保存・再取得の実記録）; docs/traceability/registry.json（2026-11-07-r17、変更なし）; docs/traceability/presentation-theme.json（mighty-hp-v1）; docs/deliverables/2026-10-23-traceability/user-2026-11-07-v33.pptx（共通デザインと既存構造）。\n登録時の専用生徒は残数5枚、初期予約0件。先生本人のGoogleログインを確認したという意味ではない。表示名 Brenda先生（検証用）、有効なreviewer、割当は先生確認用・架空生徒1名。"
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/md0v2hon",
+      "slideIndex": 1,
+      "position": {
+        "left": 265,
+        "top": 25,
+        "width": 820,
+        "height": 26
+      },
+      "text": "送迎管理システム　先生向けテストガイド",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 18,
+        "typeface": "Yu Gothic",
+        "color": "#3E5366",
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/a1kv61oz",
+      "slideIndex": 1,
+      "position": {
+        "left": 70,
+        "top": 127,
+        "width": 1120,
+        "height": 53
+      },
+      "text": "ログインと画面の切り替え",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 32,
+        "typeface": "Yu Gothic",
+        "color": "#102D52",
+        "bold": true,
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/c7ydw76l",
+      "slideIndex": 1,
+      "position": {
+        "left": 70,
+        "top": 672,
+        "width": 820,
+        "height": 20
+      },
+      "text": "TEACHER-REVIEW　2026-11-07補足　正本r17とは別冊",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 12,
+        "typeface": "Yu Gothic",
+        "color": "#3E5366",
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/d8rupc76",
+      "slideIndex": 1,
+      "position": {
+        "left": 960,
+        "top": 672,
+        "width": 280,
+        "height": 20
+      },
+      "text": "2 / 4　2026年11月7日",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 14,
+        "typeface": "Yu Gothic",
+        "color": "#3E5366",
+        "alignment": "right"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/10rm187a",
+      "slideIndex": 1,
+      "position": {
+        "left": 70,
+        "top": 226,
+        "width": 1140,
+        "height": 40
+      },
+      "text": "基本は「ログイン・生徒確認・画面切り替え」の3つです",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 24,
+        "typeface": "Yu Gothic",
+        "color": "#102D52",
+        "bold": true,
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/3uh8769s",
+      "slideIndex": 1,
+      "position": {
+        "left": 70,
+        "top": 285,
+        "width": 800,
+        "height": 31
+      },
+      "text": "1　保護者用リンク",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 23,
+        "typeface": "Yu Gothic",
+        "color": "#102D52",
+        "bold": true,
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/2t8re1s7",
+      "slideIndex": 1,
+      "position": {
+        "left": 105,
+        "top": 321,
+        "width": 795,
+        "height": 53
+      },
+      "text": "案内文の個別URLを開き、「Googleでログイン」を選びます。",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 21,
+        "typeface": "Yu Gothic",
+        "color": "#3E5366",
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/pwzq9gry",
+      "slideIndex": 1,
+      "position": {
+        "left": 70,
+        "top": 381,
+        "width": 800,
+        "height": 31
+      },
+      "text": "2　生徒と残数の確認",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 23,
+        "typeface": "Yu Gothic",
+        "color": "#102D52",
+        "bold": true,
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/4vq9gbad",
+      "slideIndex": 1,
+      "position": {
+        "left": 105,
+        "top": 417,
+        "width": 795,
+        "height": 53
+      },
+      "text": "案内文と同じGoogleを選びます。\n「先生確認用・架空生徒」と残数を確認します。",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 21,
+        "typeface": "Yu Gothic",
+        "color": "#3E5366",
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/fqx83m9w",
+      "slideIndex": 1,
+      "position": {
+        "left": 70,
+        "top": 477,
+        "width": 800,
+        "height": 31
+      },
+      "text": "3　先生用へ切り替え",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 23,
+        "typeface": "Yu Gothic",
+        "color": "#102D52",
+        "bold": true,
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/upo7a1sb",
+      "slideIndex": 1,
+      "position": {
+        "left": 105,
+        "top": 513,
+        "width": 795,
+        "height": 53
+      },
+      "text": "いったんログアウトし、先生用URLを開きます。\n同じGoogleで入り、同じ架空生徒1名を確認します。",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 21,
+        "typeface": "Yu Gothic",
+        "color": "#3E5366",
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/gr6pcrah",
+      "slideIndex": 1,
+      "position": {
+        "left": 925,
+        "top": 511,
+        "width": 280,
+        "height": 20
+      },
+      "text": "説明用イメージ",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 12,
+        "typeface": "Yu Gothic",
+        "color": "#3E5366",
+        "alignment": "right"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/7mx8zm9k",
+      "slideIndex": 1,
+      "position": {
+        "left": 70,
+        "top": 585,
+        "width": 280,
+        "height": 31
+      },
+      "text": "終了・中断するとき",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 23,
+        "typeface": "Yu Gothic",
+        "color": "#00A6DF",
+        "bold": true,
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/61476hsf",
+      "slideIndex": 1,
+      "position": {
+        "left": 70,
+        "top": 621,
+        "width": 1140,
+        "height": 35
+      },
+      "text": "両画面でログアウトし、再読込後に台帳が非表示になることを確認します。",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 21,
+        "typeface": "Yu Gothic",
+        "color": "#102D52",
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "notes",
+      "id": "nt/45ukrl",
+      "slideIndex": 1,
+      "text": "先生向けの任意の使い勝手確認用ガイド。小林さんの顧客確認とは別の補足資料で、顧客確認0/6と本番HOLDは変更しない。先生のGoogle本人ログインと本人操作はNOT_RUN。検証専用の保存role reviewerにより、固定した家庭用と管理者用の画面で、先生専用の架空生徒1名だけを扱う。Google認証は本人が行う。通知・案内送信・Calendar共有・本番操作は行っていない。個人メール、家庭の個別URL、Calendar ID、認証情報を本資料には収録しない。実際の送迎・支払い・請求は発生しない。\n根拠: outputs/teacher-reviewer-20261107/registration-result.json（登録保存・再取得の実記録）; docs/traceability/registry.json（2026-11-07-r17、変更なし）; docs/traceability/presentation-theme.json（mighty-hp-v1）; docs/deliverables/2026-10-23-traceability/user-2026-11-07-v33.pptx（共通デザインと既存構造）。\n初回ログインは本人が実施する。各画面の固定URLは別途の案内文を使う。開発者による操作中のrole切替は不要。基本3手順だけでもよく、次の任意操作を強制しない。説明用イラスト: creative-library/progress-illustrations-2026-11-05/login-lock-flat.png。生成された架空画像。"
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/hsjmloze",
+      "slideIndex": 2,
+      "position": {
+        "left": 265,
+        "top": 25,
+        "width": 820,
+        "height": 26
+      },
+      "text": "送迎管理システム　先生向けテストガイド",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 18,
+        "typeface": "Yu Gothic",
+        "color": "#3E5366",
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/5wjmpoza",
+      "slideIndex": 2,
+      "position": {
+        "left": 70,
+        "top": 127,
+        "width": 1120,
+        "height": 53
+      },
+      "text": "予約と取消の操作例（任意）",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 32,
+        "typeface": "Yu Gothic",
+        "color": "#102D52",
+        "bold": true,
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/ry14ryhg",
+      "slideIndex": 2,
+      "position": {
+        "left": 70,
+        "top": 672,
+        "width": 820,
+        "height": 20
+      },
+      "text": "TEACHER-REVIEW　2026-11-07補足　正本r17とは別冊",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 12,
+        "typeface": "Yu Gothic",
+        "color": "#3E5366",
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/qxs3ytgv",
+      "slideIndex": 2,
+      "position": {
+        "left": 960,
+        "top": 672,
+        "width": 280,
+        "height": 20
+      },
+      "text": "3 / 4　2026年11月7日",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 14,
+        "typeface": "Yu Gothic",
+        "color": "#3E5366",
+        "alignment": "right"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/07q9sn2d",
+      "slideIndex": 2,
+      "position": {
+        "left": 70,
+        "top": 226,
+        "width": 1140,
+        "height": 40
+      },
+      "text": "試す場合だけ、先生専用の架空生徒と架空の乗車場所を使います",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 24,
+        "typeface": "Yu Gothic",
+        "color": "#102D52",
+        "bold": true,
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/qd4nmt0b",
+      "slideIndex": 2,
+      "position": {
+        "left": 70,
+        "top": 285,
+        "width": 825,
+        "height": 31
+      },
+      "text": "1　取消用を1件予約",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 23,
+        "typeface": "Yu Gothic",
+        "color": "#102D52",
+        "bold": true,
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/bedovyhw",
+      "slideIndex": 2,
+      "position": {
+        "left": 105,
+        "top": 321,
+        "width": 795,
+        "height": 56
+      },
+      "text": "繰返しなしの1回分を登録します。\n日時・場所を確認し、残数が変わらないか見ます。",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 21,
+        "typeface": "Yu Gothic",
+        "color": "#3E5366",
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/cfmpo3ih",
+      "slideIndex": 2,
+      "position": {
+        "left": 70,
+        "top": 383,
+        "width": 825,
+        "height": 31
+      },
+      "text": "2　その予約を取消",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 23,
+        "typeface": "Yu Gothic",
+        "color": "#102D52",
+        "bold": true,
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/dgf6x8zm",
+      "slideIndex": 2,
+      "position": {
+        "left": 105,
+        "top": 419,
+        "width": 795,
+        "height": 56
+      },
+      "text": "同じ日時の予約を取り消します。\n一覧から消え、残数が変わらないか確認します。",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 21,
+        "typeface": "Yu Gothic",
+        "color": "#3E5366",
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/yho7qd07",
+      "slideIndex": 2,
+      "position": {
+        "left": 70,
+        "top": 481,
+        "width": 825,
+        "height": 31
+      },
+      "text": "3　完了を試す場合",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 23,
+        "typeface": "Yu Gothic",
+        "color": "#102D52",
+        "bold": true,
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/zixozyhs",
+      "slideIndex": 2,
+      "position": {
+        "left": 105,
+        "top": 517,
+        "width": 795,
+        "height": 56
+      },
+      "text": "新しく片道1件と往復1件を予約し、日時をメモします。\n次のページで、この2件だけを完了します。",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 21,
+        "typeface": "Yu Gothic",
+        "color": "#3E5366",
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/l4f618zy",
+      "slideIndex": 2,
+      "position": {
+        "left": 950,
+        "top": 520,
+        "width": 255,
+        "height": 20
+      },
+      "text": "説明用イメージ",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 12,
+        "typeface": "Yu Gothic",
+        "color": "#3E5366",
+        "alignment": "right"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/elkne903",
+      "slideIndex": 2,
+      "position": {
+        "left": 70,
+        "top": 610,
+        "width": 1140,
+        "height": 48
+      },
+      "text": "先生用データの開始時は5枚・予約0件です。小林さん用の生徒・予約は操作しません。",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 21,
+        "typeface": "Yu Gothic",
+        "color": "#102D52",
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "notes",
+      "id": "nt/281l8e",
+      "slideIndex": 2,
+      "text": "先生向けの任意の使い勝手確認用ガイド。小林さんの顧客確認とは別の補足資料で、顧客確認0/6と本番HOLDは変更しない。先生のGoogle本人ログインと本人操作はNOT_RUN。検証専用の保存role reviewerにより、固定した家庭用と管理者用の画面で、先生専用の架空生徒1名だけを扱う。Google認証は本人が行う。通知・案内送信・Calendar共有・本番操作は行っていない。個人メール、家庭の個別URL、Calendar ID、認証情報を本資料には収録しない。実際の送迎・支払い・請求は発生しない。\n根拠: outputs/teacher-reviewer-20261107/registration-result.json（登録保存・再取得の実記録）; docs/traceability/registry.json（2026-11-07-r17、変更なし）; docs/traceability/presentation-theme.json（mighty-hp-v1）; docs/deliverables/2026-10-23-traceability/user-2026-11-07-v33.pptx（共通デザインと既存構造）。\n任意の操作例。先生の初期予約0件から、自分で新規作成した予約だけを使う。既存の小林さんのCUST完了用予約や共有記録は再利用しない。予約・取消時点ではチケットを消費せず、完了時に片道1枚・往復2枚を消費する仕様。説明用イラスト: creative-library/progress-illustrations-2026-11-05/calendar-checklist-flat.png。生成された架空画像。"
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/658retsn",
+      "slideIndex": 3,
+      "position": {
+        "left": 265,
+        "top": 25,
+        "width": 820,
+        "height": 26
+      },
+      "text": "送迎管理システム　先生向けテストガイド",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 18,
+        "typeface": "Yu Gothic",
+        "color": "#3E5366",
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/u9sbit8j",
+      "slideIndex": 3,
+      "position": {
+        "left": 70,
+        "top": 127,
+        "width": 1120,
+        "height": 53
+      },
+      "text": "完了とチケット追加の操作例（任意）",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 32,
+        "typeface": "Yu Gothic",
+        "color": "#102D52",
+        "bold": true,
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/wz698jal",
+      "slideIndex": 3,
+      "position": {
+        "left": 70,
+        "top": 672,
+        "width": 820,
+        "height": 20
+      },
+      "text": "TEACHER-REVIEW　2026-11-07補足　正本r17とは別冊",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 12,
+        "typeface": "Yu Gothic",
+        "color": "#3E5366",
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/x0fahor6",
+      "slideIndex": 3,
+      "position": {
+        "left": 960,
+        "top": 672,
+        "width": 280,
+        "height": 20
+      },
+      "text": "4 / 4　2026年11月7日",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 14,
+        "typeface": "Yu Gothic",
+        "color": "#3E5366",
+        "alignment": "right"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/9g7y9gfm",
+      "slideIndex": 3,
+      "position": {
+        "left": 70,
+        "top": 224,
+        "width": 1140,
+        "height": 55
+      },
+      "text": "最初の5枚から下の順で試した場合の目安です。好きな操作だけでも構いません",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 23,
+        "typeface": "Yu Gothic",
+        "color": "#102D52",
+        "bold": true,
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/q94jm9gj",
+      "slideIndex": 3,
+      "position": {
+        "left": 70,
+        "top": 603,
+        "width": 1140,
+        "height": 31
+      },
+      "text": "完了・追加は1回ずつ。操作後の実際の残数と予約日時をメモします。",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 21,
+        "typeface": "Yu Gothic",
+        "color": "#102D52",
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/dwvihoza",
+      "slideIndex": 3,
+      "position": {
+        "left": 70,
+        "top": 638,
+        "width": 1140,
+        "height": 29
+      },
+      "text": "中断後は未実施の操作だけ再開します。値が違うときは、再送せずご連絡ください。",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 20,
+        "typeface": "Yu Gothic",
+        "color": "#3E5366",
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "table",
+      "id": "tb/8v25wzq9",
+      "slideIndex": 3,
+      "position": {
+        "left": 70,
+        "top": 292,
+        "width": 1140,
+        "height": 294
+      },
+      "name": "",
+      "rows": 5,
+      "cols": 3,
+      "preview": "先生用画面での操作 | 変化 | 残数の目安"
+    },
+    {
+      "kind": "notes",
+      "id": "nt/igs21k",
+      "slideIndex": 3,
+      "text": "先生向けの任意の使い勝手確認用ガイド。小林さんの顧客確認とは別の補足資料で、顧客確認0/6と本番HOLDは変更しない。先生のGoogle本人ログインと本人操作はNOT_RUN。検証専用の保存role reviewerにより、固定した家庭用と管理者用の画面で、先生専用の架空生徒1名だけを扱う。Google認証は本人が行う。通知・案内送信・Calendar共有・本番操作は行っていない。個人メール、家庭の個別URL、Calendar ID、認証情報を本資料には収録しない。実際の送迎・支払い・請求は発生しない。\n根拠: outputs/teacher-reviewer-20261107/registration-result.json（登録保存・再取得の実記録）; docs/traceability/registry.json（2026-11-07-r17、変更なし）; docs/traceability/presentation-theme.json（mighty-hp-v1）; docs/deliverables/2026-10-23-traceability/user-2026-11-07-v33.pptx（共通デザインと既存構造）。\nこれは本人がこの順番を選んだ場合だけの任意例で、実測結果・強制手順・顧客確認の合格条件ではない。完成用の予約は本人が自分の専用生徒で新規作成する。送迎スケジュール一覧で日時と生徒を特定し、片道・往復それぞれ未完了の予約1件だけを完了する。最初5枚、片道1枚消費後4枚、往復2枚消費後2枚、10枚追加後12枚という計算。予約・取消は消費0枚。追加は受取金額0円とし、実支払いは行わない。終了時は両画面でログアウト後の非表示を確認する。既に完了または追加した操作を繰り返さない。"
+    }
+  ],
+  "truncated": false,
+  "metadata": {
+    "target": {
+      "id": "pr/czz4e9"
+    },
+    "omittedRecords": 0,
+    "abbreviatedRecords": 0,
+    "notices": []
+  }
+}

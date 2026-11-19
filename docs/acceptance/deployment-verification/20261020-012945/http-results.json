@@ -1,0 +1,47 @@
+[
+  {
+    "url": "https://eigo-taxi-app.web.app/",
+    "checkedAt": "2026-10-20T01:29:45.7065977+09:00",
+    "status": 404,
+    "cacheControl": "max-age=0",
+    "bodyTitle": "Site Not Found",
+    "bodyFile": "http-1.html",
+    "bodySha256": "dd7c22b3f25d3c331abc00a714b9672396f01a14648bd3ed99f45ceeb64a2642"
+  },
+  {
+    "url": "https://eigo-taxi-test.web.app/",
+    "checkedAt": "2026-10-20T01:29:45.8221806+09:00",
+    "status": 404,
+    "cacheControl": "max-age=0",
+    "bodyTitle": "Site Not Found",
+    "bodyFile": "http-2.html",
+    "bodySha256": "dd7c22b3f25d3c331abc00a714b9672396f01a14648bd3ed99f45ceeb64a2642"
+  },
+  {
+    "url": "https://eigo-taxi-app.firebaseapp.com/",
+    "checkedAt": "2026-10-20T01:29:45.9158084+09:00",
+    "status": 404,
+    "cacheControl": "max-age=0",
+    "bodyTitle": "Site Not Found",
+    "bodyFile": "http-3.html",
+    "bodySha256": "dd7c22b3f25d3c331abc00a714b9672396f01a14648bd3ed99f45ceeb64a2642"
+  },
+  {
+    "url": "https://eigo-taxi-test.web.app/?student=STU-001",
+    "checkedAt": "2026-10-20T01:29:45.9806989+09:00",
+    "status": 404,
+    "cacheControl": "max-age=0",
+    "bodyTitle": "Site Not Found",
+    "bodyFile": "http-4.html",
+    "bodySha256": "dd7c22b3f25d3c331abc00a714b9672396f01a14648bd3ed99f45ceeb64a2642"
+  },
+  {
+    "url": "https://eigo-taxi-app.web.app/index.html",
+    "checkedAt": "2026-10-20T01:29:46.0462183+09:00",
+    "status": 404,
+    "cacheControl": "max-age=0",
+    "bodyTitle": "Site Not Found",
+    "bodyFile": "http-5.html",
+    "bodySha256": "dd7c22b3f25d3c331abc00a714b9672396f01a14648bd3ed99f45ceeb64a2642"
+  }
+]

@@ -1,0 +1,31 @@
+{
+  "pass": false,
+  "jsBaseline": "dist/assets/index-BfV7saVz.js",
+  "jsCandidate": "dist/assets/index-Csor4OR1.js",
+  "jsDiffExactlyReviewedClass": true,
+  "baselineCss": "dist/assets/index-CTgwtZfu.css",
+  "candidateCss": "dist/assets/index-BvaBSnhA.css",
+  "baselineCssBytes": 22430,
+  "candidateCssBytes": 22492,
+  "firstCssDelta": {
+    "index": 4792,
+    "baselineContext": ":1.25rem}.h-8{height:2rem}.max-h-\\[90vh\\]{max-height:90vh}.min-h-screen{min-height:100vh}.w-10{width:2.5rem}.w-3{width:.75rem}.w-3\\.5{width:.875rem}.w-4{width:1rem}.w-48{width:12rem}.w-5{width:1.25rem}.w-64{width:16rem}.w-8{width:2rem}.w-full{width:100%}.min-w-0{min-width:0}.max-",
+    "candidateContext": ":1.25rem}.h-8{height:2rem}.max-h-\\[90vh\\]{max-height:90vh}.max-h-\\[calc\\(100dvh-2rem\\)\\]{max-height:calc(100dvh - 2rem)}.min-h-screen{min-height:100vh}.w-10{width:2.5rem}.w-3{width:.75rem}.w-3\\.5{width:.875rem}.w-4{width:1rem}.w-48{width:12rem}.w-5{width:1.25rem}.w-64{width:16rem}.w-8{width:2rem}.w-full{width:100%}.min-w-0{min-width:0}.max-w-2xl{max-width:42"
+  },
+  "candidateRelease": {
+    "environment": "mighty-test",
+    "projectId": "eigo-taxi-app",
+    "siteId": "eigo-taxi-test",
+    "builtAt": "2026-11-06T11:03:04.548Z",
+    "baseCommit": "2fa6127715017d52ae0c9bd80be39c4db90a47c3",
+    "sourceDigest": "b7e510688a6e81268331db6d7d88db8875bf5ce443dbc90f52b4f647f39d1979"
+  },
+  "candidatePayload": {
+    "dist/assets/index-BvaBSnhA.css": "06784942d4e6777783436b8a3f2b30ca2c8eaacf9aa2c4a6d9040433b5233149",
+    "dist/assets/index-Csor4OR1.js": "7a854832a91d74473430062a56bd34f8ed1fe839881ddaff8eb577c2d3c37e61",
+    "dist/favicon.svg": "61bc9a161de58248288e6905425d7180f0624c2865007b97d763fdac12043a66",
+    "dist/icons.svg": "b45fa506195cfcdef406ba9f0c77b36ddc1a7c224040926ec70abc2fdea7b93a",
+    "dist/index.html": "a411bcd8c07bf4f340175daae94b7a9ac228ddbac2234eb328e644d02065b386",
+    "dist/release.json": "cc5e02f0e18394a600de1631af9d828aec777be81d2887c1927616ec4f3e848d"
+  }
+}

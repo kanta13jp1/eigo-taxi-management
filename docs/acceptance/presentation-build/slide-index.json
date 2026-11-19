@@ -1,0 +1,1382 @@
+{
+  "localId": "2026-10-19T16-59-40-731Z",
+  "hostedId": "2026-10-19T17-00-52-047Z-264bbd",
+  "slides": 143,
+  "index": [
+    {
+      "id": "AT-01",
+      "title": "Google連携先の設定保存",
+      "status": "PASS",
+      "first": 8,
+      "last": 11,
+      "trace": "BF-01 / UC-01 / REQ-01 / FS-01 / TASK-01 / CODE-01 / TEST-01 / AT-01",
+      "related": [
+        "PUB-20"
+      ]
+    },
+    {
+      "id": "AT-02",
+      "title": "生徒登録",
+      "status": "PASS",
+      "first": 12,
+      "last": 14,
+      "trace": "BF-02 / UC-02 / REQ-02 / FS-02 / TASK-02 / CODE-02 / TEST-02 / AT-02",
+      "related": [
+        "PUB-05",
+        "PUB-16"
+      ]
+    },
+    {
+      "id": "AT-03",
+      "title": "保護者の残数確認",
+      "status": "PASS",
+      "first": 15,
+      "last": 17,
+      "trace": "BF-03 / UC-03 / REQ-03 / FS-03 / TASK-03 / CODE-03 / TEST-03 / AT-03",
+      "related": [
+        "PUB-03"
+      ]
+    },
+    {
+      "id": "AT-04",
+      "title": "残少・ゼロ案内",
+      "status": "PASS",
+      "first": 18,
+      "last": 23,
+      "trace": "BF-03 / UC-04 / REQ-04 / FS-04 / TASK-04 / CODE-04 / TEST-04 / AT-04",
+      "related": [
+        "PUB-21"
+      ]
+    },
+    {
+      "id": "AT-05",
+      "title": "チケット追加",
+      "status": "PASS",
+      "first": 24,
+      "last": 26,
+      "trace": "BF-03 / UC-05 / REQ-05 / FS-05 / TASK-05 / CODE-05 / TEST-05 / AT-05",
+      "related": [
+        "PUB-06"
+      ]
+    },
+    {
+      "id": "AT-06",
+      "title": "保護者のお迎え予約",
+      "status": "PASS",
+      "first": 27,
+      "last": 29,
+      "trace": "BF-04 / UC-06 / REQ-06 / FS-06 / TASK-06 / CODE-06 / TEST-06 / AT-06",
+      "related": [
+        "PUB-07",
+        "PUB-16"
+      ]
+    },
+    {
+      "id": "AT-07",
+      "title": "送り予約",
+      "status": "PASS",
+      "first": 30,
+      "last": 32,
+      "trace": "BF-04 / UC-07 / REQ-07 / FS-07 / TASK-07 / CODE-07 / TEST-07 / AT-07",
+      "related": [
+        "PUB-08"
+      ]
+    },
+    {
+      "id": "AT-08",
+      "title": "往復予約",
+      "status": "PASS",
+      "first": 33,
+      "last": 35,
+      "trace": "BF-04 / UC-08 / REQ-08 / FS-08 / TASK-08 / CODE-08 / TEST-08 / AT-08",
+      "related": [
+        "PUB-09"
+      ]
+    },
+    {
+      "id": "AT-09",
+      "title": "管理者の代理予約",
+      "status": "PASS",
+      "first": 36,
+      "last": 38,
+      "trace": "BF-04 / UC-09 / REQ-09 / FS-09 / TASK-09 / CODE-09 / TEST-09 / AT-09",
+      "related": [
+        "PUB-10"
+      ]
+    },
+    {
+      "id": "AT-10",
+      "title": "保護者の予約取消",
+      "status": "PASS",
+      "first": 39,
+      "last": 41,
+      "trace": "BF-05 / UC-10 / REQ-10 / FS-10 / TASK-10 / CODE-10 / TEST-10 / AT-10",
+      "related": [
+        "PUB-11"
+      ]
+    },
+    {
+      "id": "AT-11",
+      "title": "管理者の予約取消",
+      "status": "PASS",
+      "first": 42,
+      "last": 44,
+      "trace": "BF-05 / UC-11 / REQ-11 / FS-11 / TASK-11 / CODE-11 / TEST-11 / AT-11",
+      "related": [
+        "PUB-12"
+      ]
+    },
+    {
+      "id": "AT-12",
+      "title": "当日一覧・地図リンク",
+      "status": "PASS",
+      "first": 45,
+      "last": 47,
+      "trace": "BF-06 / UC-12 / REQ-12 / FS-12 / TASK-12 / CODE-12 / TEST-12 / AT-12",
+      "related": [
+        "PUB-13"
+      ]
+    },
+    {
+      "id": "AT-13",
+      "title": "片道完了",
+      "status": "PASS",
+      "first": 48,
+      "last": 50,
+      "trace": "BF-06 / UC-13 / REQ-13 / FS-13 / TASK-13 / CODE-13 / TEST-13 / AT-13",
+      "related": [
+        "PUB-14"
+      ]
+    },
+    {
+      "id": "AT-14",
+      "title": "往復完了",
+      "status": "PASS",
+      "first": 51,
+      "last": 53,
+      "trace": "BF-06 / UC-14 / REQ-14 / FS-14 / TASK-14 / CODE-14 / TEST-14 / AT-14",
+      "related": [
+        "PUB-15"
+      ]
+    },
+    {
+      "id": "AT-15",
+      "title": "完了の二重処理防止",
+      "status": "PASS",
+      "first": 54,
+      "last": 56,
+      "trace": "BF-06 / UC-15 / REQ-15 / FS-15 / TASK-15 / CODE-15 / TEST-15 / AT-15",
+      "related": [
+        "PUB-14",
+        "PUB-15"
+      ]
+    },
+    {
+      "id": "AT-16",
+      "title": "取消済みの完了拒否",
+      "status": "PASS",
+      "first": 57,
+      "last": 59,
+      "trace": "BF-06 / UC-16 / REQ-16 / FS-16 / TASK-16 / CODE-16 / TEST-16 / AT-16",
+      "related": [
+        "PUB-11",
+        "PUB-12"
+      ]
+    },
+    {
+      "id": "AT-17",
+      "title": "不正なチケット追加拒否",
+      "status": "PASS",
+      "first": 60,
+      "last": 62,
+      "trace": "BF-03 / UC-17 / REQ-17 / FS-17 / TASK-17 / CODE-17 / TEST-17 / AT-17",
+      "related": [
+        "PUB-17"
+      ]
+    },
+    {
+      "id": "AT-18",
+      "title": "通信障害時に成功扱いしない",
+      "status": "PASS",
+      "first": 63,
+      "last": 65,
+      "trace": "BF-07 / UC-18 / REQ-18 / FS-18 / TASK-18 / CODE-18 / TEST-18 / AT-18",
+      "related": [
+        "PUB-22"
+      ]
+    },
+    {
+      "id": "AT-19",
+      "title": "未認証の管理操作を拒否",
+      "status": "PASS",
+      "first": 66,
+      "last": 69,
+      "trace": "BF-07 / UC-19 / REQ-19 / FS-19 / TASK-19 / CODE-19 / TEST-19 / AT-19",
+      "related": [
+        "PUB-01",
+        "PUB-02",
+        "PUB-04",
+        "PUB-23"
+      ]
+    },
+    {
+      "id": "AT-20",
+      "title": "保護者の家庭別アクセス制限",
+      "status": "PASS",
+      "first": 70,
+      "last": 72,
+      "trace": "BF-07 / UC-20 / REQ-20 / FS-20 / TASK-20 / CODE-20 / TEST-20 / AT-20",
+      "related": [
+        "PUB-02",
+        "PUB-03",
+        "PUB-04"
+      ]
+    },
+    {
+      "id": "AT-21",
+      "title": "モバイル表示",
+      "status": "PASS",
+      "first": 73,
+      "last": 78,
+      "trace": "BF-08 / UC-21 / REQ-21 / FS-21 / TASK-21 / CODE-21 / TEST-21 / AT-21",
+      "related": [
+        "PUB-18"
+      ]
+    },
+    {
+      "id": "AT-22",
+      "title": "再読込後の永続化",
+      "status": "PASS",
+      "first": 79,
+      "last": 81,
+      "trace": "BF-07 / UC-22 / REQ-22 / FS-22 / TASK-22 / CODE-22 / TEST-22 / AT-22",
+      "related": [
+        "PUB-19"
+      ]
+    },
+    {
+      "id": "AT-23",
+      "title": "Google初期化・永続化",
+      "status": "BLOCKED",
+      "first": 82,
+      "last": 83,
+      "trace": "BF-01 / UC-23 / REQ-23 / FS-23 / TASK-23 / CODE-23 / TEST-23 / AT-23",
+      "related": []
+    },
+    {
+      "id": "AT-24",
+      "title": "実カレンダー予約同期",
+      "status": "BLOCKED",
+      "first": 84,
+      "last": 85,
+      "trace": "BF-04 / UC-24 / REQ-24 / FS-24 / TASK-24 / CODE-24 / TEST-24 / AT-24",
+      "related": []
+    },
+    {
+      "id": "AT-25",
+      "title": "実カレンダー取消同期",
+      "status": "BLOCKED",
+      "first": 86,
+      "last": 87,
+      "trace": "BF-05 / UC-25 / REQ-25 / FS-25 / TASK-25 / CODE-25 / TEST-25 / AT-25",
+      "related": []
+    },
+    {
+      "id": "AT-26",
+      "title": "管理者2名・保護者の端末共有",
+      "status": "BLOCKED",
+      "first": 88,
+      "last": 89,
+      "trace": "BF-07 / UC-26 / REQ-26 / FS-26 / TASK-26 / CODE-26 / TEST-26 / AT-26",
+      "related": []
+    },
+    {
+      "id": "AT-27",
+      "title": "同時完了の排他制御",
+      "status": "BLOCKED",
+      "first": 90,
+      "last": 91,
+      "trace": "BF-06 / UC-27 / REQ-27 / FS-27 / TASK-27 / CODE-27 / TEST-27 / AT-27",
+      "related": []
+    },
+    {
+      "id": "AT-28",
+      "title": "バックアップから復旧",
+      "status": "BLOCKED",
+      "first": 92,
+      "last": 93,
+      "trace": "BF-08 / UC-28 / REQ-28 / FS-28 / TASK-28 / CODE-28 / TEST-28 / AT-28",
+      "related": []
+    },
+    {
+      "id": "AT-29",
+      "title": "実機受入",
+      "status": "BLOCKED",
+      "first": 94,
+      "last": 95,
+      "trace": "BF-08 / UC-29 / REQ-29 / FS-29 / TASK-29 / CODE-29 / TEST-29 / AT-29",
+      "related": []
+    },
+    {
+      "id": "AT-30",
+      "title": "リリース後スモークテスト",
+      "status": "BLOCKED",
+      "first": 96,
+      "last": 97,
+      "trace": "BF-08 / UC-30 / REQ-30 / FS-30 / TASK-30 / CODE-30 / TEST-30 / AT-30",
+      "related": [
+        "PUB-01"
+      ]
+    }
+  ],
+  "pubIndex": [
+    {
+      "id": "PUB-01",
+      "acceptanceIds": [
+        "AT-19",
+        "AT-30"
+      ],
+      "first": 101,
+      "last": 101
+    },
+    {
+      "id": "PUB-02",
+      "acceptanceIds": [
+        "AT-19",
+        "AT-20"
+      ],
+      "first": 102,
+      "last": 103
+    },
+    {
+      "id": "PUB-03",
+      "acceptanceIds": [
+        "AT-03",
+        "AT-20"
+      ],
+      "first": 104,
+      "last": 104
+    },
+    {
+      "id": "PUB-04",
+      "acceptanceIds": [
+        "AT-19",
+        "AT-20"
+      ],
+      "first": 105,
+      "last": 106
+    },
+    {
+      "id": "PUB-05",
+      "acceptanceIds": [
+        "AT-02"
+      ],
+      "first": 107,
+      "last": 107
+    },
+    {
+      "id": "PUB-06",
+      "acceptanceIds": [
+        "AT-05"
+      ],
+      "first": 108,
+      "last": 108
+    },
+    {
+      "id": "PUB-07",
+      "acceptanceIds": [
+        "AT-06"
+      ],
+      "first": 109,
+      "last": 109
+    },
+    {
+      "id": "PUB-08",
+      "acceptanceIds": [
+        "AT-07"
+      ],
+      "first": 110,
+      "last": 110
+    },
+    {
+      "id": "PUB-09",
+      "acceptanceIds": [
+        "AT-08"
+      ],
+      "first": 111,
+      "last": 111
+    },
+    {
+      "id": "PUB-10",
+      "acceptanceIds": [
+        "AT-09"
+      ],
+      "first": 112,
+      "last": 112
+    },
+    {
+      "id": "PUB-11",
+      "acceptanceIds": [
+        "AT-10",
+        "AT-16"
+      ],
+      "first": 113,
+      "last": 113
+    },
+    {
+      "id": "PUB-12",
+      "acceptanceIds": [
+        "AT-11",
+        "AT-16"
+      ],
+      "first": 114,
+      "last": 114
+    },
+    {
+      "id": "PUB-13",
+      "acceptanceIds": [
+        "AT-12"
+      ],
+      "first": 115,
+      "last": 115
+    },
+    {
+      "id": "PUB-14",
+      "acceptanceIds": [
+        "AT-13",
+        "AT-15"
+      ],
+      "first": 116,
+      "last": 116
+    },
+    {
+      "id": "PUB-15",
+      "acceptanceIds": [
+        "AT-14",
+        "AT-15"
+      ],
+      "first": 117,
+      "last": 117
+    },
+    {
+      "id": "PUB-16",
+      "acceptanceIds": [
+        "AT-02",
+        "AT-06"
+      ],
+      "first": 118,
+      "last": 119
+    },
+    {
+      "id": "PUB-17",
+      "acceptanceIds": [
+        "AT-17"
+      ],
+      "first": 120,
+      "last": 120
+    },
+    {
+      "id": "PUB-18",
+      "acceptanceIds": [
+        "AT-21"
+      ],
+      "first": 121,
+      "last": 124
+    },
+    {
+      "id": "PUB-19",
+      "acceptanceIds": [
+        "AT-22"
+      ],
+      "first": 125,
+      "last": 126
+    },
+    {
+      "id": "PUB-20",
+      "acceptanceIds": [
+        "AT-01"
+      ],
+      "first": 127,
+      "last": 127
+    },
+    {
+      "id": "PUB-21",
+      "acceptanceIds": [
+        "AT-04"
+      ],
+      "first": 128,
+      "last": 131
+    },
+    {
+      "id": "PUB-22",
+      "acceptanceIds": [
+        "AT-18"
+      ],
+      "first": 132,
+      "last": 139
+    },
+    {
+      "id": "PUB-23",
+      "acceptanceIds": [
+        "AT-19"
+      ],
+      "first": 140,
+      "last": 140
+    }
+  ],
+  "slideMap": [
+    {
+      "slideNo": 1,
+      "title": "英語教室送迎管理　受入テスト結果",
+      "type": "受入テスト記録"
+    },
+    {
+      "slideNo": 2,
+      "title": "対象環境と結果の読み方",
+      "type": "受入テスト記録"
+    },
+    {
+      "slideNo": 3,
+      "title": "実行識別子と再実施条件",
+      "type": "受入テスト記録"
+    },
+    {
+      "slideNo": 4,
+      "title": "ローカル試験の共通準備と証跡",
+      "type": "受入テスト記録"
+    },
+    {
+      "slideNo": 5,
+      "title": "受入ケース索引 1/3",
+      "type": "受入テスト記録"
+    },
+    {
+      "slideNo": 6,
+      "title": "受入ケース索引 2/3",
+      "type": "受入テスト記録"
+    },
+    {
+      "slideNo": 7,
+      "title": "受入ケース索引 3/3",
+      "type": "受入テスト記録"
+    },
+    {
+      "slideNo": 8,
+      "title": "AT-01　Google連携先の設定保存",
+      "type": "受入テスト記録"
+    },
+    {
+      "slideNo": 9,
+      "title": "AT-01　再現手順と入力値",
+      "type": "受入テスト記録"
+    },
+    {
+      "slideNo": 10,
+      "title": "AT-01　AT-01.png",
+      "type": "合成データの実キャプチャ",
+      "sourceScreenshot": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\docs\\acceptance\\runs\\2026-10-19T16-59-40-731Z\\AT-01.png",
+      "sha256": "ec3751bbaf139de02f2d0ba407a8dd57e4fb7831db9b2f099ba0d35c13d5b082"
+    },
+    {
+      "slideNo": 11,
+      "title": "AT-01　保存したURLの拡大",
+      "type": "原本キャプチャの部分拡大"
+    },
+    {
+      "slideNo": 12,
+      "title": "AT-02　生徒登録",
+      "type": "受入テスト記録"
+    },
+    {
+      "slideNo": 13,
+      "title": "AT-02　再現手順と入力値",
+      "type": "受入テスト記録"
+    },
+    {
+      "slideNo": 14,
+      "title": "AT-02　AT-02.png",
+      "type": "合成データの実キャプチャ",
+      "sourceScreenshot": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\docs\\acceptance\\runs\\2026-10-19T16-59-40-731Z\\AT-02.png",
+      "sha256": "20d50d8d9fa11d589ede2431b6af3cbd7923f273deb956468f526177d6889ee1"
+    },
+    {
+      "slideNo": 15,
+      "title": "AT-03　保護者の残数確認",
+      "type": "受入テスト記録"
+    },
+    {
+      "slideNo": 16,
+      "title": "AT-03　再現手順と入力値",
+      "type": "受入テスト記録"
+    },
+    {
+      "slideNo": 17,
+      "title": "AT-03　AT-03.png",
+      "type": "合成データの実キャプチャ",
+      "sourceScreenshot": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\docs\\acceptance\\runs\\2026-10-19T16-59-40-731Z\\AT-03.png",
+      "sha256": "336985bc1dfc709778e298d192e1916e191959c54a208014fb4474c623139478"
+    },
+    {
+      "slideNo": 18,
+      "title": "AT-04　残少・ゼロ案内",
+      "type": "受入テスト記録"
+    },
+    {
+      "slideNo": 19,
+      "title": "AT-04　再現手順と入力値",
+      "type": "受入テスト記録"
+    },
+    {
+      "slideNo": 20,
+      "title": "AT-04　AT-04-balance-0.png",
+      "type": "合成データの実キャプチャ",
+      "sourceScreenshot": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\docs\\acceptance\\runs\\2026-10-19T16-59-40-731Z\\AT-04-balance-0.png",
+      "sha256": "9fdb9d44793499aed9e8e13b9fe8db355842695747d82d6e9c8f27a40a81696e"
+    },
+    {
+      "slideNo": 21,
+      "title": "AT-04　AT-04-balance-1.png",
+      "type": "合成データの実キャプチャ",
+      "sourceScreenshot": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\docs\\acceptance\\runs\\2026-10-19T16-59-40-731Z\\AT-04-balance-1.png",
+      "sha256": "8189b9f575005b15a6c7b347b0396ad10de5a5f9e901fa95c4a78265a99b62b4"
+    },
+    {
+      "slideNo": 22,
+      "title": "AT-04　AT-04-balance-2.png",
+      "type": "合成データの実キャプチャ",
+      "sourceScreenshot": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\docs\\acceptance\\runs\\2026-10-19T16-59-40-731Z\\AT-04-balance-2.png",
+      "sha256": "19b9a34f23c1caafcfb97966f095673acf2ba4709d79a7f7acec1695e41374f8"
+    },
+    {
+      "slideNo": 23,
+      "title": "AT-04　AT-04.png",
+      "type": "合成データの実キャプチャ",
+      "sourceScreenshot": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\docs\\acceptance\\runs\\2026-10-19T16-59-40-731Z\\AT-04.png",
+      "sha256": "9fdb9d44793499aed9e8e13b9fe8db355842695747d82d6e9c8f27a40a81696e"
+    },
+    {
+      "slideNo": 24,
+      "title": "AT-05　チケット追加",
+      "type": "受入テスト記録"
+    },
+    {
+      "slideNo": 25,
+      "title": "AT-05　再現手順と入力値",
+      "type": "受入テスト記録"
+    },
+    {
+      "slideNo": 26,
+      "title": "AT-05　AT-05.png",
+      "type": "合成データの実キャプチャ",
+      "sourceScreenshot": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\docs\\acceptance\\runs\\2026-10-19T16-59-40-731Z\\AT-05.png",
+      "sha256": "eeae6d1c0ec9653a5c6e33a0dbfa211dd68a437978b03019fb81cac918d812c8"
+    },
+    {
+      "slideNo": 27,
+      "title": "AT-06　保護者のお迎え予約",
+      "type": "受入テスト記録"
+    },
+    {
+      "slideNo": 28,
+      "title": "AT-06　再現手順と入力値",
+      "type": "受入テスト記録"
+    },
+    {
+      "slideNo": 29,
+      "title": "AT-06　AT-06.png",
+      "type": "合成データの実キャプチャ",
+      "sourceScreenshot": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\docs\\acceptance\\runs\\2026-10-19T16-59-40-731Z\\AT-06.png",
+      "sha256": "aa1fe5ae893784058702d5045b2fa0b9edb4ddcfb052b7c6634abf1b8a8018dc"
+    },
+    {
+      "slideNo": 30,
+      "title": "AT-07　送り予約",
+      "type": "受入テスト記録"
+    },
+    {
+      "slideNo": 31,
+      "title": "AT-07　再現手順と入力値",
+      "type": "受入テスト記録"
+    },
+    {
+      "slideNo": 32,
+      "title": "AT-07　AT-07.png",
+      "type": "合成データの実キャプチャ",
+      "sourceScreenshot": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\docs\\acceptance\\runs\\2026-10-19T16-59-40-731Z\\AT-07.png",
+      "sha256": "efa7b813e186d4d470c920d1af487b5eb11817453dfdbe4561ee41ea021e3357"
+    },
+    {
+      "slideNo": 33,
+      "title": "AT-08　往復予約",
+      "type": "受入テスト記録"
+    },
+    {
+      "slideNo": 34,
+      "title": "AT-08　再現手順と入力値",
+      "type": "受入テスト記録"
+    },
+    {
+      "slideNo": 35,
+      "title": "AT-08　AT-08.png",
+      "type": "合成データの実キャプチャ",
+      "sourceScreenshot": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\docs\\acceptance\\runs\\2026-10-19T16-59-40-731Z\\AT-08.png",
+      "sha256": "b5862417ed3e0f9361e70a0b798f53b30529a3d5a34d851cd5de58f44c82efcd"
+    },
+    {
+      "slideNo": 36,
+      "title": "AT-09　管理者の代理予約",
+      "type": "受入テスト記録"
+    },
+    {
+      "slideNo": 37,
+      "title": "AT-09　再現手順と入力値",
+      "type": "受入テスト記録"
+    },
+    {
+      "slideNo": 38,
+      "title": "AT-09　AT-09.png",
+      "type": "合成データの実キャプチャ",
+      "sourceScreenshot": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\docs\\acceptance\\runs\\2026-10-19T16-59-40-731Z\\AT-09.png",
+      "sha256": "84122712d50d6803baa933e7379cf134b0726414a17ddfb9db8d24c0d4c0190a"
+    },
+    {
+      "slideNo": 39,
+      "title": "AT-10　保護者の予約取消",
+      "type": "受入テスト記録"
+    },
+    {
+      "slideNo": 40,
+      "title": "AT-10　再現手順と入力値",
+      "type": "受入テスト記録"
+    },
+    {
+      "slideNo": 41,
+      "title": "AT-10　AT-10.png",
+      "type": "合成データの実キャプチャ",
+      "sourceScreenshot": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\docs\\acceptance\\runs\\2026-10-19T16-59-40-731Z\\AT-10.png",
+      "sha256": "92fcc853e55ca1e3e75dee27d189c3ad8fb61951fa05ad5bc71b92bb7a339931"
+    },
+    {
+      "slideNo": 42,
+      "title": "AT-11　管理者の予約取消",
+      "type": "受入テスト記録"
+    },
+    {
+      "slideNo": 43,
+      "title": "AT-11　再現手順と入力値",
+      "type": "受入テスト記録"
+    },
+    {
+      "slideNo": 44,
+      "title": "AT-11　AT-11.png",
+      "type": "合成データの実キャプチャ",
+      "sourceScreenshot": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\docs\\acceptance\\runs\\2026-10-19T16-59-40-731Z\\AT-11.png",
+      "sha256": "5453d61bc501e51c448ccc9b031eb8f7796b7ede642e0b28986f6daadd387592"
+    },
+    {
+      "slideNo": 45,
+      "title": "AT-12　当日一覧・地図リンク",
+      "type": "受入テスト記録"
+    },
+    {
+      "slideNo": 46,
+      "title": "AT-12　再現手順と入力値",
+      "type": "受入テスト記録"
+    },
+    {
+      "slideNo": 47,
+      "title": "AT-12　AT-12.png",
+      "type": "合成データの実キャプチャ",
+      "sourceScreenshot": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\docs\\acceptance\\runs\\2026-10-19T16-59-40-731Z\\AT-12.png",
+      "sha256": "1c204e74b68ad8607da6fbadef908e5b0be40324bec705e768ba023ca2348fcd"
+    },
+    {
+      "slideNo": 48,
+      "title": "AT-13　片道完了",
+      "type": "受入テスト記録"
+    },
+    {
+      "slideNo": 49,
+      "title": "AT-13　再現手順と入力値",
+      "type": "受入テスト記録"
+    },
+    {
+      "slideNo": 50,
+      "title": "AT-13　AT-13.png",
+      "type": "合成データの実キャプチャ",
+      "sourceScreenshot": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\docs\\acceptance\\runs\\2026-10-19T16-59-40-731Z\\AT-13.png",
+      "sha256": "4701ae46535c4e6631f71e02474963c6ccaedb3c79c929f48a015a07978e2caa"
+    },
+    {
+      "slideNo": 51,
+      "title": "AT-14　往復完了",
+      "type": "受入テスト記録"
+    },
+    {
+      "slideNo": 52,
+      "title": "AT-14　再現手順と入力値",
+      "type": "受入テスト記録"
+    },
+    {
+      "slideNo": 53,
+      "title": "AT-14　AT-14.png",
+      "type": "合成データの実キャプチャ",
+      "sourceScreenshot": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\docs\\acceptance\\runs\\2026-10-19T16-59-40-731Z\\AT-14.png",
+      "sha256": "f71384abe4ce1953719d0033becbd613078a99030540f6ca90c4c3712cf3d7c3"
+    },
+    {
+      "slideNo": 54,
+      "title": "AT-15　完了の二重処理防止",
+      "type": "受入テスト記録"
+    },
+    {
+      "slideNo": 55,
+      "title": "AT-15　再現手順と入力値",
+      "type": "受入テスト記録"
+    },
+    {
+      "slideNo": 56,
+      "title": "AT-15　AT-15.png",
+      "type": "合成データの実キャプチャ",
+      "sourceScreenshot": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\docs\\acceptance\\runs\\2026-10-19T16-59-40-731Z\\AT-15.png",
+      "sha256": "4701ae46535c4e6631f71e02474963c6ccaedb3c79c929f48a015a07978e2caa"
+    },
+    {
+      "slideNo": 57,
+      "title": "AT-16　取消済みの完了拒否",
+      "type": "受入テスト記録"
+    },
+    {
+      "slideNo": 58,
+      "title": "AT-16　再現手順と入力値",
+      "type": "受入テスト記録"
+    },
+    {
+      "slideNo": 59,
+      "title": "AT-16　AT-16.png",
+      "type": "合成データの実キャプチャ",
+      "sourceScreenshot": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\docs\\acceptance\\runs\\2026-10-19T16-59-40-731Z\\AT-16.png",
+      "sha256": "eb1bb970571635308d0dfdab87fa5bfd5dca93de4a18ed2768bcaddd296cabce"
+    },
+    {
+      "slideNo": 60,
+      "title": "AT-17　不正なチケット追加拒否",
+      "type": "受入テスト記録"
+    },
+    {
+      "slideNo": 61,
+      "title": "AT-17　再現手順と入力値",
+      "type": "受入テスト記録"
+    },
+    {
+      "slideNo": 62,
+      "title": "AT-17　AT-17.png",
+      "type": "合成データの実キャプチャ",
+      "sourceScreenshot": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\docs\\acceptance\\runs\\2026-10-19T16-59-40-731Z\\AT-17.png",
+      "sha256": "63f291859a98224318cb35a39055adeeb63e2fd717cf6d5e801771465c7621be"
+    },
+    {
+      "slideNo": 63,
+      "title": "AT-18　通信障害時に成功扱いしない",
+      "type": "受入テスト記録"
+    },
+    {
+      "slideNo": 64,
+      "title": "AT-18　再現手順と入力値",
+      "type": "受入テスト記録"
+    },
+    {
+      "slideNo": 65,
+      "title": "AT-18　AT-18.png",
+      "type": "合成データの実キャプチャ",
+      "sourceScreenshot": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\docs\\acceptance\\runs\\2026-10-19T16-59-40-731Z\\AT-18.png",
+      "sha256": "e0cfd0abcf05916c63bbe4528fdc35235111622932f9a6412c8f114690aa36d0"
+    },
+    {
+      "slideNo": 66,
+      "title": "AT-19　未認証の管理操作を拒否",
+      "type": "受入テスト記録"
+    },
+    {
+      "slideNo": 67,
+      "title": "AT-19　再現手順と入力値",
+      "type": "受入テスト記録"
+    },
+    {
+      "slideNo": 68,
+      "title": "AT-19　AT-19-unauthenticated.png",
+      "type": "合成データの実キャプチャ",
+      "sourceScreenshot": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\docs\\acceptance\\runs\\2026-10-19T16-59-40-731Z\\AT-19-unauthenticated.png",
+      "sha256": "f775f9d1b4d9603d157b011f4efb464ac6960c0273b301403284503e9faf0f3a"
+    },
+    {
+      "slideNo": 69,
+      "title": "AT-19　AT-19.png",
+      "type": "合成データの実キャプチャ",
+      "sourceScreenshot": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\docs\\acceptance\\runs\\2026-10-19T16-59-40-731Z\\AT-19.png",
+      "sha256": "94642b0633fe2fbbdb30a36b2f64cdc714339b8fffa290d5b4e3f0e51056f482"
+    },
+    {
+      "slideNo": 70,
+      "title": "AT-20　保護者の家庭別アクセス制限",
+      "type": "受入テスト記録"
+    },
+    {
+      "slideNo": 71,
+      "title": "AT-20　再現手順と入力値",
+      "type": "受入テスト記録"
+    },
+    {
+      "slideNo": 72,
+      "title": "AT-20　AT-20.png",
+      "type": "合成データの実キャプチャ",
+      "sourceScreenshot": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\docs\\acceptance\\runs\\2026-10-19T16-59-40-731Z\\AT-20.png",
+      "sha256": "336985bc1dfc709778e298d192e1916e191959c54a208014fb4474c623139478"
+    },
+    {
+      "slideNo": 73,
+      "title": "AT-21　モバイル表示",
+      "type": "受入テスト記録"
+    },
+    {
+      "slideNo": 74,
+      "title": "AT-21　再現手順と入力値",
+      "type": "受入テスト記録"
+    },
+    {
+      "slideNo": 75,
+      "title": "AT-21　AT-21-form.png",
+      "type": "合成データの実キャプチャ",
+      "sourceScreenshot": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\docs\\acceptance\\runs\\2026-10-19T16-59-40-731Z\\AT-21-form.png",
+      "sha256": "9a2dca68a71fc601f792396de224f6cc42a30406766ede8db23b5f70b69eaceb"
+    },
+    {
+      "slideNo": 76,
+      "title": "AT-21　AT-21-parent.png",
+      "type": "合成データの実キャプチャ",
+      "sourceScreenshot": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\docs\\acceptance\\runs\\2026-10-19T16-59-40-731Z\\AT-21-parent.png",
+      "sha256": "1f1ac8d13befd982d7bbc6c7c7fb1f00ffd35d784d1fc9f810f2af4a2afbf83c"
+    },
+    {
+      "slideNo": 77,
+      "title": "AT-21　AT-21-teacher.png",
+      "type": "合成データの実キャプチャ",
+      "sourceScreenshot": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\docs\\acceptance\\runs\\2026-10-19T16-59-40-731Z\\AT-21-teacher.png",
+      "sha256": "f71d0ed088934d38cfead6be5145377e39ac6d2cc1c9b22a2049ba925d11fa68"
+    },
+    {
+      "slideNo": 78,
+      "title": "AT-21　AT-21.png",
+      "type": "合成データの実キャプチャ",
+      "sourceScreenshot": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\docs\\acceptance\\runs\\2026-10-19T16-59-40-731Z\\AT-21.png",
+      "sha256": "828adb91e0c9d9a04c7dacaaead216264b55de91a2cd2c4a2b88c95021ffbbfe"
+    },
+    {
+      "slideNo": 79,
+      "title": "AT-22　再読込後の永続化",
+      "type": "受入テスト記録"
+    },
+    {
+      "slideNo": 80,
+      "title": "AT-22　再現手順と入力値",
+      "type": "受入テスト記録"
+    },
+    {
+      "slideNo": 81,
+      "title": "AT-22　AT-22.png",
+      "type": "合成データの実キャプチャ",
+      "sourceScreenshot": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\docs\\acceptance\\runs\\2026-10-19T16-59-40-731Z\\AT-22.png",
+      "sha256": "f7d758f393dcf7c4192f9a2cbebc5207495954a047e3c0dda3fb4b98e93c223e"
+    },
+    {
+      "slideNo": 82,
+      "title": "AT-23　Google初期化・永続化",
+      "type": "受入テスト記録"
+    },
+    {
+      "slideNo": 83,
+      "title": "AT-23　準備待ちの実施手順",
+      "type": "受入テスト記録"
+    },
+    {
+      "slideNo": 84,
+      "title": "AT-24　実カレンダー予約同期",
+      "type": "受入テスト記録"
+    },
+    {
+      "slideNo": 85,
+      "title": "AT-24　準備待ちの実施手順",
+      "type": "受入テスト記録"
+    },
+    {
+      "slideNo": 86,
+      "title": "AT-25　実カレンダー取消同期",
+      "type": "受入テスト記録"
+    },
+    {
+      "slideNo": 87,
+      "title": "AT-25　準備待ちの実施手順",
+      "type": "受入テスト記録"
+    },
+    {
+      "slideNo": 88,
+      "title": "AT-26　管理者2名・保護者の端末共有",
+      "type": "受入テスト記録"
+    },
+    {
+      "slideNo": 89,
+      "title": "AT-26　準備待ちの実施手順",
+      "type": "受入テスト記録"
+    },
+    {
+      "slideNo": 90,
+      "title": "AT-27　同時完了の排他制御",
+      "type": "受入テスト記録"
+    },
+    {
+      "slideNo": 91,
+      "title": "AT-27　準備待ちの実施手順",
+      "type": "受入テスト記録"
+    },
+    {
+      "slideNo": 92,
+      "title": "AT-28　バックアップから復旧",
+      "type": "受入テスト記録"
+    },
+    {
+      "slideNo": 93,
+      "title": "AT-28　準備待ちの実施手順",
+      "type": "受入テスト記録"
+    },
+    {
+      "slideNo": 94,
+      "title": "AT-29　実機受入",
+      "type": "受入テスト記録"
+    },
+    {
+      "slideNo": 95,
+      "title": "AT-29　準備待ちの実施手順",
+      "type": "受入テスト記録"
+    },
+    {
+      "slideNo": 96,
+      "title": "AT-30　リリース後スモークテスト",
+      "type": "受入テスト記録"
+    },
+    {
+      "slideNo": 97,
+      "title": "AT-30　準備待ちの実施手順",
+      "type": "受入テスト記録"
+    },
+    {
+      "slideNo": 98,
+      "title": "公開画面からの追加確認",
+      "type": "受入テスト記録"
+    },
+    {
+      "slideNo": 99,
+      "title": "公開UI証跡の索引 1/2",
+      "type": "受入テスト記録"
+    },
+    {
+      "slideNo": 100,
+      "title": "公開UI証跡の索引 2/2",
+      "type": "受入テスト記録"
+    },
+    {
+      "slideNo": 101,
+      "title": "PUB-01　未認証の公開ページ",
+      "type": "合成データの実キャプチャ",
+      "sourceScreenshot": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\docs\\acceptance\\hosted-runs\\2026-10-19T17-00-52-047Z-264bbd\\PUB-01-result.png",
+      "sha256": "f775f9d1b4d9603d157b011f4efb464ac6960c0273b301403284503e9faf0f3a"
+    },
+    {
+      "slideNo": 102,
+      "title": "PUB-02　studentクエリでは認証を迂回しない",
+      "type": "合成データの実キャプチャ",
+      "sourceScreenshot": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\docs\\acceptance\\hosted-runs\\2026-10-19T17-00-52-047Z-264bbd\\PUB-02-unauthenticated-query.png",
+      "sha256": "f775f9d1b4d9603d157b011f4efb464ac6960c0273b301403284503e9faf0f3a"
+    },
+    {
+      "slideNo": 103,
+      "title": "PUB-02　studentクエリでは認証を迂回しない",
+      "type": "合成データの実キャプチャ",
+      "sourceScreenshot": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\docs\\acceptance\\hosted-runs\\2026-10-19T17-00-52-047Z-264bbd\\PUB-02-result.png",
+      "sha256": "336985bc1dfc709778e298d192e1916e191959c54a208014fb4474c623139478"
+    },
+    {
+      "slideNo": 104,
+      "title": "PUB-03　明示した保護者デモの家庭・残高表示",
+      "type": "合成データの実キャプチャ",
+      "sourceScreenshot": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\docs\\acceptance\\hosted-runs\\2026-10-19T17-00-52-047Z-264bbd\\PUB-03-result.png",
+      "sha256": "336985bc1dfc709778e298d192e1916e191959c54a208014fb4474c623139478"
+    },
+    {
+      "slideNo": 105,
+      "title": "PUB-04　ログアウトと管理者・保護者の切替",
+      "type": "合成データの実キャプチャ",
+      "sourceScreenshot": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\docs\\acceptance\\hosted-runs\\2026-10-19T17-00-52-047Z-264bbd\\PUB-04-logged-out.png",
+      "sha256": "f775f9d1b4d9603d157b011f4efb464ac6960c0273b301403284503e9faf0f3a"
+    },
+    {
+      "slideNo": 106,
+      "title": "PUB-04　ログアウトと管理者・保護者の切替",
+      "type": "合成データの実キャプチャ",
+      "sourceScreenshot": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\docs\\acceptance\\hosted-runs\\2026-10-19T17-00-52-047Z-264bbd\\PUB-04-result.png",
+      "sha256": "3170fb5611c7f90e6fcae968360be220e83d4c6d4b72789e34f64bf0aa40c963"
+    },
+    {
+      "slideNo": 107,
+      "title": "PUB-05　画面から架空生徒を登録",
+      "type": "合成データの実キャプチャ",
+      "sourceScreenshot": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\docs\\acceptance\\hosted-runs\\2026-10-19T17-00-52-047Z-264bbd\\PUB-05-result.png",
+      "sha256": "00d0b5aa6ff389396d351e55cee88b4dcbf1be5c36bc31ed6a00c2f95f82f675"
+    },
+    {
+      "slideNo": 108,
+      "title": "PUB-06　画面から10回券を追加",
+      "type": "合成データの実キャプチャ",
+      "sourceScreenshot": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\docs\\acceptance\\hosted-runs\\2026-10-19T17-00-52-047Z-264bbd\\PUB-06-result.png",
+      "sha256": "de19807b126ad3f7d56f1fdb6e6a9ee2ec667f0e57d9c854c8987f4dc1ccd1b1"
+    },
+    {
+      "slideNo": 109,
+      "title": "PUB-07　保護者が画面からお迎え予約",
+      "type": "合成データの実キャプチャ",
+      "sourceScreenshot": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\docs\\acceptance\\hosted-runs\\2026-10-19T17-00-52-047Z-264bbd\\PUB-07-result.png",
+      "sha256": "913a58aa76f1ba7c73105005a3166e8684661e5c691d8897f33ae1338e0af419"
+    },
+    {
+      "slideNo": 110,
+      "title": "PUB-08　保護者が画面から送り予約",
+      "type": "合成データの実キャプチャ",
+      "sourceScreenshot": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\docs\\acceptance\\hosted-runs\\2026-10-19T17-00-52-047Z-264bbd\\PUB-08-result.png",
+      "sha256": "e6fa161a41f9f8071f9bc7df64b149aa9ad6e2618bdbd25744b4da99ef4af8ec"
+    },
+    {
+      "slideNo": 111,
+      "title": "PUB-09　保護者が画面から往復予約",
+      "type": "合成データの実キャプチャ",
+      "sourceScreenshot": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\docs\\acceptance\\hosted-runs\\2026-10-19T17-00-52-047Z-264bbd\\PUB-09-result.png",
+      "sha256": "aebe1ee524314c8ba8519d43f43acc49ea2c0c22ac64be2b006587532047d0cc"
+    },
+    {
+      "slideNo": 112,
+      "title": "PUB-10　管理者予約者属性をセッションから決定",
+      "type": "合成データの実キャプチャ",
+      "sourceScreenshot": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\docs\\acceptance\\hosted-runs\\2026-10-19T17-00-52-047Z-264bbd\\PUB-10-result.png",
+      "sha256": "7f8d1c3ae17e7f7cdf41606ef1e84c082a00f1db10a9d827defb96ec69c63edf"
+    },
+    {
+      "slideNo": 113,
+      "title": "PUB-11　保護者の取消確認・取消後表示",
+      "type": "合成データの実キャプチャ",
+      "sourceScreenshot": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\docs\\acceptance\\hosted-runs\\2026-10-19T17-00-52-047Z-264bbd\\PUB-11-result.png",
+      "sha256": "208fd8e7c20bc72c55d5caf85fbe89b21ecadbcd45f5fb72eddd7c9a7d4486f0"
+    },
+    {
+      "slideNo": 114,
+      "title": "PUB-12　管理者取消と取消後の操作非表示",
+      "type": "合成データの実キャプチャ",
+      "sourceScreenshot": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\docs\\acceptance\\hosted-runs\\2026-10-19T17-00-52-047Z-264bbd\\PUB-12-result.png",
+      "sha256": "929a5ee4bbabe3fa42cc39e47db505f742f51067e8962c6befb9ae05cc4e6e62"
+    },
+    {
+      "slideNo": 115,
+      "title": "PUB-13　当日の一覧とGoogle地図リンク",
+      "type": "合成データの実キャプチャ",
+      "sourceScreenshot": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\docs\\acceptance\\hosted-runs\\2026-10-19T17-00-52-047Z-264bbd\\PUB-13-result.png",
+      "sha256": "5f684110ed7b3c0db3a646ec9ba4d3361673a3e0ffebdb1328218e1c919205de"
+    },
+    {
+      "slideNo": 116,
+      "title": "PUB-14　管理者が片道を完了",
+      "type": "合成データの実キャプチャ",
+      "sourceScreenshot": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\docs\\acceptance\\hosted-runs\\2026-10-19T17-00-52-047Z-264bbd\\PUB-14-result.png",
+      "sha256": "db6d861d7ea0c64ed551419c710c23df10d36d73304c7f0a6132156447896e54"
+    },
+    {
+      "slideNo": 117,
+      "title": "PUB-15　管理者が往復を完了",
+      "type": "合成データの実キャプチャ",
+      "sourceScreenshot": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\docs\\acceptance\\hosted-runs\\2026-10-19T17-00-52-047Z-264bbd\\PUB-15-result.png",
+      "sha256": "b89f71f77fc5d914dccfc322806d9372d9ba1d5d9b4ab7d939989b8b0ff89707"
+    },
+    {
+      "slideNo": 118,
+      "title": "PUB-16　必須項目の空欄を送信しない",
+      "type": "合成データの実キャプチャ",
+      "sourceScreenshot": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\docs\\acceptance\\hosted-runs\\2026-10-19T17-00-52-047Z-264bbd\\PUB-16-student-required.png",
+      "sha256": "c820228d04cc94eb69bc5f19fa2a693c1f31c6d4653341ae2275c9d5251bc1fe"
+    },
+    {
+      "slideNo": 119,
+      "title": "PUB-16　必須項目の空欄を送信しない",
+      "type": "合成データの実キャプチャ",
+      "sourceScreenshot": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\docs\\acceptance\\hosted-runs\\2026-10-19T17-00-52-047Z-264bbd\\PUB-16-result.png",
+      "sha256": "6f36b7531adf9a3a0361d982647fca4ab2bf8946ba4842be179ab2a770133899"
+    },
+    {
+      "slideNo": 120,
+      "title": "PUB-17　画面で不正なチケット枚数・金額を拒否",
+      "type": "合成データの実キャプチャ",
+      "sourceScreenshot": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\docs\\acceptance\\hosted-runs\\2026-10-19T17-00-52-047Z-264bbd\\PUB-17-result.png",
+      "sha256": "394aad978ee4830dc61cc20280a825a885043b054d81c6156e8307b241cf7b63"
+    },
+    {
+      "slideNo": 121,
+      "title": "PUB-18　375pxで管理・保護者・予約フォームを表示",
+      "type": "合成データの実キャプチャ",
+      "sourceScreenshot": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\docs\\acceptance\\hosted-runs\\2026-10-19T17-00-52-047Z-264bbd\\PUB-18-teacher.png",
+      "sha256": "1bba42e8a4ca30a089c790b24a69b9dd4e335cf992c7b702ce9901f89d1ed7fe"
+    },
+    {
+      "slideNo": 122,
+      "title": "PUB-18　375pxで管理・保護者・予約フォームを表示",
+      "type": "合成データの実キャプチャ",
+      "sourceScreenshot": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\docs\\acceptance\\hosted-runs\\2026-10-19T17-00-52-047Z-264bbd\\PUB-18-parent.png",
+      "sha256": "0dc8abcc8ebbfbadb1e6ca1f72d3f3dca8f4d30f2650b2bcb5d5a5a6a17d258f"
+    },
+    {
+      "slideNo": 123,
+      "title": "PUB-18　375pxで管理・保護者・予約フォームを表示",
+      "type": "合成データの実キャプチャ",
+      "sourceScreenshot": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\docs\\acceptance\\hosted-runs\\2026-10-19T17-00-52-047Z-264bbd\\PUB-18-booking.png",
+      "sha256": "142b89983ad09dbebe709399f66f8a28600e2eb75295db8dcc671f5053409260"
+    },
+    {
+      "slideNo": 124,
+      "title": "PUB-18　375pxで管理・保護者・予約フォームを表示",
+      "type": "合成データの実キャプチャ",
+      "sourceScreenshot": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\docs\\acceptance\\hosted-runs\\2026-10-19T17-00-52-047Z-264bbd\\PUB-18-result.png",
+      "sha256": "8778e721445721192cd34c49b5471f9ba0624e66cb6f70391fb3c1bd2390511f"
+    },
+    {
+      "slideNo": 125,
+      "title": "PUB-19　生徒・予約の再読込後の永続化",
+      "type": "合成データの実キャプチャ",
+      "sourceScreenshot": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\docs\\acceptance\\hosted-runs\\2026-10-19T17-00-52-047Z-264bbd\\PUB-19-student.png",
+      "sha256": "577411af0a9c8fb19fd22b12a02a8e805bdb873bf597f5f549896e412a45802e"
+    },
+    {
+      "slideNo": 126,
+      "title": "PUB-19　生徒・予約の再読込後の永続化",
+      "type": "合成データの実キャプチャ",
+      "sourceScreenshot": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\docs\\acceptance\\hosted-runs\\2026-10-19T17-00-52-047Z-264bbd\\PUB-19-result.png",
+      "sha256": "52da562bcaee8f5df420688663c0504251bd0d1e49f5c7b6bea914f3b2f7e48d"
+    },
+    {
+      "slideNo": 127,
+      "title": "PUB-20　設定保存でデモから実接続へ自動切替しない",
+      "type": "合成データの実キャプチャ",
+      "sourceScreenshot": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\docs\\acceptance\\hosted-runs\\2026-10-19T17-00-52-047Z-264bbd\\PUB-20-result.png",
+      "sha256": "56eb4088e77ca51e0b9c7a4448b73ab66d9457a9236802392e626bee758f11ef"
+    },
+    {
+      "slideNo": 128,
+      "title": "PUB-21　実際のデモ完了操作で残高2・1・0の案内",
+      "type": "合成データの実キャプチャ",
+      "sourceScreenshot": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\docs\\acceptance\\hosted-runs\\2026-10-19T17-00-52-047Z-264bbd\\PUB-21-balance-2.png",
+      "sha256": "62b30298877f998e869a869105b4eed5d5ad855f4fbb40658cd031e4271f3607"
+    },
+    {
+      "slideNo": 129,
+      "title": "PUB-21　実際のデモ完了操作で残高2・1・0の案内",
+      "type": "合成データの実キャプチャ",
+      "sourceScreenshot": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\docs\\acceptance\\hosted-runs\\2026-10-19T17-00-52-047Z-264bbd\\PUB-21-balance-1.png",
+      "sha256": "248dee799cf7fdb16ec041e952815fcdbc1ac5e0a7706b490d7be1c47cbe0a9c"
+    },
+    {
+      "slideNo": 130,
+      "title": "PUB-21　実際のデモ完了操作で残高2・1・0の案内",
+      "type": "合成データの実キャプチャ",
+      "sourceScreenshot": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\docs\\acceptance\\hosted-runs\\2026-10-19T17-00-52-047Z-264bbd\\PUB-21-balance-0.png",
+      "sha256": "238177bbfe185828e1bed396ae20dbc0645dc3c59b69829cdef48aae2dba5f51"
+    },
+    {
+      "slideNo": 131,
+      "title": "PUB-21　実際のデモ完了操作で残高2・1・0の案内",
+      "type": "合成データの実キャプチャ",
+      "sourceScreenshot": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\docs\\acceptance\\hosted-runs\\2026-10-19T17-00-52-047Z-264bbd\\PUB-21-result.png",
+      "sha256": "c323d94b05ce2ad569a0a9f65377e35d6796f723089b534cf3c9b2e6e7101de0"
+    },
+    {
+      "slideNo": 132,
+      "title": "PUB-22　模擬HTTPS障害で各更新を成功扱いしない",
+      "type": "合成データの実キャプチャ",
+      "sourceScreenshot": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\docs\\acceptance\\hosted-runs\\2026-10-19T17-00-52-047Z-264bbd\\PUB-22-reservation-failure.png",
+      "sha256": "cafcff062a13afdd1efa19c65bececc4f734a7f206d227df68129dcd7aadbeda"
+    },
+    {
+      "slideNo": 133,
+      "title": "PUB-22　模擬HTTPS障害で各更新を成功扱いしない",
+      "type": "合成データの実キャプチャ",
+      "sourceScreenshot": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\docs\\acceptance\\hosted-runs\\2026-10-19T17-00-52-047Z-264bbd\\PUB-22-tickets-abort.png",
+      "sha256": "f934f4b0a63adb7d321a997967db3bb36b619c51005b78f2353f514f1a8bc98c"
+    },
+    {
+      "slideNo": 134,
+      "title": "PUB-22　模擬HTTPS障害で各更新を成功扱いしない",
+      "type": "合成データの実キャプチャ",
+      "sourceScreenshot": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\docs\\acceptance\\hosted-runs\\2026-10-19T17-00-52-047Z-264bbd\\PUB-22-tickets-http.png",
+      "sha256": "b9b4672daa5eafb7fbee327d678d74b55b5cf00f63b251f748405a65a6fdbddb"
+    },
+    {
+      "slideNo": 135,
+      "title": "PUB-22　模擬HTTPS障害で各更新を成功扱いしない",
+      "type": "合成データの実キャプチャ",
+      "sourceScreenshot": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\docs\\acceptance\\hosted-runs\\2026-10-19T17-00-52-047Z-264bbd\\PUB-22-tickets-json.png",
+      "sha256": "2a8870dd6b459acca4c9dffa174c674d68be90bc1b2cbac2fd81bd7d33bd38c1"
+    },
+    {
+      "slideNo": 136,
+      "title": "PUB-22　模擬HTTPS障害で各更新を成功扱いしない",
+      "type": "合成データの実キャプチャ",
+      "sourceScreenshot": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\docs\\acceptance\\hosted-runs\\2026-10-19T17-00-52-047Z-264bbd\\PUB-22-tickets-response.png",
+      "sha256": "ad343b82e342515148aaaa1ee33c14420fb0d7aad7d0fb03d6150730fe31dc9e"
+    },
+    {
+      "slideNo": 137,
+      "title": "PUB-22　模擬HTTPS障害で各更新を成功扱いしない",
+      "type": "合成データの実キャプチャ",
+      "sourceScreenshot": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\docs\\acceptance\\hosted-runs\\2026-10-19T17-00-52-047Z-264bbd\\PUB-22-student-failure.png",
+      "sha256": "fc8985edf054fbc05c5d80211f26ce248881bc3312a41f913804cf001b2e00e6"
+    },
+    {
+      "slideNo": 138,
+      "title": "PUB-22　模擬HTTPS障害で各更新を成功扱いしない",
+      "type": "合成データの実キャプチャ",
+      "sourceScreenshot": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\docs\\acceptance\\hosted-runs\\2026-10-19T17-00-52-047Z-264bbd\\PUB-22-complete-failure.png",
+      "sha256": "e006064f0e8cd7235e86b368d6ab172fd8c00b2f5005f269fc52b2ad344f44ff"
+    },
+    {
+      "slideNo": 139,
+      "title": "PUB-22　模擬HTTPS障害で各更新を成功扱いしない",
+      "type": "合成データの実キャプチャ",
+      "sourceScreenshot": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\docs\\acceptance\\hosted-runs\\2026-10-19T17-00-52-047Z-264bbd\\PUB-22-result.png",
+      "sha256": "91e66db8c1686eabef67df4ed43a7dfb571e234867ac70e0b946ea381dd68546"
+    },
+    {
+      "slideNo": 140,
+      "title": "PUB-23　模擬認証失効応答でログイン画面へ戻る",
+      "type": "合成データの実キャプチャ",
+      "sourceScreenshot": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\docs\\acceptance\\hosted-runs\\2026-10-19T17-00-52-047Z-264bbd\\PUB-23-result.png",
+      "sha256": "028b9a4ece79387812500537c1ceff772be18c38161177ddd8c98845c9ebc175"
+    },
+    {
+      "slideNo": 141,
+      "title": "GASの補助回帰試験",
+      "type": "受入テスト記録"
+    },
+    {
+      "slideNo": 142,
+      "title": "残り8件とリリース判断",
+      "type": "受入テスト記録"
+    },
+    {
+      "slideNo": 143,
+      "title": "残作業の担当案と実施順",
+      "type": "受入テスト記録"
+    }
+  ]
+}

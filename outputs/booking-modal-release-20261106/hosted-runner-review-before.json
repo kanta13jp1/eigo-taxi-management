@@ -1,0 +1,152 @@
+{
+  "reviewedAt": "2026-11-06T11:11:14.641Z",
+  "reviewMode": "Independent read-only source/evidence review; no rerun, deployment, application mutation, or Google login",
+  "scope": "Public eigo-taxi-test App demo through fresh anonymous browser contexts; CSS scroll regression and local demo lifecycle only",
+  "verdict": "SUITABLE_WITH_STATED_BOUNDARIES",
+  "artifacts": {
+    "runner": {
+      "path": "outputs/test_hosted_booking_scroll_20261106.mjs",
+      "sha256": "4b84ce5c40f10cbdb8fc29fc86c27a2098fb8a92d082d22c3045f3b2b182bfdb",
+      "recordedRunHash": "4b84ce5c40f10cbdb8fc29fc86c27a2098fb8a92d082d22c3045f3b2b182bfdb",
+      "match": true
+    },
+    "beforeFinal": {
+      "path": "outputs/booking-modal-hosted-before-final-20261106/results.json",
+      "sha256": "a5b21fc2edb315e32238063fe3ed7e234119f9108968e87876b8d5b18a0f4322",
+      "publicSourceDigest": "5dd9373bc151e7a8f99065092b8f780b461c99b74bf7fcdb870ab17a4ebe8baa",
+      "releaseSha256": "e685ef816493df268fec36e1d49fcca4332b10bf7b9234b8584fd446d204c991",
+      "releaseStable": true
+    },
+    "screenshots": [
+      {
+        "id": "HOSTED-SCROLL-admin-375x500",
+        "file": "outputs/booking-modal-hosted-before-final-20261106/HOSTED-SCROLL-admin-375x500.png",
+        "sha256": "faeeadbd4fc9489f164540bb7982f400b794df980a62e778008f0baf1b1e3137",
+        "match": true
+      },
+      {
+        "id": "HOSTED-SCROLL-admin-812x375",
+        "file": "outputs/booking-modal-hosted-before-final-20261106/HOSTED-SCROLL-admin-812x375.png",
+        "sha256": "d7e1bbfbef9742412961bfb3956efaa0c816cefda9ea608f78ad679fb9f40757",
+        "match": true
+      },
+      {
+        "id": "HOSTED-SCROLL-parent-375x500",
+        "file": "outputs/booking-modal-hosted-before-final-20261106/HOSTED-SCROLL-parent-375x500.png",
+        "sha256": "ffa0767a89f56f100a02da2dc4170ec07c8d9fe828a8a0bccafd74b51f728944",
+        "match": true
+      },
+      {
+        "id": "HOSTED-SCROLL-parent-812x375",
+        "file": "outputs/booking-modal-hosted-before-final-20261106/HOSTED-SCROLL-parent-812x375.png",
+        "sha256": "8511a7af6d1a2042bb658897369412cb989d10c3996dba4cc798220bb0fb8b99",
+        "match": true
+      }
+    ]
+  },
+  "checks": {
+    "fourProductBugReproductions": true,
+    "anonymousContextPerCase": true,
+    "serviceWorkersBlocked": true,
+    "nonGetHeadRequestsAborted": true,
+    "webSocketsClosed": true,
+    "blockedMutationsObserved": 0,
+    "blockedSocketsObserved": 0,
+    "pageErrorsObserved": 0,
+    "screenshotHashesMatch": true
+  },
+  "reproduction": [
+    {
+      "id": "HOSTED-SCROLL-admin-375x500",
+      "status": "FAIL",
+      "buttonBottom": 543,
+      "viewportHeight": 500,
+      "clipped": true,
+      "panelMaxHeight": "none",
+      "panelOverflowY": "hidden",
+      "error": "Registration button must be within viewport after scrolling"
+    },
+    {
+      "id": "HOSTED-SCROLL-admin-812x375",
+      "status": "FAIL",
+      "buttonBottom": 463.5,
+      "viewportHeight": 375,
+      "clipped": true,
+      "panelMaxHeight": "none",
+      "panelOverflowY": "hidden",
+      "error": "Registration button must be within viewport after scrolling"
+    },
+    {
+      "id": "HOSTED-SCROLL-parent-375x500",
+      "status": "FAIL",
+      "buttonBottom": 543,
+      "viewportHeight": 500,
+      "clipped": true,
+      "panelMaxHeight": "none",
+      "panelOverflowY": "hidden",
+      "error": "Registration button must be within viewport after scrolling"
+    },
+    {
+      "id": "HOSTED-SCROLL-parent-812x375",
+      "status": "FAIL",
+      "buttonBottom": 463.5,
+      "viewportHeight": 375,
+      "clipped": true,
+      "panelMaxHeight": "none",
+      "panelOverflowY": "hidden",
+      "error": "Registration button must be within viewport after scrolling"
+    }
+  ],
+  "runnerErrorSeparation": {
+    "earlyRun": "outputs/booking-modal-hosted-before-20261106/results.json",
+    "earlyRunScriptSha256": "8cbbe2459163e62fd848a0a0dd55012756c9fb696f078e93213af713f2254ab5",
+    "parentSelectorErrors": [
+      {
+        "id": "HOSTED-SCROLL-parent-375x500",
+        "runnerStrictSelectorError": true
+      },
+      {
+        "id": "HOSTED-SCROLL-parent-812x375",
+        "runnerStrictSelectorError": true
+      }
+    ],
+    "conclusion": "Early parent failures are runner selector collisions, excluded from product-failure count. Before-final uses exact booking heading and reproduces all four clipping failures."
+  },
+  "safetyReasoning": [
+    "Each case starts in a fresh nonpersistent browser context without reused authenticated storage, and enters the explicit admin/parent demo button.",
+    "App demo banner is asserted before booking. Reviewed ApiService.createReservation uses localStorage when session.mode is demo; live service actions use POST, which the route aborts.",
+    "Service workers are blocked and WebSockets are closed. Current before-final evidence has no blocked mutation attempts, socket attempts, or page errors.",
+    "GET/HEAD allowance is not a general guarantee against arbitrary future GET-side effects. The no-live-ledger-write conclusion is scoped to this reviewed published application and its demo branch."
+  ],
+  "assertedAfterScope": [
+    "Registration button fits viewport after scrolling",
+    "Computed panel overflowY is auto",
+    "Tap submits and closes actual form",
+    "Exactly one browser-local ride with expected date/time/role is added",
+    "Ticket balances remain unchanged",
+    "Same-context reload preserves the local reservation record",
+    "Logout followed by reload returns to appropriate login screen and removes logout control"
+  ],
+  "boundaries": [
+    "Mobile/touch emulation in desktop Edge, not iPhone Safari/Chrome physical-device evidence.",
+    "No real Google login, live spreadsheet, Calendar, family authorization, or third-party acceptance coverage.",
+    "Reload asserts localStorage reservation presence, not visibility of the new record in the rendered ride list.",
+    "Logout asserts return to login and loss of authenticated UI, not deletion of browser-local demo records.",
+    "Full-page screenshots exceed viewport height; button reachability is established by boundingBox versus viewport, not full-page image dimensions.",
+    "release.json unchanged at start/end does not alone bind actually loaded asset bytes. Pair after-run with candidate manifest and fresh all-public-payload hash verification."
+  ],
+  "afterRunRequiredChecks": {
+    "runnerHash": "4b84ce5c40f10cbdb8fc29fc86c27a2098fb8a92d082d22c3045f3b2b182bfdb",
+    "expectedCandidateDigest": "b7e510688a6e81268331db6d7d88db8875bf5ce443dbc90f52b4f647f39d1979",
+    "expectedProject": "eigo-taxi-app",
+    "expectedSite": "eigo-taxi-test",
+    "required": [
+      "Four PASS rows and overall pass true",
+      "No mutation/socket/page-error observations",
+      "releaseUnchangedDuringRun true",
+      "Recorded runner hash unchanged from before-final",
+      "Release digest and release.json bytes match isolated candidate manifest",
+      "Independent GET verification of all candidate distHashes succeeds"
+    ]
+  }
+}

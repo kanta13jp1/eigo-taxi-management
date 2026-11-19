@@ -1,0 +1,11 @@
+{
+  "label": "candidate-prepare-release",
+  "cwd": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\outputs\\booking-modal-release-20261106\\candidate",
+  "executable": "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1104-709-0_26.1104.709.0_x64__3k8sg7r9htsxt\\dependencies\\node\\bin\\node.exe",
+  "arguments": [
+    "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\outputs\\booking-modal-release-20261106\\candidate\\scripts\\prepare_test_release.cjs"
+  ],
+  "exitCode": 0,
+  "stdout": "{\n  \"environment\": \"mighty-test\",\n  \"projectId\": \"eigo-taxi-app\",\n  \"siteId\": \"eigo-taxi-test\",\n  \"builtAt\": \"2026-11-06T11:03:04.548Z\",\n  \"baseCommit\": \"2fa6127715017d52ae0c9bd80be39c4db90a47c3\",\n  \"sourceDigest\": \"b7e510688a6e81268331db6d7d88db8875bf5ce443dbc90f52b4f647f39d1979\"\n}\n",
+  "stderr": ""
+}

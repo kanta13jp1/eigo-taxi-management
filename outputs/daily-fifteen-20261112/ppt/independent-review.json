@@ -1,0 +1,25 @@
+{
+  "reviewer": "Independent implementation worker",
+  "reviewedAt": "2026-11-11T22:04:06.8366383Z",
+  "finalSha256": "ab38112ab00b07085dedb977c7ce3591bee2309c19f5e895680066489404297b",
+  "reviewedRenders": [
+    "final-1.png",
+    "final-2.png",
+    "final-8.png"
+  ],
+  "carriedForwardSlides": [
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "result": "PASS",
+  "findings": [],
+  "observations": [
+    "Slide 1 lists fixes 1–15, distribution 4/8/3 on days 10/11/12 and attribution 2+13. Both columns and footers fit.",
+    "Slide 2 contains 15 distinct AT identifiers, the AT-28/AT-03 partial limits and AT-10 outstanding public confirmation. No clipping.",
+    "Slide 8 matches public synthetic recovery: 1 rejected, dashboard present, +6 to 7, roundtrip completion and persisted 5. Captions are legible and fit."
+  ],
+  "nativePowerPointViewed": false
+}

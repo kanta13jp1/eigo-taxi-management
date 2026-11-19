@@ -1,0 +1,25 @@
+Browser tab: 1750956583, Title: "Mighty 送迎管理API｜受入検証用 - プロジェクト編集者 - Apps Script", URL: "https://script.google.com/u/2/home/projects/1AnWQ_1itiEgyEYpmfTFM7HkgmTXu5RsW4H-ahnf3N-TplINguEgCaTrh/edit".
+The following is a diff from the previous accessibility tree with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
+Removed element IDs: 65-66, 71-72
+~						50 button 選択した関数を実行
+~						52 button 選択した関数をデバッグ
+~						55 list 実行する関数を選択
+~							56 (selected) initSpreadsheet
++								74 container ログ 1。 15:17:55. お知らせ. 実行開始.
++									75 text 15:17:55
++									76 text お知らせ
++									77 text 実行開始
++								78 container ログ 2。 15:17:56. お知らせ. 実行完了.
++									79 text 15:17:56
++									80 text お知らせ
++									81 text 実行完了
+The focused UI element is 63 ã¨ãã£ã¿ã¼ (settable) Description: エディターのコンテンツ;アクティビティ オプションを表示するには、Alt+F1 キーを押します。, Value: /**
+ * 英語教室 送迎チケット管理 API
+ * Data API: POST JSON { action, token, ...parameters }. GET is health only.
+ * Configure AUTH_USERS_JSON in Script Properties; see docs/GAS_AUTH_SETUP.md.
+ * This source is authoritative. Existing sheet columns remain 8 / 12 / 7.
+ */
+const STUDENTS_ = "生徒台帳";
+const RIDES_ = "送迎予定履歴";
+const PURCHASES_ = "チケット購入履歴";
+const PENDING_ = "PENDING_MUTATION_JSON";

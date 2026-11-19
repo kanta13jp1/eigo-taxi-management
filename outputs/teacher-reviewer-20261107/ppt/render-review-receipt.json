@@ -1,0 +1,60 @@
+{
+  "status": "PASS",
+  "final": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\docs\\deliverables\\2026-11-07-teacher-review\\teacher-review-guide-2026-11-07-v1.pptx",
+  "sha256": "1d386b16901f9832a3c8141dfa8e72badc0102f48970278567d101bf6d5a033c",
+  "checks": {
+    "reference_manifest_twelve_files_unchanged": true,
+    "delivered_equals_finalized_bytes": true,
+    "ticket_example_arithmetic": true,
+    "exactly_four_slides": true,
+    "four_notes_parts": true,
+    "private_email_and_household_url_absent": true,
+    "customer_fixtures_absent": true,
+    "teacher_google_not_run_stated": true,
+    "optional_examples_explicit": true,
+    "teacher_only_student_stated": true,
+    "table_native_on_page_four": true
+  },
+  "visualInspection": {
+    "status": "PASS",
+    "method": "Viewed each Artifact Tool round-trip PNG at 1280x720, comparing shared logo/frame/font/colors with source slide 11",
+    "slides": [
+      {
+        "slide": 1,
+        "result": "PASS",
+        "clipping": false,
+        "unintendedOverlap": false,
+        "textReadable": true
+      },
+      {
+        "slide": 2,
+        "result": "PASS",
+        "clipping": false,
+        "unintendedOverlap": false,
+        "textReadable": true
+      },
+      {
+        "slide": 3,
+        "result": "PASS",
+        "clipping": false,
+        "unintendedOverlap": false,
+        "textReadable": true
+      },
+      {
+        "slide": 4,
+        "result": "PASS",
+        "clipping": false,
+        "unintendedOverlap": false,
+        "textReadable": true
+      }
+    ]
+  },
+  "claimBoundary": "Package, layout, reimport and local render review only. Native Microsoft PowerPoint display not tested. Teacher Google authentication NOT_RUN.",
+  "independentReview": {
+    "status": "PASS",
+    "reviewer": "/root/teacher_reviewer_plan_1107",
+    "scope": "All four final renders, delivered PPTX XML and relationships, registration evidence, core steps, optional examples, privacy, ticket arithmetic and validation receipt",
+    "findings": [],
+    "nativePowerPoint": "NOT_RUN"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "checkedAt": "2026-11-10T09:12:26.559Z",
+  "completedAt": "2026-11-10T09:12:27.067Z",
+  "url": "https://eigo-taxi-test.web.app",
+  "releaseId": "b80b9e2a7c0b0fc4",
+  "manifestPath": "docs/acceptance/deployment/releases/0b830b69152e45a3/build-manifest.json",
+  "manifestSha256": "6fcd2cc96dd2da9f30a52c68bf6c7cd1fae3b069a2ce702f4c4e05f5875a6b2b",
+  "scope": "Public frontend bytes only; no Google service acceptance or deployment",
+  "results": [
+    {
+      "path": "/assets/index-BvaBSnhA.css",
+      "status": 200,
+      "sha256": "06784942d4e6777783436b8a3f2b30ca2c8eaacf9aa2c4a6d9040433b5233149",
+      "expectedSha256": "06784942d4e6777783436b8a3f2b30ca2c8eaacf9aa2c4a6d9040433b5233149",
+      "match": true
+    },
+    {
+      "path": "/assets/index-K4IFEOnM.js",
+      "status": 200,
+      "sha256": "d710df3f66623250ebb6519252d67008b337950772da993e8270ac6478938763",
+      "expectedSha256": "d710df3f66623250ebb6519252d67008b337950772da993e8270ac6478938763",
+      "match": true
+    },
+    {
+      "path": "/favicon.svg",
+      "status": 200,
+      "sha256": "61bc9a161de58248288e6905425d7180f0624c2865007b97d763fdac12043a66",
+      "expectedSha256": "61bc9a161de58248288e6905425d7180f0624c2865007b97d763fdac12043a66",
+      "match": true
+    },
+    {
+      "path": "/icons.svg",
+      "status": 200,
+      "sha256": "b45fa506195cfcdef406ba9f0c77b36ddc1a7c224040926ec70abc2fdea7b93a",
+      "expectedSha256": "b45fa506195cfcdef406ba9f0c77b36ddc1a7c224040926ec70abc2fdea7b93a",
+      "match": true
+    },
+    {
+      "path": "/index.html",
+      "status": 200,
+      "sha256": "1e8bb94d234abc21c077cfa34feedf14adcf463eb33534294d67416574f4b079",
+      "expectedSha256": "1e8bb94d234abc21c077cfa34feedf14adcf463eb33534294d67416574f4b079",
+      "match": true
+    },
+    {
+      "path": "/release.json",
+      "status": 200,
+      "sha256": "76dc676dc5e1b9bd555fe148363c2afe63dc4e0a34675fcef8f36fbe4405c106",
+      "expectedSha256": "76dc676dc5e1b9bd555fe148363c2afe63dc4e0a34675fcef8f36fbe4405c106",
+      "match": true
+    },
+    {
+      "path": "/",
+      "status": 200,
+      "sha256": "1e8bb94d234abc21c077cfa34feedf14adcf463eb33534294d67416574f4b079",
+      "expectedSha256": "1e8bb94d234abc21c077cfa34feedf14adcf463eb33534294d67416574f4b079",
+      "match": true
+    }
+  ],
+  "pass": true
+}

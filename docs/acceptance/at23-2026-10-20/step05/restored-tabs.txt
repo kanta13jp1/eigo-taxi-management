@@ -1,0 +1,139 @@
+Browser tab: 1750956561, Title: "Mighty AT-23 検証専用 2026-10-20 - Google スプレッドシート", URL: "https://docs.google.com/spreadsheets/d/1hNjywlyQfTvqcgSys8iH7JH5Ru0dYLM9fA7-mGOOSO4/edit?gid=1793901165#gid=1793901165".
+1 AXWebArea Mighty AT-23 検証専用 2026-10-20 - Google スプレッドシート, URL: docs.google.com/spreadsheets/d/1hNjywlyQfTvqcgSys8iH7JH5Ru0dYLM9fA7-mGOOSO4/edit?gid=1793901165#gid=1793901165
+	2 container
+		3 container Description: メニューバー, ID: docs-chrome
+			4 container docs-header
+				5 link Description: スプレッドシート ホーム, Value: docs.google.com/spreadsheets/u/2/?authuser=2&usp=sheets_web, ID: docs-branding-logo-link
+				6 container docs-titlebar-container
+					7 container Mighty AT-23 検証専用 2026-10-20
+						8 container docs-title-widget
+							9 text Mighty AT-23 検証専用 2026-10-20
+							10 text field (settable) Description: 名前を変更, Value: Mighty AT-23 検証専用 2026-10-20
+						121 checkbox Description: スター, Value: 0, ID: docs-star
+						122 button Description: 移動, ID: docs-folder
+						11 button Description: ドキュメントのステータス: 保存しています…., ID: docs-save-indicator-badge
+							252 container
+								253 text 保存しています…
+					14 container
+						15 button Description: 最終編集: 数秒前, ID: docs-revisions-appbarbutton
+						16 checkbox Description: すべてのコメントを表示, Value: 0, ID: docs-docos-commentsbutton
+						123 pop up button (collapsed) Description: ここから通話に参加するか、このタブの画面を通話で共有できます, ID: docs-meet-in-editors-entrypointbutton, Secondary Actions: Expand
+						17 container docs-titlebar-share-client-button
+							18 button 共有します。非公開。 
+								124 text 共有
+							20 pop up button (collapsed) Description: クイック共有操作, ID: scb-quick-actions-menu-button, Secondary Actions: Expand
+						125 container
+							126 button Gemini に質問する
+						21 pop up button (collapsed) Description: Google アカウント: 寛太梅澤 (k-umezawa@ml-mightylink.com), Secondary Actions: Expand
+			22 container docs-bars
+				23 container docs-menubars
+					24 menu bar docs-menubar
+						25 (collapsed) ファイル, ID: docs-file-menu, Secondary Actions: Expand
+						26 (collapsed) 編集, ID: docs-edit-menu, Secondary Actions: Expand
+						27 (collapsed) 表示, ID: docs-view-menu, Secondary Actions: Expand
+						28 (collapsed) 挿入, ID: docs-insert-menu, Secondary Actions: Expand
+						29 (collapsed) 表示形式, ID: docs-format-menu, Secondary Actions: Expand
+						30 (collapsed) データ, ID: w183, Secondary Actions: Expand
+						31 (collapsed) ツール, ID: docs-tools-menu, Secondary Actions: Expand
+						32 (collapsed) Gemini, ID: docs-gemini-menu, Secondary Actions: Expand
+						33 (collapsed) 拡張機能, ID: docs-extensions-menu, Secondary Actions: Expand
+						34 (collapsed) ヘルプ, ID: docs-help-menu, Secondary Actions: Expand
+				35 container docs-toolbar-wrapper
+					36 container docs-primary-toolbars
+						37 toolbar Description: メニューを検索 (Alt+/), ID: docs-omnibox-toolbar
+							38 container
+								39 combo box (settable) メニュー
+						40 toolbar Description: メイン, ID: docs-toolbar
+							41 button Description: 元に戻す (Ctrl+Z), ID: t-undo
+							42 button Description: やり直し (Ctrl+Y), ID: t-redo
+							43 button Description: 印刷 (Ctrl+P), ID: t-print
+							44 checkbox Description: 書式を貼り付け, Value: 0, ID: t-paintformat
+							45 combo box (collapsed) Description: ズーム, ID: t-zoom, Secondary Actions: Expand
+								46 container
+									47 container Description: ズーム のリストで 100% を選択しています。, ID: :4a
+										48 text field (settable) Description: ズーム, Value: 100%
+							49 button Description: 表示形式を通貨に設定, ID: t-num-fmt-currency
+								50 text ¥
+							51 button Description: 表示形式をパーセントに設定, ID: t-num-fmt-percent
+								52 text %
+							53 button Description: 小数点以下の桁数を減らす, ID: t-num-fmt-decimal-decrease
+							54 button Description: 小数点以下の桁数を増やす, ID: t-num-fmt-decimal-increase
+							55 button (collapsed) Description: 表示形式の詳細設定, ID: t-num-fmt-other, Secondary Actions: Expand
+								56 text 123
+							57 list Description: フォント, ID: docs-font-family
+								58 container
+									59 (selected) Value: フォント のリストで デフォルト (Arial) を選択しています。, ID: :4k
+							60 button Description: フォントサイズを縮小 (Ctrl+Shift+カンマ), ID: fontSizeDecrement
+							61 combo box (collapsed) Description: フォント サイズ, ID: fontSizeSelect, Secondary Actions: Expand
+								62 container Description: フォント サイズ のリストで 10 を選択しています。, ID: :4p
+									63 text field (settable) Description: フォント サイズ, Value: 10
+							64 button Description: フォントサイズを拡大 (Ctrl+Shift+ピリオド), ID: fontSizeIncrement
+							65 checkbox Description: 太字 (Ctrl+B), Value: 1, ID: t-bold
+							66 checkbox Description: 斜体 (Ctrl+I), Value: 0, ID: t-italic
+							67 checkbox Description: 取り消し線 (Alt+Shift+5), Value: 0, ID: t-strikethrough
+							68 pop up button (collapsed) Description: テキストの色, ID: t-text-color, Secondary Actions: Expand
+							69 pop up button (collapsed) Description: 塗りつぶしの色, ID: t-cell-color, Secondary Actions: Expand
+							70 pop up button (collapsed) Description: 枠線, ID: t-border, Secondary Actions: Expand
+							71 button (disabled) Description: セルを結合, ID: t-merge-button
+							72 button (disabled, collapsed) Description: 結合タイプを選択, ID: t-merge-menu, Secondary Actions: Expand
+							73 pop up button (collapsed) Description: 水平方向の配置, ID: t-align, Secondary Actions: Expand
+							74 pop up button (collapsed) Description: 垂直方向の配置, ID: t-valign, Secondary Actions: Expand
+							75 pop up button (collapsed) Description: テキストを折り返す, ID: t-textwrap, Secondary Actions: Expand
+							76 pop up button (collapsed) Description: テキストの回転, ID: t-text-rotation, Secondary Actions: Expand
+							77 button Description: リンクを挿入 (Ctrl+K), ID: t-insert-link
+							78 button Description: コメントを挿入 (Ctrl+Alt+M), ID: t-insert-doco
+							79 button Description: グラフを挿入, ID: t-insert-chart
+							80 checkbox Description: フィルタを作成, Value: 0, ID: t-autofilter-toggle
+							81 pop up button (collapsed) Description: フィルタ表示, ID: t-autofilter-menu, Secondary Actions: Expand
+							82 pop up button (collapsed) Description: 関数, ID: t-formula, Secondary Actions: Expand
+							127 button Description: 入力ツール (Ctrl+Shift+K), ID: inputToolsToggleButton
+							128 pop up button (collapsed) Description: 入力ツールを選択 (Ctrl+Alt+Shift+K), ID: inputToolsMenuButton, Secondary Actions: Expand
+					83 toolbar Description: モードと表示, ID: docs-side-toolbar
+						84 button Description: メニューを非表示 (Ctrl+Shift+F), ID: viewModeButton
+			129 button サイドパネルを表示
+			85 container docs-additional-bars
+				86 container formula-bar-name-box-wrapper
+					87 container 名前ボックス (Ctrl + J)
+						88 text field (settable) Value: A1, ID: t-name-box
+						89 pop up button (collapsed) Description: 名前ボックスのメニューボタン。メニュー項目から 1 つを選択すると、対応する名前付き範囲に移動します。, ID: t-name-box-dropdown, Secondary Actions: Expand
+					90 text entry area (settable) 購入ID
+
+						272 text 購入ID
+		92 container docs-editor
+			250 container 1793901165-grid-container
+				251 container 1793901165-static-overlay-container
+			95 container シートタブバー
+				96 toolbar
+					97 button Description: シートを追加, ID: :e
+					98 pop up button (collapsed) Description: すべてのシート, ID: :f, Secondary Actions: Expand
+				99 toolbar
+					254 pop up button (collapsed) 生徒台帳, ID: f9awgy:1td, Secondary Actions: Expand
+						255 container
+							256 text 生徒台帳
+					257 pop up button (collapsed) AT23生成証跡_生徒台帳, ID: f9awgy:1tu, Secondary Actions: Expand
+						258 container
+							259 text AT23生成証跡_生徒台帳
+					260 pop up button (collapsed) AT23生成証跡_送迎予定履歴, ID: f9awgy:1ub, Secondary Actions: Expand
+						261 container
+							262 text AT23生成証跡_送迎予定履歴
+					263 pop up button (collapsed) AT23生成証跡_チケット購入履歴, ID: f9awgy:1us, Secondary Actions: Expand
+						264 container
+							265 text AT23生成証跡_チケット購入履歴
+					266 pop up button (collapsed) 送迎予定履歴, ID: f9awgy:1v9, Secondary Actions: Expand
+						267 container
+							268 text 送迎予定履歴
+					269 pop up button (collapsed) チケット購入履歴, ID: f9awgy:1vq, Secondary Actions: Expand
+						270 container
+							271 text チケット購入履歴
+		118 text entry area (settable) ID: waffle-rich-text-editor, Value: 
+
+
+		119 link Description: スクリーン リーダーのサポートを有効にする, Value: docs.google.com/spreadsheets/d/1hNjywlyQfTvqcgSys8iH7JH5Ru0dYLM9fA7-mGOOSO4/edit?gid=1793901165#, ID: docs-a11y-aria-enable
+		120 text entry area (settable)
+		131 text バナーを非表示にしました
+		132 text スクリーン リーダーのサポートを有効にするには、Ctrl+Alt+Z を押します。キーボード ショートカットの詳細については、Ctrl+スラッシュ を押します。
+		133 container Description: 情報カード, ID: I__HC_94253229
+			134 AXWebArea about:blank
+
+The focused UI element is 118 text entry area (settable) ID: waffle-rich-text-editor, Value: 
+

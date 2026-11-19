@@ -1,0 +1,169 @@
+{
+  "startedAt": "2026-11-07T07:01:18.895Z",
+  "finishedAt": "2026-11-07T07:01:32.571Z",
+  "date": "2026-11-07",
+  "base": "https://eigo-taxi-test.web.app",
+  "scope": "Published frontend using anonymous browser-local demo only; no Google identity, live spreadsheet, Calendar, physical device or third-party acceptance",
+  "browser": "Microsoft Edge headless mobile/touch emulation",
+  "testScriptSha256": "4b84ce5c40f10cbdb8fc29fc86c27a2098fb8a92d082d22c3045f3b2b182bfdb",
+  "release": {
+    "environment": "mighty-test",
+    "projectId": "eigo-taxi-app",
+    "siteId": "eigo-taxi-test",
+    "builtAt": "2026-11-06T11:03:04.548Z",
+    "baseCommit": "2fa6127715017d52ae0c9bd80be39c4db90a47c3",
+    "sourceDigest": "b7e510688a6e81268331db6d7d88db8875bf5ce443dbc90f52b4f647f39d1979"
+  },
+  "releaseSha256": "cc5e02f0e18394a600de1631af9d828aec777be81d2887c1927616ec4f3e848d",
+  "releaseUnchangedDuringRun": true,
+  "results": [
+    {
+      "id": "HOSTED-SCROLL-admin-375x500",
+      "role": "admin",
+      "viewport": {
+        "width": 375,
+        "height": 500
+      },
+      "status": "PASS",
+      "submitBox": {
+        "x": 194.5,
+        "y": 399,
+        "width": 139.5,
+        "height": 60
+      },
+      "panel": {
+        "maxHeight": "468px",
+        "overflowY": "auto",
+        "clientHeight": 466,
+        "scrollHeight": 634,
+        "scrollTop": 168
+      },
+      "assertions": [
+        "published demo mode",
+        "button reachable",
+        "submission closes form",
+        "one local reservation added",
+        "JST date and role match",
+        "balance unchanged",
+        "reload preserves reservation",
+        "logout and reload hide ledger"
+      ],
+      "screenshot": {
+        "file": "HOSTED-SCROLL-admin-375x500.png",
+        "sha256": "bec102d8fe9b01c32fea59d99afb313439b5873ed36dc6315cf3381642b75c6c"
+      }
+    },
+    {
+      "id": "HOSTED-SCROLL-admin-812x375",
+      "role": "admin",
+      "viewport": {
+        "width": 812,
+        "height": 375
+      },
+      "status": "PASS",
+      "submitBox": {
+        "x": 413,
+        "y": 292,
+        "width": 224,
+        "height": 42
+      },
+      "panel": {
+        "maxHeight": "343px",
+        "overflowY": "auto",
+        "clientHeight": 341,
+        "scrollHeight": 600,
+        "scrollTop": 259
+      },
+      "assertions": [
+        "published demo mode",
+        "button reachable",
+        "submission closes form",
+        "one local reservation added",
+        "JST date and role match",
+        "balance unchanged",
+        "reload preserves reservation",
+        "logout and reload hide ledger"
+      ],
+      "screenshot": {
+        "file": "HOSTED-SCROLL-admin-812x375.png",
+        "sha256": "0d246238d6d9cbcd0a774304b8f8a6fb51c09b51810b14ab6748936ef0368ee4"
+      }
+    },
+    {
+      "id": "HOSTED-SCROLL-parent-375x500",
+      "role": "parent",
+      "viewport": {
+        "width": 375,
+        "height": 500
+      },
+      "status": "PASS",
+      "submitBox": {
+        "x": 194.5,
+        "y": 399,
+        "width": 139.5,
+        "height": 60
+      },
+      "panel": {
+        "maxHeight": "468px",
+        "overflowY": "auto",
+        "clientHeight": 466,
+        "scrollHeight": 634,
+        "scrollTop": 168
+      },
+      "assertions": [
+        "published demo mode",
+        "button reachable",
+        "submission closes form",
+        "one local reservation added",
+        "JST date and role match",
+        "balance unchanged",
+        "reload preserves reservation",
+        "logout and reload hide ledger"
+      ],
+      "screenshot": {
+        "file": "HOSTED-SCROLL-parent-375x500.png",
+        "sha256": "2018ada371dc602beaa7e19e4a4cd969716724430b2527d85131a86f58d02fb0"
+      }
+    },
+    {
+      "id": "HOSTED-SCROLL-parent-812x375",
+      "role": "parent",
+      "viewport": {
+        "width": 812,
+        "height": 375
+      },
+      "status": "PASS",
+      "submitBox": {
+        "x": 413,
+        "y": 292,
+        "width": 224,
+        "height": 42
+      },
+      "panel": {
+        "maxHeight": "343px",
+        "overflowY": "auto",
+        "clientHeight": 341,
+        "scrollHeight": 600,
+        "scrollTop": 259
+      },
+      "assertions": [
+        "published demo mode",
+        "button reachable",
+        "submission closes form",
+        "one local reservation added",
+        "JST date and role match",
+        "balance unchanged",
+        "reload preserves reservation",
+        "logout and reload hide ledger"
+      ],
+      "screenshot": {
+        "file": "HOSTED-SCROLL-parent-812x375.png",
+        "sha256": "be5c8b24adc75b73d897db8d7f033ee6318810df7d1fa09bf03934a1c88ee4a7"
+      }
+    }
+  ],
+  "blockedMutations": [],
+  "blockedSockets": [],
+  "pageErrors": [],
+  "pass": true
+}

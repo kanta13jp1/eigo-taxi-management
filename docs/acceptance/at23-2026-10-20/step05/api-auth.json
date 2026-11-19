@@ -1,0 +1,20 @@
+{
+  "health": {
+    "success": true,
+    "message": "Eigo Taxi Link API Ready"
+  },
+  "invalid": {
+    "success": false,
+    "code": "UNAUTHORIZED",
+    "error": "アクセスキーを確認してください"
+  },
+  "valid": {
+    "success": true,
+    "data": {
+      "id": "admin-01",
+      "name": "AT23 Admin 1",
+      "role": "admin",
+      "studentIds": []
+    }
+  }
+}

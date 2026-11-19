@@ -1,0 +1,32 @@
+diff --git a/docs/acceptance/deployment/releases/b88aec3501218a21/source/src/components/TeacherDashboard.tsx b/outputs/daily-fourteen-20261112/stage/src/components/TeacherDashboard.tsx
+index 79a5fc8..e848816 100644
+--- a/docs/acceptance/deployment/releases/b88aec3501218a21/source/src/components/TeacherDashboard.tsx
++++ b/outputs/daily-fourteen-20261112/stage/src/components/TeacherDashboard.tsx
+@@ -91,6 +91,11 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
+     }
+   };
+ 
++  const completionLabel = (ride: RideReservation) => {
++    const { text, consume } = getRideTypeLabel(ride.rideType);
++    return `送迎完了（${consume}回消費） ${ride.studentName} ${ride.rideDate} ${ride.rideTime} ${text}`;
++  };
++
+   return (
+     <div className="space-y-6">
+       {/* 管理者バナー */}
+@@ -322,6 +327,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
+                       {isScheduled && (
+                         <button
+                           onClick={() => onCompleteRide(ride.id)}
++                          aria-label={completionLabel(ride)}
+                           className="bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs py-2 px-3.5 rounded-xl shadow-xs inline-flex items-center gap-1.5 transition-colors"
+                         >
+                           <CheckCircle2 className="w-4 h-4" />
+@@ -422,6 +428,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
+                               <div className="flex items-center justify-end gap-1.5">
+                                 <button
+                                   onClick={() => onCompleteRide(ride.id)}
++                                  aria-label={completionLabel(ride)}
+                                   className="text-xs bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-1 px-2.5 rounded-lg"
+                                 >
+                                   完了

@@ -1,0 +1,14 @@
+{
+  "reviewer": "lead agent independent of implementation worker",
+  "baseline": "985193fa8987e002",
+  "file": "src/components/AddRideModal.tsx",
+  "stagedSha256": "91314bb29d083cd2a0dc9b5bd43322185d37f8b8fbd815d674fa86b01f4bf687",
+  "checks": [
+    "Diff limited to fieldset/legend semantics and focus-within rings on three radio labels",
+    "Existing radio names, values, checked state and onChange handlers retained",
+    "Submission, ticket consumption, role and API behavior unchanged",
+    "Legend includes the visible ride type heading and ticket unit explanation"
+  ],
+  "pass": true,
+  "limitation": "Browser keyboard focus and responsive layout require separate public UI verification; workspace source was still baseline at review time"
+}

@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "scope": "Independent read-only offline review of captured admin UI and both progress documents.",
+  "evidenceHashesVerified": 25,
+  "preservedVisible": {
+    "originalAdminEntries": 2,
+    "kobayashiEntryAndAssignment": true,
+    "kobayashiIndividualUrl": true,
+    "existingStudentCards": 4,
+    "existingScheduleRows": 6,
+    "kobayashiBalance": 5,
+    "kobayashiFixedScheduledRides": 2
+  },
+  "teacher": {
+    "newReviewerEntries": 1,
+    "active": true,
+    "assignedSeparateSyntheticStudents": 1,
+    "initialTickets": 5,
+    "initialVisibleRides": 0,
+    "emailAndInvitationUrlsMatched": true
+  },
+  "teacherGoogleIdentity": "PENDING",
+  "teacherActualPortalLogin": "NOT_RUN",
+  "customerAcceptance": "0/6",
+  "production": "HOLD",
+  "outbound": "Documents report no calendar share, notification, or invitation sent. No provider audit performed.",
+  "limitation": "Preservation comparison covers captured fields in the admin UI. Underlying registry, calendar ACLs, and spreadsheet cells were not independently audited.",
+  "findings": []
+}

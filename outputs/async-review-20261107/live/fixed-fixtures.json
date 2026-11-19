@@ -1,0 +1,57 @@
+{
+  "checkedAt": "2026-11-07T09:26:04.761045+00:00",
+  "mode": "developer-real-test-preparation",
+  "testOnly": true,
+  "fixtures": [
+    {
+      "label": "A",
+      "rideId": "RIDE-1724e731-bce7-4f5c-9808-b6e38f2b5d8b",
+      "eventId": "t56p0i5uihfvuaj0gu519588d8@google.com",
+      "studentId": "STU-CUST-20261107",
+      "date": "2026-11-07",
+      "time": "16:00",
+      "type": "pickup",
+      "pickupLocation": "CUST-04 完了用A・片道／実在しない場所",
+      "status": "scheduled",
+      "completionAt": null,
+      "expectedTicketCost": 1,
+      "calendarDescriptionIdMatched": true,
+      "calendarDateTimeLocationMatched": true,
+      "ledgerEvidence": "outputs/async-review-20261107/live/fixed-fixtures-ledger.tsv",
+      "calendarEvidence": "outputs/async-review-20261107/live/calendar-a-ax.txt"
+    },
+    {
+      "label": "B",
+      "rideId": "RIDE-f2cb5950-c09b-43a8-aa5b-3d78eaf49218",
+      "eventId": "801th14i03t01r7bv66h9lgdt4@google.com",
+      "studentId": "STU-CUST-20261107",
+      "date": "2026-11-07",
+      "time": "16:00",
+      "type": "roundtrip",
+      "pickupLocation": "CUST-04 完了用B・往復／実在しない場所",
+      "status": "scheduled",
+      "completionAt": null,
+      "expectedTicketCost": 2,
+      "calendarDescriptionIdMatched": true,
+      "calendarDateTimeLocationMatched": true,
+      "ledgerEvidence": "outputs/async-review-20261107/live/fixed-fixtures-ledger.tsv",
+      "calendarEvidence": "outputs/async-review-20261107/live/calendar-b-ax.txt"
+    }
+  ],
+  "initialBalance": 5,
+  "siteExplicitReload": true,
+  "scheduledFixtureCount": 2,
+  "siteA03CompletionButtonsVisible": true,
+  "creationRequestsPerFixture": 1,
+  "bothCreationResponsesNormal": true,
+  "consoleErrorsOrWarningsObserved": 0,
+  "completedDuringPreparation": 0,
+  "customerPassed": 0,
+  "customerTotal": 6,
+  "productionStarted": false,
+  "limitations": [
+    "Customer first Google login and both reviewer portals have not been observed live.",
+    "Fixed-date operation beyond the date is covered locally; live observation was on the fixed date.",
+    "Earlier v5 generic registration error cause remains unidentified; these are two subsequent normal responses, not evidence of a root-cause fix."
+  ]
+}

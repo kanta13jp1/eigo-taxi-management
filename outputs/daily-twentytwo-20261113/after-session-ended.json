@@ -1,0 +1,10 @@
+{
+  "mode": "after",
+  "scenario": "session-ended",
+  "base": "http://127.0.0.1:50939",
+  "successVisible": false,
+  "staleErrorVisible": false,
+  "loginVisible": true,
+  "writeCount": 1,
+  "blockedRequests": []
+}

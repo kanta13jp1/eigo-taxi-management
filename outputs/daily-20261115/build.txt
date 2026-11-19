@@ -1,0 +1,18 @@
+vite v8.3.3 building client environment for production...
+transforming...
+✓ 1950 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.50 kB │ gzip:   0.36 kB
+dist/assets/index-j9C27HUZ.css   23.36 kB │ gzip:   5.24 kB
+dist/assets/index-dKQz-5SP.js   450.50 kB │ gzip: 135.43 kB
+
+✓ built in 4.92s
+{
+  "environment": "mighty-test",
+  "projectId": "eigo-taxi-app",
+  "siteId": "eigo-taxi-test",
+  "builtAt": "2026-11-15T09:05:27.682Z",
+  "baseCommit": "2fa6127715017d52ae0c9bd80be39c4db90a47c3",
+  "sourceDigest": "5f652531b5aea67c7295084e025563b4c32010cd3d4e5791abd0f8b06f65672f"
+}

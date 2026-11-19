@@ -1,0 +1,11 @@
+{
+  "case": "AT-16",
+  "checkedAt": "2026-11-12T06:39:05.589Z",
+  "scope": "React App + synthetic demo service and mocked live API responses; no Google calls",
+  "automaticRereads": 0,
+  "staleCompletionButtonRemains": true,
+  "status": "cancelled",
+  "balanceBefore": 7,
+  "balanceAfter": 7,
+  "otherRidesAndBalancesPreserved": true
+}

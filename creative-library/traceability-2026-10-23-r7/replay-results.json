@@ -1,0 +1,26 @@
+{
+  "id": "AT27-LIVE-02",
+  "date": "2026-10-23",
+  "environment": "published-test-frontend-and-validation-GAS",
+  "method": "Observed admin 1 completion committed in Sheets, then explicitly clicked stale admin 2 completion UI for the same ride",
+  "fixtureStudentId": "STU-AT27-replay01",
+  "fixtureRideId": "RIDE-AT27-replay01",
+  "initialBalance": 3,
+  "balanceAfterInitialCompletion": 2,
+  "completionTimestampBeforeReplay": "2026/10/23 13:01:20",
+  "replayConsumed": 0,
+  "balanceAfterReplay": 2,
+  "completionRowAndTimestampUnchanged": true,
+  "explicitReplay": "CONFIRMED",
+  "replayReloadBalanceSeparatelyObserved": false,
+  "cleanup": {
+    "idGuardedFixtureCellsCleared": true,
+    "studentsA1H8MatchesBefore": true,
+    "ridesA1L8MatchesBefore": true,
+    "purchasesA1G8MatchesBefore": true
+  },
+  "developerExpectedBehavior": "CONFIRMED_WITH_LIVE_01",
+  "independentThirdPartyAcceptance": "NOT_RUN",
+  "calendarPermissionAdded": false,
+  "productionStarted": false
+}

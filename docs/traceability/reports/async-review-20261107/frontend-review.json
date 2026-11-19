@@ -1,0 +1,88 @@
+{
+  "reviewedAt": "2026-11-07T09:10:21.386189+00:00",
+  "reviewer": "independent frontend reviewer; no source edits",
+  "pass": true,
+  "findings": [],
+  "sourceHashes": {
+    "src/services/api.ts": "62cfcc488be0eb1b104cf70e2afd1c9c7c4eef9136e1d950f2fb768479ebc30a",
+    "src/App.tsx": "30d9a0d99648a09cd5891a6aea5e4d310ca97f9514e13bcbdd1bf8ceda60cb5f",
+    "src/components/AccountManagement.tsx": "b5473029c444e6dedd6c310bb4927ffdb543bc53b332912908e4df08e850c0f7",
+    "src/components/Navbar.tsx": "2c544b44e4d40a06d723a69b434862f214c1ea320a1806446c5dbd59ccf561de",
+    "src/components/TeacherDashboard.tsx": "1316fbc950664e43614387bea8bf614c98374c2bc1fcf6e7f3c97c9b01334ea4",
+    "scripts/test_portals.cjs": "22f6ce09d925a27267efb6ab27442ea2a15660a6d29fdabc4ad2e087611e805c",
+    "tests/reviewer-ui/index.html": "2d7db98c97e0a6deb9fc3fa905d25584e8a51f11d852a9a71f0e73a2c0231138",
+    "tests/reviewer-ui/main.tsx": "dd8aad05777bf2c56aaa461b6212ccbd8abd9858b32cc21fcf0d130aeac54e07",
+    "tests/reviewer-ui/google-auth.ts": "d517d9747c524c019041aee3d55376eaad1873976aa0c923244ada3b9c4463e6",
+    "tests/reviewer-ui/run.mjs": "cf03da35c60113d2ec55fa7a016fd503bdc5e87854dfd58bb5d2be2cdf514de3",
+    "tests/reviewer-ui/README.md": "4e0cd9e034c330b3e2b9d075d90e794949777842550700bbc05378ad699ecc81"
+  },
+  "checks": {
+    "implementationSourceHashesAllMatch": true,
+    "independent31ContractsPass": true,
+    "independent8UiPass": true,
+    "contractSourceHashesMatchCurrent": true,
+    "uiSourceHashesMatchCurrent": true,
+    "sourceUnchangedDuringUiRun": true,
+    "noExternalRequestsOrPageErrors": true,
+    "contractsAgreeWithWorker": true,
+    "uiResultsAgreeWithWorker": true
+  },
+  "evidence": {
+    "contracts": "outputs/async-review-20261107/independent-frontend/contracts/frontend-contract.json",
+    "contractsSha256": "4d23e9ac55aebd9fee127b9462c9fe7a09c65bbc55feabb1c749150c83cb862f",
+    "ui": "outputs/async-review-20261107/independent-frontend/ui/results.json",
+    "uiSha256": "7daaf070edffa11f95bb3d4d0d6e5a2c1030e5cbe526cfb8a68f0da735c3b207",
+    "images": {
+      "outputs/async-review-20261107/independent-frontend/ui/REVIEW-UI-01.png": "3da440528af2eee12321e8cdca2c4e6d94abaf1aefefb8d804e7cb7bb8975d1d",
+      "outputs/async-review-20261107/independent-frontend/ui/REVIEW-UI-02.png": "d7c51f31a5bd063c64e5e0a03a489008d93cb52bcde7738acd43a2724f451850",
+      "outputs/async-review-20261107/independent-frontend/ui/REVIEW-UI-03.png": "6aa0097096aa46cd446b315e2387e0c06908839ae5f3dcbd82703536c35c51b9",
+      "outputs/async-review-20261107/independent-frontend/ui/REVIEW-UI-04.png": "a533ec9beb23e6847375f6296afaf50b37579b6b97b9b44d5d209336b4dfed4d",
+      "outputs/async-review-20261107/independent-frontend/ui/REVIEW-UI-05.png": "7a12e75aa305f2c336b6ce2ec3c899c71ac66eb07729b4174ce8c7c6128b344d",
+      "outputs/async-review-20261107/independent-frontend/ui/REVIEW-UI-06.png": "7501866dbb71f0984fff910758e4b490f9e812e77f650525ab95b97377c32efb",
+      "outputs/async-review-20261107/independent-frontend/ui/REVIEW-UI-07.png": "e74352b4b3ac7520bc91de5e1423060300b22eec0a708a87caa02c110789a8be",
+      "outputs/async-review-20261107/independent-frontend/ui/REVIEW-UI-08.png": "b7e793895b79c5cfaa193a0536e2ffd5555e8f57f958a0dfa2ecbc1ff0f68f08"
+    },
+    "browserVersion": "156.0.8078.81",
+    "viewport": {
+      "width": 375,
+      "height": 812
+    }
+  },
+  "reviewConclusions": {
+    "principalAndRoutes": "API login and reload validation retain server reviewOnly and current public admin/parent role. Unsupported or malformed reviewer principal and missing allowlist fail closed. Existing route and personal-entry identity checks remain. REVIEW_UNAVAILABLE clears the matching restricted session.",
+    "scope": "API filters overbroad student/ride lists to reviewer studentIds. App repeats the visible-data filter. Booking and ticket additions reject foreign students before requests; cancel/complete first resolve the authoritative ride and reject foreign rides before mutation. Backend remains the authority.",
+    "privilegedOperations": "Account management, invitation directory, student creation and demo reset use requireFullAdmin. App blocks privileged tabs and student modal/handler for reviewer; Navbar hides corresponding buttons; TeacherDashboard hides student creation. Allowed fixture teacher operations remain.",
+    "dateIndependence": "Restricted teacher view defaults to allRides. Historical fixed-date synthetic one-way and roundtrip rides can be completed through the actual App UI without today scheduling; state progresses5 to4 to2 and reload retains completed state.",
+    "registration": "Stored directory role reviewer is distinct from public portal roles. Registration option is offered only for exact boolean reviewModeAvailable=true. Existing reviewer editing retains its role and rotate flag when unavailable but save is refused; normal-role conversion/deletion remains available. A fixture selection is required.",
+    "regularRoles": "Existing ordinary admin/parent/demo behavior is covered by retained contracts and full-admin UI cases. Full admin retains account/settings/invitation menus and may manage reviewer registrations. Parent cannot invoke teacher mutations.",
+    "errorSemantics": "Existing20-second request timeout and generic transport-error mapping are unchanged. This change does not establish a fix for the previously observed live create-response error."
+  },
+  "visualReview": {
+    "count": 8,
+    "images": "All8 newly generated independent screenshots were viewed.",
+    "observations": [
+      "Restricted teacher UI shows only the assigned fictional student and no full-admin navigation or student-create button.",
+      "Historical completion screenshot shows one-way and roundtrip completed states; balance assertions are provided by the test records.",
+      "Parent logout screenshot shows login screen without fixture data.",
+      "Ordinary-admin screenshots retain the full menu, reviewer role controls, exact-capability refusal and saved-registration status."
+    ],
+    "screenshotLimits": [
+      "Screenshots use fullPage capture and a small desktop-browser viewport; sticky-header capture artifacts do not constitute physical-phone validation.",
+      "REVIEW-UI-03 screenshot does not itself display the asserted balance12; the independently executed state assertions verify it after reload.",
+      "UI ticket-add test changes the count to10 but does not explicitly set the amount to0. Zero amount is exercised by API contracts, not independently asserted in that UI case."
+    ]
+  },
+  "limits": [
+    "The real App was built and served only on ephemeral localhost; auth and GAS responses were synthetic, and external HTTP/WebSocket requests were blocked.",
+    "31 contracts and8 UI checks do not establish real Google identity, real Calendar/Sheets effects, live deployment, all technicalAT or customer6 acceptance.",
+    "reviewOnly means restricted fixture operations, not read-only access. Trusted backend registration must assign only the intended fictional student.",
+    "Worker-reported TypeScript/production build/lint results were read; this reviewer independently reran contracts and isolated App UI build/tests, not tsc/lint."
+  ],
+  "writes": [
+    "outputs/async-review-20261107/independent-frontend/contracts/",
+    "outputs/async-review-20261107/independent-frontend/ui/",
+    "docs/traceability/reports/async-review-20261107/frontend-review.json"
+  ],
+  "sourceRegistryBaselineAndLiveUnchanged": true,
+  "deploymentPerformed": false
+}

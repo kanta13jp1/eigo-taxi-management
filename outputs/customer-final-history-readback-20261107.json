@@ -1,0 +1,135 @@
+{
+  "date": "2026-11-07",
+  "range": "検証結果履歴!A49:I50",
+  "readbackMatches": true,
+  "data": {
+    "spreadsheetId": "1PqUq7BoBBVlPolivap0eg1UPik47vNNWphyBd0DNwvU",
+    "spreadsheetUrl": "https://docs.google.com/spreadsheets/d/1PqUq7BoBBVlPolivap0eg1UPik47vNNWphyBd0DNwvU/edit",
+    "properties": {
+      "title": "英語教室送迎管理｜残タスク・受入確認（2026-10-24）",
+      "locale": "ja_JP",
+      "timeZone": "Asia/Tokyo"
+    },
+    "sheets": [
+      {
+        "properties": {
+          "sheetId": 1920826968,
+          "title": "検証結果履歴",
+          "index": 4,
+          "sheetType": "GRID",
+          "gridProperties": {
+            "rowCount": 100,
+            "columnCount": 9,
+            "frozenRowCount": 1,
+            "hideGridlines": true
+          }
+        },
+        "data": [
+          {
+            "startRow": 48,
+            "rowData": [
+              {
+                "values": [
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "VR-20261107-04"
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "2026-11-07"
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "CUST-01〜06・PKG-01〜12"
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "文書・共有表・PowerPointの同期"
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "顧客確認6件の手順化と整合検査"
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "小林さん向け6件を0/6未実施で登録。図入り共通デザイン12冊v31・160頁を描画・再取込・独立AIレビュー後に採用。厳密機械検査エラー0・対応不足0、自動検査31/31成功。"
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "2026-11-07-r15／PKG-01〜12 v31／PROGRESS-20261107-DELIVERY-11〜12"
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "資料検査は実業務の合格ではない。旧第三者30件条件を撤回し、原AT01〜30は開発側で継続。本番未開始。"
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "顧客確認の2役・架空データ・Calendarを準備してから実施案内。"
+                    }
+                  }
+                ]
+              },
+              {
+                "values": [
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "VR-20261107-05"
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "2026-11-07"
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "AT-24・AT-25"
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "検証Google連携の設定準備"
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "専用CalendarとGAS編集HEAD保存"
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "会社所有の非公開な検証専用Calendarを作成。レビュー済みコード・権限定義・TEST_CALENDAR_IDを保存し再読込照合。台帳を変更しないdoGetは編集HEADで実行完了。"
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "PROGRESS-20261107-DELIVERY-09〜10／GAS模擬74/74・独立AIレビュー"
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "Google Calendar実同意の完了は未確認。Webアプリ新配備なし、試験イベント0件。健康確認の実行完了をCalendar連携合格にしない。"
+                    }
+                  },
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "Googleの実認可を確認し、検証Webアプリ更新後に架空の予約・取消を検証。"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

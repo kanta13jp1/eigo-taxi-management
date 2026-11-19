@@ -1,0 +1,113 @@
+{"kind":"deck","id":"pr/nqcex2","name":"Deck"}
+{"kind":"layout","id":"ly/0rm5cjmd","editable":false,"name":"Master","type":"master"}
+{"kind":"layout","id":"ly/xkvedoj6","editable":false,"name":"Title Slide","type":"title","placeholders":[{"name":"title","type":"title"},{"name":"subtitle","type":"subtitle"}]}
+{"kind":"layout","id":"ly/jmlc3mpg","editable":false,"name":"Section Header","type":"sectionHeader","placeholders":[{"name":"title","type":"title"}]}
+{"kind":"layout","id":"ly/658b6hsz","editable":false,"name":"Title and Body","type":"tx","placeholders":[{"name":"title","type":"title"},{"name":"body","type":"body"}]}
+{"kind":"layout","id":"ly/gvu14fqt","editable":false,"name":"Title and Two Column","type":"twoColTx","placeholders":[{"name":"title","type":"title"},{"name":"Left column","type":"body"},{"name":"Right column","type":"body"}]}
+{"kind":"layout","id":"ly/zi14jm9k","editable":false,"name":"Title and One Column","type":"tx","placeholders":[{"name":"title","type":"title"},{"name":"body","type":"body"}]}
+{"kind":"layout","id":"ly/dkz2p0fm","editable":false,"name":"Blank","type":"blank"}
+{"kind":"slide","id":"sl/1opjuk","slideIndex":0,"layout":{"id":"ly/dkz2p0fm","name":"Blank"},"title":"進捗・残課題","textShapes":4,"backgroundColor":"rgba(252,249,244,1)"}
+{"kind":"shape","id":"sh/rapwf2ho","slideIndex":0,"position":{"left":0,"top":0,"width":1280,"height":66},"geometry":"rect","fillColor":"#FFFFFF","lineWidth":0}
+{"kind":"textbox","id":"sh/5onedczi","slideIndex":0,"position":{"left":310,"top":20,"width":900,"height":35},"text":"進捗・残課題","geometry":"rect","lineWidth":0,"style":{"fontSize":21,"typeface":"Yu Gothic","color":"#333333","alignment":"left"}}
+{"kind":"shape","id":"sh/4ned47ix","slideIndex":0,"position":{"left":110,"top":90,"width":1060,"height":105},"geometry":"rect","fillColor":"rgba(255,255,255,0.95)","lineWidth":0}
+{"kind":"shape","id":"sh/3m5wb2hs","slideIndex":0,"position":{"left":110,"top":90,"width":1060,"height":4},"geometry":"rect","fillColor":"#EF7E00","lineWidth":0}
+{"kind":"shape","id":"sh/ilwv2x07","slideIndex":0,"position":{"left":1166,"top":90,"width":4,"height":105},"geometry":"rect","fillColor":"#EF7E00","lineWidth":0}
+{"kind":"shape","id":"sh/pkrepwz2","slideIndex":0,"position":{"left":110,"top":191,"width":1060,"height":4},"geometry":"rect","fillColor":"#00A5E3","lineWidth":0}
+{"kind":"shape","id":"sh/ojixgrih","slideIndex":0,"position":{"left":110,"top":90,"width":4,"height":105},"geometry":"rect","fillColor":"#00A5E3","lineWidth":0}
+{"kind":"textbox","id":"sh/q5orul8z","slideIndex":0,"position":{"left":137,"top":112,"width":1005,"height":65},"text":"確認済みと未完了を分離","geometry":"rect","lineWidth":0,"style":{"fontSize":29,"typeface":"Yu Gothic","color":"#333333","alignment":"left"}}
+{"kind":"shape","id":"sh/r6x83q9k","slideIndex":0,"position":{"left":45,"top":215,"width":1190,"height":450},"geometry":"rect","fillColor":"rgba(255,255,255,0.96)","lineWidth":0}
+{"kind":"textbox","id":"sh/srq9wvq5","slideIndex":0,"position":{"left":85,"top":255,"width":1105,"height":350},"text":"DOCの各項目IDと工程間IDを登録。38要件・11業務フロー・20画面・16 I/F。\nローカル検査：GAS70／画面契約21／認証SDK6／ブラウザ6／配布契約1／検査器14。\n過去の実受入記録・第三者受入とは別の結果です。","geometry":"rect","lineWidth":0,"style":{"fontSize":27,"typeface":"Yu Gothic","color":"#333333","alignment":"left"}}
+{"kind":"textbox","id":"sh/dszq507q","slideIndex":0,"position":{"left":62,"top":682,"width":1145,"height":24},"text":"PKG-12-SL-01 | 2026-10-24-r13 | 1/7 ","geometry":"rect","lineWidth":0,"style":{"fontSize":13,"typeface":"Yu Gothic","color":"#333333","alignment":"left"}}
+{"kind":"image","id":"im/5ojyt8j2","slideIndex":0,"position":{"left":0,"top":66,"width":1280,"height":654},"fit":"cover","name":""}
+{"kind":"image","id":"im/3mhgri1c","slideIndex":0,"position":{"left":48,"top":0,"width":190,"height":66},"fit":"contain","name":""}
+{"kind":"notes","id":"nt/1opjuk","slideIndex":0,"text":"\nTheme:mighty-hp-v1. Canonical:docs/traceability/registry.json. Display excerpts:see canonical document and notes for full detail. No acceptance PASS implied."}
+{"kind":"slide","id":"sl/1xma56","slideIndex":1,"layout":{"id":"ly/dkz2p0fm","name":"Blank"},"title":"進捗・残課題","textShapes":4,"backgroundColor":"rgba(252,249,244,1)"}
+{"kind":"shape","id":"sh/98z25kfi","slideIndex":1,"position":{"left":0,"top":0,"width":1280,"height":66},"geometry":"rect","fillColor":"#FFFFFF","lineWidth":0}
+{"kind":"textbox","id":"sh/vuhk7uxo","slideIndex":1,"position":{"left":310,"top":20,"width":900,"height":35},"text":"進捗・残課題","geometry":"rect","lineWidth":0,"style":{"fontSize":21,"typeface":"Yu Gothic","color":"#333333","alignment":"left"}}
+{"kind":"shape","id":"sh/u983epg3","slideIndex":1,"position":{"left":110,"top":90,"width":1060,"height":105},"geometry":"rect","fillColor":"rgba(255,255,255,0.95)","lineWidth":0}
+{"kind":"shape","id":"sh/hwj29kfu","slideIndex":1,"position":{"left":110,"top":90,"width":1060,"height":4},"geometry":"rect","fillColor":"#EF7E00","lineWidth":0}
+{"kind":"shape","id":"sh/wvqlgfy9","slideIndex":1,"position":{"left":1166,"top":90,"width":4,"height":105},"geometry":"rect","fillColor":"#EF7E00","lineWidth":0}
+{"kind":"shape","id":"sh/byxkvqxk","slideIndex":1,"position":{"left":110,"top":191,"width":1060,"height":4},"geometry":"rect","fillColor":"#00A5E3","lineWidth":0}
+{"kind":"shape","id":"sh/adoj2lgz","slideIndex":1,"position":{"left":110,"top":90,"width":4,"height":105},"geometry":"rect","fillColor":"#00A5E3","lineWidth":0}
+{"kind":"textbox","id":"sh/0jep8rul","slideIndex":1,"position":{"left":137,"top":112,"width":1005,"height":65},"text":"残課題とリリース条件","geometry":"rect","lineWidth":0,"style":{"fontSize":29,"typeface":"Yu Gothic","color":"#333333","alignment":"left"}}
+{"kind":"shape","id":"sh/1knqhwb6","slideIndex":1,"position":{"left":45,"top":215,"width":1190,"height":450},"geometry":"rect","fillColor":"rgba(255,255,255,0.96)","lineWidth":0}
+{"kind":"textbox","id":"sh/ehc76hcv","slideIndex":1,"position":{"left":85,"top":255,"width":1105,"height":350},"text":"テストコード対応の不足：0項目。追加16テストのPASS証跡と参照元ハッシュを照合。\n実Google受入 AT-24〜30 は未合格。第三者による原30件は0/30。\n復元後の管理者2名確認は完了。教室運用アカウント準備が必要。","geometry":"rect","lineWidth":0,"style":{"fontSize":27,"typeface":"Yu Gothic","color":"#333333","alignment":"left"}}
+{"kind":"textbox","id":"sh/zi58fmt0","slideIndex":1,"position":{"left":62,"top":682,"width":1145,"height":24},"text":"PKG-12-SL-02 | 2026-10-24-r13 | 2/7 ","geometry":"rect","lineWidth":0,"style":{"fontSize":13,"typeface":"Yu Gothic","color":"#333333","alignment":"left"}}
+{"kind":"image","id":"im/r6xk365k","slideIndex":1,"position":{"left":0,"top":66,"width":1280,"height":654},"fit":"cover","name":""}
+{"kind":"image","id":"im/t8f25gnq","slideIndex":1,"position":{"left":48,"top":0,"width":190,"height":66},"fit":"contain","name":""}
+{"kind":"notes","id":"nt/1xma56","slideIndex":1,"text":"\nTheme:mighty-hp-v1. Canonical:docs/traceability/registry.json. Display excerpts:see canonical document and notes for full detail. No acceptance PASS implied."}
+{"kind":"slide","id":"sl/9xdf49","slideIndex":2,"layout":{"id":"ly/dkz2p0fm","name":"Blank"},"title":"進捗・残課題","textShapes":4,"backgroundColor":"rgba(252,249,244,1)"}
+{"kind":"shape","id":"sh/lsvqdk7a","slideIndex":2,"position":{"left":0,"top":0,"width":1280,"height":66},"geometry":"rect","fillColor":"#FFFFFF","lineWidth":0}
+{"kind":"textbox","id":"sh/b2do7qp8","slideIndex":2,"position":{"left":310,"top":20,"width":900,"height":35},"text":"進捗・残課題","geometry":"rect","lineWidth":0,"style":{"fontSize":21,"typeface":"Yu Gothic","color":"#333333","alignment":"left"}}
+{"kind":"shape","id":"sh/a147e58n","slideIndex":2,"position":{"left":110,"top":90,"width":1060,"height":105},"geometry":"rect","fillColor":"rgba(255,255,255,0.95)","lineWidth":0}
+{"kind":"shape","id":"sh/x4vq907e","slideIndex":2,"position":{"left":110,"top":90,"width":1060,"height":4},"geometry":"rect","fillColor":"#EF7E00","lineWidth":0}
+{"kind":"shape","id":"sh/c3mpgvqt","slideIndex":2,"position":{"left":1166,"top":90,"width":4,"height":105},"geometry":"rect","fillColor":"#EF7E00","lineWidth":0}
+{"kind":"shape","id":"sh/nyto3qpw","slideIndex":2,"position":{"left":110,"top":191,"width":1060,"height":4},"geometry":"rect","fillColor":"#00A5E3","lineWidth":0}
+{"kind":"shape","id":"sh/2xk7al8r","slideIndex":2,"position":{"left":110,"top":90,"width":4,"height":105},"geometry":"rect","fillColor":"#00A5E3","lineWidth":0}
+{"kind":"textbox","id":"sh/snax83ah","slideIndex":2,"position":{"left":137,"top":112,"width":1005,"height":65},"text":"公開検証・管理者2名確認完了","geometry":"rect","lineWidth":0,"style":{"fontSize":29,"typeface":"Yu Gothic","color":"#333333","alignment":"left"}}
+{"kind":"shape","id":"sh/tojy18r2","slideIndex":2,"position":{"left":45,"top":215,"width":1190,"height":450},"geometry":"rect","fillColor":"rgba(255,255,255,0.96)","lineWidth":0}
+{"kind":"textbox","id":"sh/6l8f6tsb","slideIndex":2,"position":{"left":85,"top":255,"width":1105,"height":350},"text":"現行公開フロントエンドは配布記録7/7ファイルと一致。\n未認証の管理者・保護者入口と不正家庭URLで台帳非表示。\n管理者1の新規ログイン・表示・再読込・ログアウトを確認。\n両管理者の新規ログイン・表示・再読込・ログアウト確認済み。","geometry":"rect","lineWidth":0,"style":{"fontSize":27,"typeface":"Yu Gothic","color":"#333333","alignment":"left"}}
+{"kind":"textbox","id":"sh/7mhgzy9w","slideIndex":2,"position":{"left":62,"top":682,"width":1145,"height":24},"text":"PKG-12-SL-03 | 2026-10-24-r13 | 3/7 ","geometry":"rect","lineWidth":0,"style":{"fontSize":13,"typeface":"Yu Gothic","color":"#333333","alignment":"left"}}
+{"kind":"image","id":"im/32t8r65c","slideIndex":2,"position":{"left":0,"top":66,"width":1280,"height":654},"fit":"cover","name":""}
+{"kind":"image","id":"im/54bqtgni","slideIndex":2,"position":{"left":48,"top":0,"width":190,"height":66},"fit":"contain","name":""}
+{"kind":"notes","id":"nt/9xdf49","slideIndex":2,"text":"\nTheme:mighty-hp-v1. Canonical:docs/traceability/registry.json. Display excerpts:see canonical document and notes for full detail. No acceptance PASS implied."}
+{"kind":"slide","id":"sl/ize0k9","slideIndex":3,"layout":{"id":"ly/dkz2p0fm","name":"Blank"},"title":"進捗・残課題","textShapes":4,"backgroundColor":"rgba(252,249,244,1)"}
+{"kind":"shape","id":"sh/bmxwjyx8","slideIndex":3,"position":{"left":0,"top":0,"width":1280,"height":66},"geometry":"rect","fillColor":"#FFFFFF","lineWidth":0}
+{"kind":"textbox","id":"sh/pkfehof2","slideIndex":3,"position":{"left":310,"top":20,"width":900,"height":35},"text":"進捗・残課題","geometry":"rect","lineWidth":0,"style":{"fontSize":21,"typeface":"Yu Gothic","color":"#333333","alignment":"left"}}
+{"kind":"shape","id":"sh/oj6x83yh","slideIndex":3,"position":{"left":110,"top":90,"width":1060,"height":105},"geometry":"rect","fillColor":"rgba(255,255,255,0.95)","lineWidth":0}
+{"kind":"shape","id":"sh/nixwfyxc","slideIndex":3,"position":{"left":110,"top":90,"width":1060,"height":4},"geometry":"rect","fillColor":"#EF7E00","lineWidth":0}
+{"kind":"shape","id":"sh/2h4f6tgr","slideIndex":3,"position":{"left":1166,"top":90,"width":4,"height":105},"geometry":"rect","fillColor":"#EF7E00","lineWidth":0}
+{"kind":"shape","id":"sh/1gvedof6","slideIndex":3,"position":{"left":110,"top":191,"width":1060,"height":4},"geometry":"rect","fillColor":"#00A5E3","lineWidth":0}
+{"kind":"shape","id":"sh/0fmx4jyl","slideIndex":3,"position":{"left":110,"top":90,"width":4,"height":105},"geometry":"rect","fillColor":"#00A5E3","lineWidth":0}
+{"kind":"textbox","id":"sh/6hsvu94f","slideIndex":3,"position":{"left":137,"top":112,"width":1005,"height":65},"text":"同時完了・後続再試行の実Google確認","geometry":"rect","lineWidth":0,"style":{"fontSize":29,"typeface":"Yu Gothic","color":"#333333","alignment":"left"}}
+{"kind":"shape","id":"sh/ri1w3el0","slideIndex":3,"position":{"left":45,"top":215,"width":1190,"height":450},"geometry":"rect","fillColor":"rgba(255,255,255,0.96)","lineWidth":0}
+{"kind":"textbox","id":"sh/sjadwjml","slideIndex":3,"position":{"left":85,"top":255,"width":1105,"height":350},"text":"2管理者の同時完了：片道送迎1件、残数3枚→2枚。\n両画面と台帳で一致し、再読込後も保持。追加消費は0枚。\n試験行を除去し主要3シートの実行前範囲と一致。\n後続の再試行も追加0枚・残数2枚・完了日時不変。\n開発側確認は完了。第三者受入は未実施。","geometry":"rect","lineWidth":0,"style":{"fontSize":27,"typeface":"Yu Gothic","color":"#333333","alignment":"left"}}
+{"kind":"textbox","id":"sh/t4je5o36","slideIndex":3,"position":{"left":62,"top":682,"width":1145,"height":24},"text":"PKG-12-SL-04 | 2026-10-24-r13 | 4/7 ","geometry":"rect","lineWidth":0,"style":{"fontSize":13,"typeface":"Yu Gothic","color":"#333333","alignment":"left"}}
+{"kind":"image","id":"im/tkfex8be","slideIndex":3,"position":{"left":0,"top":66,"width":1280,"height":654},"fit":"cover","name":""}
+{"kind":"image","id":"im/rydwvyto","slideIndex":3,"position":{"left":48,"top":0,"width":190,"height":66},"fit":"contain","name":""}
+{"kind":"notes","id":"nt/ize0k9","slideIndex":3,"text":"\nTheme:mighty-hp-v1. Canonical:docs/traceability/registry.json. Display excerpts:see canonical document and notes for full detail. No acceptance PASS implied."}
+{"kind":"slide","id":"sl/jot3cb","slideIndex":4,"layout":{"id":"ly/dkz2p0fm","name":"Blank"},"title":"進捗・残課題","textShapes":4,"backgroundColor":"rgba(252,249,244,1)"}
+{"kind":"shape","id":"sh/o3qhofmd","slideIndex":4,"position":{"left":0,"top":0,"width":1280,"height":66},"geometry":"rect","fillColor":"#FFFFFF","lineWidth":0}
+{"kind":"textbox","id":"sh/exozi54b","slideIndex":4,"position":{"left":310,"top":20,"width":900,"height":35},"text":"進捗・残課題","geometry":"rect","lineWidth":0,"style":{"fontSize":21,"typeface":"Yu Gothic","color":"#333333","alignment":"left"}}
+{"kind":"shape","id":"sh/zyx0ba5w","slideIndex":4,"position":{"left":110,"top":90,"width":1060,"height":105},"geometry":"rect","fillColor":"rgba(255,255,255,0.95)","lineWidth":0}
+{"kind":"shape","id":"sh/0z6hkfmh","slideIndex":4,"position":{"left":110,"top":90,"width":1060,"height":4},"geometry":"rect","fillColor":"#EF7E00","lineWidth":0}
+{"kind":"shape","id":"sh/10fidkn2","slideIndex":4,"position":{"left":1166,"top":90,"width":4,"height":105},"geometry":"rect","fillColor":"#EF7E00","lineWidth":0}
+{"kind":"shape","id":"sh/q94ze54f","slideIndex":4,"position":{"left":110,"top":191,"width":1060,"height":4},"geometry":"rect","fillColor":"#00A5E3","lineWidth":0}
+{"kind":"shape","id":"sh/rax07a5k","slideIndex":4,"position":{"left":110,"top":90,"width":4,"height":105},"geometry":"rect","fillColor":"#00A5E3","lineWidth":0}
+{"kind":"textbox","id":"sh/nu10n2xg","slideIndex":4,"position":{"left":137,"top":112,"width":1005,"height":65},"text":"バックアップ・復元の台帳部分確認","geometry":"rect","lineWidth":0,"style":{"fontSize":29,"typeface":"Yu Gothic","color":"#333333","alignment":"left"}}
+{"kind":"shape","id":"sh/29sjexwv","slideIndex":4,"position":{"left":45,"top":215,"width":1190,"height":450},"geometry":"rect","fillColor":"rgba(255,255,255,0.96)","lineWidth":0}
+{"kind":"textbox","id":"sh/pwjipcfm","slideIndex":4,"position":{"left":85,"top":255,"width":1105,"height":350},"text":"専用生徒・送迎・購入の3行を非公開コピーへ保存。\n試験値を変更し、コピーから読んだ値で復元して一致。\nWeb再取得で残数3・時刻16:30。購入3枚は台帳で照合。\n試験3行除去後、主要3シートの実行前ハッシュと一致。\nCalendar整合は未検証。AT-28全体は未合格。","geometry":"rect","lineWidth":0,"style":{"fontSize":27,"typeface":"Yu Gothic","color":"#333333","alignment":"left"}}
+{"kind":"textbox","id":"sh/ova1g7e1","slideIndex":4,"position":{"left":62,"top":682,"width":1145,"height":24},"text":"PKG-12-SL-05 | 2026-10-24-r13 | 5/7 ","geometry":"rect","lineWidth":0,"style":{"fontSize":13,"typeface":"Yu Gothic","color":"#333333","alignment":"left"}}
+{"kind":"image","id":"im/6dwzedw3","slideIndex":4,"position":{"left":0,"top":66,"width":1280,"height":654},"fit":"cover","name":""}
+{"kind":"image","id":"im/sfehgne9","slideIndex":4,"position":{"left":48,"top":0,"width":190,"height":66},"fit":"contain","name":""}
+{"kind":"notes","id":"nt/jot3cb","slideIndex":4,"text":"\nTheme:mighty-hp-v1. Canonical:docs/traceability/registry.json. Display excerpts:see canonical document and notes for full detail. No acceptance PASS implied."}
+{"kind":"slide","id":"sl/q7570v","slideIndex":5,"layout":{"id":"ly/dkz2p0fm","name":"Blank"},"title":"進捗・残課題","textShapes":4,"backgroundColor":"rgba(252,249,244,1)"}
+{"kind":"shape","id":"sh/zih0zul0","slideIndex":5,"position":{"left":0,"top":0,"width":1280,"height":66},"geometry":"rect","fillColor":"#FFFFFF","lineWidth":0}
+{"kind":"textbox","id":"sh/9oji543i","slideIndex":5,"position":{"left":310,"top":20,"width":900,"height":35},"text":"進捗・残課題","geometry":"rect","lineWidth":0,"style":{"fontSize":21,"typeface":"Yu Gothic","color":"#333333","alignment":"left"}}
+{"kind":"shape","id":"sh/onahczmx","slideIndex":5,"position":{"left":110,"top":90,"width":1060,"height":105},"geometry":"rect","fillColor":"rgba(255,255,255,0.95)","lineWidth":0}
+{"kind":"shape","id":"sh/nmh03ulc","slideIndex":5,"position":{"left":110,"top":90,"width":1060,"height":4},"geometry":"rect","fillColor":"#EF7E00","lineWidth":0}
+{"kind":"shape","id":"sh/ml8zap4r","slideIndex":5,"position":{"left":1166,"top":90,"width":4,"height":105},"geometry":"rect","fillColor":"#EF7E00","lineWidth":0}
+{"kind":"shape","id":"sh/xsji9o3e","slideIndex":5,"position":{"left":110,"top":191,"width":1060,"height":4},"geometry":"rect","fillColor":"#00A5E3","lineWidth":0}
+{"kind":"shape","id":"sh/wrahgjmt","slideIndex":5,"position":{"left":110,"top":90,"width":4,"height":105},"geometry":"rect","fillColor":"#00A5E3","lineWidth":0}
+{"kind":"textbox","id":"sh/el4j2x47","slideIndex":5,"position":{"left":137,"top":112,"width":1005,"height":65},"text":"iPhone画像による実機の部分確認","geometry":"rect","lineWidth":0,"style":{"fontSize":29,"typeface":"Yu Gothic","color":"#333333","alignment":"left"}}
+{"kind":"shape","id":"sh/zmdkb25c","slideIndex":5,"position":{"left":45,"top":215,"width":1190,"height":450},"geometry":"rect","fillColor":"rgba(255,255,255,0.96)","lineWidth":0}
+{"kind":"textbox","id":"sh/07m147mx","slideIndex":5,"position":{"left":85,"top":255,"width":1105,"height":350},"text":"管理者2の画面、生徒3名・履歴3件、残数7・1を確認。\n別タブ・スクロール位置と、最後のログイン画面を確認。\niPhone 16 Pro Max／iOS 26.6.2／Safari、ログアウト後と確認。\n一覧右端の予約者・状態・操作列を画像確認。\n再読込後もログイン画面のみ・台帳非表示と本人回答。\nAndroid・保護者本人・予約取消は未実施。AT-29全体は未合格。","geometry":"rect","lineWidth":0,"style":{"fontSize":27,"typeface":"Yu Gothic","color":"#333333","alignment":"left"}}
+{"kind":"textbox","id":"sh/l8f2dcni","slideIndex":5,"position":{"left":62,"top":682,"width":1145,"height":24},"text":"PKG-12-SL-06 | 2026-10-24-r13 | 6/7 ","geometry":"rect","lineWidth":0,"style":{"fontSize":13,"typeface":"Yu Gothic","color":"#333333","alignment":"left"}}
+{"kind":"image","id":"im/l4r6l4by","slideIndex":5,"position":{"left":0,"top":66,"width":1280,"height":654},"fit":"cover","name":""}
+{"kind":"image","id":"im/z2pojuds","slideIndex":5,"position":{"left":48,"top":0,"width":190,"height":66},"fit":"contain","name":""}
+{"kind":"notes","id":"nt/q7570v","slideIndex":5,"text":"\nTheme:mighty-hp-v1. Canonical:docs/traceability/registry.json. Display excerpts:see canonical document and notes for full detail. No acceptance PASS implied."}
+{"kind":"slide","id":"sl/txioy7","slideIndex":6,"layout":{"id":"ly/dkz2p0fm","name":"Blank"},"title":"進捗・残課題","textShapes":4,"backgroundColor":"rgba(252,249,244,1)"}
+{"kind":"shape","id":"sh/pgry1s3e","slideIndex":6,"position":{"left":0,"top":0,"width":1280,"height":66},"geometry":"rect","fillColor":"#FFFFFF","lineWidth":0}
+{"kind":"textbox","id":"sh/fq9gvylc","slideIndex":6,"position":{"left":310,"top":20,"width":900,"height":35},"text":"進捗・残課題","geometry":"rect","lineWidth":0,"style":{"fontSize":21,"typeface":"Yu Gothic","color":"#333333","alignment":"left"}}
+{"kind":"shape","id":"sh/up0fmt4r","slideIndex":6,"position":{"left":110,"top":90,"width":1060,"height":105},"geometry":"rect","fillColor":"rgba(255,255,255,0.95)","lineWidth":0}
+{"kind":"shape","id":"sh/hsryx83i","slideIndex":6,"position":{"left":110,"top":90,"width":1060,"height":4},"geometry":"rect","fillColor":"#EF7E00","lineWidth":0}
+{"kind":"shape","id":"sh/grixo3mx","slideIndex":6,"position":{"left":1166,"top":90,"width":4,"height":105},"geometry":"rect","fillColor":"#EF7E00","lineWidth":0}
+{"kind":"shape","id":"sh/7mpgrylg","slideIndex":6,"position":{"left":110,"top":191,"width":1060,"height":4},"geometry":"rect","fillColor":"#00A5E3","lineWidth":0}
+{"kind":"shape","id":"sh/6lgfit4v","slideIndex":6,"position":{"left":110,"top":90,"width":4,"height":105},"geometry":"rect","fillColor":"#00A5E3","lineWidth":0}
+{"kind":"textbox","id":"sh/oz61k7mx","slideIndex":6,"position":{"left":137,"top":112,"width":1005,"height":65},"text":"確認・次の作業","geometry":"rect","lineWidth":0,"style":{"fontSize":29,"typeface":"Yu Gothic","color":"#333333","alignment":"left"}}
+{"kind":"shape","id":"sh/90fitc3i","slideIndex":6,"position":{"left":45,"top":215,"width":1190,"height":450},"geometry":"rect","fillColor":"rgba(255,255,255,0.96)","lineWidth":0}
+{"kind":"textbox","id":"sh/mdojix47","slideIndex":6,"position":{"left":85,"top":255,"width":1105,"height":350},"text":"Googleログイン方式について顧客の了承・代替方式の希望を確認。\n未定の取消・返金・復旧責任・AT30実施時期を決定し、実受入と第三者テストを実施。\nCalendar権限追加なし／本番開始なし。リリース判定：HOLD。","geometry":"rect","lineWidth":0,"style":{"fontSize":27,"typeface":"Yu Gothic","color":"#333333","alignment":"left"}}
+{"kind":"textbox","id":"sh/nex0r2lc","slideIndex":6,"position":{"left":62,"top":682,"width":1145,"height":24},"text":"PKG-12-SL-07 | 2026-10-24-r13 | 7/7 ","geometry":"rect","lineWidth":0,"style":{"fontSize":13,"typeface":"Yu Gothic","color":"#333333","alignment":"left"}}
+{"kind":"image","id":"im/3y5cj294","slideIndex":6,"position":{"left":0,"top":66,"width":1280,"height":654},"fit":"cover","name":""}
+{"kind":"image","id":"im/50nelsra","slideIndex":6,"position":{"left":48,"top":0,"width":190,"height":66},"fit":"contain","name":""}
+{"kind":"notes","id":"nt/txioy7","slideIndex":6,"text":"\nTheme:mighty-hp-v1. Canonical:docs/traceability/registry.json. Display excerpts:see canonical document and notes for full detail. No acceptance PASS implied."}

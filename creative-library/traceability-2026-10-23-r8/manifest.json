@@ -1,0 +1,100 @@
+{
+  "provenance": "Partial backup restore validation. Web read and cleanup waiting for manual identity selection. No production or publication authorization.",
+  "files": [
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/business-2026-10-23-v8.pptx",
+      "file": "business-2026-10-23-v8.pptx",
+      "sha256": "c90f9fae720ea0de7a2ce538076e84aabd20df75cfc8ca1ed8a50391cf6f09e5"
+    },
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/requirements-2026-10-23-v8.pptx",
+      "file": "requirements-2026-10-23-v8.pptx",
+      "sha256": "df7d86adbbdb39ecf05aab4fcdbe1172745e75ce8a647278e3c6f987a5e6dd25"
+    },
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/design-2026-10-23-v8.pptx",
+      "file": "design-2026-10-23-v8.pptx",
+      "sha256": "90e390580ec253d6aef22e6f50a07242f2ebfd2f58b3673e8e77c79965665e2f"
+    },
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/test-spec-2026-10-23-v8.pptx",
+      "file": "test-spec-2026-10-23-v8.pptx",
+      "sha256": "6299962a67d29bc7c805a1572197d7fdecd75585342aff8c083f84a7705b40e9"
+    },
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/tasks-2026-10-23-v8.pptx",
+      "file": "tasks-2026-10-23-v8.pptx",
+      "sha256": "be0e0e2c2ab540d640929715e474f82d5c99f85e4d65fe52e0682b1db2bf33eb"
+    },
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/implementation-2026-10-23-v8.pptx",
+      "file": "implementation-2026-10-23-v8.pptx",
+      "sha256": "c5e5ddf0c16d7fddf720a9a036162e79fdf3d0abe85ec79d9425dc15018a3470"
+    },
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/test-code-2026-10-23-v8.pptx",
+      "file": "test-code-2026-10-23-v8.pptx",
+      "sha256": "5c648c01db0d69416e70827814e475b1c2df71839dd74edb80c754ce00adb1ac"
+    },
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/acceptance-2026-10-23-v8.pptx",
+      "file": "acceptance-2026-10-23-v8.pptx",
+      "sha256": "5dd225a66177b509bf148e3f02fc2cff536997eb5af146e652ec849a3e510570"
+    },
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/operations-2026-10-23-v8.pptx",
+      "file": "operations-2026-10-23-v8.pptx",
+      "sha256": "4cb74eaa5f24492dc5ca2b918a4b3e050c9495e05d1696187d4c384b85535e3c"
+    },
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/user-2026-10-23-v8.pptx",
+      "file": "user-2026-10-23-v8.pptx",
+      "sha256": "18237970616aefdae18d6d4900309cdf2c1e779f18684fc448405e68aa4bd316"
+    },
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/matrix-2026-10-23-v8.pptx",
+      "file": "matrix-2026-10-23-v8.pptx",
+      "sha256": "b9e4701056db07b4b4dde3fb9a8a846976b543a35d51b0cd5d7960169ad7d1d0"
+    },
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/progress-2026-10-23-v8.pptx",
+      "file": "progress-2026-10-23-v8.pptx",
+      "sha256": "31ede3e2641e6cef9f8818b9255ee1c116bd36df471e149cbe4c823f977eecd9"
+    },
+    {
+      "source": "docs/traceability/registry.json",
+      "file": "registry.json",
+      "sha256": "8a2ec0c910391dbf38f5862f5dcd981c240ac52b8857619d8a634f4c59df3099"
+    },
+    {
+      "source": "docs/traceability/matrix.csv",
+      "file": "matrix.csv",
+      "sha256": "c9066deb638efa33be6d866194c5c703044ba79884b569e6b772cfcf4aec85f1"
+    },
+    {
+      "source": "docs/traceability/SELF_REVIEW_R8.md",
+      "file": "SELF_REVIEW_R8.md",
+      "sha256": "3d4fd17ab6fa5c3d8ff68c92cded3eab00ed1a1fd068e227eb6cea2db54b24ed"
+    },
+    {
+      "source": "docs/acceptance/backup-restore-2026-10-23/results.json",
+      "file": "results.json",
+      "sha256": "9b0c770f294c1c9949fb70bc4882ef687967047c3e5db6d87c5a50271b6885ed"
+    },
+    {
+      "source": ".manual-build-20261020/traceability-decks-r8.mjs",
+      "file": "traceability-decks-r8.mjs",
+      "sha256": "828e429182d6d486f4414e6b8ceb668d008d95f5f536a96dd3757748e4aa0a67"
+    },
+    {
+      "source": ".manual-build-20261020/finalize-traceability-r8.mjs",
+      "file": "finalize-traceability-r8.mjs",
+      "sha256": "495497f8e637fef837aea8dd86acd601878aa5a85aacfb7f8ee4407e991c40ce"
+    },
+    {
+      "source": "docs/progress/2026-10-23-at28-backup-restore.md",
+      "file": "2026-10-23-at28-backup-restore.md",
+      "sha256": "5392657198a133143c106cddcd923718fbc0cd43db1eee339e8657da48e7d867"
+    }
+  ]
+}

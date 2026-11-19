@@ -1,0 +1,17 @@
+{
+  "pass": true,
+  "checks": {
+    "jsDiffExactlyOneReviewedClassReplacement": true,
+    "cssDiffExactlyAddedMaxHeightRule": true,
+    "htmlDiffOnlyAssetFilenames": true,
+    "staticAssetsUnchanged": true
+  },
+  "jsBaseline": "dist/assets/index-BfV7saVz.js",
+  "jsCandidate": "dist/assets/index-Csor4OR1.js",
+  "baselineOldClassOccurrences": 2,
+  "candidateNewClassOccurrences": 1,
+  "addedCssRule": ".max-h-\\[calc\\(100dvh-2rem\\)\\]{max-height:calc(100dvh - 2rem)}",
+  "cssBytesAdded": 62,
+  "note": "Earlier payload-diff-review.json assumed the shared old panel class appeared once in the bundle; it appears twice. Exact single replacement yields byte-identical candidate JS. This report checks the actual delta.",
+  "sourceDigest": "b7e510688a6e81268331db6d7d88db8875bf5ce443dbc90f52b4f647f39d1979"
+}

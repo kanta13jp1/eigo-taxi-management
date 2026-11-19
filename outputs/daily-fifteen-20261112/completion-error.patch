@@ -1,0 +1,73 @@
+diff --git a/docs/acceptance/deployment/releases/383ff85ce1a54688/source/src/App.tsx b/outputs/daily-fifteen-20261112/stage/src/App.tsx
+index 79a4d02..00c58cc 100644
+--- a/docs/acceptance/deployment/releases/383ff85ce1a54688/source/src/App.tsx
++++ b/outputs/daily-fifteen-20261112/stage/src/App.tsx
+@@ -170,14 +170,11 @@ export function App() {
+ 
+   // 送迎完了＆チケット消化ハンドラ
+   const handleCompleteRide = async (rideId: string) => {
+-    try {
+     const res = await ApiService.completeRide(rideId);
+-    if (res.success) {
+-      await loadData();
+-      const consumed = res.consumedTickets ?? 1;
+-      showToast(`🎉 送迎が完了しました！チケットを${consumed}回分消化しました（残数: ${res.remainingBalance}回）`);
+-    } else setErrorMessage('この予約は完了処理できません');
+-    } catch (err) { setErrorMessage(err instanceof Error ? err.message : '完了処理できませんでした'); }
++    if (!res.success) throw new Error('この予約は完了処理できません');
++    await loadData();
++    const consumed = res.consumedTickets ?? 1;
++    showToast(`🎉 送迎が完了しました！チケットを${consumed}回分消化しました（残数: ${res.remainingBalance}回）`);
+   };
+ 
+   // チケット追加ハンドラ
+diff --git a/docs/acceptance/deployment/releases/383ff85ce1a54688/source/src/components/TeacherDashboard.tsx b/outputs/daily-fifteen-20261112/stage/src/components/TeacherDashboard.tsx
+index e848816..3f20895 100644
+--- a/docs/acceptance/deployment/releases/383ff85ce1a54688/source/src/components/TeacherDashboard.tsx
++++ b/outputs/daily-fifteen-20261112/stage/src/components/TeacherDashboard.tsx
+@@ -46,6 +46,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
+   const safeRides = Array.isArray(rides) ? rides : [];
+ 
+   const [filterStatus, setFilterStatus] = useState<string>('all');
++  const [completionError, setCompletionError] = useState('');
+   const [activeTab, setActiveTab] = useState<'today' | 'allRides' | 'students'>(() => reviewOnly ? 'allRides' : 'today');
+ 
+   // 予約日と同じ端末の暦日を使用し、画面を開いたままでも翌日に切り替える。
+@@ -96,8 +97,19 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
+     return `送迎完了（${consume}回消費） ${ride.studentName} ${ride.rideDate} ${ride.rideTime} ${text}`;
+   };
+ 
++  const completeRide = async (ride: RideReservation) => {
++    setCompletionError('');
++    try {
++      await onCompleteRide(ride.id);
++    } catch (error) {
++      const reason = error instanceof Error ? error.message : '完了処理できませんでした';
++      setCompletionError(`${ride.studentName}（${ride.rideDate} ${ride.rideTime}）: ${reason}`);
++    }
++  };
++
+   return (
+     <div className="space-y-6">
++      {completionError && <p role="alert" className="rounded-xl border border-rose-200 bg-rose-50 p-4 text-sm text-rose-800">{completionError}</p>}
+       {/* 管理者バナー */}
+       <div className="bg-emerald-50/80 border border-emerald-200 rounded-2xl p-3.5 px-4 flex flex-col sm:flex-row sm:items-center justify-between gap-2 shadow-xs">
+         <div className="flex items-center gap-2 text-emerald-900 font-bold text-sm">
+@@ -326,7 +338,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
+ 
+                       {isScheduled && (
+                         <button
+-                          onClick={() => onCompleteRide(ride.id)}
++                          onClick={() => completeRide(ride)}
+                           aria-label={completionLabel(ride)}
+                           className="bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs py-2 px-3.5 rounded-xl shadow-xs inline-flex items-center gap-1.5 transition-colors"
+                         >
+@@ -427,7 +439,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
+                             {ride.status === 'scheduled' && (
+                               <div className="flex items-center justify-end gap-1.5">
+                                 <button
+-                                  onClick={() => onCompleteRide(ride.id)}
++                                  onClick={() => completeRide(ride)}
+                                   aria-label={completionLabel(ride)}
+                                   className="text-xs bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-1 px-2.5 rounded-lg"
+                                 >

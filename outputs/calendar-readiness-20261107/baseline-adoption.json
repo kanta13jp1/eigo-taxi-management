@@ -1,0 +1,15 @@
+{
+  "registeredChanges": {
+    "gas/Code.gs": "e39555d3540a22e1db6b20bf7885d6ee95a4e0ae11eace6e3fb29bccd3f6fef6",
+    "gas/appsscript.json": "86919604f8083bcfad5433147d46a41dba5653f190b29f6b560255628e2b9006",
+    "scripts/test_gas.cjs": "ebc558f172d63fdbb5d35e8d1c0b936f0ac6f367d39c12e34a9f929f1521c654"
+  },
+  "reviewPath": "outputs/calendar-readiness-20261107/independent-review.json",
+  "newTestIds": [
+    "GAS-71",
+    "GAS-72",
+    "GAS-73",
+    "GAS-74"
+  ],
+  "scope": "Local reviewed implementation and offline evidence; no GAS deployment or real Calendar acceptance"
+}

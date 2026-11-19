@@ -1,0 +1,39 @@
+{
+  "case": "AT-04",
+  "mode": "React rendering, synthetic fixture, no Google",
+  "testedAt": "2026-11-10T14:59:03.677Z",
+  "release": {
+    "environment": "mighty-test",
+    "projectId": "eigo-taxi-app",
+    "siteId": "eigo-taxi-test",
+    "builtAt": "2026-11-10T14:57:26.599Z",
+    "baseCommit": "2fa6127715017d52ae0c9bd80be39c4db90a47c3",
+    "sourceDigest": "fe2ca4aeedfb60ded31e1a4c8237cd369eeb0993ee9fbab28c17ceca0c2ceb93"
+  },
+  "rows": [
+    {
+      "balance": 3,
+      "adminCount": 0,
+      "parentContact": false,
+      "formWarning": false
+    },
+    {
+      "balance": 2,
+      "adminCount": 1,
+      "parentContact": true,
+      "formWarning": true
+    },
+    {
+      "balance": 1,
+      "adminCount": 1,
+      "parentContact": true,
+      "formWarning": true
+    },
+    {
+      "balance": 0,
+      "adminCount": 1,
+      "parentContact": true,
+      "formWarning": true
+    }
+  ]
+}

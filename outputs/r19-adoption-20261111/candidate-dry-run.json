@@ -1,0 +1,29 @@
+{
+  "errorCounts": {
+    "GENERATED_DRIFT": 26,
+    "UNINDEXED_DOCUMENT": 4,
+    "DOCUMENT_DRIFT": 1,
+    "SOURCE_REVIEW_REQUIRED": 8,
+    "PRESENTATION_STALE": 12
+  },
+  "unexpected": {
+    "UNINDEXED_DOCUMENT": [
+      "docs/progress/2026-11-10-daily-four.md",
+      "docs/progress/2026-11-10-daily-three.md",
+      "docs/progress/2026-11-11-cumulative-five.md",
+      "docs/progress/2026-11-11-daily-five.md"
+    ],
+    "DOCUMENT_DRIFT": [
+      "docs/deliverables/2026-11-10-premeeting/README.md"
+    ]
+  },
+  "counts": {
+    "requirements": 39,
+    "flows": 11,
+    "testCases": 211,
+    "screens": 20,
+    "interfaces": 16,
+    "coverageGaps": 0
+  },
+  "coverageGaps": []
+}

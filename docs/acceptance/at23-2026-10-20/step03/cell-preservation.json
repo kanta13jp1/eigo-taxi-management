@@ -1,0 +1,22 @@
+{
+  "scope": "all exported populated cell values and formulas in verification copy",
+  "files": [
+    "before-init.xlsx",
+    "after-init-1.xlsx",
+    "after-init-2.xlsx"
+  ],
+  "firstRunPreserved": true,
+  "secondRunPreserved": true,
+  "populatedCells": {
+    "xl/worksheets/sheet1.xml": 24,
+    "xl/worksheets/sheet2.xml": 43,
+    "xl/worksheets/sheet3.xml": 7
+  },
+  "sha256": {
+    "before-init.xlsx": "5bba19bd83c4f2bb754187f1bc8a1e26f26978825012a35661649c95e6158dcb",
+    "after-init-1.xlsx": "f1833aa085e10bb5dc22df293b6c429266f4c015cb13a3448861dec5cf1abc51",
+    "after-init-2.xlsx": "92190495eb6ebb2616a3e049f96d532c3f7c70422d16e4ae852223d2910d2c0a"
+  },
+  "newSheetCreationTested": false,
+  "webStudentSaveTested": false
+}

@@ -1,0 +1,60 @@
+{
+  "url": "https://eigo-taxi-test.web.app",
+  "checkedAt": "2026-11-17T08:23:58.706Z",
+  "release": {
+    "environment": "mighty-test",
+    "projectId": "eigo-taxi-app",
+    "siteId": "eigo-taxi-test",
+    "builtAt": "2026-11-17T07:53:11.182Z",
+    "sourceDigest": "5f652531b5aea67c7295084e025563b4c32010cd3d4e5791abd0f8b06f65672f"
+  },
+  "publicVerification": "docs/acceptance/deployment-verification/public-2026-11-17T07-54-01-223Z.json",
+  "traceabilityNegativeTests": {
+    "total": 34,
+    "passed": 34
+  },
+  "results": [
+    {
+      "width": 390,
+      "height": 360,
+      "metrics": {
+        "bounds": { "x": 16, "y": 16, "width": 358, "height": 328 },
+        "scrollHeight": 520,
+        "clientHeight": 326,
+        "overflowY": "auto",
+        "fitsViewport": true
+      },
+      "requiredValidation": true,
+      "parentVerified": true,
+      "errors": []
+    },
+    {
+      "width": 375,
+      "height": 600,
+      "metrics": {
+        "bounds": { "x": 16, "y": 39, "width": 343, "height": 522 },
+        "scrollHeight": 520,
+        "clientHeight": 520,
+        "overflowY": "auto",
+        "fitsViewport": true
+      },
+      "requiredValidation": true,
+      "parentVerified": true,
+      "errors": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "metrics": {
+        "bounds": { "x": 198, "y": 16, "width": 448, "height": 358 },
+        "scrollHeight": 486,
+        "clientHeight": 356,
+        "overflowY": "auto",
+        "fitsViewport": true
+      },
+      "requiredValidation": true,
+      "parentVerified": true,
+      "errors": []
+    }
+  ]
+}

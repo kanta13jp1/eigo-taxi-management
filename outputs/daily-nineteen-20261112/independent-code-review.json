@@ -1,0 +1,16 @@
+{
+  "reviewer": "lead agent independent of implementation worker",
+  "baselineRelease": "4296a542a2ae8491",
+  "file": "src/components/ParentPortal.tsx",
+  "sha256": "a9a756e628f62095361415060be4217ace4db4c2f892192eb762887b323afca4",
+  "checks": [
+    "Sort runs on a freshly filtered array, so rides props and past history order are preserved",
+    "Only scheduled rides for the selected student are included",
+    "ISO date and HH:mm ascending comparisons preserve chronological order, with reservation ID as deterministic tie breaker",
+    "No API mutation, ticket consumption, authentication, GAS or customer fixture changes",
+    "Actual React normal booking tests cover inserted date/time/address/status/parent identity, immediate order and reload order",
+    "Frozen arrays, reversed same-time input, sibling and terminal-status controls pass"
+  ],
+  "pass": true,
+  "scope": "Developer local actual-App and anonymous demo tests; no new real-Google or customer acceptance claim"
+}

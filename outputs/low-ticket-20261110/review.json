@@ -1,0 +1,11 @@
+{
+  "pptxSha256": "91a91090dbee130dc136e8c879deb51d280728317db6beeedd446547992160f5",
+  "reviewer": "lead Codex",
+  "pptxReview": "PASS; reimported one-page render reviewed independently",
+  "sourceHashes": {
+    "src/components/TeacherDashboard.tsx": "97b519f7b5b4982a5e5307682774b554e27ed03b1321de1a8322a15efffa2965",
+    "src/components/AddRideModal.tsx": "4f390ee7c4d81ba859bc02316d728ed8104521797cc5ee95d722f6efc619f50b"
+  },
+  "sourceReview": "PASS",
+  "baseline": "ef226bac133dbb3a"
+}

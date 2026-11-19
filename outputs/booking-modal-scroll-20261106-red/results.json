@@ -1,0 +1,22 @@
+{
+  "executedAt": "2026-11-06T05:46:22.046Z",
+  "mode": "Local Chromium mobile/touch emulation; fixture only; not real Google or physical device acceptance",
+  "sourceHashes": {
+    "src/components/AddRideModal.tsx": "8a666bfb82041702fa349182e0bde01a3e0051df5ddc2716fef5f357d950a2fa",
+    "scripts/fixtures/trace-ui/harness.tsx": "90bef1928e68fb736a4cf43150bb11153ba980414b5016b318f9ca494a24e136",
+    "scripts/test_booking_modal_scroll.mjs": "33bac2031ba62f38b0053d1e0ab5a22e33fe047ac432d477011e5a43a4eb0917"
+  },
+  "externalRequests": [],
+  "results": [
+    {
+      "name": "375x500",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: Submit must be reachable inside the viewport after scrolling: {\"box\":{\"x\":194.5,\"y\":472,\"width\":139.5,\"height\":60},\"viewport\":{\"width\":375,\"height\":500}}"
+    },
+    {
+      "name": "812x375",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: Submit must be reachable inside the viewport after scrolling: {\"box\":{\"x\":413,\"y\":410.5,\"width\":224,\"height\":42},\"viewport\":{\"width\":812,\"height\":375}}"
+    }
+  ]
+}

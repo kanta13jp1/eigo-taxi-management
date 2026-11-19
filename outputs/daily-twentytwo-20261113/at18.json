@@ -1,0 +1,141 @@
+{
+  "test": "AT-18",
+  "scope": "Developer partial: post-cancellation verification and read-only recovery; synthetic browser demo, no Google.",
+  "before": {
+    "mode": "before",
+    "scenario": "read-error",
+    "checkedAt": "2026-11-13T11:00:28.642Z",
+    "test": "AT-18",
+    "base": "http://127.0.0.1:56707",
+    "freshAnonymousAdminDemo": true,
+    "studentId": "STU-c90d1001-9a31-4f21-b369-fbc67a19f65d",
+    "rideId": "RIDE-a5ccb877-90ca-4aba-bacf-4a92ae80eae3",
+    "successVisible": true,
+    "alert": [
+      "検証用：予約一覧の再取得に失敗しました"
+    ],
+    "reloadOnlyRecovery": false,
+    "cancelledInLedger": true,
+    "onlyChangedTargetStatus": true,
+    "studentBalancesUnchanged": true,
+    "writeCount": 1,
+    "blockedRequests": [],
+    "scope": "Isolated synthetic browser demo; simulated read response, no Google or customer records."
+  },
+  "after": [
+    {
+      "mode": "after",
+      "scenario": "normal",
+      "checkedAt": "2026-11-13T11:02:10.858Z",
+      "test": "AT-18",
+      "base": "http://127.0.0.1:65370",
+      "freshAnonymousAdminDemo": true,
+      "studentId": "STU-7d12fd8d-6b35-468d-8346-6fead88cacad",
+      "rideId": "RIDE-745c76cd-6f6b-46b2-9788-e78a7f484626",
+      "successVisible": true,
+      "alert": [],
+      "reloadOnlyRecovery": false,
+      "cancelledInLedger": true,
+      "onlyChangedTargetStatus": true,
+      "studentBalancesUnchanged": true,
+      "writeCount": 1,
+      "blockedRequests": [],
+      "scope": "Isolated synthetic browser demo; simulated read response, no Google or customer records."
+    },
+    {
+      "mode": "after",
+      "scenario": "write-error",
+      "checkedAt": "2026-11-13T11:02:10.853Z",
+      "test": "AT-18",
+      "base": "http://127.0.0.1:65372",
+      "freshAnonymousAdminDemo": true,
+      "studentId": "STU-84109d9e-73a4-43b1-803d-95127f5cd2a9",
+      "rideId": "RIDE-5abd818e-185e-4bb7-98d9-e147fc42beec",
+      "successVisible": false,
+      "alert": [
+        "検証用：取消を保存できませんでした"
+      ],
+      "reloadOnlyRecovery": true,
+      "cancelledInLedger": false,
+      "onlyChangedTargetStatus": false,
+      "studentBalancesUnchanged": true,
+      "writeCount": 0,
+      "blockedRequests": [],
+      "scope": "Isolated synthetic browser demo; simulated read response, no Google or customer records."
+    },
+    {
+      "mode": "after",
+      "scenario": "read-error",
+      "checkedAt": "2026-11-13T11:03:00.565Z",
+      "test": "AT-18",
+      "base": "http://127.0.0.1:62653",
+      "freshAnonymousAdminDemo": true,
+      "studentId": "STU-fb8fce21-77ff-4106-9fe2-2b2f3556c34c",
+      "rideId": "RIDE-68504ab8-9524-470d-800d-d6740db18df9",
+      "successVisible": false,
+      "alert": [
+        "予約の取消結果を確認できませんでした。台帳を再取得して、対象の予約の状態を確認してください。"
+      ],
+      "reloadOnlyRecovery": true,
+      "cancelledInLedger": true,
+      "onlyChangedTargetStatus": true,
+      "studentBalancesUnchanged": true,
+      "writeCount": 1,
+      "blockedRequests": [],
+      "scope": "Isolated synthetic browser demo; simulated read response, no Google or customer records."
+    },
+    {
+      "mode": "after",
+      "scenario": "stale-target",
+      "checkedAt": "2026-11-13T11:03:00.520Z",
+      "test": "AT-18",
+      "base": "http://127.0.0.1:62652",
+      "freshAnonymousAdminDemo": true,
+      "studentId": "STU-1ef554c2-6f68-474c-b343-ff916977e08e",
+      "rideId": "RIDE-cbb0ad5e-d37a-4389-9cbe-d866229bd1af",
+      "successVisible": false,
+      "alert": [
+        "予約の取消結果を確認できませんでした。台帳を再取得して、対象の予約の状態を確認してください。"
+      ],
+      "reloadOnlyRecovery": true,
+      "cancelledInLedger": true,
+      "onlyChangedTargetStatus": true,
+      "studentBalancesUnchanged": true,
+      "writeCount": 1,
+      "blockedRequests": [],
+      "scope": "Isolated synthetic browser demo; simulated read response, no Google or customer records."
+    },
+    {
+      "mode": "after",
+      "scenario": "missing-target",
+      "checkedAt": "2026-11-13T11:02:10.953Z",
+      "test": "AT-18",
+      "base": "http://127.0.0.1:65369",
+      "freshAnonymousAdminDemo": true,
+      "studentId": "STU-11b893a4-3d88-4a33-a228-0b2268d1a8fc",
+      "rideId": "RIDE-83e5896a-309c-4b9b-bd7b-01d832906c15",
+      "successVisible": false,
+      "alert": [
+        "予約の取消結果を確認できませんでした。台帳を再取得して、対象の予約の状態を確認してください。"
+      ],
+      "reloadOnlyRecovery": true,
+      "cancelledInLedger": true,
+      "onlyChangedTargetStatus": true,
+      "studentBalancesUnchanged": true,
+      "writeCount": 1,
+      "blockedRequests": [],
+      "scope": "Isolated synthetic browser demo; simulated read response, no Google or customer records."
+    },
+    {
+      "mode": "after",
+      "scenario": "session-ended",
+      "base": "http://127.0.0.1:50939",
+      "successVisible": false,
+      "staleErrorVisible": false,
+      "loginVisible": true,
+      "writeCount": 1,
+      "blockedRequests": []
+    }
+  ],
+  "pass": true
+}

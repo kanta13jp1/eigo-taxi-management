@@ -1,0 +1,21 @@
+{
+  "mode": "after",
+  "scenario": "read-error",
+  "checkedAt": "2026-11-13T11:03:00.565Z",
+  "test": "AT-18",
+  "base": "http://127.0.0.1:62653",
+  "freshAnonymousAdminDemo": true,
+  "studentId": "STU-fb8fce21-77ff-4106-9fe2-2b2f3556c34c",
+  "rideId": "RIDE-68504ab8-9524-470d-800d-d6740db18df9",
+  "successVisible": false,
+  "alert": [
+    "予約の取消結果を確認できませんでした。台帳を再取得して、対象の予約の状態を確認してください。"
+  ],
+  "reloadOnlyRecovery": true,
+  "cancelledInLedger": true,
+  "onlyChangedTargetStatus": true,
+  "studentBalancesUnchanged": true,
+  "writeCount": 1,
+  "blockedRequests": [],
+  "scope": "Isolated synthetic browser demo; simulated read response, no Google or customer records."
+}

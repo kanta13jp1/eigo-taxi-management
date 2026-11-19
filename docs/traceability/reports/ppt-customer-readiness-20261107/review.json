@@ -1,0 +1,420 @@
+{
+  "status": "PASS",
+  "date": "2026-11-07",
+  "reviewer": "AI author /root/modern_runner_1106",
+  "registrySha256": "f2d307b7a61cfcbf13cc48221cd58ca73c910b499b30a1ed46f7e163773e36fd",
+  "registryVersion": "2026-11-07-r16",
+  "decks": 12,
+  "slides": 160,
+  "historicalBodyPagesPreserved": 136,
+  "oldNotesPreserved": 160,
+  "replacedDiagramPages": 24,
+  "rows": [
+    {
+      "id": "PKG-01",
+      "name": "business",
+      "source": "docs/deliverables/2026-10-23-traceability/business-2026-11-07-v31.pptx",
+      "sourceSha256": "3fac3c423b603e51fe33a9085b9c0e0b2ade825b6892b0747d989265e3905362",
+      "sourceMdPath": "docs/acceptance/01_BUSINESS_FLOWS.md",
+      "sourceMdSha256": "86376f8220a1d4e25cb31015ba81f9e4d5f5b6570d30370e807d2d4bc3a334bb",
+      "sha256": "6f0e927127cbc71a5d267c16501a5a000cb77d556f6fb7001b4fbb9a39a82a21",
+      "slides": 23,
+      "preservedBodySlides": 21,
+      "oldBodyPagesPixelIdentical": 21,
+      "oldNotesPreserved": 23,
+      "oldImagesPreserved": true,
+      "currentGeneratedSourceInNotes": true,
+      "renderedFinalPages": 23,
+      "packageFindings": 0,
+      "layoutFindings": 0,
+      "layoutWarnings": 21,
+      "newWarnings": 0,
+      "reimportPassed": true,
+      "privateEmailsOrGoogleLinks": 0
+    },
+    {
+      "id": "PKG-02",
+      "name": "requirements",
+      "source": "docs/deliverables/2026-10-23-traceability/requirements-2026-11-07-v31.pptx",
+      "sourceSha256": "ca81c4c6d679ce0d4a82d5bcee6f06ab7637b56cd56a0379e9d8b3066cd41339",
+      "sourceMdPath": "docs/acceptance/03_REQUIREMENTS.md",
+      "sourceMdSha256": "9f79928ae5efb38864a56fbc3b5f66e3b47c4445df632a898e7a940766724ce6",
+      "sha256": "8cd0ad39e5c5add32d8cdd6deb4d3d644e64e5ca1ec91d67614d14ccca63f61a",
+      "slides": 12,
+      "preservedBodySlides": 10,
+      "oldBodyPagesPixelIdentical": 10,
+      "oldNotesPreserved": 12,
+      "oldImagesPreserved": true,
+      "currentGeneratedSourceInNotes": true,
+      "renderedFinalPages": 12,
+      "packageFindings": 0,
+      "layoutFindings": 0,
+      "layoutWarnings": 0,
+      "newWarnings": 0,
+      "reimportPassed": true,
+      "privateEmailsOrGoogleLinks": 0
+    },
+    {
+      "id": "PKG-03",
+      "name": "design",
+      "source": "docs/deliverables/2026-10-23-traceability/design-2026-11-07-v31.pptx",
+      "sourceSha256": "d6045c3ecc2d2e90a67f1ecfee0fd43000396fa1986697e506f6e210311ceacc",
+      "sourceMdPath": "docs/acceptance/04_FUNCTIONAL_SPEC.md",
+      "sourceMdSha256": "301462408ffd7920052f7056ee005a32766c5e765ba78b11125a6ca6170e431c",
+      "sha256": "4782645107ef2bbc33ab42ee36430d387cdb64d4090cc7ab50e902623651cfff",
+      "slides": 13,
+      "preservedBodySlides": 11,
+      "oldBodyPagesPixelIdentical": 11,
+      "oldNotesPreserved": 13,
+      "oldImagesPreserved": true,
+      "currentGeneratedSourceInNotes": true,
+      "renderedFinalPages": 13,
+      "packageFindings": 0,
+      "layoutFindings": 0,
+      "layoutWarnings": 0,
+      "newWarnings": 0,
+      "reimportPassed": true,
+      "privateEmailsOrGoogleLinks": 0
+    },
+    {
+      "id": "PKG-04",
+      "name": "test-spec",
+      "source": "docs/deliverables/2026-10-23-traceability/test-spec-2026-11-07-v31.pptx",
+      "sourceSha256": "fe5460918287c0c4a7b81a5e4cf922a1b4116a7144cf44608c0a6a1fcc54549f",
+      "sourceMdPath": "docs/acceptance/17_TEST_SPEC.md",
+      "sourceMdSha256": "32ae1cab572346af8f5894d741825e56db2c24aba4b9210e8959cd0d4f34c74f",
+      "sha256": "96ef8991e1da755544976371d5fda0a9f90df8505373ef0ce0a4a8b055ed9aa6",
+      "slides": 13,
+      "preservedBodySlides": 11,
+      "oldBodyPagesPixelIdentical": 11,
+      "oldNotesPreserved": 13,
+      "oldImagesPreserved": true,
+      "currentGeneratedSourceInNotes": true,
+      "renderedFinalPages": 13,
+      "packageFindings": 0,
+      "layoutFindings": 0,
+      "layoutWarnings": 0,
+      "newWarnings": 0,
+      "reimportPassed": true,
+      "privateEmailsOrGoogleLinks": 0
+    },
+    {
+      "id": "PKG-05",
+      "name": "tasks",
+      "source": "docs/deliverables/2026-10-23-traceability/tasks-2026-11-07-v31.pptx",
+      "sourceSha256": "bd6a4784d04f8e568c9ff3bbf3fc7c87e0fcedbea2719d5e88a20edb2d23b3f7",
+      "sourceMdPath": "docs/acceptance/05_TASKS.md",
+      "sourceMdSha256": "7d02c7bec2d02b5c1727897332e4a06adc6248129d2825ebc5489e0aab9d2859",
+      "sha256": "fd6b63454cc18df884123085822643dd186bfa39c9ba982e747980e111fc5581",
+      "slides": 15,
+      "preservedBodySlides": 13,
+      "oldBodyPagesPixelIdentical": 13,
+      "oldNotesPreserved": 15,
+      "oldImagesPreserved": true,
+      "currentGeneratedSourceInNotes": true,
+      "renderedFinalPages": 15,
+      "packageFindings": 0,
+      "layoutFindings": 0,
+      "layoutWarnings": 0,
+      "newWarnings": 0,
+      "reimportPassed": true,
+      "privateEmailsOrGoogleLinks": 0
+    },
+    {
+      "id": "PKG-06",
+      "name": "implementation",
+      "source": "docs/deliverables/2026-10-23-traceability/implementation-2026-11-07-v31.pptx",
+      "sourceSha256": "01a400b16c57513e1563ab2e722a50d324d54864d2b04507bc85182a8ef0bdef",
+      "sourceMdPath": "docs/acceptance/18_IMPLEMENTATION_INDEX.md",
+      "sourceMdSha256": "a0ef1cb0e0ba16a99f343e0e2047ef47b5dc0cea498e8911c3d7d0ee2844060e",
+      "sha256": "fa74c0e5d6617edb232138d1f0c7658080a7f1dfee83aa99b8e0ec01a3b2a42b",
+      "slides": 13,
+      "preservedBodySlides": 11,
+      "oldBodyPagesPixelIdentical": 11,
+      "oldNotesPreserved": 13,
+      "oldImagesPreserved": true,
+      "currentGeneratedSourceInNotes": true,
+      "renderedFinalPages": 13,
+      "packageFindings": 0,
+      "layoutFindings": 0,
+      "layoutWarnings": 0,
+      "newWarnings": 0,
+      "reimportPassed": true,
+      "privateEmailsOrGoogleLinks": 0
+    },
+    {
+      "id": "PKG-07",
+      "name": "test-code",
+      "source": "docs/deliverables/2026-10-23-traceability/test-code-2026-11-07-v31.pptx",
+      "sourceSha256": "5e54230c680175bcc0a8a8b9e033cbbeb050bdaa69c620d6e7b48929987bf033",
+      "sourceMdPath": "docs/acceptance/19_TEST_CODE_INDEX.md",
+      "sourceMdSha256": "c05610f530bd34c6960276b9ba0c689facf9d1f7aff3394ee40db739af84eb20",
+      "sha256": "9fe98e631116c04c5d063fbf5c3a797f02237d88bb45039112f8ece6f750892f",
+      "slides": 13,
+      "preservedBodySlides": 11,
+      "oldBodyPagesPixelIdentical": 11,
+      "oldNotesPreserved": 13,
+      "oldImagesPreserved": true,
+      "currentGeneratedSourceInNotes": true,
+      "renderedFinalPages": 13,
+      "packageFindings": 0,
+      "layoutFindings": 0,
+      "layoutWarnings": 0,
+      "newWarnings": 0,
+      "reimportPassed": true,
+      "privateEmailsOrGoogleLinks": 0
+    },
+    {
+      "id": "PKG-08",
+      "name": "acceptance",
+      "source": "docs/deliverables/2026-10-23-traceability/acceptance-2026-11-07-v31.pptx",
+      "sourceSha256": "670df4f75588ab87104338488c8f3827b3e301d4893e3ca339d5f9fb126be6f2",
+      "sourceMdPath": "docs/acceptance/06_ACCEPTANCE_TEST_SPEC.md",
+      "sourceMdSha256": "ea1e984742f0074a08f493d9358b4e8cb39d252121f03da1ca418bef529de3f1",
+      "sha256": "a101ca71362a60ed8ada2096ed1b99a84b0202aa105c65cf3c84515c68f091d0",
+      "slides": 12,
+      "preservedBodySlides": 10,
+      "oldBodyPagesPixelIdentical": 10,
+      "oldNotesPreserved": 12,
+      "oldImagesPreserved": true,
+      "currentGeneratedSourceInNotes": true,
+      "renderedFinalPages": 12,
+      "packageFindings": 0,
+      "layoutFindings": 0,
+      "layoutWarnings": 0,
+      "newWarnings": 0,
+      "reimportPassed": true,
+      "privateEmailsOrGoogleLinks": 0
+    },
+    {
+      "id": "PKG-09",
+      "name": "operations",
+      "source": "docs/deliverables/2026-10-23-traceability/operations-2026-11-07-v31.pptx",
+      "sourceSha256": "10436adf52c7cab9430ebd1351786cceebefa0e94ef71d4231721db3534b0f2a",
+      "sourceMdPath": "docs/acceptance/20_OPERATIONS.md",
+      "sourceMdSha256": "99667c17a60403d1e4ce4410a3404e9fc357dc465b3c92ec253d121f3e3f14ef",
+      "sha256": "74b5e44894cb4fce386cd5140cedf16c7d9eeff5b1ea310772b3043210ecefee",
+      "slides": 12,
+      "preservedBodySlides": 10,
+      "oldBodyPagesPixelIdentical": 10,
+      "oldNotesPreserved": 12,
+      "oldImagesPreserved": true,
+      "currentGeneratedSourceInNotes": true,
+      "renderedFinalPages": 12,
+      "packageFindings": 0,
+      "layoutFindings": 0,
+      "layoutWarnings": 0,
+      "newWarnings": 0,
+      "reimportPassed": true,
+      "privateEmailsOrGoogleLinks": 0
+    },
+    {
+      "id": "PKG-10",
+      "name": "user",
+      "source": "docs/deliverables/2026-10-23-traceability/user-2026-11-07-v31.pptx",
+      "sourceSha256": "8810f5b7f0c687c991e968af9c571b117459cb3608f92efe309c6c989efdb249",
+      "sourceMdPath": "docs/acceptance/21_USER_MANUAL.md",
+      "sourceMdSha256": "fcb5d2c6eed339b179305ee59fe22ca1609b118cd5d4300e5b9a65a3608a7284",
+      "sha256": "6dcdea8a82d32bd7c3c56c34593c66b9c77482aa8a4bda15fe249b952250c0f4",
+      "slides": 12,
+      "preservedBodySlides": 10,
+      "oldBodyPagesPixelIdentical": 10,
+      "oldNotesPreserved": 12,
+      "oldImagesPreserved": true,
+      "currentGeneratedSourceInNotes": true,
+      "renderedFinalPages": 12,
+      "packageFindings": 0,
+      "layoutFindings": 0,
+      "layoutWarnings": 0,
+      "newWarnings": 0,
+      "reimportPassed": true,
+      "privateEmailsOrGoogleLinks": 0
+    },
+    {
+      "id": "PKG-11",
+      "name": "matrix",
+      "source": "docs/deliverables/2026-10-23-traceability/matrix-2026-11-07-v31.pptx",
+      "sourceSha256": "320be7f686dfdd195a85281c6449d59f8b5b51f6b801acd37bff66893f4a5362",
+      "sourceMdPath": "docs/acceptance/07_TRACEABILITY_MATRIX.md",
+      "sourceMdSha256": "efd9936da82f438f4c4f0335f5b25555ffc2be23b7752b3a5c3529d9844e3424",
+      "sha256": "a99f21f517fb35be55a4d18aa46716ecc6b986e2a0df8794493e3e1909de890b",
+      "slides": 10,
+      "preservedBodySlides": 8,
+      "oldBodyPagesPixelIdentical": 8,
+      "oldNotesPreserved": 10,
+      "oldImagesPreserved": true,
+      "currentGeneratedSourceInNotes": true,
+      "renderedFinalPages": 10,
+      "packageFindings": 0,
+      "layoutFindings": 0,
+      "layoutWarnings": 0,
+      "newWarnings": 0,
+      "reimportPassed": true,
+      "privateEmailsOrGoogleLinks": 0
+    },
+    {
+      "id": "PKG-12",
+      "name": "progress",
+      "source": "docs/deliverables/2026-10-23-traceability/progress-2026-11-07-v31.pptx",
+      "sourceSha256": "acf5e805b00d1a14c9d43144e058f6bb637130fccadb84a79b5789dc724fa261",
+      "sourceMdPath": "docs/acceptance/08_ACCEPTANCE_RESULTS.md",
+      "sourceMdSha256": "0c14b33e092d101c8463101d1731a93cf9e47402d5070db67639c9254a44e1e1",
+      "sha256": "c4f3155e1dd2747ca1ec44e489379355103f8f02f7ae8bc640226fc78fc59c8a",
+      "slides": 12,
+      "preservedBodySlides": 10,
+      "oldBodyPagesPixelIdentical": 10,
+      "oldNotesPreserved": 12,
+      "oldImagesPreserved": true,
+      "currentGeneratedSourceInNotes": true,
+      "renderedFinalPages": 12,
+      "packageFindings": 0,
+      "layoutFindings": 0,
+      "layoutWarnings": 0,
+      "newWarnings": 0,
+      "reimportPassed": true,
+      "privateEmailsOrGoogleLinks": 0
+    }
+  ],
+  "sharedDiagramBodyPixelChecks": [
+    {
+      "name": "business",
+      "diagram": 1,
+      "pixelEquivalentToReviewedTemplate": true
+    },
+    {
+      "name": "business",
+      "diagram": 2,
+      "pixelEquivalentToReviewedTemplate": true
+    },
+    {
+      "name": "requirements",
+      "diagram": 1,
+      "pixelEquivalentToReviewedTemplate": true
+    },
+    {
+      "name": "requirements",
+      "diagram": 2,
+      "pixelEquivalentToReviewedTemplate": true
+    },
+    {
+      "name": "design",
+      "diagram": 1,
+      "pixelEquivalentToReviewedTemplate": true
+    },
+    {
+      "name": "design",
+      "diagram": 2,
+      "pixelEquivalentToReviewedTemplate": true
+    },
+    {
+      "name": "test-spec",
+      "diagram": 1,
+      "pixelEquivalentToReviewedTemplate": true
+    },
+    {
+      "name": "test-spec",
+      "diagram": 2,
+      "pixelEquivalentToReviewedTemplate": true
+    },
+    {
+      "name": "tasks",
+      "diagram": 1,
+      "pixelEquivalentToReviewedTemplate": true
+    },
+    {
+      "name": "tasks",
+      "diagram": 2,
+      "pixelEquivalentToReviewedTemplate": true
+    },
+    {
+      "name": "implementation",
+      "diagram": 1,
+      "pixelEquivalentToReviewedTemplate": true
+    },
+    {
+      "name": "implementation",
+      "diagram": 2,
+      "pixelEquivalentToReviewedTemplate": true
+    },
+    {
+      "name": "test-code",
+      "diagram": 1,
+      "pixelEquivalentToReviewedTemplate": true
+    },
+    {
+      "name": "test-code",
+      "diagram": 2,
+      "pixelEquivalentToReviewedTemplate": true
+    },
+    {
+      "name": "acceptance",
+      "diagram": 1,
+      "pixelEquivalentToReviewedTemplate": true
+    },
+    {
+      "name": "acceptance",
+      "diagram": 2,
+      "pixelEquivalentToReviewedTemplate": true
+    },
+    {
+      "name": "operations",
+      "diagram": 1,
+      "pixelEquivalentToReviewedTemplate": true
+    },
+    {
+      "name": "operations",
+      "diagram": 2,
+      "pixelEquivalentToReviewedTemplate": true
+    },
+    {
+      "name": "user",
+      "diagram": 1,
+      "pixelEquivalentToReviewedTemplate": true
+    },
+    {
+      "name": "user",
+      "diagram": 2,
+      "pixelEquivalentToReviewedTemplate": true
+    },
+    {
+      "name": "matrix",
+      "diagram": 1,
+      "pixelEquivalentToReviewedTemplate": true
+    },
+    {
+      "name": "matrix",
+      "diagram": 2,
+      "pixelEquivalentToReviewedTemplate": true
+    },
+    {
+      "name": "progress",
+      "diagram": 1,
+      "pixelEquivalentToReviewedTemplate": true
+    },
+    {
+      "name": "progress",
+      "diagram": 2,
+      "pixelEquivalentToReviewedTemplate": true
+    }
+  ],
+  "nativePowerPointVerified": false,
+  "limits": [
+    "Actual Calendar read and GAS v5 deployment are confirmed; a new OAuth consent-dialog interaction is not asserted",
+    "Developer booking saved one ledger row/calendar event despite a generic communication error; normal creation success UI and original response/root cause are unverified",
+    "Cancellation reconciliation is a limited developer check, not full AT24/25 acceptance",
+    "Customer active preregistration and reader share are recorded; customer first login/recipient calendar open and customer CUST6 execution remain unverified",
+    "Customer date is unset; completion-test one-way/roundtrip reservations and mock result sheet are not prepared",
+    "Existing business warning21 preserved, no new layout warning; current manifest/README/binaries not modified"
+  ],
+  "visualReview": {
+    "contactSheets": 12,
+    "renderedPages": 160,
+    "representativeFullSize": [
+      "progress/roundtrip/11.png",
+      "progress/roundtrip/12.png"
+    ],
+    "sharedDiagramBodiesPixelEquivalent": 24,
+    "unchangedHistoricalBodiesPixelEquivalent": 136,
+    "nativePowerPointVerified": false
+  }
+}

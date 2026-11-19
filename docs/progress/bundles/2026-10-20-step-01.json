@@ -1,0 +1,50 @@
+{
+  "id": "2026-10-20-step-01",
+  "date": "2026-10-20",
+  "timezone": "Asia/Tokyo",
+  "audience": "小林さん",
+  "status": "draft-not-sent",
+  "acceptanceId": "AT-23",
+  "result": "BLOCKED",
+  "report": "docs/progress/2026-10-20-step-01.md",
+  "evidence": [
+    "docs/acceptance/deployment-verification/public-2026-10-20T00-16-24-097Z.json",
+    "docs/acceptance/16_SEQUENTIAL_ACCEPTANCE.md"
+  ],
+  "evidenceLimit": "アカウント・Sheet発見・接続障害は主担当チャット操作記録。保存スクリーンショットのパスは未提供。",
+  "attachments": [
+    {
+      "path": "docs/deliverables/2026-10-20-manuals/operation-manual-2026-10-20-v4.pptx",
+      "changed": true,
+      "sha256": "d239f03ce9f23588975b4aa2902b1ce152d40775458fd0bc4a47de15bae20b6e"
+    },
+    {
+      "path": "docs/deliverables/2026-10-20-manuals/user-manual-2026-10-20-v4.pptx",
+      "changed": true,
+      "sha256": "e9b0ec1889a7a188c68ed486581c044f56b573b8680e19a61695f8b03e2da250"
+    },
+    {
+      "path": "docs/deliverables/2026-10-20-manuals/remaining-tasks-2026-10-20-v4.pptx",
+      "changed": true,
+      "sha256": "c096899581af920be7b3709d4035d3c79a680abccb30e6044c7b552f06524ec5"
+    },
+    {
+      "path": "docs/deliverables/2026-10-20-manuals/progress-report-step-01-2026-10-20-v4.pptx",
+      "changed": true,
+      "sha256": "fc751413e92a7a9d259bae4bed08db354f02668d47be65fdb3a081384f97af91"
+    }
+  ],
+  "changes": [
+    "検証は会社アカウント、本番は教室側の運用アカウントに分離",
+    "ログイン待ちを接続復旧待ちへ更新",
+    "残作業ごとの送信用一式保存を追加"
+  ],
+  "next": "接続復旧後、台帳・GAS・権限を確認しAT-23を実施",
+  "requests": [
+    "教室側の正式運用Googleアカウント、所有者・管理者・共有方法を準備"
+  ],
+  "owner": null,
+  "dueDate": null,
+  "sentAt": null,
+  "validation": "4 PPTX passed package/layout/font/slide-count/import checks. 49 pages rendered and visually reviewed. PowerPoint application not opened."
+}

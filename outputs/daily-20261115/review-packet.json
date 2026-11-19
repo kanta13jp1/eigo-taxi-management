@@ -1,0 +1,14 @@
+{
+  "payloads": 6,
+  "test": "ticket-layout.cjs",
+  "stageManifest": "stage/docs/acceptance/deployment/build-manifest.json",
+  "inputs": 32,
+  "baseline": "a97d95510290c92b",
+  "patch": "implementation.patch",
+  "sourceDigest": "5f652531b5aea67c7295084e025563b4c32010cd3d4e5791abd0f8b06f65672f",
+  "baselineUI": "before-ui.json",
+  "candidateUI": "after-ui.json",
+  "diff": [
+    "src/components/AddTicketModal.tsx"
+  ]
+}

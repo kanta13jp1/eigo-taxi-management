@@ -1,0 +1,52 @@
+{
+  "id": "2026-10-20-step-05",
+  "date": "2026-10-20",
+  "timezone": "Asia/Tokyo",
+  "audience": "小林さん",
+  "status": "draft-not-sent",
+  "acceptanceId": "AT-23",
+  "result": "PASS",
+  "report": "docs/progress/2026-10-20-step-05.md",
+  "evidence": [
+    "docs/acceptance/at23-2026-10-20/step05/deployment.txt",
+    "docs/acceptance/at23-2026-10-20/step05/api-auth.json",
+    "docs/acceptance/at23-2026-10-20/step05/student-persistence.json",
+    "docs/acceptance/at23-2026-10-20/step05/workbook-verification.json",
+    "docs/acceptance/at23-2026-10-20/step05/restored-api-consistency.json"
+  ],
+  "attachments": [
+    {
+      "path": "docs/deliverables/2026-10-20-manuals/operation-manual-2026-10-20-v4.pptx",
+      "changed": false,
+      "sha256": "d239f03ce9f23588975b4aa2902b1ce152d40775458fd0bc4a47de15bae20b6e"
+    },
+    {
+      "path": "docs/deliverables/2026-10-20-manuals/user-manual-2026-10-20-v4.pptx",
+      "changed": false,
+      "sha256": "e9b0ec1889a7a188c68ed486581c044f56b573b8680e19a61695f8b03e2da250"
+    },
+    {
+      "path": "docs/deliverables/2026-10-20-manuals/remaining-tasks-2026-10-20-v7.pptx",
+      "changed": true,
+      "sha256": "4e72431dd8749f29512bda989290872a047e8e73ae77c5f7696b99e31af323bc"
+    },
+    {
+      "path": "docs/deliverables/2026-10-20-manuals/progress-report-step-05-2026-10-20-v7.pptx",
+      "changed": true,
+      "sha256": "e2668e76be2ff699e56d2d0ff970b02eeb7c81dd1fa34558e885d4eab2e2d46a"
+    }
+  ],
+  "changes": [
+    "検証GAS v1配備と認証実測",
+    "Web1行保存・再読込・台帳B4照合",
+    "不足3シート生成・82セル保持・元3タブ名復元",
+    "AT23 PASS。AT24〜30の7件未合格"
+  ],
+  "next": "AT24の検証用カレンダー分離先と権限を確認。現時点Calendar操作・権限付与なし。",
+  "requests": [
+    "教室側の本番Googleアカウント準備"
+  ],
+  "sentAt": null,
+  "validation": "2 PPTX package/layout/font/slide count/import checks PASS. 17 slides rendered. 10 new/changed slides visually reviewed; 7 unchanged PNGs byte-identical to reviewed v6. PowerPoint app not opened.",
+  "evidenceLimit": "内部xlsxや元台帳値を含む画面、認証情報は外部添付対象外。"
+}

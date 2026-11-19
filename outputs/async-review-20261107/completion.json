@@ -1,0 +1,65 @@
+{
+  "finishedAt": "2026-11-07T09:39:27.108945+00:00",
+  "result": "SELF_PACED_CUSTOMER_PREPARATION_READY",
+  "registryVersion": "2026-11-07-r17",
+  "registrySha256": "d6aa48ce6e5bd18c89db3cde4c465f44b3dd088d52c0e5208cebaaf49d2d1adf",
+  "testHostingVersion": "43d4ac9b2a065441",
+  "testGasVersion": 6,
+  "publicFilesMatched": 7,
+  "fixedScheduledBookings": 2,
+  "initialBalance": 5,
+  "customerPassed": 0,
+  "customerTotal": 6,
+  "firstCustomerGoogleLogin": "NOT_RUN",
+  "requiresDateCoordination": false,
+  "requiresDeveloperRoleSwitchDuringExecution": false,
+  "routinePauseResume": "unfinished steps only after matching stored state",
+  "productionStarted": false,
+  "release": "HOLD",
+  "machineValidation": {
+    "structuralStatus": "PASS",
+    "errors": [],
+    "coverageGaps": [],
+    "counts": {
+      "requirements": 39,
+      "flows": 11,
+      "testCases": 203,
+      "screens": 20,
+      "interfaces": 16,
+      "coverageGaps": 0
+    },
+    "release": "HOLD",
+    "semanticReview": "REQUIRED",
+    "thirdPartyPassed": 0
+  },
+  "newAndReexecutedLocalChecks": 178,
+  "otherCurrentEvidenceChecks": 25,
+  "presentations": {
+    "count": 12,
+    "pages": 160,
+    "version": "v33",
+    "independentReview": "PASS",
+    "nativePowerPointVerified": false,
+    "oldBusinessLayoutWarnings": 21,
+    "newWarnings": 0
+  },
+  "sharedSheet": {
+    "guideAndResultsReadback": "PASS",
+    "customerResultCellsAndValidationPreserved": true,
+    "historyLastRow": 58,
+    "lastHistoryId": "VR-20261107-13"
+  },
+  "route": {
+    "implementationWorker": "gpt-6-astra",
+    "reasoningEffort": "xhigh",
+    "why": "test-only role and authorization across backend, frontend, documents and test hosting",
+    "independentBackendFrontendReviews": "PASS",
+    "parallelDocumentationAndPresentationReview": "PASS",
+    "resources": "local browser and test servers stopped; intermediate browser tabs closed; shared Sheet retained"
+  },
+  "limits": [
+    "Customer first Google login, Calendar recipient access and six checks remain unperformed.",
+    "Earlier v5 generic registration error cause remains unidentified; two later registrations returned normally.",
+    "Past-date fixed bookings have local UI coverage; live observations were on the fixture date."
+  ]
+}

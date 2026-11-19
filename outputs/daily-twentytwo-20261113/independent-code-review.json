@@ -1,0 +1,17 @@
+{
+  "reviewer": "lead agent independent of implementation worker",
+  "baselineRelease": "5b9271233ac9309f",
+  "file": "src/App.tsx",
+  "sha256": "4dbf2a0a39b52b055edce996495b2e9c4dac8f478d15d8f8d1f1cd114fd8263e",
+  "checks": [
+    "loadData returns fresh rides only when the same session remains active and readback succeeds",
+    "Cancellation success requires the requested reservation ID to be confirmed cancelled in that snapshot",
+    "Read failures, stale scheduled target or missing target produce an unconfirmed-result message rather than success",
+    "Previous success toast is cleared before cancellation and session guards prevent stale outcomes after sign-out",
+    "Recovery re-reads only and does not submit another cancellation",
+    "Independent actual-browser reruns of read-error and stale-target scenarios passed; normal/write-error/missing-target/session-ended controls reviewed",
+    "No API mutation protocol, GAS, ticket calculation or customer fixture changes"
+  ],
+  "pass": true,
+  "scope": "Partial AT-18 cancellation/readback branch using controlled anonymous browser faults; not all five update endpoints or real Google communication acceptance."
+}

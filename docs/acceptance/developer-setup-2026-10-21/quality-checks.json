@@ -1,0 +1,66 @@
+{
+  "executedAt": "2026-10-20T17:05:25.089Z",
+  "nodeVersion": "v24.19.0",
+  "mode": "Local verification only; no external changes, real Google login, or deployment",
+  "checks": [
+    {
+      "name": "TypeScript project build",
+      "status": "PASS",
+      "command": "node node_modules/typescript/bin/tsc -b"
+    },
+    {
+      "name": "Vite production build",
+      "status": "PASS",
+      "bundleModules": 1949,
+      "javascriptBytesApprox": 431110
+    },
+    {
+      "name": "Scoped lint",
+      "status": "PASS",
+      "warnings": 0,
+      "errors": 0,
+      "command": "node node_modules/oxlint/bin/oxlint src scripts/test_gas.cjs scripts/test_portals.cjs scripts/test_google_auth.cjs"
+    },
+    {
+      "name": "GAS VM regression + Google authentication",
+      "status": "PASS",
+      "passed": 54,
+      "total": 54,
+      "evidence": "gas/latest.json"
+    },
+    {
+      "name": "Frontend contract",
+      "status": "PASS",
+      "passed": 17,
+      "total": 17,
+      "evidence": "frontend-contract.json"
+    },
+    {
+      "name": "Firebase SDK boundary",
+      "status": "PASS",
+      "passed": 6,
+      "total": 6,
+      "evidence": "google-sdk-contract.json"
+    }
+  ],
+  "limitations": [
+    "Google provider/web app and real user UID mappings are not configured.",
+    "Firebase and Identity Toolkit responses were stubbed in contract tests.",
+    "Unscoped lint includes warnings from existing generated/manual-source files; scoped application and changed tests are clean.",
+    "The initial Vite output directory collided with a shared manual-generation directory; the parent task restored manual artifacts from saved decks. No subsequent writes were made there by this worker.",
+    "Calendar authorization is absent; legacy AT-24 through AT-30 remain incomplete."
+  ],
+  "sourceHashes": {
+    "src/deployment-config.ts": "bd83de882a2beba8537b2d084c5d2eaf28531bd47030be8492a5e25aaf569a36",
+    "src/services/google-auth.ts": "d932afd3fea9eaa016d92e9e9e123b5090c78ad30e98faa8ac8540655f18cb9d",
+    "src/services/api.ts": "85120381d35581b5c14a5334295b52c7e6ad379fc8d80950c1610eb7e54a02b1",
+    "src/components/LoginScreen.tsx": "27ee3d0246b0c23b9af331cc02196e7d727901d0c26f345edc1b288feaa3b084",
+    "src/components/GoogleSettings.tsx": "9cecf06a4158e7417929cc1791c1be99d2c9178fe7e53d7eeb4915dd31f2305c",
+    "gas/Code.gs": "ab3e6de2c13286ecc811ea725d84b30bec4493848f6bc7736ee4d9ff33aead54",
+    "gas/appsscript.json": "94cb2b5321d64aea72886db744f4c12f8501d2423af356d0e66b2856da99d4c1",
+    "package.json": "ae965839a44fe1eda0a6c02beb018cbca64369386d51a94874505bedbe0ca875",
+    "package-lock.json": "ad3a4848723b7b1dc3ce3c840ffdf44ae8c9ea8cb58fb793cf5b5d58f2f3b805",
+    ".github/workflows/deploy.yml": "2f7d42b20f2107c1143da8ae9baf2bb853ac32d7463ffb5655ce415495cd3ccc",
+    "docs/DEVELOPER_SETUP_AUTH.md": "2812011fe5d8a0d198bef42acf437b563356e89f07823700776c432f07e4d93a"
+  }
+}

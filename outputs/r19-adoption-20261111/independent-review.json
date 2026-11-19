@@ -1,0 +1,149 @@
+{
+  "reviewer": "independent AI subagent (not the implementer)",
+  "reviewedAt": "2026-11-11T02:36:35+09:00",
+  "result": "PASS",
+  "reviewedHashes": {
+    "src/portal.ts": "874dce7f269e59073b75d6ae47c7fb3b682686fa2ab214d8cb0eacb48c59cac7",
+    "src/components/LoginScreen.tsx": "3bcfd41e89347be94c72e13e7c6503b621bd2221c6b366311f0c4bcdf1894e3d",
+    "src/App.tsx": "0eefaa4c0244f47fb9da6cb5a3dc670ff61ce561f298ea4d26bc6f5fc7ea11aa",
+    "src/components/AddRideModal.tsx": "4f390ee7c4d81ba859bc02316d728ed8104521797cc5ee95d722f6efc619f50b",
+    "src/components/ParentPortal.tsx": "706020ccef78b8e080c16c6d22c0ec4562ec00be1d6ae0bd9859130ef512b35b",
+    "src/components/TeacherDashboard.tsx": "82eec6fe54cf237d1ad1e0981beeca418a8c61e38aaa88f23d4596af67b658e5",
+    "scripts/test_google_auth_retry_ui.cjs": "6b9819277a497984c64ded87c9fbe5e72e7fd6b1b7bdc0c97d890ee0a94d4e99",
+    "scripts/test_portal_mismatch_ui.cjs": "8cb6e7f873ec42895e4629962f176a22ad5de9ae20192ea1b1997112caa0e9f2"
+  },
+  "registryCandidateSha256": "cfd1a14aa71f637e2cc770bca08caa3758ddff8d6605d669d2341f343ff912e4",
+  "baselineSourcesFound": {
+    "src/portal.ts": "docs/acceptance/deployment/releases/0b830b69152e45a3/source/src/portal.ts (sha256 2cb1dc0a... equals r18 baseline; full diff reviewed)",
+    "src/components/LoginScreen.tsx": "docs/acceptance/deployment/releases/0b830b69152e45a3/source/src/components/LoginScreen.tsx (sha256 fff15f0a... equals r18 baseline; full diff reviewed)",
+    "src/App.tsx": "docs/acceptance/deployment/releases/0b830b69152e45a3/source/src/App.tsx (sha256 6522d074... equals r18 baseline; full diff reviewed)",
+    "src/components/AddRideModal.tsx": "docs/acceptance/deployment/releases/0b830b69152e45a3/source/src/components/AddRideModal.tsx (sha256 1bc02fa8... equals r18 baseline; full diff reviewed)",
+    "src/components/ParentPortal.tsx": "docs/acceptance/deployment/releases/0b830b69152e45a3/source/src/components/ParentPortal.tsx (sha256 c58b9753... equals r18 baseline; full diff reviewed)",
+    "src/components/TeacherDashboard.tsx": "docs/acceptance/deployment/releases/0b830b69152e45a3/source/src/components/TeacherDashboard.tsx (sha256 1316fbc9... equals r18 baseline; full diff reviewed)",
+    "scripts/test_google_auth_retry_ui.cjs": "not available — reviewed in full. The r18 version (sha256 e8b1ba91...) is not in the release archive (which holds no scripts/), not in git (untracked) and no copy was found by name elsewhere in the repository. The claimed change (isPortalMismatch added to the '../portal' stub on line 17) could not be confirmed as the only change.",
+    "scripts/test_portal_mismatch_ui.cjs": "not available — new file, no r18 version; reviewed in full"
+  },
+  "commandsRun": [
+    { "command": "sha256sum of the 8 current files, the 6 archived r18 files, docs/traceability/source-baseline.json and outputs/r19-adoption-20261111/source-baseline-r18.json", "exit": 0, "summary": "6 archived frontend files match the r18 baseline hashes exactly; canonical source-baseline.json is byte-identical to source-baseline-r18.json (72f84563...); all 8 current files match source-baseline-r19-candidate.json." },
+    { "command": "diff -u --strip-trailing-cr <r18 archive file> <current file> (6 frontend files); diff -rq of archive src/ and gas/Code.gs against working tree", "exit": 1, "summary": "Differences exactly as described in findings/notes. Outside the 8 files, only src/components/AddTicketModal.tsx differs from the r18 archive (yen input step 500 -> 1). gas/Code.gs, src/services/api.ts, google-auth.ts and all other src files are identical to the r18 archive." },
+    { "command": "npx tsc -b (node v22.18.0)", "exit": 0, "summary": "No output, no type errors." },
+    { "command": "node scripts/test_portal_mismatch_ui.cjs", "exit": 0, "summary": "PASS PM-01, PM-02, PM-03, PM-04, PM-05 (5 lines)." },
+    { "command": "node scripts/test_google_auth_retry_ui.cjs", "exit": 0, "summary": "PASS Failed initialization can be retried; login requires a separate click / PASS Failed login requires new preparation before a separate login click." },
+    { "command": "node scripts/test_portals.cjs", "exit": 0, "summary": "All lines PASS (extra run, not requested; last 5 lines inspected)." },
+    { "command": "Mutation check of test_portal_mismatch_ui.cjs on copies in a scratch directory outside the repository (6 mutants of LoginScreen.tsx / portal.ts)", "exit": 0, "summary": "Unmutated copy exit 0. All 6 mutants failed the test (exit 1): admin link shown on admin entrance; guidance on any error; link href changed to #/parent; isPortalMismatch always false; a #/parent link added on admin entrance; guidance shown before any login attempt." },
+    { "command": "node <scratch>/regdiff.cjs (own structural diff of registry-r18.json vs registry-r19-candidate.json, evidence existence/key/PASS checks, sha256 of every sourceHashes entry in the 8 new evidence files, frontend-contract normalization comparison)", "exit": 0, "summary": "Differences: version; 46 tests[].evidence.path; 5 tests added (PM-01..05); REQ-20 designText/operationText/userText changed, 2 implementation entries and 5 test ids added; REQ-24 and REQ-25 latestObservation + observationRecord added. Nothing else. facts identical (also raw text identical). capability status/acceptanceStatus identical for all 39. No \"PASS\" string in either registry. 51 tests point into the new folder; 0 missing files, 0 bad keys, 0 non-PASS, 0 missing requiredSources. 63 sourceHashes entries across 8 evidence files: 0 stale. frontend-contract-normalized.json differs from regression/frontend/frontend-contract.json only by one sourceHashes key (absolute ...\\scripts\\test_portals.cjs -> scripts/test_portals.cjs) plus the added 'normalization' block; hash values, results, executedAt, passed/total identical." },
+    { "command": "node -e (hash every entry of source-baseline-r19-candidate.json against the working tree)", "exit": 0, "summary": "29 entries, 0 mismatches; the 8 entries that differ from r18 are exactly the 8 reviewed files." }
+  ],
+  "findings": [
+    {
+      "id": "F-01",
+      "severity": "minor",
+      "file": "src/components/TeacherDashboard.tsx",
+      "line": 470,
+      "summary": "Low-ticket threshold is not fully unified: the students tab still treats only exactly 1 ticket as low.",
+      "evidence": "Line 75 counts students with ticketBalance <= 2 and the summary card (line 131, 'チケット残り2枚以下') navigates to the students tab on click, but on that tab line 469-470 use isZero = balance === 0 and isLow = balance === 1. A student with 2 tickets is counted in the card yet shown there with the green (emerald) badge and no label, so the admin cannot see who the counted student is. Business rule states warning at 2, 1, 0. Records (daily-four.md) only claim the summary, today-row colour and booking form were unified, so this is an incomplete fix rather than a regression.",
+      "suggestedFix": "Use the same threshold on the students tab (e.g. isLow = balance > 0 && balance <= 2 with label '残り{n}回'), ideally through one shared constant used by TeacherDashboard, AddRideModal and ParentPortal, and add an assertion for the 2-ticket card."
+    },
+    {
+      "id": "F-02",
+      "severity": "minor",
+      "file": "outputs/r19-adoption-20261111/candidate-dry-run.json",
+      "line": 0,
+      "summary": "The candidate's own dry run reports two error codes the generator classifies as unexpected; adopting r19 as-is will not make the strict check pass.",
+      "evidence": "candidate-dry-run.json: UNINDEXED_DOCUMENT 4 (docs/progress/2026-11-10-daily-four.md, 2026-11-10-daily-three.md, 2026-11-11-cumulative-five.md, 2026-11-11-daily-five.md) and DOCUMENT_DRIFT 1 (docs/deliverables/2026-11-10-premeeting/README.md), listed under 'unexpected' and in registry-change-proposal.json dryRun.unexpectedCodes. SOURCE_REVIEW_REQUIRED is 8 (matches the 8 files reviewed here). These are document-index issues from the other session's records, not defects in the registry candidate content.",
+      "suggestedFix": "Before adoption, index the four progress documents and resolve the README drift through the normal document procedure, then rerun the dry run and require unexpectedCodes to be empty. Do not adopt on the assumption that only the three expected codes remain."
+    },
+    {
+      "id": "F-03",
+      "severity": "minor",
+      "file": "outputs/r19-adoption-20261111/registry-r19-candidate.json",
+      "line": 0,
+      "summary": "Three behaviour changes inside the newly baselined files have no registered test or capability text in r19.",
+      "evidence": "Demo browser-only labels (App.tsx isDemo prop, TeacherDashboard.tsx:221/431, ParentPortal.tsx:185), low-ticket threshold <=2 (TeacherDashboard.tsx:75/285, AddRideModal.tsx:115) and the day-rollover timer (TeacherDashboard.tsx:52-69) are covered only by ad hoc scripts under outputs/ (low-ticket-20261110/check.cjs, day-rollover-20261111/at12.cjs) that are not registered tests. REQ-04/REQ-09/REQ-12 text is unchanged. The proposal discloses this under 'limits', so it is not hidden, but after adoption the baseline hash will cover code whose new behaviour no registered test would catch if it regressed (e.g. reverting <=2 to <=1 passes all 211 tests as far as I can tell from the registered suites' fresh results being produced before and after with no dedicated assertion; not exhaustively proven).",
+      "suggestedFix": "Either register tests for the three behaviours (promote the ad hoc scripts into scripts/ with hashed reports) in r19, or record them as an explicit follow-up item in the registry/progress record so the gap is tracked."
+    },
+    {
+      "id": "F-04",
+      "severity": "minor",
+      "file": "src/components/AddTicketModal.tsx",
+      "line": 163,
+      "summary": "A fourth source change since r18 (yen amount input step 500 -> 1) is outside the source baseline and outside this review's 8-file scope.",
+      "evidence": "diff against the r18 archive shows only step=\"500\" -> step=\"1\" on the amount input. The file is not an entry in source-baseline.json or the r19 candidate baseline, so no hash gate applies. The change itself looks harmless (removes browser step validation that rejected amounts not divisible by 500; min=0 unchanged; no ticket-count logic touched). No independent review file was found under outputs/ticket-yen-20261111.",
+      "suggestedFix": "Record that this file was changed and reviewed (this note can serve for the one-line diff at sha256 462f1929...), and consider adding it to the baseline since it handles ticket purchases."
+    },
+    {
+      "id": "F-05",
+      "severity": "minor",
+      "file": "scripts/test_portal_mismatch_ui.cjs",
+      "line": 71,
+      "summary": "PM-04 and PM-05 are narrower than their names: 'no guidance for other failures' is only exercised on the parent entrance, and PM-05 only checks the admin link.",
+      "evidence": "Line 71-76 loops over three messages with route {kind:'parent'} only and tests absence of the parent-entrance sentence ('登録されていません。保護者の方は') and the admin link. A bug that showed the admin-entrance guidance paragraph for unrelated errors on #/admin would pass. PM-05 (line 79-80) asserts only that the link is absent before login, not the guidance text. The current component uses one shared condition (LoginScreen.tsx:55) so the behaviour is correct today; mutation testing confirmed the test does fail for six realistic breakages.",
+      "suggestedFix": "Repeat the PM-04 loop for {kind:'admin'} asserting '管理者用の入口には登録されていません' is absent, and in PM-05 also assert the guidance text is absent."
+    },
+    {
+      "id": "F-06",
+      "severity": "note",
+      "file": "scripts/test_google_auth_retry_ui.cjs",
+      "line": 17,
+      "summary": "The retry test stubs '../portal' with its own copy of isPortalMismatch, so it does not exercise the real function and its evidence does not hash src/portal.ts.",
+      "evidence": "Line 17 supplies { DEMO_ENTRY_ID: 'demo', isPortalMismatch: ... } and line 47 hashes only LoginScreen.tsx and the script. The only error used is '認証中断', so the stub always returns false; the test would pass whatever the real implementation did. This is acceptable for UI-07/UI-08 (retry behaviour), and the real function is covered by PM-01..05, but UI-07/08 evidence must not be read as covering the guidance.",
+      "suggestedFix": "None required; optionally load the real portal.ts as the mismatch test does."
+    },
+    {
+      "id": "F-07",
+      "severity": "note",
+      "file": "src/portal.ts",
+      "line": 32,
+      "summary": "Wrong-entrance detection matches on the Japanese message prefix rather than the server error code.",
+      "evidence": "isPortalMismatch uses message.startsWith('この入口ではログインできません'). gas/Code.gs:233 and portal.ts:25 both start with that sentence today, and api.ts request() passes json.error through verbatim, so it works. The server code PORTAL_MISMATCH is discarded by request(). If either text is reworded the guidance silently disappears (fails closed: the refusal itself is unaffected). The reviewer-specific PORTAL_MISMATCH text at Code.gs:215 deliberately does not match.",
+      "suggestedFix": "Longer term, carry the API code on the thrown error and test that instead; or add a test that reads the literal from gas/Code.gs so a rewording is caught."
+    },
+    {
+      "id": "F-08",
+      "severity": "note",
+      "file": "src/components/LoginScreen.tsx",
+      "line": 55,
+      "summary": "The guidance block is outside the role=\"alert\" element, so screen readers announce the refusal but not the guidance or the link.",
+      "evidence": "Line 54 is <p role=\"alert\">; the guidance <div> on line 55-61 has no live-region role. Sighted users see both. The link is a real <a href> and keyboard reachable.",
+      "suggestedFix": "Wrap the refusal and the guidance in one role=\"alert\" container, or give the guidance div role=\"status\"."
+    },
+    {
+      "id": "F-09",
+      "severity": "note",
+      "file": "src/components/TeacherDashboard.tsx",
+      "line": 53,
+      "summary": "Day rollover relies on a midnight setTimeout plus visibilitychange only; resume from device sleep with the tab still visible may show the previous day until the delayed timer fires.",
+      "evidence": "Effect at lines 53-69: timer re-arms itself to the next local midnight, listener is visibilitychange. Cleanup clears the pending timer and removes the listener (verified by reading; no leak, safe under StrictMode double invocation, an early firing re-arms correctly, setting the same string does not re-render). Browsers may pause timers during system suspend and visibilitychange does not fire if the tab stayed visible. Records state a real overnight run on the public page was not performed.",
+      "suggestedFix": "Also listen for window 'focus' and 'pageshow', or add a low-frequency interval check; optional."
+    },
+    {
+      "id": "F-10",
+      "severity": "note",
+      "file": "outputs/r19-adoption-20261111/reservation-retry-ui.json",
+      "line": 0,
+      "summary": "RETRY-UI-01 evidence is a wrapper generated by prepare_r19.py from a stdout log, and trace-ui results.json has no execution timestamp.",
+      "evidence": "prepare_r19.py builds reservation-retry-ui.json with executedAt = generation time and hashes computed at wrap time, not at test run time (the log was produced seconds earlier in the same session, and the hashes match the current files). regression/trace-ui/results.json has keys sourceHashes, mode, externalRequests, results only. Same practice as r18 according to the script comment.",
+      "suggestedFix": "Have the test scripts write their own hashed, timestamped reports."
+    }
+  ],
+  "registryReview": {
+    "unexpectedDifferences": [],
+    "factsUnchanged": true,
+    "evidenceChecks": "All 46 repointed tests and the 5 new tests point at files that exist under outputs/r19-adoption-20261111. For each, exactly one result matches the registry key by id or name and its status is PASS; every requiredSources path is present in that file's sourceHashes. The 8 evidence files (trace-ui 6 results, local 14, frontend-normalized 33, google-auth-retry 2, modal-scroll 2, reviewer 8, reservation-retry 1, portal-mismatch 5) have all results PASS and all 63 sourceHashes entries equal to the sha256 I computed from the working tree. frontend-contract-normalized.json differs from regression/frontend/frontend-contract.json only in one sourceHashes key spelling and an added 'normalization' block. No test left on an old evidence path lists any of the 8 changed files in requiredSources. Test count 206 -> 211, no duplicate ids. Status/acceptanceStatus unchanged on all 39 capabilities (REQ-24, REQ-25 remain HOLD/BLOCKED); customer acceptance 0/6, release HOLD, productionStarted false unchanged; the string \"PASS\" does not occur in either registry. I did not rerun the four browser suites; I verified their stored results and hashes only.",
+    "wordingIssues": [
+      "No overstatement found. REQ-20 designText matches LoginScreen.tsx:55-61 and portal.ts:32-34 (parent entrance: family-URL guidance plus #/admin link; admin entrance: guidance only; nothing for ACCOUNT_NOT_REGISTERED / ENTRY_REVOKED / interrupted login; server refusal unchanged, gas/Code.gs and api.ts identical to r18).",
+      "REQ-20 userText tells the reader only to reopen the family URL/QR; an admin who used the parent entrance is covered in operationText, not userText. Acceptable if userText is the parent-facing text; minor wording gap otherwise.",
+      "REQ-24/REQ-25 latestObservation agree with outputs/at24-at25-20261110/readback.json and PROGRESS-20261110-EVE-05/06/07 (2026-11-12 15:30 pickup, reservation id and event match, cancelled, 0 events, balance 8 before and after, confirm dialog auto-accepted, single admin run, parent/real device/customer not covered, status unchanged). They read as single developer runs. They omit that the ledger was read through the gviz HTML view and the Hosting/GAS versions (d360644531543a4e, GAS v6); both are in the linked record, so this is a completeness note only."
+    ]
+  },
+  "notReviewed": [
+    "The r18 -> current diff of scripts/test_google_auth_retry_ui.cjs (no r18 copy available; current file reviewed in full instead).",
+    "Browser suites were not rerun (run_local_acceptance.mjs, test_trace_ui.mjs, tests/reviewer-ui/run.mjs, test_booking_modal_scroll.mjs) per instructions; only their stored reports and source hashes were checked.",
+    "Real Google login, the deployed verification site, GAS deployment state, real calendar/ledger, real devices and screen readers.",
+    "Screenshots and the ad hoc scripts under outputs/demo-scope-20261110, low-ticket-20261110, day-rollover-20261111, ticket-yen-20261111, daily-six-20261111 were not audited; the corresponding source changes were reviewed directly from the diffs.",
+    "The 12 presentation packages, generated documents, binary-documents-before.json, presentations-before.json and the ppt-v36 folder that appeared in the adoption directory during the review.",
+    "Lint was not run.",
+    "prepare_r19.py was read as a description of intent and not executed."
+  ],
+  "notes": "Source review conclusion: no blocking or major finding. Auth, permission and role separation are untouched: gas/Code.gs, src/services/api.ts and google-auth.ts are byte-identical to the r18 archive; App.tsx only passes isDemo={session.mode === 'demo'} to two components; the guidance is display-only, shown only after a refusal whose message starts with the wrong-entrance sentence, and LoginScreen is remounted on hash change (key=JSON.stringify(route)) so the error does not carry over to the admin entrance after the link is followed. The admin entrance renders no link at all in the guidance. No family URL, entry id or other family's data is rendered by the new code. Ticket consumption logic is unchanged; only display thresholds moved from <=1 to <=2. Timer and listener are cleaned up on unmount. PASS here means 'no blocking/major findings in the reviewed scope by an AI reviewer'; it is not a human review, not a customer acceptance result and does not change REQ-24/25 HOLD or release HOLD. F-02 must be resolved (or consciously accepted) before the strict check can pass after adoption. Another session appeared to be writing into outputs/r19-adoption-20261111 (ppt-v36/) during the review; the 8 file hashes and the candidate hash were re-read at the end of the review and were unchanged."
+}

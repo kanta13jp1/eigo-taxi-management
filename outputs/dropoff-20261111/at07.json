@@ -1,0 +1,19 @@
+{
+  "checkedAt": "2026-11-11T08:41:56.083Z",
+  "case": "AT-07",
+  "before": false,
+  "scope": "React form, demo service, parent screen, JSDOM",
+  "labels": {
+    "pickup": "お迎え時間",
+    "dropoff": "お送り時間",
+    "roundtrip": "お迎え時間"
+  },
+  "rideType": "dropoff",
+  "rideTime": "17:30",
+  "role": "parent",
+  "priorRides": 2,
+  "afterRides": 3,
+  "beforeBalance": 7,
+  "afterBalance": 7,
+  "screen": "17:30 送り（ご自宅へ）"
+}

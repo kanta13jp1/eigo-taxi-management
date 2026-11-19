@@ -1,0 +1,10 @@
+{
+  "mode": "public",
+  "scenario": "session-ended",
+  "base": "https://eigo-taxi-test.web.app",
+  "successVisible": false,
+  "staleErrorVisible": false,
+  "loginVisible": true,
+  "writeCount": 1,
+  "blockedRequests": []
+}

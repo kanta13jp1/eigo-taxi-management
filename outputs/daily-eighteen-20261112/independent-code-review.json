@@ -1,0 +1,19 @@
+{
+  "reviewer": "lead agent independent of implementation worker",
+  "baseline": "254b10bb3bf3744a",
+  "files": {
+    "src/App.tsx": "70290f3d56dcb7c0d40973ec1e591b804c244e907bf2f81d6679d8a507704f4b",
+    "src/services/api.ts": "19108b103a14986fcfe9b11c6155e076fb064fcfb3c5a89fe716c55df7dcc425"
+  },
+  "checks": [
+    "Typed stale-state classification is limited to completeRide with an INVALID_STATE response",
+    "Request error propagation preserves the new Error subtype while retaining network/JSON timeout normalization",
+    "App reconciles ledger data only for inactive-reservation rejection and then propagates the rejection to the existing inline error handler",
+    "Unrelated shortages, network failures and authentication handling remain on their existing paths",
+    "No GAS, reservation mutation or ticket consumption code changed",
+    "Workspace and stage file hashes matched during review"
+  ],
+  "validation": "Focused actual-App stale state tests and stub-transport error classification tests passed, including unrelated action/code controls.",
+  "pass": true,
+  "limitation": "Live Google response handling is tested with stub transport only; no new real-Google acceptance is claimed. A refresh failure retains the existing global ledger error handling."
+}

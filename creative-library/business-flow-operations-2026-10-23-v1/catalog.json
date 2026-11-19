@@ -1,0 +1,38 @@
+[
+  {
+    "path": "business-flow-operations-2026-10-23-v1.pptx",
+    "sha256": "CA0D06350F4AC612344B667F2A4037DEE5DBB9CF3A2BCDEAAECF72FE4924B3A5",
+    "provider": "artifact-tool",
+    "rights": "review-required",
+    "publication": "private",
+    "parent": "business-flow-review-2026-10-23-v1",
+    "brief": "当日のカレンダー確認、実送迎、完了登録、消費の現場業務を追加。全11枚。"
+  },
+  {
+    "path": "operations-flow.mjs",
+    "sha256": "229C2F17764A1E55E8525C9C6033008B64FCB666934CEDA294FDB8CBCCEDC4B3",
+    "provider": "artifact-tool",
+    "rights": "review-required",
+    "publication": "private",
+    "parent": "business-flow-review-2026-10-23-v1",
+    "brief": "当日のカレンダー確認、実送迎、完了登録、消費の現場業務を追加。全11枚。"
+  },
+  {
+    "path": "README.md",
+    "sha256": "694BF9723B4D37B029B2ADEF7E7A18D3D4BCE9C61EBBE0F8423FB54F0FBBE416",
+    "provider": "artifact-tool",
+    "rights": "review-required",
+    "publication": "private",
+    "parent": "business-flow-review-2026-10-23-v1",
+    "brief": "当日のカレンダー確認、実送迎、完了登録、消費の現場業務を追加。全11枚。"
+  },
+  {
+    "path": "validation-v1.json",
+    "sha256": "442A88A69DEB2EED7628AB475A0E505ACC067944F08DFD5D4DC7C0181AF5A882",
+    "provider": "artifact-tool",
+    "rights": "review-required",
+    "publication": "private",
+    "parent": "business-flow-review-2026-10-23-v1",
+    "brief": "当日のカレンダー確認、実送迎、完了登録、消費の現場業務を追加。全11枚。"
+  }
+]

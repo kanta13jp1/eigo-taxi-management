@@ -1,0 +1,21 @@
+{
+  "checkedAt": "2026-11-09T00:54:59.952Z",
+  "status": "PASS",
+  "checks": [
+    true,
+    true,
+    true,
+    true,
+    true
+  ],
+  "plan": {
+    "id": "1PqUq7BoBBVlPolivap0eg1UPik47vNNWphyBd0DNwvU",
+    "range": [
+      "進捗概要!B11",
+      "進捗概要!B13",
+      "検証結果履歴!A61:I61"
+    ]
+  },
+  "customerPassed": 0,
+  "customerTotal": 6
+}

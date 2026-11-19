@@ -1,0 +1,5 @@
+{
+  "summary": "公開デモ：別タブで取消後、古い画面での完了を拒否。残数は7枚。",
+  "result": "元の画面を手動再読込せず「取消」に更新。対象の完了ボタンを除去。",
+  "image": "outputs/daily-eighteen-20261112/public-reconciled.png"
+}

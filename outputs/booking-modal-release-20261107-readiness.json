@@ -1,0 +1,318 @@
+{
+  "checkedAt": "2026-11-07T06:56:02.768Z",
+  "reviewer": "independent read-only subagent 2026-11-07",
+  "pass": true,
+  "scope": "read-only local readiness; no deployment, reauthentication or external writes",
+  "checks": {
+    "candidateSourceHashesMatch": true,
+    "candidatePayloadHashesMatch": true,
+    "supplementHashesMatch": true,
+    "archiveHashesMatch": true,
+    "candidateManifestMatchesValidation": true,
+    "sourceFileSetExact": true,
+    "payloadFileSetExact": true,
+    "sourceDigestMatch": true,
+    "sourceDeltaOnlyModal": true,
+    "modalDiffExact": true,
+    "jsExactOneClassReplacement": true,
+    "cssOnlyAddedMaxHeightRule": true,
+    "htmlOnlyAssetFilenames": true,
+    "staticAssetsUnchanged": true,
+    "gasRetainedFromPriorArchive": true,
+    "prepareScriptMatchesProvenance": true,
+    "hostingOnlyConfig": true,
+    "explicitAllowedTarget": true,
+    "currentManifestStillPriorRelease": true
+  },
+  "candidateSourceDigest": "b7e510688a6e81268331db6d7d88db8875bf5ce443dbc90f52b4f647f39d1979",
+  "sourceDelta": [
+    "src/components/AddRideModal.tsx"
+  ],
+  "counts": {
+    "source": 32,
+    "payload": 6,
+    "supplements": 5,
+    "archivedSource": 32,
+    "archivedPayload": 6
+  },
+  "source": [
+    {
+      "file": ".firebaserc",
+      "expected": "cb2d89a95d2550bcd6d4e2478e2bb8b7844c05bf79fec042220f226c815519f2",
+      "actual": "cb2d89a95d2550bcd6d4e2478e2bb8b7844c05bf79fec042220f226c815519f2",
+      "match": true
+    },
+    {
+      "file": "firebase.json",
+      "expected": "060e2adf4f0089f3df436379b6c4650c00fdc1b50110c8a31a2622e8e028528f",
+      "actual": "060e2adf4f0089f3df436379b6c4650c00fdc1b50110c8a31a2622e8e028528f",
+      "match": true
+    },
+    {
+      "file": "gas/Code.gs",
+      "expected": "245805f16feed96cb78cf8686fa04c2a49c3a398bb131e30eb32001ca9473ae6",
+      "actual": "245805f16feed96cb78cf8686fa04c2a49c3a398bb131e30eb32001ca9473ae6",
+      "match": true
+    },
+    {
+      "file": "index.html",
+      "expected": "0c4b500e19e937d57851c5ef15266a60c130570d81e7f245efbbc963bb98c7a7",
+      "actual": "0c4b500e19e937d57851c5ef15266a60c130570d81e7f245efbbc963bb98c7a7",
+      "match": true
+    },
+    {
+      "file": "package-lock.json",
+      "expected": "ad3a4848723b7b1dc3ce3c840ffdf44ae8c9ea8cb58fb793cf5b5d58f2f3b805",
+      "actual": "ad3a4848723b7b1dc3ce3c840ffdf44ae8c9ea8cb58fb793cf5b5d58f2f3b805",
+      "match": true
+    },
+    {
+      "file": "package.json",
+      "expected": "20528469ab1c1c2bd32f8f95b071a36ba9ea4eafcf62f2eccf683da755901375",
+      "actual": "20528469ab1c1c2bd32f8f95b071a36ba9ea4eafcf62f2eccf683da755901375",
+      "match": true
+    },
+    {
+      "file": "public/favicon.svg",
+      "expected": "61bc9a161de58248288e6905425d7180f0624c2865007b97d763fdac12043a66",
+      "actual": "61bc9a161de58248288e6905425d7180f0624c2865007b97d763fdac12043a66",
+      "match": true
+    },
+    {
+      "file": "public/icons.svg",
+      "expected": "b45fa506195cfcdef406ba9f0c77b36ddc1a7c224040926ec70abc2fdea7b93a",
+      "actual": "b45fa506195cfcdef406ba9f0c77b36ddc1a7c224040926ec70abc2fdea7b93a",
+      "match": true
+    },
+    {
+      "file": "src/App.css",
+      "expected": "6e25a776d3e8102da5bacb3cb99f4a5fc662a2e01e6143140671a556d28c3d5c",
+      "actual": "6e25a776d3e8102da5bacb3cb99f4a5fc662a2e01e6143140671a556d28c3d5c",
+      "match": true
+    },
+    {
+      "file": "src/App.tsx",
+      "expected": "743821c58e31ea615ef8a53f3151eae58a14928c465bbde4484f807be9e824db",
+      "actual": "743821c58e31ea615ef8a53f3151eae58a14928c465bbde4484f807be9e824db",
+      "match": true
+    },
+    {
+      "file": "src/assets/hero.png",
+      "expected": "881ffbcaafc212e49addad08846a5b82761355fa20624253af3477ba33262c5c",
+      "actual": "881ffbcaafc212e49addad08846a5b82761355fa20624253af3477ba33262c5c",
+      "match": true
+    },
+    {
+      "file": "src/assets/react.svg",
+      "expected": "35ef61ed53b323ae94a16a8ec659b3d0af3880698791133f23b084085ab1c2e5",
+      "actual": "35ef61ed53b323ae94a16a8ec659b3d0af3880698791133f23b084085ab1c2e5",
+      "match": true
+    },
+    {
+      "file": "src/assets/vite.svg",
+      "expected": "5be21acd42eb7b896e517f4e0f0f11eb5c5d9e54fbbcebe9453f033008fcca6f",
+      "actual": "5be21acd42eb7b896e517f4e0f0f11eb5c5d9e54fbbcebe9453f033008fcca6f",
+      "match": true
+    },
+    {
+      "file": "src/components/AccountManagement.tsx",
+      "expected": "ead0bff5c9108bec18fac42bc1dc31f5a03c1f7c5fe38c5ea94f678ff5839e70",
+      "actual": "ead0bff5c9108bec18fac42bc1dc31f5a03c1f7c5fe38c5ea94f678ff5839e70",
+      "match": true
+    },
+    {
+      "file": "src/components/AddRideModal.tsx",
+      "expected": "b4a3001504d344c099c89064681ec80c21a0f5d8a69520e3a73954e094ab563f",
+      "actual": "b4a3001504d344c099c89064681ec80c21a0f5d8a69520e3a73954e094ab563f",
+      "match": true
+    },
+    {
+      "file": "src/components/AddStudentModal.tsx",
+      "expected": "2c87f49df6388b808a5ce11776166bec79f46400aa615b3f59837cb68cbabf5e",
+      "actual": "2c87f49df6388b808a5ce11776166bec79f46400aa615b3f59837cb68cbabf5e",
+      "match": true
+    },
+    {
+      "file": "src/components/AddTicketModal.tsx",
+      "expected": "965c827bbab6e2105299543a06c77e521494e6b1af982f05e2f7ea1a96b93b0e",
+      "actual": "965c827bbab6e2105299543a06c77e521494e6b1af982f05e2f7ea1a96b93b0e",
+      "match": true
+    },
+    {
+      "file": "src/components/GoogleSettings.tsx",
+      "expected": "c4ee8f86601d05ee1cf052a437dbbaa253e24bf412ea4e1f5ae5492caab7ed69",
+      "actual": "c4ee8f86601d05ee1cf052a437dbbaa253e24bf412ea4e1f5ae5492caab7ed69",
+      "match": true
+    },
+    {
+      "file": "src/components/LoginScreen.tsx",
+      "expected": "fff15f0ad096c08a59d28a8d14d43d2d67c819b5d92a7551a7deb510f4234bb2",
+      "actual": "fff15f0ad096c08a59d28a8d14d43d2d67c819b5d92a7551a7deb510f4234bb2",
+      "match": true
+    },
+    {
+      "file": "src/components/Navbar.tsx",
+      "expected": "6c0659a3c08a34e755bdabd92d7b7a70f7f675d02d30ddf1be2ac897a1d96fde",
+      "actual": "6c0659a3c08a34e755bdabd92d7b7a70f7f675d02d30ddf1be2ac897a1d96fde",
+      "match": true
+    },
+    {
+      "file": "src/components/ParentPortal.tsx",
+      "expected": "998083755ce72d50be3aee89665d36106acdb1c1d61a0ad8b76e83e4287ae48e",
+      "actual": "998083755ce72d50be3aee89665d36106acdb1c1d61a0ad8b76e83e4287ae48e",
+      "match": true
+    },
+    {
+      "file": "src/components/PortalInvitations.tsx",
+      "expected": "ea4e25e8b56937a653ca5080953785ac7c3e70236985efe7bd19c69e049cbfb1",
+      "actual": "ea4e25e8b56937a653ca5080953785ac7c3e70236985efe7bd19c69e049cbfb1",
+      "match": true
+    },
+    {
+      "file": "src/components/TeacherDashboard.tsx",
+      "expected": "9a9d6474bf2c0fd3b62522b8ffcdba4ed3356dd212d7a24fe160fa67c9273627",
+      "actual": "9a9d6474bf2c0fd3b62522b8ffcdba4ed3356dd212d7a24fe160fa67c9273627",
+      "match": true
+    },
+    {
+      "file": "src/components/TermsModal.tsx",
+      "expected": "96f10c3cfc69d3652946837ef4c2f04ed30e4319c7d2f4a605e1a490a9a91cca",
+      "actual": "96f10c3cfc69d3652946837ef4c2f04ed30e4319c7d2f4a605e1a490a9a91cca",
+      "match": true
+    },
+    {
+      "file": "src/deployment-config.ts",
+      "expected": "5c30aad36376487fcf2fbb664f2574bdd430890191675ca9813b5fdea516b6f1",
+      "actual": "5c30aad36376487fcf2fbb664f2574bdd430890191675ca9813b5fdea516b6f1",
+      "match": true
+    },
+    {
+      "file": "src/index.css",
+      "expected": "66baff8b6d7a116920270aba8584dd856cf5de345b59b511b849b96152ce91d8",
+      "actual": "66baff8b6d7a116920270aba8584dd856cf5de345b59b511b849b96152ce91d8",
+      "match": true
+    },
+    {
+      "file": "src/main.tsx",
+      "expected": "6e9e5807fcbd48b75a96db5cbef36c996262196be42e6d4760dc86babbe61ad2",
+      "actual": "6e9e5807fcbd48b75a96db5cbef36c996262196be42e6d4760dc86babbe61ad2",
+      "match": true
+    },
+    {
+      "file": "src/portal.ts",
+      "expected": "2cb1dc0aed33b27a24ef6ed804a6ae1e01b44e07f0814c12044dc1d3525cbeec",
+      "actual": "2cb1dc0aed33b27a24ef6ed804a6ae1e01b44e07f0814c12044dc1d3525cbeec",
+      "match": true
+    },
+    {
+      "file": "src/services/api.ts",
+      "expected": "7d19ad4889cadd4e831bc4af6ad5aa139a2dacd52363f57e4431f6c543eeaf89",
+      "actual": "7d19ad4889cadd4e831bc4af6ad5aa139a2dacd52363f57e4431f6c543eeaf89",
+      "match": true
+    },
+    {
+      "file": "src/services/google-auth.ts",
+      "expected": "01667af44fce383f3763c8bb73497dafc690381592ddcf383d46aaafe90fe0d8",
+      "actual": "01667af44fce383f3763c8bb73497dafc690381592ddcf383d46aaafe90fe0d8",
+      "match": true
+    },
+    {
+      "file": "src/types/index.ts",
+      "expected": "bf24cc2caa853a440a5abe9fad2d78645f5720491f48e00f2a0e49b5776abe20",
+      "actual": "bf24cc2caa853a440a5abe9fad2d78645f5720491f48e00f2a0e49b5776abe20",
+      "match": true
+    },
+    {
+      "file": "vite.config.ts",
+      "expected": "116056c4029005abca8bc3a1ff86b54d37fd33e22530d43a59194969e4929e77",
+      "actual": "116056c4029005abca8bc3a1ff86b54d37fd33e22530d43a59194969e4929e77",
+      "match": true
+    }
+  ],
+  "payload": [
+    {
+      "file": "dist/assets/index-BvaBSnhA.css",
+      "expected": "06784942d4e6777783436b8a3f2b30ca2c8eaacf9aa2c4a6d9040433b5233149",
+      "actual": "06784942d4e6777783436b8a3f2b30ca2c8eaacf9aa2c4a6d9040433b5233149",
+      "match": true
+    },
+    {
+      "file": "dist/assets/index-Csor4OR1.js",
+      "expected": "7a854832a91d74473430062a56bd34f8ed1fe839881ddaff8eb577c2d3c37e61",
+      "actual": "7a854832a91d74473430062a56bd34f8ed1fe839881ddaff8eb577c2d3c37e61",
+      "match": true
+    },
+    {
+      "file": "dist/favicon.svg",
+      "expected": "61bc9a161de58248288e6905425d7180f0624c2865007b97d763fdac12043a66",
+      "actual": "61bc9a161de58248288e6905425d7180f0624c2865007b97d763fdac12043a66",
+      "match": true
+    },
+    {
+      "file": "dist/icons.svg",
+      "expected": "b45fa506195cfcdef406ba9f0c77b36ddc1a7c224040926ec70abc2fdea7b93a",
+      "actual": "b45fa506195cfcdef406ba9f0c77b36ddc1a7c224040926ec70abc2fdea7b93a",
+      "match": true
+    },
+    {
+      "file": "dist/index.html",
+      "expected": "a411bcd8c07bf4f340175daae94b7a9ac228ddbac2234eb328e644d02065b386",
+      "actual": "a411bcd8c07bf4f340175daae94b7a9ac228ddbac2234eb328e644d02065b386",
+      "match": true
+    },
+    {
+      "file": "dist/release.json",
+      "expected": "cc5e02f0e18394a600de1631af9d828aec777be81d2887c1927616ec4f3e848d",
+      "actual": "cc5e02f0e18394a600de1631af9d828aec777be81d2887c1927616ec4f3e848d",
+      "match": true
+    }
+  ],
+  "supplements": [
+    {
+      "file": "tsconfig.json",
+      "expected": "770b4140bbb581e2dfd9ea9946ffc9c75a1d86ba7d2db5f77c83e37cbdf9d808",
+      "actual": "770b4140bbb581e2dfd9ea9946ffc9c75a1d86ba7d2db5f77c83e37cbdf9d808",
+      "match": true
+    },
+    {
+      "file": "tsconfig.app.json",
+      "expected": "8e5d12ba330e7d86409edec74b95451e0db22ee09b9426c94b5bf817571eddb0",
+      "actual": "8e5d12ba330e7d86409edec74b95451e0db22ee09b9426c94b5bf817571eddb0",
+      "match": true
+    },
+    {
+      "file": "tsconfig.node.json",
+      "expected": "d366cc0827139db39c61815f22491bbfda56c654354a42ad7795143d314e45e8",
+      "actual": "d366cc0827139db39c61815f22491bbfda56c654354a42ad7795143d314e45e8",
+      "match": true
+    },
+    {
+      "file": "postcss.config.js",
+      "expected": "190c877db466995bf1482f4a16abd06e04a89ede3119341e2a86ff96e1737b27",
+      "actual": "190c877db466995bf1482f4a16abd06e04a89ede3119341e2a86ff96e1737b27",
+      "match": true
+    },
+    {
+      "file": "tailwind.config.js",
+      "expected": "2494112440ffad4261a3acc00236d9d0fa8fe12e3b08e882a3ca31ed42df798c",
+      "actual": "2494112440ffad4261a3acc00236d9d0fa8fe12e3b08e882a3ca31ed42df798c",
+      "match": true
+    }
+  ],
+  "allowedTarget": {
+    "projectId": "eigo-taxi-app",
+    "hostingTarget": "mighty-test",
+    "siteId": "eigo-taxi-test"
+  },
+  "latestKnownDeployment": {
+    "sourceDigest": "5dd9373bc151e7a8f99065092b8f780b461c99b74bf7fcdb870ab17a4ebe8baa",
+    "builtAt": "2026-10-29T16:02:19.761Z",
+    "evidence": "docs/acceptance/deployment/public-recheck-20261103.json"
+  },
+  "priorAttempt": {
+    "status": "error",
+    "error": "Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth\n\nFor CI servers and headless environments, generate a new token with firebase login:ci"
+  },
+  "postDeploymentVerificationStillRequired": true,
+  "dailyCompletedItems": 0
+}

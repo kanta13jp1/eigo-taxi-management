@@ -1,0 +1,100 @@
+{
+  "provenance": "iPhone horizontal table end confirmed from user images. Reload-after-logout awaiting explicit result; no complete acceptance claim. No publication authorization.",
+  "files": [
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/business-2026-10-24-v12.pptx",
+      "file": "business-2026-10-24-v12.pptx",
+      "sha256": "eb74946b889c0dfc8a35257e6dd88c76135fffa0a2cd3fd22b1bb023a85efe67"
+    },
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/requirements-2026-10-24-v12.pptx",
+      "file": "requirements-2026-10-24-v12.pptx",
+      "sha256": "1e8e0ce80d3665045136a80cccb8ba1c57f5b902391849091755ce809c258fc8"
+    },
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/design-2026-10-24-v12.pptx",
+      "file": "design-2026-10-24-v12.pptx",
+      "sha256": "5e5eebe0dd69c8625769a5651672ef309fe9e529b78bfc0d6366237831b2d3bc"
+    },
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/test-spec-2026-10-24-v12.pptx",
+      "file": "test-spec-2026-10-24-v12.pptx",
+      "sha256": "9447c75ff3bbf8249b5f518b1ea268e6257c4adba6893df6c5a6a23defda4fcd"
+    },
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/tasks-2026-10-24-v12.pptx",
+      "file": "tasks-2026-10-24-v12.pptx",
+      "sha256": "a64d8ad83903ff7bee18697b7b366c590b2d04bacc6ff00b71cd89070ce9b3fc"
+    },
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/implementation-2026-10-24-v12.pptx",
+      "file": "implementation-2026-10-24-v12.pptx",
+      "sha256": "dff9a83df588fb6cb271a57ae64ca35ea844eebe6a9917a4142b79861b706c5f"
+    },
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/test-code-2026-10-24-v12.pptx",
+      "file": "test-code-2026-10-24-v12.pptx",
+      "sha256": "3f5d121160784986bd12170d59e423811adcabb7ea60d8eb46c0cd216a593fa3"
+    },
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/acceptance-2026-10-24-v12.pptx",
+      "file": "acceptance-2026-10-24-v12.pptx",
+      "sha256": "45decc20dce3642e561ddd75b425a06e1d3c328c2bbea303962e1bd0d4d3aaab"
+    },
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/operations-2026-10-24-v12.pptx",
+      "file": "operations-2026-10-24-v12.pptx",
+      "sha256": "20929053f75f1932eb3af0ee2b27a93d2830ff897f9b9e45e36e7d224e34d6d6"
+    },
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/user-2026-10-24-v12.pptx",
+      "file": "user-2026-10-24-v12.pptx",
+      "sha256": "97df9da1c025f4a0e31a0a27e406de3f4f44c82b7e341908bfb2f3acef4dcb84"
+    },
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/matrix-2026-10-24-v12.pptx",
+      "file": "matrix-2026-10-24-v12.pptx",
+      "sha256": "2ec3a4e5ce1c6aaf74c9087227d02e7b0392b0a7c8c13f05bf820292868d9b65"
+    },
+    {
+      "source": "docs/deliverables/2026-10-23-traceability/progress-2026-10-24-v12.pptx",
+      "file": "progress-2026-10-24-v12.pptx",
+      "sha256": "777d4320f7d53fd905b8793c1d0eb946d6daf20aebce4f11c8ed1d7e1c982316"
+    },
+    {
+      "source": "docs/traceability/registry.json",
+      "file": "registry.json",
+      "sha256": "b17284ba73133fd218d48f22bc94a2ac714f875e722858c6c016ea0ad6fe1796"
+    },
+    {
+      "source": "docs/traceability/matrix.csv",
+      "file": "matrix.csv",
+      "sha256": "c9066deb638efa33be6d866194c5c703044ba79884b569e6b772cfcf4aec85f1"
+    },
+    {
+      "source": "docs/traceability/SELF_REVIEW_R12.md",
+      "file": "SELF_REVIEW_R12.md",
+      "sha256": "01a0238bde2f1bc281ba0579b5b2605370bcb0c55f35a172967d6a8f3b098c40"
+    },
+    {
+      "source": "docs/acceptance/device-readonly-2026-10-24/iphone-observations.json",
+      "file": "iphone-observations.json",
+      "sha256": "65c6c5b9aaa6dc44cc20650dbd1aa09309986e265a5c922acf4b5bd6ae5ba3fb"
+    },
+    {
+      "source": ".manual-build-20261020/traceability-decks-r12.mjs",
+      "file": "traceability-decks-r12.mjs",
+      "sha256": "289600cab2cee5ec2cdefabbf9571c8c3001014c32fd7bdbec5ea5c797db96c9"
+    },
+    {
+      "source": ".manual-build-20261020/finalize-traceability-r12.mjs",
+      "file": "finalize-traceability-r12.mjs",
+      "sha256": "aa38dc27b4a656c6925e9929dd193c0626b1689a7337ef5e4a59f6953b47454d"
+    },
+    {
+      "source": "docs/progress/2026-10-24-iphone-horizontal-confirmed.md",
+      "file": "2026-10-24-iphone-horizontal-confirmed.md",
+      "sha256": "adbd77f36de6a3daaec581128e41f03a8d4cf4d2c7237701236af49da873db14"
+    }
+  ]
+}

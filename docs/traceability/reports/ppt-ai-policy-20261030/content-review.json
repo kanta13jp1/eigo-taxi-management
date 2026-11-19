@@ -1,0 +1,124 @@
+{
+  "registrySha256": "5643866621692997a8a987640c9154de6b38d3d4e738e0afe9ab127f7ec7b2e4",
+  "reviewer": "Codex document review",
+  "sourceBaselineModified": false,
+  "deployed": false,
+  "slidesRendered": 126,
+  "unchangedBodyPixelMatches": 124,
+  "bodyChangedFullSizeReviewed": 2,
+  "nativePowerPointExecution": "NOT_RUN",
+  "packages": [
+    {
+      "id": "PKG-01",
+      "source": "docs/deliverables/2026-10-23-traceability/business-2026-10-30-v18.pptx",
+      "final": "docs/deliverables/2026-10-23-traceability/business-2026-10-30-v19.pptx",
+      "candidate": "docs/traceability/reports/ppt-ai-policy-20261030/final-candidates/business-2026-10-30-v19.pptx",
+      "slides": 21,
+      "bodyChangedSlides": [],
+      "notesVerified": 21
+    },
+    {
+      "id": "PKG-02",
+      "source": "docs/deliverables/2026-10-23-traceability/requirements-2026-10-30-v18.pptx",
+      "final": "docs/deliverables/2026-10-23-traceability/requirements-2026-10-30-v19.pptx",
+      "candidate": "docs/traceability/reports/ppt-ai-policy-20261030/final-candidates/requirements-2026-10-30-v19.pptx",
+      "slides": 10,
+      "bodyChangedSlides": [],
+      "notesVerified": 10
+    },
+    {
+      "id": "PKG-03",
+      "source": "docs/deliverables/2026-10-23-traceability/design-2026-10-30-v18.pptx",
+      "final": "docs/deliverables/2026-10-23-traceability/design-2026-10-30-v19.pptx",
+      "candidate": "docs/traceability/reports/ppt-ai-policy-20261030/final-candidates/design-2026-10-30-v19.pptx",
+      "slides": 10,
+      "bodyChangedSlides": [],
+      "notesVerified": 10
+    },
+    {
+      "id": "PKG-04",
+      "source": "docs/deliverables/2026-10-23-traceability/test-spec-2026-10-30-v18.pptx",
+      "final": "docs/deliverables/2026-10-23-traceability/test-spec-2026-10-30-v19.pptx",
+      "candidate": "docs/traceability/reports/ppt-ai-policy-20261030/final-candidates/test-spec-2026-10-30-v19.pptx",
+      "slides": 10,
+      "bodyChangedSlides": [],
+      "notesVerified": 10
+    },
+    {
+      "id": "PKG-05",
+      "source": "docs/deliverables/2026-10-23-traceability/tasks-2026-10-30-v18.pptx",
+      "final": "docs/deliverables/2026-10-23-traceability/tasks-2026-10-30-v19.pptx",
+      "candidate": "docs/traceability/reports/ppt-ai-policy-20261030/final-candidates/tasks-2026-10-30-v19.pptx",
+      "slides": 10,
+      "bodyChangedSlides": [
+        9
+      ],
+      "notesVerified": 10
+    },
+    {
+      "id": "PKG-06",
+      "source": "docs/deliverables/2026-10-23-traceability/implementation-2026-10-30-v18.pptx",
+      "final": "docs/deliverables/2026-10-23-traceability/implementation-2026-10-30-v19.pptx",
+      "candidate": "docs/traceability/reports/ppt-ai-policy-20261030/final-candidates/implementation-2026-10-30-v19.pptx",
+      "slides": 10,
+      "bodyChangedSlides": [],
+      "notesVerified": 10
+    },
+    {
+      "id": "PKG-07",
+      "source": "docs/deliverables/2026-10-23-traceability/test-code-2026-10-30-v18.pptx",
+      "final": "docs/deliverables/2026-10-23-traceability/test-code-2026-10-30-v19.pptx",
+      "candidate": "docs/traceability/reports/ppt-ai-policy-20261030/final-candidates/test-code-2026-10-30-v19.pptx",
+      "slides": 10,
+      "bodyChangedSlides": [],
+      "notesVerified": 10
+    },
+    {
+      "id": "PKG-08",
+      "source": "docs/deliverables/2026-10-23-traceability/acceptance-2026-10-30-v18.pptx",
+      "final": "docs/deliverables/2026-10-23-traceability/acceptance-2026-10-30-v19.pptx",
+      "candidate": "docs/traceability/reports/ppt-ai-policy-20261030/final-candidates/acceptance-2026-10-30-v19.pptx",
+      "slides": 10,
+      "bodyChangedSlides": [],
+      "notesVerified": 10
+    },
+    {
+      "id": "PKG-09",
+      "source": "docs/deliverables/2026-10-23-traceability/operations-2026-10-30-v18.pptx",
+      "final": "docs/deliverables/2026-10-23-traceability/operations-2026-10-30-v19.pptx",
+      "candidate": "docs/traceability/reports/ppt-ai-policy-20261030/final-candidates/operations-2026-10-30-v19.pptx",
+      "slides": 10,
+      "bodyChangedSlides": [],
+      "notesVerified": 10
+    },
+    {
+      "id": "PKG-10",
+      "source": "docs/deliverables/2026-10-23-traceability/user-2026-10-30-v18.pptx",
+      "final": "docs/deliverables/2026-10-23-traceability/user-2026-10-30-v19.pptx",
+      "candidate": "docs/traceability/reports/ppt-ai-policy-20261030/final-candidates/user-2026-10-30-v19.pptx",
+      "slides": 10,
+      "bodyChangedSlides": [],
+      "notesVerified": 10
+    },
+    {
+      "id": "PKG-11",
+      "source": "docs/deliverables/2026-10-23-traceability/matrix-2026-10-30-v18.pptx",
+      "final": "docs/deliverables/2026-10-23-traceability/matrix-2026-10-30-v19.pptx",
+      "candidate": "docs/traceability/reports/ppt-ai-policy-20261030/final-candidates/matrix-2026-10-30-v19.pptx",
+      "slides": 8,
+      "bodyChangedSlides": [],
+      "notesVerified": 8
+    },
+    {
+      "id": "PKG-12",
+      "source": "docs/deliverables/2026-10-23-traceability/progress-2026-10-30-v18.pptx",
+      "final": "docs/deliverables/2026-10-23-traceability/progress-2026-10-30-v19.pptx",
+      "candidate": "docs/traceability/reports/ppt-ai-policy-20261030/final-candidates/progress-2026-10-30-v19.pptx",
+      "slides": 7,
+      "bodyChangedSlides": [
+        7
+      ],
+      "notesVerified": 7
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "status": "PREPARED_WAITING_ROOT_LOCK",
+  "date": "2026-11-07",
+  "plannedDecks": 12,
+  "plannedPages": 160,
+  "sourceVersion": "v31 currently adopted",
+  "unadoptedV32Preserved": true,
+  "finalPptxExported": false,
+  "currentManifestModified": false,
+  "checks": {
+    "pythonSyntax": "PASS",
+    "nodeSyntax": "PASS",
+    "runtimeDependenciesLocated": true
+  },
+  "freezeFile": "outputs/async-customer-ppt-20261107-v33/freeze.json",
+  "buildScript": "outputs/async-customer-ppt-20261107-v33/build.mjs",
+  "reviewScript": "outputs/async-customer-ppt-20261107-v33/review-and-propose.py",
+  "reportDirectory": "docs/traceability/reports/ppt-async-customer-20261107",
+  "expectedFreezeFields": [
+    "status=ROOT_LOCK",
+    "registryVersion=2026-11-07-r17",
+    "registrySha256=<final SHA256>",
+    "observationSummary=<verified current observations, no private identifiers>",
+    "frontendStatus=<short current status for diagram1 footer>",
+    "customerStatus=<short current status for diagram2 footer>",
+    "contentReview=<manifest proposal review summary>",
+    "evidenceFiles=[{path,sha256}]"
+  ]
+}

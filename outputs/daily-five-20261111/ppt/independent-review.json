@@ -1,0 +1,16 @@
+{
+  "release": "6d90f151c5483c87",
+  "render": "final-v3.png",
+  "checks": [
+    "11/10–11/11 cumulative fixes and AT both 5; 10th 4, 11th 1.",
+    "All five fixes and trials match progress report, AT-28 partial and 0/6 customer acceptance with production hold.",
+    "Public screenshot shows 2026-11-11 heading. Simulated midnight separately identified.",
+    "Single-slide rendering legible without unintended clipping. Actual PPTX hash matches passing final receipt."
+  ],
+  "scope": "render, content, evidence, final file SHA; no native PowerPoint run",
+  "reviewedAt": "2026-11-11T00:12:57.6492683+09:00",
+  "independentReview": "PASS",
+  "artifact": "progress-2026-11-11-cumulative-five-v3.pptx",
+  "reviewer": "Codex routed worker (not slide author)",
+  "finalSha256": "615dad74f7953ad7f12f59266650e929ce85456363b929e52114549649e50cf3"
+}

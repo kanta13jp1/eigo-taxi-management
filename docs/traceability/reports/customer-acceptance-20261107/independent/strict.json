@@ -1,0 +1,293 @@
+{
+  "structuralStatus": "FAIL",
+  "errors": [
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "TRACE-15 scripts/traceability.py"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "TRACE-15 scripts/test_traceability.py"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "TRACE-16 scripts/traceability.py"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "TRACE-16 scripts/test_traceability.py"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "TRACE-17 scripts/traceability.py"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "TRACE-17 scripts/test_traceability.py"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "TRACE-18 scripts/traceability.py"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "TRACE-18 scripts/test_traceability.py"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "TRACE-19 scripts/traceability.py"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "TRACE-19 scripts/test_traceability.py"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "TRACE-20 scripts/traceability.py"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "TRACE-20 scripts/test_traceability.py"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "TRACE-21 scripts/traceability.py"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "TRACE-21 scripts/test_traceability.py"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "TRACE-22 scripts/traceability.py"
+    },
+    {
+      "code": "TEST_EVIDENCE_STALE",
+      "message": "TRACE-22 scripts/test_traceability.py"
+    },
+    {
+      "code": "DOCUMENT_DRIFT",
+      "message": "docs/ACCOUNT_MANAGEMENT.md"
+    },
+    {
+      "code": "DOCUMENT_DRIFT",
+      "message": "docs/ADMIN_MANUAL.md"
+    },
+    {
+      "code": "DOCUMENT_DRIFT",
+      "message": "docs/DELIVERY_CHECKLIST.md"
+    },
+    {
+      "code": "DOCUMENT_DRIFT",
+      "message": "docs/DEVELOPER_SETUP_AUTH.md"
+    },
+    {
+      "code": "DOCUMENT_DRIFT",
+      "message": "docs/DEVELOPER_SETUP_OVERVIEW.md"
+    },
+    {
+      "code": "DOCUMENT_DRIFT",
+      "message": "docs/GAS_AUTH_SETUP.md"
+    },
+    {
+      "code": "DOCUMENT_DRIFT",
+      "message": "docs/OPERATION_RUNBOOK.md"
+    },
+    {
+      "code": "DOCUMENT_DRIFT",
+      "message": "docs/PORTAL_SEPARATION.md"
+    },
+    {
+      "code": "DOCUMENT_DRIFT",
+      "message": "docs/TEST_ENVIRONMENT_ACCESS.md"
+    },
+    {
+      "code": "DOCUMENT_DRIFT",
+      "message": "docs/USER_GUIDE.md"
+    },
+    {
+      "code": "DOCUMENT_DRIFT",
+      "message": "docs/acceptance/01_BUSINESS_FLOWS.md"
+    },
+    {
+      "code": "DOCUMENT_DRIFT",
+      "message": "docs/acceptance/02_USE_CASES.md"
+    },
+    {
+      "code": "DOCUMENT_DRIFT",
+      "message": "docs/acceptance/03_REQUIREMENTS.md"
+    },
+    {
+      "code": "DOCUMENT_DRIFT",
+      "message": "docs/acceptance/04_FUNCTIONAL_SPEC.md"
+    },
+    {
+      "code": "DOCUMENT_DRIFT",
+      "message": "docs/acceptance/05_TASKS.md"
+    },
+    {
+      "code": "DOCUMENT_DRIFT",
+      "message": "docs/acceptance/06_ACCEPTANCE_TEST_SPEC.md"
+    },
+    {
+      "code": "DOCUMENT_DRIFT",
+      "message": "docs/acceptance/07_TRACEABILITY_MATRIX.md"
+    },
+    {
+      "code": "DOCUMENT_DRIFT",
+      "message": "docs/acceptance/17_TEST_SPEC.md"
+    },
+    {
+      "code": "DOCUMENT_DRIFT",
+      "message": "docs/acceptance/18_IMPLEMENTATION_INDEX.md"
+    },
+    {
+      "code": "DOCUMENT_DRIFT",
+      "message": "docs/acceptance/19_TEST_CODE_INDEX.md"
+    },
+    {
+      "code": "DOCUMENT_DRIFT",
+      "message": "docs/acceptance/20_OPERATIONS.md"
+    },
+    {
+      "code": "DOCUMENT_DRIFT",
+      "message": "docs/acceptance/21_USER_MANUAL.md"
+    },
+    {
+      "code": "DOCUMENT_DRIFT",
+      "message": "docs/acceptance/README.md"
+    },
+    {
+      "code": "DOCUMENT_DRIFT",
+      "message": "docs/acceptance/THIRD_PARTY_ACCEPTANCE.md"
+    },
+    {
+      "code": "DOCUMENT_DRIFT",
+      "message": "docs/remaining-work-tracker.md"
+    },
+    {
+      "code": "SOURCE_REVIEW_REQUIRED",
+      "message": "scripts/test_traceability.py"
+    },
+    {
+      "code": "SOURCE_REVIEW_REQUIRED",
+      "message": "scripts/traceability.py"
+    },
+    {
+      "code": "PRESENTATION_CONTENT_REVIEW",
+      "message": "docs/deliverables/2026-10-23-traceability/business-2026-11-03-v27.pptx"
+    },
+    {
+      "code": "PRESENTATION_STALE",
+      "message": "docs/deliverables/2026-10-23-traceability/business-2026-11-03-v27.pptx"
+    },
+    {
+      "code": "PRESENTATION_CONTENT_REVIEW",
+      "message": "docs/deliverables/2026-10-23-traceability/requirements-2026-11-03-v27.pptx"
+    },
+    {
+      "code": "PRESENTATION_STALE",
+      "message": "docs/deliverables/2026-10-23-traceability/requirements-2026-11-03-v27.pptx"
+    },
+    {
+      "code": "PRESENTATION_CONTENT_REVIEW",
+      "message": "docs/deliverables/2026-10-23-traceability/design-2026-11-06-v30.pptx"
+    },
+    {
+      "code": "PRESENTATION_STALE",
+      "message": "docs/deliverables/2026-10-23-traceability/design-2026-11-06-v30.pptx"
+    },
+    {
+      "code": "PRESENTATION_CONTENT_REVIEW",
+      "message": "docs/deliverables/2026-10-23-traceability/test-spec-2026-11-06-v30.pptx"
+    },
+    {
+      "code": "PRESENTATION_STALE",
+      "message": "docs/deliverables/2026-10-23-traceability/test-spec-2026-11-06-v30.pptx"
+    },
+    {
+      "code": "PRESENTATION_CONTENT_REVIEW",
+      "message": "docs/deliverables/2026-10-23-traceability/tasks-2026-11-06-v30.pptx"
+    },
+    {
+      "code": "PRESENTATION_STALE",
+      "message": "docs/deliverables/2026-10-23-traceability/tasks-2026-11-06-v30.pptx"
+    },
+    {
+      "code": "PRESENTATION_CONTENT_REVIEW",
+      "message": "docs/deliverables/2026-10-23-traceability/implementation-2026-11-06-v30.pptx"
+    },
+    {
+      "code": "PRESENTATION_STALE",
+      "message": "docs/deliverables/2026-10-23-traceability/implementation-2026-11-06-v30.pptx"
+    },
+    {
+      "code": "PRESENTATION_CONTENT_REVIEW",
+      "message": "docs/deliverables/2026-10-23-traceability/test-code-2026-11-06-v30.pptx"
+    },
+    {
+      "code": "PRESENTATION_STALE",
+      "message": "docs/deliverables/2026-10-23-traceability/test-code-2026-11-06-v30.pptx"
+    },
+    {
+      "code": "PRESENTATION_CONTENT_REVIEW",
+      "message": "docs/deliverables/2026-10-23-traceability/acceptance-2026-11-03-v27.pptx"
+    },
+    {
+      "code": "PRESENTATION_STALE",
+      "message": "docs/deliverables/2026-10-23-traceability/acceptance-2026-11-03-v27.pptx"
+    },
+    {
+      "code": "PRESENTATION_CONTENT_REVIEW",
+      "message": "docs/deliverables/2026-10-23-traceability/operations-2026-11-03-v27.pptx"
+    },
+    {
+      "code": "PRESENTATION_STALE",
+      "message": "docs/deliverables/2026-10-23-traceability/operations-2026-11-03-v27.pptx"
+    },
+    {
+      "code": "PRESENTATION_CONTENT_REVIEW",
+      "message": "docs/deliverables/2026-10-23-traceability/user-2026-11-03-v27.pptx"
+    },
+    {
+      "code": "PRESENTATION_STALE",
+      "message": "docs/deliverables/2026-10-23-traceability/user-2026-11-03-v27.pptx"
+    },
+    {
+      "code": "PRESENTATION_CONTENT_REVIEW",
+      "message": "docs/deliverables/2026-10-23-traceability/matrix-2026-11-03-v27.pptx"
+    },
+    {
+      "code": "PRESENTATION_STALE",
+      "message": "docs/deliverables/2026-10-23-traceability/matrix-2026-11-03-v27.pptx"
+    },
+    {
+      "code": "PRESENTATION_CONTENT_REVIEW",
+      "message": "docs/deliverables/2026-10-23-traceability/progress-2026-11-06-v30.pptx"
+    },
+    {
+      "code": "PRESENTATION_STALE",
+      "message": "docs/deliverables/2026-10-23-traceability/progress-2026-11-06-v30.pptx"
+    },
+    {
+      "code": "BINARY_DOCUMENT_DRIFT",
+      "message": "docs/traceability/matrix.csv"
+    },
+    {
+      "code": "BINARY_DOCUMENT_DRIFT",
+      "message": "docs/acceptance/third-party-acceptance-checklist.csv"
+    }
+  ],
+  "coverageGaps": [],
+  "counts": {
+    "requirements": 38,
+    "flows": 11,
+    "testCases": 162,
+    "screens": 20,
+    "interfaces": 16,
+    "coverageGaps": 0
+  },
+  "release": "HOLD",
+  "semanticReview": "REQUIRED",
+  "thirdPartyPassed": 0
+}

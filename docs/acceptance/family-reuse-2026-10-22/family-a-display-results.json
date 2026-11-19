@@ -1,0 +1,14 @@
+{
+  "executedAt": "2026-10-22T12:28:49.814Z",
+  "mode": "Live Google/GAS public test; role reuse",
+  "identity": "検証家庭A",
+  "assignedStudentCount": 1,
+  "otherFamilyStudentsVisible": false,
+  "adminNavigationVisible": false,
+  "reloadSameScope": true,
+  "otherFamilyUrlShowsLogin": true,
+  "authenticatedOtherFamilyLogin": "PENDING",
+  "businessWrites": false,
+  "calendarPermissionsAdded": false,
+  "productionStarted": false
+}

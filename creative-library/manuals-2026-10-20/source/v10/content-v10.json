@@ -1,0 +1,655 @@
+{
+  "ops": [
+    {
+      "title": "運用マニュアル",
+      "lines": [
+        "Mauro & Brenda Taxi Link",
+        "教室管理者・保守担当者向け",
+        "2026年10月20日 v10　管理者・家庭別ポータル版"
+      ],
+      "refs": "docs/acceptance/16_SEQUENTIAL_ACCEPTANCE.md"
+    },
+    {
+      "title": "利用開始の前提",
+      "lines": [
+        "現状：変更前の受入22件と公開追加23件の証跡を保管。",
+        "AT-23はPASS。AT-24〜30の7件は未合格で、本番リリースは保留。",
+        "本資料は実装に沿う操作手順。運用開始は実環境受入と責任者の判断後。",
+        "検証は会社アカウントで実施。本番は教室側の運用用Googleアカウントを準備する。"
+      ],
+      "refs": "docs/TEST_ENVIRONMENT_ACCESS.md; scripts/prepare_at23_access.ps1; docs/progress/2026-10-20-step-05.md"
+    },
+    {
+      "title": "構成と保存先",
+      "lines": [
+        "ブラウザー：予約、チケット残数、管理者の運行操作を表示。",
+        "GAS：個別キーの認証、権限判定、更新処理を実行。",
+        "スプレッドシート：生徒台帳8列／送迎予定履歴12列／購入履歴7列。",
+        "カレンダー：GAS実行アカウントの既定カレンダーを使用。"
+      ],
+      "refs": "docs/GAS_AUTH_SETUP.md; gas/Code.gs"
+    },
+    {
+      "title": "権限と担当の分担",
+      "lines": [
+        "管理者：管理者専用ページで全生徒・予約・チケット・運行を管理。",
+        "保護者：ご家庭専用ページで紐付いたお子様の残数・予約・取消のみ。",
+        "管理者は保護者ページを閲覧できない。ログイン中の役割切替もない。",
+        "権限はGASで毎回確認。URLを変更しても他の役割・家庭へ移れない。"
+      ],
+      "refs": "docs/GAS_AUTH_SETUP.md; gas/Code.gs; docs/progress/2026-10-20-step-01.md; docs/remaining-work-tracker.md"
+    },
+    {
+      "title": "Google環境の初期準備",
+      "lines": [
+        "1　受入検証は k-umezawa@ml-mightylink.com を使い、対象台帳と権限を確認。",
+        "2　台帳に紐付くApps Scriptへ現行 gas/Code.gs を保存。",
+        "3　権限を承認し、エディターで initSpreadsheet を実行。",
+        "4　3シートと列を確認。再実行で既存行を保持することも受入で確認。"
+      ],
+      "refs": "docs/GAS_AUTH_SETUP.md; gas/Code.gs; docs/progress/2026-10-20-step-01.md; docs/remaining-work-tracker.md"
+    },
+    {
+      "title": "個人専用キーと家庭の紐付け",
+      "lines": [
+        "1　管理者・保護者ごとに長いランダムキーを発行し、SHA-256を作成。",
+        "2　AUTH_USERS_JSONへハッシュ、role、studentIdsを設定。個別URLは別途登録。",
+        "3　生徒台帳A列のIDを家庭のstudentIdsと一致させる。兄弟は複数ID。",
+        "4　生キーは本人へ安全な経路で渡す。共有資料、URL、ログへ記載しない。"
+      ],
+      "refs": "docs/GAS_AUTH_SETUP.md; gas/Code.gs"
+    },
+    {
+      "title": "GASの配備と接続確認",
+      "lines": [
+        "1　タイムゾーンをAsia/Tokyoに設定。実行アカウントの権限を確認。",
+        "2　組織方針に合うWebアプリ公開範囲を選び、個別キー認証を設定。",
+        "3　既存配備は新バージョンへ更新。ソース保存だけで完了としない。",
+        "4　管理者入口で/exec接続先と本人キーを入力し、実台帳への保存を確認。GET応答だけでは不十分。"
+      ],
+      "refs": "docs/GAS_AUTH_SETUP.md; gas/Code.gs"
+    },
+    {
+      "title": "検証環境と本番環境の分離",
+      "lines": [
+        "受入検証：k-umezawa@ml-mightylink.com。Googleアカウント表示を確認済み。",
+        "本番運用：教室側で運用用Googleアカウントを用意。共有方法と管理者を決める。",
+        "検証GAS v2配備・Web生徒保存を確認。Calendar権限は未付与。",
+        "検証用キーやテストデータを本番へ流用せず、本番設定と受入結果を記録する。"
+      ],
+      "refs": "docs/TEST_ENVIRONMENT_ACCESS.md; scripts/prepare_at23_access.ps1; docs/progress/2026-10-20-step-05.md"
+    },
+    {
+      "title": "検証環境のログインURL",
+      "lines": [
+        "管理者専用： https://eigo-taxi-test.web.app/#/admin",
+        "「教室の接続先URL」へ入力するGAS URL：",
+        "https://script.google.com/macros/s/AKfycbznxkg_f_7ddHdopFZfN0OlFDsxoFoi67OslKNQ93ipkWZLq-tj1jAsxz_uxNo2jBtwFg/exec",
+        "教室の本番用URL・本人専用キーは別途準備。検証設定を本番へ流用しない。"
+      ],
+      "refs": "docs/TEST_ENVIRONMENT_ACCESS.md; scripts/prepare_at23_access.ps1; docs/progress/2026-10-20-step-05.md"
+    },
+    {
+      "title": "検証用管理者キーのコピー",
+      "lines": [
+        "既存キーを保存したWindows端末・ユーザーで、リポジトリを開いて実行：",
+        ".\\scripts\\prepare_at23_access.ps1 -Action CopyKey -UserId admin-01",
+        "実行後は表示文をコピーせず、「アクセスキー」欄でそのままCtrl+Vしログイン。",
+        "CopyKeyはログインキー、Prepareはサーバー設定JSON。貼り付ける場所が違う。"
+      ],
+      "refs": "docs/TEST_ENVIRONMENT_ACCESS.md; scripts/prepare_at23_access.ps1; docs/progress/2026-10-20-step-05.md"
+    },
+    {
+      "title": "検証キーの保管と別端末での利用",
+      "lines": [
+        "保存先：%USERPROFILE%\\.codex\\private\\eigo-taxi-at23-access.json.dpapi",
+        "Windows CurrentUser DPAPIで保護。同じ端末・同じWindowsユーザーで使う。",
+        "Prepareの再貼付は個別URL設定を消すため禁止。CopyKeyで既存キーのみコピー。",
+        "admin-01/02は管理者、parent-01/02は家庭検証用。実保護者には配布しない。"
+      ],
+      "refs": "docs/TEST_ENVIRONMENT_ACCESS.md; scripts/prepare_at23_access.ps1; docs/progress/2026-10-20-step-05.md"
+    },
+    {
+      "title": "検証用台帳と元の台帳",
+      "lines": [
+        "接続先：Mighty AT-23 検証専用 2026-10-20。Webの読み書き先。",
+        "元の台帳：Mauro & Brenda 送迎チケット管理台帳。検証Webには未接続。",
+        "両台帳は自動同期しない。元台帳を本番とは扱わず、教室の本番環境は別途準備。",
+        "入力先は通常の3タブ。AT23生成証跡のタブはアプリへの入力先ではない。"
+      ],
+      "refs": "docs/TEST_ENVIRONMENT_ACCESS.md; src/App.tsx; gas/Code.gs"
+    },
+    {
+      "title": "台帳を直接編集した後の確認",
+      "lines": [
+        "検証台帳・通常タブ・IDを確認。バックアップし、同時操作を止めて修正。",
+        "保存完了後にWebをF5／再読み込み。同じID・日時の行を確認。自動更新はない。",
+        "予約行の生徒名だけを変えても、生徒台帳・他の予約の氏名は変わらない。",
+        "直接編集でカレンダーやチケットは連動しない。日常操作はWeb画面で行う。"
+      ],
+      "refs": "docs/TEST_ENVIRONMENT_ACCESS.md; src/App.tsx; gas/Code.gs; docs/OPERATION_RUNBOOK.md"
+    },
+    {
+      "title": "始業時と終業時の確認",
+      "lines": [
+        "始業時：個人キーでログインし、当日予定、住所、連絡事項、残数を確認。",
+        "送迎前：地図・電話リンクと実際の集合場所を確認。",
+        "終業時：実施済み送迎の完了漏れ、取消、購入記録と残数を照合。",
+        "推奨：異常は日時・予約ID・画面メッセージを記録し、運用責任者へ連絡。"
+      ],
+      "refs": "src/App.tsx; src/components/TeacherDashboard.tsx; src/components/ParentPortal.tsx"
+    },
+    {
+      "title": "生徒登録と保護者への紐付け",
+      "lines": [
+        "1　管理者画面の生徒台帳で「新規生徒を登録」を開く。",
+        "2　氏名、保護者、電話、住所、初期チケット残数を確認して登録。",
+        "3　成功後に台帳の生徒IDを確認し、保護者のstudentIdsへ追加。",
+        "登録済み情報の編集画面は未実装。修正は保守担当へ依頼する。"
+      ],
+      "refs": "src/components/AddStudentModal.tsx; src/components/TeacherDashboard.tsx; docs/GAS_AUTH_SETUP.md; gas/Code.gs"
+    },
+    {
+      "title": "チケット購入の記録",
+      "lines": [
+        "1　対象生徒の「チケット追加」を開き、氏名と現在残数を確認。",
+        "2　追加枚数は1〜100の整数。購入金額は0以上の整数で入力。",
+        "3　「チケットを追加する」を押し、成功後の残数と購入履歴を確認。",
+        "結果不明時は重ねて購入登録せず、保守担当と購入履歴を照合。"
+      ],
+      "refs": "src/components/AddTicketModal.tsx; docs/GAS_AUTH_SETUP.md; gas/Code.gs"
+    },
+    {
+      "title": "代理予約と取消",
+      "lines": [
+        "「送迎予定を追加」または生徒の「予約登録」から入力。",
+        "生徒、送迎日、時間、区分、住所を確認して「送迎予定を登録する」。",
+        "取消は対象予約を選び確認ダイアログへ進む。成功後の一覧を確認。",
+        "予定変更用の編集画面はない。取消と再予約は重複の有無を確認して行う。"
+      ],
+      "refs": "src/components/AddRideModal.tsx; src/App.tsx; src/components/TeacherDashboard.tsx; src/components/ParentPortal.tsx"
+    },
+    {
+      "title": "送迎完了と消費枚数",
+      "lines": [
+        "実際の送迎後、対象予約の「送迎完了」を押す。",
+        "片道は1枚、往復は2枚。予約時と取消時には消費しない。",
+        "完了済みの再実行は再消費しない。取消済み予約の完了は拒否する。",
+        "残高不足では完了を確定しない。追加後に再操作し、業務対応は責任者へ確認。"
+      ],
+      "refs": "src/App.tsx; src/components/TeacherDashboard.tsx; src/components/ParentPortal.tsx; docs/GAS_AUTH_SETUP.md; gas/Code.gs"
+    },
+    {
+      "title": "障害の一次切り分け",
+      "lines": [
+        "画面が開かない：通信、URL、配信環境の状態を確認。",
+        "ログインできない：/exec URL、個別キー、AUTH_USERS_JSONを確認。",
+        "一覧や更新が失敗：画面メッセージとApps Script実行記録を照合。",
+        "カレンダーだけ不整合：実行アカウント、既定カレンダー、保存予定IDを確認。"
+      ],
+      "refs": "docs/GAS_AUTH_SETUP.md; gas/Code.gs; docs/OPERATION_RUNBOOK.md"
+    },
+    {
+      "title": "結果不明の操作と受付停止",
+      "lines": [
+        "同じ内容の再送では操作IDを保つ。別IDでやり直す前に台帳を確認。",
+        "RECONCILIATION_REQUIREDは整合確認が必要な状態。受付の更新を停止。",
+        "PENDING_MUTATION_JSONのaction、key、startedAtと実行状況を確認。",
+        "マーカーだけを先に消さない。処理前バックアップと対象行・予定を確保する。"
+      ],
+      "refs": "docs/GAS_AUTH_SETUP.md; gas/Code.gs"
+    },
+    {
+      "title": "更新途中の不整合の復旧",
+      "lines": [
+        "完了：残高・送迎状態・完了日時を照合し、必要枚数の一度だけの消費へ統一。",
+        "購入：同じ購入IDの履歴1行と、残高への一度だけの加算を確認。",
+        "予約・取消：送迎IDと保存予定IDで台帳とカレンダーを一対一に整える。",
+        "確認後のみマーカーを削除。補正内容・担当・日時と再送確認を記録して再開。"
+      ],
+      "refs": "docs/GAS_AUTH_SETUP.md; gas/Code.gs"
+    },
+    {
+      "title": "バックアップと復元の運用案",
+      "lines": [
+        "更新前：台帳全シート、GASソース、配備版、設定、カレンダー対応を保存。",
+        "定期：台帳の書き出し頻度、保管先、保持期間、閲覧権限を責任者が決定。",
+        "復元：受付停止後に別の検証環境で復元し、残数・履歴・予定の整合を確認。",
+        "シートの履歴復元だけでカレンダーや設定は戻らない。AT-28は未実施。"
+      ],
+      "refs": "docs/GAS_AUTH_SETUP.md; gas/Code.gs; docs/acceptance/16_SEQUENTIAL_ACCEPTANCE.md"
+    },
+    {
+      "title": "変更・配備・切戻しの手順",
+      "lines": [
+        "1　変更前のソースと設定を保存し、対象版と影響範囲を記録。",
+        "2　npm run lint、npm run build、node scripts/test_gas.cjsを実行。",
+        "3　検証環境で受入後、許可された対象へ配備。GASも配備バージョンを確認。",
+        "4　障害時は承認済みの正常版へ切戻し。データは別途照合し、再確認する。"
+      ],
+      "refs": "package.json; docs/acceptance/13_MIGHTY_TEST_DEPLOYMENT.md; docs/GAS_AUTH_SETUP.md; gas/Code.gs"
+    },
+    {
+      "title": "現在の公開環境と引継ぎ事項",
+      "lines": [
+        "Firebase Hostingのmighty-testはテスト公開。実データ運用の開始を示さない。",
+        "公開記録：版 deed2fc3d9a96297。基点コミットだけでは再現できず保存ソースが必要。",
+        "切戻し先の記録はあるが、実際の切戻し操作は未検証。",
+        "本番URL、保守窓口、対応時間、費用・保証条件は別途確定して引き継ぐ。"
+      ],
+      "refs": "docs/acceptance/13_MIGHTY_TEST_DEPLOYMENT.md; docs/acceptance/16_SEQUENTIAL_ACCEPTANCE.md"
+    },
+    {
+      "title": "残作業ごとの報告と資料更新",
+      "lines": [
+        "AT-23から1件ずつ進め、結果と根拠を確かめてから次の項目へ進む。",
+        "各項目で結果・証跡・変更PowerPoint・次作業・依頼事項を1つの報告にまとめる。",
+        "小林さん向け文面と添付資料を保存。未完了の項目や障害の状況も報告する。",
+        "毎日18時の下書きも継続。外部へ直接送信せず、送信記録は実際の送信後に残す。"
+      ],
+      "refs": "docs/progress/2026-10-20-step-01.md; docs/remaining-work-tracker.md"
+    },
+    {
+      "title": "ご家庭の個別URLを登録する",
+      "lines": [
+        "管理担当者が本人・studentIdsの対応を確認し、AUTH_USERS_JSONを非公開で保全。",
+        "各保護者の設定に、暗号学的乱数のUUID v4をpublicEntryIdとして追加。",
+        "既存のキー・ハッシュ・role・studentIdsは維持。氏名や生徒IDをURLに使わない。",
+        "管理画面の「個別URL・QR」で家庭名を確認し、対象のURLを取得する。"
+      ],
+      "refs": "docs/GAS_AUTH_SETUP.md; gas/Code.gs"
+    },
+    {
+      "title": "URL・QRの配布手順",
+      "lines": [
+        "1　管理者としてログインし、「個別URL・QR」を開く。",
+        "2　配布先のご家庭を選択し、氏名と配布相手を照合する。",
+        "3　URLをコピー、またはQR画像を保存して、そのご家庭へ渡す。",
+        "4　アクセスキーと教室の接続先は別に案内し、本人のログインを確認する。"
+      ],
+      "refs": "docs/PORTAL_SEPARATION.md"
+    },
+    {
+      "title": "紛失・退会・家庭変更への対応",
+      "lines": [
+        "URL紛失：publicEntryIdを新UUIDへ変更。古いURLは次のAPI要求から拒否。",
+        "キー漏洩：キーを別途失効・再発行。URLの変更だけではキーを失効できない。",
+        "退会：activeをfalseにする、または認証設定から対象キーを削除。",
+        "家庭変更：本人確認後にstudentIdsを修正。既存セッションも毎要求で再確認。"
+      ],
+      "refs": "docs/PORTAL_SEPARATION.md"
+    }
+  ],
+  "user": [
+    {
+      "title": "ユーザーマニュアル",
+      "lines": [
+        "Mauro & Brenda Taxi Link",
+        "生徒・保護者向け",
+        "2026年10月20日 v10　ご家庭専用ページ版"
+      ],
+      "refs": "docs/acceptance/16_SEQUENTIAL_ACCEPTANCE.md"
+    },
+    {
+      "title": "できることと利用前の準備",
+      "lines": [
+        "お子様のチケット残数、予約、送迎履歴を確認できます。",
+        "教室から案内された画面URL、接続先URL、本人専用キーを用意します。",
+        "実Google連携は受入前です。教室から利用開始の案内を受けてから使います。",
+        "デモは架空データの体験用です。教室への予約にはなりません。"
+      ],
+      "refs": "docs/USER_GUIDE.md; docs/acceptance/16_SEQUENTIAL_ACCEPTANCE.md; docs/progress/2026-10-20-step-01.md; docs/remaining-work-tracker.md"
+    },
+    {
+      "title": "ログイン",
+      "lines": [
+        "1　教室から届いたご家庭専用のURLまたはQRコードを開きます。",
+        "2　別に案内された接続先と本人専用キーを入力し、ログインします。",
+        "3　ご自身のお子様だけが表示されていることを確認します。",
+        "違うご家庭のURLや管理者用キーでは入れません。教室へ確認してください。"
+      ],
+      "refs": "src/components/LoginScreen.tsx; docs/USER_GUIDE.md"
+    },
+    {
+      "title": "お子様とチケット残数の確認",
+      "lines": [
+        "選択欄でお子様の名前を選びます。",
+        "残チケット数と予約を確認します。兄弟は生徒を切り替えます。",
+        "表示されないお子様は教室へ連絡してください。家庭への紐付けが必要です。"
+      ],
+      "refs": "src/components/ParentPortal.tsx; docs/GAS_AUTH_SETUP.md; gas/Code.gs"
+    },
+    {
+      "title": "送迎予約の入力",
+      "lines": [
+        "1　お子様を選び、予約を申し込むボタンを押します。",
+        "2　送迎日と時間を入力し、行き・帰り・往復を選びます。",
+        "3　送迎場所・住所を確認し、必要なら連絡事項を入力します。",
+        "4　「送迎予定を登録する」を押し、成功後に予約一覧を確認します。"
+      ],
+      "refs": "src/components/AddRideModal.tsx; src/components/ParentPortal.tsx"
+    },
+    {
+      "title": "予約フォームの見方",
+      "lines": [
+        "時間欄の表示名は「お迎え時間」です。帰りを選んだ場合も同じ欄を使います。",
+        "往復は時間入力が1つです。帰りの時刻は教室と確認してください。",
+        "住所の自動入力があっても、その日の乗降場所を確認します。"
+      ],
+      "refs": "src/components/AddRideModal.tsx"
+    },
+    {
+      "title": "予約の確認とキャンセル",
+      "lines": [
+        "1　予約一覧で日付・時間・区分・住所を確認します。",
+        "2　対象予約の「キャンセル」を押し、確認メッセージで確定します。",
+        "3　成功後に予約中の一覧から外れ、履歴が取消済みになることを確認します。",
+        "当日の急な取消・変更は教室へ直接連絡してください。"
+      ],
+      "refs": "src/components/ParentPortal.tsx; src/components/TermsModal.tsx"
+    },
+    {
+      "title": "チケットが減るタイミング",
+      "lines": [
+        "予約を登録しただけではチケットは減りません。",
+        "先生が送迎完了を処理すると、片道は1枚、往復は2枚減ります。",
+        "残数が少なくなったら先生へ追加購入を相談してください。",
+        "画面でオンライン決済は行いません。先生の追加処理後に残数を確認します。"
+      ],
+      "refs": "src/components/TeacherDashboard.tsx; src/components/AddTicketModal.tsx; docs/GAS_AUTH_SETUP.md; gas/Code.gs"
+    },
+    {
+      "title": "エラーや結果不明のとき",
+      "lines": [
+        "エラー表示が出たら、成功したと判断せず予約一覧を確認します。",
+        "同じ予約を何度も新しく登録しないでください。重複が疑われたら教室へ連絡。",
+        "実接続の失敗でデモへ自動的に切り替わることはありません。",
+        "連絡内容は、お子様、送迎日時、操作、エラー文です。キーは送らないでください。"
+      ],
+      "refs": "docs/USER_GUIDE.md; src/App.tsx; src/services/api.ts"
+    },
+    {
+      "title": "よくある困りごと",
+      "lines": [
+        "お子様が出ない：教室に登録と家庭の紐付けを確認してもらいます。",
+        "残数が違う：最後の購入と送迎完了を先生と確認します。",
+        "予約を変更したい：編集機能はないため、教室へ相談して取消・再予約します。",
+        "キーを紛失した：教室に失効・再発行を依頼します。"
+      ],
+      "refs": "src/App.tsx; src/components/TeacherDashboard.tsx; src/components/ParentPortal.tsx; docs/GAS_AUTH_SETUP.md; gas/Code.gs"
+    },
+    {
+      "title": "利用後のログアウト",
+      "lines": [
+        "共有端末では利用後に「ログアウト」を押します。",
+        "本人専用キーを共有メモや端末の写真へ残さないでください。",
+        "ログアウトで端末内のキーを消します。キーの失効は教室へ依頼してください。",
+        "正式な接続先、連絡先、利用ルールは教室の利用開始案内で確認してください。"
+      ],
+      "refs": "src/components/Navbar.tsx; src/services/api.ts; docs/GAS_AUTH_SETUP.md; gas/Code.gs; docs/progress/2026-10-20-step-01.md; docs/remaining-work-tracker.md"
+    },
+    {
+      "title": "検証担当者向けのログイン案内",
+      "lines": [
+        "家庭の検証入口：教室管理者の「個別URL・QR」から対象家庭を選択。",
+        "接続先GAS URLと既存キー取得：docs/TEST_ENVIRONMENT_ACCESS.md を参照。",
+        "家庭の検証はCopyKeyのUserIdをparent-01またはparent-02へ変更する。",
+        "実保護者は教室から届く正式URL・本人専用キーを使用。検証キーは共有しない。"
+      ],
+      "refs": "docs/TEST_ENVIRONMENT_ACCESS.md; scripts/prepare_at23_access.ps1; docs/progress/2026-10-20-step-05.md"
+    },
+    {
+      "title": "教室で修正した内容を表示するには",
+      "lines": [
+        "修正の連絡を受けたらブラウザーを再読み込み（PCはF5）。自動更新はない。",
+        "同じお子様・予約日時を確認。変わらない場合は教室へ連絡する。",
+        "検証担当者：Webの接続先は「Mighty AT-23 検証専用 2026-10-20」。",
+        "コピー元の台帳とは自動同期しない。実保護者は教室が案内する本番環境を使う。"
+      ],
+      "refs": "docs/TEST_ENVIRONMENT_ACCESS.md; src/App.tsx; gas/Code.gs; docs/USER_GUIDE.md"
+    },
+    {
+      "title": "QRコードとアクセスキーの取扱い",
+      "lines": [
+        "QRコードを読み取ると、ご家庭専用のログイン画面が開きます。",
+        "QRだけではログインできません。本人専用のアクセスキーが必要です。",
+        "キーを他の家庭と共有しないでください。共用端末では最後にログアウト。",
+        "URL・キーを紛失した場合や、お子様が違う場合は教室に連絡してください。"
+      ],
+      "refs": "docs/PORTAL_SEPARATION.md"
+    }
+  ],
+  "tasks": [
+    {
+      "title": "残作業一覧",
+      "lines": [
+        "Mauro & Brenda Taxi Link",
+        "2026年10月20日 v10",
+        "画面分離・個別URL対応後の実環境受入"
+      ],
+      "refs": "docs/PORTAL_SEPARATION.md"
+    },
+    {
+      "title": "完了と未完了の区分",
+      "lines": [
+        "今回：役割別ページ・個別URL・QR配布機能を実装。",
+        "GAS v2の配備、公開テストサイトと契約回帰を確認。",
+        "AT-23は既存PASS。AT-24〜30の7件は引き続き未合格。",
+        "本番リリースの判断は、以下の実環境受入と責任者確認の後。"
+      ],
+      "refs": "docs/PORTAL_SEPARATION.md"
+    },
+    {
+      "title": "AT-24 実カレンダー予約同期",
+      "lines": [
+        "現在：未合格。実環境の確認を実施する。",
+        "Calendar権限の付与には承認が必要。",
+        "Web予約後、実台帳の予約IDとカレンダーの日時・場所・IDを照合。",
+        "担当・期限：未定。証跡と判定を保存してから完了扱いにする。"
+      ],
+      "refs": "docs/remaining-work-tracker.md; docs/acceptance/16_SEQUENTIAL_ACCEPTANCE.md"
+    },
+    {
+      "title": "AT-25 実カレンダー取消同期",
+      "lines": [
+        "現在：未合格。実環境の確認を実施する。",
+        "AT-24の予約を用意する。",
+        "取消後の台帳状態、予定削除、残数不変を確認。",
+        "担当・期限：未定。証跡と判定を保存してから完了扱いにする。"
+      ],
+      "refs": "docs/remaining-work-tracker.md; docs/acceptance/16_SEQUENTIAL_ACCEPTANCE.md"
+    },
+    {
+      "title": "AT-26 管理者2名・保護者の端末共有",
+      "lines": [
+        "現在：未合格。実環境の確認を実施する。",
+        "3端末・別セッションで同じ検証台帳を使用する。",
+        "家庭の予約、管理者の完了、別端末の再取得までを一連で実施。",
+        "担当・期限：未定。証跡と判定を保存してから完了扱いにする。"
+      ],
+      "refs": "docs/remaining-work-tracker.md; docs/acceptance/16_SEQUENTIAL_ACCEPTANCE.md"
+    },
+    {
+      "title": "AT-27 同時完了の排他制御",
+      "lines": [
+        "現在：未合格。実環境の確認を実施する。",
+        "独立した管理者2セッションと予約を用意する。",
+        "同時完了で消費が1回、再試行後も残高不変を確認。",
+        "担当・期限：未定。証跡と判定を保存してから完了扱いにする。"
+      ],
+      "refs": "docs/remaining-work-tracker.md; docs/acceptance/16_SEQUENTIAL_ACCEPTANCE.md"
+    },
+    {
+      "title": "AT-28 バックアップから復旧",
+      "lines": [
+        "現在：未合格。実環境の確認を実施する。",
+        "専用テスト資源・保存先・担当者を確定する。",
+        "バックアップ、変更、復元、Web再取得で全台帳と予定を照合。",
+        "担当・期限：未定。証跡と判定を保存してから完了扱いにする。"
+      ],
+      "refs": "docs/remaining-work-tracker.md; docs/acceptance/16_SEQUENTIAL_ACCEPTANCE.md"
+    },
+    {
+      "title": "AT-29 実機受入",
+      "lines": [
+        "現在：未合格。実環境の確認を実施する。",
+        "iPhone Safari・Android Chromeと受入担当者を準備。",
+        "個別QRの読取、ログイン、予約、取消、残数、表示を実機で確認。",
+        "担当・期限：未定。証跡と判定を保存してから完了扱いにする。"
+      ],
+      "refs": "docs/remaining-work-tracker.md; docs/acceptance/16_SEQUENTIAL_ACCEPTANCE.md"
+    },
+    {
+      "title": "AT-30 リリース後スモークテスト",
+      "lines": [
+        "現在：未合格。実環境の確認を実施する。",
+        "全必須受入の合格と教室側の本番環境を準備。",
+        "役割・家庭境界、予約・取消・連携、版一致と切戻しを確認。",
+        "担当・期限：未定。証跡と判定を保存してから完了扱いにする。"
+      ],
+      "refs": "docs/remaining-work-tracker.md; docs/acceptance/16_SEQUENTIAL_ACCEPTANCE.md"
+    },
+    {
+      "title": "今回追加した受入観点",
+      "lines": [
+        "管理者と保護者の入口・画面・デモを分離し、相互閲覧を拒否。",
+        "個別URLと本人キーの組合せ、別家庭、旧URL、無効アカウントを確認。",
+        "QRの内容は公開URLのみ。管理者だけが一覧取得・保存できる。",
+        "端末でのQR読取・配布先確認はAT-29と運用受入で継続確認。"
+      ],
+      "refs": "docs/PORTAL_SEPARATION.md"
+    },
+    {
+      "title": "運用開始に向けた引継ぎ",
+      "lines": [
+        "検証は会社アカウント。本番は教室側で運用アカウントを準備。",
+        "本人確認・キー配布・URL登録・失効の担当者を決める。",
+        "当日締切、往復の精算、残数不足時の受付など業務ルールを確定。",
+        "過去の試験PASSを新仕様の実機受入や本番承認と混同しない。"
+      ],
+      "refs": "docs/PORTAL_SEPARATION.md"
+    }
+  ],
+  "progress": [
+    {
+      "title": "画面分離・個別URL対応報告",
+      "lines": [
+        "Mauro & Brenda Taxi Link",
+        "2026年10月20日 v10",
+        "小林さん向け報告案・未送信"
+      ],
+      "refs": "docs/PORTAL_SEPARATION.md"
+    },
+    {
+      "title": "変更した利用の流れ",
+      "lines": [
+        "管理者は #/admin から運行・生徒・チケットを管理。",
+        "保護者はご家庭専用URLから自身のお子様だけを利用。",
+        "管理者ページから保護者ページへの切替を廃止。",
+        "個別URL・QRを管理者が取得し、キーは別に案内する。"
+      ],
+      "refs": "docs/PORTAL_SEPARATION.md"
+    },
+    {
+      "title": "検証した内容",
+      "lines": [
+        "GASの既存38項目と追加4項目、計42件の自動確認が合格。",
+        "フロントの契約回帰9件が合格。役割・個別ID・失効応答を検証。",
+        "実GASの参照試験11件が合格。管理者2名と家庭2件の境界を確認。",
+        "公開画面の動作・QR表示は保存したブラウザー証跡を参照。"
+      ],
+      "refs": "docs/acceptance/role-portals-2026-10-20/"
+    },
+    {
+      "title": "配備とデータの範囲",
+      "lines": [
+        "検証GASはv2。同じ接続先URL、既存キーと生徒の紐付けを維持。",
+        "保護者2件に公開用のランダムIDを追加。追加のGoogle権限なし。",
+        "検証台帳と元台帳は別。元台帳・実保護者のデータは変更していない。",
+        "直接編集後はF5で再取得。台帳間・カレンダーへの自動同期はない。"
+      ],
+      "refs": "docs/PORTAL_SEPARATION.md"
+    },
+    {
+      "title": "残っている実環境受入",
+      "lines": [
+        "AT-23は既存PASS、AT-24〜30の7件は未合格のまま。",
+        "Calendar権限は未付与。予約・取消の実同期は今回未実施。",
+        "3端末連携、同時完了、復旧、実機、本番スモークを続ける。",
+        "今回の画面分離の合格で、本番運用開始を承認した扱いにはしない。"
+      ],
+      "refs": "docs/PORTAL_SEPARATION.md"
+    },
+    {
+      "title": "今回の資料と次の対応",
+      "lines": [
+        "運用・利用者マニュアル、残作業、進捗報告をv10に更新。",
+        "要件・業務フロー・機能・試験・トレーサビリティにも変更を反映。",
+        "次はCalendar権限の確認とAT-24。必要な承認を得てから実施。",
+        "本報告は未送信。正式な配布先と本番担当者は別途確認する。"
+      ],
+      "refs": "docs/PORTAL_SEPARATION.md"
+    }
+  ],
+  "spec": [
+    {
+      "title": "ポータル分離 仕様・受入補足",
+      "lines": [
+        "Mauro & Brenda Taxi Link",
+        "2026年10月20日 v10",
+        "旧受入資料に対する今回変更の正本補足"
+      ],
+      "refs": "docs/PORTAL_SEPARATION.md"
+    },
+    {
+      "title": "要件と画面構成",
+      "lines": [
+        "管理者は管理者ページのみ。家庭画面の閲覧・切替は提供しない。",
+        "保護者は家庭ページのみ。対象生徒はGASのstudentIdsで決まる。",
+        "未認証の入口案内だけに管理者・保護者のリンクを置く。",
+        "共通保護者入口も本人キーで同じ家庭の範囲に限定する。"
+      ],
+      "refs": "docs/PORTAL_SEPARATION.md"
+    },
+    {
+      "title": "個別URLの仕様",
+      "lines": [
+        "形式：アプリURL #/parent/ UUID v4。GitHub Pagesのベースパスも維持。",
+        "UUIDはAUTH_USERS_JSONのpublicEntryIdに保存し、本人キーに紐付く。",
+        "GASは指定entryIdをログイン時・全API要求で照合。roleも照合。",
+        "未設定・不一致・形式不正・重複・失効したIDは利用できない。"
+      ],
+      "refs": "docs/PORTAL_SEPARATION.md"
+    },
+    {
+      "title": "配布とライフサイクル",
+      "lines": [
+        "登録とローテーションは管理担当者がScript Propertiesで実施。",
+        "管理者専用APIが公開ID一覧を返す。認証ハッシュ・キーは返さない。",
+        "QRはブラウザー内で生成。外部のQR生成サービスへ送らない。",
+        "URL失効とキー失効は別。退会時はactive=falseで認証自体を停止。"
+      ],
+      "refs": "docs/PORTAL_SEPARATION.md"
+    },
+    {
+      "title": "セッションと認可",
+      "lines": [
+        "再読込時にGASで本人情報を再確認してから画面を表示。",
+        "URL変更時は画面データとモーダルを消し、入口の適合を再確認。",
+        "キー・リンク失効応答ではセッションと画面の個人情報を消去。",
+        "URLやクライアントroleの書換えでGASの権限は拡張されない。"
+      ],
+      "refs": "docs/PORTAL_SEPARATION.md"
+    },
+    {
+      "title": "受入証拠と未実施",
+      "lines": [
+        "GAS契約42件、フロント契約9件、実API参照11件は合格。",
+        "公開画面・QR・ログアウト・入口変更はブラウザー証跡を保存。",
+        "過去の22件・公開23件・AT-23の実測証跡を上書きしない。",
+        "Calendar、実機QR読取を含むAT-24〜30は未合格として管理する。"
+      ],
+      "refs": "docs/PORTAL_SEPARATION.md"
+    }
+  ]
+}

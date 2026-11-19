@@ -1,0 +1,122 @@
+{
+  "release": "54178ee8e9d61c91",
+  "base": "https://eigo-taxi-test.web.app",
+  "pass": true,
+  "scenarios": [
+    {
+      "mode": "public",
+      "scenario": "normal",
+      "checkedAt": "2026-11-13T11:04:21.122Z",
+      "test": "AT-18",
+      "base": "https://eigo-taxi-test.web.app",
+      "freshAnonymousAdminDemo": true,
+      "studentId": "STU-1f5d284e-eff8-4a71-97d6-c80c316f7888",
+      "rideId": "RIDE-33cbddfa-ee8a-4038-94eb-d461578d1c68",
+      "successVisible": true,
+      "alert": [],
+      "reloadOnlyRecovery": false,
+      "cancelledInLedger": true,
+      "onlyChangedTargetStatus": true,
+      "studentBalancesUnchanged": true,
+      "writeCount": 1,
+      "blockedRequests": [],
+      "scope": "Isolated synthetic browser demo; simulated read response, no Google or customer records."
+    },
+    {
+      "mode": "public",
+      "scenario": "write-error",
+      "checkedAt": "2026-11-13T11:04:21.085Z",
+      "test": "AT-18",
+      "base": "https://eigo-taxi-test.web.app",
+      "freshAnonymousAdminDemo": true,
+      "studentId": "STU-de61b725-9427-40e8-9cb0-e4383d0576e3",
+      "rideId": "RIDE-2ec68584-9842-4879-83c3-58e4337f3611",
+      "successVisible": false,
+      "alert": [
+        "検証用：取消を保存できませんでした"
+      ],
+      "reloadOnlyRecovery": true,
+      "cancelledInLedger": false,
+      "onlyChangedTargetStatus": false,
+      "studentBalancesUnchanged": true,
+      "writeCount": 0,
+      "blockedRequests": [],
+      "scope": "Isolated synthetic browser demo; simulated read response, no Google or customer records."
+    },
+    {
+      "mode": "public",
+      "scenario": "read-error",
+      "checkedAt": "2026-11-13T11:04:21.253Z",
+      "test": "AT-18",
+      "base": "https://eigo-taxi-test.web.app",
+      "freshAnonymousAdminDemo": true,
+      "studentId": "STU-3bf96c21-6dce-4990-85de-a5a6d534ac6b",
+      "rideId": "RIDE-a8507758-06ef-4543-9f21-60ee5edf7206",
+      "successVisible": false,
+      "alert": [
+        "予約の取消結果を確認できませんでした。台帳を再取得して、対象の予約の状態を確認してください。"
+      ],
+      "reloadOnlyRecovery": true,
+      "cancelledInLedger": true,
+      "onlyChangedTargetStatus": true,
+      "studentBalancesUnchanged": true,
+      "writeCount": 1,
+      "blockedRequests": [],
+      "scope": "Isolated synthetic browser demo; simulated read response, no Google or customer records."
+    },
+    {
+      "mode": "public",
+      "scenario": "stale-target",
+      "checkedAt": "2026-11-13T11:04:21.184Z",
+      "test": "AT-18",
+      "base": "https://eigo-taxi-test.web.app",
+      "freshAnonymousAdminDemo": true,
+      "studentId": "STU-bf07dfb4-c6ae-4567-8c95-c1b75b5a6f8f",
+      "rideId": "RIDE-62e76e29-bcb3-4f05-9e5c-38ee8a45f824",
+      "successVisible": false,
+      "alert": [
+        "予約の取消結果を確認できませんでした。台帳を再取得して、対象の予約の状態を確認してください。"
+      ],
+      "reloadOnlyRecovery": true,
+      "cancelledInLedger": true,
+      "onlyChangedTargetStatus": true,
+      "studentBalancesUnchanged": true,
+      "writeCount": 1,
+      "blockedRequests": [],
+      "scope": "Isolated synthetic browser demo; simulated read response, no Google or customer records."
+    },
+    {
+      "mode": "public",
+      "scenario": "missing-target",
+      "checkedAt": "2026-11-13T11:04:21.196Z",
+      "test": "AT-18",
+      "base": "https://eigo-taxi-test.web.app",
+      "freshAnonymousAdminDemo": true,
+      "studentId": "STU-951a09e6-4651-4458-9fdf-7d459feda7c6",
+      "rideId": "RIDE-60e41453-2e6c-4335-886d-ab930e01757a",
+      "successVisible": false,
+      "alert": [
+        "予約の取消結果を確認できませんでした。台帳を再取得して、対象の予約の状態を確認してください。"
+      ],
+      "reloadOnlyRecovery": true,
+      "cancelledInLedger": true,
+      "onlyChangedTargetStatus": true,
+      "studentBalancesUnchanged": true,
+      "writeCount": 1,
+      "blockedRequests": [],
+      "scope": "Isolated synthetic browser demo; simulated read response, no Google or customer records."
+    },
+    {
+      "mode": "public",
+      "scenario": "session-ended",
+      "base": "https://eigo-taxi-test.web.app",
+      "successVisible": false,
+      "staleErrorVisible": false,
+      "loginVisible": true,
+      "writeCount": 1,
+      "blockedRequests": []
+    }
+  ],
+  "physicalDevice": false,
+  "liveGoogleAcceptance": false
+}

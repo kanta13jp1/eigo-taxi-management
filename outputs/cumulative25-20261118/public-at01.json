@@ -1,0 +1,13 @@
+{
+  "mode": "public",
+  "at": "2026-11-17T20:33:33.342Z",
+  "externalPostRequestsSent": 0,
+  "checks": [
+    "管理者入口にGoogleログインがあり、接続先・キー入力欄と台帳がない",
+    "匿名デモの管理画面が再読込後も表示される",
+    "ログアウト後の再読込でログイン画面のみ。セッションと台帳は非表示"
+  ],
+  "mockActions": [],
+  "base": "https://eigo-taxi-test.web.app",
+  "pass": true
+}

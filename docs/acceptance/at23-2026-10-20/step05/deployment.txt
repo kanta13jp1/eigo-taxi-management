@@ -1,0 +1,22 @@
+Browser tab: 1750956564, Title: "Mighty 送迎管理API｜受入検証用 - プロジェクトの設定 - Apps Script", URL: "https://script.google.com/u/2/home/projects/1AnWQ_1itiEgyEYpmfTFM7HkgmTXu5RsW4H-ahnf3N-TplINguEgCaTrh/settings".
+0 AXWebArea Mighty 送迎管理API｜受入検証用 - プロジェクトの設定 - Apps Script, URL: script.google.com/u/2/home/projects/1AnWQ_1itiEgyEYpmfTFM7HkgmTXu5RsW4H-ahnf3N-TplINguEgCaTrh/settings
+	1 container
+		2 container
+			3 container 新しいデプロイ
+				4 heading 新しいデプロイ, Value: 2, ID: c47
+					5 text 新しいデプロイ
+				6 container
+					7 container
+						8 text デプロイを更新しました。 バージョン 1（2026/10/20 15:14） デプロイ ID
+						9 text AKfycbznxkg_f_7ddHdopFZfN0OlFDsxoFoi67OslKNQ93ipkWZLq-tj1jAsxz_uxNo2jBtwFg
+						10 button デプロイ ID をコピー
+							11 text コピー
+						12 text ウェブアプリ URL
+						13 link Description: https://script.google.com/macros/s/AKfycbznxkg_f_7ddHdopFZfN0OlFDsxoFoi67OslKNQ93ipkWZLq-tj1jAsxz_uxNo2jBtwFg/exec, Value: script.google.com/macros/s/AKfycbznxkg_f_7ddHdopFZfN0OlFDsxoFoi67OslKNQ93ipkWZLq-tj1jAsxz_uxNo2jBtwFg/exec
+						14 button ウェブ アプリケーションの URL をコピー
+							15 text コピー
+					16 button 完了
+						17 text 完了
+		18 text プロジェクトをデプロイしました
+
+The focused UI element is 0 AXWebArea Mighty 送迎管理API｜受入検証用 - プロジェクトの設定 - Apps Script, URL: script.google.com/u/2/home/projects/1AnWQ_1itiEgyEYpmfTFM7HkgmTXu5RsW4H-ahnf3N-TplINguEgCaTrh/settings

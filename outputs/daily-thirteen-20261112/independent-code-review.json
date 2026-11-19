@@ -1,0 +1,16 @@
+{
+  "reviewer": "lead agent independent of implementation worker",
+  "baseline": "47d533a917506138",
+  "file": "src/components/ParentPortal.tsx",
+  "stagedSha256": "1bb565fc165f16b6367313778a366e7b6b4849abeefeee9bcad0379165017283",
+  "checks": [
+    "Active student is derived from available students rather than mount-time first id",
+    "Explicit selection is retained when still available, otherwise first available student is used",
+    "Selector, balance card and reservation filter all use the same active student",
+    "Empty or removed student list displays the existing empty state",
+    "Visible student label is associated with the selector",
+    "No authentication, API, customer data or ticket consumption behavior changed"
+  ],
+  "pass": true,
+  "limitation": "This reviews client display consistency, not server household authorization. Workspace/source digest comparison is required after applying the staged change."
+}

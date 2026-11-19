@@ -1,0 +1,52 @@
+{
+  "reviewedAt": "2026-11-09T00:48:44.7967952Z",
+  "reviewer": "/root/retry_independent_review",
+  "result": "PASS",
+  "scope": "Frozen reservation retry fix; compare with archived deployed release 43d4ac9b2a065441, not older Git HEAD",
+  "reviewedHashes": {
+    "src/services/api.ts": "159c91b9ead700c8e32bc17ce978145c81bd4419d10a3104be72db9730902264",
+    "src/App.tsx": "6522d074f89b06b80518110529cdacc922d6e35c8ccf00f8536f4f1c07bdc584",
+    "scripts/test_portals.cjs": "4c533b888e2a0be7c1404f68e54d8dd1fc4e6ba088e265ba6ea5fa0226edca21",
+    "scripts/test_reservation_retry_ui.cjs": "cdc3b0a72991daa58639d1f61c83626fb850db1e64fea8eb0916521a835dda75",
+    "gas/Code.gs": "3a2bce6188a99daf331cad60a01759d6414c99f07e9d8f47a43ad28102ec336c"
+  },
+  "deploySourceChangesSinceArchive": [
+    "src/App.tsx",
+    "src/services/api.ts"
+  ],
+  "findings": [],
+  "checks": [
+    "Malformed success payload validation runs before removal of pending mutation ID",
+    "Same-tab same-parameter retries retain ID through failure and service reload",
+    "Late response removes pending key only when operation ID still matches",
+    "Booking row fields match submitted fields with GAS-equivalent location/note trimming",
+    "Completed/cancelled responses require explicit replay flag",
+    "App merges by reservation ID and preserves terminal state against stale scheduled reply",
+    "createStudent/addTickets retain their prior result semantics after generic helper refactor",
+    "No GAS or configuration changes in deployed-source manifest beyond the two scoped frontend files"
+  ],
+  "independentlyExecuted": [
+    {
+      "command": "Node 24.22.1 scripts/test_portals.cjs",
+      "result": "PASS",
+      "total": 33
+    },
+    {
+      "command": "Node 24.22.1 scripts/test_reservation_retry_ui.cjs",
+      "result": "PASS"
+    }
+  ],
+  "preFixEvidence": [
+    "outputs/reservation-retry-20261109/api-before-duplicate.log: two unique IDs instead of one",
+    "outputs/reservation-retry-20261109/ui-before.log: duplicate dashboard ID"
+  ],
+  "limitations": [
+    "Offline VM and stubbed React-hook tests, not real browser or actual Google integration",
+    "Same-tab retry only; no cross-tab/device deduplication promise",
+    "A new confirmed operation may intentionally create another reservation; no permanent semantic deduplication",
+    "No root-cause attribution for the November 7 generic response incident",
+    "Malformed result handling for createStudent and addTickets remains unchanged and outside this reservation-scoped fix",
+    "Deployment, public asset verification, public UI check and customer checks are pending outside this review"
+  ],
+  "externalChanges": 0
+}

@@ -1,0 +1,24 @@
+{
+  "executedAt": "2026-11-10 (JST), about 21:55-22:05",
+  "environment": "verification site eigo-taxi-test.web.app (Hosting d360644531543a4e), verification GAS v6, verification ledger, verification-only calendar 'Mighty 送迎管理 受入検証専用 2026-11-07'",
+  "operator": "development (admin 'Mighty 検証管理者', Chrome)",
+  "student": { "id": "STU-57635b29-c850-40b4-b0ca-80d16ace0e20", "name": "AT23検証_20261020_1514", "ticketsBefore": 8 },
+  "AT-24": {
+    "input": { "date": "2026-11-12", "time": "15:30", "type": "pickup", "location": "検証専用・実在住所なし", "note": "AT-24 calendar sync check 20261110", "via": "admin screen 送迎予定を追加" },
+    "siteToast": "AT23検証_20261020_1514 さんの送迎予約（2026-11-12 15:30）の登録結果を確認しました",
+    "ledgerRow": { "rideId": "RIDE-d8b060c2-8faa-434c-a2f1-b3f96cfdfe0f", "date": "2026-11-12", "time": "15:30", "type": "pickup", "location": "検証専用・実在住所なし", "status": "scheduled", "calendarEventId": "4jtscjtdgui7ubg27db4ebpd80@google.com", "reservedBy": "teacher" },
+    "calendarEvent": { "identifiedBy": "event id decoded from the calendar page element equals the ledger event id (without @google.com)", "title": "🚗【送迎】AT23検証_20261020_1514 (お迎え)", "start": "2026-11-12 15:30 JST", "end": "2026-11-12 16:00 JST", "location": "検証専用・実在住所なし", "calendar": "Mighty 送迎管理 受入検証専用 2026-11-07", "description": ["予約ID: RIDE-d8b060c2-8faa-434c-a2f1-b3f96cfdfe0f", "送迎場所: 検証専用・実在住所なし", "連絡先/メモ: AT-24 calendar sync check 20261110", "予約者: 先生登録"] },
+    "result": "reservation id, date/time and location match between ledger and the event identified by the ledger event id"
+  },
+  "AT-25": {
+    "action": "cancel of RIDE-d8b060c2-... from admin 送迎スケジュール一覧",
+    "note": "window.confirm was replaced by an auto-accepting stub for this run because a native dialog blocks the browser automation; the on-screen confirmation text was therefore not displayed or read in this run",
+    "siteRow": "2026-11-12 15:30 AT23検証_20261020_1514 お迎え … 取消 (no action buttons)",
+    "ledgerRow": { "rideId": "RIDE-d8b060c2-8faa-434c-a2f1-b3f96cfdfe0f", "status": "cancelled", "calendarEventId": "4jtscjtdgui7ubg27db4ebpd80@google.com" },
+    "calendarAfter": "day view 2026-11-12 reloaded: 0 elements with the ledger event id; no event shown",
+    "ticketsAfter": 8,
+    "result": "cancelled in ledger, event removed from the calendar, balance unchanged"
+  },
+  "notCovered": ["parent-initiated booking/cancel in this run", "customer (Kobayashi) execution", "real devices", "reading the ledger through the Sheets grid (gviz HTML view was used)", "confirmation dialog wording", "notification/other viewers' calendar views"],
+  "customerDataTouched": false
+}

@@ -1,0 +1,39 @@
+{
+  "scope": "Only this task change to existing source: AddRideModal.tsx inner panel CSS replaces overflow-hidden with max-h-[calc(100dvh-2rem)] overflow-y-auto. Prior trace/error handling edits were already present.",
+  "sourceHashes": {
+    "src/components/AddRideModal.tsx": "b4a3001504d344c099c89064681ec80c21a0f5d8a69520e3a73954e094ab563f",
+    "scripts/test_booking_modal_scroll.mjs": "33bac2031ba62f38b0053d1e0ab5a22e33fe047ac432d477011e5a43a4eb0917",
+    "scripts/test_trace_ui.mjs": "bcd60909358980aa583ee2a7f2526ef92bedbebb3ba2f2852d07aea530c14369",
+    "scripts/fixtures/trace-ui/harness.tsx": "90bef1928e68fb736a4cf43150bb11153ba980414b5016b318f9ca494a24e136"
+  },
+  "commands": [
+    {
+      "command": "node scripts/test_booking_modal_scroll.mjs (red evidence directory)",
+      "exitCode": 1,
+      "results": "outputs/booking-modal-scroll-20261106-red/results.json"
+    },
+    {
+      "command": "node scripts/test_booking_modal_scroll.mjs (green evidence directory)",
+      "exitCode": 0,
+      "results": "outputs/booking-modal-scroll-20261106-green/results.json"
+    },
+    {
+      "command": "node scripts/test_trace_ui.mjs (isolated evidence directory)",
+      "exitCode": 0,
+      "results": "outputs/booking-modal-existing-ui-20261106/results.json"
+    },
+    {
+      "command": "node node_modules/typescript/bin/tsc -b",
+      "exitCode": 0
+    },
+    {
+      "command": "node node_modules/vite/bin/vite.js build --outDir outputs/booking-modal-build-20261106",
+      "exitCode": 0
+    }
+  ],
+  "limits": [
+    "close button reachability is checked; close handler behavior is not exercised because the original fixture uses no-op onClose",
+    "physical device and real Google acceptance not performed",
+    "not deployed"
+  ]
+}

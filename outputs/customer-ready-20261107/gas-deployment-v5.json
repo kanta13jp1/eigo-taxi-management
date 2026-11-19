@@ -1,0 +1,17 @@
+{
+  "status": "DEPLOYED",
+  "observedAtJst": "2026-11-07 17:15",
+  "project": "company-owned verification only",
+  "oldVersion": 4,
+  "version": 5,
+  "deploymentIdUnchanged": true,
+  "executeAsUnchanged": true,
+  "accessSettingUnchanged": true,
+  "codeSha256": "e39555d3540a22e1db6b20bf7885d6ee95a4e0ae11eace6e3fb29bccd3f6fef6",
+  "manifestSha256": "86919604f8083bcfad5433147d46a41dba5653f190b29f6b560255628e2b9006",
+  "temporaryReadProbeRemovedBeforeDeployment": true,
+  "calendarReadVerified": true,
+  "realBookingCancellationVerified": false,
+  "productionStarted": false,
+  "rollback": "Do not reactivate version4: it uses the default calendar and the deployer now has Calendar consent. Keep reviewed version5 and, only if booking/cancellation must be paused, preserve the current TEST_CALENDAR_ID in a private record then clear that property so verificationCalendar_ refuses before writes. Do not remove a pending-mutation guard without reconciliation."
+}

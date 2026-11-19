@@ -1,0 +1,19 @@
+{
+  "mode": "public",
+  "scenario": "normal",
+  "checkedAt": "2026-11-13T11:04:21.122Z",
+  "test": "AT-18",
+  "base": "https://eigo-taxi-test.web.app",
+  "freshAnonymousAdminDemo": true,
+  "studentId": "STU-1f5d284e-eff8-4a71-97d6-c80c316f7888",
+  "rideId": "RIDE-33cbddfa-ee8a-4038-94eb-d461578d1c68",
+  "successVisible": true,
+  "alert": [],
+  "reloadOnlyRecovery": false,
+  "cancelledInLedger": true,
+  "onlyChangedTargetStatus": true,
+  "studentBalancesUnchanged": true,
+  "writeCount": 1,
+  "blockedRequests": [],
+  "scope": "Isolated synthetic browser demo; simulated read response, no Google or customer records."
+}

@@ -1,0 +1,76 @@
+{
+  "checkedAt": "2026-11-09T16:13:12.195Z",
+  "url": "https://eigo-taxi-test.web.app",
+  "hostingVersion": "0b830b69152e45a3",
+  "sourceDigest": "b80b9e2a7c0b0fc4b51c08bab18a77184309f72dcbbf932084ab5779a95bc81f",
+  "scope": "Public frontend anonymous demo, IAB browser at375x812, synthetic browser-local fixtures only; not realGoogle integration or customer acceptance",
+  "moduleScript": "/assets/index-K4IFEOnM.js",
+  "checks": [
+    {
+      "id": "PUB-1110-01",
+      "name": "375px healthy-balance timing explanation",
+      "observed": "予約しただけでは残数は減りません。",
+      "geometry": {
+        "documentWidth": 360,
+        "viewport": 375
+      },
+      "balance": 7,
+      "pass": true
+    },
+    {
+      "id": "PUB-1110-02",
+      "name": "Reservation form consumption timing explanation",
+      "observed": "予約時にはチケットは減りません。先生・管理者の「完了」操作で、片道1枚・往復2枚を消費します。",
+      "pass": true
+    },
+    {
+      "id": "PUB-1110-03",
+      "name": "One roundtrip booking adds one row without consuming tickets",
+      "balanceText": "送迎チケット残高\n田中 陽菜 (ひな) さん\n7回分\n\n予約しただけでは残数は減りません。\n先生・管理者が「完了」にすると減ります。\n片道1回につきチケット1枚、往復は2枚です。",
+      "matchingMemoRows": 1,
+      "pass": true
+    },
+    {
+      "id": "PUB-1110-04",
+      "name": "Manual one-way completion consumes 1",
+      "before": 7,
+      "after": 6,
+      "observed": "\t\t\t38 text 保護者:  山本 健一 （残チケット: 1 枚 ） 英語教室 → 東京都世田谷区用賀2-5-12 💬 メモ:  レッスン後のご自宅送り\n\t\t\t47 text 保護者:  田中 美咲 （残チケット: 6 枚 ） 開発検証専用・実在しない場所 💬 メモ:  DEV-1110-PUBLIC-B\n\t\t\t56 text 保護者:  田中 美咲 （残チケット: 6 枚 ） 開発検証専用・実在しない場所 💬 メモ:  DEV-1110-PUBLIC-A\n\t\t\t62 text 16:00 お迎え 送迎完了 (- 1 回消化済)\n\t\t\t65 text 保護者:  田中 美咲 （残チケット: 6 枚 ） 東京都世田谷区桜新町1-10-5 パークサイド201 💬 メモ:  レッスン前のお迎え",
+      "pass": true
+    },
+    {
+      "id": "PUB-1110-05",
+      "name": "Manual roundtrip completion consumes 2",
+      "before": 6,
+      "after": 4,
+      "observed": "~\t\t\t47 text 保護者:  田中 美咲 （残チケット: 4 枚 ） 開発検証専用・実在しない場所 💬 メモ:  DEV-1110-PUBLIC-B\n~\t\t\t53 text 16:00 往復 送迎完了 (- 2 回消化済)\n~\t\t\t56 text 保護者:  田中 美咲 （残チケット: 4 枚 ） 開発検証専用・実在しない場所 💬 メモ:  DEV-1110-PUBLIC-A\n~\t\t\t65 text 保護者:  田中 美咲 （残チケット: 4 枚 ） 東京都世田谷区桜新町1-10-5 パークサイド201 💬 メモ:  レッスン前のお迎え",
+      "pass": true
+    },
+    {
+      "id": "PUB-1110-06",
+      "name": "Low balance 2 keeps timing explanation and named contact warning",
+      "balance": 2,
+      "observed": "送迎チケット残高\n田中 陽菜 (ひな) さん\n2回分\n\n予約しただけでは残数は減りません。\n先生・管理者が「完了」にすると減ります。\n片道1回につきチケット1枚、往復は2枚です。\n\n⚠️ チケットが無くなりそうです（残り2回）\nMauro・Brenda に連絡してね！ 次回のチケットをご用意します。",
+      "geometry": {
+        "documentWidth": 360,
+        "viewport": 375
+      },
+      "pass": true
+    },
+    {
+      "id": "PUB-1110-07",
+      "name": "Reload persists demo completion and balance 2",
+      "pass": false,
+      "observed": ""
+    }
+  ],
+  "pass": false,
+  "customerFixtureWrites": 0,
+  "productionStarted": false,
+  "limitations": [
+    "No liveGoogle response-fault injection",
+    "No physicaldevice verification",
+    "No customer acceptance added",
+    "Date/time fields retained their displayed default 2026-11-10 16:00; no claim that alternate dates were entered"
+  ]
+}

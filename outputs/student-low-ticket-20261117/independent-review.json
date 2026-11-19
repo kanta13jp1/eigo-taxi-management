@@ -1,0 +1,71 @@
+{
+  "reviewer": "independent AI subagent (not the implementer)",
+  "reviewedAt": "2026-11-17T19:54:17+09:00",
+  "result": "PASS",
+  "reviewedHashes": {
+    "src/components/TeacherDashboard.tsx": "3e46370730b4663cbdcd9002b4273b5c902e8d0f1bc64fb50cc4986bb11ed654",
+    "scripts/test_student_low_ticket_ui.cjs": "35698cf662e42f540301c56f23c866b92e158abf5f7091819adaa59c684204fe"
+  },
+  "commandsRun": [
+    {"command": "node scripts/test_student_low_ticket_ui.cjs", "exit": 0, "summary": "LOWUI-01..05 all PASS on the current tree."},
+    {"command": "npx tsc -b", "exit": 0, "summary": "No type errors, no output."},
+    {"command": "sha256sum src/components/TeacherDashboard.tsx scripts/test_student_low_ticket_ui.cjs", "exit": 0, "summary": "Hashes recorded in reviewedHashes."},
+    {"command": "Mutation runs in a scratch copy under %TEMP% (src/ and the test copied, NODE_PATH pointed at the repo node_modules; repo untouched)", "exit": 1, "summary": "Every mutant was killed. old (=== 1 and fixed 残り1回): LOWUI-02 'amber 2' (badge bg-emerald-100), which matches the implementer's claim and outputs/.../old-behaviour.log. Old condition only: LOWUI-02 'amber 2'. Fixed label 残り1回 with the new condition: LOWUI-02 'label 2'. No >0 guard (<=2): LOWUI-03 fails (残り0回 would appear next to チケット切れ). <=3: LOWUI-04 'green 3'. Summary card <=1 or <2: LOWUI-05 fails (summary 2, expected 3)."},
+    {"command": "grep the baseline-without-fix and regression site bundles for ticketBalance===1 / 残り1回; git show HEAD:src/components/TeacherDashboard.tsx", "exit": 0, "summary": "The baseline bundles contain the old 'ticketBalance===1' and '残り1回'. The regression bundles contain neither. HEAD also has the old two lines (448/478), so the baseline really ran without the fix."}
+  ],
+  "findings": [
+    {
+      "id": "R-01",
+      "severity": "note",
+      "file": "src/components/TeacherDashboard.tsx",
+      "line": 532,
+      "summary": "The new condition is correct for every value the data model can produce. List and card stay in sync for all non-negative integers.",
+      "evidence": "Student.ticketBalance is number (src/types/index.ts:12). GAS integer_(r[6], ..., 0) rejects any value that is not a safe integer or is below 0 (gas/Code.gs:610-612, 628), so the sheet cannot supply negative or fractional balances. The demo API validates initial balances (api.ts:363) and blocks completion when the balance is short (api.ts:408). The list now treats 0 as red and 1-2 as amber; the card counts <=2. Those sets are the same. The only path to an out-of-range value is hand-edited demo localStorage, which getStored (api.ts:119-133) does not validate. In that case a negative balance would be counted by the card but shown green in the list.",
+      "suggestedFix": "None required. Optionally write isZero as ticketBalance <= 0 for defence in depth."
+    },
+    {
+      "id": "R-02",
+      "severity": "note",
+      "file": "src/components/TeacherDashboard.tsx",
+      "line": 562,
+      "summary": "Counter wording mixes 回 and 枚 across screens. This was already the case before the change.",
+      "evidence": "The students-tab badge already used 回 (line 559), so 残り{n}回 is consistent with it and with ParentPortal.tsx:150 (残り{n}回). The summary card (172 'チケット残り2枚以下'), the ride-list balance (329 '{n}枚'), AddRideModal.tsx:112/118 and AddTicketModal.tsx:103-110 use 枚.",
+      "suggestedFix": "Leave as is for this change. Unify the unit separately if desired."
+    },
+    {
+      "id": "R-03",
+      "severity": "note",
+      "file": "src/components/TeacherDashboard.tsx",
+      "line": 529,
+      "summary": "The students list iterates the raw students prop while the card uses safeStudents. This predates the change and was not touched by it.",
+      "evidence": "Line 45 defines safeStudents = Array.isArray(students) ? students : []. Line 92 uses safeStudents; line 529 uses students.map.",
+      "suggestedFix": "Optional: use safeStudents.map for consistency."
+    },
+    {
+      "id": "R-04",
+      "severity": "note",
+      "file": "scripts/test_student_low_ticket_ui.cjs",
+      "line": 12,
+      "summary": "The useState wrapper is safe and restored in finally. It depends on the tab initializer's return values, but drift would make the test fail rather than pass falsely.",
+      "evidence": "Only one useState in TeacherDashboard has a lazy initializer returning 'today' or 'allRides' (line 66). The other lazy initializer (line 69) returns a date string. The wrapper calls each lazy initializer one extra time, which is harmless because they have no side effects. The TSX is transpiled to CommonJS, so useState resolves as react_1.useState at call time and the patch takes effect. If the initializer changes, LOWUI-01 fails because the students heading would be missing. LOWUI-05 renders the 'today' tab from the same fixture and compares the card count with the number of amber or red list badges, which ties list and card together. My summary-card mutants confirm this check catches a mismatch.",
+      "suggestedFix": "None."
+    },
+    {
+      "id": "R-05",
+      "severity": "note",
+      "file": "outputs/student-low-ticket-20261117/baseline-without-fix/local.log",
+      "line": 44,
+      "summary": "The existing browser case LOCAL-UI-14 ('Low ticket warning is present only at balances 2, 1, 0') passed on the baseline without the fix, so it does not cover the admin students list. The new LOWUI test is the only automated guard for this bug.",
+      "evidence": "LOCAL-UI-14 shows PASS in both baseline-without-fix/local.log and regression/local.log.",
+      "suggestedFix": "Optional: rename LOCAL-UI-14 or document its scope, or extend it to the admin students tab."
+    }
+  ],
+  "unrelatedFailuresAssessment": "I agree these failures are unrelated to this change. UI-06, LOCAL-UI-07, REVIEW-UI-02 and REVIEW-UI-03 fail with identical errors in regression/ and baseline-without-fix/, and the baseline bundles really contain the old code. UI-06 (scripts/test_trace_ui.mjs:16) waits for a native dialog with page.once('dialog') before taking a parent cancellation, but ParentPortal.tsx:232 and TeacherDashboard.tsx:497 now use an in-page <dialog>. That matches item 17 of docs/progress/2026-11-12-cumulative-eighteen.md. LOCAL-UI-07 is the same parent-cancel flow and fails with the same waitForFunction timeout. REVIEW-UI-02 times out on getByRole('button', {name: '完了', exact: true}), but the complete buttons now carry aria-label={completionLabel(ride)} ('… 送迎完了（N回消費）', lines 111-113, 367, 469). That matches item 14. REVIEW-UI-03 (ticket addition reaches 12) also fails with a bare waitForFunction timeout. I did not find its exact cause in the logs; it may be a knock-on from the shared reviewer fixture after REVIEW-UI-02 fails. It fails identically on the baseline, and the change does not touch the ticket-addition path, so it is not caused by this change. All four suites still need their selectors and dialog handling updated separately.",
+  "notReviewed": [
+    "Whether the pre-change file differs from the current one in only these two lines: no committed baseline matches the current tree, because HEAD differs widely. I confirmed only that the baseline bundles and HEAD contain the old two lines.",
+    "The exact root cause of REVIEW-UI-03.",
+    "I did not re-run browser, lint or regression suites; I relied on the logs in outputs/student-low-ticket-20261117/.",
+    "I did not check visual rendering, screen-reader behaviour or a real GAS or spreadsheet backend."
+  ],
+  "notes": "There are no blocking, major or minor findings, only 5 notes. The fix makes the students-tab list match the summary card (<=2), the ride-list colour (line 326), ParentPortal (<=2) and AddRideModal (<=2). I found no remaining place in src/ or gas/ that treats only 1 as low. The new test fails on the old logic with 'amber 2', as claimed, and it kills every mutant I tried."
+}

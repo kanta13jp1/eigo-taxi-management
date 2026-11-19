@@ -1,0 +1,61 @@
+{
+  "reviewedAtUtc": "2026-11-09T16:16:27.934310+00:00",
+  "reviewer": "/root/consumption_review_1110",
+  "result": "FAIL",
+  "registryVersion": "2026-11-10-r18",
+  "registrySha256": "0f6b53a352a8549cc4a66a34af7932c8e692f4dbe0280f0b13920a4eede35719",
+  "candidate": "outputs/consumption-timing-20261110/adoption/registry-r18-final-candidate.json",
+  "checks": {
+    "initial_approved_registry_hash_preserved": true,
+    "final_registry_frozen_sha_matches": true,
+    "only_tests_array_changed": true,
+    "only_two_scroll_evidence_refs_changed": true,
+    "only_evidence_path_UI-SCROLL-01": true,
+    "successful_scroll_case_UI-SCROLL-01": true,
+    "only_evidence_path_UI-SCROLL-02": true,
+    "successful_scroll_case_UI-SCROLL-02": true,
+    "facts_and_counts_unchanged": true,
+    "only_BIN0320_updated": true,
+    "only_csv_hash_updated": true,
+    "csv_hashes_match_preserved_and_regenerated": true,
+    "csv_30_execution_rows_still_unexecuted": false,
+    "csv_only_AT18_expected_text_updated": true,
+    "public_ui_scope_seven_PASS": true,
+    "public_ui_version_digest_matches_archive": true,
+    "public_module_K4_matches_deployed_payload": true,
+    "archive_source_matches_current_frozen_source": true,
+    "archive_public_hashes_all_seven_match": true,
+    "final_candidate_structural_evidence_validation": true
+  },
+  "findings": [
+    "csv_30_execution_rows_still_unexecuted"
+  ],
+  "csvDiff": [
+    [
+      "AT-18",
+      [
+        "期待結果"
+      ]
+    ]
+  ],
+  "publicUiEvidence": "outputs/consumption-timing-20261110/public-ui/results.json",
+  "visualReview": {
+    "imagesViewed": [
+      "parent-balance7.png",
+      "parent-balance2.png",
+      "reservation-form.png"
+    ],
+    "result": "PASS",
+    "notes": [
+      "All consumption timing statements readable at the captured mobile width",
+      "Balance 7 and 2 both show booking/no-consumption, manual completion and one-way/roundtrip quantities",
+      "Balance 2 also retains Mauro/Brenda contact text",
+      "Reservation form note and registration/cancel controls visible without clipping or overlap"
+    ]
+  },
+  "limitations": [
+    "Reviewed actual public UI evidence and screenshots; did not independently repeat browser actions",
+    "Public anonymous demo only; no physical device, real Google integration or CUST acceptance claim",
+    "No canonical registry, CSV, baseline or PPT modified by reviewer"
+  ]
+}

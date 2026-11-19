@@ -1,0 +1,266 @@
+{
+  "runId": "2026-10-19T14-44-53-736Z",
+  "url": "http://127.0.0.1:4179",
+  "mode": "Built dist UI + TypeScript-transpiled source API assertions / fresh headless shell profile / demo LocalStorage; external requests blocked",
+  "timezone": "Asia/Tokyo",
+  "commit": "2fa6127715017d52ae0c9bd80be39c4db90a47c3",
+  "sourceHashes": {
+    "src/services/api.ts": "32550d6b8befdc467fd8774900336f7ae96ab0a06d2832dc7b6b0999bdcadb38",
+    "src/components/AddStudentModal.tsx": "b3d122fa603cb600810a7a6a68880847543aa163629d1eea5980431cf1753469",
+    "src/components/ParentPortal.tsx": "df72cd65cf6f8c0303908e24a14eb778bd3f6ea9a445e1f179f051918fdf4745",
+    "src/components/AddRideModal.tsx": "de3defe9b920c6fdfd02b0f2c2e62b6de912169cb563b1e3249becc2fa8685dd",
+    "src/components/TeacherDashboard.tsx": "083624341d2ff0e355619cf33a126a2519af2e194f47545222c1b13166198400",
+    "src/App.tsx": "4704aa17513ac85c8b91383298382a06cf650a1ef5f2d47b310d371714c2a963",
+    "src/components/Navbar.tsx": "2cb17237d1631950e3ac9d1df017c60bb89934af9963231fa4dd806eed4d0c7c",
+    "gas/Code.gs": "7cad92cb26034e9ac40f9d8beecbe5d7e13e03a0e0172d7f71b92a1c65cc22f6",
+    ".github/workflows/deploy.yml": "c336192a2d4c1542a222767d4c6b859935f447b4df59d7a6b242ac317eb338c7",
+    "scripts/run_acceptance.cjs": "96e16117bab8fa4d979fb72d06462cab9ac69c5ac0d9943279d846609d138db1",
+    "scripts/acceptance-catalog.cjs": "2b4f1759c3e6e4f66a7faf77e2103aef8c962479c2874ce505a88590a41e324d",
+    "dist/assets/index-a4NOS63R.js": "9a85486562519095de22f35879059edcc444ce7383045523f6f667d6989debbb",
+    "dist/assets/index-DZOl_Wzw.css": "2dd860a49beee224db0143ab38448f9ca44a4c9fb7a6bc90fa186f9b49355bf4",
+    "dist/index.html": "d3011db06f5bc13e6e0eaf1efa81b67121bd179370653aa06ca1190050051785"
+  },
+  "browser": "C:\\Users\\kanta\\.cache\\puppeteer\\chrome-headless-shell\\win64-154.0.8037.57\\chrome-headless-shell-win64\\chrome-headless-shell.exe",
+  "results": [
+    {
+      "id": "AT-01",
+      "status": "NOT RUN",
+      "startedAt": null,
+      "finishedAt": null,
+      "detail": "実行基盤の異常終了で未完了。server.log参照。",
+      "screenshots": []
+    },
+    {
+      "id": "AT-02",
+      "status": "NOT RUN",
+      "startedAt": null,
+      "finishedAt": null,
+      "detail": "実行基盤の異常終了で未完了。server.log参照。",
+      "screenshots": []
+    },
+    {
+      "id": "AT-03",
+      "status": "NOT RUN",
+      "startedAt": null,
+      "finishedAt": null,
+      "detail": "実行基盤の異常終了で未完了。server.log参照。",
+      "screenshots": []
+    },
+    {
+      "id": "AT-04",
+      "status": "NOT RUN",
+      "startedAt": null,
+      "finishedAt": null,
+      "detail": "実行基盤の異常終了で未完了。server.log参照。",
+      "screenshots": []
+    },
+    {
+      "id": "AT-05",
+      "status": "NOT RUN",
+      "startedAt": null,
+      "finishedAt": null,
+      "detail": "実行基盤の異常終了で未完了。server.log参照。",
+      "screenshots": []
+    },
+    {
+      "id": "AT-06",
+      "status": "NOT RUN",
+      "startedAt": null,
+      "finishedAt": null,
+      "detail": "実行基盤の異常終了で未完了。server.log参照。",
+      "screenshots": []
+    },
+    {
+      "id": "AT-07",
+      "status": "NOT RUN",
+      "startedAt": null,
+      "finishedAt": null,
+      "detail": "実行基盤の異常終了で未完了。server.log参照。",
+      "screenshots": []
+    },
+    {
+      "id": "AT-08",
+      "status": "NOT RUN",
+      "startedAt": null,
+      "finishedAt": null,
+      "detail": "実行基盤の異常終了で未完了。server.log参照。",
+      "screenshots": []
+    },
+    {
+      "id": "AT-09",
+      "status": "NOT RUN",
+      "startedAt": null,
+      "finishedAt": null,
+      "detail": "実行基盤の異常終了で未完了。server.log参照。",
+      "screenshots": []
+    },
+    {
+      "id": "AT-10",
+      "status": "NOT RUN",
+      "startedAt": null,
+      "finishedAt": null,
+      "detail": "実行基盤の異常終了で未完了。server.log参照。",
+      "screenshots": []
+    },
+    {
+      "id": "AT-11",
+      "status": "NOT RUN",
+      "startedAt": null,
+      "finishedAt": null,
+      "detail": "実行基盤の異常終了で未完了。server.log参照。",
+      "screenshots": []
+    },
+    {
+      "id": "AT-12",
+      "status": "NOT RUN",
+      "startedAt": null,
+      "finishedAt": null,
+      "detail": "実行基盤の異常終了で未完了。server.log参照。",
+      "screenshots": []
+    },
+    {
+      "id": "AT-13",
+      "status": "NOT RUN",
+      "startedAt": null,
+      "finishedAt": null,
+      "detail": "実行基盤の異常終了で未完了。server.log参照。",
+      "screenshots": []
+    },
+    {
+      "id": "AT-14",
+      "status": "NOT RUN",
+      "startedAt": null,
+      "finishedAt": null,
+      "detail": "実行基盤の異常終了で未完了。server.log参照。",
+      "screenshots": []
+    },
+    {
+      "id": "AT-15",
+      "status": "NOT RUN",
+      "startedAt": null,
+      "finishedAt": null,
+      "detail": "実行基盤の異常終了で未完了。server.log参照。",
+      "screenshots": []
+    },
+    {
+      "id": "AT-16",
+      "status": "NOT RUN",
+      "startedAt": null,
+      "finishedAt": null,
+      "detail": "実行基盤の異常終了で未完了。server.log参照。",
+      "screenshots": []
+    },
+    {
+      "id": "AT-17",
+      "status": "NOT RUN",
+      "startedAt": null,
+      "finishedAt": null,
+      "detail": "実行基盤の異常終了で未完了。server.log参照。",
+      "screenshots": []
+    },
+    {
+      "id": "AT-18",
+      "status": "NOT RUN",
+      "startedAt": null,
+      "finishedAt": null,
+      "detail": "実行基盤の異常終了で未完了。server.log参照。",
+      "screenshots": []
+    },
+    {
+      "id": "AT-19",
+      "status": "NOT RUN",
+      "startedAt": null,
+      "finishedAt": null,
+      "detail": "実行基盤の異常終了で未完了。server.log参照。",
+      "screenshots": []
+    },
+    {
+      "id": "AT-20",
+      "status": "NOT RUN",
+      "startedAt": null,
+      "finishedAt": null,
+      "detail": "実行基盤の異常終了で未完了。server.log参照。",
+      "screenshots": []
+    },
+    {
+      "id": "AT-21",
+      "status": "NOT RUN",
+      "startedAt": null,
+      "finishedAt": null,
+      "detail": "実行基盤の異常終了で未完了。server.log参照。",
+      "screenshots": []
+    },
+    {
+      "id": "AT-22",
+      "status": "NOT RUN",
+      "startedAt": null,
+      "finishedAt": null,
+      "detail": "実行基盤の異常終了で未完了。server.log参照。",
+      "screenshots": []
+    },
+    {
+      "id": "AT-23",
+      "status": "BLOCKED",
+      "startedAt": null,
+      "finishedAt": null,
+      "detail": "専用Google環境・権限・受入担当または前段合格が未準備。",
+      "screenshots": []
+    },
+    {
+      "id": "AT-24",
+      "status": "BLOCKED",
+      "startedAt": null,
+      "finishedAt": null,
+      "detail": "専用Google環境・権限・受入担当または前段合格が未準備。",
+      "screenshots": []
+    },
+    {
+      "id": "AT-25",
+      "status": "BLOCKED",
+      "startedAt": null,
+      "finishedAt": null,
+      "detail": "専用Google環境・権限・受入担当または前段合格が未準備。",
+      "screenshots": []
+    },
+    {
+      "id": "AT-26",
+      "status": "BLOCKED",
+      "startedAt": null,
+      "finishedAt": null,
+      "detail": "専用Google環境・権限・受入担当または前段合格が未準備。",
+      "screenshots": []
+    },
+    {
+      "id": "AT-27",
+      "status": "BLOCKED",
+      "startedAt": null,
+      "finishedAt": null,
+      "detail": "専用Google環境・権限・受入担当または前段合格が未準備。",
+      "screenshots": []
+    },
+    {
+      "id": "AT-28",
+      "status": "BLOCKED",
+      "startedAt": null,
+      "finishedAt": null,
+      "detail": "専用Google環境・権限・受入担当または前段合格が未準備。",
+      "screenshots": []
+    },
+    {
+      "id": "AT-29",
+      "status": "BLOCKED",
+      "startedAt": null,
+      "finishedAt": null,
+      "detail": "専用Google環境・権限・受入担当または前段合格が未準備。",
+      "screenshots": []
+    },
+    {
+      "id": "AT-30",
+      "status": "BLOCKED",
+      "startedAt": null,
+      "finishedAt": null,
+      "detail": "専用Google環境・権限・受入担当または前段合格が未準備。",
+      "screenshots": []
+    }
+  ]
+}

@@ -1,10 +1,13 @@
 import type { Student, RideReservation, TicketPurchase, RideType } from '../types';
+import { assertPortal, DEMO_ENTRY_ID, ENTRY_ID } from '../portal';
+import type { PortalRoute } from '../portal';
+import { getDeploymentConfig, requireGoogleConfig } from '../deployment-config';
+import { getGoogleIdToken, signInGoogle, signOutGoogle } from './google-auth';
 
 const STORAGE_KEYS = {
   STUDENTS: 'eigo_taxi_students',
   RIDES: 'eigo_taxi_rides',
   PURCHASES: 'eigo_taxi_purchases',
-  GAS_API_URL: 'eigo_taxi_gas_api_url',
 };
 
 // ローカルタイム（JST）基準で YYYY-MM-DD を取得するヘルパー
@@ -113,341 +116,321 @@ const INITIAL_PURCHASES: TicketPurchase[] = [
 ];
 
 // LocalStorageヘルパー
-function getStored<T>(key: string, defaultVal: T): T {
+function getStored<T>(key: string, defaultVal: T[]): T[] {
   const item = localStorage.getItem(key);
-  if (!item) {
+  if (item === null) {
     localStorage.setItem(key, JSON.stringify(defaultVal));
-    return defaultVal;
+    return structuredClone(defaultVal);
   }
+  let parsed: unknown;
   try {
-    return JSON.parse(item);
+    parsed = JSON.parse(item);
   } catch {
-    return defaultVal;
+    // Fall through to the same recovery message as an invalid collection.
   }
+  if (!Array.isArray(parsed)) throw new Error('このブラウザーのデモ保存データを読み取れません。上書きせず処理を中止しました。担当者に確認してください。');
+  return parsed;
 }
 
 function setStored<T>(key: string, val: T): void {
   localStorage.setItem(key, JSON.stringify(val));
 }
 
+
+export type AppUser = { id: string; name: string; role: 'admin' | 'parent'; studentIds: string[]; publicEntryId?: string; reviewOnly?: boolean };
+export type AppSession = { mode: 'demo' | 'live'; user: AppUser; firebaseUid?: string; firebaseProjectId?: string; endpoint?: string; entryId?: string };
+export type PortalInvitation = { userId: string; name: string; publicEntryId: string };
+export type ManagedRole = 'admin' | 'parent' | 'reviewer';
+export type ManagedUser = Omit<AppUser, 'role'> & { role: ManagedRole; email: string; active: boolean; linked: boolean };
+export type ManagedUsers = { users: ManagedUser[]; revision: string; reviewModeAvailable?: boolean };
+export type ManagedUserInput = { userId?: string; name: string; email: string; role: ManagedRole; active: boolean; studentIds: string[]; rotateEntry?: boolean };
+const SESSION_KEY = 'eigo_taxi_session';
+let sessionRevision = 0;
+type ReservationInput = {studentId:string;rideDate:string;rideTime:string;rideType:RideType;pickupLocation:string;note?:string;reservedBy:'parent'|'teacher'};
+const failureMessage = '通信または連携処理に失敗しました。登録結果を確認してから再操作してください。';
+function validAppUser(user: AppUser): boolean {
+  return !!user && ['admin','parent'].includes(user.role) && Array.isArray(user.studentIds) &&
+    user.studentIds.every(id => typeof id === 'string') &&
+    (user.reviewOnly === undefined || typeof user.reviewOnly === 'boolean') &&
+    (!user.reviewOnly || user.studentIds.length > 0);
+}
+function getSession(): AppSession | null {
+  try {
+    const session = JSON.parse(sessionStorage.getItem(SESSION_KEY) || 'null') as AppSession | null;
+    if (!session || !['demo','live'].includes(session.mode) || !validAppUser(session.user)) return null;
+    // Old browser endpoint preferences and legacy-key sessions are never used.
+    if (session.mode === 'live' && (!session.firebaseUid || session.firebaseProjectId !== requireGoogleConfig().projectId ||
+        session.endpoint !== getDeploymentConfig().gasApiUrl)) return null;
+    return session;
+  } catch { return null; }
+}
+function requireSession(admin = false): AppSession {
+  const session = getSession();
+  if (!session) throw new Error('ログインしてください');
+  if (admin && session.user.role !== 'admin') throw new Error('管理者権限が必要です');
+  return session;
+}
+function requireFullAdmin(): AppSession {
+  const session = requireSession(true);
+  if (session.user.reviewOnly) throw new Error('検証専用アカウントではこの管理操作はできません');
+  return session;
+}
+function assertStudent(session: AppSession, id: string) {
+  if ((session.user.role !== 'admin' || session.user.reviewOnly) && !session.user.studentIds.includes(id)) throw new Error('この生徒にはアクセスできません');
+}
+function mayAccessStudent(session: AppSession, id: string): boolean {
+  return session.user.role === 'admin' && !session.user.reviewOnly || session.user.studentIds.includes(id);
+}
+async function assertReviewRide(session: AppSession, rideId: string): Promise<void> {
+  if (!session.user.reviewOnly || isDemo(session)) return;
+  const rides = (await live(session, 'getRides')).data as RideReservation[];
+  const ride = rides.find(item => item.id === rideId);
+  if (!ride) throw new Error('この送迎にはアクセスできません');
+  assertStudent(session, ride.studentId);
+}
+function isDemo(session:AppSession): boolean { return session.mode === 'demo'; }
+// @trace CODE-34 REQ-34
+function endSession(reason: 'logout' | 'reauthenticate' = 'logout'): void {
+  sessionRevision++;
+  sessionStorage.removeItem(SESSION_KEY);
+  void signOutGoogle().catch(() => {});
+  window.dispatchEvent(new CustomEvent('eigo-taxi-session-ended', { detail: reason }));
+}
+// @trace CODE-18 REQ-18
+export class InactiveReservationError extends Error {}
+
+async function request(endpoint:string, idToken:string, action:string, params:object = {}, expectedSession?:AppSession): Promise<Record<string, unknown>> {
+  try {
+    const res = await fetch(endpoint, {method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify({...params,action,idToken}),signal:AbortSignal.timeout(20000),credentials:'omit',referrerPolicy:'no-referrer'});
+    if (!res.ok) throw new Error(failureMessage);
+    const json = await res.json();
+    if (json?.success !== true) {
+      const active=getSession();
+      if (['UNAUTHORIZED','AUTH_NOT_CONFIGURED','ACCOUNT_NOT_REGISTERED','PORTAL_MISMATCH','ENTRY_REVOKED','REVIEW_UNAVAILABLE'].includes(json?.code) &&
+          expectedSession && JSON.stringify(active) === JSON.stringify(expectedSession)) {
+        endSession('reauthenticate');
+      }
+      if (action === 'completeRide' && json?.code === 'INVALID_STATE') {
+        throw new InactiveReservationError(json.error || 'この予約は完了処理できません');
+      }
+      throw new Error(json?.error || failureMessage);
+    }
+    return json;
+  } catch (error) {
+    if (error instanceof TypeError || error instanceof SyntaxError || (error instanceof DOMException && error.name === 'TimeoutError')) throw new Error(failureMessage);
+    throw error instanceof Error ? error : new Error(failureMessage);
+  }
+}
+async function live(session:AppSession,action:string,params:object = {}) {
+  if (session.mode !== 'live' || !session.endpoint || !session.firebaseUid) throw new Error('接続済みの認証が必要です');
+  let idToken: string;
+  try { idToken = await getGoogleIdToken(session.firebaseUid); }
+  catch {
+    if (JSON.stringify(getSession()) === JSON.stringify(session)) endSession('reauthenticate');
+    throw new Error('もう一度ログインしてください。');
+  }
+  if (JSON.stringify(getSession()) !== JSON.stringify(session)) throw new Error('ログイン状態が変わりました。');
+  const result=await request(session.endpoint, idToken, action, {...params, portalRole:session.user.role, ...(session.entryId ? {entryId:session.entryId} : {})}, session);
+  if (['getStudents','getRides','getPortalInvitations'].includes(action) && !Array.isArray(result.data)) {
+    throw new Error('台帳の応答形式を確認できませんでした。表示件数は未確認です。再取得しても変わらない場合は担当者へ連絡してください。');
+  }
+  if (JSON.stringify(getSession())!==JSON.stringify(session)) throw new Error('ログイン状態が変わりました。処理結果を管理者に確認してください');
+  return result;
+}
+async function mutation<T>(session:AppSession,action:string,params:object,idField:string,prefix:string,
+  readResult:(response:Record<string,unknown>,operationId:string)=>T):Promise<T> {
+  const storageKey='eigo_taxi_pending_mutations';
+  const key=JSON.stringify([session.endpoint,session.user.id,action,Object.fromEntries(Object.entries(params).sort(([a],[b])=>a.localeCompare(b)))]);
+  const pending:Record<string,string>=JSON.parse(sessionStorage.getItem(storageKey)||'{}');
+  const operationId=pending[key]||prefix+crypto.randomUUID();
+  pending[key]=operationId;sessionStorage.setItem(storageKey,JSON.stringify(pending));
+  const response=await live(session,action,{...params,[idField]:operationId});
+  const result=readResult(response,operationId);
+  const remaining:Record<string,string>=JSON.parse(sessionStorage.getItem(storageKey)||'{}');
+  if (remaining[key]===operationId) {
+    delete remaining[key];sessionStorage.setItem(storageKey,JSON.stringify(remaining));
+  }
+  return result;
+}
+function readCreatedReservation(response:Record<string,unknown>, rideId:string, booking:ReservationInput):RideReservation {
+  const ride=response.data as Partial<RideReservation> | null | undefined;
+  if (!ride || ride.id!==rideId || ride.studentId!==booking.studentId ||
+      ride.rideType!==booking.rideType || ride.rideDate!==booking.rideDate || ride.rideTime!==booking.rideTime ||
+      ride.reservedBy!==booking.reservedBy || ride.pickupLocation!==booking.pickupLocation.trim() ||
+      (ride.note===undefined?'':ride.note)!==(booking.note||'').trim() ||
+      typeof ride.studentName!=='string' || !ride.studentName.trim() ||
+      (ride.calendarEventId!==undefined && typeof ride.calendarEventId!=='string') ||
+      (ride.completedAt!==undefined && typeof ride.completedAt!=='string') ||
+      !(ride.status==='scheduled' || (response.replayed===true && (ride.status==='completed' || ride.status==='cancelled')))) {
+    throw new Error('予約の登録結果を確認できませんでした。予約一覧を確認してください。このタブで同じ内容を再送すると、同じ予約IDで照合します。');
+  }
+  return ride as RideReservation;
+}
+function positiveCount(value:number) {
+  if (!Number.isSafeInteger(value) || value < 1 || value > 100) throw new Error('枚数は1〜100の整数で指定してください');
+}
+function validAmount(value:number) {
+  if (!Number.isSafeInteger(value) || value < 0) throw new Error('金額は0以上の整数で指定してください');
+}
+function allStudents():Student[] { return getStored(STORAGE_KEYS.STUDENTS, INITIAL_STUDENTS); }
+function allRides():RideReservation[] { return getStored(STORAGE_KEYS.RIDES, INITIAL_RIDES); }
+function getRide(session:AppSession,id:string):RideReservation {
+  const ride = allRides().find(r=>r.id===id);
+  if (!ride) throw new Error('送迎が見つかりません');
+  assertStudent(session,ride.studentId);
+  return ride;
+}
 export const ApiService = {
-  getGasApiUrl(): string {
-    return localStorage.getItem(STORAGE_KEYS.GAS_API_URL) || '';
+  getSession,
+  async getManagedUsers():Promise<ManagedUsers> {
+    const session=requireFullAdmin();
+    if(isDemo(session)) throw new Error('アカウント管理はGoogleログインした管理者だけが利用できます。');
+    const response=await live(session,'getManagedUsers');
+    const data=response.data as ManagedUsers;
+    if(!data||!Array.isArray(data.users)||typeof data.revision!=='string')throw new Error('アカウント一覧を確認できませんでした');
+    return data;
   },
-
-  setGasApiUrl(url: string): void {
-    localStorage.setItem(STORAGE_KEYS.GAS_API_URL, url.trim());
+  async saveManagedUser(input:ManagedUserInput,expectedRevision:string):Promise<void> {
+    const session=requireFullAdmin();
+    if(isDemo(session))throw new Error('デモではアカウントを変更できません');
+    await live(session,'saveManagedUser',{...input,expectedRevision});
   },
-
-  // 生徒一覧取得
-  async getStudents(): Promise<Student[]> {
-    const gasUrl = this.getGasApiUrl();
-    if (gasUrl) {
-      try {
-        const res = await fetch(`${gasUrl}?action=getStudents`);
-        const json = await res.json();
-        if (json.success && Array.isArray(json.data)) return json.data;
-      } catch (e) {
-        console.warn('GAS API connection failed, fallback to local storage:', e);
-      }
+  async deleteManagedUser(userId:string,expectedRevision:string):Promise<void> {
+    const session=requireFullAdmin();
+    if(isDemo(session))throw new Error('デモではアカウントを変更できません');
+    await live(session,'deleteManagedUser',{userId,expectedRevision});
+  },
+  logout():void { endSession(); },
+  enterDemo(role:'admin'|'parent'):AppSession {
+    // Explicit sandbox: synthetic local data only. This session is never sent to GAS.
+    const session:AppSession={mode:'demo',user:{id:'demo-'+role,name:role==='admin'?'管理者デモ':'保護者デモ',role,studentIds:role==='parent'?['STU-001']:[],...(role==='parent'?{publicEntryId:DEMO_ENTRY_ID}:{})}};
+    sessionStorage.setItem(SESSION_KEY,JSON.stringify(session));
+    return session;
+  },
+  async loginWithGoogle(route:PortalRoute):Promise<AppSession> {
+    if (route.kind !== 'admin' && route.kind !== 'parent') throw new Error('教室から案内された入口を開いてください。');
+    if (route.kind === 'parent' && route.entryId === DEMO_ENTRY_ID) throw new Error('こちらは体験用の入口です。教室から届いたご家庭専用URLを開いてください。');
+    const config = getDeploymentConfig();
+    const firebase = requireGoogleConfig();
+    sessionStorage.removeItem(SESSION_KEY);
+    const attemptRevision = ++sessionRevision;
+    try {
+      const identity = await signInGoogle();
+      const response=await request(config.gasApiUrl,identity.idToken,'login',{portalRole:route.kind,...(route.kind==='parent'&&route.entryId?{entryId:route.entryId}:{})});
+      if (sessionRevision !== attemptRevision) throw new Error('ログイン操作が変わりました。もう一度お試しください。');
+      const user=response.data as AppUser;
+      if (!validAppUser(user)) throw new Error('認証応答が不正です');
+      assertPortal(route,user);
+      const session:AppSession={mode:'live',user,endpoint:config.gasApiUrl,firebaseUid:identity.uid,firebaseProjectId:firebase.projectId,...(route.kind==='parent'&&route.entryId?{entryId:route.entryId}:{})};
+      sessionStorage.setItem(SESSION_KEY,JSON.stringify(session));
+      return session;
+    } catch (error) { if (sessionRevision === attemptRevision) this.logout(); throw error; }
+  },
+  async verifySession(route:PortalRoute):Promise<AppSession> {
+    const previous=requireSession();
+    if(previous.mode==='demo') { assertPortal(route,previous.user); return previous; }
+    // Validate stored role and family assignment against the server before rendering.
+    const identityToken = await getGoogleIdToken(previous.firebaseUid!);
+    const response=await request(previous.endpoint!,identityToken,'login',{portalRole:route.kind,...(route.kind==='parent'&&route.entryId?{entryId:route.entryId}:{})},previous);
+    if(JSON.stringify(getSession())!==JSON.stringify(previous))throw new Error('ログイン状態が変わりました');
+    const user=response.data as AppUser;
+    if(!validAppUser(user))throw new Error('認証応答が不正です');
+    assertPortal(route,user);
+    const session:AppSession={...previous,user,entryId:route.kind==='parent'?route.entryId:undefined};
+    sessionStorage.setItem(SESSION_KEY,JSON.stringify(session));
+    return session;
+  },
+  async getPortalInvitations():Promise<PortalInvitation[]> {
+    const session=requireFullAdmin();
+    if(isDemo(session))return [{userId:'demo-parent',name:'保護者デモ（架空の家庭）',publicEntryId:DEMO_ENTRY_ID}];
+    const response=await live(session,'getPortalInvitations');
+    const items=response.data as PortalInvitation[];
+    if(!Array.isArray(items)||items.some(item=>!ENTRY_ID.test(item.publicEntryId)))throw new Error('個別URLの設定を管理担当者に確認してください');
+    return items;
+  },
+  getGasApiUrl():string { return getDeploymentConfig().gasApiUrl; },
+  async getStudents():Promise<Student[]> {
+    const session=requireSession();
+    const students=isDemo(session)?allStudents():(await live(session,'getStudents')).data as Student[];
+    return students.filter(s=>mayAccessStudent(session,s.id));
+  },
+  async getStudentById(id:string):Promise<Student|undefined> {
+    assertStudent(requireSession(),id);
+    return (await this.getStudents()).find(s=>s.id===id);
+  },
+  async createStudent(student:Omit<Student,'id'|'createdAt'>):Promise<Student> {
+    const session=requireFullAdmin();
+    if(!student.name.trim()||!student.address.trim()||!Number.isSafeInteger(student.ticketBalance)||student.ticketBalance<0) throw new Error('氏名・住所・正しい初期残高を指定してください');
+    if(!isDemo(session)) return mutation(session,'createStudent',student,'id','STU-',result=>result.data as Student);
+    const students=allStudents();
+    const created:Student={...student,id:'STU-'+crypto.randomUUID(),createdAt:getLocalDateString()};
+    students.push(created);setStored(STORAGE_KEYS.STUDENTS,students);return created;
+  },
+  async getRides():Promise<RideReservation[]> {
+    const session=requireSession();
+    const rides=isDemo(session)?allRides():(await live(session,'getRides')).data as RideReservation[];
+    return rides.filter(r=>mayAccessStudent(session,r.studentId))
+      .sort((a,b)=>(b.rideDate+' '+b.rideTime).localeCompare(a.rideDate+' '+a.rideTime));
+  },
+  async createReservation(params:ReservationInput):Promise<RideReservation> {
+    const session=requireSession();assertStudent(session,params.studentId);
+    if (!['pickup','dropoff','roundtrip'].includes(params.rideType)||!/^\d{4}-\d{2}-\d{2}$/.test(params.rideDate)||!/^\d{2}:\d{2}$/.test(params.rideTime)||!params.pickupLocation.trim()) throw new Error('予約の必須項目を確認してください');
+    const reservedBy=session.user.role==='admin'?'teacher':'parent';
+    if(!isDemo(session)) {
+      const booking:ReservationInput={...params,reservedBy};
+      return mutation(session,'createReservation',booking,'rideId','RIDE-',
+        (response,rideId)=>readCreatedReservation(response,rideId,booking));
     }
-    return getStored<Student[]>(STORAGE_KEYS.STUDENTS, INITIAL_STUDENTS);
+    const rideId='RIDE-'+crypto.randomUUID();
+    const student=allStudents().find(s=>s.id===params.studentId);
+    if(!student) throw new Error('生徒が見つかりません');
+    const ride:RideReservation={...params,reservedBy,id:rideId,studentName:student.name,status:'scheduled',calendarEventId:'',note:params.note||''};
+    const rides=allRides();rides.unshift(ride);setStored(STORAGE_KEYS.RIDES,rides);return ride;
   },
-
-  // 生徒詳細取得
-  async getStudentById(id: string): Promise<Student | undefined> {
-    const students = await this.getStudents();
-    return students.find((s) => s.id === id);
+  async cancelReservation(rideId:string):Promise<boolean> {
+    const session=requireSession();
+    if(!isDemo(session)){await assertReviewRide(session,rideId);await live(session,'cancelReservation',{rideId});return true;}
+    const ride=getRide(session,rideId);
+    if(ride.status==='cancelled')return true;
+    if(ride.status!=='scheduled')throw new Error('完了済みの予約はキャンセルできません');
+    setStored(STORAGE_KEYS.RIDES,allRides().map(r=>r.id===rideId?{...r,status:'cancelled'}:r));return true;
   },
-
-  // 生徒新規登録
-  async createStudent(student: Omit<Student, 'id' | 'createdAt'>): Promise<Student> {
-    const students = await this.getStudents();
-    const generatedId = `STU-${String(students.length + 1).padStart(3, '0')}`;
-    const today = getLocalDateString();
-    const gasUrl = this.getGasApiUrl();
-
-    let gasStudent: Student | undefined;
-    if (gasUrl) {
-      try {
-        const res = await fetch(gasUrl, {
-          method: 'POST',
-          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
-          body: JSON.stringify({
-            action: 'createStudent',
-            id: generatedId,
-            ...student,
-          }),
-        });
-        const json = await res.json();
-        if (json.success && json.data) {
-          gasStudent = json.data;
-        }
-      } catch (e) {
-        console.warn('GAS API createStudent failed, fallback to local storage:', e);
-      }
-    }
-
-    const newStudent: Student = gasStudent || {
-      ...student,
-      id: generatedId,
-      createdAt: today,
-    };
-    students.push(newStudent);
-    setStored(STORAGE_KEYS.STUDENTS, students);
-    return newStudent;
+  async completeRide(rideId:string,consumeTickets?:number):Promise<{success:boolean;remainingBalance?:number;consumedTickets?:number}> {
+    const session=requireSession(true);
+    if(!isDemo(session)) { await assertReviewRide(session,rideId); return await live(session,'completeRide',{rideId,...(consumeTickets===undefined?{}:{consumeTickets})}) as {success:boolean;remainingBalance?:number;consumedTickets?:number}; }
+    const ride=getRide(session,rideId);
+    const students=allStudents();const student=students.find(s=>s.id===ride.studentId);
+    if(!student)throw new Error('生徒が見つかりません');
+    if(ride.status==='completed')return {success:true,remainingBalance:student.ticketBalance,consumedTickets:0};
+    if(ride.status!=='scheduled')return {success:false};
+    const consume=ride.rideType==='roundtrip'?2:1;
+    if(consumeTickets!==undefined&&consumeTickets!==consume)throw new Error('消費枚数が送迎区分と一致しません');
+    if(student.ticketBalance<consume)throw new Error('チケット残数が不足しています。追加後に完了処理してください');
+    student.ticketBalance-=consume;
+    const completedAt=new Date().toLocaleString('ja-JP',{timeZone:'Asia/Tokyo'});
+    setStored(STORAGE_KEYS.STUDENTS,students);
+    setStored(STORAGE_KEYS.RIDES,allRides().map(r=>r.id===rideId?{...r,status:'completed',completedAt}:r));
+    return {success:true,remainingBalance:student.ticketBalance,consumedTickets:consume};
   },
-
-  // 送迎予約一覧取得
-  async getRides(): Promise<RideReservation[]> {
-    const gasUrl = this.getGasApiUrl();
-    if (gasUrl) {
-      try {
-        const res = await fetch(`${gasUrl}?action=getRides`);
-        const json = await res.json();
-        if (json.success && Array.isArray(json.data)) {
-          return json.data.map((r: RideReservation) => {
-            let rideDate = String(r.rideDate || '');
-            const dateMatch = rideDate.match(/\d{4}-\d{2}-\d{2}/);
-            if (dateMatch) {
-              rideDate = dateMatch[0];
-            } else {
-              const d = new Date(r.rideDate);
-              if (!isNaN(d.getTime())) {
-                rideDate = getLocalDateString(d);
-              }
-            }
-
-            let rideTime = String(r.rideTime || '');
-            const timeMatch = rideTime.match(/(\d{1,2}):(\d{2})/);
-            if (timeMatch) {
-              rideTime = `${timeMatch[1].padStart(2, '0')}:${timeMatch[2]}`;
-            }
-
-            return {
-              ...r,
-              rideDate,
-              rideTime,
-            };
-          }).sort((a: RideReservation, b: RideReservation) => `${b.rideDate} ${b.rideTime}`.localeCompare(`${a.rideDate} ${a.rideTime}`));
-        }
-      } catch (e) {
-        console.warn('GAS API connection failed, fallback to local storage:', e);
-      }
-    }
-
-    let rides = getStored<RideReservation[]>(STORAGE_KEYS.RIDES, INITIAL_RIDES);
-    const todayStr = getLocalDateString();
-
-    // デモ用: 本日の送迎予定（未完了）が1件もない場合は、RIDE-101とRIDE-102を本日の日付・未完了に自動更新
-    const hasTodayScheduled = rides.some((r) => r.rideDate === todayStr && r.status === 'scheduled');
-    if (!hasTodayScheduled) {
-      rides = rides.map((r) => {
-        if (r.id === 'RIDE-101') return { ...r, rideDate: todayStr, status: 'scheduled', completedAt: undefined };
-        if (r.id === 'RIDE-102') return { ...r, rideDate: todayStr, status: 'scheduled', completedAt: undefined };
-        return r;
-      });
-      setStored(STORAGE_KEYS.RIDES, rides);
-    }
-
-    return rides.sort((a, b) => `${b.rideDate} ${b.rideTime}`.localeCompare(`${a.rideDate} ${a.rideTime}`));
+  async addTickets(params:{studentId:string;ticketCount:number;amount:number;note?:string}):Promise<{success:boolean;newBalance:number}> {
+    const session=requireSession(true);assertStudent(session,params.studentId);positiveCount(params.ticketCount);validAmount(params.amount);
+    const purchaseId='PUR-'+crypto.randomUUID();
+    if(!isDemo(session))return mutation(session,'addTickets',params,'purchaseId','PUR-',result=>result as {success:boolean;newBalance:number});
+    const students=allStudents();const student=students.find(s=>s.id===params.studentId);
+    if(!student)throw new Error('生徒が見つかりません');
+    if(!Number.isSafeInteger(student.ticketBalance+params.ticketCount))throw new Error('残高が上限を超えます');
+    student.ticketBalance+=params.ticketCount;
+    const purchases=getStored(STORAGE_KEYS.PURCHASES,INITIAL_PURCHASES);
+    purchases.unshift({...params,id:purchaseId,studentName:student.name,purchaseDate:getLocalDateString(),note:params.note||''});
+    setStored(STORAGE_KEYS.STUDENTS,students);setStored(STORAGE_KEYS.PURCHASES,purchases);
+    return {success:true,newBalance:student.ticketBalance};
   },
-
-  // 送迎予約の登録（保護者または先生）
-  async createReservation(params: {
-    studentId: string;
-    rideDate: string;
-    rideTime: string;
-    rideType: RideType;
-    pickupLocation: string;
-    note?: string;
-    reservedBy: 'parent' | 'teacher';
-  }): Promise<RideReservation> {
-    const students = await this.getStudents();
-    const student = students.find((s) => s.id === params.studentId);
-    const rides = await this.getRides();
-    const gasUrl = this.getGasApiUrl();
-    const studentName = student?.name || '受講生徒';
-    const generatedRideId = `RIDE-${Date.now()}`;
-    let gasResult: { id?: string; calendarEventId?: string } | undefined;
-    if (gasUrl) {
-      try {
-        const res = await fetch(gasUrl, {
-          method: 'POST',
-          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
-          body: JSON.stringify({
-            action: 'createReservation',
-            rideId: generatedRideId,
-            studentName,
-            ...params,
-          }),
-        });
-        const json = await res.json();
-        if (json.success) {
-          gasResult = json.data;
-        }
-      } catch (e) {
-        console.warn('GAS API connection failed, fallback to local storage:', e);
-      }
-    }
-
-    const newRide: RideReservation = {
-      id: gasResult?.id || generatedRideId,
-      studentId: params.studentId,
-      studentName: studentName,
-      rideDate: params.rideDate,
-      rideTime: params.rideTime,
-      rideType: params.rideType,
-      pickupLocation: params.pickupLocation,
-      status: 'scheduled',
-      calendarEventId: gasResult?.calendarEventId || `cal-${Date.now()}`,
-      note: params.note || '',
-      reservedBy: params.reservedBy,
-    };
-
-    rides.unshift(newRide);
-    setStored(STORAGE_KEYS.RIDES, rides);
-    return newRide;
+  resetToMock():void {
+    const session=requireFullAdmin();if(!isDemo(session))throw new Error('デモ専用操作です');
+    [STORAGE_KEYS.STUDENTS,STORAGE_KEYS.RIDES,STORAGE_KEYS.PURCHASES].forEach(k=>localStorage.removeItem(k));
   },
-
-  // 送迎予約のキャンセル（保護者または先生）
-  async cancelReservation(rideId: string): Promise<boolean> {
-    const rides = await this.getRides();
-    const index = rides.findIndex((r) => r.id === rideId);
-    if (index === -1) return false;
-    const targetRide = rides[index];
-
-    const gasUrl = this.getGasApiUrl();
-    if (gasUrl) {
-      try {
-        await fetch(gasUrl, {
-          method: 'POST',
-          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
-          body: JSON.stringify({
-            action: 'cancelReservation',
-            rideId,
-            studentId: targetRide.studentId,
-            studentName: targetRide.studentName,
-            rideDate: targetRide.rideDate,
-            rideTime: targetRide.rideTime,
-            calendarEventId: targetRide.calendarEventId,
-          }),
-        });
-      } catch (e) {
-        console.warn('GAS API cancel failed:', e);
-      }
-    }
-
-    rides[index].status = 'cancelled';
-    setStored(STORAGE_KEYS.RIDES, rides);
-    return true;
-  },
-
-  // 送迎完了＆チケット消化（先生が当日実行）
-  async completeRide(
-    rideId: string,
-    consumeTickets?: number
-  ): Promise<{ success: boolean; remainingBalance?: number; consumedTickets?: number }> {
-    const rides = await this.getRides();
-    const ride = rides.find((r) => r.id === rideId);
-    if (!ride) return { success: false };
-
-    const students = await this.getStudents();
-    const studentIndex = students.findIndex((s) => s.id === ride.studentId);
-    if (studentIndex === -1) return { success: false };
-
-    // 往復の場合はデフォルト2枚、片道は1枚消費
-    const actualConsume = consumeTickets ?? (ride.rideType === 'roundtrip' ? 2 : 1);
-
-    // チケット残数を減算
-    students[studentIndex].ticketBalance = Math.max(0, students[studentIndex].ticketBalance - actualConsume);
-    ride.status = 'completed';
-    ride.completedAt = new Date().toLocaleString('ja-JP');
-
-    setStored(STORAGE_KEYS.STUDENTS, students);
-    setStored(STORAGE_KEYS.RIDES, rides);
-
-    const gasUrl = this.getGasApiUrl();
-    if (gasUrl) {
-      try {
-        await fetch(gasUrl, {
-          method: 'POST',
-          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
-          body: JSON.stringify({ action: 'completeRide', rideId, consumeTickets: actualConsume }),
-        });
-      } catch (e) {
-        console.warn('GAS API connection failed:', e);
-      }
-    }
-
-    return {
-      success: true,
-      remainingBalance: students[studentIndex].ticketBalance,
-      consumedTickets: actualConsume,
-    };
-  },
-
-  // チケット購入・追加（先生が実行）
-  async addTickets(params: {
-    studentId: string;
-    ticketCount: number;
-    amount: number;
-    note?: string;
-  }): Promise<{ success: boolean; newBalance: number }> {
-    const students = await this.getStudents();
-    const student = students.find((s) => s.id === params.studentId);
-    if (!student) return { success: false, newBalance: 0 };
-
-    student.ticketBalance += params.ticketCount;
-    setStored(STORAGE_KEYS.STUDENTS, students);
-
-    // 購入履歴追加
-    const purchases = getStored<TicketPurchase[]>(STORAGE_KEYS.PURCHASES, INITIAL_PURCHASES);
-    const purchaseId = `PUR-${Date.now().toString().slice(-5)}`;
-    const newPurchase: TicketPurchase = {
-      id: purchaseId,
-      studentId: params.studentId,
-      studentName: student.name,
-      purchaseDate: getLocalDateString(),
-      ticketCount: params.ticketCount,
-      amount: params.amount,
-      note: params.note || '',
-    };
-    purchases.unshift(newPurchase);
-    setStored(STORAGE_KEYS.PURCHASES, purchases);
-
-    const gasUrl = this.getGasApiUrl();
-    if (gasUrl) {
-      try {
-        await fetch(gasUrl, {
-          method: 'POST',
-          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
-          body: JSON.stringify({
-            action: 'addTickets',
-            purchaseId,
-            studentName: student.name,
-            ...params,
-          }),
-        });
-      } catch (e) {
-        console.warn('GAS API addTickets failed, fallback to local storage:', e);
-      }
-    }
-
-    return { success: true, newBalance: student.ticketBalance };
-  },
-
-  // リセット（初期モックデータに戻す）
-  resetToMock(): void {
-    localStorage.removeItem(STORAGE_KEYS.STUDENTS);
-    localStorage.removeItem(STORAGE_KEYS.RIDES);
-    localStorage.removeItem(STORAGE_KEYS.PURCHASES);
-  },
-
-  // 本番用完全パージ（すべてのデモ・テストデータを消去して空にする）
-  purgeAllData(): void {
-    setStored(STORAGE_KEYS.STUDENTS, []);
-    setStored(STORAGE_KEYS.RIDES, []);
-    setStored(STORAGE_KEYS.PURCHASES, []);
+  purgeAllData():void {
+    const session=requireFullAdmin();if(!isDemo(session))throw new Error('デモ専用操作です');
+    setStored(STORAGE_KEYS.STUDENTS,[]);setStored(STORAGE_KEYS.RIDES,[]);setStored(STORAGE_KEYS.PURCHASES,[]);
   },
 };

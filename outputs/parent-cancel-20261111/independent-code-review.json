@@ -1,0 +1,15 @@
+{
+  "reviewer": "lead agent independent of implementation worker",
+  "baseline": "5204dfe9fc36b599",
+  "file": "src/components/ParentPortal.tsx",
+  "sha256": "93c0f709cea70dc26f1fceb0ec9b1777fbc8aa15f76be8004bf1fa3ee760abcf",
+  "checks": [
+    "Exact diff changes only cancellation button naming and confirmation text",
+    "Student name, date, time and ride type come from the displayed selected-student reservation",
+    "Existing demo and real-environment messages retained",
+    "Callback still receives the selected reservation id only after confirmation",
+    "Workspace and staged source digests match"
+  ],
+  "pass": true,
+  "limitation": "Identical same-time reservations may share the displayed description; cancellation identity remains reservation-id based"
+}

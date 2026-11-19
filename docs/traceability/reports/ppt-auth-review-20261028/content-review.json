@@ -1,0 +1,116 @@
+{
+  "registrySha256": "0a354d7c330e0a3b52c1ac9faa791fbd5af706670b48f933f15f70d9cffb3187",
+  "reviewer": "Codex document review",
+  "sourceBaselineModified": false,
+  "deployed": false,
+  "slidesRendered": 126,
+  "unchangedBodyPixelMatches": 122,
+  "bodyChangedFullSizeReviewed": 4,
+  "allDeckContactSheetsReviewed": true,
+  "nativePowerPointExecution": "NOT_RUN",
+  "packages": [
+    {
+      "id": "PKG-01",
+      "source": "docs/deliverables/2026-10-23-traceability/business-2026-10-24-v13.pptx",
+      "final": "docs/deliverables/2026-10-23-traceability/business-2026-10-28-v15.pptx",
+      "slides": 21,
+      "bodyChangedSlides": [],
+      "notesVerified": 21
+    },
+    {
+      "id": "PKG-02",
+      "source": "docs/deliverables/2026-10-23-traceability/requirements-2026-10-24-v13.pptx",
+      "final": "docs/deliverables/2026-10-23-traceability/requirements-2026-10-28-v15.pptx",
+      "slides": 10,
+      "bodyChangedSlides": [],
+      "notesVerified": 10
+    },
+    {
+      "id": "PKG-03",
+      "source": "docs/deliverables/2026-10-23-traceability/design-2026-10-24-v13.pptx",
+      "final": "docs/deliverables/2026-10-23-traceability/design-2026-10-28-v15.pptx",
+      "slides": 10,
+      "bodyChangedSlides": [],
+      "notesVerified": 10
+    },
+    {
+      "id": "PKG-04",
+      "source": "docs/deliverables/2026-10-23-traceability/test-spec-2026-10-24-v13.pptx",
+      "final": "docs/deliverables/2026-10-23-traceability/test-spec-2026-10-28-v15.pptx",
+      "slides": 10,
+      "bodyChangedSlides": [],
+      "notesVerified": 10
+    },
+    {
+      "id": "PKG-05",
+      "source": "docs/deliverables/2026-10-23-traceability/tasks-2026-10-28-v14.pptx",
+      "final": "docs/deliverables/2026-10-23-traceability/tasks-2026-10-28-v15.pptx",
+      "slides": 10,
+      "bodyChangedSlides": [],
+      "notesVerified": 10
+    },
+    {
+      "id": "PKG-06",
+      "source": "docs/deliverables/2026-10-23-traceability/implementation-2026-10-24-v13.pptx",
+      "final": "docs/deliverables/2026-10-23-traceability/implementation-2026-10-28-v15.pptx",
+      "slides": 10,
+      "bodyChangedSlides": [
+        1
+      ],
+      "notesVerified": 10
+    },
+    {
+      "id": "PKG-07",
+      "source": "docs/deliverables/2026-10-23-traceability/test-code-2026-10-24-v13.pptx",
+      "final": "docs/deliverables/2026-10-23-traceability/test-code-2026-10-28-v15.pptx",
+      "slides": 10,
+      "bodyChangedSlides": [
+        1
+      ],
+      "notesVerified": 10
+    },
+    {
+      "id": "PKG-08",
+      "source": "docs/deliverables/2026-10-23-traceability/acceptance-2026-10-24-v13.pptx",
+      "final": "docs/deliverables/2026-10-23-traceability/acceptance-2026-10-28-v15.pptx",
+      "slides": 10,
+      "bodyChangedSlides": [],
+      "notesVerified": 10
+    },
+    {
+      "id": "PKG-09",
+      "source": "docs/deliverables/2026-10-23-traceability/operations-2026-10-24-v13.pptx",
+      "final": "docs/deliverables/2026-10-23-traceability/operations-2026-10-28-v15.pptx",
+      "slides": 10,
+      "bodyChangedSlides": [],
+      "notesVerified": 10
+    },
+    {
+      "id": "PKG-10",
+      "source": "docs/deliverables/2026-10-23-traceability/user-2026-10-24-v13.pptx",
+      "final": "docs/deliverables/2026-10-23-traceability/user-2026-10-28-v15.pptx",
+      "slides": 10,
+      "bodyChangedSlides": [],
+      "notesVerified": 10
+    },
+    {
+      "id": "PKG-11",
+      "source": "docs/deliverables/2026-10-23-traceability/matrix-2026-10-24-v13.pptx",
+      "final": "docs/deliverables/2026-10-23-traceability/matrix-2026-10-28-v15.pptx",
+      "slides": 8,
+      "bodyChangedSlides": [],
+      "notesVerified": 8
+    },
+    {
+      "id": "PKG-12",
+      "source": "docs/deliverables/2026-10-23-traceability/progress-2026-10-28-v14.pptx",
+      "final": "docs/deliverables/2026-10-23-traceability/progress-2026-10-28-v15.pptx",
+      "slides": 7,
+      "bodyChangedSlides": [
+        1,
+        7
+      ],
+      "notesVerified": 7
+    }
+  ]
+}

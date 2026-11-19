@@ -1,0 +1,16 @@
+{
+  "reviewer": "lead agent independent of implementation worker",
+  "baseline": "b10cd21819d6c229",
+  "file": "src/components/TeacherDashboard.tsx",
+  "sha256": "65d3322c858a7a5075c2a8f272d50ffe0544ee4853ec635befa0fea1ed263d5a",
+  "checks": [
+    "Cancellation target is derived by selected id from the currently scheduled displayed reservations",
+    "Native modal dialog is opened with showModal and dismissed on Return button or Escape",
+    "Visible student, date, time, ride type and demo/Google impact precede explicit confirmation",
+    "Only explicit confirmation calls the existing cancellation handler with the selected reservation id",
+    "Cancellation trigger is disabled while the same reservation completion is pending",
+    "Workspace and stage hashes match; service, authentication and ticket logic unchanged"
+  ],
+  "pass": true,
+  "limitation": "Actual modal focus, Escape, return and confirm behavior require local and public tests. Existing App cancellation error handling is unchanged; parent portal cancellation is not changed."
+}

@@ -1,0 +1,41 @@
+{
+  "executedAt": "2026-10-29T15:31:17.480Z",
+  "mode": "Offline Node VM; Firebase SDK stubbed; popup timing contract only",
+  "passed": 7,
+  "total": 7,
+  "sourceSha256": "01667af44fce383f3763c8bb73497dafc690381592ddcf383d46aaafe90fe0d8",
+  "sourceHashes": {
+    "src/services/google-auth.ts": "01667af44fce383f3763c8bb73497dafc690381592ddcf383d46aaafe90fe0d8",
+    "scripts/test_google_auth.cjs": "75b18ca335a5307287f056f48e10948ffce8b667ac48b3a5594a3dd3ff5ff057"
+  },
+  "results": [
+    {
+      "name": "Popup cannot start before SDK setup completes",
+      "status": "PASS"
+    },
+    {
+      "name": "Preparation configures tab/session persistence and Japanese UI",
+      "status": "PASS"
+    },
+    {
+      "name": "Preparation can recover from a transient persistence failure without reloading",
+      "status": "PASS"
+    },
+    {
+      "name": "Prepared sign-in opens popup before yielding the click and selects the user account",
+      "status": "PASS"
+    },
+    {
+      "name": "Data request obtains the current SDK token and refuses a different user",
+      "status": "PASS"
+    },
+    {
+      "name": "Provider errors are translated without exposing raw credential details",
+      "status": "PASS"
+    },
+    {
+      "name": "Logout clears the Firebase SDK user and later data calls cannot use it",
+      "status": "PASS"
+    }
+  ]
+}

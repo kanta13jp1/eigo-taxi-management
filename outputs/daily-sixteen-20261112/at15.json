@@ -1,0 +1,16 @@
+{
+  "case": "AT-15",
+  "checkedAt": "2026-11-12T03:35:32.709Z",
+  "scope": "React App with controlled pending promises; anonymous demo ApiService idempotency",
+  "duplicateSubmissionsBeforeResolution": 1,
+  "bothListsDisabledWhilePending": true,
+  "unrelatedRideEnabled": true,
+  "failedAttemptUnlocked": true,
+  "beforeBalance": 7,
+  "firstConsumed": 1,
+  "repeatConsumed": 0,
+  "afterBalance": 6,
+  "status": "completed",
+  "completedAtUnchanged": true,
+  "otherDataPreserved": true
+}

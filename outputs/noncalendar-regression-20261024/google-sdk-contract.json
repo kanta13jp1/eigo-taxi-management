@@ -1,0 +1,33 @@
+{
+  "executedAt": "2026-10-24T10:54:10.981Z",
+  "mode": "Offline Node VM; Firebase SDK stubbed; popup timing contract only",
+  "passed": 6,
+  "total": 6,
+  "sourceSha256": "718010acfe44b5ff95a48a02fcedf5471558cf67c563d8872fdfccb8f45d8229",
+  "results": [
+    {
+      "name": "Popup cannot start before SDK setup completes",
+      "status": "PASS"
+    },
+    {
+      "name": "Preparation configures tab/session persistence and Japanese UI",
+      "status": "PASS"
+    },
+    {
+      "name": "Prepared sign-in opens popup before yielding the click and selects the user account",
+      "status": "PASS"
+    },
+    {
+      "name": "Data request obtains the current SDK token and refuses a different user",
+      "status": "PASS"
+    },
+    {
+      "name": "Provider errors are translated without exposing raw credential details",
+      "status": "PASS"
+    },
+    {
+      "name": "Logout clears the Firebase SDK user and later data calls cannot use it",
+      "status": "PASS"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "state": "PREPARED_WAITING_FOR_R16_LOCK",
+  "proofPrecheck": "PASS",
+  "calendarReadOnlyPass": true,
+  "gasVerificationWebAppVersion": 5,
+  "fixtureInitialTickets": 5,
+  "existingStudentsUnchanged": 3,
+  "customerRegistrationLoginVerified": false,
+  "realBookingCancellationVerified": false,
+  "finalExportStarted": false,
+  "manifestChanged": false,
+  "evidenceHashes": {
+    "calendar-read-result.json": "84e69f48bab9c43fa0399abc93a60e9e2f60f72e6dc882e4864dcf3e8860d20c",
+    "gas-deployment-v5.json": "a6ea0b81c2a6038e232861a13bf49c979412ccfb183494ef0f96714fdf2d625e",
+    "students-before.tsv": "0573bece3403da61ddc3e0cfc838ae6bdb81b9e6df1e5cf80f9d0764fdf02fd1",
+    "students-after.tsv": "fb9a63d7b96dbb3d3fcbbdbf4a82200dac5f8c061661144fc112063504e7546e"
+  }
+}

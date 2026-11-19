@@ -1,0 +1,661 @@
+{
+  "spreadsheetId": "1PqUq7BoBBVlPolivap0eg1UPik47vNNWphyBd0DNwvU",
+  "spreadsheetUrl": "https://docs.google.com/spreadsheets/d/1PqUq7BoBBVlPolivap0eg1UPik47vNNWphyBd0DNwvU/edit",
+  "verifiedAt": "2026-11-07",
+  "checks": "Values and native formats read back; third-party count formula preserved at 0; rendered UI verification pending",
+  "sheets": [
+    {
+      "sheet": "進捗概要",
+      "data": [
+        {
+          "startRow": 2,
+          "rowData": [
+            [
+              {
+                "formattedValue": "更新：2026-11-07 ／ 毎日1改善の検証サイト反映＋公開画面検証を必須。原受入仕様r14、実Google・第三者受入とは別。",
+                "userEnteredValue": {
+                  "stringValue": "更新：2026-11-07 ／ 毎日1改善の検証サイト反映＋公開画面検証を必須。原受入仕様r14、実Google・第三者受入とは別。"
+                },
+                "format": {
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.37254903,
+                      "green": 0.3882353,
+                      "blue": 0.40784314
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 10,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.37254903,
+                        "green": 0.3882353,
+                        "blue": 0.40784314
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          ]
+        },
+        {
+          "startRow": 6,
+          "startColumn": 1,
+          "rowData": [
+            [
+              {
+                "formattedValue": "0",
+                "userEnteredValue": {
+                  "formulaValue": "=COUNTIFS('第三者受入30件'!F6:F35,\"合格\")"
+                },
+                "format": {
+                  "numberFormat": {
+                    "type": "NUMBER",
+                    "pattern": "0"
+                  },
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.1254902,
+                      "green": 0.12941177,
+                      "blue": 0.14117648
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.1254902,
+                        "green": 0.12941177,
+                        "blue": 0.14117648
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          ]
+        },
+        {
+          "startRow": 10,
+          "startColumn": 1,
+          "rowData": [
+            [
+              {
+                "formattedValue": "専用サブカレンダー設定とGoogle同意、レビュー済みGAS反映後に予約・取消を確認。バックアップ複数シート参照・保護も継続。",
+                "userEnteredValue": {
+                  "stringValue": "専用サブカレンダー設定とGoogle同意、レビュー済みGAS反映後に予約・取消を確認。バックアップ複数シート参照・保護も継続。"
+                },
+                "format": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.1254902,
+                      "green": 0.12941177,
+                      "blue": 0.14117648
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.1254902,
+                        "green": 0.12941177,
+                        "blue": 0.14117648
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            [
+              {
+                "formattedValue": "先生本人の実ログイン、取消・精算ルール、バックアップ運用、AT-30の判定時点、教室所有の運用用アカウントの準備。",
+                "userEnteredValue": {
+                  "stringValue": "先生本人の実ログイン、取消・精算ルール、バックアップ運用、AT-30の判定時点、教室所有の運用用アカウントの準備。"
+                },
+                "format": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.1254902,
+                      "green": 0.12941177,
+                      "blue": 0.14117648
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.1254902,
+                        "green": 0.12941177,
+                        "blue": 0.14117648
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            [
+              {
+                "formattedValue": "11/7に検証環境のCalendar追加を許可。実同意・GAS反映は未了。本番運用開始は禁止を維持。",
+                "userEnteredValue": {
+                  "stringValue": "11/7に検証環境のCalendar追加を許可。実同意・GAS反映は未了。本番運用開始は禁止を維持。"
+                },
+                "format": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.1254902,
+                      "green": 0.12941177,
+                      "blue": 0.14117648
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.1254902,
+                        "green": 0.12941177,
+                        "blue": 0.14117648
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "sheet": "残タスク・確認事項",
+      "data": [
+        {
+          "startRow": 5,
+          "startColumn": 4,
+          "rowData": [
+            [
+              {
+                "formattedValue": "予定説明欄への予約ID表示はローカル実装済み。11/7にCalendar追加を許可。検証専用サブカレンダー・同意・GAS反映・実照合は未了。",
+                "userEnteredValue": {
+                  "stringValue": "予定説明欄への予約ID表示はローカル実装済み。11/7にCalendar追加を許可。検証専用サブカレンダー・同意・GAS反映・実照合は未了。"
+                },
+                "format": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.1254902,
+                      "green": 0.12941177,
+                      "blue": 0.14117648
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.1254902,
+                        "green": 0.12941177,
+                        "blue": 0.14117648
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "formattedValue": "専用Calendar設定・Google同意・レビュー済みGAS反映後、予約ID・イベントID・日時・場所を照合。",
+                "userEnteredValue": {
+                  "stringValue": "専用Calendar設定・Google同意・レビュー済みGAS反映後、予約ID・イベントID・日時・場所を照合。"
+                },
+                "format": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.1254902,
+                      "green": 0.12941177,
+                      "blue": 0.14117648
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.1254902,
+                        "green": 0.12941177,
+                        "blue": 0.14117648
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "formattedValue": "開発担当（案）",
+                "userEnteredValue": {
+                  "stringValue": "開発担当（案）"
+                },
+                "format": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.1254902,
+                      "green": 0.12941177,
+                      "blue": 0.14117648
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.1254902,
+                        "green": 0.12941177,
+                        "blue": 0.14117648
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "formattedValue": "検証専用Calendar設定・Google実同意・GAS反映待ち（実施許可済み）",
+                "userEnteredValue": {
+                  "stringValue": "検証専用Calendar設定・Google実同意・GAS反映待ち（実施許可済み）"
+                },
+                "format": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.1254902,
+                      "green": 0.12941177,
+                      "blue": 0.14117648
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.1254902,
+                        "green": 0.12941177,
+                        "blue": 0.14117648
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            [
+              {
+                "formattedValue": "11/7にCalendar追加保留を解除。実Calendarを使う取消は未実施。",
+                "userEnteredValue": {
+                  "stringValue": "11/7にCalendar追加保留を解除。実Calendarを使う取消は未実施。"
+                },
+                "format": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.1254902,
+                      "green": 0.12941177,
+                      "blue": 0.14117648
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.1254902,
+                        "green": 0.12941177,
+                        "blue": 0.14117648
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "formattedValue": "専用Calendar設定・Google同意・GAS反映後、取消・イベント削除・残数不変を確認。",
+                "userEnteredValue": {
+                  "stringValue": "専用Calendar設定・Google同意・GAS反映後、取消・イベント削除・残数不変を確認。"
+                },
+                "format": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.1254902,
+                      "green": 0.12941177,
+                      "blue": 0.14117648
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.1254902,
+                        "green": 0.12941177,
+                        "blue": 0.14117648
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "formattedValue": "開発担当（案）",
+                "userEnteredValue": {
+                  "stringValue": "開発担当（案）"
+                },
+                "format": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.1254902,
+                      "green": 0.12941177,
+                      "blue": 0.14117648
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.1254902,
+                        "green": 0.12941177,
+                        "blue": 0.14117648
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "formattedValue": "検証専用Calendar設定・Google実同意・GAS反映待ち（実施許可済み）",
+                "userEnteredValue": {
+                  "stringValue": "検証専用Calendar設定・Google実同意・GAS反映待ち（実施許可済み）"
+                },
+                "format": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "foregroundColor": {
+                      "red": 0.1254902,
+                      "green": 0.12941177,
+                      "blue": 0.14117648
+                    },
+                    "fontFamily": "Arial",
+                    "fontSize": 11,
+                    "foregroundColorStyle": {
+                      "rgbColor": {
+                        "red": 0.1254902,
+                        "green": 0.12941177,
+                        "blue": 0.14117648
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "sheet": "検証結果履歴",
+      "data": [
+        {
+          "startRow": 45,
+          "rowData": [
+            [
+              {
+                "formattedValue": "VR-20261107-01",
+                "userEnteredValue": {
+                  "stringValue": "VR-20261107-01"
+                },
+                "format": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "fontFamily": "Arial",
+                    "fontSize": 11
+                  }
+                }
+              },
+              {
+                "formattedValue": "2026-11-07",
+                "userEnteredValue": {
+                  "stringValue": "2026-11-07"
+                },
+                "format": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "fontFamily": "Arial",
+                    "fontSize": 11
+                  }
+                }
+              },
+              {
+                "formattedValue": "ACCEL-C01・REQ-21",
+                "userEnteredValue": {
+                  "stringValue": "ACCEL-C01・REQ-21"
+                },
+                "format": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "fontFamily": "Arial",
+                    "fontSize": 11
+                  }
+                }
+              },
+              {
+                "formattedValue": "公開フロントエンド・ブラウザー内デモ",
+                "userEnteredValue": {
+                  "stringValue": "公開フロントエンド・ブラウザー内デモ"
+                },
+                "format": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "fontFamily": "Arial",
+                    "fontSize": 11
+                  }
+                }
+              },
+              {
+                "formattedValue": "小さい画面で予約ボタンが隠れる不具合／管理者・保護者の縦横4条件",
+                "userEnteredValue": {
+                  "stringValue": "小さい画面で予約ボタンが隠れる不具合／管理者・保護者の縦横4条件"
+                },
+                "format": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "fontFamily": "Arial",
+                    "fontSize": 11
+                  }
+                }
+              },
+              {
+                "formattedValue": "検証サイトへ修正反映済み。公開7応答のハッシュ一致。同一試験で修正前4FAIL→反映後4PASS。登録・保存記録の再読込・ログアウト後非表示も確認。",
+                "userEnteredValue": {
+                  "stringValue": "検証サイトへ修正反映済み。公開7応答のハッシュ一致。同一試験で修正前4FAIL→反映後4PASS。登録・保存記録の再読込・ログアウト後非表示も確認。"
+                },
+                "format": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "fontFamily": "Arial",
+                    "fontSize": 11
+                  }
+                }
+              },
+              {
+                "formattedValue": "PROGRESS-20261107-DELIVERY-01〜08／Hosting 679ec43146aecd55",
+                "userEnteredValue": {
+                  "stringValue": "PROGRESS-20261107-DELIVERY-01〜08／Hosting 679ec43146aecd55"
+                },
+                "format": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "fontFamily": "Arial",
+                    "fontSize": 11
+                  }
+                }
+              },
+              {
+                "formattedValue": "Edge小画面模擬・匿名デモ。実Google・実機・第三者受入ではない。AT-24〜30全範囲未合格、第三者0/30、本番未開始。",
+                "userEnteredValue": {
+                  "stringValue": "Edge小画面模擬・匿名デモ。実Google・実機・第三者受入ではない。AT-24〜30全範囲未合格、第三者0/30、本番未開始。"
+                },
+                "format": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "fontFamily": "Arial",
+                    "fontSize": 11
+                  }
+                }
+              },
+              {
+                "formattedValue": "毎日、意味のある修正反映＋反映後の公開画面検証1項目以上を完了後に報告。",
+                "userEnteredValue": {
+                  "stringValue": "毎日、意味のある修正反映＋反映後の公開画面検証1項目以上を完了後に報告。"
+                },
+                "format": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "fontFamily": "Arial",
+                    "fontSize": 11
+                  }
+                }
+              }
+            ],
+            [
+              {
+                "formattedValue": "VR-20261107-02",
+                "userEnteredValue": {
+                  "stringValue": "VR-20261107-02"
+                },
+                "format": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "fontFamily": "Arial",
+                    "fontSize": 11
+                  }
+                }
+              },
+              {
+                "formattedValue": "2026-11-07",
+                "userEnteredValue": {
+                  "stringValue": "2026-11-07"
+                },
+                "format": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "fontFamily": "Arial",
+                    "fontSize": 11
+                  }
+                }
+              },
+              {
+                "formattedValue": "AT-24・AT-25・DAILY-02",
+                "userEnteredValue": {
+                  "stringValue": "AT-24・AT-25・DAILY-02"
+                },
+                "format": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "fontFamily": "Arial",
+                    "fontSize": 11
+                  }
+                }
+              },
+              {
+                "formattedValue": "作業範囲の変更（実施許可）",
+                "userEnteredValue": {
+                  "stringValue": "作業範囲の変更（実施許可）"
+                },
+                "format": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "fontFamily": "Arial",
+                    "fontSize": 11
+                  }
+                }
+              },
+              {
+                "formattedValue": "Calendar権限追加の保留解除",
+                "userEnteredValue": {
+                  "stringValue": "Calendar権限追加の保留解除"
+                },
+                "format": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "fontFamily": "Arial",
+                    "fontSize": 11
+                  }
+                }
+              },
+              {
+                "formattedValue": "ユーザーが検証環境のCalendar追加を許可。日次処理ID18・日次完了条件を更新。",
+                "userEnteredValue": {
+                  "stringValue": "ユーザーが検証環境のCalendar追加を許可。日次処理ID18・日次完了条件を更新。"
+                },
+                "format": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "fontFamily": "Arial",
+                    "fontSize": 11
+                  }
+                }
+              },
+              {
+                "formattedValue": "DAILY-02・DAILY-08／PROGRESS-20261107-DELIVERY-06",
+                "userEnteredValue": {
+                  "stringValue": "DAILY-02・DAILY-08／PROGRESS-20261107-DELIVERY-06"
+                },
+                "format": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "fontFamily": "Arial",
+                    "fontSize": 11
+                  }
+                }
+              },
+              {
+                "formattedValue": "許可とGoogle実同意は別。実同意・GAS配備・実連携合格は未了。会社既定・本番Calendarと無関係なスクリプトは変更対象外。",
+                "userEnteredValue": {
+                  "stringValue": "許可とGoogle実同意は別。実同意・GAS配備・実連携合格は未了。会社既定・本番Calendarと無関係なスクリプトは変更対象外。"
+                },
+                "format": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "fontFamily": "Arial",
+                    "fontSize": 11
+                  }
+                }
+              },
+              {
+                "formattedValue": "会社アカウントの専用サブカレンダーを設定し、Google同意後に実予約・取消を検証。",
+                "userEnteredValue": {
+                  "stringValue": "会社アカウントの専用サブカレンダーを設定し、Google同意後に実予約・取消を検証。"
+                },
+                "format": {
+                  "verticalAlignment": "TOP",
+                  "wrapStrategy": "WRAP",
+                  "textFormat": {
+                    "fontFamily": "Arial",
+                    "fontSize": 11
+                  }
+                }
+              }
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}

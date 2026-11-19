@@ -1,0 +1,14 @@
+{
+  "status": "SHARED_READER_PERSISTED",
+  "checkedAt": "2026-11-07T08:40:22.518Z",
+  "recipient": "kobayashi-masami@ml-mightylink.com",
+  "permission": "予定の詳細の表示",
+  "canEdit": false,
+  "notificationSendExplicitlyApproved": true,
+  "googleShareSendClicked": true,
+  "reloadedPermissionVerified": true,
+  "recipientReceivedOrOpenedNotYetConfirmed": true,
+  "publicSharing": false,
+  "organizationWideSharing": false,
+  "productionStarted": false
+}

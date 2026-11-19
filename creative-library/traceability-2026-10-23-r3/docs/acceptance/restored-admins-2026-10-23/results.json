@@ -1,0 +1,72 @@
+{
+  "executedAt": "2026-10-22T18:11:59.513139+00:00",
+  "environment": "mighty-test",
+  "scope": "Fresh Google relogin and read-only public portal boundaries; no Calendar permission or production start",
+  "results": [
+    {
+      "id": "RA-01",
+      "requirement": "REQ-26",
+      "status": "WAITING_USER",
+      "check": "Restored admin 1 fresh login, principal and reload",
+      "observed": "Google sign-in returned cancellation message; no admin ledger was observed"
+    },
+    {
+      "id": "RA-02",
+      "requirement": "REQ-26",
+      "status": "NOT_RUN",
+      "check": "Restored admin 2 fresh login, principal and reload"
+    },
+    {
+      "id": "RA-03",
+      "requirement": "REQ-19",
+      "status": "PASS_PARTIAL",
+      "check": "Unauthenticated admin page",
+      "observed": "Google login only, no ledger"
+    },
+    {
+      "id": "RA-04",
+      "requirement": "REQ-32",
+      "status": "PASS_PARTIAL",
+      "check": "Unauthenticated parent common entry",
+      "observed": {
+        "heading": "生徒・保護者専用ログイン",
+        "inputCount": 0,
+        "adminNavigation": false,
+        "ledgerTable": false
+      }
+    },
+    {
+      "id": "RA-05",
+      "requirement": "REQ-33",
+      "status": "PASS_PARTIAL",
+      "check": "Malformed family entry",
+      "observed": "URLを確認してください; no family data"
+    },
+    {
+      "id": "RA-06",
+      "requirement": "REQ-30",
+      "status": "PASS_PARTIAL",
+      "check": "Public frontend bytes",
+      "observed": "Current deployment manifest: 7/7 exact hashes. Does not establish Google acceptance or production smoke",
+      "evidence": "../deployment-verification/public-2026-10-22T18-10-09-046Z.json"
+    }
+  ],
+  "attempts": [
+    {
+      "check": "Older static snapshot manifest",
+      "result": "MISMATCH",
+      "reason": "Compared with superseded Oct20 release; retained as rejected comparison, then reran with current recorded deployment manifest",
+      "evidence": "../deployment-verification/public-2026-10-22T18-08-22-651Z.json"
+    },
+    {
+      "check": "Bind existing second admin tab",
+      "result": "TIMEOUT",
+      "savedWrites": false
+    }
+  ],
+  "calendarPermissionAdded": false,
+  "productionStarted": false,
+  "writesToGoogleBusinessData": false,
+  "thirdPartyPassed": 0,
+  "acceptance24to30": "NOT_PASSED"
+}

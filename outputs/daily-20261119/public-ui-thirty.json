@@ -1,0 +1,32 @@
+{
+  "url": "https://eigo-taxi-test.web.app",
+  "checkedAt": "2026-11-19T14:31:36.000Z",
+  "release": {
+    "environment": "mighty-test",
+    "projectId": "eigo-taxi-app",
+    "siteId": "eigo-taxi-test",
+    "builtAt": "2026-11-19T14:29:17.507Z",
+    "sourceDigest": "e677e6d85649979411799eb567c017e17b9cf491def8e8d42407f0d1057a8a79"
+  },
+  "publicVerification": "docs/acceptance/deployment-verification/public-2026-11-19T14-29-55-483Z.json",
+  "cumulativeCounts": {
+    "fixesTotal": 30,
+    "fable52PriorFixes": 2,
+    "subsequentFixes": 28,
+    "acceptanceTestsTotal": 30
+  },
+  "results": {
+    "SAT-33": {
+      "status": "PASS",
+      "scope": "Isolated anonymous admin demo on live Firebase Hosting; QR generation, PII-free invitation URL, and clipboard fallback alert verified",
+      "invData": {
+        "urlText": "https://eigo-taxi-test.web.app/#/parent/00000000-0000-4000-8e16-000000000001",
+        "isPngDataUrl": true,
+        "noPiiInUrl": true
+      },
+      "feedbackType": "alert",
+      "feedbackText": "コピーできませんでした。表示されたURLを選択してコピーしてください。",
+      "errors": []
+    }
+  }
+}

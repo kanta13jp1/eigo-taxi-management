@@ -1,0 +1,11 @@
+{
+  "candidateChecks": "32 sources, 6 payloads, one change, independent review and three viewport regressions passed",
+  "reauthAccount": "k-umezawa@ml-mightylink.com",
+  "candidateSourceDigest": "5f652531b5aea67c7295084e025563b4c32010cd3d4e5791abd0f8b06f65672f",
+  "publicVerificationOfCandidate": "pending",
+  "status": "awaiting_company_google_reauthentication",
+  "currentPublicSourceDigest": "38f4d5cc36a770b13e904bfbd8c8dc8430a0d0a23f405a102739fe8af6ded906",
+  "currentPublicRelease": "a97d95510290c92b",
+  "checkedAt": "2026-11-15T09:09:02.9546160Z",
+  "externalServiceWrites": 0
+}

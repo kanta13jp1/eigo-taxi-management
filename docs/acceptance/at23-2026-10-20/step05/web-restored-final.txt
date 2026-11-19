@@ -1,0 +1,31 @@
+Browser tab: 1750956579, Title: "Mauro & Brenda 送迎チケット管理 | Eigo Taxi Link", URL: "https://eigo-taxi-test.web.app/".
+The following is a diff from the previous accessibility tree with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
+Removed element IDs: 31-34
++			42 heading 生徒台帳・チケット残数状況, Value: 2
++				43 text 生徒台帳・チケット残数状況
++			44 button 新規生徒を登録
++			45 text STU-001
++			46 heading 田中 陽菜, Value: 4
++				47 text 田中 陽菜
++			48 text 保護者:  田中 美咲 7 回
++			49 link Description: 090-1111-2222, Value: tel:090-1111-2222
++			50 text 東京都世田谷区桜新町1-10-5
++			51 button チケット追加
++			52 button 予約登録
++			53 text STU-002
++			54 heading 山本 颯太, Value: 4
++				55 text 山本 颯太
++			56 text 保護者:  山本 健一 1 回 残り1回
++			57 link Description: 080-3333-4444, Value: tel:080-3333-4444
++			58 text 東京都世田谷区用賀2-5-12
++			59 button チケット追加
++			60 button 予約登録
++			61 text STU-57635b29-c850-40b4-b0ca-80d16ace0e20
++			62 heading AT23検証_20261020_1514, Value: 4
++				63 text AT23検証_20261020_1514
++			64 text 保護者:  AT23架空保護者 10 回
++			65 link Description: 000-0000-0000, Value: tel:000-0000-0000
++			66 text 検証専用・実在住所なし
++			67 button チケット追加
++			68 button 予約登録
+The focused UI element is 25 button 生徒・チケット管理 (3)

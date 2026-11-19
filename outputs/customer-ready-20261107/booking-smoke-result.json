@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "checkedAtJst": "2026-11-07 17:30",
+  "scope": "developer verification only; synthetic student; dedicated test Calendar; GAS v5",
+  "status": "PARTIAL_RESPONSE_FAILURE",
+  "studentId": "STU-CUST-20261107",
+  "rideId": "RIDE-4a0a7587-8006-4860-9374-b941fd4190aa",
+  "eventId": "9rg4ntf03et9a9bi3bcjn7mdb4@google.com",
+  "observedRideDate": "2026-11-07",
+  "observedRideTime": "16:00",
+  "rideType": "pickup",
+  "note": "DEV-CAL-SMOKE-20261107／登録取消の事前確認・実送迎なし",
+  "createSubmissionCount": 1,
+  "observations": {
+    "siteDisplayedGenericCommunicationError": true,
+    "newLedgerRowCount": 1,
+    "ledgerStatus": "scheduled",
+    "dedicatedCalendarEventVisible": true,
+    "calendarDescriptionReservationIdMatches": true,
+    "calendarDateTimeLocationMatchesLedger": true,
+    "siteReloadDisplaysSameReservation": true,
+    "siteReloadStudentBalance": 5,
+    "gasExecutionVersion": 5,
+    "gasExecutionAtJst": "2026-11-07 17:26:33",
+    "gasExecutionDurationSeconds": 4.113,
+    "gasExecutionDisplay": "完了",
+    "serverPendingGuardChecked": false,
+    "browserOriginalResponseCaptured": false
+  },
+  "cancellation": {
+    "status": "CANCELLED_LEDGER_CALENDAR_SITE_BALANCE_CONFIRMED",
+    "userConfirmedNativeDialog": true,
+    "ledgerStatus": "cancelled",
+    "calendarRemoved": true,
+    "siteReloadCancelled": true,
+    "balanceAfterReload": 5,
+    "cancelWasNotResubmitted": true
+  },
+  "acceptancePassed": false,
+  "customerAcceptancePassed": 0,
+  "productionStarted": false,
+  "evidence": [
+    "outputs/customer-ready-20261107/rides-after-first-attempt.tsv",
+    "outputs/customer-ready-20261107/rides-after-cancel-attempt.tsv",
+    "outputs/customer-ready-20261107/calendar-smoke-created.png",
+    "outputs/customer-ready-20261107/rides-cancelled-final.tsv",
+    "outputs/customer-ready-20261107/calendar-after-cancel.png",
+    "outputs/customer-ready-20261107/site-cancelled-balance5.png"
+  ]
+}

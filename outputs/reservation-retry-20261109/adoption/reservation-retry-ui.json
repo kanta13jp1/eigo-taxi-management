@@ -1,0 +1,24 @@
+{
+  "executedAt": "2026-11-09T09:02:44.367947+00:00",
+  "mode": "Node VM running real App callbacks with synthetic React hooks and stubbed API; no browser, network or Google calls",
+  "nodeVersion": "v24.22.1",
+  "command": "node scripts/test_reservation_retry_ui.cjs",
+  "exitCode": 0,
+  "stdout": "PASS Reservation replay updates one dashboard row, preserves terminal state and inserts new IDs",
+  "sourceHashes": {
+    "src/App.tsx": "6522d074f89b06b80518110529cdacc922d6e35c8ccf00f8536f4f1c07bdc584",
+    "scripts/test_reservation_retry_ui.cjs": "cdc3b0a72991daa58639d1f61c83626fb850db1e64fea8eb0916521a835dda75"
+  },
+  "results": [
+    {
+      "id": "RETRY-UI-01",
+      "name": "Reservation replay updates one dashboard row, preserves terminal state and inserts new IDs",
+      "status": "PASS",
+      "assertionGroups": [
+        "Replayed row updates a single matching ID and preserves unrelated rows",
+        "A late scheduled response retains the terminal status",
+        "A new ID inserts a separate row"
+      ]
+    }
+  ]
+}

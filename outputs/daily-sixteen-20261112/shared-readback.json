@@ -1,0 +1,86 @@
+{
+  "pass": true,
+  "checks": {
+    "history": true,
+    "overview": true,
+    "customer": true,
+    "formula": true
+  },
+  "ranges": [
+    "検証結果履歴!A84:I84",
+    "進捗概要!A3"
+  ],
+  "historyRow": [
+    "VR-20261112-04",
+    "2026-11-12",
+    "AT-15・完了の二重処理防止",
+    "16件目の実装修正・16項目目の開発側試験",
+    "同一予約の完了処理をrefで即時ロックし、両一覧に処理中・無効を表示。失敗後解除して再試行、別予約は操作可能。API・GASの再処理保護は変更なし。",
+    "実App遅延模擬：同ID連打の要求2→1、両一覧無効・切替保持、失敗解除・再試行、別予約可能。既存デモサービス再実行は初回1枚/2回目0枚、残数6・完了日時不変。公開匿名デモ：新規片道をダブルクリックしても1枚消費、7→6・再読込後も完了6。公開の処理中状態・要求数は未観測。",
+    "docs/progress/2026-11-12-cumulative-sixteen.md／outputs/daily-sixteen-20261112/public-completed.png",
+    "検証Hosting b10cd21819d6c229・最終公開7応答SHA一致。初回はFirebase認証切れで未配備、本人再認証成功後にレビュー済みstageで再配備。11/10各4件・11/11各8件・11/12各4件で累計16。Claude先行2件、Codex追加14件。顧客確認0/6・本番保留。",
+    "AT-28保護設定・参照式の復旧手順を継続。AT-10公開取消確定は未確認。小林さん6件→先生との合同テスト→教室Google環境の準備・移行判断。"
+  ],
+  "overviewSummary": "更新：2026-11-12 ／ 本日累計4修正・開発側4項目。11/10各4件・11/11各8件と合わせ全体累計16。検証版b10cd21819d6c229。模擬試験で完了待ちの連打を1要求に抑止。公開デモはダブルクリック後1枚消費、再読込後も完了・6枚。",
+  "protectedRange": "顧客確認6件!E6:I11",
+  "customerReadback": {
+    "5,4": {
+      "stringValue": "表示されるのは割り当てた検証生徒だけで、初期状態は5枚。別の家庭のお子様は選択肢に出ない。"
+    },
+    "5,5": {
+      "stringValue": "未実施"
+    },
+    "5,8": {
+      "stringValue": "AT-01・AT-03・AT-20"
+    },
+    "6,4": {
+      "stringValue": "事前準備した完了確認用2件とは別に、取消確認用が1件増える（初期2件→3件）。生徒・日付・時刻・場所がカレンダーと一致する。繰返しのない1回分の予約で、チケットは5枚のまま。"
+    },
+    "6,5": {
+      "stringValue": "未実施"
+    },
+    "6,8": {
+      "stringValue": "AT-06・AT-24"
+    },
+    "7,4": {
+      "stringValue": "自分で作成した取消確認用だけが「現在予約中の送迎」とカレンダーから消える（3件→2件）。完了確認用の2件は残る。取消前も取消後もチケットは5枚。"
+    },
+    "7,5": {
+      "stringValue": "未実施"
+    },
+    "7,8": {
+      "stringValue": "AT-10・AT-25"
+    },
+    "8,4": {
+      "stringValue": "準備時に残数5枚。片道の完了後は4枚、往復の完了後は2枚。2件とも完了として表示される。"
+    },
+    "8,5": {
+      "stringValue": "未実施"
+    },
+    "8,8": {
+      "stringValue": "AT-13・AT-14"
+    },
+    "9,4": {
+      "stringValue": "残り2枚でMauro・Brendaに連絡する案内が表示される。追加後は両方の画面で12枚となり、家庭画面の残少案内が消える。"
+    },
+    "9,5": {
+      "stringValue": "未実施"
+    },
+    "9,8": {
+      "stringValue": "AT-04・AT-05"
+    },
+    "10,4": {
+      "stringValue": "両方ともログイン画面に戻り、氏名・チケット残数・予約履歴・生徒台帳が表示されない。"
+    },
+    "10,5": {
+      "stringValue": "未実施"
+    },
+    "10,8": {
+      "stringValue": "AT-01・AT-19・AT-26"
+    }
+  },
+  "formulaReadback": {
+    "formulaValue": "=COUNTIF('顧客確認6件'!F6:F11,\"合格\")"
+  },
+  "visualCheck": "Inherited preceding row format; wrapped text; only appended row resized. API formatting verification; no rendered Sheet inspection."
+}

@@ -1,0 +1,14 @@
+{
+  "checkedAt": "2026-11-09T16:19:43.520Z",
+  "spreadsheetId": "1PqUq7BoBBVlPolivap0eg1UPik47vNNWphyBd0DNwvU",
+  "scope": "A3,B11:B13,history62:63 content; customerF6:H11/formula preservation",
+  "checks": {
+    "updatedDate": true,
+    "formulaPreserved": true,
+    "customerZero": true,
+    "customerRowsPreserved": true,
+    "historyRows": true
+  },
+  "pass": true,
+  "visualScope": "Connector values/validation/format readback only; authenticated spreadsheet browser render not available in IAB"
+}

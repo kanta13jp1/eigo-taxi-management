@@ -1,0 +1,17 @@
+{
+  "checkedAt": "2026-11-11T08:45:06.3534929Z",
+  "reviewer": "Independent routed worker",
+  "reviewedDeck": "progress-2026-11-11-cumulative-nine-v2.pptx",
+  "sha256": "fcec11844cffae27872654ff76e6fc27079e3d5c1ffb799e50b9b1f7b434f99a",
+  "method": "Visual inspection of final-v2.png, final PPTX digest checked against validation-v2.json",
+  "previousFinding": "Day totals looked like Codex-only totals",
+  "resolution": "Separate line explicitly states the day breakdown of all nine fixes",
+  "checks": [
+    "Nine fix and nine test lines readable",
+    "Claude 2 / Codex 7 and total daily 4 / 5 separated",
+    "Partial restore, earlier screenshot, customer 0/6 and production hold explicit",
+    "No text clipping or overlap visible"
+  ],
+  "pass": true,
+  "nativePowerPointVerified": false
+}

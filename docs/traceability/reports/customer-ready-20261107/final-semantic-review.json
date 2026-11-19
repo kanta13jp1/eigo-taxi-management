@@ -1,0 +1,112 @@
+{
+  "reviewedAt": "2026-11-07T08:46:44.832272+00:00",
+  "reviewer": "independent final semantic read-only review",
+  "overallStatus": "PASS",
+  "coreRequestedDocumentsPass": true,
+  "blockingAcceptanceFinding": false,
+  "findings": [],
+  "checks": {
+    "registryLockExact": true,
+    "generatedSingleAccountGuideMatches": true,
+    "PAPAPRoles": true,
+    "customerZeroOfSixNotRun": true,
+    "productionHeld": true,
+    "originalAdminsTwoRetained": true,
+    "accountActiveParentOneSyntheticStudent": true,
+    "createPartialFailureNotPromoted": true,
+    "oneMatchingCreatedRow": true,
+    "cancelWaitAndCommitRows": true,
+    "otherThreeRideRowsUnchanged": true,
+    "cancelledCalendarSiteBalanceRecorded": true,
+    "calendarReaderSharingExplicitlyAuthorized": true,
+    "recipientFirstOpenStillUnverified": true,
+    "dateUnsetAndTwoCompletionFixturesNotCreated": true,
+    "checker32PassAndTwoFileBaselineMatch": true,
+    "TRACE32Registered": true,
+    "localLinksAndAnchorsValid": true,
+    "primaryBodiesNoPrivateEmailOrCalendarID": true,
+    "initialParentUrlOnlyInRecipientRequest": true,
+    "sharedSheetCurrentSummaryMatches": true,
+    "readmeCurrentR16AndV5StateCorrect": true,
+    "policySingleAccountPhasesClarified": true,
+    "allEarlierFindingsResolved": true,
+    "evidenceUnchangedDuringRecheck": true
+  },
+  "localLinkErrors": [],
+  "registryVersion": "2026-11-07-r16",
+  "registrySha256": "f2d307b7a61cfcbf13cc48221cd58ca73c910b499b30a1ed46f7e163773e36fd",
+  "documentHashes": {
+    "docs/acceptance/CUSTOMER_ACCEPTANCE_MINIMUM_20261107.md": "9fe72b0bfe8f910d089ab955222287c004228f7e91abe459e424073d54923dcd",
+    "docs/progress/2026-11-07-customer-readiness.md": "97d39320ed2319b9671f3fe2cdc53b9a7900a37e94f141454ec76e6723215a60",
+    "docs/progress/2026-11-07-kobayashi-customer-request.md": "ebaeaf35f4aa004c095f853e3d131d3032ee7ed3b901fea6c6a89de9a635f727",
+    "docs/traceability/README.md": "ee9bf0951e8d1dc1cd13241920b3624391752d87daefe51efc96d1e611a618fc",
+    "docs/traceability/AI_SOURCE_REVIEW_POLICY.md": "fdab9d7f88a4475784f9760dfc1eb9fe83488a1f08be488ff8c9bfbd6b41eeb6",
+    "docs/progress/2026-11-07-customer-acceptance-policy.md": "6f0f2aaea79377305ae897e1712e93ed8b3c5686c3949c168a7ecfc8c6a0b463"
+  },
+  "evidenceHashes": {
+    "outputs/customer-ready-20261107/booking-smoke-result.json": "f7563f4fa4333044635738786fd9e520d6923d2df49616304859c772e69fab18",
+    "outputs/customer-ready-20261107/calendar-sharing.json": "8fd67d4936eec4bb4660a95867a4901829fecd560ae941cc1916cccfd54a99c5",
+    "outputs/customer-ready-20261107/account-registration.json": "8cb1428096f816e588353dd2fb486bd9cf2f9a97996a632e1c608d3ca9427466",
+    "outputs/customer-ready-20261107/shared-sheet-readback.json": "2e9fe161e6a79fa0e98b8be622d362dd727b61ef1683899042e06a5f071418cb",
+    "outputs/customer-ready-20261107/account-registration.png": "5b37977341c8b84737ec3ead7ea545dd3b88d5712730b21d89468991199a35ab",
+    "outputs/customer-ready-20261107/calendar-smoke-created.png": "db7a00d5ae12cab1e49bd6bbf4bd1cd2823aca1146a4ff925e228493c7ae0a99",
+    "outputs/customer-ready-20261107/calendar-after-cancel.png": "1d6698f57097af5a1e59b9c075924f9e6f196f6e55d5f1d078a29e349daea400",
+    "outputs/customer-ready-20261107/site-cancelled-balance5.png": "31d1b546cc423358151b96f27b472cc2c431f4ac8a7d3b8ae1d240caae96dd95",
+    "outputs/customer-ready-20261107/calendar-shared-reader.png": "6bd4631fc8785bd5e6a02197b3474ba1449805bd1e4579975b0c73f0cfbb1ef7",
+    "outputs/customer-ready-20261107/shared-customer-checklist.png": "29c791988cd480d276e9d45fcb60bc661d4645011a01e0f4093743c96188c9e9",
+    "outputs/customer-ready-20261107/rides-after-first-attempt.tsv": "857a01f45e2e18175c49b8e31414d14fd340d60dffb73fd1a267932f40383397",
+    "outputs/customer-ready-20261107/rides-after-cancel-attempt.tsv": "857a01f45e2e18175c49b8e31414d14fd340d60dffb73fd1a267932f40383397",
+    "outputs/customer-ready-20261107/rides-cancelled-final.tsv": "83f4739e355014f047ec4cc29e0b4ff506e6878c986cb0820ce4eee5e9728051"
+  },
+  "visualReview": {
+    "account-registration.png": "Active parent entry waiting first Google login; consistent with registration JSON. Screenshot does not itself prove customer login.",
+    "calendar-smoke-created.png": "Dedicated verification calendar event, Nov7 16:00–16:30, synthetic student, same booking ID and test location.",
+    "calendar-after-cancel.png": "Same dedicated calendar remains selected; Nov7 target event no longer displayed. Combined with same-ID ledger and site evidence supports the limited cancel observation.",
+    "site-cancelled-balance5.png": "Same synthetic note/date/time, cancelled status and balance5 visible after reload.",
+    "calendar-shared-reader.png": "Dedicated-calendar setting lists the individual recipient with details-view permission. Ownership remains with company verification account.",
+    "shared-customer-checklist.png": "Same-identityPAPAP preparation banner and initial customer rows shown unperformed; readback supplies0/6 summary."
+  },
+  "scopeConclusions": [
+    "The requested generated guide, readiness progress and unsent recipient request accurately distinguish actual registration/sharing/developer smoke observations from customer acceptance.",
+    "No assertion that the creation communication error was fixed or that ordinary success response was received; the request explicitly waits for correction/recheck before start.",
+    "CUST05 captures2→12 plus notice disappearance across phases; CUST06 instructs both admin and final parent logout/reload at their actual points.",
+    "Recipient-specific first-entry URL is intentional delivery content and matches registration evidence. No private email/calendar ID is repeated in reviewed Markdown bodies.",
+    "Original30technical cases, customer0/6, retained2admins, unset date, uncreated two completion fixtures and productionHOLD remain explicit."
+  ],
+  "limits": [
+    "No CUA, live fetch, external changes, customer actions or source/document edits were performed. This report alone is new.",
+    "Screenshots and saved readback records corroborate the described limited observations; they do not establish all technicalAT or customer6 acceptance.",
+    "No PowerPoint content or completion assertion reviewed; separateworker handles PPT.",
+    "The source-baseline file matches the two reviewed checker hashes, but this review does not reassert whole-project strict completion."
+  ],
+  "resolvedFindings": [
+    {
+      "priority": "P2",
+      "file": "docs/traceability/README.md",
+      "line": 28,
+      "title": "Current-state section still identifies r15 and unconsented/undeployed GAS",
+      "detail": "Lines28–30 state current versionr15 and Calendar OAuth/new Web App deployment incomplete, contradicting lockedr16, actual metadata authorization read and v5 deployment. This is a current-state section, not marked as an earlier observation.",
+      "requestedCorrection": "Update current version to r16; state Calendar authorization/read and v5 verification deployment completed, one synthetic booking/cancel observed, create-response error unresolved, customer0/6 and productionHOLD. Link customer-readiness rather than treating earlierHEAD-only state as current.",
+      "status": "RESOLVED",
+      "resolutionReviewedAt": "2026-11-07T08:46:44.832272+00:00",
+      "correctedDocumentSha256": "ee9bf0951e8d1dc1cd13241920b3624391752d87daefe51efc96d1e611a618fc"
+    },
+    {
+      "priority": "P2",
+      "file": "docs/progress/2026-11-07-customer-acceptance-policy.md",
+      "line": 14,
+      "title": "Linked policy still says two-role use is undecided",
+      "detail": "The paragraph says whether Kobayashi can use both roles is unconfirmed; lockedr16 and generated guide now specify the approved same-identity phased role changes by a separate developer admin.",
+      "requestedCorrection": "Replace the outdated preparation sentence with the confirmed single-account phased plan and remaining date/two-fixture preparation, or explicitly label this paragraph as the earlier policy snapshot and point to customer-readiness.",
+      "status": "RESOLVED",
+      "resolutionReviewedAt": "2026-11-07T08:46:44.832272+00:00",
+      "correctedDocumentSha256": "6f0f2aaea79377305ae897e1712e93ed8b3c5686c3949c168a7ecfc8c6a0b463"
+    }
+  ],
+  "pass": true,
+  "integrationValidation": {
+    "status": "PENDING_PPT_ADOPTION_AND_ROOT_INDEX_STRICT",
+    "reason": "PowerPoint worker is preparing locked-r16 content. PPT was excluded from this semantic review; root will adopt its verified manifest, rebuild the document index and run strict integration checks afterward.",
+    "semanticPassDoesNotAssertFullIntegrationComplete": true
+  }
+}

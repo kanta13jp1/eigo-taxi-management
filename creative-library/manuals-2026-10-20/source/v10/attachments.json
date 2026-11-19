@@ -1,0 +1,27 @@
+[
+  {
+    "path": "docs/deliverables/2026-10-20-manuals/operation-manual-2026-10-20-v10.pptx",
+    "pages": 28,
+    "sha256": "e6346dcd7da4001f3d2ae6144dee9e18eb691a19eb08f2b0a301a7eaccf73811"
+  },
+  {
+    "path": "docs/deliverables/2026-10-20-manuals/user-manual-2026-10-20-v10.pptx",
+    "pages": 14,
+    "sha256": "65f7dcb34ce5762554e46e21a184c52541b64f390c1d2db7618a3955c69b26e2"
+  },
+  {
+    "path": "docs/deliverables/2026-10-20-manuals/remaining-tasks-2026-10-20-v10.pptx",
+    "pages": 11,
+    "sha256": "fe76b95964a69108bc65746afd90c7a7e3beb4e1d330dfb1073e8076bcf23dd3"
+  },
+  {
+    "path": "docs/deliverables/2026-10-20-manuals/progress-report-role-portals-2026-10-20-v10.pptx",
+    "pages": 6,
+    "sha256": "775d65697720305015d3f677be150ad0ecd3e7661d077103f0cd78bcf004d922"
+  },
+  {
+    "path": "docs/deliverables/2026-10-20-manuals/portal-spec-supplement-2026-10-20-v10.pptx",
+    "pages": 6,
+    "sha256": "1871a21af00210136688f6162c86fd9c920a990883bef9d794630dbadc545fde"
+  }
+]

@@ -1,0 +1,152 @@
+{
+  "executedAt": "2026-11-10T12:49:30.009Z",
+  "mode": "Node VM; Firebase SDK and GAS responses stubbed; no real Google sign-in claim",
+  "passed": 33,
+  "total": 33,
+  "sourceHashes": {
+    "src/deployment-config.ts": "5c30aad36376487fcf2fbb664f2574bdd430890191675ca9813b5fdea516b6f1",
+    "src/services/api.ts": "159c91b9ead700c8e32bc17ce978145c81bd4419d10a3104be72db9730902264",
+    "src/services/google-auth.ts": "01667af44fce383f3763c8bb73497dafc690381592ddcf383d46aaafe90fe0d8",
+    "src/portal.ts": "874dce7f269e59073b75d6ae47c7fb3b682686fa2ab214d8cb0eacb48c59cac7",
+    "scripts/test_portals.cjs": "4c533b888e2a0be7c1404f68e54d8dd1fc4e6ba088e265ba6ea5fa0226edca21"
+  },
+  "results": [
+    {
+      "name": "Strict hash routes, including unknown and malformed entry IDs",
+      "status": "PASS"
+    },
+    {
+      "name": "Roles and personal-link identity mismatch fail closed",
+      "status": "PASS"
+    },
+    {
+      "name": "QR payload has only canonical app URL and opaque ID, preserving GitHub base",
+      "status": "PASS"
+    },
+    {
+      "name": "Admin response refused at parent entry with no saved session",
+      "status": "PASS"
+    },
+    {
+      "name": "Individual ID mismatch refused even against old server without binding",
+      "status": "PASS"
+    },
+    {
+      "name": "Parent request carries ID and role, directory and admin writes are rejected locally",
+      "status": "PASS"
+    },
+    {
+      "name": "Stored role tampering cannot pass server identity validation",
+      "status": "PASS"
+    },
+    {
+      "name": "Rotated individual ID response clears live session",
+      "status": "PASS"
+    },
+    {
+      "name": "Demo parent data limited to assigned family and demo role entry mismatch refused",
+      "status": "PASS"
+    },
+    {
+      "name": "Only a valid developer GAS exec endpoint is accepted",
+      "status": "PASS"
+    },
+    {
+      "name": "Missing Google setup prevents any sign-in request",
+      "status": "PASS"
+    },
+    {
+      "name": "Saved endpoint overrides are ignored and tokens travel only in a POST body",
+      "status": "PASS"
+    },
+    {
+      "name": "Tampered saved endpoint or project cannot send a Google token",
+      "status": "PASS"
+    },
+    {
+      "name": "Each data call obtains a current Google token without persisting it in app session",
+      "status": "PASS"
+    },
+    {
+      "name": "Missing Google user clears the application session before sending data requests",
+      "status": "PASS"
+    },
+    {
+      "name": "Demo-only entry can never start a real Google login",
+      "status": "PASS"
+    },
+    {
+      "name": "Logout invalidates an outstanding login response and signs out Firebase",
+      "status": "PASS"
+    },
+    {
+      "name": "Account management refuses parent and demo admin without sending requests",
+      "status": "PASS"
+    },
+    {
+      "name": "Account management sends revision with each write and rejects malformed directory",
+      "status": "PASS"
+    },
+    {
+      "name": "Malformed successful list responses are rejected, including health-only payloads",
+      "status": "PASS"
+    },
+    {
+      "name": "Reviewer logs in at either separate portal with its current public role and verifies on reload",
+      "status": "PASS"
+    },
+    {
+      "name": "Reviewer rejects wrong portal, wrong personal link and missing allowlist",
+      "status": "PASS"
+    },
+    {
+      "name": "Reviewer admin filters overbroad student and ride responses by explicit fixture allowlist",
+      "status": "PASS"
+    },
+    {
+      "name": "Reviewer cannot call account management, invitation directory or create a student",
+      "status": "PASS"
+    },
+    {
+      "name": "Reviewer admin rejects bookings and ticket writes for other students before a request",
+      "status": "PASS"
+    },
+    {
+      "name": "Reviewer rejects other ride cancellation and completion even if an overbroad response leaks it",
+      "status": "PASS"
+    },
+    {
+      "name": "Reviewer fixture mutations keep portal role, operation ID retry and fixed old-date completion",
+      "status": "PASS"
+    },
+    {
+      "name": "Unconfirmed reservation responses keep the same ID through reload and a verified replay",
+      "status": "PASS"
+    },
+    {
+      "name": "Late success from a shared ID cannot remove a newer pending reservation ID",
+      "status": "PASS"
+    },
+    {
+      "name": "Reviewer parent cannot use admin mutations and cancellation still carries its personal entry",
+      "status": "PASS"
+    },
+    {
+      "name": "Review unavailable response ends the restricted session and prevents subsequent requests",
+      "status": "PASS"
+    },
+    {
+      "name": "Full admin directory preserves stored reviewer role and exact server capability",
+      "status": "PASS"
+    },
+    {
+      "name": "Fresh service instance reload retains created student and reservation IDs and values in demo storage",
+      "status": "PASS"
+    }
+  ],
+  "normalization": {
+    "performedAt": "2026-11-10T17:28:18.570089+00:00",
+    "sourceReport": "outputs/portal-mismatch-20261110/adoption/regression/frontend/frontend-contract.json",
+    "change": "Absolute script key converted to repository-relative path; result values and executedAt retained"
+  }
+}

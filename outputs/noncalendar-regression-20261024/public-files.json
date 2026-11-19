@@ -1,0 +1,45 @@
+{
+  "checkedAt": "2026-10-24T10:55:44.320Z",
+  "mode": "read-only public frontend file hash comparison; no Google data requests",
+  "release": {
+    "environment": "mighty-test",
+    "projectId": "eigo-taxi-app",
+    "siteId": "eigo-taxi-test",
+    "builtAt": "2026-10-22T12:04:28.707Z",
+    "baseCommit": "2fa6127715017d52ae0c9bd80be39c4db90a47c3",
+    "sourceDigest": "b248d3cd8988168c8e931cf38f6185aa72cdb0dd9733a45db8873a2eda9f5cd2"
+  },
+  "results": [
+    {
+      "path": "dist/assets/index-CTgwtZfu.css",
+      "status": 200,
+      "match": true
+    },
+    {
+      "path": "dist/assets/index-DuYXMsIn.js",
+      "status": 200,
+      "match": true
+    },
+    {
+      "path": "dist/favicon.svg",
+      "status": 200,
+      "match": true
+    },
+    {
+      "path": "dist/icons.svg",
+      "status": 200,
+      "match": true
+    },
+    {
+      "path": "dist/index.html",
+      "status": 200,
+      "match": true
+    },
+    {
+      "path": "dist/release.json",
+      "status": 200,
+      "match": true
+    }
+  ],
+  "pass": true
+}

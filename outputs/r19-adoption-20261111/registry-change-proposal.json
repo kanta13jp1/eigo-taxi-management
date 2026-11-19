@@ -1,0 +1,342 @@
+{
+  "status": "CANDIDATE_NOT_ADOPTED",
+  "createdAt": "2026-11-10T17:33:01.936942+00:00",
+  "registryVersion": "2026-11-11-r19",
+  "registrySha256": "cfd1a14aa71f637e2cc770bca08caa3758ddff8d6605d669d2341f343ff912e4",
+  "candidate": "outputs/r19-adoption-20261111/registry-r19-candidate.json",
+  "canonicalRegistryChanged": false,
+  "counts": {
+    "requirements": 39,
+    "flows": 11,
+    "testCases": 211,
+    "screens": 20,
+    "interfaces": 16
+  },
+  "repointedEvidence": [
+    {
+      "id": "UI-07",
+      "before": "docs/traceability/reports/signout-retry-20261030-local/google-auth-retry-ui.json",
+      "after": "outputs/r19-adoption-20261111/regression/login/google-auth-retry-ui.json"
+    },
+    {
+      "id": "UI-01",
+      "before": "outputs/consumption-timing-20261110/regression/trace-ui-serial/results.json",
+      "after": "outputs/r19-adoption-20261111/regression/trace-ui/results.json"
+    },
+    {
+      "id": "UI-02",
+      "before": "outputs/consumption-timing-20261110/regression/trace-ui-serial/results.json",
+      "after": "outputs/r19-adoption-20261111/regression/trace-ui/results.json"
+    },
+    {
+      "id": "UI-03",
+      "before": "outputs/consumption-timing-20261110/regression/trace-ui-serial/results.json",
+      "after": "outputs/r19-adoption-20261111/regression/trace-ui/results.json"
+    },
+    {
+      "id": "UI-04",
+      "before": "outputs/consumption-timing-20261110/regression/trace-ui-serial/results.json",
+      "after": "outputs/r19-adoption-20261111/regression/trace-ui/results.json"
+    },
+    {
+      "id": "UI-05",
+      "before": "outputs/consumption-timing-20261110/regression/trace-ui-serial/results.json",
+      "after": "outputs/r19-adoption-20261111/regression/trace-ui/results.json"
+    },
+    {
+      "id": "PT-21",
+      "before": "outputs/consumption-timing-20261110/adoption/frontend-contract-normalized.json",
+      "after": "outputs/r19-adoption-20261111/frontend-contract-normalized.json"
+    },
+    {
+      "id": "UI-06",
+      "before": "outputs/consumption-timing-20261110/regression/trace-ui-serial/results.json",
+      "after": "outputs/r19-adoption-20261111/regression/trace-ui/results.json"
+    },
+    {
+      "id": "UI-08",
+      "before": "docs/traceability/reports/signout-retry-20261030-local/google-auth-retry-ui.json",
+      "after": "outputs/r19-adoption-20261111/regression/login/google-auth-retry-ui.json"
+    },
+    {
+      "id": "UI-SCROLL-01",
+      "before": "outputs/consumption-timing-20261110/regression/modal-scroll/results.json",
+      "after": "outputs/r19-adoption-20261111/regression/modal-scroll/results.json"
+    },
+    {
+      "id": "UI-SCROLL-02",
+      "before": "outputs/consumption-timing-20261110/regression/modal-scroll/results.json",
+      "after": "outputs/r19-adoption-20261111/regression/modal-scroll/results.json"
+    },
+    {
+      "id": "LOCAL-UI-01",
+      "before": "outputs/consumption-timing-20261110/regression/local/results.json",
+      "after": "outputs/r19-adoption-20261111/regression/local/results.json"
+    },
+    {
+      "id": "LOCAL-UI-02",
+      "before": "outputs/consumption-timing-20261110/regression/local/results.json",
+      "after": "outputs/r19-adoption-20261111/regression/local/results.json"
+    },
+    {
+      "id": "LOCAL-UI-03",
+      "before": "outputs/consumption-timing-20261110/regression/local/results.json",
+      "after": "outputs/r19-adoption-20261111/regression/local/results.json"
+    },
+    {
+      "id": "LOCAL-UI-04",
+      "before": "outputs/consumption-timing-20261110/regression/local/results.json",
+      "after": "outputs/r19-adoption-20261111/regression/local/results.json"
+    },
+    {
+      "id": "LOCAL-UI-05",
+      "before": "outputs/consumption-timing-20261110/regression/local/results.json",
+      "after": "outputs/r19-adoption-20261111/regression/local/results.json"
+    },
+    {
+      "id": "LOCAL-UI-06",
+      "before": "outputs/consumption-timing-20261110/regression/local/results.json",
+      "after": "outputs/r19-adoption-20261111/regression/local/results.json"
+    },
+    {
+      "id": "LOCAL-UI-07",
+      "before": "outputs/consumption-timing-20261110/regression/local/results.json",
+      "after": "outputs/r19-adoption-20261111/regression/local/results.json"
+    },
+    {
+      "id": "LOCAL-UI-08",
+      "before": "outputs/consumption-timing-20261110/regression/local/results.json",
+      "after": "outputs/r19-adoption-20261111/regression/local/results.json"
+    },
+    {
+      "id": "LOCAL-UI-09",
+      "before": "outputs/consumption-timing-20261110/regression/local/results.json",
+      "after": "outputs/r19-adoption-20261111/regression/local/results.json"
+    },
+    {
+      "id": "LOCAL-UI-10",
+      "before": "outputs/consumption-timing-20261110/regression/local/results.json",
+      "after": "outputs/r19-adoption-20261111/regression/local/results.json"
+    },
+    {
+      "id": "LOCAL-UI-11",
+      "before": "outputs/consumption-timing-20261110/regression/local/results.json",
+      "after": "outputs/r19-adoption-20261111/regression/local/results.json"
+    },
+    {
+      "id": "LOCAL-UI-12",
+      "before": "outputs/consumption-timing-20261110/regression/local/results.json",
+      "after": "outputs/r19-adoption-20261111/regression/local/results.json"
+    },
+    {
+      "id": "LOCAL-UI-13",
+      "before": "outputs/consumption-timing-20261110/regression/local/results.json",
+      "after": "outputs/r19-adoption-20261111/regression/local/results.json"
+    },
+    {
+      "id": "LOCAL-UI-14",
+      "before": "outputs/consumption-timing-20261110/regression/local/results.json",
+      "after": "outputs/r19-adoption-20261111/regression/local/results.json"
+    },
+    {
+      "id": "PT-22",
+      "before": "outputs/consumption-timing-20261110/adoption/frontend-contract-normalized.json",
+      "after": "outputs/r19-adoption-20261111/frontend-contract-normalized.json"
+    },
+    {
+      "id": "PT-23",
+      "before": "outputs/consumption-timing-20261110/adoption/frontend-contract-normalized.json",
+      "after": "outputs/r19-adoption-20261111/frontend-contract-normalized.json"
+    },
+    {
+      "id": "PT-24",
+      "before": "outputs/consumption-timing-20261110/adoption/frontend-contract-normalized.json",
+      "after": "outputs/r19-adoption-20261111/frontend-contract-normalized.json"
+    },
+    {
+      "id": "PT-25",
+      "before": "outputs/consumption-timing-20261110/adoption/frontend-contract-normalized.json",
+      "after": "outputs/r19-adoption-20261111/frontend-contract-normalized.json"
+    },
+    {
+      "id": "PT-26",
+      "before": "outputs/consumption-timing-20261110/adoption/frontend-contract-normalized.json",
+      "after": "outputs/r19-adoption-20261111/frontend-contract-normalized.json"
+    },
+    {
+      "id": "PT-27",
+      "before": "outputs/consumption-timing-20261110/adoption/frontend-contract-normalized.json",
+      "after": "outputs/r19-adoption-20261111/frontend-contract-normalized.json"
+    },
+    {
+      "id": "PT-28",
+      "before": "outputs/consumption-timing-20261110/adoption/frontend-contract-normalized.json",
+      "after": "outputs/r19-adoption-20261111/frontend-contract-normalized.json"
+    },
+    {
+      "id": "PT-29",
+      "before": "outputs/consumption-timing-20261110/adoption/frontend-contract-normalized.json",
+      "after": "outputs/r19-adoption-20261111/frontend-contract-normalized.json"
+    },
+    {
+      "id": "PT-30",
+      "before": "outputs/consumption-timing-20261110/adoption/frontend-contract-normalized.json",
+      "after": "outputs/r19-adoption-20261111/frontend-contract-normalized.json"
+    },
+    {
+      "id": "PT-31",
+      "before": "outputs/consumption-timing-20261110/adoption/frontend-contract-normalized.json",
+      "after": "outputs/r19-adoption-20261111/frontend-contract-normalized.json"
+    },
+    {
+      "id": "REVIEW-UI-01",
+      "before": "outputs/consumption-timing-20261110/regression/reviewer/results.json",
+      "after": "outputs/r19-adoption-20261111/regression/reviewer/results.json"
+    },
+    {
+      "id": "REVIEW-UI-02",
+      "before": "outputs/consumption-timing-20261110/regression/reviewer/results.json",
+      "after": "outputs/r19-adoption-20261111/regression/reviewer/results.json"
+    },
+    {
+      "id": "REVIEW-UI-03",
+      "before": "outputs/consumption-timing-20261110/regression/reviewer/results.json",
+      "after": "outputs/r19-adoption-20261111/regression/reviewer/results.json"
+    },
+    {
+      "id": "REVIEW-UI-04",
+      "before": "outputs/consumption-timing-20261110/regression/reviewer/results.json",
+      "after": "outputs/r19-adoption-20261111/regression/reviewer/results.json"
+    },
+    {
+      "id": "REVIEW-UI-05",
+      "before": "outputs/consumption-timing-20261110/regression/reviewer/results.json",
+      "after": "outputs/r19-adoption-20261111/regression/reviewer/results.json"
+    },
+    {
+      "id": "REVIEW-UI-06",
+      "before": "outputs/consumption-timing-20261110/regression/reviewer/results.json",
+      "after": "outputs/r19-adoption-20261111/regression/reviewer/results.json"
+    },
+    {
+      "id": "REVIEW-UI-07",
+      "before": "outputs/consumption-timing-20261110/regression/reviewer/results.json",
+      "after": "outputs/r19-adoption-20261111/regression/reviewer/results.json"
+    },
+    {
+      "id": "REVIEW-UI-08",
+      "before": "outputs/consumption-timing-20261110/regression/reviewer/results.json",
+      "after": "outputs/r19-adoption-20261111/regression/reviewer/results.json"
+    },
+    {
+      "id": "PT-32",
+      "before": "outputs/consumption-timing-20261110/adoption/frontend-contract-normalized.json",
+      "after": "outputs/r19-adoption-20261111/frontend-contract-normalized.json"
+    },
+    {
+      "id": "PT-33",
+      "before": "outputs/consumption-timing-20261110/adoption/frontend-contract-normalized.json",
+      "after": "outputs/r19-adoption-20261111/frontend-contract-normalized.json"
+    },
+    {
+      "id": "RETRY-UI-01",
+      "before": "outputs/consumption-timing-20261110/adoption/reservation-retry-ui.json",
+      "after": "outputs/r19-adoption-20261111/reservation-retry-ui.json"
+    }
+  ],
+  "newTests": [
+    "PM-01",
+    "PM-02",
+    "PM-03",
+    "PM-04",
+    "PM-05"
+  ],
+  "freshReportCounts": {
+    "outputs/r19-adoption-20261111/regression/trace-ui/results.json": 6,
+    "outputs/r19-adoption-20261111/regression/local/results.json": 14,
+    "outputs/r19-adoption-20261111/frontend-contract-normalized.json": 33,
+    "outputs/r19-adoption-20261111/regression/login/google-auth-retry-ui.json": 2,
+    "outputs/r19-adoption-20261111/regression/modal-scroll/results.json": 2,
+    "outputs/r19-adoption-20261111/regression/reviewer/results.json": 8,
+    "outputs/r19-adoption-20261111/reservation-retry-ui.json": 1
+  },
+  "capabilityTextChanged": [
+    "REQ-20 designText/operationText/userText/implementation/tests"
+  ],
+  "observationsAdded": [
+    "REQ-24 latestObservation",
+    "REQ-25 latestObservation"
+  ],
+  "statusesChanged": [],
+  "factsChanged": false,
+  "sourceBaselineUpdates": [
+    {
+      "path": "scripts/test_google_auth_retry_ui.cjs",
+      "before": "e8b1ba91546d3a3d33b0ca2ee4fe8967f94f41da89afaf7936c74982a90289ef",
+      "after": "6b9819277a497984c64ded87c9fbe5e72e7fd6b1b7bdc0c97d890ee0a94d4e99"
+    },
+    {
+      "path": "scripts/test_portal_mismatch_ui.cjs",
+      "before": null,
+      "after": "8cb6e7f873ec42895e4629962f176a22ad5de9ae20192ea1b1997112caa0e9f2"
+    },
+    {
+      "path": "src/App.tsx",
+      "before": "6522d074f89b06b80518110529cdacc922d6e35c8ccf00f8536f4f1c07bdc584",
+      "after": "0eefaa4c0244f47fb9da6cb5a3dc670ff61ce561f298ea4d26bc6f5fc7ea11aa"
+    },
+    {
+      "path": "src/components/AddRideModal.tsx",
+      "before": "1bc02fa836a77d0dec2d9ec873ae4cff8bc1c98cbd24bb3da3cbbf5073856f85",
+      "after": "4f390ee7c4d81ba859bc02316d728ed8104521797cc5ee95d722f6efc619f50b"
+    },
+    {
+      "path": "src/components/LoginScreen.tsx",
+      "before": "fff15f0ad096c08a59d28a8d14d43d2d67c819b5d92a7551a7deb510f4234bb2",
+      "after": "3bcfd41e89347be94c72e13e7c6503b621bd2221c6b366311f0c4bcdf1894e3d"
+    },
+    {
+      "path": "src/components/ParentPortal.tsx",
+      "before": "c58b97530f55b5ec2241c9e92a6600e5b3f24ab8e4fc28fef3d3dbb1746cd04e",
+      "after": "706020ccef78b8e080c16c6d22c0ec4562ec00be1d6ae0bd9859130ef512b35b"
+    },
+    {
+      "path": "src/components/TeacherDashboard.tsx",
+      "before": "1316fbc950664e43614387bea8bf614c98374c2bc1fcf6e7f3c97c9b01334ea4",
+      "after": "82eec6fe54cf237d1ad1e0981beeca418a8c61e38aaa88f23d4596af67b658e5"
+    },
+    {
+      "path": "src/portal.ts",
+      "before": "2cb1dc0aed33b27a24ef6ed804a6ae1e01b44e07f0814c12044dc1d3525cbeec",
+      "after": "874dce7f269e59073b75d6ae47c7fb3b682686fa2ab214d8cb0eacb48c59cac7"
+    }
+  ],
+  "sourceBaselineCandidate": "outputs/r19-adoption-20261111/source-baseline-r19-candidate.json",
+  "dryRun": {
+    "errorCounts": {
+      "GENERATED_DRIFT": 26,
+      "UNINDEXED_DOCUMENT": 4,
+      "DOCUMENT_DRIFT": 1,
+      "SOURCE_REVIEW_REQUIRED": 8,
+      "PRESENTATION_STALE": 12
+    },
+    "unexpectedCodes": [
+      "DOCUMENT_DRIFT",
+      "UNINDEXED_DOCUMENT"
+    ]
+  },
+  "customerPassed": 0,
+  "customerTotal": 6,
+  "productionStarted": false,
+  "pendingBeforeAdoption": [
+    "Independent AI review of every source file in sourceBaselineUpdates (REVIEW-POL-02); the implementer has not self-approved",
+    "Independent review of this registry candidate",
+    "Twelve presentation packages must be reviewed and reissued against r19"
+  ],
+  "limits": [
+    "An earlier candidate under outputs/portal-mismatch-20261110/adoption was built before three further fixes by another session and is superseded; all suites were rerun on the current tree with installed Chrome",
+    "This candidate registers only the wrong-entrance tests and the AT-24/25 observations; tests and observations for the other fixes made on 10-11 November are not registered here",
+    "Frontend contract report key normalized from an absolute path",
+    "Actual Google and customer checks are separate"
+  ]
+}

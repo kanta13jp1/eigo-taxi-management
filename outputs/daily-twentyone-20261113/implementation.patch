@@ -1,0 +1,39 @@
+diff --git docs/acceptance/deployment/releases/c9cd711d551ccc77/source/src/services/api.ts outputs/daily-twentyone-20261113/stage/src/services/api.ts
+index 4d71306..e2318b0 100644
+--- docs/acceptance/deployment/releases/c9cd711d551ccc77/source/src/services/api.ts
++++ outputs/daily-twentyone-20261113/stage/src/services/api.ts
+@@ -116,17 +116,20 @@ const INITIAL_PURCHASES: TicketPurchase[] = [
+ ];
+ 
+ // LocalStorageヘルパー
+-function getStored<T>(key: string, defaultVal: T): T {
++function getStored<T>(key: string, defaultVal: T[]): T[] {
+   const item = localStorage.getItem(key);
+-  if (!item) {
++  if (item === null) {
+     localStorage.setItem(key, JSON.stringify(defaultVal));
+-    return JSON.parse(JSON.stringify(defaultVal));
++    return structuredClone(defaultVal);
+   }
++  let parsed: unknown;
+   try {
+-    return JSON.parse(item);
++    parsed = JSON.parse(item);
+   } catch {
+-    return JSON.parse(JSON.stringify(defaultVal));
++    // Fall through to the same recovery message as an invalid collection.
+   }
++  if (!Array.isArray(parsed)) throw new Error('このブラウザーのデモ保存データを読み取れません。上書きせず処理を中止しました。担当者に確認してください。');
++  return parsed;
+ }
+ 
+ function setStored<T>(key: string, val: T): void {
+@@ -417,7 +420,7 @@ export const ApiService = {
+     if(!student)throw new Error('生徒が見つかりません');
+     if(!Number.isSafeInteger(student.ticketBalance+params.ticketCount))throw new Error('残高が上限を超えます');
+     student.ticketBalance+=params.ticketCount;
+-    const purchases=getStored<TicketPurchase[]>(STORAGE_KEYS.PURCHASES,INITIAL_PURCHASES);
++    const purchases=getStored(STORAGE_KEYS.PURCHASES,INITIAL_PURCHASES);
+     purchases.unshift({...params,id:purchaseId,studentName:student.name,purchaseDate:getLocalDateString(),note:params.note||''});
+     setStored(STORAGE_KEYS.STUDENTS,students);setStored(STORAGE_KEYS.PURCHASES,purchases);
+     return {success:true,newBalance:student.ticketBalance};

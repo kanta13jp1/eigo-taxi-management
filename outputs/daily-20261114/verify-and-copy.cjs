@@ -1,0 +1,30 @@
+const fs = require('node:fs');
+const path = require('node:path');
+const crypto = require('node:crypto');
+const assert = require('node:assert/strict');
+const out = __dirname;
+const directory = 'docs/acceptance/deployment';
+const root = path.resolve(out,'../..',directory);
+const stage = path.join(out,'stage',directory);
+const baseline = '54178ee8e9d61c91';
+const read = f => JSON.parse(fs.readFileSync(f,'utf8').replace(/^\uFEFF/,''));
+const receipt = read(path.join(stage,'firebase-deploy.json'));
+const release = receipt.result.hosting.match(/^projects\/753038429305\/sites\/eigo-taxi-test\/versions\/([a-z0-9]+)$/)[1];
+assert.equal(receipt.status,'success');
+const ui=read(path.join(out,'public-ui.json')), check=read(path.join(stage,'public-verification.json'));
+assert.ok(ui.targetOnlyCancelled && ui.doubleConfirmSingleWrite && ui.persistedAfterReload && ui.studentBalancesUnchanged && ui.focusRestored);
+assert.equal(ui.base,'https://eigo-taxi-test.web.app');assert.deepEqual(ui.blockedRequests,[]);
+assert.ok(check.pass && check.results.length === 7 && check.results.every(r=>r.match));
+const current=read(path.join(stage,'build-manifest.json')), prior=read(path.join(root,'releases',baseline,'build-manifest.json'));
+const diff=Object.keys(current.sourceHashes).filter(k=>current.sourceHashes[k]!==prior.sourceHashes[k]);
+assert.deepEqual(Object.keys(current.sourceHashes),Object.keys(prior.sourceHashes));assert.deepEqual(diff,['src/components/ParentPortal.tsx']);
+assert.equal(current.release.sourceDigest,'b4d158cdd387ec1bc2095d79a5aac492337c7351ba84acd5c98236c770b3511d');
+const archive=path.join(root,'releases',release);
+assert.ok(!fs.existsSync(archive));fs.cpSync(path.join(stage,'releases',release),archive,{recursive:true,errorOnExist:true,force:false});
+for (const [section,files] of [['source',current.sourceHashes],['payload',current.distHashes]]) {
+  for(const [f,v] of Object.entries(files))assert.equal(crypto.createHash('sha256').update(fs.readFileSync(path.join(archive,section,f))).digest('hex'),v);
+}
+for(const name of ['build-manifest.json','firebase-deploy.json','public-verification.json'])fs.copyFileSync(path.join(stage,name),path.join(root,name));
+const result={release,baseline,sourceDigest:current.release.sourceDigest,inputs:Object.keys(current.sourceHashes).length,diff,changedFileHash:current.sourceHashes[diff[0]],build:'tsc -b and vite build passed',lint:'oxlint src/components/ParentPortal.tsx passed',publicHashMatches:7,publicUI:'public-ui.json',physicalDevice:false,liveGoogleAcceptance:false};
+fs.writeFileSync(path.join(out,'release-validation.json'),JSON.stringify(result,null,2));
+console.log(JSON.stringify(result));

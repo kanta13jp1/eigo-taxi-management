@@ -1,0 +1,21 @@
+{
+  "at": "2026-10-20T06:16:50.816Z",
+  "scope": "verification copy only; no API mutation during rename; no source/calendar edits; no deletion",
+  "mapping": [
+    [
+      "生徒台帳",
+      "AT23保全_生徒台帳",
+      "AT23生成証跡_生徒台帳"
+    ],
+    [
+      "送迎予定履歴",
+      "AT23保全_送迎予定履歴",
+      "AT23生成証跡_送迎予定履歴"
+    ],
+    [
+      "チケット購入履歴",
+      "AT23保全_チケット購入履歴",
+      "AT23生成証跡_チケット購入履歴"
+    ]
+  ]
+}

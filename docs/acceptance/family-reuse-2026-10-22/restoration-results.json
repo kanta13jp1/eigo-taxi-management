@@ -1,0 +1,11 @@
+{
+  "executedAt": "2026-10-22T14:27:02.651Z",
+  "originalGoogleAllowlistExact": true,
+  "activeAdmins": 2,
+  "temporaryFamilyRemoved": true,
+  "googleConfigPreserved": true,
+  "legacyDisabled": true,
+  "legacyMapPreserved": true,
+  "familyBFirstGoogleUidBound": true,
+  "restorationMethod": "Exact pre-test allowlist restored via GAS settings after original admin tab attachment timed out"
+}

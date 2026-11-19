@@ -1,0 +1,13 @@
+{
+  "date": "2026-11-09",
+  "stage": "LOCAL_REVIEWED_DEPLOY_BLOCKED",
+  "independentReview": "PASS",
+  "localTests": {"frontendPassed": 33, "frontendTotal": 33, "gasPassed": 85, "gasTotal": 85, "uiMerge": "PASS", "typecheck": "PASS", "lint": "PASS"},
+  "deployment": {"status": "BLOCKED_REAUTH", "hostingVersion": null, "currentHostingVersion": "43d4ac9b2a065441", "sourceDigest": "9474523b706d44f520a627c1c1611824ed8d0b3e2347687d35fa98dbf61e0d27", "matchedResponses": 0, "expectedResponses": 7},
+  "publicUi": {"status": "NOT_RUN", "summary": "修正版は未反映・公開画面は未確認", "evidence": null},
+  "customer": {"passed": 0, "total": 6, "readbackAt": "2026-11-09"},
+  "customerFixtureMutations": 0,
+  "productionStarted": false,
+  "nextTask": "Google再ログイン後に検証サイトへ反映・画面確認",
+  "causalityOfNovember7Incident": "UNKNOWN"
+}

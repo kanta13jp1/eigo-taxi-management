@@ -1,0 +1,40 @@
+{
+  "mode": "before",
+  "checkedAt": "2026-11-13T06:29:58.947Z",
+  "test": "AT-22",
+  "freshAnonymousAdminDemo": true,
+  "base": "http://127.0.0.1:65066",
+  "student": {
+    "name": "架空生徒 AT22",
+    "parentName": "",
+    "phone": "",
+    "address": "架空の送迎場所 AT22",
+    "pickupNote": "",
+    "ticketBalance": 7,
+    "id": "STU-2d47e754-49b1-425e-bb88-9cdcd241fcf5",
+    "createdAt": "2026-11-13"
+  },
+  "ride": {
+    "studentId": "STU-2d47e754-49b1-425e-bb88-9cdcd241fcf5",
+    "rideDate": "2026-11-23",
+    "rideTime": "15:22",
+    "rideType": "pickup",
+    "pickupLocation": "架空の送迎場所 AT22",
+    "note": "AT22永続化",
+    "reservedBy": "teacher",
+    "id": "RIDE-f0f602d1-5b94-4bfe-9bd5-fc398a266860",
+    "studentName": "架空生徒 AT22",
+    "status": "scheduled",
+    "calendarEventId": ""
+  },
+  "normalReloadExact": true,
+  "malformedInjectedInIsolatedProfile": true,
+  "malformedBytesUnchanged": false,
+  "errorVisible": false,
+  "formRetained": false,
+  "reloadError": false,
+  "recoveryExact": true,
+  "oldLostPreviouslySavedReservation": true,
+  "blockedRequests": [],
+  "scope": "This browser only. No Google/customer/account/ledger writes; no physical device or customer acceptance."
+}

@@ -1,0 +1,13 @@
+{
+  "prompt": "管理者は管理者専用、保護者は自分の家庭の情報だけに完全分離。個別URLとQR配布・失効手順を実装し、全ての現行資料とPowerPointを変更仕様に更新する。旧資料・試験証跡は保持し、新旧の合格判定を区別する。",
+  "tool": "@oai/artifact-tool",
+  "provider": "OpenAI",
+  "model": null,
+  "sourceDocuments": [
+    "docs/PORTAL_SEPARATION.md",
+    "docs/GAS_AUTH_SETUP.md",
+    "docs/remaining-work-tracker.md",
+    "docs/acceptance/role-portals-2026-10-20/"
+  ],
+  "rights": "Project-specific documentation and synthetic demo UI; school branding remains subject to rights review; not offered for sale."
+}

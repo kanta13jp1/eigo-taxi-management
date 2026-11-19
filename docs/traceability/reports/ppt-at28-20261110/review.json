@@ -1,0 +1,60 @@
+{
+  "status": "MACHINE_CHECKS_PASSED",
+  "independentReview": "separate",
+  "nativePowerPointChecked": false,
+  "renderedPages": 51,
+  "oldFullPagesPixelIdentical": 45,
+  "oldNotesPreserved": 45,
+  "newPages": 6,
+  "newWarnings": 0,
+  "rows": [
+    {
+      "id": "PKG-05",
+      "name": "tasks",
+      "source": "docs/deliverables/2026-10-23-traceability/tasks-2026-11-10-v34.pptx",
+      "sourceSha256": "26f9cc8aecb2cc31c94e3c8ba6358aa137b69bdac01cbff56f805ba91e2174a1",
+      "sourceSlides": 17,
+      "final": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\outputs\\at28-multisheet-20261110\\ppt-v35\\tasks\\final\\tasks-2026-11-10-v35.pptx",
+      "sha256": "f2a363e0cd16cc0871b5fd8713a6a96e04a1e1f48e34fe3699fbdc12613ed3ad",
+      "slides": 19,
+      "oldPagesPixelIdentical": 17,
+      "oldNotesTextPreserved": 17,
+      "oldMediaHashesPreserved": 5,
+      "renderedPages": 19,
+      "newWarnings": 0,
+      "reimportPassed": true
+    },
+    {
+      "id": "PKG-09",
+      "name": "operations",
+      "source": "docs/deliverables/2026-10-23-traceability/operations-2026-11-10-v34.pptx",
+      "sourceSha256": "cdcf8efdabe21917701fbdcf4fadece91e69c0717ea2760e22593db05ddba7a9",
+      "sourceSlides": 14,
+      "final": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\outputs\\at28-multisheet-20261110\\ppt-v35\\operations\\final\\operations-2026-11-10-v35.pptx",
+      "sha256": "980d6ca10dc797121c2266ed9afa74d9f3cb4f8fda3e569ee5e78eadec7fccf4",
+      "slides": 16,
+      "oldPagesPixelIdentical": 14,
+      "oldNotesTextPreserved": 14,
+      "oldMediaHashesPreserved": 3,
+      "renderedPages": 16,
+      "newWarnings": 0,
+      "reimportPassed": true
+    },
+    {
+      "id": "PKG-12",
+      "name": "progress",
+      "source": "docs/deliverables/2026-10-23-traceability/progress-2026-11-10-v34.pptx",
+      "sourceSha256": "2c575989b20e016a958c538ce3766af33821c754cf7b3775daea95e075ce5c19",
+      "sourceSlides": 14,
+      "final": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\outputs\\at28-multisheet-20261110\\ppt-v35\\progress\\final\\progress-2026-11-10-v35.pptx",
+      "sha256": "ec6113844a6b2b09545392eb2aa4fa7a6156c00348f28884f9bc2ffd3d6364a3",
+      "slides": 16,
+      "oldPagesPixelIdentical": 14,
+      "oldNotesTextPreserved": 14,
+      "oldMediaHashesPreserved": 5,
+      "renderedPages": 16,
+      "newWarnings": 0,
+      "reimportPassed": true
+    }
+  ]
+}

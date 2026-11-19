@@ -1,0 +1,25 @@
+import { ApiService } from '../services/api';
+import { getDeploymentConfig, SETUP_REQUIRED_MESSAGE } from '../deployment-config';
+
+export function GoogleSettings() {
+  const demo=ApiService.getSession()?.mode==='demo';
+  let configured = false;
+  let environment: 'test' | 'production' | undefined;
+  try { const config = getDeploymentConfig(); configured = Boolean(config.firebase); environment = config.environment; } catch { /* Fail closed. */ }
+  return <div className="mx-auto max-w-3xl space-y-6">
+    <section className="space-y-3 rounded-2xl border bg-white p-6">
+      <h2 className="text-lg font-bold">Google連携の状態</h2>
+      <p className="text-sm">接続と初期管理者の設定は開発担当者が行います。この画面でURLやキーを入力する必要はありません。利用者の追加・停止・削除、生徒の紐付けは「アカウント管理」で管理者が行います。</p>
+      {configured
+        ? <p role="status" className="text-sm text-emerald-800">{environment === 'test' ? '検証環境のGoogleログインが設定されています。' : '教室のGoogleログインが設定されています。'}</p>
+        : <p role="alert" className="text-sm text-rose-800">{SETUP_REQUIRED_MESSAGE}</p>}
+      <p className="text-sm">{demo ? '現在は架空データで操作を体験しています。' : 'ログインしたご本人の権限で利用しています。'}通信に失敗した場合は画面にエラーを表示します。</p>
+    </section>
+    {demo&&<section className="space-y-3 rounded-2xl border bg-white p-6">
+      <h2 className="font-bold">このブラウザのデモデータ</h2>
+      <p className="text-sm">以下は架空のデモ台帳だけを変更します。Google側のデータ初期化・移行とは別の操作です。</p>
+      <button className="rounded-lg border px-3 py-2 text-sm" onClick={()=>{if(confirm('デモデータを初期状態に戻しますか？')){ApiService.resetToMock();location.reload();}}}>モック初期化</button>
+      <button className="ml-2 rounded-lg border px-3 py-2 text-sm text-rose-700" onClick={()=>{if(confirm('このブラウザのデモ台帳を空にしますか？')){ApiService.purgeAllData();location.reload();}}}>デモデータ消去</button>
+    </section>}
+  </div>;
+}

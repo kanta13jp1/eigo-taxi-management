@@ -1,0 +1,33 @@
+{
+  "status": "WAITING_FOR_FIREBASE_REAUTH",
+  "dateJst": "2026-11-06",
+  "dailyDeployedAndVerifiedCompletedItems": 0,
+  "reason": "Firebase CLI deploy returned Authentication Error: Your credentials are no longer valid",
+  "deploymentAttempt": "firebase-deploy.json",
+  "pendingAuthExecSession": 77041,
+  "candidateCwd": "outputs/booking-modal-release-20261106/candidate",
+  "candidateConfig": "outputs/booking-modal-release-20261106/candidate/firebase.json",
+  "candidateSourceDigest": "b7e510688a6e81268331db6d7d88db8875bf5ce443dbc90f52b4f647f39d1979",
+  "isolatedBuildValidation": "validation.json",
+  "payloadReview": "payload-diff-review-confirmed.json",
+  "rootReview": "root-predeploy-review.json",
+  "hostedTestScript": "outputs/test_hosted_booking_scroll_20261106.mjs",
+  "hostedTestScriptSha256": "4b84ce5c40f10cbdb8fc29fc86c27a2098fb8a92d082d22c3045f3b2b182bfdb",
+  "beforeEvidence": "outputs/booking-modal-hosted-before-final-20261106/results.json",
+  "beforeExpectedFailures": 4,
+  "beforeNoLiveMutationRequests": true,
+  "pptPreparedButNotGenerated": "outputs/ppt-deploy-20261106-v31/preparation-status.json",
+  "automationId": "18",
+  "automationUpdated": true,
+  "allowedTarget": "eigo-taxi-app / hosting:eigo-taxi-test",
+  "forbidden": ["Calendar permission addition", "GAS deployment", "other Hosting targets", "production start"],
+  "nextAfterUserReauth": [
+    "Observe login completion and poll exec session; verify company account reauth success without exposing credentials",
+    "Recheck candidate payload hashes, then deploy only hosting:mighty-test with explicit candidate config and cwd; use a new attempt log",
+    "Verify every candidate payload HTTP status and SHA-256 against published test URL",
+    "Run identical hosted UI script with a new output directory; require all four cases and guards PASS",
+    "Preserve release source/payload and evidence under a new immutable release archive",
+    "Update actual current deployment pointer, documents, shared sheet and gated v31 PPTs after validated evidence exists",
+    "Only then prepare completed daily report; keep original real/third-party acceptance separate"
+  ]
+}

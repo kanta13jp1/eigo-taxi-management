@@ -24,25 +24,32 @@ export const AddTicketModal: React.FC<AddTicketModalProps> = ({
 }) => {
   const [studentId, setStudentId] = useState(initialStudentId || students[0]?.id || '');
   const [ticketCount, setTicketCount] = useState<number>(10);
-  const [amount, setAmount] = useState<number>(10000);
+  const [amountInput, setAmountInput] = useState('10000');
   const [note, setNote] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState('');
 
   if (!isOpen) return null;
 
   const handlePresetSelect = (count: number, price: number, label: string) => {
     setTicketCount(count);
-    setAmount(price);
+    setAmountInput(String(price));
     setNote(`${label}購入`);
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!studentId || ticketCount <= 0) {
+    if (!studentId || !Number.isSafeInteger(ticketCount) || ticketCount < 1 || ticketCount > 100) {
       alert('生徒と正しい枚数を指定してください');
       return;
     }
+    const amount = Number(amountInput);
+    if (amountInput === '' || !Number.isSafeInteger(amount) || amount < 0) {
+      setError('受取金額を0円以上の整数で入力してください');
+      return;
+    }
     setIsSubmitting(true);
+    setError('');
     try {
       await onSubmit({
         studentId,
@@ -51,6 +58,8 @@ export const AddTicketModal: React.FC<AddTicketModalProps> = ({
         note,
       });
       onClose();
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'チケットを追加できませんでした');
     } finally {
       setIsSubmitting(false);
     }
@@ -60,7 +69,7 @@ export const AddTicketModal: React.FC<AddTicketModalProps> = ({
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs">
-      <div className="bg-white rounded-2xl shadow-xl w-full max-w-md overflow-hidden border border-slate-100 animate-in fade-in zoom-in-95 duration-150">
+      <div className="bg-white rounded-2xl shadow-xl w-full max-w-md max-h-[calc(100dvh-2rem)] overflow-y-auto overscroll-contain border border-slate-100 animate-in fade-in zoom-in-95 duration-150">
         <div className="px-6 py-4 border-b border-slate-100 flex items-center justify-between bg-emerald-50/50">
           <div className="flex items-center gap-2">
             <div className="p-2 rounded-xl bg-emerald-100 text-emerald-700">
@@ -80,6 +89,7 @@ export const AddTicketModal: React.FC<AddTicketModalProps> = ({
         </div>
 
         <form onSubmit={handleSubmit} className="p-6 space-y-4">
+          {error && <p role="alert" className="rounded-lg bg-rose-50 p-3 text-sm text-rose-800">{error}</p>}
           {/* 対象生徒 */}
           <div>
             <label className="block text-xs font-semibold text-slate-600 mb-1">対象の生徒</label>
@@ -145,7 +155,7 @@ export const AddTicketModal: React.FC<AddTicketModalProps> = ({
                 min="1"
                 max="100"
                 value={ticketCount}
-                onChange={(e) => setTicketCount(parseInt(e.target.value) || 0)}
+                onChange={(e) => setTicketCount(Number(e.target.value))}
                 className="w-full px-3 py-2 border border-slate-200 rounded-xl focus:outline-hidden focus:ring-2 focus:ring-emerald-500 text-slate-800 text-sm font-semibold"
                 required
               />
@@ -155,9 +165,10 @@ export const AddTicketModal: React.FC<AddTicketModalProps> = ({
               <input
                 type="number"
                 min="0"
-                step="500"
-                value={amount}
-                onChange={(e) => setAmount(parseInt(e.target.value) || 0)}
+                step="1"
+                required
+                value={amountInput}
+                onChange={(e) => setAmountInput(e.target.value)}
                 className="w-full px-3 py-2 border border-slate-200 rounded-xl focus:outline-hidden focus:ring-2 focus:ring-emerald-500 text-slate-800 text-sm font-semibold"
               />
             </div>

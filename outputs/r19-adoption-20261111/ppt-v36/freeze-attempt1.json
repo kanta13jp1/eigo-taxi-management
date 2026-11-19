@@ -1,0 +1,74 @@
+{
+  "status": "ROOT_LOCK",
+  "date": "2026-11-11",
+  "registryVersion": "2026-11-11-r19",
+  "registrySha256": "cfd1a14aa71f637e2cc770bca08caa3758ddff8d6605d669d2341f343ff912e4",
+  "customerPassed": 0,
+  "customerTotal": 6,
+  "productionStarted": false,
+  "regressionSummary": "71件成功",
+  "observationSummary": "ログインの入口が合わないときの案内を検証Hostingへ反映し、公開中の保護者用入口で表示とリンクの移動を確認した。実カレンダー連動のAT-24・AT-25を、開発担当が検証環境の架空生徒で1回ずつ実施し、完了条件に合う結果を得た。顧客用の生徒・残数・固定予約への書込なし。",
+  "contentReview": "入口の案内は表示の追加で、サーバーの判定・権限は変更していない。公開画面で確認したのは保護者用入口だけで、管理者用入口とスマートフォン幅は模擬試験のみ。AT-24・25は管理者による1回の実施で、保護者からの予約・取消、実機、確認ダイアログの文言、顧客確認は含まない。回帰試験71件は現在のソースを模擬環境で再実施した件数。11月10〜11日に別途反映された他の修正（デモ表示、残少警告の統一、日付切替、チケット追加入力）は、ソース基準のレビュー対象には含むが、本追補の説明・登録試験には含めていない。顧客0/6、本番HOLD。",
+  "evidenceFiles": [
+    {
+      "path": "outputs/r19-adoption-20261111/regression/trace-ui/results.json",
+      "sha256": "c43ee1111ee5f0c0580bc48321d31ba8931be0d2f1a9d49fd4209cfb689aa3b2"
+    },
+    {
+      "path": "outputs/r19-adoption-20261111/regression/local/results.json",
+      "sha256": "4f9cb8a6edd537f69516cfe6dee65b45a3b5e5d1a36f023f23d21919cccb9068"
+    },
+    {
+      "path": "outputs/r19-adoption-20261111/frontend-contract-normalized.json",
+      "sha256": "af4a9773ca75b5923a0fce99eba9c048ff2cadc7321694c63f27e5161976150e"
+    },
+    {
+      "path": "outputs/r19-adoption-20261111/regression/login/google-auth-retry-ui.json",
+      "sha256": "695649330cc472b27dd62dc676013b8002743486e6f8704be086ecaa6c3123bd"
+    },
+    {
+      "path": "outputs/r19-adoption-20261111/regression/login/portal-mismatch-ui.json",
+      "sha256": "b812d7064a546a68410ec862b226eb7f666912cfcdb756cd5abc1ec065af9658"
+    },
+    {
+      "path": "outputs/r19-adoption-20261111/regression/modal-scroll/results.json",
+      "sha256": "7cf796430b6db40c784c431ab4cf91e2ef5d8c49997e5bb44d40fb13a45db23a"
+    },
+    {
+      "path": "outputs/r19-adoption-20261111/regression/reviewer/results.json",
+      "sha256": "956eee0e2a139a07810cefa31a7188ccadbc537373901856b0aad7dd5d0071ca"
+    },
+    {
+      "path": "outputs/r19-adoption-20261111/reservation-retry-ui.json",
+      "sha256": "c3c010ac997c16b278eaff4fed80e99e2503e39e616e1097ba27a62f4ddbf10e"
+    },
+    {
+      "path": "outputs/r19-adoption-20261111/independent-review.json",
+      "sha256": "3d506c88c38a3d27a561719be56fb911ec951ddb791e1f4402f52544d78dbea0"
+    },
+    {
+      "path": "outputs/r19-adoption-20261111/registry-change-proposal.json",
+      "sha256": "394a6de8653c7e4f73631863a57a115032f9d2bc29a122b29a879dd1a8be431b"
+    },
+    {
+      "path": "outputs/r19-adoption-20261111/strict-before-ppt.json",
+      "sha256": "42de3200c961aa16cd3c5695c99bf7f48c6849886f4b71b9c4f8fa2dcb2c3e46"
+    },
+    {
+      "path": "outputs/at24-at25-20261110/readback.json",
+      "sha256": "cafccd23455b70189d9fe71fe1c1e4f6c01714753853f67485949706422faf4d"
+    },
+    {
+      "path": "outputs/portal-mismatch-20261110/public-parent-entrance-guidance.jpg",
+      "sha256": "70f2ea6f71a2e45d0fdbc40e52901e78aca399565ede1bf3ca0787ff991ebd33"
+    },
+    {
+      "path": "docs/acceptance/deployment/releases/d360644531543a4e/public-verification.json",
+      "sha256": "5096a67b686c4b8dfd8944996ee242e493ce292e9ff7db11c0e30bd8bd772fcb"
+    },
+    {
+      "path": "docs/progress/2026-11-10-evening-fix-and-acceptance.md",
+      "sha256": "27dbe514fae010740e064a45bd38376f55ca142d49a6336fff5e6c40deb4a69f"
+    }
+  ]
+}

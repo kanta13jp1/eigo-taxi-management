@@ -1,0 +1,17 @@
+{
+  "reviewer": "lead agent independent of routed implementation worker",
+  "baselineRelease": "9028a05806171c13",
+  "sourceDigest": "38f4d5cc36a770b13e904bfbd8c8dc8430a0d0a23f405a102739fe8af6ded906",
+  "files": ["src/App.tsx", "src/components/LoginScreen.tsx", "src/services/api.ts"],
+  "checks": [
+    "Reason-bearing session-ended event distinguishes reauthentication from voluntary logout; session removal and signout are preserved",
+    "Existing expectedSession guards prevent late responses from ending a newer session",
+    "Reauthentication guidance contains no private account information and is limited to login entries",
+    "Route changes and successful login clear stale guidance; rejected startup live session explains recovery",
+    "Independent actual browser rerun of after harness passed 14 assertions covering AT-19 mocked auth expiry and AT-20 family-limited demo service rejection",
+    "Other-family read, reserve and cancel plus administrator completion and ticket addition denied without stored fixture or session changes",
+    "No GAS backend, authorization policy, real accounts, customer fixtures, calendar or ticket-calculation change"
+  ],
+  "pass": true,
+  "scope": "AT-19 mocked identity/UNAUTHORIZED and local service; AT-20 anonymous demo/local service. Does not certify actual Google or server-side household isolation, physical devices or customer acceptance."
+}

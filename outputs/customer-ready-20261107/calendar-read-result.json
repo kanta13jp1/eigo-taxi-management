@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "checkedAtJst": "2026-11-07 17:11:51",
+  "scriptProject": "company-owned verification project",
+  "calendarScopeAuthorizationStatus": "NOT_REQUIRED",
+  "expectedCalendarMatched": true,
+  "timeZoneMatched": true,
+  "ownedByDeployer": true,
+  "notPrimaryCalendar": true,
+  "sourceHelperSha256": "e39555d3540a22e1db6b20bf7885d6ee95a4e0ae11eace6e3fb29bccd3f6fef6",
+  "wrapperSha256": "0fd947590b561f36b93ad1b61d950b1ce685d1d1a8a1d1792e4a1ff5b901e1f9",
+  "eventsCreated": 0,
+  "sheetsModifiedByProbe": 0,
+  "scope": "Metadata and actual Apps Script grant only, not deployed Web App booking/cancellation or customer acceptance"
+}

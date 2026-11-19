@@ -1,0 +1,1 @@
+oxlint src/App.tsx: exit 0

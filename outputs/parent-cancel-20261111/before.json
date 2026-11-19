@@ -1,0 +1,14 @@
+{
+  "case": "AT-10",
+  "at": "2026-11-11T09:32:37.091Z",
+  "scope": "React parent portal, synthetic demo service",
+  "names": [
+    "キャンセル",
+    "キャンセル",
+    "キャンセル"
+  ],
+  "prompts": [
+    "このブラウザ内のデモ予約を取り消しますか？ 教室の予定は変わりません。"
+  ],
+  "declinePreservedAll": true
+}

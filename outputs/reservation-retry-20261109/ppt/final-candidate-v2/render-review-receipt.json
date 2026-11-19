@@ -1,0 +1,57 @@
+{
+  "status": "PASS",
+  "reviewer": "/root/retry_docs_ppt",
+  "purpose": "Obstacle notice only; no updated public release adoption",
+  "final": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\docs\\deliverables\\2026-11-09-reservation-retry\\progress-retry-2026-11-09-v2-blocked.pptx",
+  "sha256": "d661cfd3dec1ff18b19e382d4ebdfaf18915afe0693ab3fc6c2319b0e770f5bc",
+  "factsSha256": "35fcab4cdf37c9e09d7f289bdce7d18f130aa21ea6a1b12c41e0aa4f3a8187f5",
+  "checks": {
+    "twelve_reference_ppt_hashes_unchanged": true,
+    "delivered_equals_finalized_bytes": true,
+    "blocked_facts_explicit": true,
+    "production_not_started": true,
+    "customer_fixture_mutations_zero": true,
+    "local_test_counts_match": true,
+    "package_and_layout_findings_zero": true,
+    "layout_warnings_zero": true,
+    "first_party_reimport_pass": true,
+    "four_slides_and_notes": true,
+    "private_identity_and_household_urls_absent": true,
+    "not_deployed_visible": true,
+    "google_real_customer_limits_visible": true,
+    "old_incident_cause_unknown": true,
+    "native_table_on_slide_three": true,
+    "at_least_one_illustration": true
+  },
+  "visualInspection": {
+    "status": "PASS",
+    "method": "Viewed all four final Artifact Tool round-trip PNGs at 1280x720 and compared source template logo, sky frame, colors and Yu Gothic",
+    "slides": [
+      {
+        "slide": 1,
+        "clipping": false,
+        "unintendedOverlap": false,
+        "readable": true
+      },
+      {
+        "slide": 2,
+        "clipping": false,
+        "unintendedOverlap": false,
+        "readable": true
+      },
+      {
+        "slide": 3,
+        "clipping": false,
+        "unintendedOverlap": false,
+        "readable": true
+      },
+      {
+        "slide": 4,
+        "clipping": false,
+        "unintendedOverlap": false,
+        "readable": true
+      }
+    ]
+  },
+  "limits": "Structural and local render QA only; native Microsoft PowerPoint was not executed. New public-site deployment and post-deploy public UI checks remain NOT_RUN."
+}

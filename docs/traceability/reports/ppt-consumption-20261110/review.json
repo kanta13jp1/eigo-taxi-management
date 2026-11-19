@@ -1,0 +1,1053 @@
+{
+  "status": "PASS_AUTHOR_VISUAL_AND_MACHINE_PRESERVATION",
+  "date": "2026-11-10",
+  "registryVersion": "2026-11-10-r18",
+  "registrySha256": "0f6b53a352a8549cc4a66a34af7932c8e692f4dbe0280f0b13920a4eede35719",
+  "decks": 12,
+  "slides": 184,
+  "oldFullPagesPixelIdentical": 160,
+  "oldNotesPreserved": 160,
+  "oldImagesPreserved": true,
+  "newCurrentPages": 24,
+  "newCurrentBodiesPixelEquivalent": [
+    {
+      "name": "business",
+      "diagram": 1,
+      "pixelEquivalentToReference": true
+    },
+    {
+      "name": "business",
+      "diagram": 2,
+      "pixelEquivalentToReference": true
+    },
+    {
+      "name": "requirements",
+      "diagram": 1,
+      "pixelEquivalentToReference": true
+    },
+    {
+      "name": "requirements",
+      "diagram": 2,
+      "pixelEquivalentToReference": true
+    },
+    {
+      "name": "design",
+      "diagram": 1,
+      "pixelEquivalentToReference": true
+    },
+    {
+      "name": "design",
+      "diagram": 2,
+      "pixelEquivalentToReference": true
+    },
+    {
+      "name": "test-spec",
+      "diagram": 1,
+      "pixelEquivalentToReference": true
+    },
+    {
+      "name": "test-spec",
+      "diagram": 2,
+      "pixelEquivalentToReference": true
+    },
+    {
+      "name": "tasks",
+      "diagram": 1,
+      "pixelEquivalentToReference": true
+    },
+    {
+      "name": "tasks",
+      "diagram": 2,
+      "pixelEquivalentToReference": true
+    },
+    {
+      "name": "implementation",
+      "diagram": 1,
+      "pixelEquivalentToReference": true
+    },
+    {
+      "name": "implementation",
+      "diagram": 2,
+      "pixelEquivalentToReference": true
+    },
+    {
+      "name": "test-code",
+      "diagram": 1,
+      "pixelEquivalentToReference": true
+    },
+    {
+      "name": "test-code",
+      "diagram": 2,
+      "pixelEquivalentToReference": true
+    },
+    {
+      "name": "acceptance",
+      "diagram": 1,
+      "pixelEquivalentToReference": true
+    },
+    {
+      "name": "acceptance",
+      "diagram": 2,
+      "pixelEquivalentToReference": true
+    },
+    {
+      "name": "operations",
+      "diagram": 1,
+      "pixelEquivalentToReference": true
+    },
+    {
+      "name": "operations",
+      "diagram": 2,
+      "pixelEquivalentToReference": true
+    },
+    {
+      "name": "user",
+      "diagram": 1,
+      "pixelEquivalentToReference": true
+    },
+    {
+      "name": "user",
+      "diagram": 2,
+      "pixelEquivalentToReference": true
+    },
+    {
+      "name": "matrix",
+      "diagram": 1,
+      "pixelEquivalentToReference": true
+    },
+    {
+      "name": "matrix",
+      "diagram": 2,
+      "pixelEquivalentToReference": true
+    },
+    {
+      "name": "progress",
+      "diagram": 1,
+      "pixelEquivalentToReference": true
+    },
+    {
+      "name": "progress",
+      "diagram": 2,
+      "pixelEquivalentToReference": true
+    }
+  ],
+  "nativePowerPointVerified": false,
+  "limits": [
+    "Preserved 160 old pages are historical; current status is in r18 notes and 24 appended pages",
+    "Public anonymous frontend demo pass is separate from real Google, physical devices and customer acceptance",
+    "Customer0/6, productionHOLD; no customer fixture writes",
+    "Business prior21 layout warnings retained; no new warnings"
+  ],
+  "rows": [
+    {
+      "id": "PKG-01",
+      "name": "business",
+      "source": "docs/deliverables/2026-10-23-traceability/business-2026-11-07-v33.pptx",
+      "sourceSha256": "7798b1c695c4e07d17dd842aee8c60189fbe9c8a3c6e72db2b3a806d240dfc54",
+      "sourceSlides": 23,
+      "preservedBodySlides": 23,
+      "sourceMdPath": "docs/acceptance/01_BUSINESS_FLOWS.md",
+      "sourceMdSha256": "a6e780bfcacca7db3772836a2d39fb287b24bc7a7984908b243833a824d1a08d",
+      "final": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\outputs\\consumption-timing-20261110\\ppt-v34\\finalized\\business\\final\\business-2026-11-10-v34.pptx",
+      "sha256": "0ec9f200039757ca071ce3dbe3c7f832c1eab7f39eef419a581a2d5a47e5a14e",
+      "slides": 25,
+      "validation": {
+        "finding_count": 0,
+        "findings": [],
+        "font_policy": {
+          "checked_text_script_count": 980,
+          "native_font_rendering_verified": false,
+          "observed_font_families": [
+            "Yu Gothic"
+          ],
+          "observed_font_use_counts": {
+            "Yu Gothic": 980
+          },
+          "passed": true,
+          "performed": true
+        },
+        "slide_count": 25,
+        "slide_size_in": [
+          13.3333,
+          7.5
+        ],
+        "warning_count": 21,
+        "warnings": [
+          {
+            "kind": "substantial_text_frame_overlap",
+            "left_object_id": "30",
+            "overlap_height_in": 0.1458,
+            "overlap_width_in": 11.9271,
+            "right_object_id": "59",
+            "slide": 1
+          },
+          {
+            "kind": "substantial_text_frame_overlap",
+            "left_object_id": "30",
+            "overlap_height_in": 0.1458,
+            "overlap_width_in": 11.9271,
+            "right_object_id": "80",
+            "slide": 2
+          },
+          {
+            "kind": "substantial_text_frame_overlap",
+            "left_object_id": "37",
+            "overlap_height_in": 0.0938,
+            "overlap_width_in": 1.6042,
+            "right_object_id": "78",
+            "slide": 2
+          },
+          {
+            "kind": "substantial_text_frame_overlap",
+            "left_object_id": "30",
+            "overlap_height_in": 0.1458,
+            "overlap_width_in": 11.9271,
+            "right_object_id": "58",
+            "slide": 3
+          },
+          {
+            "kind": "substantial_text_frame_overlap",
+            "left_object_id": "30",
+            "overlap_height_in": 0.1458,
+            "overlap_width_in": 11.9271,
+            "right_object_id": "57",
+            "slide": 4
+          },
+          {
+            "kind": "substantial_text_frame_overlap",
+            "left_object_id": "30",
+            "overlap_height_in": 0.1458,
+            "overlap_width_in": 11.9271,
+            "right_object_id": "55",
+            "slide": 5
+          },
+          {
+            "kind": "substantial_text_frame_overlap",
+            "left_object_id": "30",
+            "overlap_height_in": 0.1458,
+            "overlap_width_in": 11.9271,
+            "right_object_id": "56",
+            "slide": 6
+          },
+          {
+            "kind": "substantial_text_frame_overlap",
+            "left_object_id": "30",
+            "overlap_height_in": 0.1458,
+            "overlap_width_in": 11.9271,
+            "right_object_id": "57",
+            "slide": 7
+          },
+          {
+            "kind": "substantial_text_frame_overlap",
+            "left_object_id": "30",
+            "overlap_height_in": 0.1458,
+            "overlap_width_in": 11.9271,
+            "right_object_id": "56",
+            "slide": 8
+          },
+          {
+            "kind": "substantial_text_frame_overlap",
+            "left_object_id": "30",
+            "overlap_height_in": 0.1458,
+            "overlap_width_in": 11.9271,
+            "right_object_id": "55",
+            "slide": 9
+          },
+          {
+            "kind": "substantial_text_frame_overlap",
+            "left_object_id": "30",
+            "overlap_height_in": 0.1458,
+            "overlap_width_in": 11.9271,
+            "right_object_id": "54",
+            "slide": 10
+          },
+          {
+            "kind": "substantial_text_frame_overlap",
+            "left_object_id": "30",
+            "overlap_height_in": 0.1458,
+            "overlap_width_in": 11.9271,
+            "right_object_id": "64",
+            "slide": 11
+          },
+          {
+            "kind": "substantial_text_frame_overlap",
+            "left_object_id": "10",
+            "overlap_height_in": 0.1562,
+            "overlap_width_in": 11.9271,
+            "right_object_id": "16",
+            "slide": 12
+          },
+          {
+            "kind": "substantial_text_frame_overlap",
+            "left_object_id": "10",
+            "overlap_height_in": 0.1562,
+            "overlap_width_in": 11.9271,
+            "right_object_id": "13",
+            "slide": 13
+          },
+          {
+            "kind": "substantial_text_frame_overlap",
+            "left_object_id": "10",
+            "overlap_height_in": 0.1562,
+            "overlap_width_in": 11.9271,
+            "right_object_id": "13",
+            "slide": 14
+          },
+          {
+            "kind": "substantial_text_frame_overlap",
+            "left_object_id": "10",
+            "overlap_height_in": 0.1562,
+            "overlap_width_in": 11.9271,
+            "right_object_id": "13",
+            "slide": 15
+          },
+          {
+            "kind": "substantial_text_frame_overlap",
+            "left_object_id": "10",
+            "overlap_height_in": 0.1562,
+            "overlap_width_in": 11.9271,
+            "right_object_id": "13",
+            "slide": 16
+          },
+          {
+            "kind": "substantial_text_frame_overlap",
+            "left_object_id": "10",
+            "overlap_height_in": 0.1562,
+            "overlap_width_in": 11.9271,
+            "right_object_id": "13",
+            "slide": 17
+          },
+          {
+            "kind": "substantial_text_frame_overlap",
+            "left_object_id": "10",
+            "overlap_height_in": 0.1562,
+            "overlap_width_in": 11.9271,
+            "right_object_id": "54",
+            "slide": 18
+          },
+          {
+            "kind": "substantial_text_frame_overlap",
+            "left_object_id": "10",
+            "overlap_height_in": 0.1562,
+            "overlap_width_in": 11.9271,
+            "right_object_id": "42",
+            "slide": 19
+          },
+          {
+            "kind": "substantial_text_frame_overlap",
+            "left_object_id": "10",
+            "overlap_height_in": 0.1562,
+            "overlap_width_in": 11.9271,
+            "right_object_id": "36",
+            "slide": 20
+          }
+        ],
+        "exitCode": 0,
+        "findingCount": 0,
+        "fontPolicy": {
+          "checked_text_script_count": 980,
+          "native_font_rendering_verified": false,
+          "observed_font_families": [
+            "Yu Gothic"
+          ],
+          "observed_font_use_counts": {
+            "Yu Gothic": 980
+          },
+          "passed": true,
+          "performed": true
+        }
+      },
+      "oldFullPagesPixelIdentical": 23,
+      "oldNotesPreserved": 23,
+      "oldImagesPreserved": true,
+      "currentGeneratedSourceInNotes": true,
+      "renderedFinalPages": 25,
+      "packageFindings": 0,
+      "layoutFindings": 0,
+      "layoutWarnings": 21,
+      "newWarnings": 0,
+      "reimportPassed": true,
+      "privateEmailsOrGoogleLinks": 0
+    },
+    {
+      "id": "PKG-02",
+      "name": "requirements",
+      "source": "docs/deliverables/2026-10-23-traceability/requirements-2026-11-07-v33.pptx",
+      "sourceSha256": "0ed29877d0e8a2d1987911e379b68774d9937ecb6418771ef1506368bc5e2ef7",
+      "sourceSlides": 12,
+      "preservedBodySlides": 12,
+      "sourceMdPath": "docs/acceptance/03_REQUIREMENTS.md",
+      "sourceMdSha256": "6c96747b41c21de657e9e76b44817cabc207d9a81165118946ff37813a3185c0",
+      "final": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\outputs\\consumption-timing-20261110\\ppt-v34\\finalized\\requirements\\final\\requirements-2026-11-10-v34.pptx",
+      "sha256": "cdd09b4d4e05e48131d4fa31db6dc1a8b03e6be8a959ce9c85fb05dd6e34131f",
+      "slides": 14,
+      "validation": {
+        "finding_count": 0,
+        "findings": [],
+        "font_policy": {
+          "checked_text_script_count": 334,
+          "native_font_rendering_verified": false,
+          "observed_font_families": [
+            "Yu Gothic"
+          ],
+          "observed_font_use_counts": {
+            "Yu Gothic": 334
+          },
+          "passed": true,
+          "performed": true
+        },
+        "slide_count": 14,
+        "slide_size_in": [
+          13.3333,
+          7.5
+        ],
+        "warning_count": 0,
+        "warnings": [],
+        "exitCode": 0,
+        "findingCount": 0,
+        "fontPolicy": {
+          "checked_text_script_count": 334,
+          "native_font_rendering_verified": false,
+          "observed_font_families": [
+            "Yu Gothic"
+          ],
+          "observed_font_use_counts": {
+            "Yu Gothic": 334
+          },
+          "passed": true,
+          "performed": true
+        }
+      },
+      "oldFullPagesPixelIdentical": 12,
+      "oldNotesPreserved": 12,
+      "oldImagesPreserved": true,
+      "currentGeneratedSourceInNotes": true,
+      "renderedFinalPages": 14,
+      "packageFindings": 0,
+      "layoutFindings": 0,
+      "layoutWarnings": 0,
+      "newWarnings": 0,
+      "reimportPassed": true,
+      "privateEmailsOrGoogleLinks": 0
+    },
+    {
+      "id": "PKG-03",
+      "name": "design",
+      "source": "docs/deliverables/2026-10-23-traceability/design-2026-11-07-v33.pptx",
+      "sourceSha256": "abda764ea15cf369d355de14538a5e7cef447944ed562053f24e3de5f5d0e79c",
+      "sourceSlides": 13,
+      "preservedBodySlides": 13,
+      "sourceMdPath": "docs/acceptance/04_FUNCTIONAL_SPEC.md",
+      "sourceMdSha256": "62ae7f173cf564401756f4be5e6e846458c0834d445c6105aaad59a15acd961d",
+      "final": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\outputs\\consumption-timing-20261110\\ppt-v34\\finalized\\design\\final\\design-2026-11-10-v34.pptx",
+      "sha256": "3d94a0b0599edf886793e17d3e032de681c068debad77c0da49cf66a4ae5aa29",
+      "slides": 15,
+      "validation": {
+        "finding_count": 0,
+        "findings": [],
+        "font_policy": {
+          "checked_text_script_count": 371,
+          "native_font_rendering_verified": false,
+          "observed_font_families": [
+            "Yu Gothic"
+          ],
+          "observed_font_use_counts": {
+            "Yu Gothic": 371
+          },
+          "passed": true,
+          "performed": true
+        },
+        "slide_count": 15,
+        "slide_size_in": [
+          13.3333,
+          7.5
+        ],
+        "warning_count": 0,
+        "warnings": [],
+        "exitCode": 0,
+        "findingCount": 0,
+        "fontPolicy": {
+          "checked_text_script_count": 371,
+          "native_font_rendering_verified": false,
+          "observed_font_families": [
+            "Yu Gothic"
+          ],
+          "observed_font_use_counts": {
+            "Yu Gothic": 371
+          },
+          "passed": true,
+          "performed": true
+        }
+      },
+      "oldFullPagesPixelIdentical": 13,
+      "oldNotesPreserved": 13,
+      "oldImagesPreserved": true,
+      "currentGeneratedSourceInNotes": true,
+      "renderedFinalPages": 15,
+      "packageFindings": 0,
+      "layoutFindings": 0,
+      "layoutWarnings": 0,
+      "newWarnings": 0,
+      "reimportPassed": true,
+      "privateEmailsOrGoogleLinks": 0
+    },
+    {
+      "id": "PKG-04",
+      "name": "test-spec",
+      "source": "docs/deliverables/2026-10-23-traceability/test-spec-2026-11-07-v33.pptx",
+      "sourceSha256": "709fd1447a8fed836958810b787c28168b4f6efc8ff4145e50dd8215d1561455",
+      "sourceSlides": 13,
+      "preservedBodySlides": 13,
+      "sourceMdPath": "docs/acceptance/17_TEST_SPEC.md",
+      "sourceMdSha256": "3c22536ee1f5323dd2b814e0a89e5ca6c1b60552e358a36fecb71acb5df4b10a",
+      "final": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\outputs\\consumption-timing-20261110\\ppt-v34\\finalized\\test-spec\\final\\test-spec-2026-11-10-v34.pptx",
+      "sha256": "f998fc3bc5db8a126f1a769faac892d2bb23f6e2eb2595d737f051fb95378fae",
+      "slides": 15,
+      "validation": {
+        "finding_count": 0,
+        "findings": [],
+        "font_policy": {
+          "checked_text_script_count": 354,
+          "native_font_rendering_verified": false,
+          "observed_font_families": [
+            "Yu Gothic"
+          ],
+          "observed_font_use_counts": {
+            "Yu Gothic": 354
+          },
+          "passed": true,
+          "performed": true
+        },
+        "slide_count": 15,
+        "slide_size_in": [
+          13.3333,
+          7.5
+        ],
+        "warning_count": 0,
+        "warnings": [],
+        "exitCode": 0,
+        "findingCount": 0,
+        "fontPolicy": {
+          "checked_text_script_count": 354,
+          "native_font_rendering_verified": false,
+          "observed_font_families": [
+            "Yu Gothic"
+          ],
+          "observed_font_use_counts": {
+            "Yu Gothic": 354
+          },
+          "passed": true,
+          "performed": true
+        }
+      },
+      "oldFullPagesPixelIdentical": 13,
+      "oldNotesPreserved": 13,
+      "oldImagesPreserved": true,
+      "currentGeneratedSourceInNotes": true,
+      "renderedFinalPages": 15,
+      "packageFindings": 0,
+      "layoutFindings": 0,
+      "layoutWarnings": 0,
+      "newWarnings": 0,
+      "reimportPassed": true,
+      "privateEmailsOrGoogleLinks": 0
+    },
+    {
+      "id": "PKG-05",
+      "name": "tasks",
+      "source": "docs/deliverables/2026-10-23-traceability/tasks-2026-11-07-v33.pptx",
+      "sourceSha256": "b5c1e8d564f8f588fc1ff4a47f322b3a29d6454f7bdd29b06a6d12caa358974f",
+      "sourceSlides": 15,
+      "preservedBodySlides": 15,
+      "sourceMdPath": "docs/acceptance/05_TASKS.md",
+      "sourceMdSha256": "3d47fbc8fd278831c4823b30bb2aa111a4ae1d5afc68b3bf6e5b526fec34f767",
+      "final": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\outputs\\consumption-timing-20261110\\ppt-v34\\finalized\\tasks\\final\\tasks-2026-11-10-v34.pptx",
+      "sha256": "26f9cc8aecb2cc31c94e3c8ba6358aa137b69bdac01cbff56f805ba91e2174a1",
+      "slides": 17,
+      "validation": {
+        "finding_count": 0,
+        "findings": [],
+        "font_policy": {
+          "checked_text_script_count": 399,
+          "native_font_rendering_verified": false,
+          "observed_font_families": [
+            "Yu Gothic"
+          ],
+          "observed_font_use_counts": {
+            "Yu Gothic": 399
+          },
+          "passed": true,
+          "performed": true
+        },
+        "slide_count": 17,
+        "slide_size_in": [
+          13.3333,
+          7.5
+        ],
+        "warning_count": 0,
+        "warnings": [],
+        "exitCode": 0,
+        "findingCount": 0,
+        "fontPolicy": {
+          "checked_text_script_count": 399,
+          "native_font_rendering_verified": false,
+          "observed_font_families": [
+            "Yu Gothic"
+          ],
+          "observed_font_use_counts": {
+            "Yu Gothic": 399
+          },
+          "passed": true,
+          "performed": true
+        }
+      },
+      "oldFullPagesPixelIdentical": 15,
+      "oldNotesPreserved": 15,
+      "oldImagesPreserved": true,
+      "currentGeneratedSourceInNotes": true,
+      "renderedFinalPages": 17,
+      "packageFindings": 0,
+      "layoutFindings": 0,
+      "layoutWarnings": 0,
+      "newWarnings": 0,
+      "reimportPassed": true,
+      "privateEmailsOrGoogleLinks": 0
+    },
+    {
+      "id": "PKG-06",
+      "name": "implementation",
+      "source": "docs/deliverables/2026-10-23-traceability/implementation-2026-11-07-v33.pptx",
+      "sourceSha256": "2463d6982418fac283dcebda8cf7c95371e7244c82d0574ae51b2bf2f5218383",
+      "sourceSlides": 13,
+      "preservedBodySlides": 13,
+      "sourceMdPath": "docs/acceptance/18_IMPLEMENTATION_INDEX.md",
+      "sourceMdSha256": "4730a3caa24115f1a86f5bd382ecc357d18c4dc1ff3f942aef22aeb4d7ea1009",
+      "final": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\outputs\\consumption-timing-20261110\\ppt-v34\\finalized\\implementation\\final\\implementation-2026-11-10-v34.pptx",
+      "sha256": "f4f4faecfc240f7dbe4828c325a77e119314d21d8cadd58c337fad3939d80d04",
+      "slides": 15,
+      "validation": {
+        "finding_count": 0,
+        "findings": [],
+        "font_policy": {
+          "checked_text_script_count": 337,
+          "native_font_rendering_verified": false,
+          "observed_font_families": [
+            "Yu Gothic"
+          ],
+          "observed_font_use_counts": {
+            "Yu Gothic": 337
+          },
+          "passed": true,
+          "performed": true
+        },
+        "slide_count": 15,
+        "slide_size_in": [
+          13.3333,
+          7.5
+        ],
+        "warning_count": 0,
+        "warnings": [],
+        "exitCode": 0,
+        "findingCount": 0,
+        "fontPolicy": {
+          "checked_text_script_count": 337,
+          "native_font_rendering_verified": false,
+          "observed_font_families": [
+            "Yu Gothic"
+          ],
+          "observed_font_use_counts": {
+            "Yu Gothic": 337
+          },
+          "passed": true,
+          "performed": true
+        }
+      },
+      "oldFullPagesPixelIdentical": 13,
+      "oldNotesPreserved": 13,
+      "oldImagesPreserved": true,
+      "currentGeneratedSourceInNotes": true,
+      "renderedFinalPages": 15,
+      "packageFindings": 0,
+      "layoutFindings": 0,
+      "layoutWarnings": 0,
+      "newWarnings": 0,
+      "reimportPassed": true,
+      "privateEmailsOrGoogleLinks": 0
+    },
+    {
+      "id": "PKG-07",
+      "name": "test-code",
+      "source": "docs/deliverables/2026-10-23-traceability/test-code-2026-11-07-v33.pptx",
+      "sourceSha256": "f7eea28fa998266f2bf7adb60ea3236d280127e7eb1c6520c503cd8e1dfa0c52",
+      "sourceSlides": 13,
+      "preservedBodySlides": 13,
+      "sourceMdPath": "docs/acceptance/19_TEST_CODE_INDEX.md",
+      "sourceMdSha256": "b813470be41f69197669aea5bf8267a5f6eee8b3689558cbad0e7ba42a0932ee",
+      "final": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\outputs\\consumption-timing-20261110\\ppt-v34\\finalized\\test-code\\final\\test-code-2026-11-10-v34.pptx",
+      "sha256": "e25f1dde7aec034df3c4d258a8eb92e6804a2df8381d72fa46468c127a9282a8",
+      "slides": 15,
+      "validation": {
+        "finding_count": 0,
+        "findings": [],
+        "font_policy": {
+          "checked_text_script_count": 334,
+          "native_font_rendering_verified": false,
+          "observed_font_families": [
+            "Yu Gothic"
+          ],
+          "observed_font_use_counts": {
+            "Yu Gothic": 334
+          },
+          "passed": true,
+          "performed": true
+        },
+        "slide_count": 15,
+        "slide_size_in": [
+          13.3333,
+          7.5
+        ],
+        "warning_count": 0,
+        "warnings": [],
+        "exitCode": 0,
+        "findingCount": 0,
+        "fontPolicy": {
+          "checked_text_script_count": 334,
+          "native_font_rendering_verified": false,
+          "observed_font_families": [
+            "Yu Gothic"
+          ],
+          "observed_font_use_counts": {
+            "Yu Gothic": 334
+          },
+          "passed": true,
+          "performed": true
+        }
+      },
+      "oldFullPagesPixelIdentical": 13,
+      "oldNotesPreserved": 13,
+      "oldImagesPreserved": true,
+      "currentGeneratedSourceInNotes": true,
+      "renderedFinalPages": 15,
+      "packageFindings": 0,
+      "layoutFindings": 0,
+      "layoutWarnings": 0,
+      "newWarnings": 0,
+      "reimportPassed": true,
+      "privateEmailsOrGoogleLinks": 0
+    },
+    {
+      "id": "PKG-08",
+      "name": "acceptance",
+      "source": "docs/deliverables/2026-10-23-traceability/acceptance-2026-11-07-v33.pptx",
+      "sourceSha256": "4f0d08d467a01fce45ea8b79320f8b656c714d8f952b750c41ac5eff9c17aafe",
+      "sourceSlides": 12,
+      "preservedBodySlides": 12,
+      "sourceMdPath": "docs/acceptance/06_ACCEPTANCE_TEST_SPEC.md",
+      "sourceMdSha256": "e162ba56dbf7fcf57e4f193103a09db65b721a92cef74439b56d2ba8741766cf",
+      "final": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\outputs\\consumption-timing-20261110\\ppt-v34\\finalized\\acceptance\\final\\acceptance-2026-11-10-v34.pptx",
+      "sha256": "887c4175f34e66d8c09243195375369b1588f2844952cb4ea2112c29d92bc4b1",
+      "slides": 14,
+      "validation": {
+        "finding_count": 0,
+        "findings": [],
+        "font_policy": {
+          "checked_text_script_count": 333,
+          "native_font_rendering_verified": false,
+          "observed_font_families": [
+            "Yu Gothic"
+          ],
+          "observed_font_use_counts": {
+            "Yu Gothic": 333
+          },
+          "passed": true,
+          "performed": true
+        },
+        "slide_count": 14,
+        "slide_size_in": [
+          13.3333,
+          7.5
+        ],
+        "warning_count": 0,
+        "warnings": [],
+        "exitCode": 0,
+        "findingCount": 0,
+        "fontPolicy": {
+          "checked_text_script_count": 333,
+          "native_font_rendering_verified": false,
+          "observed_font_families": [
+            "Yu Gothic"
+          ],
+          "observed_font_use_counts": {
+            "Yu Gothic": 333
+          },
+          "passed": true,
+          "performed": true
+        }
+      },
+      "oldFullPagesPixelIdentical": 12,
+      "oldNotesPreserved": 12,
+      "oldImagesPreserved": true,
+      "currentGeneratedSourceInNotes": true,
+      "renderedFinalPages": 14,
+      "packageFindings": 0,
+      "layoutFindings": 0,
+      "layoutWarnings": 0,
+      "newWarnings": 0,
+      "reimportPassed": true,
+      "privateEmailsOrGoogleLinks": 0
+    },
+    {
+      "id": "PKG-09",
+      "name": "operations",
+      "source": "docs/deliverables/2026-10-23-traceability/operations-2026-11-07-v33.pptx",
+      "sourceSha256": "97616ac306e31b16decfba568538b6125d5ecdd07b7f8161205c3868875b7309",
+      "sourceSlides": 12,
+      "preservedBodySlides": 12,
+      "sourceMdPath": "docs/acceptance/20_OPERATIONS.md",
+      "sourceMdSha256": "f5cd4af34c6d4a5482d0e64aedc1d4cf34eb30f8d9c224141c5b4b878ee94223",
+      "final": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\outputs\\consumption-timing-20261110\\ppt-v34\\finalized\\operations\\final\\operations-2026-11-10-v34.pptx",
+      "sha256": "cdcf8efdabe21917701fbdcf4fadece91e69c0717ea2760e22593db05ddba7a9",
+      "slides": 14,
+      "validation": {
+        "finding_count": 0,
+        "findings": [],
+        "font_policy": {
+          "checked_text_script_count": 332,
+          "native_font_rendering_verified": false,
+          "observed_font_families": [
+            "Yu Gothic"
+          ],
+          "observed_font_use_counts": {
+            "Yu Gothic": 332
+          },
+          "passed": true,
+          "performed": true
+        },
+        "slide_count": 14,
+        "slide_size_in": [
+          13.3333,
+          7.5
+        ],
+        "warning_count": 0,
+        "warnings": [],
+        "exitCode": 0,
+        "findingCount": 0,
+        "fontPolicy": {
+          "checked_text_script_count": 332,
+          "native_font_rendering_verified": false,
+          "observed_font_families": [
+            "Yu Gothic"
+          ],
+          "observed_font_use_counts": {
+            "Yu Gothic": 332
+          },
+          "passed": true,
+          "performed": true
+        }
+      },
+      "oldFullPagesPixelIdentical": 12,
+      "oldNotesPreserved": 12,
+      "oldImagesPreserved": true,
+      "currentGeneratedSourceInNotes": true,
+      "renderedFinalPages": 14,
+      "packageFindings": 0,
+      "layoutFindings": 0,
+      "layoutWarnings": 0,
+      "newWarnings": 0,
+      "reimportPassed": true,
+      "privateEmailsOrGoogleLinks": 0
+    },
+    {
+      "id": "PKG-10",
+      "name": "user",
+      "source": "docs/deliverables/2026-10-23-traceability/user-2026-11-07-v33.pptx",
+      "sourceSha256": "a66b5ff7fea5c2d1475d87218cf83bd779f58e164cce640e16c881cfd0b5ffeb",
+      "sourceSlides": 12,
+      "preservedBodySlides": 12,
+      "sourceMdPath": "docs/acceptance/21_USER_MANUAL.md",
+      "sourceMdSha256": "8dc8d2e4e3e2b97cb72a80069b4b3a6ebc24700370889c7dbf1a863cf87b0a01",
+      "final": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\outputs\\consumption-timing-20261110\\ppt-v34\\finalized\\user\\final\\user-2026-11-10-v34.pptx",
+      "sha256": "dbb7a67f0c6b0bcaa21656742e039f850e2f51d02303d4c16b6362ed841ec8a7",
+      "slides": 14,
+      "validation": {
+        "finding_count": 0,
+        "findings": [],
+        "font_policy": {
+          "checked_text_script_count": 326,
+          "native_font_rendering_verified": false,
+          "observed_font_families": [
+            "Yu Gothic"
+          ],
+          "observed_font_use_counts": {
+            "Yu Gothic": 326
+          },
+          "passed": true,
+          "performed": true
+        },
+        "slide_count": 14,
+        "slide_size_in": [
+          13.3333,
+          7.5
+        ],
+        "warning_count": 0,
+        "warnings": [],
+        "exitCode": 0,
+        "findingCount": 0,
+        "fontPolicy": {
+          "checked_text_script_count": 326,
+          "native_font_rendering_verified": false,
+          "observed_font_families": [
+            "Yu Gothic"
+          ],
+          "observed_font_use_counts": {
+            "Yu Gothic": 326
+          },
+          "passed": true,
+          "performed": true
+        }
+      },
+      "oldFullPagesPixelIdentical": 12,
+      "oldNotesPreserved": 12,
+      "oldImagesPreserved": true,
+      "currentGeneratedSourceInNotes": true,
+      "renderedFinalPages": 14,
+      "packageFindings": 0,
+      "layoutFindings": 0,
+      "layoutWarnings": 0,
+      "newWarnings": 0,
+      "reimportPassed": true,
+      "privateEmailsOrGoogleLinks": 0
+    },
+    {
+      "id": "PKG-11",
+      "name": "matrix",
+      "source": "docs/deliverables/2026-10-23-traceability/matrix-2026-11-07-v33.pptx",
+      "sourceSha256": "f97b8af56217d59eb7c9ca7c777d699a9e54b8e05ec5ea72a03ff8458dd2691c",
+      "sourceSlides": 10,
+      "preservedBodySlides": 10,
+      "sourceMdPath": "docs/acceptance/07_TRACEABILITY_MATRIX.md",
+      "sourceMdSha256": "8c4667c6943f81e7632b85c7dff905f5778ce9f97001501a65752cfcfce76c97",
+      "final": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\outputs\\consumption-timing-20261110\\ppt-v34\\finalized\\matrix\\final\\matrix-2026-11-10-v34.pptx",
+      "sha256": "dd378018e2e6d8e07e05c05f9c2353d8d3f8477d0e5b96231633e5a4af6c6037",
+      "slides": 12,
+      "validation": {
+        "finding_count": 0,
+        "findings": [],
+        "font_policy": {
+          "checked_text_script_count": 597,
+          "native_font_rendering_verified": false,
+          "observed_font_families": [
+            "Yu Gothic"
+          ],
+          "observed_font_use_counts": {
+            "Yu Gothic": 597
+          },
+          "passed": true,
+          "performed": true
+        },
+        "slide_count": 12,
+        "slide_size_in": [
+          13.3333,
+          7.5
+        ],
+        "warning_count": 0,
+        "warnings": [],
+        "exitCode": 0,
+        "findingCount": 0,
+        "fontPolicy": {
+          "checked_text_script_count": 597,
+          "native_font_rendering_verified": false,
+          "observed_font_families": [
+            "Yu Gothic"
+          ],
+          "observed_font_use_counts": {
+            "Yu Gothic": 597
+          },
+          "passed": true,
+          "performed": true
+        }
+      },
+      "oldFullPagesPixelIdentical": 10,
+      "oldNotesPreserved": 10,
+      "oldImagesPreserved": true,
+      "currentGeneratedSourceInNotes": true,
+      "renderedFinalPages": 12,
+      "packageFindings": 0,
+      "layoutFindings": 0,
+      "layoutWarnings": 0,
+      "newWarnings": 0,
+      "reimportPassed": true,
+      "privateEmailsOrGoogleLinks": 0
+    },
+    {
+      "id": "PKG-12",
+      "name": "progress",
+      "source": "docs/deliverables/2026-10-23-traceability/progress-2026-11-07-v33.pptx",
+      "sourceSha256": "9bd371ac08ca26d3ef3bd1079e904f8fa746291fa67ce11fe40272b8f93941fb",
+      "sourceSlides": 12,
+      "preservedBodySlides": 12,
+      "sourceMdPath": "docs/acceptance/08_ACCEPTANCE_RESULTS.md",
+      "sourceMdSha256": "0c14b33e092d101c8463101d1731a93cf9e47402d5070db67639c9254a44e1e1",
+      "final": "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\outputs\\consumption-timing-20261110\\ppt-v34\\finalized\\progress\\final\\progress-2026-11-10-v34.pptx",
+      "sha256": "2c575989b20e016a958c538ce3766af33821c754cf7b3775daea95e075ce5c19",
+      "slides": 14,
+      "validation": {
+        "finding_count": 0,
+        "findings": [],
+        "font_policy": {
+          "checked_text_script_count": 299,
+          "native_font_rendering_verified": false,
+          "observed_font_families": [
+            "Yu Gothic"
+          ],
+          "observed_font_use_counts": {
+            "Yu Gothic": 299
+          },
+          "passed": true,
+          "performed": true
+        },
+        "slide_count": 14,
+        "slide_size_in": [
+          13.3333,
+          7.5
+        ],
+        "warning_count": 0,
+        "warnings": [],
+        "exitCode": 0,
+        "findingCount": 0,
+        "fontPolicy": {
+          "checked_text_script_count": 299,
+          "native_font_rendering_verified": false,
+          "observed_font_families": [
+            "Yu Gothic"
+          ],
+          "observed_font_use_counts": {
+            "Yu Gothic": 299
+          },
+          "passed": true,
+          "performed": true
+        }
+      },
+      "oldFullPagesPixelIdentical": 12,
+      "oldNotesPreserved": 12,
+      "oldImagesPreserved": true,
+      "currentGeneratedSourceInNotes": true,
+      "renderedFinalPages": 14,
+      "packageFindings": 0,
+      "layoutFindings": 0,
+      "layoutWarnings": 0,
+      "newWarnings": 0,
+      "reimportPassed": true,
+      "privateEmailsOrGoogleLinks": 0
+    }
+  ],
+  "authorVisualReview": {
+    "referencePagesViewedAtFullSize": [
+      "business/roundtrip/24.png",
+      "business/roundtrip/25.png"
+    ],
+    "newPageBodiesMatchedToReferences": 24,
+    "olderPagesPixelEquivalentToPreviouslyReviewedV33": 160,
+    "findings": []
+  }
+}

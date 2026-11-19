@@ -1,0 +1,26 @@
+[
+  {
+    "path": "business-flow-2026-10-22-v3-mighty.pptx",
+    "sha256": "D9460FCF5CF44CFB4DB1870671A0FC047BE17E15D418225ADCF96EC09E4C16F0",
+    "provider": "artifact-tool",
+    "rights": "review-required",
+    "publication": "private",
+    "brief": "MightyLINKホームページ風の編集可能なビジネスフロー図3枚"
+  },
+  {
+    "path": "README.md",
+    "sha256": "001F0B8F366B31A875B6C614BFEC4F8CD5F48DA08F5564E8C67EF1CD4A1B7821",
+    "provider": "artifact-tool",
+    "rights": "review-required",
+    "publication": "private",
+    "brief": "MightyLINKホームページ風の編集可能なビジネスフロー図3枚"
+  },
+  {
+    "path": "validation-v3.json",
+    "sha256": "77FE3CAB4D502BCC81890E3465A1BF8903BA8DE4D14ACFC2E968AF617135ED45",
+    "provider": "artifact-tool",
+    "rights": "review-required",
+    "publication": "private",
+    "brief": "MightyLINKホームページ風の編集可能なビジネスフロー図3枚"
+  }
+]

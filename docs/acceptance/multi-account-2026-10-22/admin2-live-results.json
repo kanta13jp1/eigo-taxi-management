@@ -1,0 +1,32 @@
+{
+  "executedAt": "2026-10-22T11:24:18.467Z",
+  "mode": "Public test site; actual Google login and live GAS read; no business mutations",
+  "url": "https://eigo-taxi-test.web.app/#/admin",
+  "displayName": "Mighty 検証管理者2",
+  "checks": {
+    "login": "PASS",
+    "reloadIdentity": "PASS",
+    "studentsCount3": "PASS",
+    "ridesCount3": "PASS",
+    "adminOnlyNavigation": "PASS",
+    "logout": "PASS",
+    "reloadAfterLogout": "PASS"
+  },
+  "before": {
+    "identity": true,
+    "students": true,
+    "rides": true
+  },
+  "after": {
+    "identity": true,
+    "students": true,
+    "rides": true
+  },
+  "limitations": [
+    "Families A/B real Google verification pending",
+    "AT24-30 and third-party 30 acceptance not passed"
+  ],
+  "calendarPermissionsAdded": false,
+  "productionStarted": false,
+  "logoutExecutedAt": "2026-10-22T11:58:35.758Z"
+}

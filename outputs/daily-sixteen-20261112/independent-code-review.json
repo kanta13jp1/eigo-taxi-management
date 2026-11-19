@@ -1,0 +1,16 @@
+{
+  "reviewer": "lead agent independent of implementation worker",
+  "baseline": "6755531e1441c5d6",
+  "file": "src/components/TeacherDashboard.tsx",
+  "sha256": "cb11e7d99869ca14bc440c10232455464131d77eba570d3a9fc18cf4e2f298b2",
+  "checks": [
+    "Ref-based per-reservation guard is set synchronously before awaiting the completion callback",
+    "Rendered pending state uses an immutable Set snapshot and is shared by both internal dashboard lists",
+    "Only the target reservation is disabled and labelled as processing",
+    "Finally removes only the matching reservation id, preserving concurrent operations for other ids",
+    "Existing inline error handling and retry behavior retained",
+    "Workspace and staged source hashes match; service, consumption and authentication code unchanged"
+  ],
+  "pass": true,
+  "limitation": "This is a component-local request guard, not a cross-tab or server authorization guarantee. Delayed and repeated calls require focused test evidence."
+}
