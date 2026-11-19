@@ -1,8 +1,8 @@
 {
   "suite": "gas-vm-contract-and-fault-injection",
-  "generatedAt": "2026-11-10T12:46:30.531Z",
+  "generatedAt": "2026-11-19T16:43:27.271Z",
   "execution": "offline Node VM; Google services stubbed; no network/deployment",
-  "executedAt": "2026-11-10T12:46:30.531Z",
+  "executedAt": "2026-11-19T16:43:27.271Z",
   "mode": "GAS VM stubs, no real Google",
   "counts": {
     "total": 85,
@@ -45,7 +45,7 @@
       "name": "Initialization keeps 8/12/7 columns, preserves data, adds no sample students",
       "detail": "Offline GAS VM assertion: Initialization keeps 8/12/7 columns, preserves data, adds no sample students. Google service interactions are stubs; related real integration acceptance remains pending.",
       "status": "PASS",
-      "durationMs": 4
+      "durationMs": 5
     },
     {
       "id": "GAS-02",
@@ -87,7 +87,7 @@
       "name": "Missing/malformed/empty authentication configuration fails closed",
       "detail": "Offline GAS VM assertion: Missing/malformed/empty authentication configuration fails closed. Google service interactions are stubs; related real integration acceptance remains pending.",
       "status": "PASS",
-      "durationMs": 3
+      "durationMs": 1
     },
     {
       "id": "GAS-05",
@@ -131,7 +131,7 @@
       "name": "A parent with no assignments receives no student or ride data",
       "detail": "Offline GAS VM assertion: A parent with no assignments receives no student or ride data. Google service interactions are stubs; related real integration acceptance remains pending.",
       "status": "PASS",
-      "durationMs": 1
+      "durationMs": 2
     },
     {
       "id": "GAS-08",
@@ -189,7 +189,7 @@
       "name": "Cancellation affects only stored event ID and is idempotent",
       "detail": "Offline GAS VM assertion: Cancellation affects only stored event ID and is idempotent. Google service interactions are stubs; related real integration acceptance remains pending.",
       "status": "PASS",
-      "durationMs": 2
+      "durationMs": 1
     },
     {
       "id": "GAS-12",
@@ -219,7 +219,7 @@
       "name": "Duplicate completion consumes only once, including after other purchases",
       "detail": "Offline GAS VM assertion: Duplicate completion consumes only once, including after other purchases. Google service interactions are stubs; related real integration acceptance remains pending.",
       "status": "PASS",
-      "durationMs": 2
+      "durationMs": 1
     },
     {
       "id": "GAS-14",
@@ -294,7 +294,7 @@
       "name": "Negative/fraction/nonfinite/nonnumeric ticket quantities rejected before writes",
       "detail": "Offline GAS VM assertion: Negative/fraction/nonfinite/nonnumeric ticket quantities rejected before writes. Google service interactions are stubs; related real integration acceptance remains pending.",
       "status": "PASS",
-      "durationMs": 1
+      "durationMs": 2
     },
     {
       "id": "GAS-19",
@@ -428,7 +428,7 @@
       "name": "Completion rollback restores balance/status/timestamp for every failed write",
       "detail": "Offline GAS VM assertion: Completion rollback restores balance/status/timestamp for every failed write. Google service interactions are stubs; related real integration acceptance remains pending.",
       "status": "PASS",
-      "durationMs": 9
+      "durationMs": 8
     },
     {
       "id": "GAS-28",
@@ -664,7 +664,7 @@
       "name": "Google token verified by fixed configured project endpoint before allowlist role is returned",
       "detail": "Offline GAS VM assertion: Google token verified by fixed configured project endpoint before allowlist role is returned. Google service interactions are stubs; related real integration acceptance remains pending.",
       "status": "PASS",
-      "durationMs": 3
+      "durationMs": 1
     },
     {
       "id": "GAS-45",
@@ -694,7 +694,7 @@
       "name": "Lookup must resolve one enabled matching UID with verified Google identity",
       "detail": "Offline GAS VM assertion: Lookup must resolve one enabled matching UID with verified Google identity. Google service interactions are stubs; related real integration acceptance remains pending.",
       "status": "PASS",
-      "durationMs": 7
+      "durationMs": 8
     },
     {
       "id": "GAS-48",
@@ -814,7 +814,7 @@
       "name": "Self deletion/demotion/disable refused and stale revision cannot overwrite changes",
       "detail": "Offline GAS VM assertion: Self deletion/demotion/disable refused and stale revision cannot overwrite changes. Google service interactions are stubs; related real integration acceptance remains pending.",
       "status": "PASS",
-      "durationMs": 2
+      "durationMs": 1
     },
     {
       "id": "GAS-60",
@@ -964,7 +964,7 @@
       "name": "Normal create/replay/cancel/replay touches only the configured calendar despite request overrides",
       "detail": "Offline GAS VM assertion: Normal create/replay/cancel/replay touches only the configured calendar despite request overrides. Google service interactions are stubs; related real integration acceptance remains pending.",
       "status": "PASS",
-      "durationMs": 1
+      "durationMs": 2
     },
     {
       "id": "GAS-75",
@@ -974,7 +974,7 @@
       "name": "Same verified UID enters both views with only public fields, without Calendar access or registry changes",
       "detail": "Offline GAS VM assertion: Same verified UID enters both views with only public fields, without Calendar access or registry changes. Google service interactions are stubs; related real integration acceptance remains pending.",
       "status": "PASS",
-      "durationMs": 1
+      "durationMs": 2
     },
     {
       "id": "GAS-76",
@@ -1004,7 +1004,7 @@
       "name": "Neither reviewer view can create students, see invitations, or read, change or delete user configuration",
       "detail": "Offline GAS VM assertion: Neither reviewer view can create students, see invitations, or read, change or delete user configuration. Google service interactions are stubs; related real integration acceptance remains pending.",
       "status": "PASS",
-      "durationMs": 2
+      "durationMs": 3
     },
     {
       "id": "GAS-79",
@@ -1024,7 +1024,7 @@
       "name": "Unpinned, blank, differently pinned or padded spreadsheet IDs deny reviewer use and provisioning and hide review capability",
       "detail": "Offline GAS VM assertion: Unpinned, blank, differently pinned or padded spreadsheet IDs deny reviewer use and provisioning and hide review capability. Google service interactions are stubs; related real integration acceptance remains pending.",
       "status": "PASS",
-      "durationMs": 10
+      "durationMs": 9
     },
     {
       "id": "GAS-81",
@@ -1034,7 +1034,7 @@
       "name": "Reviewer requires a nonempty bounded valid scope and a valid unique invitation in the server registry",
       "detail": "Offline GAS VM assertion: Reviewer requires a nonempty bounded valid scope and a valid unique invitation in the server registry. Google service interactions are stubs; related real integration acceptance remains pending.",
       "status": "PASS",
-      "durationMs": 7
+      "durationMs": 8
     },
     {
       "id": "GAS-82",
@@ -1054,7 +1054,7 @@
       "name": "Full admin can provision, rotate and retain reviewer links on role conversion and cannot bypass revision, student, self and uniqueness checks",
       "detail": "Offline GAS VM assertion: Full admin can provision, rotate and retain reviewer links on role conversion and cannot bypass revision, student, self and uniqueness checks. Google service interactions are stubs; related real integration acceptance remains pending.",
       "status": "PASS",
-      "durationMs": 5
+      "durationMs": 4
     },
     {
       "id": "GAS-84",
@@ -1074,8 +1074,8 @@
       "name": "Recheck under lock pins the verified UID, current scope, role and spreadsheet before writing",
       "detail": "Offline GAS VM assertion: Recheck under lock pins the verified UID, current scope, role and spreadsheet before writing. Google service interactions are stubs; related real integration acceptance remains pending.",
       "status": "PASS",
-      "durationMs": 4
+      "durationMs": 3
     }
   ],
-  "reportFile": "docs/acceptance/service-checks/2026-11-10T12-46-30-531Z/gas-results.json"
+  "reportFile": "docs/acceptance/service-checks/2026-11-19T16-43-27-271Z/gas-results.json"
 }

@@ -2,7 +2,7 @@ const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/st
 const QRCode=require('qrcode');
 const storage=()=>{const m=new Map();return {getItem:k=>m.get(k)||null,setItem:(k,v)=>m.set(k,String(v)),removeItem:k=>m.delete(k)}};
 const localStorage=storage(),sessionStorage=storage();let responder,requests=[],requestUrls=[],idToken='synthetic-id-token',googleUnavailable=false,signOutCalls=0;
-const env={console,URL,Date,crypto:crypto.webcrypto,localStorage,sessionStorage,Event,DOMException,AbortSignal,window:{dispatchEvent:()=>{}},fetch:async(url,opts)=>{const body=JSON.parse(opts.body);requests.push(body);requestUrls.push(url);return {ok:true,json:async()=>responder(body)}}};
+const env={console,URL,Date,structuredClone,crypto:crypto.webcrypto,localStorage,sessionStorage,Event,CustomEvent,DOMException,AbortSignal,window:{dispatchEvent:()=>{}},fetch:async(url,opts)=>{const body=JSON.parse(opts.body);requests.push(body);requestUrls.push(url);return {ok:true,json:async()=>responder(body)}}};
 function load(file,requireFn=require){const exports={};vm.runInNewContext(ts.transpileModule(fs.readFileSync(file,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022}}).outputText,{...env,exports,require:requireFn});return exports;}
 const config=load('src/deployment-config.ts');
 const configured={...config.deploymentConfig,firebase:{apiKey:'synthetic-public-api-key-000000000000',authDomain:'eigo-taxi-app.firebaseapp.com',projectId:'eigo-taxi-app',appId:'1:123456789:web:abcdef'}};

@@ -1,0 +1,20 @@
+{
+  "executedAt": "2026-11-19T16:46:40.307Z",
+  "mode": "Offline Node VM; actual App handlers with synthetic React hooks and API responses; no browser or real Google operation",
+  "command": [
+    "node",
+    "scripts/test_reservation_retry_ui.cjs"
+  ],
+  "stdout": "PASS Reservation replay updates one dashboard row, preserves terminal state and inserts new IDs\n",
+  "sourceHashes": {
+    "src/App.tsx": "1f6251c7c70b403b25e9a4cd55bd8d22d6881d42735bd964f93b99105ca87cb1",
+    "scripts/test_reservation_retry_ui.cjs": "cdc3b0a72991daa58639d1f61c83626fb850db1e64fea8eb0916521a835dda75"
+  },
+  "results": [
+    {
+      "id": "RETRY-UI-01",
+      "name": "Reservation replay merges one row, preserves terminal state, inserts a new ID",
+      "status": "PASS"
+    }
+  ]
+}

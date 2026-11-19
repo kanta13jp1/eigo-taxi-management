@@ -1,0 +1,31 @@
+{
+  "url": "https://eigo-taxi-test.web.app",
+  "checkedAt": "2026-11-19T16:41:59.000Z",
+  "release": {
+    "environment": "mighty-test",
+    "projectId": "eigo-taxi-app",
+    "siteId": "eigo-taxi-test",
+    "builtAt": "2026-11-19T16:41:13.911Z",
+    "sourceDigest": "5138e1a569360502cb08db166b5694ab6ca5707c0f414c3849b1bdb1f9c3cf6a"
+  },
+  "publicVerification": "docs/acceptance/deployment-verification/public-2026-11-19T16-41-52-458Z.json",
+  "cumulativeCounts": {
+    "fixesTotal": 34,
+    "fable52PriorFixes": 2,
+    "subsequentFixes": 32,
+    "acceptanceTestsTotal": 34
+  },
+  "results": {
+    "SAT-36": {
+      "status": "PASS",
+      "scope": "Isolated anonymous admin demo on live Firebase Hosting; completed ride timestamp rendered in schedule table",
+      "completedRow": "2026-11-20 16:00\t田中 陽菜 (ひな)\tお迎え\t東京都世田谷区桜新町1-10-5 パークサイド201\t保護者予約\t完了済 (-1回) 2026/11/20 1:41:56",
+      "errors": []
+    },
+    "SAT-39": {
+      "status": "PASS",
+      "scope": "Isolated anonymous admin & parent demos on live Firebase Hosting; 10 tickets added (0 yen), balance 1 -> 11, low-balance warning cleared, post-logout reload hides ledger",
+      "errors": []
+    }
+  }
+}

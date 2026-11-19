@@ -1,0 +1,19 @@
+{
+  "executedAt": "2026-11-19T16:46:16.200Z",
+  "mode": "Node VM; synthetic React hooks and stubbed setup; no browser or real Google login",
+  "sourceHashes": {
+    "src/components/LoginScreen.tsx": "9a4b0704d319c727e93b4030eac1c770c20287f8b4bf8fc620ed087a8dd72661",
+    "scripts/test_google_auth_retry_ui.cjs": "6b9819277a497984c64ded87c9fbe5e72e7fd6b1b7bdc0c97d890ee0a94d4e99"
+  },
+  "results": [
+    {
+      "id": "UI-07",
+      "name": "Retry initialization after a transient setup failure",
+      "status": "PASS"
+    },
+    {
+      "name": "Prepare again after a failed login before the next popup click",
+      "status": "PASS"
+    }
+  ]
+}

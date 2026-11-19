@@ -450,9 +450,14 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
                               </span>
                             )}
                             {ride.status === 'completed' && (
-                              <span className="text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full font-bold text-[11px]">
-                                完了済 (-{typeInfo.consume}回)
-                              </span>
+                              <div className="inline-flex flex-col gap-0.5">
+                                <span className="text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full font-bold text-[11px] w-fit">
+                                  完了済 (-{typeInfo.consume}回)
+                                </span>
+                                {ride.completedAt && (
+                                  <span className="text-[10px] text-slate-400">{ride.completedAt}</span>
+                                )}
+                              </div>
                             )}
                             {ride.status === 'cancelled' && (
                               <span className="text-slate-500 bg-slate-100 px-2 py-0.5 rounded-full font-medium text-[11px]">

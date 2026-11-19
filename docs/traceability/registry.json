@@ -3607,7 +3607,7 @@
       "category": "frontend-contract",
       "scope": "未配備コード。Firebase SDKスタブで認証準備の一時失敗後に再試行できることを検証。実Google・iPhoneのエラー原因は対象外。",
       "evidence": {
-        "path": "docs/traceability/reports/signout-retry-20261030-local/google-sdk-contract.json",
+        "path": "outputs/refresh-20261120/offline/google-sdk-contract.json",
         "key": "Preparation can recover from a transient persistence failure without reloading",
         "requiredSources": [
           "src/services/google-auth.ts",
@@ -3626,7 +3626,7 @@
       "category": "frontend-contract",
       "scope": "未配備コード。疑似Reactフックとスタブで再試行ボタンの状態を検証。実ブラウザー・実機・本人操作ではない。",
       "evidence": {
-        "path": "outputs/r19-adoption-20261111/regression/login/google-auth-retry-ui.json",
+        "path": "outputs/refresh-20261120/offline/google-auth-retry-ui.json",
         "key": "UI-07",
         "requiredSources": [
           "src/components/LoginScreen.tsx",
@@ -3644,7 +3644,7 @@
       "mode": "offline-mutation",
       "category": "trace-checker",
       "evidence": {
-        "path": "outputs/async-review-20261107/independent-docs/checker-tests.json",
+        "path": "outputs/refresh-20261120/offline/checker-tests.json",
         "key": "TRACE-01",
         "requiredSources": [
           "scripts/traceability.py",
@@ -3662,7 +3662,7 @@
       "mode": "offline-mutation",
       "category": "trace-checker",
       "evidence": {
-        "path": "outputs/async-review-20261107/independent-docs/checker-tests.json",
+        "path": "outputs/refresh-20261120/offline/checker-tests.json",
         "key": "TRACE-02",
         "requiredSources": [
           "scripts/traceability.py",
@@ -3680,7 +3680,7 @@
       "mode": "offline-mutation",
       "category": "trace-checker",
       "evidence": {
-        "path": "outputs/async-review-20261107/independent-docs/checker-tests.json",
+        "path": "outputs/refresh-20261120/offline/checker-tests.json",
         "key": "TRACE-03",
         "requiredSources": [
           "scripts/traceability.py",
@@ -3698,7 +3698,7 @@
       "mode": "offline-mutation",
       "category": "trace-checker",
       "evidence": {
-        "path": "outputs/async-review-20261107/independent-docs/checker-tests.json",
+        "path": "outputs/refresh-20261120/offline/checker-tests.json",
         "key": "TRACE-04",
         "requiredSources": [
           "scripts/traceability.py",
@@ -3716,7 +3716,7 @@
       "mode": "offline-mutation",
       "category": "trace-checker",
       "evidence": {
-        "path": "outputs/async-review-20261107/independent-docs/checker-tests.json",
+        "path": "outputs/refresh-20261120/offline/checker-tests.json",
         "key": "TRACE-05",
         "requiredSources": [
           "scripts/traceability.py",
@@ -3734,7 +3734,7 @@
       "mode": "offline-mutation",
       "category": "trace-checker",
       "evidence": {
-        "path": "outputs/async-review-20261107/independent-docs/checker-tests.json",
+        "path": "outputs/refresh-20261120/offline/checker-tests.json",
         "key": "TRACE-06",
         "requiredSources": [
           "scripts/traceability.py",
@@ -3752,7 +3752,7 @@
       "mode": "offline-mutation",
       "category": "trace-checker",
       "evidence": {
-        "path": "outputs/async-review-20261107/independent-docs/checker-tests.json",
+        "path": "outputs/refresh-20261120/offline/checker-tests.json",
         "key": "TRACE-07",
         "requiredSources": [
           "scripts/traceability.py",
@@ -3770,7 +3770,7 @@
       "mode": "offline-mutation",
       "category": "trace-checker",
       "evidence": {
-        "path": "outputs/async-review-20261107/independent-docs/checker-tests.json",
+        "path": "outputs/refresh-20261120/offline/checker-tests.json",
         "key": "TRACE-08",
         "requiredSources": [
           "scripts/traceability.py",
@@ -3788,7 +3788,7 @@
       "mode": "offline-mutation",
       "category": "trace-checker",
       "evidence": {
-        "path": "outputs/async-review-20261107/independent-docs/checker-tests.json",
+        "path": "outputs/refresh-20261120/offline/checker-tests.json",
         "key": "TRACE-09",
         "requiredSources": [
           "scripts/traceability.py",
@@ -3806,7 +3806,7 @@
       "mode": "offline-mutation",
       "category": "trace-checker",
       "evidence": {
-        "path": "outputs/async-review-20261107/independent-docs/checker-tests.json",
+        "path": "outputs/refresh-20261120/offline/checker-tests.json",
         "key": "TRACE-10",
         "requiredSources": [
           "scripts/traceability.py",
@@ -3824,7 +3824,7 @@
       "mode": "offline-mutation",
       "category": "trace-checker",
       "evidence": {
-        "path": "outputs/async-review-20261107/independent-docs/checker-tests.json",
+        "path": "outputs/refresh-20261120/offline/checker-tests.json",
         "key": "TRACE-11",
         "requiredSources": [
           "scripts/traceability.py",
@@ -3842,7 +3842,7 @@
       "mode": "offline-mutation",
       "category": "trace-checker",
       "evidence": {
-        "path": "outputs/async-review-20261107/independent-docs/checker-tests.json",
+        "path": "outputs/refresh-20261120/offline/checker-tests.json",
         "key": "TRACE-12",
         "requiredSources": [
           "scripts/traceability.py",
@@ -3909,7 +3909,7 @@
       ],
       "scope": "ローカルのコンポーネントまたはGAS処理契約の自動検査。本人操作の実受入合格は別。",
       "evidence": {
-        "path": "outputs/async-review-20261107/independent-backend/2026-11-07T08-59-32-465Z/gas-results.json",
+        "path": "docs/acceptance/service-checks/2026-11-19T16-43-27-271Z/gas-results.json",
         "key": "GAS-63",
         "requiredSources": [
           "gas/Code.gs",
@@ -3926,7 +3926,7 @@
       ],
       "scope": "ローカルのコンポーネントまたはGAS処理契約の自動検査。本人操作の実受入合格は別。",
       "evidence": {
-        "path": "outputs/async-review-20261107/independent-backend/2026-11-07T08-59-32-465Z/gas-results.json",
+        "path": "docs/acceptance/service-checks/2026-11-19T16-43-27-271Z/gas-results.json",
         "key": "GAS-64",
         "requiredSources": [
           "gas/Code.gs",
@@ -3943,7 +3943,7 @@
       ],
       "scope": "ローカルのコンポーネントまたはGAS処理契約の自動検査。本人操作の実受入合格は別。",
       "evidence": {
-        "path": "outputs/async-review-20261107/independent-backend/2026-11-07T08-59-32-465Z/gas-results.json",
+        "path": "docs/acceptance/service-checks/2026-11-19T16-43-27-271Z/gas-results.json",
         "key": "GAS-65",
         "requiredSources": [
           "gas/Code.gs",
@@ -3985,7 +3985,7 @@
       ],
       "scope": "ローカルのコンポーネントまたはGAS処理契約の自動検査。本人操作の実受入合格は別。",
       "evidence": {
-        "path": "outputs/async-review-20261107/independent-backend/2026-11-07T08-59-32-465Z/gas-results.json",
+        "path": "docs/acceptance/service-checks/2026-11-19T16-43-27-271Z/gas-results.json",
         "key": "GAS-66",
         "requiredSources": [
           "gas/Code.gs",
@@ -4052,7 +4052,7 @@
       ],
       "scope": "実ApiServiceのデモ保存と新インスタンス再取得を検証。実Google台帳の永続化受入は別。",
       "evidence": {
-        "path": "outputs/r19-adoption-20261111/frontend-contract-normalized.json",
+        "path": "outputs/refresh-20261120/offline/frontend-contract.json",
         "key": "Fresh service instance reload retains created student and reservation IDs and values in demo storage",
         "requiredSources": [
           "src/deployment-config.ts",
@@ -4072,7 +4072,7 @@
       ],
       "scope": "GASのCalendarアダプタ契約と予定説明欄の予約IDをスタブで検証。実Calendar同期の受入AT-24は未完。",
       "evidence": {
-        "path": "outputs/async-review-20261107/independent-backend/2026-11-07T08-59-32-465Z/gas-results.json",
+        "path": "docs/acceptance/service-checks/2026-11-19T16-43-27-271Z/gas-results.json",
         "key": "GAS-67",
         "requiredSources": [
           "gas/Code.gs",
@@ -4089,7 +4089,7 @@
       ],
       "scope": "GASの取消アダプタ契約をスタブで検証。実Calendar削除の受入AT-25は未完。",
       "evidence": {
-        "path": "outputs/async-review-20261107/independent-backend/2026-11-07T08-59-32-465Z/gas-results.json",
+        "path": "docs/acceptance/service-checks/2026-11-19T16-43-27-271Z/gas-results.json",
         "key": "GAS-68",
         "requiredSources": [
           "gas/Code.gs",
@@ -4131,7 +4131,7 @@
       ],
       "scope": "配布マニフェスト作成を隔離VMで検証。本番公開後の疎通・復旧確認AT-30は未実施。",
       "evidence": {
-        "path": "docs/traceability/reports/r2/offline/release-contract.json",
+        "path": "outputs/refresh-20261120/offline/release-contract.json",
         "key": "REL-01",
         "requiredSources": [
           "scripts/prepare_test_release.cjs",
@@ -4148,7 +4148,7 @@
       ],
       "scope": "分離したメモリ台帳で次回取得・非連動を検証。実Google資源の手修正手順と保全は別。",
       "evidence": {
-        "path": "outputs/async-review-20261107/independent-backend/2026-11-07T08-59-32-465Z/gas-results.json",
+        "path": "docs/acceptance/service-checks/2026-11-19T16-43-27-271Z/gas-results.json",
         "key": "GAS-69",
         "requiredSources": [
           "gas/Code.gs",
@@ -4165,7 +4165,7 @@
       ],
       "scope": "正常な取消→新規と、Calendar結果不明時の再送禁止・照合待ちを検証。日時・場所の原子的編集ではない。",
       "evidence": {
-        "path": "outputs/async-review-20261107/independent-backend/2026-11-07T08-59-32-465Z/gas-results.json",
+        "path": "docs/acceptance/service-checks/2026-11-19T16-43-27-271Z/gas-results.json",
         "key": "GAS-70",
         "requiredSources": [
           "gas/Code.gs",
@@ -4181,7 +4181,7 @@
         "REQ-38"
       ],
       "evidence": {
-        "path": "outputs/async-review-20261107/independent-docs/checker-tests.json",
+        "path": "outputs/refresh-20261120/offline/checker-tests.json",
         "key": "TRACE-13",
         "requiredSources": [
           "scripts/traceability.py",
@@ -4197,7 +4197,7 @@
         "REQ-38"
       ],
       "evidence": {
-        "path": "outputs/async-review-20261107/independent-docs/checker-tests.json",
+        "path": "outputs/refresh-20261120/offline/checker-tests.json",
         "key": "TRACE-14",
         "requiredSources": [
           "scripts/traceability.py",
@@ -4217,7 +4217,7 @@
       "category": "frontend-contract",
       "scope": "未配備のローカル認証変更をFirebase SDKスタブで検証。実Google・iPhoneの認証エラーの原因や解消を証明しない。",
       "evidence": {
-        "path": "docs/traceability/reports/signout-retry-20261030-local/google-signout-retry.json",
+        "path": "outputs/refresh-20261120/offline/google-signout-retry.json",
         "key": "Failure keeps previous user blocked until a real sign-out retry succeeds",
         "requiredSources": [
           "src/services/google-auth.ts",
@@ -4237,7 +4237,7 @@
       "category": "frontend-contract",
       "scope": "未配備のローカル認証変更をFirebase SDKスタブで検証。実Google・iPhoneの認証エラーの原因や解消を証明しない。",
       "evidence": {
-        "path": "docs/traceability/reports/signout-retry-20261030-local/google-signout-retry.json",
+        "path": "outputs/refresh-20261120/offline/google-signout-retry.json",
         "key": "A pending logout blocks popup and token and concurrent preparation shares it",
         "requiredSources": [
           "src/services/google-auth.ts",
@@ -4257,7 +4257,7 @@
       "category": "frontend-contract",
       "scope": "未配備のローカル認証変更をFirebase SDKスタブで検証。実Google・iPhoneの認証エラーの原因や解消を証明しない。",
       "evidence": {
-        "path": "docs/traceability/reports/signout-retry-20261030-local/google-signout-retry.json",
+        "path": "outputs/refresh-20261120/offline/google-signout-retry.json",
         "key": "Concurrent preparations after a failed logout share one real retry",
         "requiredSources": [
           "src/services/google-auth.ts",
@@ -4277,7 +4277,7 @@
       "category": "frontend-contract",
       "scope": "未配備のローカル認証変更をFirebase SDKスタブで検証。実Google・iPhoneの認証エラーの原因や解消を証明しない。",
       "evidence": {
-        "path": "docs/traceability/reports/signout-retry-20261030-local/google-signout-retry.json",
+        "path": "outputs/refresh-20261120/offline/google-signout-retry.json",
         "key": "Logout during initialization does not reopen the popup before logout finishes",
         "requiredSources": [
           "src/services/google-auth.ts",
@@ -4297,7 +4297,7 @@
       "category": "frontend-contract",
       "scope": "未配備のローカル認証変更をFirebase SDKスタブで検証。実Google・iPhoneの認証エラーの原因や解消を証明しない。",
       "evidence": {
-        "path": "docs/traceability/reports/signout-retry-20261030-local/google-signout-retry.json",
+        "path": "outputs/refresh-20261120/offline/google-signout-retry.json",
         "key": "A failed initialization does not discard the SDK instance needed for logout",
         "requiredSources": [
           "src/services/google-auth.ts",
@@ -4317,7 +4317,7 @@
       "category": "frontend-contract",
       "scope": "未配備のローカル認証変更をFirebase SDKスタブで検証。実Google・iPhoneの認証エラーの原因や解消を証明しない。",
       "evidence": {
-        "path": "docs/traceability/reports/signout-retry-20261030-local/google-signout-retry.json",
+        "path": "outputs/refresh-20261120/offline/google-signout-retry.json",
         "key": "A popup completing after logout is cleared before login can resume",
         "requiredSources": [
           "src/services/google-auth.ts",
@@ -4337,7 +4337,7 @@
       "category": "frontend-contract",
       "scope": "未配備のローカル認証変更をFirebase SDKスタブで検証。実Google・iPhoneの認証エラーの原因や解消を証明しない。",
       "evidence": {
-        "path": "docs/traceability/reports/signout-retry-20261030-local/google-signout-retry.json",
+        "path": "outputs/refresh-20261120/offline/google-signout-retry.json",
         "key": "A later queued logout keeps the gate closed even if an earlier logout fails",
         "requiredSources": [
           "src/services/google-auth.ts",
@@ -4357,7 +4357,7 @@
       "category": "frontend-contract",
       "scope": "未配備のローカル認証変更をFirebase SDKスタブで検証。実Google・iPhoneの認証エラーの原因や解消を証明しない。",
       "evidence": {
-        "path": "docs/traceability/reports/signout-retry-20261030-local/google-signout-retry.json",
+        "path": "outputs/refresh-20261120/offline/google-signout-retry.json",
         "key": "A late login token is rejected even after logout has completed",
         "requiredSources": [
           "src/services/google-auth.ts",
@@ -4377,7 +4377,7 @@
       "category": "frontend-contract",
       "scope": "未配備のローカル認証変更をFirebase SDKスタブで検証。実Google・iPhoneの認証エラーの原因や解消を証明しない。",
       "evidence": {
-        "path": "docs/traceability/reports/signout-retry-20261030-local/google-signout-retry.json",
+        "path": "outputs/refresh-20261120/offline/google-signout-retry.json",
         "key": "An in-flight data token is rejected if logout completes first",
         "requiredSources": [
           "src/services/google-auth.ts",
@@ -4397,7 +4397,7 @@
       "category": "frontend-contract",
       "scope": "未配備コード。疑似Reactフックでログイン失敗後の再準備を確認。実Google・実機は未検証。",
       "evidence": {
-        "path": "outputs/r19-adoption-20261111/regression/login/google-auth-retry-ui.json",
+        "path": "outputs/refresh-20261120/offline/google-auth-retry-ui.json",
         "key": "Prepare again after a failed login before the next popup click",
         "requiredSources": [
           "src/components/LoginScreen.tsx",
@@ -4416,7 +4416,7 @@
       "category": "trace-checker",
       "scope": "ローカル一時ディレクトリでレビュー基準未登録・登録からの削除・変更または欠落を検証。人のレビューと実環境受入は別。",
       "evidence": {
-        "path": "outputs/async-review-20261107/independent-docs/checker-tests.json",
+        "path": "outputs/refresh-20261120/offline/checker-tests.json",
         "key": "TRACE-15",
         "requiredSources": [
           "scripts/traceability.py",
@@ -4435,7 +4435,7 @@
       "category": "trace-checker",
       "scope": "ローカル一時ディレクトリでレビュー基準未登録・登録からの削除・変更または欠落を検証。人のレビューと実環境受入は別。",
       "evidence": {
-        "path": "outputs/async-review-20261107/independent-docs/checker-tests.json",
+        "path": "outputs/refresh-20261120/offline/checker-tests.json",
         "key": "TRACE-16",
         "requiredSources": [
           "scripts/traceability.py",
@@ -4454,7 +4454,7 @@
       "category": "trace-checker",
       "scope": "ローカル一時ディレクトリでレビュー基準未登録・登録からの削除・変更または欠落を検証。人のレビューと実環境受入は別。",
       "evidence": {
-        "path": "outputs/async-review-20261107/independent-docs/checker-tests.json",
+        "path": "outputs/refresh-20261120/offline/checker-tests.json",
         "key": "TRACE-17",
         "requiredSources": [
           "scripts/traceability.py",
@@ -4473,7 +4473,7 @@
       "category": "trace-checker",
       "scope": "ローカル一時ディレクトリでレビュー基準ファイルの不在・破損を検証。人のレビューと実環境受入は別。",
       "evidence": {
-        "path": "outputs/async-review-20261107/independent-docs/checker-tests.json",
+        "path": "outputs/refresh-20261120/offline/checker-tests.json",
         "key": "TRACE-18",
         "requiredSources": [
           "scripts/traceability.py",
@@ -4492,7 +4492,7 @@
       "category": "trace-checker",
       "scope": "ローカル一時ディレクトリでレビュー基準ファイルの不在・破損を検証。人のレビューと実環境受入は別。",
       "evidence": {
-        "path": "outputs/async-review-20261107/independent-docs/checker-tests.json",
+        "path": "outputs/refresh-20261120/offline/checker-tests.json",
         "key": "TRACE-19",
         "requiredSources": [
           "scripts/traceability.py",
@@ -4511,7 +4511,7 @@
       "category": "trace-checker",
       "scope": "合格証跡のソースハッシュ欄全体・試験対象の必須ハッシュ・不正値や無効契約を模擬し、欠落を拒否する。人のレビューと実環境受入は別。",
       "evidence": {
-        "path": "outputs/async-review-20261107/independent-docs/checker-tests.json",
+        "path": "outputs/refresh-20261120/offline/checker-tests.json",
         "key": "TRACE-20",
         "requiredSources": [
           "scripts/traceability.py",
@@ -4530,7 +4530,7 @@
       "category": "trace-checker",
       "scope": "合格証跡のソースハッシュ欄全体・試験対象の必須ハッシュ・不正値や無効契約を模擬し、欠落を拒否する。人のレビューと実環境受入は別。",
       "evidence": {
-        "path": "outputs/async-review-20261107/independent-docs/checker-tests.json",
+        "path": "outputs/refresh-20261120/offline/checker-tests.json",
         "key": "TRACE-21",
         "requiredSources": [
           "scripts/traceability.py",
@@ -4549,7 +4549,7 @@
       "category": "trace-checker",
       "scope": "合格証跡のソースハッシュ欄全体・試験対象の必須ハッシュ・不正値や無効契約を模擬し、欠落を拒否する。人のレビューと実環境受入は別。",
       "evidence": {
-        "path": "outputs/async-review-20261107/independent-docs/checker-tests.json",
+        "path": "outputs/refresh-20261120/offline/checker-tests.json",
         "key": "TRACE-22",
         "requiredSources": [
           "scripts/traceability.py",
@@ -4567,7 +4567,7 @@
       ],
       "scope": "ローカルChromiumの小画面・横向き模擬。登録ボタンのタップと閉じるボタンへの到達を確認。閉じるイベント、実機・実Googleは未確認。",
       "evidence": {
-        "path": "outputs/r19-adoption-20261111/regression/modal-scroll/results.json",
+        "path": "outputs/refresh-20261120/modal-scroll/results.json",
         "key": "375x500",
         "requiredSources": [
           "src/components/AddRideModal.tsx",
@@ -4586,7 +4586,7 @@
       ],
       "scope": "ローカルChromiumの小画面・横向き模擬。登録ボタンのタップと閉じるボタンへの到達を確認。閉じるイベント、実機・実Googleは未確認。",
       "evidence": {
-        "path": "outputs/r19-adoption-20261111/regression/modal-scroll/results.json",
+        "path": "outputs/refresh-20261120/modal-scroll/results.json",
         "key": "812x375",
         "requiredSources": [
           "src/components/AddRideModal.tsx",
@@ -4605,7 +4605,7 @@
       ],
       "scope": "実App・ApiServiceのデモ経路を使う外部通信遮断ローカル模擬。実Google・実機・第三者受入は別。",
       "evidence": {
-        "path": "outputs/r19-adoption-20261111/regression/local/results.json",
+        "path": "outputs/refresh-20261120/local/results.json",
         "key": "LOCAL-UI-01",
         "requiredSources": [
           "src/App.css",
@@ -4651,7 +4651,7 @@
       ],
       "scope": "実App・ApiServiceのデモ経路を使う外部通信遮断ローカル模擬。実Google・実機・第三者受入は別。",
       "evidence": {
-        "path": "outputs/r19-adoption-20261111/regression/local/results.json",
+        "path": "outputs/refresh-20261120/local/results.json",
         "key": "LOCAL-UI-02",
         "requiredSources": [
           "src/App.css",
@@ -4696,7 +4696,7 @@
       ],
       "scope": "実App・ApiServiceのデモ経路を使う外部通信遮断ローカル模擬。実Google・実機・第三者受入は別。",
       "evidence": {
-        "path": "outputs/r19-adoption-20261111/regression/local/results.json",
+        "path": "outputs/refresh-20261120/local/results.json",
         "key": "LOCAL-UI-03",
         "requiredSources": [
           "src/App.css",
@@ -4741,7 +4741,7 @@
       ],
       "scope": "実App・ApiServiceのデモ経路を使う外部通信遮断ローカル模擬。実Google・実機・第三者受入は別。",
       "evidence": {
-        "path": "outputs/r19-adoption-20261111/regression/local/results.json",
+        "path": "outputs/refresh-20261120/local/results.json",
         "key": "LOCAL-UI-04",
         "requiredSources": [
           "src/App.css",
@@ -4786,7 +4786,7 @@
       ],
       "scope": "実App・ApiServiceのデモ経路を使う外部通信遮断ローカル模擬。実Google・実機・第三者受入は別。",
       "evidence": {
-        "path": "outputs/r19-adoption-20261111/regression/local/results.json",
+        "path": "outputs/refresh-20261120/local/results.json",
         "key": "LOCAL-UI-05",
         "requiredSources": [
           "src/App.css",
@@ -4831,7 +4831,7 @@
       ],
       "scope": "実App・ApiServiceのデモ経路を使う外部通信遮断ローカル模擬。実Google・実機・第三者受入は別。",
       "evidence": {
-        "path": "outputs/r19-adoption-20261111/regression/local/results.json",
+        "path": "outputs/refresh-20261120/local/results.json",
         "key": "LOCAL-UI-06",
         "requiredSources": [
           "src/App.css",
@@ -4877,7 +4877,7 @@
       ],
       "scope": "実App・ApiServiceのデモ経路を使う外部通信遮断ローカル模擬。実Google・実機・第三者受入は別。",
       "evidence": {
-        "path": "outputs/r19-adoption-20261111/regression/local/results.json",
+        "path": "outputs/refresh-20261120/local/results.json",
         "key": "LOCAL-UI-07",
         "requiredSources": [
           "src/App.css",
@@ -4923,7 +4923,7 @@
       ],
       "scope": "実App・ApiServiceのデモ経路を使う外部通信遮断ローカル模擬。実Google・実機・第三者受入は別。一部はApiService直接呼出で、完了ボタンのクリックやサーバー排他の試験ではない。",
       "evidence": {
-        "path": "outputs/r19-adoption-20261111/regression/local/results.json",
+        "path": "outputs/refresh-20261120/local/results.json",
         "key": "LOCAL-UI-08",
         "requiredSources": [
           "src/App.css",
@@ -4969,7 +4969,7 @@
       ],
       "scope": "実App・ApiServiceのデモ経路を使う外部通信遮断ローカル模擬。実Google・実機・第三者受入は別。一部はApiService直接呼出で、完了ボタンのクリックやサーバー排他の試験ではない。",
       "evidence": {
-        "path": "outputs/r19-adoption-20261111/regression/local/results.json",
+        "path": "outputs/refresh-20261120/local/results.json",
         "key": "LOCAL-UI-09",
         "requiredSources": [
           "src/App.css",
@@ -5014,7 +5014,7 @@
       ],
       "scope": "実App・ApiServiceのデモ経路を使う外部通信遮断ローカル模擬。実Google・実機・第三者受入は別。一部はApiService直接呼出で、完了ボタンのクリックやサーバー排他の試験ではない。",
       "evidence": {
-        "path": "outputs/r19-adoption-20261111/regression/local/results.json",
+        "path": "outputs/refresh-20261120/local/results.json",
         "key": "LOCAL-UI-10",
         "requiredSources": [
           "src/App.css",
@@ -5060,7 +5060,7 @@
       ],
       "scope": "実App・ApiServiceのデモ経路を使う外部通信遮断ローカル模擬。実Google・実機・第三者受入は別。一部はApiService直接呼出で、完了ボタンのクリックやサーバー排他の試験ではない。",
       "evidence": {
-        "path": "outputs/r19-adoption-20261111/regression/local/results.json",
+        "path": "outputs/refresh-20261120/local/results.json",
         "key": "LOCAL-UI-11",
         "requiredSources": [
           "src/App.css",
@@ -5106,7 +5106,7 @@
       ],
       "scope": "実App・ApiServiceのデモ経路を使う外部通信遮断ローカル模擬。実Google・実機・第三者受入は別。",
       "evidence": {
-        "path": "outputs/r19-adoption-20261111/regression/local/results.json",
+        "path": "outputs/refresh-20261120/local/results.json",
         "key": "LOCAL-UI-12",
         "requiredSources": [
           "src/App.css",
@@ -5152,7 +5152,7 @@
       ],
       "scope": "実App・ApiServiceのデモ経路を使う外部通信遮断ローカル模擬。実Google・実機・第三者受入は別。",
       "evidence": {
-        "path": "outputs/r19-adoption-20261111/regression/local/results.json",
+        "path": "outputs/refresh-20261120/local/results.json",
         "key": "LOCAL-UI-13",
         "requiredSources": [
           "src/App.css",
@@ -5197,7 +5197,7 @@
       ],
       "scope": "実App・ApiServiceのデモ経路を使う外部通信遮断ローカル模擬。実Google・実機・第三者受入は別。",
       "evidence": {
-        "path": "outputs/r19-adoption-20261111/regression/local/results.json",
+        "path": "outputs/refresh-20261120/local/results.json",
         "key": "LOCAL-UI-14",
         "requiredSources": [
           "src/App.css",
@@ -5242,7 +5242,7 @@
       ],
       "scope": "ローカル実行ツールの出力保全・引数・HTTP許可範囲・JST日時の単体確認。実受入とは別。",
       "evidence": {
-        "path": "outputs/local-ui-safety-20261106-final/results.json",
+        "path": "outputs/refresh-20261120/offline/safety-results.json",
         "key": "RUN-SAFE-01",
         "requiredSources": [
           "scripts/local_acceptance_safety.mjs",
@@ -5260,7 +5260,7 @@
       ],
       "scope": "ローカル実行ツールの出力保全・引数・HTTP許可範囲・JST日時の単体確認。実受入とは別。",
       "evidence": {
-        "path": "outputs/local-ui-safety-20261106-final/results.json",
+        "path": "outputs/refresh-20261120/offline/safety-results.json",
         "key": "RUN-SAFE-02",
         "requiredSources": [
           "scripts/local_acceptance_safety.mjs",
@@ -5278,7 +5278,7 @@
       ],
       "scope": "ローカル実行ツールの出力保全・引数・HTTP許可範囲・JST日時の単体確認。実受入とは別。",
       "evidence": {
-        "path": "outputs/local-ui-safety-20261106-final/results.json",
+        "path": "outputs/refresh-20261120/offline/safety-results.json",
         "key": "RUN-SAFE-03",
         "requiredSources": [
           "scripts/local_acceptance_safety.mjs",
@@ -5296,7 +5296,7 @@
       ],
       "scope": "ローカル実行ツールの出力保全・引数・HTTP許可範囲・JST日時の単体確認。実受入とは別。",
       "evidence": {
-        "path": "outputs/local-ui-safety-20261106-final/results.json",
+        "path": "outputs/refresh-20261120/offline/safety-results.json",
         "key": "RUN-SAFE-04",
         "requiredSources": [
           "scripts/local_acceptance_safety.mjs",
@@ -5319,7 +5319,7 @@
       "category": "calendar-target",
       "scope": "接続先未設定なら予約・取消を書込み前に拒否。Node VMの模擬確認であり実Google同意・配備・受入は別。",
       "evidence": {
-        "path": "outputs/async-review-20261107/independent-backend/2026-11-07T08-59-32-465Z/gas-results.json",
+        "path": "docs/acceptance/service-checks/2026-11-19T16-43-27-271Z/gas-results.json",
         "key": "GAS-71",
         "requiredSources": [
           "gas/Code.gs",
@@ -5343,7 +5343,7 @@
       "category": "calendar-target",
       "scope": "認可不足・取得失敗・既定・非所有・ID不一致の対象を拒否。Node VMの模擬確認であり実Google同意・配備・受入は別。",
       "evidence": {
-        "path": "outputs/async-review-20261107/independent-backend/2026-11-07T08-59-32-465Z/gas-results.json",
+        "path": "docs/acceptance/service-checks/2026-11-19T16-43-27-271Z/gas-results.json",
         "key": "GAS-72",
         "requiredSources": [
           "gas/Code.gs",
@@ -5365,7 +5365,7 @@
       "category": "calendar-target",
       "scope": "取消イベントIDが指定した検証カレンダー内に存在することを要求。Node VMの模擬確認であり実Google同意・配備・受入は別。",
       "evidence": {
-        "path": "outputs/async-review-20261107/independent-backend/2026-11-07T08-59-32-465Z/gas-results.json",
+        "path": "docs/acceptance/service-checks/2026-11-19T16-43-27-271Z/gas-results.json",
         "key": "GAS-73",
         "requiredSources": [
           "gas/Code.gs",
@@ -5388,7 +5388,7 @@
       "category": "calendar-target",
       "scope": "指定先だけで作成・取消・再送しリクエストから上書きさせない。Node VMの模擬確認であり実Google同意・配備・受入は別。",
       "evidence": {
-        "path": "outputs/async-review-20261107/independent-backend/2026-11-07T08-59-32-465Z/gas-results.json",
+        "path": "docs/acceptance/service-checks/2026-11-19T16-43-27-271Z/gas-results.json",
         "key": "GAS-74",
         "requiredSources": [
           "gas/Code.gs",
@@ -5408,7 +5408,7 @@
       "category": "customer-evidence-validation",
       "scope": "顧客6件の実測記録の欠落・不整合・模擬経路の誤計上をローカル一時コピーで検出。本人の顧客確認とは別。",
       "evidence": {
-        "path": "outputs/async-review-20261107/independent-docs/checker-tests.json",
+        "path": "outputs/refresh-20261120/offline/checker-tests.json",
         "key": "TRACE-23",
         "requiredSources": [
           "scripts/traceability.py",
@@ -5427,7 +5427,7 @@
       "category": "customer-evidence-validation",
       "scope": "顧客6件の実測記録の欠落・不整合・模擬経路の誤計上をローカル一時コピーで検出。本人の顧客確認とは別。",
       "evidence": {
-        "path": "outputs/async-review-20261107/independent-docs/checker-tests.json",
+        "path": "outputs/refresh-20261120/offline/checker-tests.json",
         "key": "TRACE-24",
         "requiredSources": [
           "scripts/traceability.py",
@@ -5446,7 +5446,7 @@
       "category": "customer-evidence-validation",
       "scope": "顧客6件の実測記録の欠落・不整合・模擬経路の誤計上をローカル一時コピーで検出。本人の顧客確認とは別。",
       "evidence": {
-        "path": "outputs/async-review-20261107/independent-docs/checker-tests.json",
+        "path": "outputs/refresh-20261120/offline/checker-tests.json",
         "key": "TRACE-25",
         "requiredSources": [
           "scripts/traceability.py",
@@ -5465,7 +5465,7 @@
       "category": "customer-evidence-validation",
       "scope": "顧客6件の実測記録の欠落・不整合・模擬経路の誤計上をローカル一時コピーで検出。本人の顧客確認とは別。",
       "evidence": {
-        "path": "outputs/async-review-20261107/independent-docs/checker-tests.json",
+        "path": "outputs/refresh-20261120/offline/checker-tests.json",
         "key": "TRACE-26",
         "requiredSources": [
           "scripts/traceability.py",
@@ -5484,7 +5484,7 @@
       "category": "customer-evidence-validation",
       "scope": "顧客6件の実測記録の欠落・不整合・模擬経路の誤計上をローカル一時コピーで検出。本人の顧客確認とは別。",
       "evidence": {
-        "path": "outputs/async-review-20261107/independent-docs/checker-tests.json",
+        "path": "outputs/refresh-20261120/offline/checker-tests.json",
         "key": "TRACE-27",
         "requiredSources": [
           "scripts/traceability.py",
@@ -5503,7 +5503,7 @@
       "category": "customer-evidence-validation",
       "scope": "顧客6件の実測記録の欠落・不整合・模擬経路の誤計上をローカル一時コピーで検出。本人の顧客確認とは別。",
       "evidence": {
-        "path": "outputs/async-review-20261107/independent-docs/checker-tests.json",
+        "path": "outputs/refresh-20261120/offline/checker-tests.json",
         "key": "TRACE-28",
         "requiredSources": [
           "scripts/traceability.py",
@@ -5522,7 +5522,7 @@
       "category": "customer-evidence-validation",
       "scope": "顧客6件の実測記録の欠落・不整合・模擬経路の誤計上をローカル一時コピーで検出。本人の顧客確認とは別。",
       "evidence": {
-        "path": "outputs/async-review-20261107/independent-docs/checker-tests.json",
+        "path": "outputs/refresh-20261120/offline/checker-tests.json",
         "key": "TRACE-29",
         "requiredSources": [
           "scripts/traceability.py",
@@ -5541,7 +5541,7 @@
       "category": "customer-evidence-validation",
       "scope": "顧客6件の実測記録の欠落・不整合・模擬経路の誤計上をローカル一時コピーで検出。本人の顧客確認とは別。",
       "evidence": {
-        "path": "outputs/async-review-20261107/independent-docs/checker-tests.json",
+        "path": "outputs/refresh-20261120/offline/checker-tests.json",
         "key": "TRACE-30",
         "requiredSources": [
           "scripts/traceability.py",
@@ -5560,7 +5560,7 @@
       "category": "customer-evidence-validation",
       "scope": "顧客6件の実測記録の欠落・不整合・模擬経路の誤計上をローカル一時コピーで検出。本人の顧客確認とは別。",
       "evidence": {
-        "path": "outputs/async-review-20261107/independent-docs/checker-tests.json",
+        "path": "outputs/refresh-20261120/offline/checker-tests.json",
         "key": "TRACE-31",
         "requiredSources": [
           "scripts/traceability.py",
@@ -5579,7 +5579,7 @@
       "category": "trace-checker",
       "scope": "検証用Calendarの実権限を未確認へ戻した正本コピーを拒否する。",
       "evidence": {
-        "path": "outputs/async-review-20261107/independent-docs/checker-tests.json",
+        "path": "outputs/refresh-20261120/offline/checker-tests.json",
         "key": "TRACE-32",
         "requiredSources": [
           "scripts/traceability.py",
@@ -5598,7 +5598,7 @@
       "category": "asynchronous-customer-procedure",
       "scope": "立会い・当日依存への逆戻りと検証台帳制約欠落をローカルコピーで検出。本人の6件確認とは別。",
       "evidence": {
-        "path": "outputs/async-review-20261107/independent-docs/checker-tests.json",
+        "path": "outputs/refresh-20261120/offline/checker-tests.json",
         "key": "TRACE-33",
         "requiredSources": [
           "scripts/traceability.py",
@@ -5617,7 +5617,7 @@
       "category": "asynchronous-customer-procedure",
       "scope": "立会い・当日依存への逆戻りと検証台帳制約欠落をローカルコピーで検出。本人の6件確認とは別。",
       "evidence": {
-        "path": "outputs/async-review-20261107/independent-docs/checker-tests.json",
+        "path": "outputs/refresh-20261120/offline/checker-tests.json",
         "key": "TRACE-34",
         "requiredSources": [
           "scripts/traceability.py",
@@ -5636,7 +5636,7 @@
       "category": "scoped-reviewer",
       "scope": "Google本人応答を模擬したVMで指定検証台帳・両入口・生徒範囲・権限失効・更新の制約を確認。実Google本人・顧客6件は別。",
       "evidence": {
-        "path": "outputs/async-review-20261107/independent-backend/2026-11-07T08-59-32-465Z/gas-results.json",
+        "path": "docs/acceptance/service-checks/2026-11-19T16-43-27-271Z/gas-results.json",
         "key": "GAS-75",
         "requiredSources": [
           "gas/Code.gs",
@@ -5655,7 +5655,7 @@
       "category": "scoped-reviewer",
       "scope": "Google本人応答を模擬したVMで指定検証台帳・両入口・生徒範囲・権限失効・更新の制約を確認。実Google本人・顧客6件は別。",
       "evidence": {
-        "path": "outputs/async-review-20261107/independent-backend/2026-11-07T08-59-32-465Z/gas-results.json",
+        "path": "docs/acceptance/service-checks/2026-11-19T16-43-27-271Z/gas-results.json",
         "key": "GAS-76",
         "requiredSources": [
           "gas/Code.gs",
@@ -5674,7 +5674,7 @@
       "category": "scoped-reviewer",
       "scope": "Google本人応答を模擬したVMで指定検証台帳・両入口・生徒範囲・権限失効・更新の制約を確認。実Google本人・顧客6件は別。",
       "evidence": {
-        "path": "outputs/async-review-20261107/independent-backend/2026-11-07T08-59-32-465Z/gas-results.json",
+        "path": "docs/acceptance/service-checks/2026-11-19T16-43-27-271Z/gas-results.json",
         "key": "GAS-77",
         "requiredSources": [
           "gas/Code.gs",
@@ -5693,7 +5693,7 @@
       "category": "scoped-reviewer",
       "scope": "Google本人応答を模擬したVMで指定検証台帳・両入口・生徒範囲・権限失効・更新の制約を確認。実Google本人・顧客6件は別。",
       "evidence": {
-        "path": "outputs/async-review-20261107/independent-backend/2026-11-07T08-59-32-465Z/gas-results.json",
+        "path": "docs/acceptance/service-checks/2026-11-19T16-43-27-271Z/gas-results.json",
         "key": "GAS-78",
         "requiredSources": [
           "gas/Code.gs",
@@ -5712,7 +5712,7 @@
       "category": "scoped-reviewer",
       "scope": "Google本人応答を模擬したVMで指定検証台帳・両入口・生徒範囲・権限失効・更新の制約を確認。実Google本人・顧客6件は別。",
       "evidence": {
-        "path": "outputs/async-review-20261107/independent-backend/2026-11-07T08-59-32-465Z/gas-results.json",
+        "path": "docs/acceptance/service-checks/2026-11-19T16-43-27-271Z/gas-results.json",
         "key": "GAS-79",
         "requiredSources": [
           "gas/Code.gs",
@@ -5731,7 +5731,7 @@
       "category": "scoped-reviewer",
       "scope": "Google本人応答を模擬したVMで指定検証台帳・両入口・生徒範囲・権限失効・更新の制約を確認。実Google本人・顧客6件は別。",
       "evidence": {
-        "path": "outputs/async-review-20261107/independent-backend/2026-11-07T08-59-32-465Z/gas-results.json",
+        "path": "docs/acceptance/service-checks/2026-11-19T16-43-27-271Z/gas-results.json",
         "key": "GAS-80",
         "requiredSources": [
           "gas/Code.gs",
@@ -5750,7 +5750,7 @@
       "category": "scoped-reviewer",
       "scope": "Google本人応答を模擬したVMで指定検証台帳・両入口・生徒範囲・権限失効・更新の制約を確認。実Google本人・顧客6件は別。",
       "evidence": {
-        "path": "outputs/async-review-20261107/independent-backend/2026-11-07T08-59-32-465Z/gas-results.json",
+        "path": "docs/acceptance/service-checks/2026-11-19T16-43-27-271Z/gas-results.json",
         "key": "GAS-81",
         "requiredSources": [
           "gas/Code.gs",
@@ -5769,7 +5769,7 @@
       "category": "scoped-reviewer",
       "scope": "Google本人応答を模擬したVMで指定検証台帳・両入口・生徒範囲・権限失効・更新の制約を確認。実Google本人・顧客6件は別。",
       "evidence": {
-        "path": "outputs/async-review-20261107/independent-backend/2026-11-07T08-59-32-465Z/gas-results.json",
+        "path": "docs/acceptance/service-checks/2026-11-19T16-43-27-271Z/gas-results.json",
         "key": "GAS-82",
         "requiredSources": [
           "gas/Code.gs",
@@ -5788,7 +5788,7 @@
       "category": "scoped-reviewer",
       "scope": "Google本人応答を模擬したVMで指定検証台帳・両入口・生徒範囲・権限失効・更新の制約を確認。実Google本人・顧客6件は別。",
       "evidence": {
-        "path": "outputs/async-review-20261107/independent-backend/2026-11-07T08-59-32-465Z/gas-results.json",
+        "path": "docs/acceptance/service-checks/2026-11-19T16-43-27-271Z/gas-results.json",
         "key": "GAS-83",
         "requiredSources": [
           "gas/Code.gs",
@@ -5807,7 +5807,7 @@
       "category": "scoped-reviewer",
       "scope": "Google本人応答を模擬したVMで指定検証台帳・両入口・生徒範囲・権限失効・更新の制約を確認。実Google本人・顧客6件は別。",
       "evidence": {
-        "path": "outputs/async-review-20261107/independent-backend/2026-11-07T08-59-32-465Z/gas-results.json",
+        "path": "docs/acceptance/service-checks/2026-11-19T16-43-27-271Z/gas-results.json",
         "key": "GAS-84",
         "requiredSources": [
           "gas/Code.gs",
@@ -5826,7 +5826,7 @@
       "category": "scoped-reviewer",
       "scope": "Google本人応答を模擬したVMで指定検証台帳・両入口・生徒範囲・権限失効・更新の制約を確認。実Google本人・顧客6件は別。",
       "evidence": {
-        "path": "outputs/async-review-20261107/independent-backend/2026-11-07T08-59-32-465Z/gas-results.json",
+        "path": "docs/acceptance/service-checks/2026-11-19T16-43-27-271Z/gas-results.json",
         "key": "GAS-85",
         "requiredSources": [
           "gas/Code.gs",
@@ -5845,7 +5845,7 @@
       "category": "scoped-reviewer-frontend",
       "scope": "API・入口の合成契約。実Googleの本人ログイン・顧客確認ではない。",
       "evidence": {
-        "path": "outputs/r19-adoption-20261111/frontend-contract-normalized.json",
+        "path": "outputs/refresh-20261120/offline/frontend-contract.json",
         "key": "Reviewer logs in at either separate portal with its current public role and verifies on reload",
         "requiredSources": [
           "src/deployment-config.ts",
@@ -5867,7 +5867,7 @@
       "category": "scoped-reviewer-frontend",
       "scope": "API・入口の合成契約。実Googleの本人ログイン・顧客確認ではない。",
       "evidence": {
-        "path": "outputs/r19-adoption-20261111/frontend-contract-normalized.json",
+        "path": "outputs/refresh-20261120/offline/frontend-contract.json",
         "key": "Reviewer rejects wrong portal, wrong personal link and missing allowlist",
         "requiredSources": [
           "src/deployment-config.ts",
@@ -5889,7 +5889,7 @@
       "category": "scoped-reviewer-frontend",
       "scope": "API・入口の合成契約。実Googleの本人ログイン・顧客確認ではない。",
       "evidence": {
-        "path": "outputs/r19-adoption-20261111/frontend-contract-normalized.json",
+        "path": "outputs/refresh-20261120/offline/frontend-contract.json",
         "key": "Reviewer admin filters overbroad student and ride responses by explicit fixture allowlist",
         "requiredSources": [
           "src/deployment-config.ts",
@@ -5911,7 +5911,7 @@
       "category": "scoped-reviewer-frontend",
       "scope": "API・入口の合成契約。実Googleの本人ログイン・顧客確認ではない。",
       "evidence": {
-        "path": "outputs/r19-adoption-20261111/frontend-contract-normalized.json",
+        "path": "outputs/refresh-20261120/offline/frontend-contract.json",
         "key": "Reviewer cannot call account management, invitation directory or create a student",
         "requiredSources": [
           "src/deployment-config.ts",
@@ -5933,7 +5933,7 @@
       "category": "scoped-reviewer-frontend",
       "scope": "API・入口の合成契約。実Googleの本人ログイン・顧客確認ではない。",
       "evidence": {
-        "path": "outputs/r19-adoption-20261111/frontend-contract-normalized.json",
+        "path": "outputs/refresh-20261120/offline/frontend-contract.json",
         "key": "Reviewer admin rejects bookings and ticket writes for other students before a request",
         "requiredSources": [
           "src/deployment-config.ts",
@@ -5955,7 +5955,7 @@
       "category": "scoped-reviewer-frontend",
       "scope": "API・入口の合成契約。実Googleの本人ログイン・顧客確認ではない。",
       "evidence": {
-        "path": "outputs/r19-adoption-20261111/frontend-contract-normalized.json",
+        "path": "outputs/refresh-20261120/offline/frontend-contract.json",
         "key": "Reviewer rejects other ride cancellation and completion even if an overbroad response leaks it",
         "requiredSources": [
           "src/deployment-config.ts",
@@ -5977,7 +5977,7 @@
       "category": "scoped-reviewer-frontend",
       "scope": "API・入口の合成契約。実Googleの本人ログイン・顧客確認ではない。",
       "evidence": {
-        "path": "outputs/r19-adoption-20261111/frontend-contract-normalized.json",
+        "path": "outputs/refresh-20261120/offline/frontend-contract.json",
         "key": "Reviewer fixture mutations keep portal role, operation ID retry and fixed old-date completion",
         "requiredSources": [
           "src/deployment-config.ts",
@@ -5999,7 +5999,7 @@
       "category": "scoped-reviewer-frontend",
       "scope": "API・入口の合成契約。実Googleの本人ログイン・顧客確認ではない。",
       "evidence": {
-        "path": "outputs/r19-adoption-20261111/frontend-contract-normalized.json",
+        "path": "outputs/refresh-20261120/offline/frontend-contract.json",
         "key": "Reviewer parent cannot use admin mutations and cancellation still carries its personal entry",
         "requiredSources": [
           "src/deployment-config.ts",
@@ -6021,7 +6021,7 @@
       "category": "scoped-reviewer-frontend",
       "scope": "API・入口の合成契約。実Googleの本人ログイン・顧客確認ではない。",
       "evidence": {
-        "path": "outputs/r19-adoption-20261111/frontend-contract-normalized.json",
+        "path": "outputs/refresh-20261120/offline/frontend-contract.json",
         "key": "Review unavailable response ends the restricted session and prevents subsequent requests",
         "requiredSources": [
           "src/deployment-config.ts",
@@ -6043,7 +6043,7 @@
       "category": "scoped-reviewer-frontend",
       "scope": "API・入口の合成契約。実Googleの本人ログイン・顧客確認ではない。",
       "evidence": {
-        "path": "outputs/r19-adoption-20261111/frontend-contract-normalized.json",
+        "path": "outputs/refresh-20261120/offline/frontend-contract.json",
         "key": "Full admin directory preserves stored reviewer role and exact server capability",
         "requiredSources": [
           "src/deployment-config.ts",
@@ -6065,7 +6065,7 @@
       "category": "scoped-reviewer-ui",
       "scope": "実Appをlocalhost・合成Google/GASで操作。固定過去日完了・再読込・権限制御、外部通信0。実環境受入ではない。",
       "evidence": {
-        "path": "outputs/r19-adoption-20261111/regression/reviewer/results.json",
+        "path": "outputs/refresh-20261120/reviewer/results.json",
         "key": "REVIEW-UI-01",
         "requiredSources": [
           "src/services/api.ts",
@@ -6090,7 +6090,7 @@
       "category": "scoped-reviewer-ui",
       "scope": "実Appをlocalhost・合成Google/GASで操作。固定過去日完了・再読込・権限制御、外部通信0。実環境受入ではない。",
       "evidence": {
-        "path": "outputs/r19-adoption-20261111/regression/reviewer/results.json",
+        "path": "outputs/refresh-20261120/reviewer/results.json",
         "key": "REVIEW-UI-02",
         "requiredSources": [
           "src/services/api.ts",
@@ -6115,7 +6115,7 @@
       "category": "scoped-reviewer-ui",
       "scope": "実Appをlocalhost・合成Google/GASで操作。固定過去日完了・再読込・権限制御、外部通信0。実環境受入ではない。",
       "evidence": {
-        "path": "outputs/r19-adoption-20261111/regression/reviewer/results.json",
+        "path": "outputs/refresh-20261120/reviewer/results.json",
         "key": "REVIEW-UI-03",
         "requiredSources": [
           "src/services/api.ts",
@@ -6140,7 +6140,7 @@
       "category": "scoped-reviewer-ui",
       "scope": "実Appをlocalhost・合成Google/GASで操作。固定過去日完了・再読込・権限制御、外部通信0。実環境受入ではない。",
       "evidence": {
-        "path": "outputs/r19-adoption-20261111/regression/reviewer/results.json",
+        "path": "outputs/refresh-20261120/reviewer/results.json",
         "key": "REVIEW-UI-04",
         "requiredSources": [
           "src/services/api.ts",
@@ -6165,7 +6165,7 @@
       "category": "scoped-reviewer-ui",
       "scope": "実Appをlocalhost・合成Google/GASで操作。固定過去日完了・再読込・権限制御、外部通信0。実環境受入ではない。",
       "evidence": {
-        "path": "outputs/r19-adoption-20261111/regression/reviewer/results.json",
+        "path": "outputs/refresh-20261120/reviewer/results.json",
         "key": "REVIEW-UI-05",
         "requiredSources": [
           "src/services/api.ts",
@@ -6190,7 +6190,7 @@
       "category": "scoped-reviewer-ui",
       "scope": "実Appをlocalhost・合成Google/GASで操作。固定過去日完了・再読込・権限制御、外部通信0。実環境受入ではない。",
       "evidence": {
-        "path": "outputs/r19-adoption-20261111/regression/reviewer/results.json",
+        "path": "outputs/refresh-20261120/reviewer/results.json",
         "key": "REVIEW-UI-06",
         "requiredSources": [
           "src/services/api.ts",
@@ -6215,7 +6215,7 @@
       "category": "scoped-reviewer-ui",
       "scope": "実Appをlocalhost・合成Google/GASで操作。固定過去日完了・再読込・権限制御、外部通信0。実環境受入ではない。",
       "evidence": {
-        "path": "outputs/r19-adoption-20261111/regression/reviewer/results.json",
+        "path": "outputs/refresh-20261120/reviewer/results.json",
         "key": "REVIEW-UI-07",
         "requiredSources": [
           "src/services/api.ts",
@@ -6240,7 +6240,7 @@
       "category": "scoped-reviewer-ui",
       "scope": "実Appをlocalhost・合成Google/GASで操作。固定過去日完了・再読込・権限制御、外部通信0。実環境受入ではない。",
       "evidence": {
-        "path": "outputs/r19-adoption-20261111/regression/reviewer/results.json",
+        "path": "outputs/refresh-20261120/reviewer/results.json",
         "key": "REVIEW-UI-08",
         "requiredSources": [
           "src/services/api.ts",
@@ -6265,7 +6265,7 @@
       "category": "reservation-retry-contract",
       "scope": "Node VMの架空認証・応答による同一タブ再送の検査。実Google受入・顧客確認ではない。",
       "evidence": {
-        "path": "outputs/r19-adoption-20261111/frontend-contract-normalized.json",
+        "path": "outputs/refresh-20261120/offline/frontend-contract.json",
         "key": "Unconfirmed reservation responses keep the same ID through reload and a verified replay",
         "requiredSources": [
           "src/deployment-config.ts",
@@ -6287,7 +6287,7 @@
       "category": "reservation-retry-contract",
       "scope": "Node VMの架空認証・応答による同一タブ再送の検査。実Google受入・顧客確認ではない。",
       "evidence": {
-        "path": "outputs/r19-adoption-20261111/frontend-contract-normalized.json",
+        "path": "outputs/refresh-20261120/offline/frontend-contract.json",
         "key": "Late success from a shared ID cannot remove a newer pending reservation ID",
         "requiredSources": [
           "src/deployment-config.ts",
@@ -6309,7 +6309,7 @@
       "category": "reservation-retry-ui-handler",
       "scope": "実Appハンドラを合成Reactフックで実行。同一IDを1行へ集約し、取消状態を保持し、新IDを追加する3群を検査。ブラウザー・Google実連携ではない。",
       "evidence": {
-        "path": "outputs/r19-adoption-20261111/reservation-retry-ui.json",
+        "path": "outputs/refresh-20261120/offline/reservation-retry-ui.json",
         "key": "RETRY-UI-01",
         "requiredSources": [
           "src/App.tsx",
@@ -6328,7 +6328,7 @@
       "category": "portal-mismatch-guidance-ui",
       "scope": "Node VMの合成Reactフックと模擬サービスによるログイン画面の表示検査。実Googleログイン・ブラウザー・顧客確認ではない。",
       "evidence": {
-        "path": "outputs/r19-adoption-20261111/regression/login/portal-mismatch-ui.json",
+        "path": "outputs/refresh-20261120/offline/portal-mismatch-ui.json",
         "key": "PM-01 Server and client wrong-entrance refusals are recognised; other refusals are not",
         "requiredSources": [
           "src/components/LoginScreen.tsx",
@@ -6348,7 +6348,7 @@
       "category": "portal-mismatch-guidance-ui",
       "scope": "Node VMの合成Reactフックと模擬サービスによるログイン画面の表示検査。実Googleログイン・ブラウザー・顧客確認ではない。",
       "evidence": {
-        "path": "outputs/r19-adoption-20261111/regression/login/portal-mismatch-ui.json",
+        "path": "outputs/refresh-20261120/offline/portal-mismatch-ui.json",
         "key": "PM-02 Parent entrance shows family-URL guidance and a link to the admin entrance after a wrong-entrance refusal",
         "requiredSources": [
           "src/components/LoginScreen.tsx",
@@ -6368,7 +6368,7 @@
       "category": "portal-mismatch-guidance-ui",
       "scope": "Node VMの合成Reactフックと模擬サービスによるログイン画面の表示検査。実Googleログイン・ブラウザー・顧客確認ではない。",
       "evidence": {
-        "path": "outputs/r19-adoption-20261111/regression/login/portal-mismatch-ui.json",
+        "path": "outputs/refresh-20261120/offline/portal-mismatch-ui.json",
         "key": "PM-03 Admin entrance shows guidance without any link to a parent or family URL",
         "requiredSources": [
           "src/components/LoginScreen.tsx",
@@ -6388,7 +6388,7 @@
       "category": "portal-mismatch-guidance-ui",
       "scope": "Node VMの合成Reactフックと模擬サービスによるログイン画面の表示検査。実Googleログイン・ブラウザー・顧客確認ではない。",
       "evidence": {
-        "path": "outputs/r19-adoption-20261111/regression/login/portal-mismatch-ui.json",
+        "path": "outputs/refresh-20261120/offline/portal-mismatch-ui.json",
         "key": "PM-04 Unregistered account, revoked URL and interrupted login show no entrance guidance or admin link",
         "requiredSources": [
           "src/components/LoginScreen.tsx",
@@ -6408,7 +6408,7 @@
       "category": "portal-mismatch-guidance-ui",
       "scope": "Node VMの合成Reactフックと模擬サービスによるログイン画面の表示検査。実Googleログイン・ブラウザー・顧客確認ではない。",
       "evidence": {
-        "path": "outputs/r19-adoption-20261111/regression/login/portal-mismatch-ui.json",
+        "path": "outputs/refresh-20261120/offline/portal-mismatch-ui.json",
         "key": "PM-05 No guidance before a login attempt",
         "requiredSources": [
           "src/components/LoginScreen.tsx",

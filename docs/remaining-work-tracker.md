@@ -27,12 +27,6 @@
 <!-- fact:customerPreparationStatus="SELF_PACED_PREPARED_CUSTOMER_FIRST_LOGIN_PENDING" -->
 <!-- fact:customerExecutionMode="self-paced-test-reviewer" -->
 
-11月18日の現行検証版 603f482f7709d354。累計27修正・27技術試験項目。残少表示と生徒登録を公開デモで再確認し、AT-23の模擬台帳試験を追加。[検証記録](progress/2026-11-18-cumulative27.md)。
-
-11月18日、26件目の残少表示修正（11月17日配備）を現行検証版 e260bd4c435ced70 で再確認し、AT-27の模擬競合試験を追加。累計26修正・26技術試験項目。[検証記録](progress/2026-11-18-cumulative26.md)。
-
-11月19日に累計32件の実装修正（先行2件 Claude Code Fable 5.2 + 追加30件）および受入試験32項目（`AT-01`, `AT-23`, `AT-26`, `AT-27`, `SAT-38`, `SAT-33`, `SAT-37`, `SAT-34` を追加）を完了し、検証サイト（`https://eigo-taxi-test.web.app/` / `sourceDigest: cbbad1e31a2282580f8a85d9262be454fb0fe7254cd88125a39e32e3612d928c`）へ反映・公開7ファイル照合・公開画面確認済み。[11月19日累計32件記録](progress/2026-11-19-cumulative-thirtytwo.md) / [累計31件記録](progress/2026-11-19-cumulative-thirtyone.md)。
-
 小林さんの顧客確認は0/6件合格。原AT-01〜30は開発担当が技術検証する。旧第三者受入0/30件は履歴。検証専用Calendarの権限追加は許可済み、Googleの実同意済み。本番開始は保留中。 [顧客確認の6手順](acceptance/CUSTOMER_ACCEPTANCE_MINIMUM_20261107.md)
 
 毎日、改善を1件以上検証サイトへ反映し、公開画面で期待する動作を確認する。日次の配備・確認、顧客6件、技術受入の結果を個別に記録する。
@@ -277,5 +271,4 @@ A05で表示・コピー。A06で再発行後、新旧URLで本人ログイン�
 [TASK-39 正本](acceptance/05_TASKS.md#TASK-39)
 
 家庭用固定URLでCUST-01〜03→ログアウト→管理者用固定URLのA03でCUST-04→家庭用URLで残少案内→管理者用URLで10枚0円を追加→家庭用URLで12枚を確認。両画面でログアウト後非表示を確認。中断時は共有表に記録し未実施だけ再開。
-
 

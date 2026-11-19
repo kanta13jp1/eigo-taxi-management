@@ -40,7 +40,7 @@ export function LoginScreen({ onLogin, route, requiresLogin }: { requiresLogin?:
           {demoEntry ? <p className="rounded-lg bg-amber-50 p-3 text-sm">こちらは架空データで試す体験用の入口です。実際の予約には、教室から届いたご家庭専用URLを開いてください。</p> : <>
             <p className="text-sm">教室に登録したGoogleアカウントでログインしてください。初期設定は開発担当者が行います。</p>
             {route.kind === 'parent' && route.entryId && <p className="rounded-lg bg-emerald-50 p-3 text-sm">ご家庭専用の入口です。登録されたご本人のアカウントで確認します。</p>}
-            <button disabled={busy || !configured || !googleReady} onClick={async () => {
+            <button type="button" disabled={busy || !configured || !googleReady} onClick={async () => {
               setBusy(true); setError('');
               try { onLogin(await ApiService.loginWithGoogle(route)); }
               catch (err) {
@@ -60,7 +60,7 @@ export function LoginScreen({ onLogin, route, requiresLogin }: { requiresLogin?:
               </> : <p>このGoogleアカウントは、管理者用の入口には登録されていません。生徒・保護者の方は、教室から届いたご家庭専用のURLまたはQRコードを開いてください。</p>}
               {role === 'parent' && <a href="#/admin" className="inline-block rounded-lg border border-slate-300 bg-white p-2 font-bold">管理者専用の入口を開く</a>}
             </div>}
-            {configured && setupFailed && <button disabled={busy} onClick={async () => {
+            {configured && setupFailed && <button type="button" disabled={busy} onClick={async () => {
               setBusy(true); setError('');
               try { await prepareGoogleSignIn(); setGoogleReady(true); setSetupFailed(false); }
               catch (err) { setError(err instanceof Error ? err.message : 'ログインを準備できませんでした。'); }
@@ -71,7 +71,7 @@ export function LoginScreen({ onLogin, route, requiresLogin }: { requiresLogin?:
           {(route.kind === 'admin' || (route.kind === 'parent' && (!route.entryId || route.entryId === DEMO_ENTRY_ID))) && <section className="space-y-3 border-t pt-4">
             <h2 className="font-semibold">操作を体験する（架空データ）</h2>
             <p className="text-xs text-slate-600">デモの操作はこのブラウザ内だけに保存されます。</p>
-            <button disabled={busy} onClick={()=>onLogin(ApiService.enterDemo(role))} className="rounded-lg border p-3 text-sm">{role === 'admin' ? '管理者デモを開く' : '保護者デモを開く'}</button>
+            <button type="button" disabled={busy} onClick={()=>onLogin(ApiService.enterDemo(role))} className="rounded-lg border p-3 text-sm">{role === 'admin' ? '管理者デモを開く' : '保護者デモを開く'}</button>
           </section>}
         </>}
       </div>

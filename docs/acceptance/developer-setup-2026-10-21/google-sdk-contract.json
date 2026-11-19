@@ -1,9 +1,13 @@
 {
-  "executedAt": "2026-10-28T10:39:12.152Z",
+  "executedAt": "2026-11-19T16:42:22.966Z",
   "mode": "Offline Node VM; Firebase SDK stubbed; popup timing contract only",
   "passed": 7,
   "total": 7,
-  "sourceSha256": "442c1fef3049dc1680256ac1b7bd60b771474cd0f61aab20d7e9eda6c37d0984",
+  "sourceSha256": "01667af44fce383f3763c8bb73497dafc690381592ddcf383d46aaafe90fe0d8",
+  "sourceHashes": {
+    "src/services/google-auth.ts": "01667af44fce383f3763c8bb73497dafc690381592ddcf383d46aaafe90fe0d8",
+    "scripts/test_google_auth.cjs": "75b18ca335a5307287f056f48e10948ffce8b667ac48b3a5594a3dd3ff5ff057"
+  },
   "results": [
     {
       "name": "Popup cannot start before SDK setup completes",

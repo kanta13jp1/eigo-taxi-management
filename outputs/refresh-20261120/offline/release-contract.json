@@ -1,0 +1,16 @@
+{
+  "sourceHashes": {
+    "scripts/prepare_test_release.cjs": "e960b0e41e8e7b9d00877b3ecdbf336b7a94d9728859faff7a4407fe635de51b",
+    "scripts/test_release_contract.cjs": "c6ed405f3f9696dff834ed09efdd0de1fe1df1454d2e7a9805ea6b482c23e770"
+  },
+  "results": [
+    {
+      "id": "REL-01",
+      "requirements": [
+        "REQ-30"
+      ],
+      "status": "PASS",
+      "scope": "Offline build-manifest sandbox; no publishing, production URL or rollback execution"
+    }
+  ]
+}

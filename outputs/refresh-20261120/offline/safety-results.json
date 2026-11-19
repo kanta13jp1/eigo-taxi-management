@@ -1,0 +1,36 @@
+{
+  "mode": "NODE_RUNNER_SAFETY_UNIT",
+  "recordedAt": "2026-11-19T16:47:13.130Z",
+  "nodeVersion": "24.22.1",
+  "exitCode": 0,
+  "sourceHashes": {
+    "scripts/local_acceptance_safety.mjs": "a7c512fdc80788c246aa1eb5a6dbca9ad7573859fc8dab0a1b0a2d099e370b34",
+    "tests/local_acceptance_safety.test.mjs": "fa9cece28e43ac588b0706d7c9afc1763a22fe6549075288d15113b9eb332317",
+    "scripts/run_local_acceptance.mjs": "33bf5b1add2104eac2f7ac2298ee0a607e1f84cf994507cc213fa97fd5be9f89"
+  },
+  "tapSha256": "116d6f3f5e39c756f8b7a7dbc22f5fec3099289444e02dfffa7f6c811b1c8f38",
+  "results": [
+    {
+      "id": "RUN-SAFE-01",
+      "name": "runtime and arguments reject an old runtime, missing output and supplied URLs",
+      "status": "PASS"
+    },
+    {
+      "id": "RUN-SAFE-02",
+      "name": "an existing evidence directory and sentinel are never overwritten",
+      "status": "PASS"
+    },
+    {
+      "id": "RUN-SAFE-03",
+      "name": "only the selected localhost origin is allowed",
+      "status": "PASS"
+    },
+    {
+      "id": "RUN-SAFE-04",
+      "name": "test date follows JST rather than a fixed past date or host timezone",
+      "status": "PASS"
+    }
+  ],
+  "status": "PASS",
+  "thirdPartyPassed": 0
+}
