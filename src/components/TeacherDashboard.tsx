@@ -208,6 +208,8 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
       <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
         <div className="flex bg-slate-200/70 p-1 rounded-xl text-xs font-semibold">
           <button
+            type="button"
+            aria-pressed={activeTab === 'today'}
             onClick={() => setActiveTab('today')}
             className={`px-3 py-1.5 rounded-lg transition-all ${
               activeTab === 'today' ? 'bg-white text-slate-900 shadow-xs' : 'text-slate-600 hover:text-slate-900'
@@ -216,6 +218,8 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
             本日の送迎 ({todayRides.length})
           </button>
           <button
+            type="button"
+            aria-pressed={activeTab === 'allRides'}
             onClick={() => setActiveTab('allRides')}
             className={`px-3 py-1.5 rounded-lg transition-all ${
               activeTab === 'allRides' ? 'bg-white text-slate-900 shadow-xs' : 'text-slate-600 hover:text-slate-900'
@@ -224,6 +228,8 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
             送迎スケジュール一覧 ({rides.length})
           </button>
           <button
+            type="button"
+            aria-pressed={activeTab === 'students'}
             onClick={() => setActiveTab('students')}
             className={`px-3 py-1.5 rounded-lg transition-all ${
               activeTab === 'students' ? 'bg-white text-slate-900 shadow-xs' : 'text-slate-600 hover:text-slate-900'
@@ -235,6 +241,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
 
         <div className="flex items-center gap-2">
           <button
+            type="button"
             onClick={() => onOpenAddRide()}
             className="flex-1 sm:flex-none flex items-center justify-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 text-white px-3.5 py-2 rounded-xl text-xs font-bold shadow-xs transition-colors"
           >
@@ -242,6 +249,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
             送迎予定を追加
           </button>
           <button
+            type="button"
             onClick={() => onOpenAddTicket()}
             className="flex-1 sm:flex-none flex items-center justify-center gap-1.5 bg-white border border-slate-300 hover:bg-slate-50 text-slate-700 px-3 py-2 rounded-xl text-xs font-bold shadow-xs transition-colors"
           >

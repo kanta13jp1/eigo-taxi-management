@@ -22,7 +22,7 @@
   "src/components/Navbar.tsx": "77d967411aab9b6ec1181f22a9fa44caebf82fa59197aad9d63fc63f2594a3b0",
   "src/components/ParentPortal.tsx": "a9a7f3f49d473c43cf3af4bd8bc8135f068b11d671b01afa42beb59babc9262f",
   "src/components/PortalInvitations.tsx": "9c05d751fdd5912a6b31f641ef5265b699d73fb7fa5e368bc3c4f6e42804b845",
-  "src/components/TeacherDashboard.tsx": "b0fdfcef762a08a6f0f1bd4dc1ccce5d8131ef03b1861da9ec8b64fb3423464f",
+  "src/components/TeacherDashboard.tsx": "4993e9723b8ea60e73eab3a5109ec44e027b302115f59a21b6249974faf065e9",
   "src/portal.ts": "874dce7f269e59073b75d6ae47c7fb3b682686fa2ab214d8cb0eacb48c59cac7",
   "src/services/api.ts": "9de6da24a594b1bb37d12d1dc4b2910a8cfdadf9124ed4abf22ac8104cd35e28",
   "src/services/google-auth.ts": "01667af44fce383f3763c8bb73497dafc690381592ddcf383d46aaafe90fe0d8",

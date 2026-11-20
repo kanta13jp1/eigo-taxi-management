@@ -8,9 +8,12 @@ interface TermsModalProps {
 }
 
 export function TermsModal({ isOpen, onClose, initialTab = 'terms' }: TermsModalProps) {
-  const [activeTab, setActiveTab] = useState<'terms' | 'privacy' | 'disclaimer'>(initialTab);
-
   if (!isOpen) return null;
+  return <TermsModalContent key={initialTab} onClose={onClose} initialTab={initialTab} />;
+}
+
+function TermsModalContent({ onClose, initialTab }: { onClose: () => void; initialTab: 'terms' | 'privacy' | 'disclaimer' }) {
+  const [activeTab, setActiveTab] = useState<'terms' | 'privacy' | 'disclaimer'>(initialTab);
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm animate-in fade-in">
@@ -32,8 +35,11 @@ export function TermsModal({ isOpen, onClose, initialTab = 'terms' }: TermsModal
         </div>
 
         {/* タブ切り替え */}
-        <div className="flex border-b border-slate-100 px-6 pt-2 gap-4 text-sm font-medium">
+        <div role="tablist" aria-label="規約タブ" className="flex border-b border-slate-100 px-6 pt-2 gap-4 text-sm font-medium">
           <button
+            type="button"
+            role="tab"
+            aria-selected={activeTab === 'terms'}
             onClick={() => setActiveTab('terms')}
             className={`pb-3 px-1 border-b-2 transition-colors flex items-center gap-1.5 ${
               activeTab === 'terms'
@@ -45,6 +51,9 @@ export function TermsModal({ isOpen, onClose, initialTab = 'terms' }: TermsModal
             利用規約
           </button>
           <button
+            type="button"
+            role="tab"
+            aria-selected={activeTab === 'privacy'}
             onClick={() => setActiveTab('privacy')}
             className={`pb-3 px-1 border-b-2 transition-colors flex items-center gap-1.5 ${
               activeTab === 'privacy'
@@ -56,6 +65,9 @@ export function TermsModal({ isOpen, onClose, initialTab = 'terms' }: TermsModal
             個人情報の取扱い
           </button>
           <button
+            type="button"
+            role="tab"
+            aria-selected={activeTab === 'disclaimer'}
             onClick={() => setActiveTab('disclaimer')}
             className={`pb-3 px-1 border-b-2 transition-colors flex items-center gap-1.5 ${
               activeTab === 'disclaimer'
@@ -125,6 +137,7 @@ export function TermsModal({ isOpen, onClose, initialTab = 'terms' }: TermsModal
         {/* フッター */}
         <div className="px-6 py-3.5 bg-slate-50 border-t border-slate-100 flex justify-end">
           <button
+            type="button"
             onClick={onClose}
             className="px-5 py-2 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold rounded-xl transition-colors shadow-sm"
           >

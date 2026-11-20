@@ -1,0 +1,15 @@
+{
+  "mode": "after",
+  "checkedAt": "2026-11-20T20:20:32.926Z",
+  "base": "https://eigo-taxi-test.web.app",
+  "width": 375,
+  "height": 812,
+  "engine": "Chromium (Edge) mobile emulation",
+  "profiles": "fresh anonymous browser-local demo",
+  "geometry": {},
+  "verified": [
+    "個人情報の取扱い",
+    "免責事項",
+    "利用規約"
+  ]
+}

@@ -3,9 +3,9 @@
     "environment": "mighty-test",
     "projectId": "eigo-taxi-app",
     "siteId": "eigo-taxi-test",
-    "builtAt": "2026-11-19T18:38:10.099Z",
-    "baseCommit": "b6e8deb074c747f6545f36905a1e2ba52b1dd4b6",
-    "sourceDigest": "a467b85b30e2139e0bc70e46f101324d5d34c21dc63087ec73b8ce27b36698ae"
+    "builtAt": "2026-11-20T21:17:21.875Z",
+    "baseCommit": "1c55bfee0a46dcd99377c89fdbaa2f449292f360",
+    "sourceDigest": "950cabc9999cd650aff0bdc3309fdc2f2ed67a0baf10ee3da9b430f95253ebf4"
   },
   "sourceHashes": {
     ".firebaserc": "cb2d89a95d2550bcd6d4e2478e2bb8b7844c05bf79fec042220f226c815519f2",
@@ -30,8 +30,8 @@
     "src/components/Navbar.tsx": "77d967411aab9b6ec1181f22a9fa44caebf82fa59197aad9d63fc63f2594a3b0",
     "src/components/ParentPortal.tsx": "a9a7f3f49d473c43cf3af4bd8bc8135f068b11d671b01afa42beb59babc9262f",
     "src/components/PortalInvitations.tsx": "9c05d751fdd5912a6b31f641ef5265b699d73fb7fa5e368bc3c4f6e42804b845",
-    "src/components/TeacherDashboard.tsx": "b0fdfcef762a08a6f0f1bd4dc1ccce5d8131ef03b1861da9ec8b64fb3423464f",
-    "src/components/TermsModal.tsx": "fae1239b768e76da159bc5762fdb17522c53eef27aae13831d9732c4ffb503d5",
+    "src/components/TeacherDashboard.tsx": "4993e9723b8ea60e73eab3a5109ec44e027b302115f59a21b6249974faf065e9",
+    "src/components/TermsModal.tsx": "9dad73ee08119eaf0d6dad5d56a5df9171d25c3ec8936cc502a80b9eb0984f83",
     "src/deployment-config.ts": "5c30aad36376487fcf2fbb664f2574bdd430890191675ca9813b5fdea516b6f1",
     "src/index.css": "66baff8b6d7a116920270aba8584dd856cf5de345b59b511b849b96152ce91d8",
     "src/main.tsx": "6e9e5807fcbd48b75a96db5cbef36c996262196be42e6d4760dc86babbe61ad2",
@@ -42,11 +42,11 @@
     "vite.config.ts": "116056c4029005abca8bc3a1ff86b54d37fd33e22530d43a59194969e4929e77"
   },
   "distHashes": {
+    "dist/assets/index-CnpzftGs.js": "cf7abc9ebc4584cdb1c08dfb8ee973859249f70047a37191ffa85e4f6e6a119f",
     "dist/assets/index-gPaggmg7.css": "6d123eabd5ffa8878b5ec79fdccef06e8b96b3ba93ab0cda5093670185575d0e",
-    "dist/assets/index-xm3yRGwX.js": "550f594110789513beee53a98b4db85c5cc33c6b3acad2b092715201d7d8e327",
     "dist/favicon.svg": "61bc9a161de58248288e6905425d7180f0624c2865007b97d763fdac12043a66",
     "dist/icons.svg": "b45fa506195cfcdef406ba9f0c77b36ddc1a7c224040926ec70abc2fdea7b93a",
-    "dist/index.html": "6830fd1eb93a67f4b9668d950862b79b0f607705f24afc02d64881651a066e70",
-    "dist/release.json": "26200930ae9dab6ca7ce188673b56cdc46d4fd4e327857352a665d8f0d03da61"
+    "dist/index.html": "60289ac2124f992077738a5ac167aa85013b8ca6b2a043c21ec21d9baa499f0e",
+    "dist/release.json": "f0c5459e43af185a553b984a3319e2a25506b7282782050313ce4821c4172e1c"
   }
 }

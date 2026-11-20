@@ -1,0 +1,59 @@
+{
+  "checkedAt": "2026-11-20T21:18:27.365Z",
+  "url": "https://eigo-taxi-test.web.app",
+  "fix39TermsModal": {
+    "pass": true,
+    "termsFirstOpen": [
+      {
+        "text": "利用規約",
+        "type": "button",
+        "selected": "true"
+      },
+      {
+        "text": "個人情報の取扱い",
+        "type": "button",
+        "selected": "false"
+      },
+      {
+        "text": "免責事項",
+        "type": "button",
+        "selected": "false"
+      }
+    ],
+    "termsPrivacyOpen": {
+      "tabs": [
+        {
+          "text": "利用規約",
+          "selected": "false"
+        },
+        {
+          "text": "個人情報の取扱い",
+          "selected": "true"
+        },
+        {
+          "text": "免責事項",
+          "selected": "false"
+        }
+      ],
+      "footerCloseType": "button"
+    }
+  },
+  "fix40TeacherTabs": {
+    "pass": true,
+    "initialTabInfo": {
+      "todayType": "button",
+      "todayPressed": "true",
+      "allType": "button",
+      "allPressed": "false",
+      "studentsType": "button",
+      "studentsPressed": "false",
+      "addRideType": "button",
+      "addTicketType": "button"
+    },
+    "afterSwitchPressed": {
+      "todayPressed": "false",
+      "allPressed": "true"
+    }
+  },
+  "errors": []
+}
