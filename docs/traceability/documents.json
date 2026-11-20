@@ -71602,6 +71602,126 @@
       ]
     },
     {
+      "id": "DOC-0644",
+      "path": "docs/progress/2026-11-21-cumulative-fortytwo.md",
+      "state": "historical",
+      "sha256": "2251d3e9d06fbbc5ec7ce0b4b9e104a4fe09800058cec75c3c53e74647159190",
+      "items": [
+        {
+          "id": "DOC-0644-ITEM-00001",
+          "line": 1,
+          "contentSha256": "b07f7879f759067fb3bd8213ad18123d5fb35e3d62012f237c5daea08cd1b062",
+          "occurrence": 1,
+          "preview": "# 11月21日 累計42件の実装修正・受入試験42項目（フッター規約ボタン・予約行操作ボタン改善）"
+        },
+        {
+          "id": "DOC-0644-ITEM-00002",
+          "line": 3,
+          "contentSha256": "e79e8976eb91cf8c58638c41a0a566d1ab36a7c78822c02c6008bfbd6635a453",
+          "occurrence": 1,
+          "preview": "小林さん、お疲れ様です。"
+        },
+        {
+          "id": "DOC-0644-ITEM-00003",
+          "line": 5,
+          "contentSha256": "7959b37ab46e96041ac24c6478db2db42c29aae7d5daba5b12efae6d24228d1f",
+          "occurrence": 1,
+          "preview": "11月21日の追加対応により、実装修正は**累計42件**、実施した異なる受入試験は**累計42項目**となりました（先行2件は Claude Code Fable 5.2 の対応分、追加40件が後続の対応分です）。"
+        },
+        {
+          "id": "DOC-0644-ITEM-00004",
+          "line": 7,
+          "contentSha256": "9dd3dbae4b463a0914228af67a3622c440a86896b0db0f05ca36f18a35bb7cc2",
+          "occurrence": 1,
+          "preview": "### 【今回の追加修正内容（41〜42件目）】"
+        },
+        {
+          "id": "DOC-0644-ITEM-00005",
+          "line": 8,
+          "contentSha256": "7f8fa2d915bba7f40e7fda0a5237309358826dd76ef113bef62f327696ed57b1",
+          "occurrence": 1,
+          "preview": "* **41件目（`App.tsx`）**：画面フッターの「利用規約」「個人情報の取扱い」「免責事項」ボタンに `type=\"button\"` を明示し、意図しないフォーム送信・ブラウザ既定動作の混入を防止しました。"
+        },
+        {
+          "id": "DOC-0644-ITEM-00006",
+          "line": 9,
+          "contentSha256": "bec0b66015c68755fc36274d77a0e513d7a2ca040e8d15e9ad08fe6e788942fb",
+          "occurrence": 1,
+          "preview": "* **42件目（`ParentPortal.tsx` / `TeacherDashboard.tsx`）**：保護者画面の「キャンセル」ボタン、および管理者画面の送迎一覧行内にある「完了」「取消」ボタンへ `type=\"button\"` を明示しました。"
+        },
+        {
+          "id": "DOC-0644-ITEM-00007",
+          "line": 11,
+          "contentSha256": "914373b3f9726cbaa8a3c7086c2fae6f68e8512a005e503b8ba6bd4626b82a85",
+          "occurrence": 1,
+          "preview": "### 【今回実施した受入試験（41〜42項目目）】"
+        },
+        {
+          "id": "DOC-0644-ITEM-00008",
+          "line": 12,
+          "contentSha256": "e6b6c85ac6591693b2f5605389841e14eae247d1f0ef074271095ffaef499cf9",
+          "occurrence": 1,
+          "preview": "* **41項目目（フッター規約ボタン属性検証［公開デモ］）**：公開検証サイト（`https://eigo-taxi-test.web.app/#/admin`）の管理者デモ画面にて、フッターの「利用規約」「個人情報の取扱い」「免責事項」の3ボタンすべてに `type=\"but"
+        },
+        {
+          "id": "DOC-0644-ITEM-00009",
+          "line": 13,
+          "contentSha256": "feef9828cc0eeda27dbba5d78a541b1b86e398433efed06a8b121ef59a68fe45",
+          "occurrence": 1,
+          "preview": "* **42項目目（予約一覧・行アクションボタン属性検証［公開デモ］）**：公開検証サイトの管理者デモ（「送迎スケジュール一覧」の「完了」「取消」ボタン）および保護者デモ（「現在予約中の送迎」の「キャンセル」ボタン）すべてに `type=\"button\"` が付与されていることを"
+        },
+        {
+          "id": "DOC-0644-ITEM-00010",
+          "line": 15,
+          "contentSha256": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+          "occurrence": 1,
+          "preview": "---"
+        },
+        {
+          "id": "DOC-0644-ITEM-00011",
+          "line": 17,
+          "contentSha256": "76c3519755d39acf199783847365abea0c2ba4aec32426a7addbe54a9ff2b9a7",
+          "occurrence": 1,
+          "preview": "### 【公開環境・確認範囲】"
+        },
+        {
+          "id": "DOC-0644-ITEM-00012",
+          "line": 18,
+          "contentSha256": "b8f8e26627fdd283f6f45ab1ae8e53d01b7ab6cd92e292bebaf1c240ff354448",
+          "occurrence": 1,
+          "preview": "* **検証サイト**: https://eigo-taxi-test.web.app/"
+        },
+        {
+          "id": "DOC-0644-ITEM-00013",
+          "line": 19,
+          "contentSha256": "37af897d5c298bf666b91f7d8740b40ee4f48fc02b657dd22b6c42e763baecb5",
+          "occurrence": 1,
+          "preview": "* **反映版 (`sourceDigest`)**: `ffff7b3716ff2a44976c1ef0d8ea248bf9f8f5b01137cab3a2bef50dfa1df564`（ビルド時刻: `2026-11-20T22:19:25.939Z`）"
+        },
+        {
+          "id": "DOC-0644-ITEM-00014",
+          "line": 20,
+          "contentSha256": "28f69601f2376d9b4ae7c3fbf783d923448f2facce2a019cd7e286ce54cdc800",
+          "occurrence": 1,
+          "preview": "* **配信照合**: [public-2026-11-20T22-20-35-790Z.json](../acceptance/deployment-verification/public-2026-11-20T22-20-35-790Z.json)（全7ファイル SHA-25"
+        },
+        {
+          "id": "DOC-0644-ITEM-00015",
+          "line": 21,
+          "contentSha256": "f991d71211917431da59705998cc70bdfbf8eb400191b8a1e395a5b7bca16034",
+          "occurrence": 1,
+          "preview": "* **公開UI証跡**: [public-ui-fortytwo.json](../../outputs/daily-20261121/public-ui-fortytwo.json)"
+        },
+        {
+          "id": "DOC-0644-ITEM-00016",
+          "line": 22,
+          "contentSha256": "f05b4c87239863444f5738c59c27a6864e67fabeb0482abfb963cdc48a292ac6",
+          "occurrence": 1,
+          "preview": "* **顧客確認・本番状況**: 小林様の顧客確認6手順（`CUST-01`〜`CUST-06`）は 0/6件（未実施）、顧客用の検証データはそのまま維持しており、**本番運用は開始していません**。"
+        }
+      ]
+    },
+    {
       "id": "DOC-0642",
       "path": "docs/progress/2026-11-21-terms-deployment-pending.md",
       "state": "historical",

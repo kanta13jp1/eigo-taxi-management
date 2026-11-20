@@ -1,0 +1,35 @@
+{
+  "checkedAt": "2026-11-20T22:20:50.394Z",
+  "url": "https://eigo-taxi-test.web.app",
+  "fix41FooterButtons": {
+    "pass": true,
+    "footerBtnTypes": [
+      {
+        "label": "利用規約",
+        "type": "button"
+      },
+      {
+        "label": "個人情報の取扱い",
+        "type": "button"
+      },
+      {
+        "label": "免責事項",
+        "type": "button"
+      }
+    ]
+  },
+  "fix42RowActionButtons": {
+    "pass": true,
+    "teacherRowBtns": {
+      "completeText": "完了",
+      "completeType": "button",
+      "cancelText": "取消",
+      "cancelType": "button"
+    },
+    "parentCancelBtn": {
+      "exists": true,
+      "type": "button"
+    }
+  },
+  "errors": []
+}

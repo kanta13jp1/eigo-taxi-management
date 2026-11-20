@@ -216,6 +216,7 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({
 
                         {/* キャンセルボタン */}
                         <button
+                          type="button"
                           aria-label={target + ' ' + ride.pickupLocation + ' の予約をキャンセル'}
                           disabled={cancelPending}
                           onClick={() => setCancelRideId(ride.id)}

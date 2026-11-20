@@ -477,6 +477,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
                             {ride.status === 'scheduled' && (
                               <div className="flex items-center justify-end gap-1.5">
                                 <button
+                                  type="button"
                                   onClick={() => completeRide(ride)}
                                   disabled={pendingRideIds.has(ride.id)}
                                   aria-label={completionLabel(ride)}
@@ -485,6 +486,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
                                   {pendingRideIds.has(ride.id) ? '完了処理中' : '完了'}
                                 </button>
                                 <button
+                                  type="button"
                                   onClick={() => setCancelRideId(ride.id)}
                                   disabled={pendingRideIds.has(ride.id)}
                                   aria-label={`${ride.studentName} ${ride.rideDate} ${ride.rideTime} ${typeInfo.text} の予約を取消`}

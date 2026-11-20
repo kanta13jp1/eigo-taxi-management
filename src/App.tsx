@@ -303,6 +303,7 @@ export function App() {
           </p>
           <div className="flex items-center gap-4 text-xs font-medium">
             <button
+              type="button"
               onClick={() => openTerms('terms')}
               className="text-slate-500 hover:text-indigo-600 transition-colors underline-offset-4 hover:underline"
             >
@@ -310,6 +311,7 @@ export function App() {
             </button>
             <span className="text-slate-300">|</span>
             <button
+              type="button"
               onClick={() => openTerms('privacy')}
               className="text-slate-500 hover:text-indigo-600 transition-colors underline-offset-4 hover:underline"
             >
@@ -317,6 +319,7 @@ export function App() {
             </button>
             <span className="text-slate-300">|</span>
             <button
+              type="button"
               onClick={() => openTerms('disclaimer')}
               className="text-slate-500 hover:text-indigo-600 transition-colors underline-offset-4 hover:underline"
             >
