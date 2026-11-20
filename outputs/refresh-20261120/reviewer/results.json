@@ -1,13 +1,13 @@
 {
-  "executedAt": "2026-11-19T16:43:27.563Z",
+  "executedAt": "2026-11-19T18:41:17.347Z",
   "mode": "Offline real App with synthetic Google identity and GAS responses; no live acceptance claim",
   "browserVersion": "158.0.8127.36",
   "sourceHashes": {
     "src/services/api.ts": "9de6da24a594b1bb37d12d1dc4b2910a8cfdadf9124ed4abf22ac8104cd35e28",
     "src/App.tsx": "1f6251c7c70b403b25e9a4cd55bd8d22d6881d42735bd964f93b99105ca87cb1",
     "src/components/Navbar.tsx": "77d967411aab9b6ec1181f22a9fa44caebf82fa59197aad9d63fc63f2594a3b0",
-    "src/components/TeacherDashboard.tsx": "149af6e3af266520aab013d34680cdd541e2e225d44e3ab2ff4e7a1026f1d0dc",
-    "src/components/AccountManagement.tsx": "89476404d0e6b02a9fa63e7225b9857fb9766daca5e129f6d0a9eba58214b758",
+    "src/components/TeacherDashboard.tsx": "b0fdfcef762a08a6f0f1bd4dc1ccce5d8131ef03b1861da9ec8b64fb3423464f",
+    "src/components/AccountManagement.tsx": "dbd052165fbc4a11fa02be04d47ed55280353d5ca9570ebf8cdd1b20623d77b8",
     "tests/reviewer-ui/main.tsx": "dd8aad05777bf2c56aaa461b6212ccbd8abd9858b32cc21fcf0d130aeac54e07",
     "tests/reviewer-ui/google-auth.ts": "d517d9747c524c019041aee3d55376eaad1873976aa0c923244ada3b9c4463e6",
     "tests/reviewer-ui/run.mjs": "8523ca0e96e59b093cbd955be52f07fecdc93b9d0e94e95705109f7d65360e46"

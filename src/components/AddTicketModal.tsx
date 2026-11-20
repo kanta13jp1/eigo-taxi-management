@@ -40,7 +40,7 @@ export const AddTicketModal: React.FC<AddTicketModalProps> = ({
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!studentId || !Number.isSafeInteger(ticketCount) || ticketCount < 1 || ticketCount > 100) {
-      alert('生徒と正しい枚数を指定してください');
+      setError('生徒と1〜100枚の整数を指定してください');
       return;
     }
     const amount = Number(amountInput);
@@ -81,6 +81,8 @@ export const AddTicketModal: React.FC<AddTicketModalProps> = ({
             </div>
           </div>
           <button
+            type="button"
+            aria-label="閉じる"
             onClick={onClose}
             className="p-1 rounded-full text-slate-400 hover:text-slate-600 hover:bg-slate-100 transition-colors"
           >

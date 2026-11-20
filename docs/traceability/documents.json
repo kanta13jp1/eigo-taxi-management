@@ -71115,6 +71115,126 @@
       ]
     },
     {
+      "id": "DOC-0641",
+      "path": "docs/progress/2026-11-20-cumulative-thirtyeight.md",
+      "state": "historical",
+      "sha256": "1a5539b07d57b086b8c1dcaf31dabed8d7c9d8f41b957d424a2ba5b7fd368bda",
+      "items": [
+        {
+          "id": "DOC-0641-ITEM-00001",
+          "line": 1,
+          "contentSha256": "1506ed91dc865f49d5d907b10210e98144840f7582d498f51cd25260b9dedd4d",
+          "occurrence": 1,
+          "preview": "# 11月20日 累計38件の実装修正・受入試験38項目（SAT-32 / AT-25・取消確認ダイアログ改善）"
+        },
+        {
+          "id": "DOC-0641-ITEM-00002",
+          "line": 3,
+          "contentSha256": "e79e8976eb91cf8c58638c41a0a566d1ab36a7c78822c02c6008bfbd6635a453",
+          "occurrence": 1,
+          "preview": "小林さん、お疲れ様です。"
+        },
+        {
+          "id": "DOC-0641-ITEM-00003",
+          "line": 5,
+          "contentSha256": "696ca3c89bac32cabf74e3bb520661b2848e57ebfd077e6c88f23c1f822a7006",
+          "occurrence": 1,
+          "preview": "11月20日の追加対応により、実装修正は**累計38件**、実施した異なる受入試験は**累計38項目**となりました（先行2件は Claude Code Fable 5.2 の対応分、追加36件が後続の対応分です）。"
+        },
+        {
+          "id": "DOC-0641-ITEM-00004",
+          "line": 7,
+          "contentSha256": "0423d1f77f19a86a77e70a27d179a8a9f065a282303099b83422e81bba6fd87d",
+          "occurrence": 1,
+          "preview": "### 【今回の追加修正内容（37〜38件目）】"
+        },
+        {
+          "id": "DOC-0641-ITEM-00005",
+          "line": 8,
+          "contentSha256": "843463e41b1a294fdaf715d9b5788a6db41dae20d2d432d3461d54a282ed1f7b",
+          "occurrence": 1,
+          "preview": "* **37件目（`AddTicketModal.tsx`）**：チケット追加モーダルで不正な枚数（1〜100以外の整数等）を指定した際、ブラウザ標準の `alert()` ではなくモーダル内の `role=\"alert\"` バナーで統一表示するよう修正しました。また、右上の閉じ"
+        },
+        {
+          "id": "DOC-0641-ITEM-00006",
+          "line": 9,
+          "contentSha256": "f39dac052629700dcdaef43bfe84543f7e7b8d6e6ac69e5b14c976d8d5e0aab6",
+          "occurrence": 1,
+          "preview": "* **38件目（`ParentPortal.tsx` / `TeacherDashboard.tsx`）**：保護者画面および管理者画面の「予約取消の確認」ダイアログにある「戻る」「取消を確定」ボタンへ `type=\"button\"` を明示しました。"
+        },
+        {
+          "id": "DOC-0641-ITEM-00007",
+          "line": 11,
+          "contentSha256": "0bfe13f18cd4e443eaebf3672f7feb75744d6d1b2d1510c7752b921b2494c994",
+          "occurrence": 1,
+          "preview": "### 【今回実施した受入試験（37〜38項目目）】"
+        },
+        {
+          "id": "DOC-0641-ITEM-00008",
+          "line": 12,
+          "contentSha256": "ae8f1389a750cc9908a3b1f5f94ce577252861beb33fab10e2319dde1addaae9",
+          "occurrence": 1,
+          "preview": "* **`SAT-32`（初回Google本人紐付け・入口分離［公開画面確認］）**：公開検証サイトの保護者入口（`#/parent`）、ご家庭専用URL形式（`#/parent/<UUID>`）、不正形式URL（`#/parent/invalid-entry-sat32`）のそ"
+        },
+        {
+          "id": "DOC-0641-ITEM-00009",
+          "line": 13,
+          "contentSha256": "3bc08273d043acaf682d0afd7de73e11ace1c6ace63c391d653c50cdf1cb7311",
+          "occurrence": 1,
+          "preview": "* **`AT-25`（チケット追加異常入力・取消確認ダイアログ動作［公開デモ］）**：公開検証サイトの管理者デモおよび保護者デモにて、チケット追加モーダルの閉じるボタン属性（`type=\"button\"` / `aria-label=\"閉じる\"`）、枚数異常時の `role=\""
+        },
+        {
+          "id": "DOC-0641-ITEM-00010",
+          "line": 15,
+          "contentSha256": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+          "occurrence": 1,
+          "preview": "---"
+        },
+        {
+          "id": "DOC-0641-ITEM-00011",
+          "line": 17,
+          "contentSha256": "76c3519755d39acf199783847365abea0c2ba4aec32426a7addbe54a9ff2b9a7",
+          "occurrence": 1,
+          "preview": "### 【公開環境・確認範囲】"
+        },
+        {
+          "id": "DOC-0641-ITEM-00012",
+          "line": 18,
+          "contentSha256": "b8f8e26627fdd283f6f45ab1ae8e53d01b7ab6cd92e292bebaf1c240ff354448",
+          "occurrence": 1,
+          "preview": "* **検証サイト**: https://eigo-taxi-test.web.app/"
+        },
+        {
+          "id": "DOC-0641-ITEM-00013",
+          "line": 19,
+          "contentSha256": "95f27689171ed95cf796effc571f7df9092ff13bae4e89aac7de68def089f063",
+          "occurrence": 1,
+          "preview": "* **反映版 (`sourceDigest`)**: `a467b85b30e2139e0bc70e46f101324d5d34c21dc63087ec73b8ce27b36698ae`（ビルド時刻: `2026-11-19T18:38:10.099Z`）"
+        },
+        {
+          "id": "DOC-0641-ITEM-00014",
+          "line": 20,
+          "contentSha256": "925035451cad35ddaeb135b807ad7ff4a9a11fc1a59be51378109cdab1b34d99",
+          "occurrence": 1,
+          "preview": "* **配信照合**: [public-2026-11-19T18-38-39-241Z.json](../acceptance/deployment-verification/public-2026-11-19T18-38-39-241Z.json)（全7ファイル SHA-25"
+        },
+        {
+          "id": "DOC-0641-ITEM-00015",
+          "line": 21,
+          "contentSha256": "ac6c3fb52f07ed152d5f94adbe29dffb9964ad38e227e11e201dbf4351cef8be",
+          "occurrence": 1,
+          "preview": "* **公開UI証跡**: [public-ui-thirtyeight.json](../../outputs/daily-20261120/public-ui-thirtyeight.json)"
+        },
+        {
+          "id": "DOC-0641-ITEM-00016",
+          "line": 22,
+          "contentSha256": "f05b4c87239863444f5738c59c27a6864e67fabeb0482abfb963cdc48a292ac6",
+          "occurrence": 1,
+          "preview": "* **顧客確認・本番状況**: 小林様の顧客確認6手順（`CUST-01`〜`CUST-06`）は 0/6件（未実施）、顧客用の検証データはそのまま維持しており、**本番運用は開始していません**。"
+        }
+      ]
+    },
+    {
       "id": "DOC-0639",
       "path": "docs/progress/2026-11-20-cumulative-thirtyfour.md",
       "state": "historical",
@@ -71235,6 +71355,126 @@
         {
           "id": "DOC-0639-ITEM-00017",
           "line": 24,
+          "contentSha256": "f05b4c87239863444f5738c59c27a6864e67fabeb0482abfb963cdc48a292ac6",
+          "occurrence": 1,
+          "preview": "* **顧客確認・本番状況**: 小林様の顧客確認6手順（`CUST-01`〜`CUST-06`）は 0/6件（未実施）、顧客用の検証データはそのまま維持しており、**本番運用は開始していません**。"
+        }
+      ]
+    },
+    {
+      "id": "DOC-0640",
+      "path": "docs/progress/2026-11-20-cumulative-thirtysix.md",
+      "state": "historical",
+      "sha256": "c18ba97fb1ccb6936282f574225a34da7a283df029fe64f3c097365aead5cc45",
+      "items": [
+        {
+          "id": "DOC-0640-ITEM-00001",
+          "line": 1,
+          "contentSha256": "c7d003d59bd8a3b0580c90cc2472c200414f2addff52eace78303e5a7c492302",
+          "occurrence": 1,
+          "preview": "# 11月20日 累計36件の実装修正・受入試験36項目（SAT-31 / SAT-35）"
+        },
+        {
+          "id": "DOC-0640-ITEM-00002",
+          "line": 3,
+          "contentSha256": "e79e8976eb91cf8c58638c41a0a566d1ab36a7c78822c02c6008bfbd6635a453",
+          "occurrence": 1,
+          "preview": "小林さん、お疲れ様です。"
+        },
+        {
+          "id": "DOC-0640-ITEM-00003",
+          "line": 5,
+          "contentSha256": "212e9619b2e42df6bc2e32d41b7fa73272b86e305eae126086715f7119f8e30d",
+          "occurrence": 1,
+          "preview": "11月20日の追加対応により、実装修正は**累計36件**、実施した異なる受入試験は**累計36項目**となりました（先行2件は Claude Code Fable 5.2 の対応分、追加34件が後続の対応分です）。"
+        },
+        {
+          "id": "DOC-0640-ITEM-00004",
+          "line": 7,
+          "contentSha256": "4ee0f219f4cbb2730910fdf3b520bdd9bb9650f57ca1cc5abaab28c948788d4c",
+          "occurrence": 1,
+          "preview": "### 【今回の追加修正内容（35〜36件目）】"
+        },
+        {
+          "id": "DOC-0640-ITEM-00005",
+          "line": 8,
+          "contentSha256": "2852efcccf83c87ab268373cb308ceb0e8ce4787369668df994f9ae201fcc403",
+          "occurrence": 1,
+          "preview": "* **35件目（`AccountManagement.tsx`）**：アカウント管理画面で「新規登録に戻る」を押した際に直前のエラー・完了メッセージが残っていた不具合を解消し（状態クリア）、確認ダイアログの「戻る」ボタンへの枠線スタイル・`type=\"button\"` 明示、お"
+        },
+        {
+          "id": "DOC-0640-ITEM-00006",
+          "line": 9,
+          "contentSha256": "187c9dfe295069119f8f4b02cecf2e88aa73c783943f6e173e8479c24e5544da",
+          "occurrence": 1,
+          "preview": "* **36件目（`GoogleSettings.tsx`）**：Google連携設定画面の「モック初期化」「デモデータ消去」ボタンに `type=\"button\"` を明示し、ボタン行を `flex flex-wrap gap-2` に整理してスマートフォン幅でも折り返し時の余"
+        },
+        {
+          "id": "DOC-0640-ITEM-00007",
+          "line": 11,
+          "contentSha256": "8bcbdceb663a6c5ef041621b2e32105714404c4608e5168bdd9478aa5c4017ae",
+          "occurrence": 1,
+          "preview": "### 【今回実施した受入試験（35〜36項目目）】"
+        },
+        {
+          "id": "DOC-0640-ITEM-00008",
+          "line": 12,
+          "contentSha256": "9aca9b2087babab3595b40b950201573e9bf1c2b7a4c4e822065f81f02cfccbb",
+          "occurrence": 1,
+          "preview": "* **`SAT-31`（管理者による利用登録・停止・削除［公開デモ＋ローカル検証］）**：公開検証サイトの管理者デモ画面（`https://eigo-taxi-test.web.app/#/admin`）で、デモセッションではアカウント管理が安全にブロック（「アカウント管理はG"
+        },
+        {
+          "id": "DOC-0640-ITEM-00009",
+          "line": 13,
+          "contentSha256": "f9f4945cb98c1eb7aa5bd1af6706fb2c6e7b6dd769c2e1b1beee04f58815c6ab",
+          "occurrence": 1,
+          "preview": "* **`SAT-35`（台帳直接編集と反映［公開デモ］）**：公開検証サイトの「Google連携」画面（`390×844`）にて、デモデータが元台帳とは非同期のローカルデータである旨の案内表示、「モック初期化」「デモデータ消去」ボタンの `type=\"button\"` 属性、横"
+        },
+        {
+          "id": "DOC-0640-ITEM-00010",
+          "line": 15,
+          "contentSha256": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+          "occurrence": 1,
+          "preview": "---"
+        },
+        {
+          "id": "DOC-0640-ITEM-00011",
+          "line": 17,
+          "contentSha256": "76c3519755d39acf199783847365abea0c2ba4aec32426a7addbe54a9ff2b9a7",
+          "occurrence": 1,
+          "preview": "### 【公開環境・確認範囲】"
+        },
+        {
+          "id": "DOC-0640-ITEM-00012",
+          "line": 18,
+          "contentSha256": "b8f8e26627fdd283f6f45ab1ae8e53d01b7ab6cd92e292bebaf1c240ff354448",
+          "occurrence": 1,
+          "preview": "* **検証サイト**: https://eigo-taxi-test.web.app/"
+        },
+        {
+          "id": "DOC-0640-ITEM-00013",
+          "line": 19,
+          "contentSha256": "3df43a62578420a4dc20b914c03a80c9566127adc333cc79bff8b8856facd330",
+          "occurrence": 1,
+          "preview": "* **反映版 (`sourceDigest`)**: `7bc56dfe391f20327feaa7f506449ccbefa0f3105736b3e61c5d157d670fae41`（ビルド時刻: `2026-11-19T17:51:56.629Z`）"
+        },
+        {
+          "id": "DOC-0640-ITEM-00014",
+          "line": 20,
+          "contentSha256": "3e35a6a6cf83988d5650b68f0e3d9206a315e4548de3ee0a98fc55b6912365fc",
+          "occurrence": 1,
+          "preview": "* **配信照合**: [public-2026-11-19T17-52-29-942Z.json](../acceptance/deployment-verification/public-2026-11-19T17-52-29-942Z.json)（全7ファイル SHA-25"
+        },
+        {
+          "id": "DOC-0640-ITEM-00015",
+          "line": 21,
+          "contentSha256": "66307038fac93844b64d9eee50492ef9426cd0bc1f4c8c2af66f42b5415df3e2",
+          "occurrence": 1,
+          "preview": "* **公開UI証跡**: [public-ui-thirtysix.json](../../outputs/daily-20261120/public-ui-thirtysix.json)"
+        },
+        {
+          "id": "DOC-0640-ITEM-00016",
+          "line": 22,
           "contentSha256": "f05b4c87239863444f5738c59c27a6864e67fabeb0482abfb963cdc48a292ac6",
           "occurrence": 1,
           "preview": "* **顧客確認・本番状況**: 小林様の顧客確認6手順（`CUST-01`〜`CUST-06`）は 0/6件（未実施）、顧客用の検証データはそのまま維持しており、**本番運用は開始していません**。"

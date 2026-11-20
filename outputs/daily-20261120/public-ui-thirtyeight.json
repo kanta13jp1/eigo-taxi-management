@@ -1,0 +1,53 @@
+{
+  "checkedAt": "2026-11-19T18:40:37.434Z",
+  "url": "https://eigo-taxi-test.web.app",
+  "sat32": {
+    "pass": true,
+    "parentEntryCheck": {
+      "inputs": 0,
+      "hasAdminNav": false,
+      "hasRoleSelector": false,
+      "hasGoogleLoginBtn": true
+    },
+    "invalidParentEntryCheck": {
+      "inputs": 0,
+      "hasLedger": false,
+      "hasUrlCheckHeading": true
+    },
+    "validFormatParentEntryCheck": {
+      "inputs": 0,
+      "hasLedger": false,
+      "hasFamilyNotice": true
+    }
+  },
+  "fix37AddTicketModal": {
+    "pass": true,
+    "closeBtnExists": true,
+    "closeBtnType": "button",
+    "ticketModalAlert": "生徒と1〜100枚の整数を指定してください"
+  },
+  "fix38CancelDialogs": {
+    "pass": true,
+    "adminCancelDialogBtns": [
+      {
+        "text": "戻る",
+        "type": "button"
+      },
+      {
+        "text": "取消を確定",
+        "type": "button"
+      }
+    ],
+    "parentCancelDialogBtns": [
+      {
+        "text": "戻る",
+        "type": "button"
+      },
+      {
+        "text": "取消を確定",
+        "type": "button"
+      }
+    ]
+  },
+  "errors": []
+}

@@ -507,8 +507,8 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
           <p>{cancelTarget.rideDate} {cancelTarget.rideTime}・{getRideTypeLabel(cancelTarget.rideType).text}</p>
           <p className="mt-3 text-sm">{isDemo ? 'このブラウザ内のデモ予約を取り消します。教室の予定は変わりません。' : '台帳の予約を取消にし、対応するカレンダーの予定を削除します。'}</p>
           <div className="mt-5 flex justify-end gap-2">
-            <button className="rounded-lg border px-3 py-2" onClick={dismissCancellation}>戻る</button>
-            <button className="rounded-lg bg-rose-700 px-3 py-2 font-bold text-white" onClick={() => {
+            <button type="button" className="rounded-lg border px-3 py-2" onClick={dismissCancellation}>戻る</button>
+            <button type="button" className="rounded-lg bg-rose-700 px-3 py-2 font-bold text-white" onClick={() => {
               dismissCancellation();
               void onCancelRide(cancelTarget.id);
             }}>取消を確定</button>

@@ -1,0 +1,19 @@
+{
+  "checkedAt": "2026-11-19T17:54:48.729Z",
+  "url": "https://eigo-taxi-test.web.app/#/admin",
+  "sat31": {
+    "pass": true,
+    "reloadBtnType": "button",
+    "demoAccountAlert": "アカウント管理はGoogleログインした管理者だけが利用できます。",
+    "demoAccountAlertAfterReloadClick": "アカウント管理はGoogleログインした管理者だけが利用できます。"
+  },
+  "sat35": {
+    "pass": true,
+    "resetBtnType": "button",
+    "purgeBtnType": "button",
+    "hasNotice": true,
+    "horizontalOverflow": false,
+    "reloadedDashboardVisible": true
+  },
+  "errors": []
+}

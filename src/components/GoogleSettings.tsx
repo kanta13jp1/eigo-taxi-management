@@ -18,8 +18,10 @@ export function GoogleSettings() {
     {demo&&<section className="space-y-3 rounded-2xl border bg-white p-6">
       <h2 className="font-bold">このブラウザのデモデータ</h2>
       <p className="text-sm">以下は架空のデモ台帳だけを変更します。Google側のデータ初期化・移行とは別の操作です。</p>
-      <button className="rounded-lg border px-3 py-2 text-sm" onClick={()=>{if(confirm('デモデータを初期状態に戻しますか？')){ApiService.resetToMock();location.reload();}}}>モック初期化</button>
-      <button className="ml-2 rounded-lg border px-3 py-2 text-sm text-rose-700" onClick={()=>{if(confirm('このブラウザのデモ台帳を空にしますか？')){ApiService.purgeAllData();location.reload();}}}>デモデータ消去</button>
+      <div className="flex flex-wrap gap-2">
+        <button type="button" className="rounded-lg border px-3 py-2 text-sm" onClick={()=>{if(confirm('デモデータを初期状態に戻しますか？')){ApiService.resetToMock();location.reload();}}}>モック初期化</button>
+        <button type="button" className="rounded-lg border px-3 py-2 text-sm text-rose-700" onClick={()=>{if(confirm('このブラウザのデモ台帳を空にしますか？')){ApiService.purgeAllData();location.reload();}}}>デモデータ消去</button>
+      </div>
     </section>}
   </div>;
 }
