@@ -15,8 +15,13 @@ interface AddTicketModalProps {
   }) => Promise<void>;
 }
 
-export const AddTicketModal: React.FC<AddTicketModalProps> = ({
-  isOpen,
+export const AddTicketModal: React.FC<AddTicketModalProps> = (props) => {
+  if (!props.isOpen) return null;
+  const modalKey = props.initialStudentId || props.students[0]?.id || 'empty';
+  return <AddTicketModalContent key={modalKey} {...props} />;
+};
+
+const AddTicketModalContent: React.FC<AddTicketModalProps> = ({
   onClose,
   students,
   initialStudentId,
@@ -28,8 +33,6 @@ export const AddTicketModal: React.FC<AddTicketModalProps> = ({
   const [note, setNote] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState('');
-
-  if (!isOpen) return null;
 
   const handlePresetSelect = (count: number, price: number, label: string) => {
     setTicketCount(count);

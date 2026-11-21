@@ -71602,6 +71602,126 @@
       ]
     },
     {
+      "id": "DOC-0647",
+      "path": "docs/progress/2026-11-21-cumulative-fortyeight.md",
+      "state": "historical",
+      "sha256": "a25df8b76e77bb140beb1a11982018b8a5927e3450ecb5630ab1ffb77e499461",
+      "items": [
+        {
+          "id": "DOC-0647-ITEM-00001",
+          "line": 1,
+          "contentSha256": "35a6641acde7a01bb1cfce68f34da7851633e4b93dad38ca9e44bb3a9bdd0a23",
+          "occurrence": 1,
+          "preview": "# 11月21日 累計48件の実装修正・受入試験48項目（AddTicketModal / AddStudentModal 状態リセット改善）"
+        },
+        {
+          "id": "DOC-0647-ITEM-00002",
+          "line": 3,
+          "contentSha256": "e79e8976eb91cf8c58638c41a0a566d1ab36a7c78822c02c6008bfbd6635a453",
+          "occurrence": 1,
+          "preview": "小林さん、お疲れ様です。"
+        },
+        {
+          "id": "DOC-0647-ITEM-00003",
+          "line": 5,
+          "contentSha256": "7de35a87d23767e32b987958a564aadb4a2a0466abb1618b59694863cc80ec03",
+          "occurrence": 1,
+          "preview": "11月21日の追加対応により、実装修正は**累計48件**、実施した異なる受入試験は**累計48項目**となりました（先行2件は Claude Code Fable 5.2 の対応分、追加46件が後続の対応分です）。"
+        },
+        {
+          "id": "DOC-0647-ITEM-00004",
+          "line": 7,
+          "contentSha256": "1a6b432b5dfdb5f3ed10b956c70c09e985a61b7858039a4ee15ba840f249b51d",
+          "occurrence": 1,
+          "preview": "### 【今回の追加修正内容（47〜48件目）】"
+        },
+        {
+          "id": "DOC-0647-ITEM-00005",
+          "line": 8,
+          "contentSha256": "1da1027acbc00b98e686f22209155cc7fe0cbea7a81de121335dbb291dc65504",
+          "occurrence": 1,
+          "preview": "* **47件目（`AddTicketModal.tsx`）**：`AddTicketModal` を `AddTicketModalContent` へ分離（`key={modalKey}`）し、ある生徒のカードから「チケット追加」を開いて閉じた後に別の生徒のカードから開き直し"
+        },
+        {
+          "id": "DOC-0647-ITEM-00006",
+          "line": 9,
+          "contentSha256": "5339597289d3391fb5f40672847f81cf30ddee3e6cb5f1974d079bba04a20b80",
+          "occurrence": 1,
+          "preview": "* **48件目（`AddStudentModal.tsx`）**：`AddStudentModal` を `AddStudentModalContent` へ分離し、バリデーションエラー表示後や入力途中でモーダルを閉じて再度開いた際、前回の入力内容やエラーメッセージが残らず初期"
+        },
+        {
+          "id": "DOC-0647-ITEM-00007",
+          "line": 11,
+          "contentSha256": "f780a851809ed6f24d93c2078479949e70b6dbc2de96c5986e2db98bc275cca7",
+          "occurrence": 1,
+          "preview": "### 【今回実施した受入試験（47〜48項目目）】"
+        },
+        {
+          "id": "DOC-0647-ITEM-00008",
+          "line": 12,
+          "contentSha256": "8002fd7639fc0b82ca3591d706689d3a305e01d87187e499bcd673fa09ee0544",
+          "occurrence": 1,
+          "preview": "* **47項目目（生徒別チケット追加モーダル状態リセット検証［公開デモ］）**：公開検証サイト（`https://eigo-taxi-test.web.app/#/admin`）の「生徒・チケット管理」タブにて、生徒1（`STU-001`）の「チケット追加」から開いてメモ入力後"
+        },
+        {
+          "id": "DOC-0647-ITEM-00009",
+          "line": 13,
+          "contentSha256": "db8dc077a1f79daaaa3dd1d6e16cbca1a2651660e078d74feb282f6dc31839cd",
+          "occurrence": 1,
+          "preview": "* **48項目目（新規生徒登録モーダル閉鎖後リセット検証［公開デモ］）**：公開検証サイトで「新規生徒を登録」を開いて氏名のみ入力・送信してエラー（「生徒名と送迎場所を入力してください」）を出した後に閉じ、再度開いた際にエラーが0件・氏名が空・初期チケット枚数が `10` にリ"
+        },
+        {
+          "id": "DOC-0647-ITEM-00010",
+          "line": 15,
+          "contentSha256": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+          "occurrence": 1,
+          "preview": "---"
+        },
+        {
+          "id": "DOC-0647-ITEM-00011",
+          "line": 17,
+          "contentSha256": "76c3519755d39acf199783847365abea0c2ba4aec32426a7addbe54a9ff2b9a7",
+          "occurrence": 1,
+          "preview": "### 【公開環境・確認範囲】"
+        },
+        {
+          "id": "DOC-0647-ITEM-00012",
+          "line": 18,
+          "contentSha256": "b8f8e26627fdd283f6f45ab1ae8e53d01b7ab6cd92e292bebaf1c240ff354448",
+          "occurrence": 1,
+          "preview": "* **検証サイト**: https://eigo-taxi-test.web.app/"
+        },
+        {
+          "id": "DOC-0647-ITEM-00013",
+          "line": 19,
+          "contentSha256": "c304296431a633c447ee9396dfdddc91b975abdbcc73654ac9176d19d8811117",
+          "occurrence": 1,
+          "preview": "* **反映版 (`sourceDigest`)**: `0bf212906edec1f18c2e94d9fdeab7d2da9ad787c53060b8920e11ca57dbe4fa`（ビルド時刻: `2026-11-21T00:43:26.733Z`）"
+        },
+        {
+          "id": "DOC-0647-ITEM-00014",
+          "line": 20,
+          "contentSha256": "bd8f6977f68b4e81d15a84655f9aaf42ca993203fc973f401ef0a6efc0a3091c",
+          "occurrence": 1,
+          "preview": "* **配信照合**: [public-2026-11-21T00-44-41-470Z.json](../acceptance/deployment-verification/public-2026-11-21T00-44-41-470Z.json)（全7ファイル SHA-25"
+        },
+        {
+          "id": "DOC-0647-ITEM-00015",
+          "line": 21,
+          "contentSha256": "64e50ab67429c5a60132ec19fae678384dbb01837dcec0e9dc9767742b1b17c4",
+          "occurrence": 1,
+          "preview": "* **公開UI証跡**: [public-ui-fortyeight.json](../../outputs/daily-20261121/public-ui-fortyeight.json)"
+        },
+        {
+          "id": "DOC-0647-ITEM-00016",
+          "line": 22,
+          "contentSha256": "f05b4c87239863444f5738c59c27a6864e67fabeb0482abfb963cdc48a292ac6",
+          "occurrence": 1,
+          "preview": "* **顧客確認・本番状況**: 小林様の顧客確認6手順（`CUST-01`〜`CUST-06`）は 0/6件（未実施）、顧客用の検証データはそのまま維持しており、**本番運用は開始していません**。"
+        }
+      ]
+    },
+    {
       "id": "DOC-0645",
       "path": "docs/progress/2026-11-21-cumulative-fortyfour.md",
       "state": "historical",

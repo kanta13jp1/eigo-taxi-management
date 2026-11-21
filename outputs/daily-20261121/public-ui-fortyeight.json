@@ -1,0 +1,24 @@
+{
+  "checkedAt": "2026-11-21T00:45:02.919Z",
+  "url": "https://eigo-taxi-test.web.app",
+  "fix47AddTicketModalReset": {
+    "pass": true,
+    "ticketFirstOpen": {
+      "studentId": "STU-001"
+    },
+    "ticketSecondOpen": {
+      "studentId": "STU-002",
+      "note": ""
+    }
+  },
+  "fix48AddStudentModalReset": {
+    "pass": true,
+    "studentAlertBefore": "生徒名と送迎場所を入力してください",
+    "studentAfterReopen": {
+      "alertCount": 0,
+      "nameValue": "",
+      "ticketBalanceValue": "10"
+    }
+  },
+  "errors": []
+}

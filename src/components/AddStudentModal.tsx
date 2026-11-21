@@ -8,8 +8,12 @@ interface AddStudentModalProps {
   onSubmit: (student: Omit<Student, 'id' | 'createdAt'>) => Promise<void>;
 }
 
-export const AddStudentModal: React.FC<AddStudentModalProps> = ({
-  isOpen,
+export const AddStudentModal: React.FC<AddStudentModalProps> = (props) => {
+  if (!props.isOpen) return null;
+  return <AddStudentModalContent {...props} />;
+};
+
+const AddStudentModalContent: React.FC<AddStudentModalProps> = ({
   onClose,
   onSubmit,
 }) => {
@@ -21,8 +25,6 @@ export const AddStudentModal: React.FC<AddStudentModalProps> = ({
   const [ticketBalance, setTicketBalance] = useState('10');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState('');
-
-  if (!isOpen) return null;
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
