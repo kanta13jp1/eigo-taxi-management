@@ -1,0 +1,61 @@
+{
+  "checkedAt": "2026-11-21T09:02:41.869Z",
+  "completedAt": "2026-11-21T09:02:42.290Z",
+  "url": "https://eigo-taxi-test.web.app",
+  "releaseId": "a182052bed3e606d",
+  "manifestPath": "docs/acceptance/deployment/build-manifest.json",
+  "manifestSha256": "289b7a6e2e88019782f5a89d6bbbf0b0b0993a1fae9e31d56f073ce176865a6e",
+  "scope": "Public frontend bytes only; no Google service acceptance or deployment",
+  "results": [
+    {
+      "path": "/assets/index-C2PnKCee.js",
+      "status": 200,
+      "sha256": "fc1bfc863d2db1d421f6ea0a3ede10ab60b825ea580b1e47d56beacac8add4e6",
+      "expectedSha256": "fc1bfc863d2db1d421f6ea0a3ede10ab60b825ea580b1e47d56beacac8add4e6",
+      "match": true
+    },
+    {
+      "path": "/assets/index-DJ23AzFE.css",
+      "status": 200,
+      "sha256": "09d7bd9c8ae3c01d9d18d115a43933a1a338bc833216555d34aa2327739b3fe3",
+      "expectedSha256": "09d7bd9c8ae3c01d9d18d115a43933a1a338bc833216555d34aa2327739b3fe3",
+      "match": true
+    },
+    {
+      "path": "/favicon.svg",
+      "status": 200,
+      "sha256": "61bc9a161de58248288e6905425d7180f0624c2865007b97d763fdac12043a66",
+      "expectedSha256": "61bc9a161de58248288e6905425d7180f0624c2865007b97d763fdac12043a66",
+      "match": true
+    },
+    {
+      "path": "/icons.svg",
+      "status": 200,
+      "sha256": "b45fa506195cfcdef406ba9f0c77b36ddc1a7c224040926ec70abc2fdea7b93a",
+      "expectedSha256": "b45fa506195cfcdef406ba9f0c77b36ddc1a7c224040926ec70abc2fdea7b93a",
+      "match": true
+    },
+    {
+      "path": "/index.html",
+      "status": 200,
+      "sha256": "af4c5c90ed0b865b5c5187ec367caac03742403c0d6baefb08497d3d757e3862",
+      "expectedSha256": "af4c5c90ed0b865b5c5187ec367caac03742403c0d6baefb08497d3d757e3862",
+      "match": true
+    },
+    {
+      "path": "/release.json",
+      "status": 200,
+      "sha256": "eed65c5947be06d7f3b29a978ad83ff1410ede283227f7836233f6e3fac45f7e",
+      "expectedSha256": "eed65c5947be06d7f3b29a978ad83ff1410ede283227f7836233f6e3fac45f7e",
+      "match": true
+    },
+    {
+      "path": "/",
+      "status": 200,
+      "sha256": "af4c5c90ed0b865b5c5187ec367caac03742403c0d6baefb08497d3d757e3862",
+      "expectedSha256": "af4c5c90ed0b865b5c5187ec367caac03742403c0d6baefb08497d3d757e3862",
+      "match": true
+    }
+  ],
+  "pass": true
+}

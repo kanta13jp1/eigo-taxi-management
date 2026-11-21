@@ -14,7 +14,13 @@ export function AccountManagement({students}:{students:Student[]}) {
   const self=ApiService.getSession()?.user.id;
   const needsStudents=form.role==='parent'||form.role==='reviewer';
   const load=async()=>{const next=await ApiService.getManagedUsers();setDirectory(next);};
-  useEffect(()=>{let active=true;ApiService.getManagedUsers().then(data=>{if(active)setDirectory(data);}).catch(e=>{if(active)setError(e.message);});return()=>{active=false;};},[]);
+  useEffect(()=>{let active=true;ApiService.getManagedUsers().then(data=>{if(active)setDirectory(data);}).catch(e=>{if(active)setError(e instanceof Error?e.message:'取得できませんでした');});return()=>{active=false;};},[]);
+  useEffect(()=>{
+    if(!confirm)return;
+    const handleKeyDown=(e:KeyboardEvent)=>{if(e.key==='Escape'&&!busy)setConfirm(null);};
+    window.addEventListener('keydown',handleKeyDown);
+    return()=>window.removeEventListener('keydown',handleKeyDown);
+  },[confirm,busy]);
   const edit=(u:ManagedUser)=>{setForm({userId:u.id,name:u.name,email:u.email,role:u.role,active:u.active,studentIds:[...u.studentIds]});setConfirm(null);setMessage('');setError('');};
   const run=async()=>{
     if(!directory)return;setBusy(true);setError('');
@@ -47,7 +53,7 @@ export function AccountManagement({students}:{students:Student[]}) {
         {needsStudents&&<fieldset className="space-y-2"><legend>{form.role==='reviewer'?'対象の架空生徒（1名以上）':'対象の生徒（1名以上）'}</legend>{students.map(s=><label key={s.id} className="block"><input type="checkbox" checked={form.studentIds.includes(s.id)} onChange={e=>setForm({...form,studentIds:e.target.checked?[...form.studentIds,s.id]:form.studentIds.filter(id=>id!==s.id)})} /> {s.name}</label>)}</fieldset>}
         <label className="block"><input type="checkbox" disabled={form.userId===self} checked={form.active} onChange={e=>setForm({...form,active:e.target.checked})} /> 利用を有効にする</label>
         {form.userId&&needsStudents&&<label className="block"><input type="checkbox" checked={!!form.rotateEntry} onChange={e=>setForm({...form,rotateEntry:e.target.checked})} /> 個別URLを再発行する（以前のURLは使えなくなります）</label>}
-        <div className="flex flex-wrap gap-3"><button disabled={busy} className="rounded bg-emerald-700 px-4 py-2 text-white">内容を確認</button><button type="button" disabled={busy} className="rounded border px-4 py-2" onClick={()=>{setForm({...empty});setConfirm(null);setError('');setMessage('');}}>新規登録に戻る</button>{form.userId&&form.userId!==self&&<button type="button" disabled={busy} className="rounded border border-rose-400 px-4 py-2 text-rose-700" onClick={()=>setConfirm('delete')}>利用登録を削除</button>}</div>
+        <div className="flex flex-wrap gap-3"><button type="submit" disabled={busy} className="rounded bg-emerald-700 px-4 py-2 text-white">内容を確認</button><button type="button" disabled={busy} className="rounded border px-4 py-2" onClick={()=>{setForm({...empty});setConfirm(null);setError('');setMessage('');}}>新規登録に戻る</button>{form.userId&&form.userId!==self&&<button type="button" disabled={busy} className="rounded border border-rose-400 px-4 py-2 text-rose-700" onClick={()=>setConfirm('delete')}>利用登録を削除</button>}</div>
       </form>
       {confirm&&<div role="dialog" aria-label="アカウント変更の確認" className="space-y-3 rounded-lg border-2 border-amber-400 p-4"><p>{form.name} / {form.email}</p><p>{confirm==='delete'?'このシステムの利用権限を削除します。生徒台帳・履歴・Googleアカウントは削除されません。':`${form.role==='admin'?'全生徒とアカウントを管理できる管理者':form.role==='reviewer'?'選択した架空生徒だけを両方の画面で検証する利用者':'選択した生徒のみ利用する保護者'}として${form.active?'有効':'停止'}で保存します。`}</p><div className="flex flex-wrap gap-3"><button type="button" disabled={busy} className="rounded bg-emerald-700 px-4 py-2 text-white" onClick={run}>{busy?'処理中…':confirm==='delete'?'削除を実行':'保存を実行'}</button><button type="button" disabled={busy} className="rounded border px-4 py-2" onClick={()=>setConfirm(null)}>戻る</button></div></div>}
     </>}

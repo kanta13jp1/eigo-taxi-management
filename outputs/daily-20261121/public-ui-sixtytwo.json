@@ -1,0 +1,42 @@
+{
+  "checkedAt": "2026-11-21T09:02:55.806Z",
+  "url": "https://eigo-taxi-test.web.app",
+  "fix61GoogleSettingsConfirmDialog": {
+    "pass": true,
+    "nativeDialogCount": 0,
+    "resetDialogInfo": {
+      "text": "デモデータを初期状態に戻しますか？",
+      "buttons": [
+        {
+          "text": "初期化を実行",
+          "type": "button"
+        },
+        {
+          "text": "戻る",
+          "type": "button"
+        }
+      ]
+    },
+    "closedOnEscape": true,
+    "purgeDialogInfo": {
+      "text": "このブラウザのデモ台帳を空にしますか？",
+      "buttons": [
+        {
+          "text": "消去を実行",
+          "type": "button"
+        },
+        {
+          "text": "戻る",
+          "type": "button"
+        }
+      ]
+    },
+    "closedOnBack": true
+  },
+  "fix62AccountManagementGuard": {
+    "pass": true,
+    "initialAlert": "アカウント管理はGoogleログインした管理者だけが利用できます。",
+    "alertAfterReloadClick": "アカウント管理はGoogleログインした管理者だけが利用できます。"
+  },
+  "errors": []
+}

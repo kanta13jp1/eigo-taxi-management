@@ -10,3 +10,5 @@
 
 [修正前の公開結果](../../outputs/daily-20261121/before-terms.json)・[修正候補のローカル結果](../../outputs/daily-20261121/after-terms.json)・[11月20日の公開確認](2026-11-20-cumulative-thirtyeight.md)
 
+
+追記：その後の公開版で規約リンクの再表示（39件目）とEscapeによる閉鎖（52件目）を確認した。ここで扱った候補は配備せず、既存の公開版を優先する。元のボタンへのフォーカス復帰は別途確認が必要。[最新の公開記録](2026-11-21-cumulative-sixtytwo.md)
