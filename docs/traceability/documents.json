@@ -71602,6 +71602,126 @@
       ]
     },
     {
+      "id": "DOC-0649",
+      "path": "docs/progress/2026-11-21-cumulative-fiftytwo.md",
+      "state": "historical",
+      "sha256": "6947afec78a4bfa9d6fc9288aa62fc86857d3f0ad79fc3660dcdf0653e25824d",
+      "items": [
+        {
+          "id": "DOC-0649-ITEM-00001",
+          "line": 1,
+          "contentSha256": "6949a03de7325af6f5b721adac60d18290df63f23c50afb9097de9e560bb270f",
+          "occurrence": 1,
+          "preview": "# 11月21日 累計52件の実装修正・受入試験52項目（4モーダル ARIA dialog 属性・Escape閉鎖対応）"
+        },
+        {
+          "id": "DOC-0649-ITEM-00002",
+          "line": 3,
+          "contentSha256": "e79e8976eb91cf8c58638c41a0a566d1ab36a7c78822c02c6008bfbd6635a453",
+          "occurrence": 1,
+          "preview": "小林さん、お疲れ様です。"
+        },
+        {
+          "id": "DOC-0649-ITEM-00003",
+          "line": 5,
+          "contentSha256": "4c2de4f50225bc522817192ce18dafaf0c859c3a2abbb85be90321128ddc6a7d",
+          "occurrence": 1,
+          "preview": "11月21日の追加対応により、実装修正は**累計52件**、実施した異なる受入試験は**累計52項目**となりました（先行2件は Claude Code Fable 5.2 の対応分、追加50件が後続の対応分です）。"
+        },
+        {
+          "id": "DOC-0649-ITEM-00004",
+          "line": 7,
+          "contentSha256": "61fe074264ab2bf8cf28bc81107a7d795b464efe35477bcc250ee704e8f408ef",
+          "occurrence": 1,
+          "preview": "### 【今回の追加修正内容（51〜52件目）】"
+        },
+        {
+          "id": "DOC-0649-ITEM-00005",
+          "line": 8,
+          "contentSha256": "a828029304c8852d15f1d9108119a78bf348e1746dee67142e1b8636edffc364",
+          "occurrence": 1,
+          "preview": "* **51件目（`AddRideModal.tsx` / `AddStudentModal.tsx` / `AddTicketModal.tsx` / `TermsModal.tsx`）**：4つのモーダルダイアログすべてに `role=\"dialog\"`、`aria-moda"
+        },
+        {
+          "id": "DOC-0649-ITEM-00006",
+          "line": 9,
+          "contentSha256": "38c1fdd87093e0e1e8e768a4b587b93c8c51ec544ab54ae0910f7605cebeed42",
+          "occurrence": 1,
+          "preview": "* **52件目（`AddRideModal.tsx` / `AddStudentModal.tsx` / `AddTicketModal.tsx` / `TermsModal.tsx`）**：4つのモーダルすべてで `Escape` キー押下によりモーダルを閉じられるようキーボ"
+        },
+        {
+          "id": "DOC-0649-ITEM-00007",
+          "line": 11,
+          "contentSha256": "6d0284470f61c28883a157d03ed0fa3118880196cdb6b4cd8daa78b7f637fd4f",
+          "occurrence": 1,
+          "preview": "### 【今回実施した受入試験（51〜52項目目）】"
+        },
+        {
+          "id": "DOC-0649-ITEM-00008",
+          "line": 12,
+          "contentSha256": "678c75afdb966d8a4f9f5783c9693a0f4974b861717c1c57e784af84b032c5da",
+          "occurrence": 1,
+          "preview": "* **51項目目（4モーダル ARIA dialog・タイトル紐付け検証［公開デモ］）**：公開検証サイト（`https://eigo-taxi-test.web.app/#/admin`）で4つのモーダル（「送迎予定の登録」「チケット購入・追加」「新規生徒の登録」「規約・プラ"
+        },
+        {
+          "id": "DOC-0649-ITEM-00009",
+          "line": 13,
+          "contentSha256": "81089a2bfa3539d20adb98c0f831645a3d6e439d203256c8b25856021e1545b4",
+          "occurrence": 1,
+          "preview": "* **52項目目（4モーダル Escape キー閉鎖検証［公開デモ］）**：公開検証サイトで上記4つのモーダルそれぞれを開いた状態で `Escape` キーを送信し、すべてのモーダルが即座に閉じることを確認しました。"
+        },
+        {
+          "id": "DOC-0649-ITEM-00010",
+          "line": 15,
+          "contentSha256": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+          "occurrence": 1,
+          "preview": "---"
+        },
+        {
+          "id": "DOC-0649-ITEM-00011",
+          "line": 17,
+          "contentSha256": "76c3519755d39acf199783847365abea0c2ba4aec32426a7addbe54a9ff2b9a7",
+          "occurrence": 1,
+          "preview": "### 【公開環境・確認範囲】"
+        },
+        {
+          "id": "DOC-0649-ITEM-00012",
+          "line": 18,
+          "contentSha256": "b8f8e26627fdd283f6f45ab1ae8e53d01b7ab6cd92e292bebaf1c240ff354448",
+          "occurrence": 1,
+          "preview": "* **検証サイト**: https://eigo-taxi-test.web.app/"
+        },
+        {
+          "id": "DOC-0649-ITEM-00013",
+          "line": 19,
+          "contentSha256": "a32f9513fe20ad2805c76a33afa61f7b3529f02e044dd38606960e92ba7f62be",
+          "occurrence": 1,
+          "preview": "* **反映版 (`sourceDigest`)**: `71b6dbcc9727ca767afb2924aa38a27a2cfb9f5e9212ea29b0de7847a61f4bdb`（ビルド時刻: `2026-11-21T03:21:56.036Z`）"
+        },
+        {
+          "id": "DOC-0649-ITEM-00014",
+          "line": 20,
+          "contentSha256": "7c5a99f72af8cf4ff586c189f9f3fe47a70718598bfe452d7f443f39fc82cad2",
+          "occurrence": 1,
+          "preview": "* **配信照合**: [public-2026-11-21T03-23-11-774Z.json](../acceptance/deployment-verification/public-2026-11-21T03-23-11-774Z.json)（全7ファイル SHA-25"
+        },
+        {
+          "id": "DOC-0649-ITEM-00015",
+          "line": 21,
+          "contentSha256": "12c78ede9be69603b26c36df2a9d609f78cd0643ee13b2e888d22586c0cca584",
+          "occurrence": 1,
+          "preview": "* **公開UI証跡**: [public-ui-fiftytwo.json](../../outputs/daily-20261121/public-ui-fiftytwo.json)"
+        },
+        {
+          "id": "DOC-0649-ITEM-00016",
+          "line": 22,
+          "contentSha256": "f05b4c87239863444f5738c59c27a6864e67fabeb0482abfb963cdc48a292ac6",
+          "occurrence": 1,
+          "preview": "* **顧客確認・本番状況**: 小林様の顧客確認6手順（`CUST-01`〜`CUST-06`）は 0/6件（未実施）、顧客用の検証データはそのまま維持しており、**本番運用は開始していません**。"
+        }
+      ]
+    },
+    {
       "id": "DOC-0643",
       "path": "docs/progress/2026-11-21-cumulative-forty.md",
       "state": "historical",

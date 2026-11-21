@@ -17,7 +17,7 @@
   "scripts/traceability.py": "74d1e2d9b0cdbdf3479242da4d085777e6de30c006013d9bf06affc4b8eb4a7f",
   "src/App.tsx": "e2d807eb5eb1e9a14f46f01336a89c361be03a940dbff22716f2a7e2597b1707",
   "src/components/AccountManagement.tsx": "dbd052165fbc4a11fa02be04d47ed55280353d5ca9570ebf8cdd1b20623d77b8",
-  "src/components/AddRideModal.tsx": "fa353c3925881fef95d6f6b751cfa06e94d8b84e02e2634a9c3b45b36a01ad72",
+  "src/components/AddRideModal.tsx": "7a2e20c23cb55a7f75ac64bb285f4f4309b9b6017be61216baeee63e9bdfc688",
   "src/components/LoginScreen.tsx": "9a4b0704d319c727e93b4030eac1c770c20287f8b4bf8fc620ed087a8dd72661",
   "src/components/Navbar.tsx": "77d967411aab9b6ec1181f22a9fa44caebf82fa59197aad9d63fc63f2594a3b0",
   "src/components/ParentPortal.tsx": "67163575d2d93c00de4588be2933d1e474febc0a3a0615db413683ebd86d4cce",

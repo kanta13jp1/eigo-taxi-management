@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import type { Student } from '../types';
 import { X, Ticket, PlusCircle } from 'lucide-react';
 
@@ -33,6 +33,14 @@ const AddTicketModalContent: React.FC<AddTicketModalProps> = ({
   const [note, setNote] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState('');
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && !isSubmitting) onClose();
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isSubmitting, onClose]);
 
   const handlePresetSelect = (count: number, price: number, label: string) => {
     setTicketCount(count);
@@ -72,14 +80,19 @@ const AddTicketModalContent: React.FC<AddTicketModalProps> = ({
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs">
-      <div className="bg-white rounded-2xl shadow-xl w-full max-w-md max-h-[calc(100dvh-2rem)] overflow-y-auto overscroll-contain border border-slate-100 animate-in fade-in zoom-in-95 duration-150">
+      <div
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="add-ticket-modal-title"
+        className="bg-white rounded-2xl shadow-xl w-full max-w-md max-h-[calc(100dvh-2rem)] overflow-y-auto overscroll-contain border border-slate-100 animate-in fade-in zoom-in-95 duration-150"
+      >
         <div className="px-6 py-4 border-b border-slate-100 flex items-center justify-between bg-emerald-50/50">
           <div className="flex items-center gap-2">
             <div className="p-2 rounded-xl bg-emerald-100 text-emerald-700">
               <Ticket className="w-5 h-5" />
             </div>
             <div>
-              <h3 className="font-bold text-slate-800 text-base">チケット購入・追加</h3>
+              <h3 id="add-ticket-modal-title" className="font-bold text-slate-800 text-base">チケット購入・追加</h3>
               <p className="text-xs text-slate-500">生徒の回数券残数をチャージします</p>
             </div>
           </div>

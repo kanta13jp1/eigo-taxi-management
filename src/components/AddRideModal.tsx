@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import type { Student, RideType } from '../types';
 import { getLocalDateString } from '../services/api';
 import { X, Calendar, Clock, MapPin, FileText, CheckCircle2 } from 'lucide-react';
@@ -52,6 +52,14 @@ const AddRideModalContent: React.FC<AddRideModalProps> = ({
     }
   };
 
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && !isSubmitting) onClose();
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isSubmitting, onClose]);
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const trimmedLocation = pickupLocation.trim();
@@ -83,10 +91,15 @@ const AddRideModalContent: React.FC<AddRideModalProps> = ({
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs">
-      <div className="bg-white rounded-2xl shadow-xl w-full max-w-lg max-h-[calc(100dvh-2rem)] overflow-y-auto border border-slate-100 animate-in fade-in zoom-in-95 duration-150">
+      <div
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="add-ride-modal-title"
+        className="bg-white rounded-2xl shadow-xl w-full max-w-lg max-h-[calc(100dvh-2rem)] overflow-y-auto border border-slate-100 animate-in fade-in zoom-in-95 duration-150"
+      >
         <div className="px-6 py-4 border-b border-slate-100 flex items-center justify-between bg-emerald-50/50">
           <div>
-            <h3 className="font-bold text-slate-800 text-lg">送迎予定の登録</h3>
+            <h3 id="add-ride-modal-title" className="font-bold text-slate-800 text-lg">送迎予定の登録</h3>
             <p className="text-xs text-slate-500">
               {isTeacher ? '先生側からのスケジュール追加' : '生徒・保護者からの送迎予約'}
             </p>

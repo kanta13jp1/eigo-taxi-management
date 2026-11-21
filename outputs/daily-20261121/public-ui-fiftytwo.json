@@ -1,0 +1,30 @@
+{
+  "checkedAt": "2026-11-21T03:23:32.965Z",
+  "url": "https://eigo-taxi-test.web.app",
+  "fix51And52ModalDialogAndEscape": {
+    "pass": true,
+    "results": [
+      {
+        "titleId": "add-ride-modal-title",
+        "titleText": "送迎予定の登録",
+        "closedOnEscape": true
+      },
+      {
+        "titleId": "add-ticket-modal-title",
+        "titleText": "チケット購入・追加",
+        "closedOnEscape": true
+      },
+      {
+        "titleId": "add-student-modal-title",
+        "titleText": "新規生徒の登録",
+        "closedOnEscape": true
+      },
+      {
+        "titleId": "terms-modal-title",
+        "titleText": "規約・プライバシー保護・免責事項",
+        "closedOnEscape": true
+      }
+    ]
+  },
+  "errors": []
+}

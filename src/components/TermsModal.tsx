@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { X, Shield, FileText, AlertCircle } from 'lucide-react';
 
 interface TermsModalProps {
@@ -15,14 +15,27 @@ export function TermsModal({ isOpen, onClose, initialTab = 'terms' }: TermsModal
 function TermsModalContent({ onClose, initialTab }: { onClose: () => void; initialTab: 'terms' | 'privacy' | 'disclaimer' }) {
   const [activeTab, setActiveTab] = useState<'terms' | 'privacy' | 'disclaimer'>(initialTab);
 
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') onClose();
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [onClose]);
+
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm animate-in fade-in">
-      <div className="bg-white w-full max-w-2xl rounded-3xl shadow-2xl overflow-hidden flex flex-col max-h-[calc(100dvh-2rem)] overscroll-contain">
+      <div
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="terms-modal-title"
+        className="bg-white w-full max-w-2xl rounded-3xl shadow-2xl overflow-hidden flex flex-col max-h-[calc(100dvh-2rem)] overscroll-contain"
+      >
         {/* ヘッダー */}
         <div className="px-6 py-4 bg-slate-50 border-b border-slate-100 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <Shield className="w-5 h-5 text-indigo-600" />
-            <h3 className="font-bold text-slate-800 text-base sm:text-lg">規約・プライバシー保護・免責事項</h3>
+            <h3 id="terms-modal-title" className="font-bold text-slate-800 text-base sm:text-lg">規約・プライバシー保護・免責事項</h3>
           </div>
           <button
             type="button"
