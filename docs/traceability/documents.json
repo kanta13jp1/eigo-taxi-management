@@ -72823,6 +72823,140 @@
       ]
     },
     {
+      "id": "DOC-0659",
+      "path": "docs/progress/2026-11-21-cumulative-seventysix.md",
+      "state": "historical",
+      "sha256": "d9ab4cb45ee5739b09c34ca88d041ac377c384bceee5ccfe0b57a7bc198610c3",
+      "items": [
+        {
+          "id": "DOC-0659-ITEM-00001",
+          "line": 1,
+          "contentSha256": "4649c1072383bac52a47c679cb6ca947a252dc723a260d193da37c059d979591",
+          "occurrence": 1,
+          "preview": "# 11月21日 累計76件の実装修正・受入試験76項目（Navbar フォーカス・アイコン非読み上げ化 / App 状態通知 / TeacherDashboard 取消二重抑止・送迎先表示）"
+        },
+        {
+          "id": "DOC-0659-ITEM-00002",
+          "line": 3,
+          "contentSha256": "e79e8976eb91cf8c58638c41a0a566d1ab36a7c78822c02c6008bfbd6635a453",
+          "occurrence": 1,
+          "preview": "小林さん、お疲れ様です。"
+        },
+        {
+          "id": "DOC-0659-ITEM-00003",
+          "line": 5,
+          "contentSha256": "2cc5e0c76d4abd8a70a2bafabaf42e8a9dc86cadd507c68b4bce45280eb52397",
+          "occurrence": 1,
+          "preview": "11月21日の追加対応により、実装修正は**累計76件**、実施した異なる受入試験は**累計76項目**となりました（先行2件は Claude Code Fable 5.2 の対応分、追加74件が後続の対応分です）。今回は Round 4 として Agent Swarms（`/s"
+        },
+        {
+          "id": "DOC-0659-ITEM-00004",
+          "line": 7,
+          "contentSha256": "bce772eacc4b30763876f4fde54500747e31cecfbe562cf6c63519e5006a0ba0",
+          "occurrence": 1,
+          "preview": "### 【今回の追加修正内容（74〜76件目）】"
+        },
+        {
+          "id": "DOC-0659-ITEM-00005",
+          "line": 8,
+          "contentSha256": "13d4d2392450c5a2d9b9800f95ffe632d51b563a95ba857a3e5ed082bc1aa67b",
+          "occurrence": 1,
+          "preview": "* **74件目（`Navbar.tsx`）**：管理者ナビゲーション（`<nav aria-label=\"管理者メニュー\">`）へ折返し時の余白 `gap-1` を追加し、4タブボタンすべてへ `focus-visible:ring-2`、ヘッダー内の装飾アイコン5件すべてへ "
+        },
+        {
+          "id": "DOC-0659-ITEM-00006",
+          "line": 9,
+          "contentSha256": "0b1c2c88703bb50f19ec28b7d15beae3fb5ff61df725977a544e12ea123a8d82",
+          "occurrence": 1,
+          "preview": "* **75件目（`App.tsx`）**：初期認証確認画面および台帳読込中スピナーへ `role=\"status\"`（スピナー内 `aria-hidden=\"true\"` ＋ スクリーンリーダー用テキスト）を追加し、ログイン中ヘッダー行の `flex-wrap` 対応、「ログア"
+        },
+        {
+          "id": "DOC-0659-ITEM-00007",
+          "line": 10,
+          "contentSha256": "7aafeab69f93292e93bc795f34fd03939e208e7b0899f2ffc3d3c6f4cb794c89",
+          "occurrence": 1,
+          "preview": "* **76件目（`TeacherDashboard.tsx`）**：管理者側の予約取消処理に `cancelPending` / `cancellationInFlight` 二重実行抑止を導入し、取消確認ダイアログへ送迎先住所（`#admin-cancel-details` "
+        },
+        {
+          "id": "DOC-0659-ITEM-00008",
+          "line": 12,
+          "contentSha256": "3f2555b0650c588cff6178b270cc90725a6122ea51f25c1bc4df5660aff97300",
+          "occurrence": 1,
+          "preview": "### 【今回実施した受入試験（74〜76項目目）】"
+        },
+        {
+          "id": "DOC-0659-ITEM-00009",
+          "line": 13,
+          "contentSha256": "f0fb0a6560ec657aa9dd56ac6c542bd35c8ff18885b3f7ef1e03473e56a20bbd",
+          "occurrence": 1,
+          "preview": "* **74項目目（Navbar 折返し余白・フォーカスリング・装飾アイコン検証［公開デモ］）**：公開検証サイト（`https://eigo-taxi-test.web.app/#/admin`）の管理者デモで `<nav>` の `gap-1`、タブ4ボタンの `focus-"
+        },
+        {
+          "id": "DOC-0659-ITEM-00010",
+          "line": 14,
+          "contentSha256": "6a0ef5e8f3eab7fb5569d74dd3e1ee636cd337b8b6d8e4ec39eb369e9b24e6fe",
+          "occurrence": 1,
+          "preview": "* **75項目目（App シェル 折返し・フォーカス制御・契約テスト検証［公開デモ＋オフライン契約］）**：公開検証サイトでセッションバーの `flex-wrap`、「ログアウト」およびフッター3ボタンの `focus-visible:ring-2` を確認し、あわせてオフライ"
+        },
+        {
+          "id": "DOC-0659-ITEM-00011",
+          "line": 15,
+          "contentSha256": "f4fab04afdede33c57c2d4fc358cd5480e67af8402efbcf16f47bbafcdc43e62",
+          "occurrence": 1,
+          "preview": "* **76項目目（TeacherDashboard 確認ダイアログ送迎先・フォーカス／無効化・SSR契約検証［公開デモ＋ローカル検証］）**：公開検証サイトの「送迎スケジュール一覧」から「取消」確認ダイアログを開き、`aria-describedby=\"admin-cancel"
+        },
+        {
+          "id": "DOC-0659-ITEM-00012",
+          "line": 17,
+          "contentSha256": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+          "occurrence": 1,
+          "preview": "---"
+        },
+        {
+          "id": "DOC-0659-ITEM-00013",
+          "line": 19,
+          "contentSha256": "76c3519755d39acf199783847365abea0c2ba4aec32426a7addbe54a9ff2b9a7",
+          "occurrence": 1,
+          "preview": "### 【公開環境・確認範囲】"
+        },
+        {
+          "id": "DOC-0659-ITEM-00014",
+          "line": 20,
+          "contentSha256": "b8f8e26627fdd283f6f45ab1ae8e53d01b7ab6cd92e292bebaf1c240ff354448",
+          "occurrence": 1,
+          "preview": "* **検証サイト**: https://eigo-taxi-test.web.app/"
+        },
+        {
+          "id": "DOC-0659-ITEM-00015",
+          "line": 21,
+          "contentSha256": "b9e0556a507ea25c2c3ff289de525260903fb44519cd2e0f4e47d3f1811251c7",
+          "occurrence": 1,
+          "preview": "* **反映版 (`sourceDigest`)**: `758ec06401c69f032c72a263eb3fab76be38fac5898c3856d527fde232dea9c6`（ビルド時刻: `2026-11-21T13:19:09.288Z`）"
+        },
+        {
+          "id": "DOC-0659-ITEM-00016",
+          "line": 22,
+          "contentSha256": "b59abf23e1a1c8537d5ecad17b0d2ba23350a120432362f4d66e5f87dd656618",
+          "occurrence": 1,
+          "preview": "* **配信照合**: [public-2026-11-21T13-21-14-830Z.json](../acceptance/deployment-verification/public-2026-11-21T13-21-14-830Z.json)（全7ファイル SHA-25"
+        },
+        {
+          "id": "DOC-0659-ITEM-00017",
+          "line": 23,
+          "contentSha256": "496a561875d42e16795f5f9c155d16435630f61071196b93beb2d1de61b8a690",
+          "occurrence": 1,
+          "preview": "* **公開UI証跡**: [public-ui-seventysix.json](../../outputs/daily-20261121/public-ui-seventysix.json)"
+        },
+        {
+          "id": "DOC-0659-ITEM-00018",
+          "line": 24,
+          "contentSha256": "f05b4c87239863444f5738c59c27a6864e67fabeb0482abfb963cdc48a292ac6",
+          "occurrence": 1,
+          "preview": "* **顧客確認・本番状況**: 小林様の顧客確認6手順（`CUST-01`〜`CUST-06`）は 0/6件（未実施）、顧客用の検証データはそのまま維持しており、**本番運用は開始していません**。"
+        }
+      ]
+    },
+    {
       "id": "DOC-0658",
       "path": "docs/progress/2026-11-21-cumulative-seventythree.md",
       "state": "historical",

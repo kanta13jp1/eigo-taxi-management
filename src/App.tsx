@@ -227,7 +227,7 @@ export function App() {
     showToast(`👤 新規生徒「${newStudent.name}」さんを登録しました`);
   };
 
-  if (checkingSession) return <main className="p-12 text-center">ログイン状態を確認しています…</main>;
+  if (checkingSession) return <main className="p-12 text-center"><p role="status">ログイン状態を確認しています…</p></main>;
   if (!session) return <LoginScreen key={JSON.stringify(route)} route={route} requiresLogin={requiresLogin} onLogin={next => {
     try { assertPortal(parsePortal(window.location.hash),next.user); }
     catch (error) { ApiService.logout(); throw error; }
@@ -241,9 +241,9 @@ export function App() {
   return (
     <div className="min-h-screen bg-slate-100/70 text-slate-800 flex flex-col font-sans">
       <Navbar currentTab={reviewOnly ? 'teacher' : currentTab} setCurrentTab={setCurrentTab} isAdmin={isAdmin} reviewOnly={reviewOnly} />
-      <div className="mx-auto flex w-full max-w-5xl items-center justify-between gap-2 px-4 pt-3 text-xs">
+      <div className="mx-auto flex w-full max-w-5xl flex-wrap items-center justify-between gap-2 px-4 pt-3 text-xs">
         <p>{session.mode === 'demo' ? 'デモ環境・架空データ（Google連携なし）' : reviewOnly ? '検証専用・指定した架空生徒のみ' : '教室の連携環境'} / {session.user.name}</p>
-        <button type="button" className="rounded-lg border bg-white px-3 py-2" onClick={()=>{
+        <button type="button" className="rounded-lg border bg-white px-3 py-2 hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-500" onClick={()=>{
           ApiService.logout(); setStudents([]); setRides([]); setErrorMessage(''); setToastMessage(null); setSession(null);
           setIsAddRideOpen(false); setIsAddTicketOpen(false); setIsAddStudentOpen(false); setIsTermsOpen(false);
         }}>ログアウト</button>
@@ -253,10 +253,11 @@ export function App() {
       <main className="max-w-5xl mx-auto px-4 sm:px-6 py-6 flex-1 w-full">
         {errorMessage && <p role="alert" className="mb-4 rounded-xl border border-rose-200 bg-rose-50 p-4 text-sm text-rose-800">{errorMessage}</p>}
           {errorMessage ? (
-            <button type="button" className="rounded-xl border px-4 py-2" onClick={() => { setIsLoading(true); void loadData(); }}>台帳を再取得する</button>
+            <button type="button" className="rounded-xl border px-4 py-2 hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-500" onClick={() => { setIsLoading(true); void loadData(); }}>台帳を再取得する</button>
           ) : isLoading ? (
-          <div className="flex items-center justify-center py-20">
-            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-emerald-600"></div>
+          <div role="status" className="flex items-center justify-center py-20">
+            <div aria-hidden="true" className="animate-spin rounded-full h-8 w-8 border-b-2 border-emerald-600"></div>
+            <span className="sr-only">台帳を読み込んでいます…</span>
           </div>
         ) : (
           <>
@@ -312,7 +313,7 @@ export function App() {
             <button
               type="button"
               onClick={() => openTerms('terms')}
-              className="text-slate-500 hover:text-indigo-600 transition-colors underline-offset-4 hover:underline"
+              className="text-slate-500 hover:text-indigo-600 transition-colors underline-offset-4 hover:underline rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500"
             >
               利用規約
             </button>
@@ -320,7 +321,7 @@ export function App() {
             <button
               type="button"
               onClick={() => openTerms('privacy')}
-              className="text-slate-500 hover:text-indigo-600 transition-colors underline-offset-4 hover:underline"
+              className="text-slate-500 hover:text-indigo-600 transition-colors underline-offset-4 hover:underline rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500"
             >
               個人情報の取扱い
             </button>
@@ -328,7 +329,7 @@ export function App() {
             <button
               type="button"
               onClick={() => openTerms('disclaimer')}
-              className="text-slate-500 hover:text-indigo-600 transition-colors underline-offset-4 hover:underline"
+              className="text-slate-500 hover:text-indigo-600 transition-colors underline-offset-4 hover:underline rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500"
             >
               免責事項
             </button>

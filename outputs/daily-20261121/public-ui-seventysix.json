@@ -1,0 +1,45 @@
+{
+  "checkedAt": "2026-11-21T13:21:29.686Z",
+  "url": "https://eigo-taxi-test.web.app",
+  "fix74NavbarA11yAndWrap": {
+    "pass": true,
+    "navbarCheck": {
+      "navHasGap1": true,
+      "navBtnCount": 4,
+      "navBtnsHaveFocusRing": true,
+      "headerSvgCount": 5,
+      "headerSvgsAriaHidden": true
+    }
+  },
+  "fix75AppShellStatusAndFocus": {
+    "pass": true,
+    "appCheck": {
+      "sessionBarHasFlexWrap": true,
+      "logoutHasFocusRing": true,
+      "footerBtnCount": 3,
+      "footerBtnsHaveFocusRing": true
+    }
+  },
+  "fix76TeacherDashboardCancelAndPolish": {
+    "pass": true,
+    "dashboardButtonsCheck": {
+      "summaryCardsHaveFocusRing": true,
+      "subNavHasWrapAndGap": true,
+      "subNavBtnCount": 3,
+      "subNavBtnsHaveFocusRing": true
+    },
+    "tableCancelBtnCheck": {
+      "disabledStyle": true,
+      "focusRing": true
+    },
+    "cancelDialogCheck": {
+      "ariaDescribedBy": "admin-cancel-details admin-cancel-effect",
+      "detailsHasPickupLocation": true,
+      "backDisabledStyle": true,
+      "backFocusRing": true,
+      "confirmDisabledStyle": true,
+      "confirmFocusRing": true
+    }
+  },
+  "errors": []
+}

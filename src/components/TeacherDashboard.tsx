@@ -48,6 +48,8 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
   const [filterStatus, setFilterStatus] = useState<string>('all');
   const [completionError, setCompletionError] = useState('');
   const [cancelRideId, setCancelRideId] = useState<string | null>(null);
+  const [cancelPending, setCancelPending] = useState(false);
+  const cancellationInFlight = useRef(false);
   const cancelDialog = useRef<HTMLDialogElement>(null);
   const cancelTarget = safeRides.find(ride => ride.id === cancelRideId && ride.status === 'scheduled');
   const activeCancelId = cancelTarget?.id;
@@ -60,6 +62,18 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
   const dismissCancellation = () => {
     cancelDialog.current?.close();
     setCancelRideId(null);
+  };
+  const confirmCancellation = async () => {
+    if (!cancelTarget || cancellationInFlight.current) return;
+    cancellationInFlight.current = true;
+    setCancelPending(true);
+    dismissCancellation();
+    try {
+      await onCancelRide(cancelTarget.id);
+    } finally {
+      cancellationInFlight.current = false;
+      setCancelPending(false);
+    }
   };
   const inFlightCompletions = useRef(new Set<string>());
   const [pendingRideIds, setPendingRideIds] = useState<ReadonlySet<string>>(new Set());
@@ -156,7 +170,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
         <button
           type="button"
           onClick={() => setActiveTab('today')}
-          className="bg-white p-4 rounded-2xl border border-slate-200/80 shadow-xs flex items-center justify-between cursor-pointer hover:border-emerald-300 transition-colors text-left w-full"
+          className="bg-white p-4 rounded-2xl border border-slate-200/80 shadow-xs flex items-center justify-between cursor-pointer hover:border-emerald-300 transition-colors text-left w-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
         >
           <div>
             <p className="text-xs font-semibold text-slate-500">本日の送迎</p>
@@ -177,7 +191,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
         <button
           type="button"
           onClick={() => setActiveTab('students')}
-          className="bg-white p-4 rounded-2xl border border-slate-200/80 shadow-xs flex items-center justify-between cursor-pointer hover:border-amber-300 transition-colors text-left w-full"
+          className="bg-white p-4 rounded-2xl border border-slate-200/80 shadow-xs flex items-center justify-between cursor-pointer hover:border-amber-300 transition-colors text-left w-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500"
         >
           <div>
             <p className="text-xs font-semibold text-slate-500">チケット残り2枚以下</p>
@@ -203,7 +217,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
         <button
           type="button"
           onClick={() => setActiveTab('students')}
-          className="bg-white p-4 rounded-2xl border border-slate-200/80 shadow-xs flex items-center justify-between cursor-pointer hover:border-blue-300 transition-colors text-left w-full"
+          className="bg-white p-4 rounded-2xl border border-slate-200/80 shadow-xs flex items-center justify-between cursor-pointer hover:border-blue-300 transition-colors text-left w-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
         >
           <div>
             <p className="text-xs font-semibold text-slate-500">登録生徒数</p>
@@ -221,12 +235,12 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
 
       {/* サブナビゲーション & アクションボタン */}
       <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
-        <div className="flex bg-slate-200/70 p-1 rounded-xl text-xs font-semibold">
+        <div className="flex flex-wrap gap-1 bg-slate-200/70 p-1 rounded-xl text-xs font-semibold">
           <button
             type="button"
             aria-pressed={activeTab === 'today'}
             onClick={() => setActiveTab('today')}
-            className={`px-3 py-1.5 rounded-lg transition-all ${
+            className={`px-3 py-1.5 rounded-lg transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600 ${
               activeTab === 'today' ? 'bg-white text-slate-900 shadow-xs' : 'text-slate-600 hover:text-slate-900'
             }`}
           >
@@ -236,7 +250,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
             type="button"
             aria-pressed={activeTab === 'allRides'}
             onClick={() => setActiveTab('allRides')}
-            className={`px-3 py-1.5 rounded-lg transition-all ${
+            className={`px-3 py-1.5 rounded-lg transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600 ${
               activeTab === 'allRides' ? 'bg-white text-slate-900 shadow-xs' : 'text-slate-600 hover:text-slate-900'
             }`}
           >
@@ -246,7 +260,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
             type="button"
             aria-pressed={activeTab === 'students'}
             onClick={() => setActiveTab('students')}
-            className={`px-3 py-1.5 rounded-lg transition-all ${
+            className={`px-3 py-1.5 rounded-lg transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600 ${
               activeTab === 'students' ? 'bg-white text-slate-900 shadow-xs' : 'text-slate-600 hover:text-slate-900'
             }`}
           >
@@ -258,7 +272,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
           <button
             type="button"
             onClick={() => onOpenAddRide()}
-            className="flex-1 sm:flex-none flex items-center justify-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 text-white px-3.5 py-2 rounded-xl text-xs font-bold shadow-xs transition-colors"
+            className="flex-1 sm:flex-none flex items-center justify-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 text-white px-3.5 py-2 rounded-xl text-xs font-bold shadow-xs transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
           >
             <Plus className="w-4 h-4" />
             送迎予定を追加
@@ -266,7 +280,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
           <button
             type="button"
             onClick={() => onOpenAddTicket()}
-            className="flex-1 sm:flex-none flex items-center justify-center gap-1.5 bg-white border border-slate-300 hover:bg-slate-50 text-slate-700 px-3 py-2 rounded-xl text-xs font-bold shadow-xs transition-colors"
+            className="flex-1 sm:flex-none flex items-center justify-center gap-1.5 bg-white border border-slate-300 hover:bg-slate-50 text-slate-700 px-3 py-2 rounded-xl text-xs font-bold shadow-xs transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
           >
             <Ticket className="w-4 h-4 text-emerald-600" />
             チケット追加
@@ -499,16 +513,16 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
                                   onClick={() => completeRide(ride)}
                                   disabled={pendingRideIds.has(ride.id)}
                                   aria-label={completionLabel(ride)}
-                                  className="text-xs bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-1 px-2.5 rounded-lg"
+                                  className="text-xs bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-1 px-2.5 rounded-lg disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
                                 >
                                   {pendingRideIds.has(ride.id) ? '完了処理中' : '完了'}
                                 </button>
                                 <button
                                   type="button"
                                   onClick={() => setCancelRideId(ride.id)}
-                                  disabled={pendingRideIds.has(ride.id)}
+                                  disabled={pendingRideIds.has(ride.id) || cancelPending}
                                   aria-label={`${ride.studentName} ${ride.rideDate} ${ride.rideTime} ${typeInfo.text} の予約を取消`}
-                                  className="text-xs text-rose-600 hover:bg-rose-50 py-1 px-2 rounded-lg font-bold transition-colors"
+                                  className="text-xs text-rose-600 hover:bg-rose-50 py-1 px-2 rounded-lg font-bold transition-colors disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-500"
                                 >
                                   取消
                                 </button>
@@ -528,21 +542,21 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
 
       {cancelTarget && (
         <dialog ref={cancelDialog} aria-labelledby="admin-cancel-heading"
-          aria-describedby="admin-cancel-effect"
+          aria-describedby="admin-cancel-details admin-cancel-effect"
           onCancel={() => setCancelRideId(null)}
           onClick={(e) => { if (e.target === e.currentTarget) dismissCancellation(); }}
           className="m-auto w-11/12 max-w-md rounded-2xl p-0 shadow-xl backdrop:bg-slate-900/50">
           <div className="p-5">
             <h2 id="admin-cancel-heading" className="text-lg font-bold">予約取消の確認</h2>
-            <p className="mt-3 font-semibold">{cancelTarget.studentName}</p>
-            <p>{cancelTarget.rideDate} {cancelTarget.rideTime}・{getRideTypeLabel(cancelTarget.rideType).text}</p>
+            <div id="admin-cancel-details" className="mt-3 space-y-1 [overflow-wrap:anywhere]">
+              <p className="font-semibold">{cancelTarget.studentName}</p>
+              <p>{cancelTarget.rideDate} {cancelTarget.rideTime}・{getRideTypeLabel(cancelTarget.rideType).text}</p>
+              <p>送迎先: {cancelTarget.pickupLocation}</p>
+            </div>
             <p id="admin-cancel-effect" className="mt-3 text-sm">{isDemo ? 'このブラウザ内のデモ予約を取り消します。教室の予定は変わりません。' : '台帳の予約を取消にし、対応するカレンダーの予定を削除します。'}</p>
             <div className="mt-5 flex justify-end gap-2">
-              <button type="button" className="rounded-lg border px-3 py-2" onClick={dismissCancellation}>戻る</button>
-              <button type="button" className="rounded-lg bg-rose-700 px-3 py-2 font-bold text-white" onClick={() => {
-                dismissCancellation();
-                void onCancelRide(cancelTarget.id);
-              }}>取消を確定</button>
+              <button type="button" disabled={cancelPending} className="rounded-lg border px-3 py-2 disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-500" onClick={dismissCancellation}>戻る</button>
+              <button type="button" disabled={cancelPending} className="rounded-lg bg-rose-700 px-3 py-2 font-bold text-white disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-500" onClick={() => void confirmCancellation()}>取消を確定</button>
             </div>
           </div>
         </dialog>
@@ -556,15 +570,18 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
             {!reviewOnly && <button
               type="button"
               onClick={onOpenAddStudent}
-              className="inline-flex items-center gap-1.5 bg-slate-900 hover:bg-slate-800 text-white px-3 py-1.5 rounded-xl text-xs font-bold transition-colors"
+              className="inline-flex items-center gap-1.5 bg-slate-900 hover:bg-slate-800 text-white px-3 py-1.5 rounded-xl text-xs font-bold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
             >
               <UserPlus className="w-3.5 h-3.5" />
               新規生徒を登録
             </button>}
           </div>
 
+          {safeStudents.length === 0 ? (
+            <div className="bg-white rounded-2xl border border-dashed border-slate-300 p-8 text-center text-sm text-slate-500">登録されている生徒はまだいません。</div>
+          ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
-            {students.map((student) => {
+            {safeStudents.map((student) => {
               const isZero = student.ticketBalance === 0;
               // Same threshold as the "チケット残り2枚以下" summary card and the booking form.
               const isLow = student.ticketBalance > 0 && student.ticketBalance <= 2;
@@ -641,6 +658,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
               );
             })}
           </div>
+          )}
         </div>
       )}
     </div>
