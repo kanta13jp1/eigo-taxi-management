@@ -71602,6 +71602,126 @@
       ]
     },
     {
+      "id": "DOC-0650",
+      "path": "docs/progress/2026-11-21-cumulative-fiftyfour.md",
+      "state": "historical",
+      "sha256": "8ee328e5c4154384df5ac472357819327f4acac7886248596842f71987549346",
+      "items": [
+        {
+          "id": "DOC-0650-ITEM-00001",
+          "line": 1,
+          "contentSha256": "00c8bfb633f4c35e2a67b3478a083d32fb4c891762df0629be715d95d14c61ba",
+          "occurrence": 1,
+          "preview": "# 11月21日 累計54件の実装修正・受入試験54項目（App トーストタイマー・モーダル閉鎖 / ParentPortal 履歴降順・連絡先フォールバック）"
+        },
+        {
+          "id": "DOC-0650-ITEM-00002",
+          "line": 3,
+          "contentSha256": "e79e8976eb91cf8c58638c41a0a566d1ab36a7c78822c02c6008bfbd6635a453",
+          "occurrence": 1,
+          "preview": "小林さん、お疲れ様です。"
+        },
+        {
+          "id": "DOC-0650-ITEM-00003",
+          "line": 5,
+          "contentSha256": "f1dd6309465938f27a3e7a3318aefca895a4cffb812095715a075eaa3af523f7",
+          "occurrence": 1,
+          "preview": "11月21日の追加対応により、実装修正は**累計54件**、実施した異なる受入試験は**累計54項目**となりました（先行2件は Claude Code Fable 5.2 の対応分、追加52件が後続の対応分です）。"
+        },
+        {
+          "id": "DOC-0650-ITEM-00004",
+          "line": 7,
+          "contentSha256": "499fc1f90542ce75a4995434df43dd329c886e2f84efd051b8b59a26f888157a",
+          "occurrence": 1,
+          "preview": "### 【今回の追加修正内容（53〜54件目）】"
+        },
+        {
+          "id": "DOC-0650-ITEM-00005",
+          "line": 8,
+          "contentSha256": "e8e8d83acf366e7db7d397dcc87458883b544a5d5c1831c5e559f0141018ee26",
+          "occurrence": 1,
+          "preview": "* **53件目（`App.tsx`）**：画面遷移（`hashchange`）・セッション終了・ログアウト時に規約モーダル（`TermsModal`）を確実に閉じるよう修正しました。また、連続操作時のトースト通知タイマー競合・アンマウント時リークを防ぐ `useEffect` "
+        },
+        {
+          "id": "DOC-0650-ITEM-00006",
+          "line": 9,
+          "contentSha256": "0fc7e00c1989023d64e81d91b19a21e809f9d04e84e19b51a7c2d49858613fa7",
+          "occurrence": 1,
+          "preview": "* **54件目（`ParentPortal.tsx`）**：保護者画面の「過去の利用履歴」を新しい日時順（降順）にソートして表示するよう改善し、緊急連絡先が未登録（空）の場合にも「緊急連絡先: 未登録」と明示表示するよう修正しました。"
+        },
+        {
+          "id": "DOC-0650-ITEM-00007",
+          "line": 11,
+          "contentSha256": "ede16a6a2a2ae806364f63e98760e2b38fab10b41cabc1256914cb518dee0686",
+          "occurrence": 1,
+          "preview": "### 【今回実施した受入試験（53〜54項目目）】"
+        },
+        {
+          "id": "DOC-0650-ITEM-00008",
+          "line": 12,
+          "contentSha256": "b630e8d3e9838de3caade382c84b9abf59aa18842a984284f2126cc82860193a",
+          "occurrence": 1,
+          "preview": "* **53項目目（ログアウト・再取得ボタン属性、トースト通知ARIA、画面遷移時モーダル閉鎖検証［公開デモ］）**：公開検証サイト（`https://eigo-taxi-test.web.app/#/admin`）で、ログアウトボタンの `type=\"button\"`、送迎予定"
+        },
+        {
+          "id": "DOC-0650-ITEM-00009",
+          "line": 13,
+          "contentSha256": "829d5861a3710b1dd1150bbdddeed73660b166ebfc3eab5a63690b0a09fa4412",
+          "occurrence": 1,
+          "preview": "* **54項目目（保護者画面・過去利用履歴の降順表示と連絡先表示検証［公開デモ］）**：公開検証サイトの保護者デモ画面で、別日付（`2026-11-22 10:00` → `2026-11-25 10:00`）を順に予約・キャンセルした際、過去の利用履歴が新しい日時順（`202"
+        },
+        {
+          "id": "DOC-0650-ITEM-00010",
+          "line": 15,
+          "contentSha256": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+          "occurrence": 1,
+          "preview": "---"
+        },
+        {
+          "id": "DOC-0650-ITEM-00011",
+          "line": 17,
+          "contentSha256": "76c3519755d39acf199783847365abea0c2ba4aec32426a7addbe54a9ff2b9a7",
+          "occurrence": 1,
+          "preview": "### 【公開環境・確認範囲】"
+        },
+        {
+          "id": "DOC-0650-ITEM-00012",
+          "line": 18,
+          "contentSha256": "b8f8e26627fdd283f6f45ab1ae8e53d01b7ab6cd92e292bebaf1c240ff354448",
+          "occurrence": 1,
+          "preview": "* **検証サイト**: https://eigo-taxi-test.web.app/"
+        },
+        {
+          "id": "DOC-0650-ITEM-00013",
+          "line": 19,
+          "contentSha256": "1cc19a0221d67e6e9e81bb780612228da4ff8f8a00a2b17c6fe67a3c6547131f",
+          "occurrence": 1,
+          "preview": "* **反映版 (`sourceDigest`)**: `a7bea310fb687e5d814158e92999b026bcf2e203dbd4f40f31664a329f78f19c`（ビルド時刻: `2026-11-21T03:44:51.461Z`）"
+        },
+        {
+          "id": "DOC-0650-ITEM-00014",
+          "line": 20,
+          "contentSha256": "0b3e793a91cd1ca4bd918cc3129089d4f877308b382d115d2c006d4e530065c3",
+          "occurrence": 1,
+          "preview": "* **配信照合**: [public-2026-11-21T03-45-47-240Z.json](../acceptance/deployment-verification/public-2026-11-21T03-45-47-240Z.json)（全7ファイル SHA-25"
+        },
+        {
+          "id": "DOC-0650-ITEM-00015",
+          "line": 21,
+          "contentSha256": "1783eea3a0d72d26483a34a29b80f6fc106fbf28b390653355af49ce553fa003",
+          "occurrence": 1,
+          "preview": "* **公開UI証跡**: [public-ui-fiftyfour.json](../../outputs/daily-20261121/public-ui-fiftyfour.json)"
+        },
+        {
+          "id": "DOC-0650-ITEM-00016",
+          "line": 22,
+          "contentSha256": "f05b4c87239863444f5738c59c27a6864e67fabeb0482abfb963cdc48a292ac6",
+          "occurrence": 1,
+          "preview": "* **顧客確認・本番状況**: 小林様の顧客確認6手順（`CUST-01`〜`CUST-06`）は 0/6件（未実施）、顧客用の検証データはそのまま維持しており、**本番運用は開始していません**。"
+        }
+      ]
+    },
+    {
       "id": "DOC-0649",
       "path": "docs/progress/2026-11-21-cumulative-fiftytwo.md",
       "state": "historical",

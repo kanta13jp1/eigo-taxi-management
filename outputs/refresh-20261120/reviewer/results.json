@@ -1,10 +1,10 @@
 {
-  "executedAt": "2026-11-21T00:16:55.807Z",
+  "executedAt": "2026-11-21T03:46:41.965Z",
   "mode": "Offline real App with synthetic Google identity and GAS responses; no live acceptance claim",
   "browserVersion": "158.0.8127.36",
   "sourceHashes": {
     "src/services/api.ts": "9de6da24a594b1bb37d12d1dc4b2910a8cfdadf9124ed4abf22ac8104cd35e28",
-    "src/App.tsx": "e2d807eb5eb1e9a14f46f01336a89c361be03a940dbff22716f2a7e2597b1707",
+    "src/App.tsx": "00b4eec3e3013b97c0708b9e42b8c5797ba8150c43ce14348518e58e4837b960",
     "src/components/Navbar.tsx": "77d967411aab9b6ec1181f22a9fa44caebf82fa59197aad9d63fc63f2594a3b0",
     "src/components/TeacherDashboard.tsx": "62cd608227041fe1fab81b3c27e03ec2dc8d3f89438bd4d3dd2c189fbd915fa3",
     "src/components/AccountManagement.tsx": "dbd052165fbc4a11fa02be04d47ed55280353d5ca9570ebf8cdd1b20623d77b8",

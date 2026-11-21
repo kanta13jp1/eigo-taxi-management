@@ -43,7 +43,11 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({
     .sort((a, b) => a.rideDate.localeCompare(b.rideDate)
       || a.rideTime.localeCompare(b.rideTime)
       || a.id.localeCompare(b.id));
-  const pastRides = studentRides.filter((r) => r.status !== 'scheduled');
+  const pastRides = studentRides
+    .filter((r) => r.status !== 'scheduled')
+    .sort((a, b) => b.rideDate.localeCompare(a.rideDate)
+      || b.rideTime.localeCompare(a.rideTime)
+      || b.id.localeCompare(a.id));
   const [cancelRideId, setCancelRideId] = useState<string | null>(null);
   const [cancelPending, setCancelPending] = useState(false);
   const cancellationInFlight = useRef(false);
@@ -293,7 +297,7 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({
           <div className="bg-slate-50 rounded-2xl p-4 border border-slate-200/80 text-xs text-slate-600 space-y-1">
             <p className="font-bold text-slate-700">登録済みのご住所・連絡先</p>
             <p>送迎先: {student.address}</p>
-            <p>緊急連絡先: {student.phone}</p>
+            <p>緊急連絡先: {student.phone || '未登録'}</p>
             <p className="text-[11px] text-slate-400 mt-1">
               ※ 送迎場所の変更や連絡先変更は先生へ直接お知らせください。
             </p>

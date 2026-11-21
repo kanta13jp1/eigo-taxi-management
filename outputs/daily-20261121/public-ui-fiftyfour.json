@@ -1,0 +1,25 @@
+{
+  "checkedAt": "2026-11-21T03:46:01.021Z",
+  "url": "https://eigo-taxi-test.web.app",
+  "fix53AppToastAndButtons": {
+    "pass": true,
+    "logoutBtnType": "button",
+    "toastText": "✅ 田中 陽菜 (ひな) さんの送迎予約（2026-11-21 16:00）の登録結果を確認しました",
+    "termsOpenCount": 1,
+    "termsAfterHashChangeCount": 0
+  },
+  "fix54ParentPortalHistoryAndPhone": {
+    "pass": true,
+    "dateTimes": [
+      "2026-11-25 10:00",
+      "2026-11-22 10:00",
+      "2026-10-06 16:00"
+    ],
+    "isDescending": true,
+    "idx25": 0,
+    "idx22": 1,
+    "phoneText": "緊急連絡先: 090-1111-2222",
+    "phoneNonEmpty": true
+  },
+  "errors": []
+}

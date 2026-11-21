@@ -54,7 +54,7 @@ export function App() {
   useEffect(() => {
     const changed = () => {
       setSession(null); setStudents([]); setRides([]); setToastMessage(null); setErrorMessage('');
-      setIsAddRideOpen(false); setIsAddTicketOpen(false); setIsAddStudentOpen(false);
+      setIsAddRideOpen(false); setIsAddTicketOpen(false); setIsAddStudentOpen(false); setIsTermsOpen(false);
       setRequiresLogin(false); setCheckingSession(true); setRoute(parsePortal(window.location.hash));
     };
     window.addEventListener('hashchange', changed);
@@ -84,7 +84,7 @@ export function App() {
     const ended = (event: Event) => {
       setRequiresLogin(event instanceof CustomEvent && event.detail === 'reauthenticate');
       setSession(null); setStudents([]); setRides([]); setToastMessage(null);
-      setIsAddRideOpen(false); setIsAddTicketOpen(false); setIsAddStudentOpen(false);
+      setIsAddRideOpen(false); setIsAddTicketOpen(false); setIsAddStudentOpen(false); setIsTermsOpen(false);
     };
     window.addEventListener('eigo-taxi-session-ended', ended);
     return () => window.removeEventListener('eigo-taxi-session-ended', ended);
@@ -92,10 +92,17 @@ export function App() {
 
   const showToast = (msg: string) => {
     setToastMessage(msg);
-    setTimeout(() => {
+  };
+
+  useEffect(() => {
+    if (!toastMessage) return;
+    const timerId = setTimeout(() => {
       setToastMessage(null);
     }, 3500);
-  };
+    return () => {
+      if (typeof clearTimeout === 'function') clearTimeout(timerId);
+    };
+  }, [toastMessage]);
 
   const loadData = useCallback(async () => {
     const expectedSession = JSON.stringify(ApiService.getSession());
@@ -236,9 +243,9 @@ export function App() {
       <Navbar currentTab={reviewOnly ? 'teacher' : currentTab} setCurrentTab={setCurrentTab} isAdmin={isAdmin} reviewOnly={reviewOnly} />
       <div className="mx-auto flex w-full max-w-5xl items-center justify-between gap-2 px-4 pt-3 text-xs">
         <p>{session.mode === 'demo' ? 'デモ環境・架空データ（Google連携なし）' : reviewOnly ? '検証専用・指定した架空生徒のみ' : '教室の連携環境'} / {session.user.name}</p>
-        <button className="rounded-lg border bg-white px-3 py-2" onClick={()=>{
+        <button type="button" className="rounded-lg border bg-white px-3 py-2" onClick={()=>{
           ApiService.logout(); setStudents([]); setRides([]); setErrorMessage(''); setToastMessage(null); setSession(null);
-          setIsAddRideOpen(false); setIsAddTicketOpen(false); setIsAddStudentOpen(false);
+          setIsAddRideOpen(false); setIsAddTicketOpen(false); setIsAddStudentOpen(false); setIsTermsOpen(false);
         }}>ログアウト</button>
       </div>
 
@@ -246,7 +253,7 @@ export function App() {
       <main className="max-w-5xl mx-auto px-4 sm:px-6 py-6 flex-1 w-full">
         {errorMessage && <p role="alert" className="mb-4 rounded-xl border border-rose-200 bg-rose-50 p-4 text-sm text-rose-800">{errorMessage}</p>}
           {errorMessage ? (
-            <button className="rounded-xl border px-4 py-2" onClick={() => { setIsLoading(true); void loadData(); }}>台帳を再取得する</button>
+            <button type="button" className="rounded-xl border px-4 py-2" onClick={() => { setIsLoading(true); void loadData(); }}>台帳を再取得する</button>
           ) : isLoading ? (
           <div className="flex items-center justify-center py-20">
             <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-emerald-600"></div>
@@ -331,7 +338,7 @@ export function App() {
 
       {/* トースト通知 */}
       {toastMessage && (
-        <div className="fixed bottom-6 right-6 z-50 bg-slate-900 text-white text-xs sm:text-sm font-semibold px-4 py-3 rounded-2xl shadow-xl flex items-center gap-2 animate-in fade-in slide-in-from-bottom-5">
+        <div role="status" aria-live="polite" className="fixed bottom-6 right-6 z-50 bg-slate-900 text-white text-xs sm:text-sm font-semibold px-4 py-3 rounded-2xl shadow-xl flex items-center gap-2 animate-in fade-in slide-in-from-bottom-5">
           {toastMessage}
         </div>
       )}
