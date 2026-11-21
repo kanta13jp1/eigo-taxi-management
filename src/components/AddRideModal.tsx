@@ -114,7 +114,7 @@ const AddRideModalContent: React.FC<AddRideModalProps> = ({
             onClick={onClose}
             className="p-1 rounded-full text-slate-400 hover:text-slate-600 hover:bg-slate-100 transition-colors disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-400"
           >
-            <X className="w-5 h-5" />
+            <X className="w-5 h-5" aria-hidden="true" />
           </button>
         </div>
 
@@ -127,8 +127,9 @@ const AddRideModalContent: React.FC<AddRideModalProps> = ({
               id="ride-student"
               value={studentId}
               onChange={(e) => handleStudentChange(e.target.value)}
-              className="w-full px-3 py-2 border border-slate-200 rounded-xl focus:outline-hidden focus:ring-2 focus:ring-emerald-500 font-medium text-slate-800"
-              disabled={(!isTeacher && Boolean(initialStudentId)) || students.length === 0}
+              className="w-full px-3 py-2 border border-slate-200 rounded-xl focus:outline-hidden focus:ring-2 focus:ring-emerald-500 font-medium text-slate-800 disabled:opacity-50"
+              disabled={isSubmitting || (!isTeacher && Boolean(initialStudentId)) || students.length === 0}
+              aria-describedby={selectedStudent && selectedStudent.ticketBalance <= 2 ? 'ride-student-low-ticket' : undefined}
             >
               {students.length === 0 && <option value="">登録済みの生徒がいません</option>}
               {students.map((student) => (
@@ -138,7 +139,7 @@ const AddRideModalContent: React.FC<AddRideModalProps> = ({
               ))}
             </select>
             {selectedStudent && selectedStudent.ticketBalance <= 2 && (
-              <p role="status" className="text-xs text-amber-600 mt-1 font-medium">
+              <p id="ride-student-low-ticket" role="status" className="text-xs text-amber-600 mt-1 font-medium">
                 ⚠️ 現在のチケット残数が残り {selectedStudent.ticketBalance} 枚です。
               </p>
             )}
@@ -148,7 +149,7 @@ const AddRideModalContent: React.FC<AddRideModalProps> = ({
           <div className="grid grid-cols-2 gap-3">
             <div>
               <label htmlFor="ride-date" className="block text-xs font-semibold text-slate-600 mb-1 flex items-center gap-1">
-                <Calendar className="w-3.5 h-3.5 text-emerald-600" />
+                <Calendar className="w-3.5 h-3.5 text-emerald-600" aria-hidden="true" />
                 送迎日
               </label>
               <input
@@ -156,13 +157,14 @@ const AddRideModalContent: React.FC<AddRideModalProps> = ({
                 type="date"
                 value={rideDate}
                 onChange={(e) => setRideDate(e.target.value)}
-                className="w-full px-3 py-2 border border-slate-200 rounded-xl focus:outline-hidden focus:ring-2 focus:ring-emerald-500 text-slate-800"
+                disabled={isSubmitting}
+                className="w-full px-3 py-2 border border-slate-200 rounded-xl focus:outline-hidden focus:ring-2 focus:ring-emerald-500 text-slate-800 disabled:opacity-50"
                 required
               />
             </div>
             <div>
               <label htmlFor="ride-time" className="block text-xs font-semibold text-slate-600 mb-1 flex items-center gap-1">
-                <Clock className="w-3.5 h-3.5 text-emerald-600" />
+                <Clock className="w-3.5 h-3.5 text-emerald-600" aria-hidden="true" />
                 {rideType === 'dropoff' ? 'お送り時間' : 'お迎え時間'}
               </label>
               <input
@@ -170,7 +172,8 @@ const AddRideModalContent: React.FC<AddRideModalProps> = ({
                 type="time"
                 value={rideTime}
                 onChange={(e) => setRideTime(e.target.value)}
-                className="w-full px-3 py-2 border border-slate-200 rounded-xl focus:outline-hidden focus:ring-2 focus:ring-emerald-500 text-slate-800"
+                disabled={isSubmitting}
+                className="w-full px-3 py-2 border border-slate-200 rounded-xl focus:outline-hidden focus:ring-2 focus:ring-emerald-500 text-slate-800 disabled:opacity-50"
                 required
               />
             </div>
@@ -188,7 +191,7 @@ const AddRideModalContent: React.FC<AddRideModalProps> = ({
                   rideType === 'pickup'
                     ? 'border-emerald-500 bg-emerald-50 text-emerald-800 font-bold shadow-xs'
                     : 'border-slate-200 text-slate-600 hover:bg-slate-50'
-                }`}
+                } ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
               >
                 <input
                   type="radio"
@@ -196,6 +199,7 @@ const AddRideModalContent: React.FC<AddRideModalProps> = ({
                   value="pickup"
                   checked={rideType === 'pickup'}
                   onChange={() => setRideType('pickup')}
+                  disabled={isSubmitting}
                   className="sr-only"
                 />
                 <span>行き（お迎え）</span>
@@ -207,7 +211,7 @@ const AddRideModalContent: React.FC<AddRideModalProps> = ({
                   rideType === 'dropoff'
                     ? 'border-emerald-500 bg-emerald-50 text-emerald-800 font-bold shadow-xs'
                     : 'border-slate-200 text-slate-600 hover:bg-slate-50'
-                }`}
+                } ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
               >
                 <input
                   type="radio"
@@ -215,6 +219,7 @@ const AddRideModalContent: React.FC<AddRideModalProps> = ({
                   value="dropoff"
                   checked={rideType === 'dropoff'}
                   onChange={() => setRideType('dropoff')}
+                  disabled={isSubmitting}
                   className="sr-only"
                 />
                 <span>帰り（送り）</span>
@@ -226,7 +231,7 @@ const AddRideModalContent: React.FC<AddRideModalProps> = ({
                   rideType === 'roundtrip'
                     ? 'border-emerald-500 bg-emerald-50 text-emerald-800 font-bold shadow-xs'
                     : 'border-slate-200 text-slate-600 hover:bg-slate-50'
-                }`}
+                } ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
               >
                 <input
                   type="radio"
@@ -234,6 +239,7 @@ const AddRideModalContent: React.FC<AddRideModalProps> = ({
                   value="roundtrip"
                   checked={rideType === 'roundtrip'}
                   onChange={() => setRideType('roundtrip')}
+                  disabled={isSubmitting}
                   className="sr-only"
                 />
                 <span>往復</span>
@@ -248,7 +254,7 @@ const AddRideModalContent: React.FC<AddRideModalProps> = ({
           {/* 送迎場所 */}
           <div>
             <label htmlFor="ride-location" className="block text-xs font-semibold text-slate-600 mb-1 flex items-center gap-1">
-              <MapPin className="w-3.5 h-3.5 text-emerald-600" />
+              <MapPin className="w-3.5 h-3.5 text-emerald-600" aria-hidden="true" />
               送迎場所・住所
             </label>
             <input
@@ -258,7 +264,8 @@ const AddRideModalContent: React.FC<AddRideModalProps> = ({
               onChange={(e) => setPickupLocation(e.target.value)}
               maxLength={200}
               placeholder="例: 東京都世田谷区... または エントランス前"
-              className="w-full px-3 py-2 border border-slate-200 rounded-xl focus:outline-hidden focus:ring-2 focus:ring-emerald-500 text-slate-800 text-sm"
+              disabled={isSubmitting}
+              className="w-full px-3 py-2 border border-slate-200 rounded-xl focus:outline-hidden focus:ring-2 focus:ring-emerald-500 text-slate-800 text-sm disabled:opacity-50"
               required
             />
           </div>
@@ -266,7 +273,7 @@ const AddRideModalContent: React.FC<AddRideModalProps> = ({
           {/* 連絡メモ */}
           <div>
             <label htmlFor="ride-note" className="block text-xs font-semibold text-slate-600 mb-1 flex items-center gap-1">
-              <FileText className="w-3.5 h-3.5 text-slate-400" />
+              <FileText className="w-3.5 h-3.5 text-slate-400" aria-hidden="true" />
               連絡事項・メモ（任意）
             </label>
             <textarea
@@ -276,7 +283,8 @@ const AddRideModalContent: React.FC<AddRideModalProps> = ({
               maxLength={300}
               placeholder="例: 今日は雨のため傘を持って行きます / 到着5分前に連絡ください"
               rows={2}
-              className="w-full px-3 py-2 border border-slate-200 rounded-xl focus:outline-hidden focus:ring-2 focus:ring-emerald-500 text-slate-800 text-sm"
+              disabled={isSubmitting}
+              className="w-full px-3 py-2 border border-slate-200 rounded-xl focus:outline-hidden focus:ring-2 focus:ring-emerald-500 text-slate-800 text-sm disabled:opacity-50"
             />
           </div>
 
@@ -296,7 +304,7 @@ const AddRideModalContent: React.FC<AddRideModalProps> = ({
               aria-busy={isSubmitting}
               className="flex-1 py-2.5 px-4 rounded-xl bg-emerald-600 text-white font-semibold hover:bg-emerald-700 transition-colors flex items-center justify-center gap-1.5 shadow-sm text-sm disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
             >
-              <CheckCircle2 className="w-4 h-4" />
+              <CheckCircle2 className="w-4 h-4" aria-hidden="true" />
               {isSubmitting ? '登録中...' : '送迎予定を登録する'}
             </button>
           </div>

@@ -120,7 +120,7 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({
           {/* チケット残数カード */}
           <div className="bg-gradient-to-br from-emerald-600 to-teal-700 text-white rounded-3xl p-6 shadow-md relative overflow-hidden">
             <div className="absolute right-[-10px] bottom-[-20px] opacity-10">
-              <Ticket className="w-48 h-48" />
+              <Ticket aria-hidden="true" className="w-48 h-48" />
             </div>
 
             <div className="relative z-10">
@@ -138,7 +138,7 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({
               </div>
 
               <p className="mt-4 text-xs leading-relaxed text-emerald-100/90 flex items-start gap-1.5">
-                <Sparkles className="w-4 h-4 text-amber-300 shrink-0 mt-0.5" />
+                <Sparkles aria-hidden="true" className="w-4 h-4 text-amber-300 shrink-0 mt-0.5" />
                 <span>
                   <span className="block font-semibold">予約しただけでは残数は減りません。</span>
                   <span className="block">先生・管理者が「完了」にすると減ります。</span>
@@ -148,7 +148,7 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({
 
               {student.ticketBalance <= 2 && (
                 <div role="status" className="mt-4 bg-amber-500/25 border border-amber-300/50 rounded-xl p-3 flex items-start gap-2.5 text-xs text-amber-100">
-                  <AlertCircle className="w-5 h-5 text-amber-300 shrink-0 mt-0.5" />
+                  <AlertCircle aria-hidden="true" className="w-5 h-5 text-amber-300 shrink-0 mt-0.5" />
                   <div>
                     <span className="font-bold text-amber-200 block text-sm">
                       ⚠️ チケットが無くなりそうです（残り{student.ticketBalance}回）
@@ -166,7 +166,7 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({
             onClick={() => onOpenAddRide(student.id)}
             className="w-full py-3.5 px-4 bg-slate-900 hover:bg-slate-800 text-white font-bold rounded-2xl shadow-sm flex items-center justify-center gap-2 text-base transition-transform active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
           >
-            <PlusCircle className="w-5 h-5 text-emerald-400" />
+            <PlusCircle aria-hidden="true" className="w-5 h-5 text-emerald-400" />
             送迎の予約を申し込む（前日・当日可）
           </button>
 
@@ -174,7 +174,7 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({
           <div className="bg-white rounded-2xl border border-slate-200 p-5 shadow-xs">
             <div className="flex items-center justify-between mb-1">
               <h4 className="font-bold text-slate-800 text-sm flex items-center gap-2">
-                <Calendar className="w-4 h-4 text-emerald-600" />
+                <Calendar aria-hidden="true" className="w-4 h-4 text-emerald-600" />
                 現在予約中の送迎
               </h4>
               <span className="text-xs text-slate-400">{upcomingRides.length} 件</span>
@@ -208,7 +208,7 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({
                             </span>
                           </div>
                           <div className="min-w-0 flex items-center gap-1 text-xs text-slate-600 mt-1">
-                            <MapPin className="w-3.5 h-3.5 text-slate-400 shrink-0" />
+                            <MapPin aria-hidden="true" className="w-3.5 h-3.5 text-slate-400 shrink-0" />
                             <span className="min-w-0 [overflow-wrap:anywhere]">{ride.pickupLocation}</span>
                           </div>
                           {ride.note && (
@@ -222,11 +222,12 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({
                         <button
                           type="button"
                           aria-label={target + ' ' + ride.pickupLocation + ' の予約をキャンセル'}
+                          aria-busy={cancelPending}
                           disabled={cancelPending}
                           onClick={() => setCancelRideId(ride.id)}
                           className="shrink-0 text-xs text-rose-600 hover:text-rose-700 bg-rose-50 hover:bg-rose-100 font-bold px-2.5 py-1.5 rounded-lg border border-rose-200 transition-colors flex items-center gap-1 disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-500"
                         >
-                          <XCircle className="w-3.5 h-3.5" />
+                          <XCircle aria-hidden="true" className="w-3.5 h-3.5" />
                           キャンセル
                         </button>
                       </div>
@@ -239,8 +240,9 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({
 
           {cancelTarget && (
             <dialog ref={cancelDialog} aria-labelledby="parent-cancel-heading"
-              aria-describedby="parent-cancel-details parent-cancel-effect" onCancel={dismissCancellation}
-              onClick={(e) => { if (e.target === e.currentTarget) dismissCancellation(); }}
+              aria-describedby="parent-cancel-details parent-cancel-effect"
+              onCancel={(e) => { if (cancelPending) { e.preventDefault(); return; } dismissCancellation(); }}
+              onClick={(e) => { if (e.target === e.currentTarget && !cancelPending) dismissCancellation(); }}
               className="m-auto w-11/12 max-w-md rounded-2xl p-0 shadow-xl backdrop:bg-slate-900/50">
               <div className="p-5">
                 <h2 id="parent-cancel-heading" className="text-lg font-bold">予約取消の確認</h2>
@@ -253,7 +255,7 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({
                 <p id="parent-cancel-effect" className="mt-3 text-sm">{isDemo ? 'このブラウザ内のデモ予約を取り消します。教室の予定は変わりません。' : '台帳の予約を取消にし、対応するカレンダーの予定を削除します。'}</p>
                 <div className="mt-5 flex justify-end gap-2">
                   <button type="button" disabled={cancelPending} className="rounded-lg border px-3 py-2 disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-500" onClick={dismissCancellation}>戻る</button>
-                  <button type="button" disabled={cancelPending} className="rounded-lg bg-rose-700 px-3 py-2 font-bold text-white disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-500" onClick={confirmCancellation}>取消を確定</button>
+                  <button type="button" aria-busy={cancelPending} disabled={cancelPending} className="rounded-lg bg-rose-700 px-3 py-2 font-bold text-white disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-500" onClick={confirmCancellation}>取消を確定</button>
                 </div>
               </div>
             </dialog>
@@ -263,7 +265,7 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({
           <div className="bg-white rounded-2xl border border-slate-200 p-5 shadow-xs">
             <div className="flex items-center justify-between mb-3">
               <h4 className="font-bold text-slate-800 text-sm flex items-center gap-2">
-                <Clock className="w-4 h-4 text-slate-500" />
+                <Clock aria-hidden="true" className="w-4 h-4 text-slate-500" />
                 過去の利用履歴
               </h4>
               <span className="text-xs text-slate-400">{pastRides.length} 件</span>
@@ -286,7 +288,7 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({
                     <div>
                       {ride.status === 'completed' && (
                         <span className="inline-flex items-center gap-1 text-emerald-600 font-bold">
-                          <CheckCircle2 className="w-3.5 h-3.5" /> 送迎済 (-{ride.rideType === 'roundtrip' ? 2 : 1}回)
+                          <CheckCircle2 aria-hidden="true" className="w-3.5 h-3.5" /> 送迎済 (-{ride.rideType === 'roundtrip' ? 2 : 1}回)
                         </span>
                       )}
                       {ride.status === 'cancelled' && (

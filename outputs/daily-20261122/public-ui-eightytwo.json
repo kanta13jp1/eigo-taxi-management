@@ -1,0 +1,41 @@
+{
+  "checkedAt": "2026-11-21T18:07:38.514Z",
+  "url": "https://eigo-taxi-test.web.app",
+  "fix80ParentPortalIconsAndCancelBusy": {
+    "pass": true,
+    "studentsChecked": 1,
+    "totalSvgsChecked": 8,
+    "allSvgsAriaHidden": true,
+    "lowTicketBannerSeen": false,
+    "pastCompletedIconSeen": true,
+    "totalCancelBtnsChecked": 1,
+    "allCancelBtnsAriaBusyFalse": true,
+    "cancelDialogOpened": true,
+    "confirmBtnAriaBusyFalse": true
+  },
+  "fix81AccountManagementLiveDemoSurface": {
+    "pass": true,
+    "reloadHasAriaBusyFalse": true,
+    "reloadHasDisabledAndFocus": true,
+    "expectedDemoRestrictionShown": true,
+    "reloadRecoveredCleanly": true
+  },
+  "fix82AddRideModalIconsAndLocks": {
+    "pass": true,
+    "svgCount": 6,
+    "allSvgsAriaHidden": true,
+    "studentSelectDisabledOpacity": true,
+    "dateDisabledOpacity": true,
+    "timeDisabledOpacity": true,
+    "locationDisabledOpacity": true,
+    "noteDisabledOpacity": true,
+    "radioCount": 3,
+    "lowTicketOptionValue": "STU-002",
+    "lowTicketCheck": {
+      "lowTicketStudentFound": true,
+      "ariaDescribedByValid": true,
+      "statusTextPresent": true
+    }
+  },
+  "errors": []
+}

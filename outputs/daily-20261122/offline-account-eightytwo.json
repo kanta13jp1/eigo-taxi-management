@@ -1,0 +1,16 @@
+{
+  "checkedAt": "2026-11-21T18:09:24.043Z",
+  "mode": "Offline synthetic full-admin reviewer fixture (external requests blocked; no live GAS/Google)",
+  "pass": true,
+  "reloadHasAriaBusyFalse": true,
+  "nameHasAutoCompleteAndFocus": true,
+  "emailHasAutoCompleteAndFocus": true,
+  "roleSelectHasOpacityAndFocus": true,
+  "checkboxCount": 4,
+  "allCheckboxesHaveFocusRing": true,
+  "ariaDescribedBy": "account-confirm-desc",
+  "descText": "選択した架空生徒だけを両方の画面で検証する利用者として有効で保存します。",
+  "execHasAriaBusyFalse": true,
+  "externalRequests": [],
+  "errors": []
+}

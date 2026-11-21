@@ -73790,6 +73790,147 @@
       ]
     },
     {
+      "id": "DOC-0661",
+      "path": "docs/progress/2026-11-22-cumulative-eightytwo.md",
+      "state": "historical",
+      "sha256": "e3c8f7130d8755aaf7151a2d8079dfce69c9a9bb70f6a698a017b4931f25bcd7",
+      "items": [
+        {
+          "id": "DOC-0661-ITEM-00001",
+          "line": 1,
+          "contentSha256": "3105efafd5f7bf8cdd7d64f4995c8b1ea8435e66dace175dbcdf589b52fc84d1",
+          "occurrence": 1,
+          "preview": "# 11月22日 累計82件の実装修正・受入試験82項目（ParentPortal アイコン非読み上げ・取消ガード / AccountManagement フォームロック・確認説明連携 / AddRideModal 送信ロック・残少状態連携）"
+        },
+        {
+          "id": "DOC-0661-ITEM-00002",
+          "line": 3,
+          "contentSha256": "e79e8976eb91cf8c58638c41a0a566d1ab36a7c78822c02c6008bfbd6635a453",
+          "occurrence": 1,
+          "preview": "小林さん、お疲れ様です。"
+        },
+        {
+          "id": "DOC-0661-ITEM-00003",
+          "line": 5,
+          "contentSha256": "67c4ae2eaabd6e63389e9c65ff9e5a919e6d40d4c0d164720cd4dc1c6aa59169",
+          "occurrence": 1,
+          "preview": "11月22日の追加対応により、実装修正は**累計82件**、実施した異なる受入試験は**累計82項目**となりました（先行2件は Claude Code Fable 5.2 の対応分、追加80件が後続の対応分です）。今回は Round 6 として Agent Swarms（`/s"
+        },
+        {
+          "id": "DOC-0661-ITEM-00004",
+          "line": 7,
+          "contentSha256": "26f9618a10d7a439efa1ae3b0ca0f2dfba530c697a955d6d9bea8f8a9b40f5b9",
+          "occurrence": 1,
+          "preview": "### 【今回の追加修正内容（80〜82件目）】"
+        },
+        {
+          "id": "DOC-0661-ITEM-00005",
+          "line": 8,
+          "contentSha256": "a413d2c940d5367cde77d3300f97f87a876aab75d963135f1cd107f031650c5c",
+          "occurrence": 1,
+          "preview": "* **80件目（`ParentPortal.tsx`）**：保護者画面内の装飾 Lucide アイコン9件（`Ticket`, `Sparkles`, `AlertCircle`, `PlusCircle`, `Calendar`, `MapPin`, `XCircle`, `"
+        },
+        {
+          "id": "DOC-0661-ITEM-00006",
+          "line": 9,
+          "contentSha256": "fd55ce3ce3f27c5ab44d545a97565c6c2b0756c8d3f03ea30dac86f86ac8add7",
+          "occurrence": 1,
+          "preview": "* **81件目（`AccountManagement.tsx`）**：「一覧を再取得」ボタンへ `aria-busy={loading}` を追加しました。また、保存・削除送信中（`busy === true`）に氏名（`autoComplete=\"name\"`）・Google"
+        },
+        {
+          "id": "DOC-0661-ITEM-00007",
+          "line": 10,
+          "contentSha256": "7991ea055a9c49407ca9aace160dc08f93598e89caa50b785063db7f44df5d50",
+          "occurrence": 1,
+          "preview": "* **82件目（`AddRideModal.tsx`）**：送迎予定登録モーダル内の装飾 Lucide アイコン6件（`X`, `Calendar`, `Clock`, `MapPin`, `FileText`, `CheckCircle2`）へ `aria-hidden=\"t"
+        },
+        {
+          "id": "DOC-0661-ITEM-00008",
+          "line": 12,
+          "contentSha256": "9de551c4148b27516b1b1eb9671c2f0869b9ce4e95033adfe7b6c87abca0d16b",
+          "occurrence": 1,
+          "preview": "### 【今回実施した受入試験（80〜82項目目）】"
+        },
+        {
+          "id": "DOC-0661-ITEM-00009",
+          "line": 13,
+          "contentSha256": "3f91432076e4d0b72ca84d3066baeb6deb1fccf9125cf688eceea9ad57bedf91",
+          "occurrence": 1,
+          "preview": "* **80項目目（ParentPortal 装飾アイコン非読み上げ・取消処理中属性検証［公開デモ］）**：公開検証サイト（`https://eigo-taxi-test.web.app/#/parent`）の保護者デモで、画面内 SVG 8件すべての `aria-hidden="
+        },
+        {
+          "id": "DOC-0661-ITEM-00010",
+          "line": 14,
+          "contentSha256": "a5ceeb4bf57568063c25c94d836173d85524263578e84e47ea427dd394684505",
+          "occurrence": 1,
+          "preview": "* **81項目目（AccountManagement 公開デモ保護＋完全管理者フォーム／確認ダイアログ検証［公開デモ＋オフライン合成完全管理者］）**：公開検証サイト（`https://eigo-taxi-test.web.app/#/admin`）の管理者デモ「アカウント管理"
+        },
+        {
+          "id": "DOC-0661-ITEM-00011",
+          "line": 15,
+          "contentSha256": "d52a4b676ef9bb0d719bc2e3fc4b9f920db9cc70dd087113496f422be07f595f",
+          "occurrence": 1,
+          "preview": "* **82項目目（AddRideModal 装飾アイコン非読み上げ・送信ロック準備・残チケット状態連携検証［公開デモ］）**：公開検証サイトの管理者デモから「送迎予定の登録」モーダルを開き、SVG 6件すべての `aria-hidden=\"true\"`、全入力項目・ラジオ3件の"
+        },
+        {
+          "id": "DOC-0661-ITEM-00012",
+          "line": 17,
+          "contentSha256": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+          "occurrence": 1,
+          "preview": "---"
+        },
+        {
+          "id": "DOC-0661-ITEM-00013",
+          "line": 19,
+          "contentSha256": "76c3519755d39acf199783847365abea0c2ba4aec32426a7addbe54a9ff2b9a7",
+          "occurrence": 1,
+          "preview": "### 【公開環境・確認範囲】"
+        },
+        {
+          "id": "DOC-0661-ITEM-00014",
+          "line": 20,
+          "contentSha256": "b8f8e26627fdd283f6f45ab1ae8e53d01b7ab6cd92e292bebaf1c240ff354448",
+          "occurrence": 1,
+          "preview": "* **検証サイト**: https://eigo-taxi-test.web.app/"
+        },
+        {
+          "id": "DOC-0661-ITEM-00015",
+          "line": 21,
+          "contentSha256": "a63c91a13d436345d794d46ad4e1a38e85ec9177fcb2890ddf655987a02f1cd1",
+          "occurrence": 1,
+          "preview": "* **反映版 (`sourceDigest`)**: `b9858c27ff1c426f8244d651b22ff23509f7aad637d1675a76b1f8de28666cfe`（ビルド時刻: `2026-11-21T18:02:40.743Z`）"
+        },
+        {
+          "id": "DOC-0661-ITEM-00016",
+          "line": 22,
+          "contentSha256": "11b35b3b5ffa6f6181412c91ad2a4d6e5993c77a05d3318d0edb2058f9cb82b9",
+          "occurrence": 1,
+          "preview": "* **配信照合**: [public-2026-11-21T18-04-36-778Z.json](../acceptance/deployment-verification/public-2026-11-21T18-04-36-778Z.json)（全7ファイル SHA-25"
+        },
+        {
+          "id": "DOC-0661-ITEM-00017",
+          "line": 23,
+          "contentSha256": "79428081a48156fb2e06768c956a75ccc638a3251e816df3f00d9d388feeae5c",
+          "occurrence": 1,
+          "preview": "* **公開UI証跡**: [public-ui-eightytwo.json](../../outputs/daily-20261122/public-ui-eightytwo.json)"
+        },
+        {
+          "id": "DOC-0661-ITEM-00018",
+          "line": 24,
+          "contentSha256": "3d2282b9544d77f4e4cec042b4ed893f83964d991501d4e896c47531d9389d84",
+          "occurrence": 1,
+          "preview": "* **オフライン完全管理者UI証跡**: [offline-account-eightytwo.json](../../outputs/daily-20261122/offline-account-eightytwo.json)"
+        },
+        {
+          "id": "DOC-0661-ITEM-00019",
+          "line": 25,
+          "contentSha256": "f05b4c87239863444f5738c59c27a6864e67fabeb0482abfb963cdc48a292ac6",
+          "occurrence": 1,
+          "preview": "* **顧客確認・本番状況**: 小林様の顧客確認6手順（`CUST-01`〜`CUST-06`）は 0/6件（未実施）、顧客用の検証データはそのまま維持しており、**本番運用は開始していません**。"
+        }
+      ]
+    },
+    {
       "id": "DOC-0552",
       "path": "docs/progress/SHARED_TRACKER_UPDATE.md",
       "state": "historical",
