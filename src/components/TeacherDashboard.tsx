@@ -309,7 +309,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
               <button
                 type="button"
                 onClick={() => onOpenAddRide()}
-                className="mt-4 inline-flex items-center gap-1.5 bg-emerald-50 text-emerald-700 hover:bg-emerald-100 px-4 py-2 rounded-xl text-xs font-bold transition-colors"
+                className="mt-4 inline-flex items-center gap-1.5 bg-emerald-50 text-emerald-700 hover:bg-emerald-100 px-4 py-2 rounded-xl text-xs font-bold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
               >
                 <Plus className="w-4 h-4" />
                 送迎予定を登録する
@@ -390,8 +390,9 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
                           ride.pickupLocation
                         )}`}
                         target="_blank"
-                        rel="noreferrer"
-                        className="text-xs text-blue-600 hover:text-blue-700 inline-flex items-center gap-1 font-medium"
+                        rel="noopener noreferrer"
+                        aria-label={`${ride.studentName} の送迎先をGoogleマップで開く`}
+                        className="text-xs text-blue-600 hover:text-blue-700 inline-flex items-center gap-1 font-medium rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
                       >
                         <MapPin className="w-3.5 h-3.5" />
                         地図アプリ
@@ -403,8 +404,9 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
                           type="button"
                           onClick={() => completeRide(ride)}
                           disabled={pendingRideIds.has(ride.id)}
+                          aria-busy={pendingRideIds.has(ride.id)}
                           aria-label={completionLabel(ride)}
-                          className="bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs py-2 px-3.5 rounded-xl shadow-xs inline-flex items-center gap-1.5 transition-colors"
+                          className="bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs py-2 px-3.5 rounded-xl shadow-xs inline-flex items-center gap-1.5 transition-colors disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
                         >
                           <CheckCircle2 className="w-4 h-4" />
                           {pendingRideIds.has(ride.id) ? '完了処理中' : `送迎完了（${typeInfo.consume}回消費）`}
@@ -432,7 +434,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
                 aria-label="ステータスで絞り込み"
                 value={filterStatus}
                 onChange={(e) => setFilterStatus(e.target.value)}
-                className="bg-white border border-slate-200 rounded-xl px-2.5 py-1 text-xs font-semibold text-slate-700 focus:outline-hidden"
+                className="bg-white border border-slate-200 rounded-xl px-2.5 py-1 text-xs font-semibold text-slate-700 focus:outline-hidden focus-visible:ring-2 focus-visible:ring-emerald-500"
               >
                 <option value="all">すべてのステータス</option>
                 <option value="scheduled">予定中のみ</option>
@@ -444,16 +446,16 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
 
           <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-xs">
             <div className="overflow-x-auto">
-              <table className="w-full text-left text-xs">
+              <table aria-label="全送迎スケジュール一覧" className="w-full text-left text-xs">
                 <thead className="bg-slate-50 border-b border-slate-200 text-slate-500 font-semibold">
                   <tr>
-                    <th className="py-3 px-4">日時</th>
-                    <th className="py-3 px-4">生徒名</th>
-                    <th className="py-3 px-4">区分</th>
-                    <th className="py-3 px-4">送迎場所</th>
-                    <th className="py-3 px-4">予約者</th>
-                    <th className="py-3 px-4">ステータス</th>
-                    <th className="py-3 px-4 text-right">操作</th>
+                    <th scope="col" className="py-3 px-4">日時</th>
+                    <th scope="col" className="py-3 px-4">生徒名</th>
+                    <th scope="col" className="py-3 px-4">区分</th>
+                    <th scope="col" className="py-3 px-4">送迎場所</th>
+                    <th scope="col" className="py-3 px-4">予約者</th>
+                    <th scope="col" className="py-3 px-4">ステータス</th>
+                    <th scope="col" className="py-3 px-4 text-right">操作</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-slate-100">
@@ -640,7 +642,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
                     <button
                       type="button"
                       onClick={() => onOpenAddTicket(student.id)}
-                      className="flex-1 py-1.5 px-3 rounded-lg bg-emerald-50 hover:bg-emerald-100 text-emerald-800 font-bold text-xs inline-flex items-center justify-center gap-1 transition-colors"
+                      className="flex-1 py-1.5 px-3 rounded-lg bg-emerald-50 hover:bg-emerald-100 text-emerald-800 font-bold text-xs inline-flex items-center justify-center gap-1 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
                     >
                       <Ticket className="w-3.5 h-3.5" />
                       チケット追加
@@ -648,7 +650,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
                     <button
                       type="button"
                       onClick={() => onOpenAddRide(student.id)}
-                      className="py-1.5 px-3 rounded-lg border border-slate-200 hover:bg-slate-50 text-slate-700 font-semibold text-xs inline-flex items-center gap-1 transition-colors"
+                      className="py-1.5 px-3 rounded-lg border border-slate-200 hover:bg-slate-50 text-slate-700 font-semibold text-xs inline-flex items-center gap-1 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-500"
                     >
                       予約登録
                       <ChevronRight className="w-3 h-3" />

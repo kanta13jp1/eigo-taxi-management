@@ -1,0 +1,48 @@
+{
+  "checkedAt": "2026-11-21T13:53:22.757Z",
+  "url": "https://eigo-taxi-test.web.app",
+  "fix77TeacherDashboardControlsAndA11y": {
+    "pass": true,
+    "scheduleCheck": {
+      "hasTableAriaLabel": true,
+      "thCount": 7,
+      "allThHaveScopeCol": true,
+      "filterHasFocusRing": true
+    },
+    "studentsCardButtonsCheck": {
+      "studentTicketBtnCount": 4,
+      "studentTicketBtnsHaveFocusRing": true,
+      "studentBookBtnCount": 3,
+      "studentBookBtnsHaveFocusRing": true
+    },
+    "todayTabCheck": {
+      "mapLinkCount": 2,
+      "mapLinksValid": true,
+      "completeBtnCount": 2,
+      "completeBtnsValid": true,
+      "emptyRegisterBtnValid": true,
+      "hasTodayContent": true
+    }
+  },
+  "fix78TermsModalFocusAndIcons": {
+    "pass": true,
+    "termsCheck": {
+      "topCloseHasFocusRing": true,
+      "tabpanelHasFocusRing": true,
+      "footerCloseHasFocusRing": true,
+      "svgCount": 5,
+      "allSvgsAriaHidden": true
+    }
+  },
+  "fix79PortalInvitationsFocusAndSelectAll": {
+    "pass": true,
+    "invitationsCheck": {
+      "selectHasDisabledAndFocus": true,
+      "reloadHasFocusRing": true,
+      "copyHasFocusRing": true,
+      "downloadHasFocusRing": true,
+      "urlHasSelectAll": true
+    }
+  },
+  "errors": []
+}

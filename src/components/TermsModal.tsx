@@ -60,16 +60,16 @@ function TermsModalContent({ onClose, initialTab }: { onClose: () => void; initi
         {/* ヘッダー */}
         <div className="px-6 py-4 bg-slate-50 border-b border-slate-100 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <Shield className="w-5 h-5 text-indigo-600" />
+            <Shield className="w-5 h-5 text-indigo-600" aria-hidden="true" />
             <h3 id="terms-modal-title" className="font-bold text-slate-800 text-base sm:text-lg">規約・プライバシー保護・免責事項</h3>
           </div>
           <button
             type="button"
             aria-label="閉じる"
             onClick={onClose}
-            className="p-2 text-slate-400 hover:text-slate-600 hover:bg-slate-100 rounded-full transition-colors"
+            className="p-2 text-slate-400 hover:text-slate-600 hover:bg-slate-100 rounded-full transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500"
           >
-            <X className="w-5 h-5" />
+            <X className="w-5 h-5" aria-hidden="true" />
           </button>
         </div>
 
@@ -94,7 +94,7 @@ function TermsModalContent({ onClose, initialTab }: { onClose: () => void; initi
                 : 'border-transparent text-slate-500 hover:text-slate-700'
             }`}
           >
-            <FileText className="w-4 h-4" />
+            <FileText className="w-4 h-4" aria-hidden="true" />
             利用規約
           </button>
           <button
@@ -111,7 +111,7 @@ function TermsModalContent({ onClose, initialTab }: { onClose: () => void; initi
                 : 'border-transparent text-slate-500 hover:text-slate-700'
             }`}
           >
-            <Shield className="w-4 h-4" />
+            <Shield className="w-4 h-4" aria-hidden="true" />
             個人情報の取扱い
           </button>
           <button
@@ -128,7 +128,7 @@ function TermsModalContent({ onClose, initialTab }: { onClose: () => void; initi
                 : 'border-transparent text-slate-500 hover:text-slate-700'
             }`}
           >
-            <AlertCircle className="w-4 h-4" />
+            <AlertCircle className="w-4 h-4" aria-hidden="true" />
             免責事項
           </button>
         </div>
@@ -139,7 +139,7 @@ function TermsModalContent({ onClose, initialTab }: { onClose: () => void; initi
           id={`terms-panel-${activeTab}`}
           aria-labelledby={`terms-tab-${activeTab}`}
           tabIndex={0}
-          className="p-6 overflow-y-auto text-sm text-slate-600 leading-relaxed space-y-4"
+          className="p-6 overflow-y-auto text-sm text-slate-600 leading-relaxed space-y-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500"
         >
           {activeTab === 'terms' && (
             <div className="space-y-3">
@@ -198,7 +198,7 @@ function TermsModalContent({ onClose, initialTab }: { onClose: () => void; initi
           <button
             type="button"
             onClick={onClose}
-            className="px-5 py-2 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold rounded-xl transition-colors shadow-sm"
+            className="px-5 py-2 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold rounded-xl transition-colors shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500"
           >
             閉じる
           </button>
