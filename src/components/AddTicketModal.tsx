@@ -28,11 +28,14 @@ const AddTicketModalContent: React.FC<AddTicketModalProps> = ({
   onSubmit,
 }) => {
   const [studentId, setStudentId] = useState(initialStudentId || students[0]?.id || '');
-  const [ticketCount, setTicketCount] = useState<number>(10);
+  const [ticketCountInput, setTicketCountInput] = useState('10');
   const [amountInput, setAmountInput] = useState('10000');
   const [note, setNote] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState('');
+
+  const trimmedCount = ticketCountInput.trim();
+  const parsedTicketCount = trimmedCount === '' ? NaN : Number(trimmedCount);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -43,14 +46,14 @@ const AddTicketModalContent: React.FC<AddTicketModalProps> = ({
   }, [isSubmitting, onClose]);
 
   const handlePresetSelect = (count: number, price: number, label: string) => {
-    setTicketCount(count);
+    setTicketCountInput(String(count));
     setAmountInput(String(price));
     setNote(`${label}購入`);
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!studentId || !Number.isSafeInteger(ticketCount) || ticketCount < 1 || ticketCount > 100) {
+    if (!studentId || !Number.isSafeInteger(parsedTicketCount) || parsedTicketCount < 1 || parsedTicketCount > 100) {
       setError('生徒と1〜100枚の整数を指定してください');
       return;
     }
@@ -65,7 +68,7 @@ const AddTicketModalContent: React.FC<AddTicketModalProps> = ({
     try {
       await onSubmit({
         studentId,
-        ticketCount,
+        ticketCount: parsedTicketCount,
         amount,
         note: note.trim(),
       });
@@ -78,7 +81,7 @@ const AddTicketModalContent: React.FC<AddTicketModalProps> = ({
   };
 
   const selectedStudent = students.find((s) => s.id === studentId);
-  const previewAddCount = Number.isSafeInteger(ticketCount) && ticketCount > 0 ? ticketCount : 0;
+  const previewAddCount = Number.isSafeInteger(parsedTicketCount) && parsedTicketCount > 0 && parsedTicketCount <= 100 ? parsedTicketCount : 0;
 
   return (
     <div
@@ -106,7 +109,7 @@ const AddTicketModalContent: React.FC<AddTicketModalProps> = ({
             aria-label="閉じる"
             disabled={isSubmitting}
             onClick={onClose}
-            className="p-1 rounded-full text-slate-400 hover:text-slate-600 hover:bg-slate-100 transition-colors disabled:opacity-50"
+            className="p-1 rounded-full text-slate-400 hover:text-slate-600 hover:bg-slate-100 transition-colors disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-400"
           >
             <X className="w-5 h-5" />
           </button>
@@ -120,9 +123,11 @@ const AddTicketModalContent: React.FC<AddTicketModalProps> = ({
             <select
               id="ticket-student"
               value={studentId}
+              disabled={students.length === 0}
               onChange={(e) => setStudentId(e.target.value)}
               className="w-full px-3 py-2 border border-slate-200 rounded-xl focus:outline-hidden focus:ring-2 focus:ring-emerald-500 font-medium text-slate-800 text-sm"
             >
+              {students.length === 0 && <option value="">登録済みの生徒がいません</option>}
               {students.map((student) => (
                 <option key={student.id} value={student.id}>
                   {student.name}（現在: {student.ticketBalance}枚）
@@ -143,27 +148,33 @@ const AddTicketModalContent: React.FC<AddTicketModalProps> = ({
             <div className="grid grid-cols-3 gap-2">
               <button
                 type="button"
+                disabled={isSubmitting}
+                aria-pressed={parsedTicketCount === 5}
                 onClick={() => handlePresetSelect(5, 5000, '5回券')}
-                className={`py-2 px-3 rounded-xl border text-xs font-medium text-center transition-all ${
-                  ticketCount === 5 ? 'border-emerald-500 bg-emerald-50 text-emerald-800 font-bold' : 'border-slate-200 text-slate-600 hover:bg-slate-50'
+                className={`py-2 px-3 rounded-xl border text-xs font-medium text-center transition-all disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 ${
+                  parsedTicketCount === 5 ? 'border-emerald-500 bg-emerald-50 text-emerald-800 font-bold' : 'border-slate-200 text-slate-600 hover:bg-slate-50'
                 }`}
               >
                 5回券 (¥5,000)
               </button>
               <button
                 type="button"
+                disabled={isSubmitting}
+                aria-pressed={parsedTicketCount === 10}
                 onClick={() => handlePresetSelect(10, 10000, '10回券')}
-                className={`py-2 px-3 rounded-xl border text-xs font-medium text-center transition-all ${
-                  ticketCount === 10 ? 'border-emerald-500 bg-emerald-50 text-emerald-800 font-bold' : 'border-slate-200 text-slate-600 hover:bg-slate-50'
+                className={`py-2 px-3 rounded-xl border text-xs font-medium text-center transition-all disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 ${
+                  parsedTicketCount === 10 ? 'border-emerald-500 bg-emerald-50 text-emerald-800 font-bold' : 'border-slate-200 text-slate-600 hover:bg-slate-50'
                 }`}
               >
                 10回券 (¥10,000)
               </button>
               <button
                 type="button"
+                disabled={isSubmitting}
+                aria-pressed={parsedTicketCount === 1}
                 onClick={() => handlePresetSelect(1, 1000, '単発1回')}
-                className={`py-2 px-3 rounded-xl border text-xs font-medium text-center transition-all ${
-                  ticketCount === 1 ? 'border-emerald-500 bg-emerald-50 text-emerald-800 font-bold' : 'border-slate-200 text-slate-600 hover:bg-slate-50'
+                className={`py-2 px-3 rounded-xl border text-xs font-medium text-center transition-all disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 ${
+                  parsedTicketCount === 1 ? 'border-emerald-500 bg-emerald-50 text-emerald-800 font-bold' : 'border-slate-200 text-slate-600 hover:bg-slate-50'
                 }`}
               >
                 1回分 (¥1,000)
@@ -180,8 +191,10 @@ const AddTicketModalContent: React.FC<AddTicketModalProps> = ({
                 type="number"
                 min="1"
                 max="100"
-                value={ticketCount}
-                onChange={(e) => setTicketCount(Number(e.target.value))}
+                step="1"
+                inputMode="numeric"
+                value={ticketCountInput}
+                onChange={(e) => setTicketCountInput(e.target.value)}
                 className="w-full px-3 py-2 border border-slate-200 rounded-xl focus:outline-hidden focus:ring-2 focus:ring-emerald-500 text-slate-800 text-sm font-semibold"
                 required
               />
@@ -193,6 +206,7 @@ const AddTicketModalContent: React.FC<AddTicketModalProps> = ({
                 type="number"
                 min="0"
                 step="1"
+                inputMode="numeric"
                 required
                 value={amountInput}
                 onChange={(e) => setAmountInput(e.target.value)}
@@ -207,6 +221,7 @@ const AddTicketModalContent: React.FC<AddTicketModalProps> = ({
             <input
               id="ticket-note"
               type="text"
+              maxLength={200}
               value={note}
               onChange={(e) => setNote(e.target.value)}
               placeholder="例: 現金受領 / 口座振込確認済み"
@@ -220,14 +235,15 @@ const AddTicketModalContent: React.FC<AddTicketModalProps> = ({
               type="button"
               disabled={isSubmitting}
               onClick={onClose}
-              className="flex-1 py-2.5 px-4 rounded-xl border border-slate-200 text-slate-600 font-medium hover:bg-slate-50 transition-colors text-sm disabled:opacity-50"
+              className="flex-1 py-2.5 px-4 rounded-xl border border-slate-200 text-slate-600 font-medium hover:bg-slate-50 transition-colors text-sm disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-400"
             >
               閉じる
             </button>
             <button
               type="submit"
-              disabled={isSubmitting}
-              className="flex-1 py-2.5 px-4 rounded-xl bg-emerald-600 text-white font-semibold hover:bg-emerald-700 transition-colors flex items-center justify-center gap-1.5 shadow-sm text-sm disabled:opacity-50"
+              disabled={isSubmitting || !studentId}
+              aria-busy={isSubmitting}
+              className="flex-1 py-2.5 px-4 rounded-xl bg-emerald-600 text-white font-semibold hover:bg-emerald-700 transition-colors flex items-center justify-center gap-1.5 shadow-sm text-sm disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
             >
               <PlusCircle className="w-4 h-4" />
               {isSubmitting ? '処理中...' : 'チケットを追加する'}

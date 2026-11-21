@@ -112,7 +112,7 @@ const AddRideModalContent: React.FC<AddRideModalProps> = ({
             aria-label="閉じる"
             disabled={isSubmitting}
             onClick={onClose}
-            className="p-1 rounded-full text-slate-400 hover:text-slate-600 hover:bg-slate-100 transition-colors disabled:opacity-50"
+            className="p-1 rounded-full text-slate-400 hover:text-slate-600 hover:bg-slate-100 transition-colors disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-400"
           >
             <X className="w-5 h-5" />
           </button>
@@ -128,8 +128,9 @@ const AddRideModalContent: React.FC<AddRideModalProps> = ({
               value={studentId}
               onChange={(e) => handleStudentChange(e.target.value)}
               className="w-full px-3 py-2 border border-slate-200 rounded-xl focus:outline-hidden focus:ring-2 focus:ring-emerald-500 font-medium text-slate-800"
-              disabled={!isTeacher && Boolean(initialStudentId)}
+              disabled={(!isTeacher && Boolean(initialStudentId)) || students.length === 0}
             >
+              {students.length === 0 && <option value="">登録済みの生徒がいません</option>}
               {students.map((student) => (
                 <option key={student.id} value={student.id}>
                   {student.name}（残チケット: {student.ticketBalance}枚）
@@ -137,7 +138,7 @@ const AddRideModalContent: React.FC<AddRideModalProps> = ({
               ))}
             </select>
             {selectedStudent && selectedStudent.ticketBalance <= 2 && (
-              <p className="text-xs text-amber-600 mt-1 font-medium">
+              <p role="status" className="text-xs text-amber-600 mt-1 font-medium">
                 ⚠️ 現在のチケット残数が残り {selectedStudent.ticketBalance} 枚です。
               </p>
             )}
@@ -255,6 +256,7 @@ const AddRideModalContent: React.FC<AddRideModalProps> = ({
               type="text"
               value={pickupLocation}
               onChange={(e) => setPickupLocation(e.target.value)}
+              maxLength={200}
               placeholder="例: 東京都世田谷区... または エントランス前"
               className="w-full px-3 py-2 border border-slate-200 rounded-xl focus:outline-hidden focus:ring-2 focus:ring-emerald-500 text-slate-800 text-sm"
               required
@@ -271,6 +273,7 @@ const AddRideModalContent: React.FC<AddRideModalProps> = ({
               id="ride-note"
               value={note}
               onChange={(e) => setNote(e.target.value)}
+              maxLength={300}
               placeholder="例: 今日は雨のため傘を持って行きます / 到着5分前に連絡ください"
               rows={2}
               className="w-full px-3 py-2 border border-slate-200 rounded-xl focus:outline-hidden focus:ring-2 focus:ring-emerald-500 text-slate-800 text-sm"
@@ -283,14 +286,15 @@ const AddRideModalContent: React.FC<AddRideModalProps> = ({
               type="button"
               disabled={isSubmitting}
               onClick={onClose}
-              className="flex-1 py-2.5 px-4 rounded-xl border border-slate-200 text-slate-600 font-medium hover:bg-slate-50 transition-colors text-sm disabled:opacity-50"
+              className="flex-1 py-2.5 px-4 rounded-xl border border-slate-200 text-slate-600 font-medium hover:bg-slate-50 transition-colors text-sm disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-400"
             >
               キャンセル
             </button>
             <button
               type="submit"
-              disabled={isSubmitting}
-              className="flex-1 py-2.5 px-4 rounded-xl bg-emerald-600 text-white font-semibold hover:bg-emerald-700 transition-colors flex items-center justify-center gap-1.5 shadow-sm text-sm disabled:opacity-50"
+              disabled={isSubmitting || !studentId}
+              aria-busy={isSubmitting}
+              className="flex-1 py-2.5 px-4 rounded-xl bg-emerald-600 text-white font-semibold hover:bg-emerald-700 transition-colors flex items-center justify-center gap-1.5 shadow-sm text-sm disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
             >
               <CheckCircle2 className="w-4 h-4" />
               {isSubmitting ? '登録中...' : '送迎予定を登録する'}

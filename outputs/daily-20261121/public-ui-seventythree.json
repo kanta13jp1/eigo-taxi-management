@@ -1,0 +1,52 @@
+{
+  "checkedAt": "2026-11-21T12:59:58.669Z",
+  "url": "https://eigo-taxi-test.web.app",
+  "fix71AddRideModalGuards": {
+    "pass": true,
+    "rideCheck": {
+      "locMaxLength": "200",
+      "noteMaxLength": "300",
+      "topCloseFocusRing": true,
+      "cancelFocusRing": true,
+      "submitAriaBusy": "false",
+      "submitFocusRing": true
+    }
+  },
+  "fix72AddStudentModalBounds": {
+    "pass": true,
+    "studentCheck": {
+      "nameMaxLength": "100",
+      "parentMaxLength": "100",
+      "phoneMaxLength": "30",
+      "phoneAutoComplete": "tel",
+      "balanceInputMode": "numeric",
+      "addressMaxLength": "200",
+      "noteMaxLength": "300",
+      "responsiveGridCount": 2,
+      "topCloseFocusRing": true,
+      "bottomCloseFocusRing": true,
+      "submitAriaBusy": "false",
+      "submitFocusRing": true
+    }
+  },
+  "fix73AddTicketModalStringInputAndPresets": {
+    "pass": true,
+    "ticketInitial": {
+      "countStep": "1",
+      "countInputMode": "numeric",
+      "amountInputMode": "numeric",
+      "noteMaxLength": "200",
+      "submitAriaBusy": "false",
+      "submitFocusRing": true
+    },
+    "clearedTicketCountValue": "",
+    "ticketAfterPreset": {
+      "presetAriaPressed": "true",
+      "presetDisabledStyle": true,
+      "presetFocusRing": true,
+      "countValue": "5",
+      "amountValue": "5000"
+    }
+  },
+  "errors": []
+}

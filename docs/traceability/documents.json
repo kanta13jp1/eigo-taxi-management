@@ -72823,6 +72823,140 @@
       ]
     },
     {
+      "id": "DOC-0658",
+      "path": "docs/progress/2026-11-21-cumulative-seventythree.md",
+      "state": "historical",
+      "sha256": "51cf735b0dbd479aa88148838b81c0c5d97225573f605ad36fce80abf22fe43c",
+      "items": [
+        {
+          "id": "DOC-0658-ITEM-00001",
+          "line": 1,
+          "contentSha256": "cf96717cea8ff508a545315805ec4e51d81fce8adb3edb10e08d8627ed7c4fbc",
+          "occurrence": 1,
+          "preview": "# 11月21日 累計73件の実装修正・受入試験73項目（3フォームモーダル入力・状態・フォーカス・レスポンシブ改善）"
+        },
+        {
+          "id": "DOC-0658-ITEM-00002",
+          "line": 3,
+          "contentSha256": "e79e8976eb91cf8c58638c41a0a566d1ab36a7c78822c02c6008bfbd6635a453",
+          "occurrence": 1,
+          "preview": "小林さん、お疲れ様です。"
+        },
+        {
+          "id": "DOC-0658-ITEM-00003",
+          "line": 5,
+          "contentSha256": "a06824b248ad5377ab84dcdd813b2f0818b510c6b0abd7f55de5f994ac80d0f6",
+          "occurrence": 1,
+          "preview": "11月21日の追加対応により、実装修正は**累計73件**、実施した異なる受入試験は**累計73項目**となりました（先行2件は Claude Code Fable 5.2 の対応分、追加71件が後続の対応分です）。今回は Round 3 として Agent Swarms（`/s"
+        },
+        {
+          "id": "DOC-0658-ITEM-00004",
+          "line": 7,
+          "contentSha256": "982e28783c06d09cf9e20370cd1b199180da3a4c957cd2d5898755d3dc8f6998",
+          "occurrence": 1,
+          "preview": "### 【今回の追加修正内容（71〜73件目）】"
+        },
+        {
+          "id": "DOC-0658-ITEM-00005",
+          "line": 8,
+          "contentSha256": "800ec4460ae4ee13d8a19e069dfd3f6606e0aa20680375e425ae3e9c6e498432",
+          "occurrence": 1,
+          "preview": "* **71件目（`AddRideModal.tsx`）**：対象生徒0名時の代替 `<option>`（「登録済みの生徒がいません」）と選択欄・送信ボタンの無効化ガード、チケット残少メッセージへの `role=\"status\"` 追加、送迎場所（`maxLength={200}"
+        },
+        {
+          "id": "DOC-0658-ITEM-00006",
+          "line": 9,
+          "contentSha256": "68099d66ffa53a53dcaea51d52030c061d1a14f8379913fcbe61b1846d2bb9e0",
+          "occurrence": 1,
+          "preview": "* **72件目（`AddStudentModal.tsx`）**：モバイル画面（375px幅）での窮屈さを防ぐ `grid-cols-1 sm:grid-cols-2` レスポンシブ段組化、生徒氏名・保護者氏名（`maxLength={100}`）・緊急連絡先（`maxLeng"
+        },
+        {
+          "id": "DOC-0658-ITEM-00007",
+          "line": 10,
+          "contentSha256": "61b3617b178fd15ce3e72489f9aa0b551ed3122f6505b271367a662d3cea5eaf",
+          "occurrence": 1,
+          "preview": "* **73件目（`AddTicketModal.tsx`）**：追加枚数欄を文字列ステート（`ticketCountInput`）へ移行して全消去時に `'0'` へ戻らないよう改善し、対象生徒0名時の選択・送信ガード、プリセット3ボタンへの `aria-pressed` / "
+        },
+        {
+          "id": "DOC-0658-ITEM-00008",
+          "line": 12,
+          "contentSha256": "6a695925f4650031cb1148b17e311f06369dc0b5f1c82de5b72d22f6340e36fd",
+          "occurrence": 1,
+          "preview": "### 【今回実施した受入試験（71〜73項目目）】"
+        },
+        {
+          "id": "DOC-0658-ITEM-00009",
+          "line": 13,
+          "contentSha256": "f8ca6a5394a9292c8a44fea8ae3f56ad07d1b5fad9593d85dd3b770388a67737",
+          "occurrence": 1,
+          "preview": "* **71項目目（AddRideModal 入力上限・送信状態・フォーカス制御検証［公開デモ］）**：公開検証サイト（`https://eigo-taxi-test.web.app/#/admin`）の管理者デモで「送迎予定を追加」モーダルを開き、`#ride-location"
+        },
+        {
+          "id": "DOC-0658-ITEM-00010",
+          "line": 14,
+          "contentSha256": "05b4d79f2fa6b34fdb6ea2b0835811b51fc43e33f693ffb619f2d306b78d462a",
+          "occurrence": 1,
+          "preview": "* **72項目目（AddStudentModal レスポンシブ段組・入力属性・フォーカス制御検証［公開デモ］）**：公開検証サイトの「生徒・チケット管理」から「新規生徒を登録」モーダルを開き、`sm:grid-cols-2` 2箇所、`#student-name`/`#stud"
+        },
+        {
+          "id": "DOC-0658-ITEM-00011",
+          "line": 15,
+          "contentSha256": "4ff628cfd9179726d9bdd183223e44975af55446cb5738f5d7fc01f87371af86",
+          "occurrence": 1,
+          "preview": "* **73項目目（AddTicketModal 全消去挙動・プリセット `aria-pressed`・入力属性検証［公開デモ＋ローカル検証］）**：公開検証サイトの「チケット追加」モーダルで、`#ticket-count` を全選択削除した際に値が空文字 `\"\"` を維持するこ"
+        },
+        {
+          "id": "DOC-0658-ITEM-00012",
+          "line": 17,
+          "contentSha256": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+          "occurrence": 1,
+          "preview": "---"
+        },
+        {
+          "id": "DOC-0658-ITEM-00013",
+          "line": 19,
+          "contentSha256": "76c3519755d39acf199783847365abea0c2ba4aec32426a7addbe54a9ff2b9a7",
+          "occurrence": 1,
+          "preview": "### 【公開環境・確認範囲】"
+        },
+        {
+          "id": "DOC-0658-ITEM-00014",
+          "line": 20,
+          "contentSha256": "b8f8e26627fdd283f6f45ab1ae8e53d01b7ab6cd92e292bebaf1c240ff354448",
+          "occurrence": 1,
+          "preview": "* **検証サイト**: https://eigo-taxi-test.web.app/"
+        },
+        {
+          "id": "DOC-0658-ITEM-00015",
+          "line": 21,
+          "contentSha256": "48dfcd6dffd66d2591f7cc55c7914382173002e3a439a4523219d3119e6618f0",
+          "occurrence": 1,
+          "preview": "* **反映版 (`sourceDigest`)**: `08150e4229e2f21894a5a4f095085b2c00e8fef26b166111d2cb213ad3813a68`（ビルド時刻: `2026-11-21T12:58:30.446Z`）"
+        },
+        {
+          "id": "DOC-0658-ITEM-00016",
+          "line": 22,
+          "contentSha256": "431ea91ff01d81ab5ab73d68ac5669ed1bd229a73e7b379faf23e61f164ba7da",
+          "occurrence": 1,
+          "preview": "* **配信照合**: [public-2026-11-21T12-58-54-895Z.json](../acceptance/deployment-verification/public-2026-11-21T12-58-54-895Z.json)（全7ファイル SHA-25"
+        },
+        {
+          "id": "DOC-0658-ITEM-00017",
+          "line": 23,
+          "contentSha256": "548f053466414ab1854eea7db6fa53577450ec3b181ce35d0492b9b24b50d83d",
+          "occurrence": 1,
+          "preview": "* **公開UI証跡**: [public-ui-seventythree.json](../../outputs/daily-20261121/public-ui-seventythree.json)"
+        },
+        {
+          "id": "DOC-0658-ITEM-00018",
+          "line": 24,
+          "contentSha256": "f05b4c87239863444f5738c59c27a6864e67fabeb0482abfb963cdc48a292ac6",
+          "occurrence": 1,
+          "preview": "* **顧客確認・本番状況**: 小林様の顧客確認6手順（`CUST-01`〜`CUST-06`）は 0/6件（未実施）、顧客用の検証データはそのまま維持しており、**本番運用は開始していません**。"
+        }
+      ]
+    },
+    {
       "id": "DOC-0653",
       "path": "docs/progress/2026-11-21-cumulative-sixty.md",
       "state": "historical",

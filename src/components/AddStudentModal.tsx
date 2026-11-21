@@ -99,7 +99,7 @@ const AddStudentModalContent: React.FC<AddStudentModalProps> = ({
             aria-label="閉じる"
             disabled={isSubmitting}
             onClick={onClose}
-            className="p-1 rounded-full text-slate-400 hover:text-slate-600 hover:bg-slate-100 transition-colors disabled:opacity-50"
+            className="p-1 rounded-full text-slate-400 hover:text-slate-600 hover:bg-slate-100 transition-colors disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-400"
           >
             <X className="w-5 h-5" />
           </button>
@@ -107,7 +107,7 @@ const AddStudentModalContent: React.FC<AddStudentModalProps> = ({
 
         <form onSubmit={handleSubmit} className="p-6 space-y-4">
           {error && <p role="alert" className="rounded-lg bg-rose-50 p-3 text-sm text-rose-800">{error}</p>}
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div>
               <label htmlFor="student-name" className="block text-xs font-semibold text-slate-600 mb-1 flex items-center gap-1">
                 <User className="w-3.5 h-3.5 text-emerald-600" />
@@ -116,6 +116,7 @@ const AddStudentModalContent: React.FC<AddStudentModalProps> = ({
               <input
                 id="student-name"
                 type="text"
+                maxLength={100}
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 placeholder="例: 佐藤 陽菜 (ひな)"
@@ -128,6 +129,7 @@ const AddStudentModalContent: React.FC<AddStudentModalProps> = ({
               <input
                 id="student-parent"
                 type="text"
+                maxLength={100}
                 value={parentName}
                 onChange={(e) => setParentName(e.target.value)}
                 placeholder="例: 佐藤 美咲"
@@ -136,7 +138,7 @@ const AddStudentModalContent: React.FC<AddStudentModalProps> = ({
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div>
               <label htmlFor="student-phone" className="block text-xs font-semibold text-slate-600 mb-1 flex items-center gap-1">
                 <Phone className="w-3.5 h-3.5 text-slate-400" />
@@ -145,6 +147,8 @@ const AddStudentModalContent: React.FC<AddStudentModalProps> = ({
               <input
                 id="student-phone"
                 type="tel"
+                maxLength={30}
+                autoComplete="tel"
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
                 placeholder="例: 090-1234-5678"
@@ -156,6 +160,7 @@ const AddStudentModalContent: React.FC<AddStudentModalProps> = ({
               <input
                 id="student-balance"
                 type="number"
+                inputMode="numeric"
                 min="0"
                 step="1"
                 required
@@ -174,6 +179,7 @@ const AddStudentModalContent: React.FC<AddStudentModalProps> = ({
             <input
               id="student-address"
               type="text"
+              maxLength={200}
               value={address}
               onChange={(e) => setAddress(e.target.value)}
               placeholder="例: 東京都世田谷区桜新町1-2-3 ○○マンション101"
@@ -187,6 +193,7 @@ const AddStudentModalContent: React.FC<AddStudentModalProps> = ({
             <input
               id="student-note"
               type="text"
+              maxLength={300}
               value={pickupNote}
               onChange={(e) => setPickupNote(e.target.value)}
               placeholder="例: マンション正面入口前に停車 / 到着時インターホン"
@@ -199,14 +206,15 @@ const AddStudentModalContent: React.FC<AddStudentModalProps> = ({
               type="button"
               disabled={isSubmitting}
               onClick={onClose}
-              className="flex-1 py-2.5 px-4 rounded-xl border border-slate-200 text-slate-600 font-medium hover:bg-slate-50 transition-colors text-sm disabled:opacity-50"
+              className="flex-1 py-2.5 px-4 rounded-xl border border-slate-200 text-slate-600 font-medium hover:bg-slate-50 transition-colors text-sm disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-400"
             >
               閉じる
             </button>
             <button
               type="submit"
               disabled={isSubmitting}
-              className="flex-1 py-2.5 px-4 rounded-xl bg-emerald-600 text-white font-semibold hover:bg-emerald-700 transition-colors flex items-center justify-center gap-1.5 shadow-sm text-sm disabled:opacity-50"
+              aria-busy={isSubmitting}
+              className="flex-1 py-2.5 px-4 rounded-xl bg-emerald-600 text-white font-semibold hover:bg-emerald-700 transition-colors flex items-center justify-center gap-1.5 shadow-sm text-sm disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
             >
               <UserPlus className="w-4 h-4" />
               {isSubmitting ? '登録中...' : '登録を完了する'}

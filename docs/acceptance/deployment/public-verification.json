@@ -1,28 +1,28 @@
 {
-  "checkedAt": "2026-11-21T12:14:22.788Z",
+  "checkedAt": "2026-11-21T12:58:54.789Z",
   "url": "https://eigo-taxi-test.web.app",
   "release": {
     "environment": "mighty-test",
     "projectId": "eigo-taxi-app",
     "siteId": "eigo-taxi-test",
-    "builtAt": "2026-11-21T12:13:47.668Z",
-    "baseCommit": "ca5e345d6538302c6b410eef575b148954b285c5",
-    "sourceDigest": "897390de66f2680933b077958b56bdb1886f1e799071db4fe616b17f09bd9af8"
+    "builtAt": "2026-11-21T12:58:30.446Z",
+    "baseCommit": "8d48239d125bfdf0db2b8a4fb412ed32972f597d",
+    "sourceDigest": "08150e4229e2f21894a5a4f095085b2c00e8fef26b166111d2cb213ad3813a68"
   },
   "results": [
     {
-      "path": "/assets/index-B03YSZJt.css",
+      "path": "/assets/index-CxmR2wy2.css",
       "status": 200,
-      "sha256": "8265f2cc3b5ebdde51e31ad1939e9ae02a5069b956789766c32976fba2d76734",
-      "expectedSha256": "8265f2cc3b5ebdde51e31ad1939e9ae02a5069b956789766c32976fba2d76734",
+      "sha256": "2a7bbc1155d6ec7efae02e03490cd5ca0e709fa732e3b7c20ef5d34482001ae1",
+      "expectedSha256": "2a7bbc1155d6ec7efae02e03490cd5ca0e709fa732e3b7c20ef5d34482001ae1",
       "match": true,
       "cacheControl": "public, max-age=31536000, immutable"
     },
     {
-      "path": "/assets/index-C7RBwLar.js",
+      "path": "/assets/index-D9GGc63d.js",
       "status": 200,
-      "sha256": "9b47728c530e5089ae4b0a80bc4aa1ed7076d96cb002ab582284fd9d4ff111ca",
-      "expectedSha256": "9b47728c530e5089ae4b0a80bc4aa1ed7076d96cb002ab582284fd9d4ff111ca",
+      "sha256": "545c3d3874f5f8b8024cb2799a809a0c7d7e99c95bcc7896d3ed2e2b335ba5c2",
+      "expectedSha256": "545c3d3874f5f8b8024cb2799a809a0c7d7e99c95bcc7896d3ed2e2b335ba5c2",
       "match": true,
       "cacheControl": "public, max-age=31536000, immutable"
     },
@@ -45,24 +45,24 @@
     {
       "path": "/index.html",
       "status": 200,
-      "sha256": "fe715f7d8416d22e1aab8301109676a5b78738d90409d5403333635bf35a9ada",
-      "expectedSha256": "fe715f7d8416d22e1aab8301109676a5b78738d90409d5403333635bf35a9ada",
+      "sha256": "8109d5539721a141ec0f93d3d7054eb7effa46d6acf2397409b10f071f6f7451",
+      "expectedSha256": "8109d5539721a141ec0f93d3d7054eb7effa46d6acf2397409b10f071f6f7451",
       "match": true,
       "cacheControl": "no-cache, max-age=0, must-revalidate"
     },
     {
       "path": "/release.json",
       "status": 200,
-      "sha256": "483bf7219c99e073811a9cb2e2ec38b8e75a9f72eb6e812686639d1c3d2be7ec",
-      "expectedSha256": "483bf7219c99e073811a9cb2e2ec38b8e75a9f72eb6e812686639d1c3d2be7ec",
+      "sha256": "84307ddc5e1127d948515f8c8a5db0fa09c6c428d4e733ba3757029eb0b4641f",
+      "expectedSha256": "84307ddc5e1127d948515f8c8a5db0fa09c6c428d4e733ba3757029eb0b4641f",
       "match": true,
       "cacheControl": "no-cache, max-age=0, must-revalidate"
     },
     {
       "path": "/",
       "status": 200,
-      "sha256": "fe715f7d8416d22e1aab8301109676a5b78738d90409d5403333635bf35a9ada",
-      "expectedSha256": "fe715f7d8416d22e1aab8301109676a5b78738d90409d5403333635bf35a9ada",
+      "sha256": "8109d5539721a141ec0f93d3d7054eb7effa46d6acf2397409b10f071f6f7451",
+      "expectedSha256": "8109d5539721a141ec0f93d3d7054eb7effa46d6acf2397409b10f071f6f7451",
       "match": true,
       "cacheControl": "no-cache, max-age=0, must-revalidate"
     }
