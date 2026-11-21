@@ -184,7 +184,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
             </div>
           </div>
           <div className="p-3 bg-emerald-50 text-emerald-600 rounded-xl">
-            <Car className="w-5 h-5" />
+            <Car aria-hidden="true" className="w-5 h-5" />
           </div>
         </button>
 
@@ -210,7 +210,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
               lowTicketStudents.length > 0 ? 'bg-amber-50 text-amber-600' : 'bg-slate-50 text-slate-400'
             }`}
           >
-            <AlertTriangle className="w-5 h-5" />
+            <AlertTriangle aria-hidden="true" className="w-5 h-5" />
           </div>
         </button>
 
@@ -228,7 +228,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
             </div>
           </div>
           <div className="p-3 bg-blue-50 text-blue-600 rounded-xl">
-            <UserPlus className="w-5 h-5" />
+            <UserPlus aria-hidden="true" className="w-5 h-5" />
           </div>
         </button>
       </div>
@@ -274,7 +274,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
             onClick={() => onOpenAddRide()}
             className="flex-1 sm:flex-none flex items-center justify-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 text-white px-3.5 py-2 rounded-xl text-xs font-bold shadow-xs transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
           >
-            <Plus className="w-4 h-4" />
+            <Plus aria-hidden="true" className="w-4 h-4" />
             送迎予定を追加
           </button>
           <button
@@ -282,7 +282,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
             onClick={() => onOpenAddTicket()}
             className="flex-1 sm:flex-none flex items-center justify-center gap-1.5 bg-white border border-slate-300 hover:bg-slate-50 text-slate-700 px-3 py-2 rounded-xl text-xs font-bold shadow-xs transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
           >
-            <Ticket className="w-4 h-4 text-emerald-600" />
+            <Ticket aria-hidden="true" className="w-4 h-4 text-emerald-600" />
             チケット追加
           </button>
         </div>
@@ -293,7 +293,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
         <div className="space-y-4">
           <div className="flex items-center justify-between">
             <h2 className="text-base font-bold text-slate-800 flex items-center gap-2">
-              <Calendar className="w-4 h-4 text-emerald-600" />
+              <Calendar aria-hidden="true" className="w-4 h-4 text-emerald-600" />
               本日（{todayStr}）の送迎予定
             </h2>
             <span className="text-xs text-slate-500">{isDemo ? 'デモの予定はこのブラウザ内にだけ保存されます' : 'Googleカレンダー・シートと自動同期'}</span>
@@ -301,7 +301,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
 
           {todayRides.length === 0 ? (
             <div className="bg-white rounded-2xl border border-dashed border-slate-300 p-8 text-center">
-              <Car className="w-10 h-10 text-slate-300 mx-auto mb-2" />
+              <Car aria-hidden="true" className="w-10 h-10 text-slate-300 mx-auto mb-2" />
               <p className="text-sm font-semibold text-slate-600">本日の送迎予定はありません</p>
               <p className="text-xs text-slate-400 mt-1">
                 右上の「送迎予定を追加」ボタンから急な送迎もすぐに追加できます。
@@ -311,7 +311,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
                 onClick={() => onOpenAddRide()}
                 className="mt-4 inline-flex items-center gap-1.5 bg-emerald-50 text-emerald-700 hover:bg-emerald-100 px-4 py-2 rounded-xl text-xs font-bold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
               >
-                <Plus className="w-4 h-4" />
+                <Plus aria-hidden="true" className="w-4 h-4" />
                 送迎予定を登録する
               </button>
             </div>
@@ -333,7 +333,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
                     <div className="flex items-start justify-between gap-2 mb-2">
                       <div className="flex items-center gap-2">
                         <span className="text-lg font-black text-slate-800 flex items-center gap-1">
-                          <Clock className="w-4 h-4 text-emerald-600" />
+                          <Clock aria-hidden="true" className="w-4 h-4 text-emerald-600" />
                           {ride.rideTime}
                         </span>
                         <span className={`text-[11px] font-bold px-2 py-0.5 rounded-full border ${typeInfo.color}`}>
@@ -343,12 +343,12 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
                       <div>
                         {isCompleted && (
                           <span className="inline-flex items-center gap-1 text-xs font-bold text-emerald-700 bg-emerald-100/80 px-2.5 py-1 rounded-full">
-                            <CheckCircle2 className="w-3.5 h-3.5" /> 送迎完了 (-{typeInfo.consume}回消化済)
+                            <CheckCircle2 aria-hidden="true" className="w-3.5 h-3.5" /> 送迎完了 (-{typeInfo.consume}回消化済)
                           </span>
                         )}
                         {ride.status === 'cancelled' && (
                           <span className="inline-flex items-center gap-1 text-xs font-bold text-slate-500 bg-slate-200 px-2.5 py-1 rounded-full">
-                            <XCircle className="w-3.5 h-3.5" /> キャンセル
+                            <XCircle aria-hidden="true" className="w-3.5 h-3.5" /> キャンセル
                           </span>
                         )}
                       </div>
@@ -373,7 +373,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
 
                     <div className="bg-slate-50 rounded-xl p-2.5 space-y-1.5 text-xs text-slate-600 mb-3 border border-slate-100">
                       <div className="flex items-start gap-1.5">
-                        <MapPin className="w-3.5 h-3.5 text-slate-400 shrink-0 mt-0.5" />
+                        <MapPin aria-hidden="true" className="w-3.5 h-3.5 text-slate-400 shrink-0 mt-0.5" />
                         <span className="break-all">{ride.pickupLocation}</span>
                       </div>
                       {ride.note && (
@@ -394,9 +394,9 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
                         aria-label={`${ride.studentName} の送迎先をGoogleマップで開く`}
                         className="text-xs text-blue-600 hover:text-blue-700 inline-flex items-center gap-1 font-medium rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
                       >
-                        <MapPin className="w-3.5 h-3.5" />
+                        <MapPin aria-hidden="true" className="w-3.5 h-3.5" />
                         地図アプリ
-                        <ExternalLink className="w-3 h-3" />
+                        <ExternalLink aria-hidden="true" className="w-3 h-3" />
                       </a>
 
                       {isScheduled && (
@@ -408,7 +408,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
                           aria-label={completionLabel(ride)}
                           className="bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs py-2 px-3.5 rounded-xl shadow-xs inline-flex items-center gap-1.5 transition-colors disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
                         >
-                          <CheckCircle2 className="w-4 h-4" />
+                          <CheckCircle2 aria-hidden="true" className="w-4 h-4" />
                           {pendingRideIds.has(ride.id) ? '完了処理中' : `送迎完了（${typeInfo.consume}回消費）`}
                         </button>
                       )}
@@ -429,7 +429,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
 
             {/* ステータスフィルター */}
             <div className="flex items-center gap-2">
-              <Filter className="w-3.5 h-3.5 text-slate-400" />
+              <Filter aria-hidden="true" className="w-3.5 h-3.5 text-slate-400" />
               <select
                 aria-label="ステータスで絞り込み"
                 value={filterStatus}
@@ -514,6 +514,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
                                   type="button"
                                   onClick={() => completeRide(ride)}
                                   disabled={pendingRideIds.has(ride.id)}
+                                  aria-busy={pendingRideIds.has(ride.id)}
                                   aria-label={completionLabel(ride)}
                                   className="text-xs bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-1 px-2.5 rounded-lg disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
                                 >
@@ -523,6 +524,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
                                   type="button"
                                   onClick={() => setCancelRideId(ride.id)}
                                   disabled={pendingRideIds.has(ride.id) || cancelPending}
+                                  aria-busy={cancelPending}
                                   aria-label={`${ride.studentName} ${ride.rideDate} ${ride.rideTime} ${typeInfo.text} の予約を取消`}
                                   className="text-xs text-rose-600 hover:bg-rose-50 py-1 px-2 rounded-lg font-bold transition-colors disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-500"
                                 >
@@ -545,8 +547,8 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
       {cancelTarget && (
         <dialog ref={cancelDialog} aria-labelledby="admin-cancel-heading"
           aria-describedby="admin-cancel-details admin-cancel-effect"
-          onCancel={() => setCancelRideId(null)}
-          onClick={(e) => { if (e.target === e.currentTarget) dismissCancellation(); }}
+          onCancel={(e) => { if (cancelPending) { e.preventDefault(); return; } dismissCancellation(); }}
+          onClick={(e) => { if (e.target === e.currentTarget && !cancelPending) dismissCancellation(); }}
           className="m-auto w-11/12 max-w-md rounded-2xl p-0 shadow-xl backdrop:bg-slate-900/50">
           <div className="p-5">
             <h2 id="admin-cancel-heading" className="text-lg font-bold">予約取消の確認</h2>
@@ -558,7 +560,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
             <p id="admin-cancel-effect" className="mt-3 text-sm">{isDemo ? 'このブラウザ内のデモ予約を取り消します。教室の予定は変わりません。' : '台帳の予約を取消にし、対応するカレンダーの予定を削除します。'}</p>
             <div className="mt-5 flex justify-end gap-2">
               <button type="button" disabled={cancelPending} className="rounded-lg border px-3 py-2 disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-500" onClick={dismissCancellation}>戻る</button>
-              <button type="button" disabled={cancelPending} className="rounded-lg bg-rose-700 px-3 py-2 font-bold text-white disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-500" onClick={() => void confirmCancellation()}>取消を確定</button>
+              <button type="button" disabled={cancelPending} aria-busy={cancelPending} className="rounded-lg bg-rose-700 px-3 py-2 font-bold text-white disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-500" onClick={() => void confirmCancellation()}>取消を確定</button>
             </div>
           </div>
         </dialog>
@@ -574,7 +576,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
               onClick={onOpenAddStudent}
               className="inline-flex items-center gap-1.5 bg-slate-900 hover:bg-slate-800 text-white px-3 py-1.5 rounded-xl text-xs font-bold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
             >
-              <UserPlus className="w-3.5 h-3.5" />
+              <UserPlus aria-hidden="true" className="w-3.5 h-3.5" />
               新規生徒を登録
             </button>}
           </div>
@@ -622,9 +624,9 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
 
                     <div className="space-y-1 text-xs text-slate-600 bg-slate-50 p-2.5 rounded-xl border border-slate-100 mt-2 mb-3">
                       <div className="flex items-center gap-1 text-slate-500">
-                        <Phone className="w-3 h-3 text-slate-400" />
+                        <Phone aria-hidden="true" className="w-3 h-3 text-slate-400" />
                         {student.phone ? (
-                          <a href={`tel:${student.phone}`} className="hover:underline">
+                          <a href={`tel:${student.phone}`} className="hover:underline rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500">
                             {student.phone}
                           </a>
                         ) : (
@@ -632,7 +634,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
                         )}
                       </div>
                       <div className="flex items-start gap-1">
-                        <MapPin className="w-3.5 h-3.5 text-slate-400 shrink-0 mt-0.5" />
+                        <MapPin aria-hidden="true" className="w-3.5 h-3.5 text-slate-400 shrink-0 mt-0.5" />
                         <span className="truncate" title={student.address}>{student.address}</span>
                       </div>
                     </div>
@@ -644,7 +646,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
                       onClick={() => onOpenAddTicket(student.id)}
                       className="flex-1 py-1.5 px-3 rounded-lg bg-emerald-50 hover:bg-emerald-100 text-emerald-800 font-bold text-xs inline-flex items-center justify-center gap-1 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
                     >
-                      <Ticket className="w-3.5 h-3.5" />
+                      <Ticket aria-hidden="true" className="w-3.5 h-3.5" />
                       チケット追加
                     </button>
                     <button
@@ -653,7 +655,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
                       className="py-1.5 px-3 rounded-lg border border-slate-200 hover:bg-slate-50 text-slate-700 font-semibold text-xs inline-flex items-center gap-1 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-500"
                     >
                       予約登録
-                      <ChevronRight className="w-3 h-3" />
+                      <ChevronRight aria-hidden="true" className="w-3 h-3" />
                     </button>
                   </div>
                 </div>

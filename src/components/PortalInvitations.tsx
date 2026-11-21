@@ -50,10 +50,10 @@ export function PortalInvitations() {
       .catch(() => { if (active) setError('QRコードを作成できませんでした'); });
     return () => { active = false; };
   }, [url]);
-  return <section className="mx-auto max-w-2xl space-y-5 rounded-2xl bg-white p-5 shadow-sm">
+  return <section aria-labelledby="portal-invitations-heading" className="mx-auto max-w-2xl space-y-5 rounded-2xl bg-white p-5 shadow-sm">
     <div className="flex flex-wrap items-center justify-between gap-2">
-      <h2 className="text-xl font-bold">ご家庭の個別URL・QR</h2>
-      <button type="button" disabled={loading} onClick={reload} className="rounded-lg border px-3 py-2 text-sm disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-500">{loading ? '確認中…' : '一覧を再取得'}</button>
+      <h2 id="portal-invitations-heading" className="text-xl font-bold">ご家庭の個別URL・QR</h2>
+      <button type="button" disabled={loading} aria-busy={loading} onClick={reload} className="rounded-lg border px-3 py-2 text-sm disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-500">{loading ? '確認中…' : '一覧を再取得'}</button>
     </div>
     <p className="text-sm">登録済みのご家庭を選び、URLまたはQR画像を本人へ配布します。教室に登録されたGoogleアカウントでログインしてもらってください。</p>
     <p className="text-sm text-slate-600">QRには個別URLだけを含めます。氏名・生徒ID・認証情報は入りません。</p>
@@ -65,9 +65,9 @@ export function PortalInvitations() {
       <select id="invitation-family" value={selected} disabled={loading} onChange={e=>{setSelected(e.target.value);setError('');setCopiedUrl('');}} className="w-full rounded-lg border p-3 disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600">
         {items.map(i=><option key={i.publicEntryId} value={i.publicEntryId}>{i.name}</option>)}
       </select>
-      <p className="break-all select-all rounded-lg bg-slate-50 p-3 text-sm" data-testid="invitation-url">{url}</p>
-      <button type="button" disabled={loading || !url} className="rounded-lg border px-4 py-2 disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-500" onClick={async()=>{setError('');try{await navigator.clipboard.writeText(url);setCopiedUrl(url);}catch{setCopiedUrl('');setError('コピーできませんでした。表示されたURLを選択してコピーしてください。');}}}>{!!url && copiedUrl === url ? 'コピーしました' : 'URLをコピー'}</button>
-      {!!url && copiedUrl === url && <p role="status" className="text-xs font-semibold text-emerald-700">配布用URLをクリップボードにコピーしました</p>}
+      <p id="invitation-url-text" className="break-all select-all rounded-lg bg-slate-50 p-3 text-sm" data-testid="invitation-url">{url}</p>
+      <button type="button" disabled={loading || !url} aria-describedby="invitation-url-text" className="rounded-lg border px-4 py-2 disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-500" onClick={async()=>{setError('');try{await navigator.clipboard.writeText(url);setCopiedUrl(url);}catch{setCopiedUrl('');setError('コピーできませんでした。表示されたURLを選択してコピーしてください。');}}}>{!!url && copiedUrl === url ? 'コピーしました' : 'URLをコピー'}</button>
+      {!!url && copiedUrl === url && <p role="status" aria-live="polite" className="text-xs font-semibold text-emerald-700">配布用URLをクリップボードにコピーしました</p>}
       {!qr && !!url && !error && <p role="status" className="text-sm text-slate-500">QRコードを作成しています…</p>}
       {qr && <div className="space-y-3">
         <img src={qr} alt="ご家庭専用のログインURLのQRコード" className="mx-auto w-64 max-w-full" />

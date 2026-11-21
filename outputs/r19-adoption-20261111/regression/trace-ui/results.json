@@ -3,7 +3,7 @@
     "scripts/test_trace_ui.mjs": "aa49104f1cc9ca3fdd0031c5dbfe20d5e7ccaf6150c47bd28b29d2b1d4223448",
     "scripts/fixtures/trace-ui/harness.tsx": "90bef1928e68fb736a4cf43150bb11153ba980414b5016b318f9ca494a24e136",
     "src/components/ParentPortal.tsx": "badc556b31a0503969cf8d4a62e6bf69e4e26af8d0c435356e1ecfb2701601fd",
-    "src/components/TeacherDashboard.tsx": "e7ba4cb96118064ae7cd866fcc3dacf3e6fb310d809ce4a9bc2a11eaafde2d5e",
+    "src/components/TeacherDashboard.tsx": "fd2d5ad4692c2a3edf3f3c8341d1f0ab3765dd97bb11b811b13e9c9b920d2a90",
     "src/components/AddRideModal.tsx": "5e4eba810cfa3548766c779ce2f5a99090a18a6762574acc557c5a0c4bd1931c",
     "src/services/api.ts": "9de6da24a594b1bb37d12d1dc4b2910a8cfdadf9124ed4abf22ac8104cd35e28",
     "src/services/google-auth.ts": "01667af44fce383f3763c8bb73497dafc690381592ddcf383d46aaafe90fe0d8",

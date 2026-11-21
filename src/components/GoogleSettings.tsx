@@ -18,16 +18,16 @@ export function GoogleSettings() {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [confirmAction, busy]);
   return <div className="mx-auto max-w-3xl space-y-6">
-    <section className="space-y-3 rounded-2xl border bg-white p-6">
-      <h2 className="text-lg font-bold">Google連携の状態</h2>
+    <section aria-labelledby="google-status-heading" className="space-y-3 rounded-2xl border bg-white p-6">
+      <h2 id="google-status-heading" className="text-lg font-bold">Google連携の状態</h2>
       <p className="text-sm">接続と初期管理者の設定は開発担当者が行います。この画面でURLやキーを入力する必要はありません。利用者の追加・停止・削除、生徒の紐付けは「アカウント管理」で管理者が行います。</p>
       {configured
         ? <p role="status" className="text-sm text-emerald-800">{environment === 'test' ? '検証環境のGoogleログインが設定されています。' : '教室のGoogleログインが設定されています。'}</p>
         : <p role="alert" className="text-sm text-rose-800">{SETUP_REQUIRED_MESSAGE}</p>}
       <p className="text-sm">{demo ? '現在は架空データで操作を体験しています。' : 'ログインしたご本人の権限で利用しています。'}通信に失敗した場合は画面にエラーを表示します。</p>
     </section>
-    {demo&&<section className="space-y-3 rounded-2xl border bg-white p-6">
-      <h2 className="font-bold">このブラウザのデモデータ</h2>
+    {demo&&<section aria-labelledby="demo-data-heading" className="space-y-3 rounded-2xl border bg-white p-6">
+      <h2 id="demo-data-heading" className="font-bold">このブラウザのデモデータ</h2>
       <p className="text-sm">以下は架空のデモ台帳だけを変更します。Google側のデータ初期化・移行とは別の操作です。</p>
       <div className="flex flex-wrap gap-2">
         <button
@@ -73,6 +73,7 @@ export function GoogleSettings() {
             <button
               type="button"
               disabled={busy}
+              aria-busy={busy}
               className={`rounded-lg px-4 py-2 text-sm font-bold text-white disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 ${confirmAction === 'purge' ? 'bg-rose-700 focus-visible:ring-rose-600' : 'bg-emerald-700 focus-visible:ring-emerald-600'}`}
               onClick={() => {
                 setBusy(true);

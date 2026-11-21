@@ -1,0 +1,41 @@
+{
+  "checkedAt": "2026-11-21T23:13:01.680Z",
+  "url": "https://eigo-taxi-test.web.app",
+  "fix86TeacherDashboardIconsBusyAndTelFocus": {
+    "pass": true,
+    "todaySvgCheck": {
+      "svgCount": 16,
+      "allAriaHidden": true
+    },
+    "scheduleCheck": {
+      "svgCount": 6,
+      "allAriaHidden": true,
+      "completeBtnCount": 2,
+      "completeAllAriaBusyFalse": true,
+      "cancelBtnCount": 2,
+      "cancelAllAriaBusyFalse": true
+    },
+    "cancelConfirmBusy": "false",
+    "studentsCheck": {
+      "svgCount": 18,
+      "allAriaHidden": true,
+      "telLinkCount": 3,
+      "allTelHaveFocusRing": true
+    }
+  },
+  "fix87PortalInvitationsLandmarksAndDescribedBy": {
+    "pass": true,
+    "hasSectionLabelledBy": true,
+    "hasHeadingId": true,
+    "reloadAriaBusy": "false",
+    "urlId": "invitation-url-text",
+    "copyAriaDescribedBy": "invitation-url-text"
+  },
+  "fix88GoogleSettingsLandmarksAndExecuteBusy": {
+    "pass": true,
+    "hasStatusSectionLabelledBy": true,
+    "hasDemoSectionLabelledBy": true,
+    "executeAriaBusy": "false"
+  },
+  "errors": []
+}
