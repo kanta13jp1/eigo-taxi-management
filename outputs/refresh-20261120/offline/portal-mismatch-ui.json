@@ -1,8 +1,8 @@
 {
-  "executedAt": "2026-11-19T16:46:16.654Z",
+  "executedAt": "2026-11-21T11:38:45.784Z",
   "mode": "Node VM; synthetic React hooks and stubbed services; no browser, network or real Google login",
   "sourceHashes": {
-    "src/components/LoginScreen.tsx": "9a4b0704d319c727e93b4030eac1c770c20287f8b4bf8fc620ed087a8dd72661",
+    "src/components/LoginScreen.tsx": "5d755c4aa46fe4cfdbd0fe0f9903bf06c15d521e435df7d19e9891abac391769",
     "src/portal.ts": "874dce7f269e59073b75d6ae47c7fb3b682686fa2ab214d8cb0eacb48c59cac7",
     "scripts/test_portal_mismatch_ui.cjs": "8cb6e7f873ec42895e4629962f176a22ad5de9ae20192ea1b1997112caa0e9f2"
   },

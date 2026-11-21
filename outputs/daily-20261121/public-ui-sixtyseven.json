@@ -1,0 +1,62 @@
+{
+  "checkedAt": "2026-11-21T11:40:49.247Z",
+  "url": "https://eigo-taxi-test.web.app",
+  "fix65TermsModalA11y": {
+    "pass": true,
+    "termsInitial": {
+      "tablistHasOverflowXAuto": true,
+      "tabIds": [
+        "terms-tab-terms",
+        "terms-tab-privacy",
+        "terms-tab-disclaimer"
+      ],
+      "ariaControls": [
+        "terms-panel-terms",
+        "terms-panel-privacy",
+        "terms-panel-disclaimer"
+      ],
+      "tabIndices": [
+        "0",
+        "-1",
+        "-1"
+      ],
+      "tabsHaveFocusRingAndShrink": true,
+      "panelId": "terms-panel-terms",
+      "panelLabelledBy": "terms-tab-terms"
+    },
+    "termsAfterArrowRight": {
+      "privacySelected": "true",
+      "tabIndicesAfter": [
+        "-1",
+        "0",
+        "-1"
+      ],
+      "panelIdAfter": "terms-panel-privacy",
+      "panelLabelledByAfter": "terms-tab-privacy"
+    },
+    "closedWithEscape": true
+  },
+  "fix66PortalInvitationsReloadAndStatus": {
+    "pass": true,
+    "invitationsBeforeReload": {
+      "hasReloadBtn": true,
+      "reloadBtnType": "button",
+      "copyBtnDisabledStyle": true,
+      "initialUrl": "https://eigo-taxi-test.web.app/#/parent/00000000-0000-4000-8000-000000000001"
+    },
+    "invitationsAfterReload": {
+      "urlAfterReload": "https://eigo-taxi-test.web.app/#/parent/00000000-0000-4000-8000-000000000001",
+      "hasQrAfterReload": true
+    }
+  },
+  "fix67LoginScreenStatusAndFocus": {
+    "pass": true,
+    "loginCheck": {
+      "googleAriaBusy": "false",
+      "googleFocusClass": true,
+      "demoDisabledStyle": true,
+      "demoFocusClass": true
+    }
+  },
+  "errors": []
+}

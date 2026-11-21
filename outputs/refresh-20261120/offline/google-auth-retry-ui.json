@@ -1,8 +1,8 @@
 {
-  "executedAt": "2026-11-19T16:46:16.200Z",
+  "executedAt": "2026-11-21T11:38:45.028Z",
   "mode": "Node VM; synthetic React hooks and stubbed setup; no browser or real Google login",
   "sourceHashes": {
-    "src/components/LoginScreen.tsx": "9a4b0704d319c727e93b4030eac1c770c20287f8b4bf8fc620ed087a8dd72661",
+    "src/components/LoginScreen.tsx": "5d755c4aa46fe4cfdbd0fe0f9903bf06c15d521e435df7d19e9891abac391769",
     "scripts/test_google_auth_retry_ui.cjs": "6b9819277a497984c64ded87c9fbe5e72e7fd6b1b7bdc0c97d890ee0a94d4e99"
   },
   "results": [

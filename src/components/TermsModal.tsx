@@ -1,5 +1,7 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, type KeyboardEvent as ReactKeyboardEvent } from 'react';
 import { X, Shield, FileText, AlertCircle } from 'lucide-react';
+
+const TABS: Array<'terms' | 'privacy' | 'disclaimer'> = ['terms', 'privacy', 'disclaimer'];
 
 interface TermsModalProps {
   isOpen: boolean;
@@ -22,6 +24,27 @@ function TermsModalContent({ onClose, initialTab }: { onClose: () => void; initi
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [onClose]);
+
+  const handleTabKeyDown = (e: ReactKeyboardEvent<HTMLDivElement>) => {
+    const currentIndex = TABS.indexOf(activeTab);
+    let nextTab: 'terms' | 'privacy' | 'disclaimer' | null = null;
+
+    if (e.key === 'ArrowRight') {
+      nextTab = TABS[(currentIndex + 1) % TABS.length];
+    } else if (e.key === 'ArrowLeft') {
+      nextTab = TABS[(currentIndex - 1 + TABS.length) % TABS.length];
+    } else if (e.key === 'Home') {
+      nextTab = TABS[0];
+    } else if (e.key === 'End') {
+      nextTab = TABS[TABS.length - 1];
+    }
+
+    if (nextTab) {
+      e.preventDefault();
+      setActiveTab(nextTab);
+      document.getElementById(`terms-tab-${nextTab}`)?.focus();
+    }
+  };
 
   return (
     <div
@@ -51,13 +74,21 @@ function TermsModalContent({ onClose, initialTab }: { onClose: () => void; initi
         </div>
 
         {/* タブ切り替え */}
-        <div role="tablist" aria-label="規約タブ" className="flex border-b border-slate-100 px-6 pt-2 gap-4 text-sm font-medium">
+        <div
+          role="tablist"
+          aria-label="規約タブ"
+          onKeyDown={handleTabKeyDown}
+          className="flex border-b border-slate-100 px-6 pt-2 gap-4 text-sm font-medium overflow-x-auto"
+        >
           <button
             type="button"
             role="tab"
+            id="terms-tab-terms"
             aria-selected={activeTab === 'terms'}
+            aria-controls="terms-panel-terms"
+            tabIndex={activeTab === 'terms' ? 0 : -1}
             onClick={() => setActiveTab('terms')}
-            className={`pb-3 px-1 border-b-2 transition-colors flex items-center gap-1.5 ${
+            className={`pb-3 px-1 border-b-2 transition-colors flex items-center gap-1.5 shrink-0 whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 rounded-t ${
               activeTab === 'terms'
                 ? 'border-indigo-600 text-indigo-600 font-bold'
                 : 'border-transparent text-slate-500 hover:text-slate-700'
@@ -69,9 +100,12 @@ function TermsModalContent({ onClose, initialTab }: { onClose: () => void; initi
           <button
             type="button"
             role="tab"
+            id="terms-tab-privacy"
             aria-selected={activeTab === 'privacy'}
+            aria-controls="terms-panel-privacy"
+            tabIndex={activeTab === 'privacy' ? 0 : -1}
             onClick={() => setActiveTab('privacy')}
-            className={`pb-3 px-1 border-b-2 transition-colors flex items-center gap-1.5 ${
+            className={`pb-3 px-1 border-b-2 transition-colors flex items-center gap-1.5 shrink-0 whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 rounded-t ${
               activeTab === 'privacy'
                 ? 'border-indigo-600 text-indigo-600 font-bold'
                 : 'border-transparent text-slate-500 hover:text-slate-700'
@@ -83,9 +117,12 @@ function TermsModalContent({ onClose, initialTab }: { onClose: () => void; initi
           <button
             type="button"
             role="tab"
+            id="terms-tab-disclaimer"
             aria-selected={activeTab === 'disclaimer'}
+            aria-controls="terms-panel-disclaimer"
+            tabIndex={activeTab === 'disclaimer' ? 0 : -1}
             onClick={() => setActiveTab('disclaimer')}
-            className={`pb-3 px-1 border-b-2 transition-colors flex items-center gap-1.5 ${
+            className={`pb-3 px-1 border-b-2 transition-colors flex items-center gap-1.5 shrink-0 whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 rounded-t ${
               activeTab === 'disclaimer'
                 ? 'border-indigo-600 text-indigo-600 font-bold'
                 : 'border-transparent text-slate-500 hover:text-slate-700'
@@ -97,7 +134,13 @@ function TermsModalContent({ onClose, initialTab }: { onClose: () => void; initi
         </div>
 
         {/* 本文エリア */}
-        <div className="p-6 overflow-y-auto text-sm text-slate-600 leading-relaxed space-y-4">
+        <div
+          role="tabpanel"
+          id={`terms-panel-${activeTab}`}
+          aria-labelledby={`terms-tab-${activeTab}`}
+          tabIndex={0}
+          className="p-6 overflow-y-auto text-sm text-slate-600 leading-relaxed space-y-4"
+        >
           {activeTab === 'terms' && (
             <div className="space-y-3">
               <h4 className="font-bold text-slate-800 text-base">送迎サービス利用規約</h4>
