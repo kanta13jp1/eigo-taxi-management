@@ -1,0 +1,25 @@
+{
+  "checkedAt": "2026-11-21T08:11:00.080Z",
+  "url": "https://eigo-taxi-test.web.app",
+  "fix59NavbarAccountsTab": {
+    "pass": true,
+    "accountsBtnInfo": {
+      "hasSvg": true,
+      "ariaCurrent": "page",
+      "hasFontBold": true,
+      "hasShadowXs": true
+    }
+  },
+  "fix60CancelDialogBackdrop": {
+    "pass": true,
+    "adminDialogInfo": {
+      "ariaDescribedBy": "admin-cancel-effect",
+      "effectExists": true
+    },
+    "adminStayedOpenOnInnerClick": true,
+    "adminClosedOnBackdrop": true,
+    "parentStayedOpenOnInnerClick": true,
+    "parentClosedOnBackdrop": true
+  },
+  "errors": []
+}

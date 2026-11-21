@@ -520,18 +520,22 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
 
       {cancelTarget && (
         <dialog ref={cancelDialog} aria-labelledby="admin-cancel-heading"
+          aria-describedby="admin-cancel-effect"
           onCancel={() => setCancelRideId(null)}
-          className="m-auto w-11/12 max-w-md rounded-2xl p-5 shadow-xl backdrop:bg-slate-900/50">
-          <h2 id="admin-cancel-heading" className="text-lg font-bold">予約取消の確認</h2>
-          <p className="mt-3 font-semibold">{cancelTarget.studentName}</p>
-          <p>{cancelTarget.rideDate} {cancelTarget.rideTime}・{getRideTypeLabel(cancelTarget.rideType).text}</p>
-          <p className="mt-3 text-sm">{isDemo ? 'このブラウザ内のデモ予約を取り消します。教室の予定は変わりません。' : '台帳の予約を取消にし、対応するカレンダーの予定を削除します。'}</p>
-          <div className="mt-5 flex justify-end gap-2">
-            <button type="button" className="rounded-lg border px-3 py-2" onClick={dismissCancellation}>戻る</button>
-            <button type="button" className="rounded-lg bg-rose-700 px-3 py-2 font-bold text-white" onClick={() => {
-              dismissCancellation();
-              void onCancelRide(cancelTarget.id);
-            }}>取消を確定</button>
+          onClick={(e) => { if (e.target === e.currentTarget) dismissCancellation(); }}
+          className="m-auto w-11/12 max-w-md rounded-2xl p-0 shadow-xl backdrop:bg-slate-900/50">
+          <div className="p-5">
+            <h2 id="admin-cancel-heading" className="text-lg font-bold">予約取消の確認</h2>
+            <p className="mt-3 font-semibold">{cancelTarget.studentName}</p>
+            <p>{cancelTarget.rideDate} {cancelTarget.rideTime}・{getRideTypeLabel(cancelTarget.rideType).text}</p>
+            <p id="admin-cancel-effect" className="mt-3 text-sm">{isDemo ? 'このブラウザ内のデモ予約を取り消します。教室の予定は変わりません。' : '台帳の予約を取消にし、対応するカレンダーの予定を削除します。'}</p>
+            <div className="mt-5 flex justify-end gap-2">
+              <button type="button" className="rounded-lg border px-3 py-2" onClick={dismissCancellation}>戻る</button>
+              <button type="button" className="rounded-lg bg-rose-700 px-3 py-2 font-bold text-white" onClick={() => {
+                dismissCancellation();
+                void onCancelRide(cancelTarget.id);
+              }}>取消を確定</button>
+            </div>
           </div>
         </dialog>
       )}

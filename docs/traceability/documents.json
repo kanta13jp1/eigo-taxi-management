@@ -72682,6 +72682,126 @@
       ]
     },
     {
+      "id": "DOC-0653",
+      "path": "docs/progress/2026-11-21-cumulative-sixty.md",
+      "state": "historical",
+      "sha256": "0c75f906f62723a2f3bad33814832c98656851e5d34cc1eefae2d981588b914e",
+      "items": [
+        {
+          "id": "DOC-0653-ITEM-00001",
+          "line": 1,
+          "contentSha256": "248a88cfe52edb5be64290f8048e2f0e862dee71cd9f6f3e11b432ef4b21bfaa",
+          "occurrence": 1,
+          "preview": "# 11月21日 累計60件の実装修正・受入試験60項目（Navbar アカウント管理タブ統一・取消確認 dialog 背景クリック閉鎖・ARIA改善）"
+        },
+        {
+          "id": "DOC-0653-ITEM-00002",
+          "line": 3,
+          "contentSha256": "e79e8976eb91cf8c58638c41a0a566d1ab36a7c78822c02c6008bfbd6635a453",
+          "occurrence": 1,
+          "preview": "小林さん、お疲れ様です。"
+        },
+        {
+          "id": "DOC-0653-ITEM-00003",
+          "line": 5,
+          "contentSha256": "25577a9b3964d26e85b2156f4fac3ef104eee415a66249fe6fa97cca5ecd886a",
+          "occurrence": 1,
+          "preview": "11月21日の追加対応により、実装修正は**累計60件**、実施した異なる受入試験は**累計60項目**となりました（先行2件は Claude Code Fable 5.2 の対応分、追加58件が後続の対応分です）。"
+        },
+        {
+          "id": "DOC-0653-ITEM-00004",
+          "line": 7,
+          "contentSha256": "5e0de8d7c9a553eb756220330c68340f95c4c16d1fec549e9fa0ba34c7b0f5bf",
+          "occurrence": 1,
+          "preview": "### 【今回の追加修正内容（59〜60件目）】"
+        },
+        {
+          "id": "DOC-0653-ITEM-00005",
+          "line": 8,
+          "contentSha256": "43d4b8b52740029ec14801cf30884da5698700abc85e23ac7a9b728360877ee8",
+          "occurrence": 1,
+          "preview": "* **59件目（`Navbar.tsx`）**：管理者ナビゲーションの「アカウント管理」タブボタンへ `Users` アイコンを追加し、`font-bold`・`shadow-xs`・`hover:text-slate-900` 等のデザインおよびレイアウト構造を他の3タブ（「"
+        },
+        {
+          "id": "DOC-0653-ITEM-00006",
+          "line": 9,
+          "contentSha256": "f7b5d10da8e4197c8150ee5f5a1e809ff4ee7b4de715a83ed67deb00defef4f7",
+          "occurrence": 1,
+          "preview": "* **60件目（`TeacherDashboard.tsx` / `ParentPortal.tsx`）**：管理者画面および保護者画面の「予約取消の確認」`<dialog>` について、内部ラッパー（`<div className=\"p-5\">`）と外側 `p-0` 分離によ"
+        },
+        {
+          "id": "DOC-0653-ITEM-00007",
+          "line": 11,
+          "contentSha256": "5f1304ae238fd633ab3777a8798045869574a4a518a98304b0c1b3f361de9998",
+          "occurrence": 1,
+          "preview": "### 【今回実施した受入試験（59〜60項目目）】"
+        },
+        {
+          "id": "DOC-0653-ITEM-00008",
+          "line": 12,
+          "contentSha256": "88bb26f5e7cc6ca8713888871a49e80ecd82386ff18a79e5e10c7c32c1078361",
+          "occurrence": 1,
+          "preview": "* **59項目目（Navbar アカウント管理タブのアイコン・スタイル統一検証［公開デモ］）**：公開検証サイト（`https://eigo-taxi-test.web.app/#/admin`）の管理者デモで「アカウント管理」タブに SVG アイコンが含まれること、および選択"
+        },
+        {
+          "id": "DOC-0653-ITEM-00009",
+          "line": 13,
+          "contentSha256": "9cb0ef2839cb1ac6a749393836a4dfe1622c0f92da30950b5dfa0eba99b63b8e",
+          "occurrence": 1,
+          "preview": "* **60項目目（予約取消確認 dialog 背景クリック閉鎖・ARIA説明検証［公開デモ］）**：公開検証サイトの管理者デモおよび保護者デモそれぞれで予約取消確認 `<dialog>` を開き、管理者側 `aria-describedby=\"admin-cancel-effe"
+        },
+        {
+          "id": "DOC-0653-ITEM-00010",
+          "line": 15,
+          "contentSha256": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+          "occurrence": 1,
+          "preview": "---"
+        },
+        {
+          "id": "DOC-0653-ITEM-00011",
+          "line": 17,
+          "contentSha256": "76c3519755d39acf199783847365abea0c2ba4aec32426a7addbe54a9ff2b9a7",
+          "occurrence": 1,
+          "preview": "### 【公開環境・確認範囲】"
+        },
+        {
+          "id": "DOC-0653-ITEM-00012",
+          "line": 18,
+          "contentSha256": "b8f8e26627fdd283f6f45ab1ae8e53d01b7ab6cd92e292bebaf1c240ff354448",
+          "occurrence": 1,
+          "preview": "* **検証サイト**: https://eigo-taxi-test.web.app/"
+        },
+        {
+          "id": "DOC-0653-ITEM-00013",
+          "line": 19,
+          "contentSha256": "6a0724bbc3d8288e57454efa017e04c08977404fbc819beed31d20520e5de323",
+          "occurrence": 1,
+          "preview": "* **反映版 (`sourceDigest`)**: `8dc15945584cf37a5a8f8eff4fe6c8aad5ef4be830970a5784bd18e2d0945492`（ビルド時刻: `2026-11-21T08:09:56.832Z`）"
+        },
+        {
+          "id": "DOC-0653-ITEM-00014",
+          "line": 20,
+          "contentSha256": "ba2993780bc4023b40e5924813e382bc970fdd8734c7a13a5291545857a74109",
+          "occurrence": 1,
+          "preview": "* **配信照合**: [public-2026-11-21T08-10-40-909Z.json](../acceptance/deployment-verification/public-2026-11-21T08-10-40-909Z.json)（全7ファイル SHA-25"
+        },
+        {
+          "id": "DOC-0653-ITEM-00015",
+          "line": 21,
+          "contentSha256": "3fccdafb334977b8ebcc4ed8794de794a06d7f9b8a921d54af47bf82b3e04703",
+          "occurrence": 1,
+          "preview": "* **公開UI証跡**: [public-ui-sixty.json](../../outputs/daily-20261121/public-ui-sixty.json)"
+        },
+        {
+          "id": "DOC-0653-ITEM-00016",
+          "line": 22,
+          "contentSha256": "f05b4c87239863444f5738c59c27a6864e67fabeb0482abfb963cdc48a292ac6",
+          "occurrence": 1,
+          "preview": "* **顧客確認・本番状況**: 小林様の顧客確認6手順（`CUST-01`〜`CUST-06`）は 0/6件（未実施）、顧客用の検証データはそのまま維持しており、**本番運用は開始していません**。"
+        }
+      ]
+    },
+    {
       "id": "DOC-0642",
       "path": "docs/progress/2026-11-21-terms-deployment-pending.md",
       "state": "historical",

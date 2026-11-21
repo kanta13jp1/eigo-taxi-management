@@ -1,5 +1,5 @@
 import React from 'react';
-import { Car, ShieldCheck, Settings, QrCode } from 'lucide-react';
+import { Car, ShieldCheck, Settings, QrCode, Users } from 'lucide-react';
 
 interface NavbarProps {
   currentTab: 'teacher' | 'invitations' | 'accounts' | 'settings';
@@ -51,7 +51,19 @@ export const Navbar: React.FC<NavbarProps> = ({ currentTab, setCurrentTab, isAdm
             <QrCode className="w-4 h-4" />
             個別URL・QR
           </button>}
-          {!reviewOnly && <button type="button" aria-current={currentTab === 'accounts' ? 'page' : undefined} onClick={() => setCurrentTab('accounts')} className={`rounded-lg px-3 py-1.5 ${currentTab === 'accounts' ? 'bg-white text-emerald-700' : 'text-slate-600'}`}>アカウント管理</button>}
+          {!reviewOnly && <button
+            type="button"
+            aria-current={currentTab === 'accounts' ? 'page' : undefined}
+            onClick={() => setCurrentTab('accounts')}
+            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg transition-all ${
+              currentTab === 'accounts'
+                ? 'bg-white text-emerald-700 font-bold shadow-xs'
+                : 'text-slate-600 hover:text-slate-900'
+            }`}
+          >
+            <Users className="w-4 h-4" />
+            アカウント管理
+          </button>}
           {!reviewOnly && <button
             type="button"
             aria-current={currentTab === 'settings' ? 'page' : undefined}
