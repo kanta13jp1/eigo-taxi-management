@@ -72689,6 +72689,140 @@
       ]
     },
     {
+      "id": "DOC-0657",
+      "path": "docs/progress/2026-11-21-cumulative-seventy.md",
+      "state": "historical",
+      "sha256": "1adad3b8a081a7474ae96a21d4cd0c926f4188ad44cbbc162fcb270181b4926b",
+      "items": [
+        {
+          "id": "DOC-0657-ITEM-00001",
+          "line": 1,
+          "contentSha256": "049028d028645f6a13b28e7992da05af3df89f8134ed5f047a136c0e3bedfc31",
+          "occurrence": 1,
+          "preview": "# 11月21日 累計70件の実装修正・受入試験70項目（ParentPortal 表示/状態整理・AccountManagement 読込/削除導線・GoogleSettings ダイアログ改善）"
+        },
+        {
+          "id": "DOC-0657-ITEM-00002",
+          "line": 3,
+          "contentSha256": "e79e8976eb91cf8c58638c41a0a566d1ab36a7c78822c02c6008bfbd6635a453",
+          "occurrence": 1,
+          "preview": "小林さん、お疲れ様です。"
+        },
+        {
+          "id": "DOC-0657-ITEM-00003",
+          "line": 5,
+          "contentSha256": "28525f6562a8c7530e6d252f5f468824e552b2d0f3c17ff861b42621c8f0c272",
+          "occurrence": 1,
+          "preview": "11月21日の追加対応により、実装修正は**累計70件**、実施した異なる受入試験は**累計70項目**となりました（先行2件は Claude Code Fable 5.2 の対応分、追加68件が後続の対応分です）。今回は Round 2 として Agent Swarms（`/s"
+        },
+        {
+          "id": "DOC-0657-ITEM-00004",
+          "line": 7,
+          "contentSha256": "e1691c4b756a860b9e4afb3bde85dcad889bd76f494257acbeb191dcc89312e6",
+          "occurrence": 1,
+          "preview": "### 【今回の追加修正内容（68〜70件目）】"
+        },
+        {
+          "id": "DOC-0657-ITEM-00005",
+          "line": 8,
+          "contentSha256": "4828419c7da90ff5bd9aeb4e38bdf0d1fc21c57f90c984a2461c5ac00049a29c",
+          "occurrence": 1,
+          "preview": "* **68件目（`ParentPortal.tsx`）**：チケット残少のお知らせ枠へ `role=\"status\"` を追加し、予約申込・キャンセル・取消確認ダイアログの操作ボタンへ `focus-visible:ring-2` および `disabled={cancelPe"
+        },
+        {
+          "id": "DOC-0657-ITEM-00006",
+          "line": 9,
+          "contentSha256": "e846e2fc38a2a29582470549d893d39e5a3cb488a62b22f4cf7d84f76471f618",
+          "occurrence": 1,
+          "preview": "* **69件目（`AccountManagement.tsx`）**：初期読込・手動再取得向けの `loading` 状態とアンマウント保護（`useRef`）を追加し、`!directory` 時の読込表示（`role=\"status\"`）、「一覧を再取得」の無効化・`読込中"
+        },
+        {
+          "id": "DOC-0657-ITEM-00007",
+          "line": 10,
+          "contentSha256": "30329b01b871dc06c4e84a1eebb5b8744325d8490093cb666e3d842e30d1e8cb",
+          "occurrence": 1,
+          "preview": "* **70件目（`GoogleSettings.tsx`）**：「モック初期化」「デモデータ消去」ボタンへ `aria-expanded`・`aria-controls=\"demo-data-confirm-dialog\"`・`disabled:opacity-50`・`foc"
+        },
+        {
+          "id": "DOC-0657-ITEM-00008",
+          "line": 12,
+          "contentSha256": "67d8305ffd3c8af40036fd3c67dca85fe6a8efc763aee6cbc17783865cc0d627",
+          "occurrence": 1,
+          "preview": "### 【今回実施した受入試験（68〜70項目目）】"
+        },
+        {
+          "id": "DOC-0657-ITEM-00009",
+          "line": 13,
+          "contentSha256": "a0bda11e806c9f49622f04e04ef83c28a84770f6eafe30ffeb7837bd57ffbd79",
+          "occurrence": 1,
+          "preview": "* **68項目目（ParentPortal 状態表示・履歴件数・確認ダイアログ操作スタイル検証［公開デモ］）**：公開検証サイト（`https://eigo-taxi-test.web.app/#/parent`）の保護者デモで、予約申込ボタンのフォーカスリング、「過去の利用履"
+        },
+        {
+          "id": "DOC-0657-ITEM-00010",
+          "line": 14,
+          "contentSha256": "917de98e34b4b47d97dad75da38baa12b461b3e461f6b9c393772602f20a8a9d",
+          "occurrence": 1,
+          "preview": "* **69項目目（AccountManagement 一覧再取得・状態維持・ボタン制御検証［公開デモ＋REVIEW-UI］）**：公開検証サイト（`https://eigo-taxi-test.web.app/#/admin`）の管理者デモ「アカウント管理」で「一覧を再取得」ボ"
+        },
+        {
+          "id": "DOC-0657-ITEM-00011",
+          "line": 15,
+          "contentSha256": "b9d2221485b09c5138f5a9c2e49bacbae4acac80f1799a85be68a2647ec9fdf9",
+          "occurrence": 1,
+          "preview": "* **70項目目（GoogleSettings ARIA連携・破壊色ボタン・Escape閉鎖検証［公開デモ］）**：公開検証サイトの「Google連携」タブで、「モック初期化」「デモデータ消去」の初期 `aria-expanded=\"false\"` / `aria-contro"
+        },
+        {
+          "id": "DOC-0657-ITEM-00012",
+          "line": 17,
+          "contentSha256": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+          "occurrence": 1,
+          "preview": "---"
+        },
+        {
+          "id": "DOC-0657-ITEM-00013",
+          "line": 19,
+          "contentSha256": "76c3519755d39acf199783847365abea0c2ba4aec32426a7addbe54a9ff2b9a7",
+          "occurrence": 1,
+          "preview": "### 【公開環境・確認範囲】"
+        },
+        {
+          "id": "DOC-0657-ITEM-00014",
+          "line": 20,
+          "contentSha256": "b8f8e26627fdd283f6f45ab1ae8e53d01b7ab6cd92e292bebaf1c240ff354448",
+          "occurrence": 1,
+          "preview": "* **検証サイト**: https://eigo-taxi-test.web.app/"
+        },
+        {
+          "id": "DOC-0657-ITEM-00015",
+          "line": 21,
+          "contentSha256": "04b1f95bbb72b6bb38ee122d8d55db6e302a4fbe5500fbdc64d24dfd63d2a9b6",
+          "occurrence": 1,
+          "preview": "* **反映版 (`sourceDigest`)**: `897390de66f2680933b077958b56bdb1886f1e799071db4fe616b17f09bd9af8`（ビルド時刻: `2026-11-21T12:13:47.668Z`）"
+        },
+        {
+          "id": "DOC-0657-ITEM-00016",
+          "line": 22,
+          "contentSha256": "e2244c318b36774827658eb69b0798385167f68b100aaaa231e81dc9b802e260",
+          "occurrence": 1,
+          "preview": "* **配信照合**: [public-2026-11-21T12-14-22-845Z.json](../acceptance/deployment-verification/public-2026-11-21T12-14-22-845Z.json)（全7ファイル SHA-25"
+        },
+        {
+          "id": "DOC-0657-ITEM-00017",
+          "line": 23,
+          "contentSha256": "577e3653bd8273f04301d68a2b4f5df5cbb9c3a6ec260fdddd94c0657e316b3d",
+          "occurrence": 1,
+          "preview": "* **公開UI証跡**: [public-ui-seventy.json](../../outputs/daily-20261121/public-ui-seventy.json)"
+        },
+        {
+          "id": "DOC-0657-ITEM-00018",
+          "line": 24,
+          "contentSha256": "f05b4c87239863444f5738c59c27a6864e67fabeb0482abfb963cdc48a292ac6",
+          "occurrence": 1,
+          "preview": "* **顧客確認・本番状況**: 小林様の顧客確認6手順（`CUST-01`〜`CUST-06`）は 0/6件（未実施）、顧客用の検証データはそのまま維持しており、**本番運用は開始していません**。"
+        }
+      ]
+    },
+    {
       "id": "DOC-0653",
       "path": "docs/progress/2026-11-21-cumulative-sixty.md",
       "state": "historical",

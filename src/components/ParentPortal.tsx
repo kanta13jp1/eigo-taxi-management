@@ -147,7 +147,7 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({
               </p>
 
               {student.ticketBalance <= 2 && (
-                <div className="mt-4 bg-amber-500/25 border border-amber-300/50 rounded-xl p-3 flex items-start gap-2.5 text-xs text-amber-100">
+                <div role="status" className="mt-4 bg-amber-500/25 border border-amber-300/50 rounded-xl p-3 flex items-start gap-2.5 text-xs text-amber-100">
                   <AlertCircle className="w-5 h-5 text-amber-300 shrink-0 mt-0.5" />
                   <div>
                     <span className="font-bold text-amber-200 block text-sm">
@@ -164,7 +164,7 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({
           <button
             type="button"
             onClick={() => onOpenAddRide(student.id)}
-            className="w-full py-3.5 px-4 bg-slate-900 hover:bg-slate-800 text-white font-bold rounded-2xl shadow-sm flex items-center justify-center gap-2 text-base transition-transform active:scale-[0.98]"
+            className="w-full py-3.5 px-4 bg-slate-900 hover:bg-slate-800 text-white font-bold rounded-2xl shadow-sm flex items-center justify-center gap-2 text-base transition-transform active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
           >
             <PlusCircle className="w-5 h-5 text-emerald-400" />
             送迎の予約を申し込む（前日・当日可）
@@ -224,7 +224,7 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({
                           aria-label={target + ' ' + ride.pickupLocation + ' の予約をキャンセル'}
                           disabled={cancelPending}
                           onClick={() => setCancelRideId(ride.id)}
-                          className="shrink-0 text-xs text-rose-600 hover:text-rose-700 bg-rose-50 hover:bg-rose-100 font-bold px-2.5 py-1.5 rounded-lg border border-rose-200 transition-colors flex items-center gap-1"
+                          className="shrink-0 text-xs text-rose-600 hover:text-rose-700 bg-rose-50 hover:bg-rose-100 font-bold px-2.5 py-1.5 rounded-lg border border-rose-200 transition-colors flex items-center gap-1 disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-500"
                         >
                           <XCircle className="w-3.5 h-3.5" />
                           キャンセル
@@ -252,8 +252,8 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({
                 </div>
                 <p id="parent-cancel-effect" className="mt-3 text-sm">{isDemo ? 'このブラウザ内のデモ予約を取り消します。教室の予定は変わりません。' : '台帳の予約を取消にし、対応するカレンダーの予定を削除します。'}</p>
                 <div className="mt-5 flex justify-end gap-2">
-                  <button type="button" className="rounded-lg border px-3 py-2" onClick={dismissCancellation}>戻る</button>
-                  <button type="button" className="rounded-lg bg-rose-700 px-3 py-2 font-bold text-white" onClick={confirmCancellation}>取消を確定</button>
+                  <button type="button" disabled={cancelPending} className="rounded-lg border px-3 py-2 disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-500" onClick={dismissCancellation}>戻る</button>
+                  <button type="button" disabled={cancelPending} className="rounded-lg bg-rose-700 px-3 py-2 font-bold text-white disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-500" onClick={confirmCancellation}>取消を確定</button>
                 </div>
               </div>
             </dialog>
@@ -261,10 +261,13 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({
 
           {/* これまでの利用履歴 */}
           <div className="bg-white rounded-2xl border border-slate-200 p-5 shadow-xs">
-            <h4 className="font-bold text-slate-800 text-sm mb-3 flex items-center gap-2">
-              <Clock className="w-4 h-4 text-slate-500" />
-              過去の利用履歴
-            </h4>
+            <div className="flex items-center justify-between mb-3">
+              <h4 className="font-bold text-slate-800 text-sm flex items-center gap-2">
+                <Clock className="w-4 h-4 text-slate-500" />
+                過去の利用履歴
+              </h4>
+              <span className="text-xs text-slate-400">{pastRides.length} 件</span>
+            </div>
 
             {pastRides.length === 0 ? (
               <p className="text-center py-4 text-slate-400 text-xs">過去の利用履歴はありません</p>
@@ -299,7 +302,7 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({
           {/* ご登録情報とお問い合わせ */}
           <div className="bg-slate-50 rounded-2xl p-4 border border-slate-200/80 text-xs text-slate-600 space-y-1">
             <p className="font-bold text-slate-700">登録済みのご住所・連絡先</p>
-            <p>送迎先: {student.address}</p>
+            <p className="[overflow-wrap:anywhere]">送迎先: {student.address || '未登録'}</p>
             <p>緊急連絡先: {student.phone || '未登録'}</p>
             <p className="text-[11px] text-slate-400 mt-1">
               ※ 送迎場所の変更や連絡先変更は先生へ直接お知らせください。

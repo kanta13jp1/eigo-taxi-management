@@ -1,0 +1,56 @@
+{
+  "checkedAt": "2026-11-21T12:14:41.184Z",
+  "url": "https://eigo-taxi-test.web.app",
+  "fix68ParentPortalPolish": {
+    "pass": true,
+    "parentStaticCheck": {
+      "bookingHasFocusRing": true,
+      "historyCountText": "1 件",
+      "addressText": "送迎先: 東京都世田谷区桜新町1-10-5 パークサイド201",
+      "addressHasOverflowWrap": true,
+      "upcomingCancelBtnFound": true,
+      "upcomingCancelDisabledStyle": true,
+      "upcomingCancelFocusRing": true
+    },
+    "cancelDialogCheck": {
+      "backDisabledStyle": true,
+      "backFocusRing": true,
+      "confirmDisabledStyle": true,
+      "confirmFocusRing": true
+    }
+  },
+  "fix69AccountManagementReloadAndStyles": {
+    "pass": true,
+    "accountInitialCheck": {
+      "hasReloadBtn": true,
+      "disabledStyle": true,
+      "focusRing": true
+    }
+  },
+  "fix70GoogleSettingsDialogAndGuard": {
+    "pass": true,
+    "googleBeforeOpen": {
+      "resetExpanded": "false",
+      "resetControls": "demo-data-confirm-dialog",
+      "resetDisabledStyle": true,
+      "resetFocusRing": true,
+      "purgeExpanded": "false",
+      "purgeControls": "demo-data-confirm-dialog",
+      "purgeDisabledStyle": true,
+      "purgeFocusRing": true
+    },
+    "googleDialogOpen": {
+      "purgeExpandedDuringOpen": "true",
+      "dialogAriaLabel": "デモデータ操作の確認",
+      "dialogDescribedBy": "demo-confirm-desc",
+      "descText": "ブラウザ内に保存されているデモ台帳を空にし、画面を再読み込みします。",
+      "execHasRoseBg": true,
+      "execDisabledStyle": true,
+      "execFocusRing": true,
+      "backDisabledStyle": true,
+      "backFocusRing": true
+    },
+    "purgeExpandedAfterEscape": "false"
+  },
+  "errors": []
+}

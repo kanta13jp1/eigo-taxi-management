@@ -2,7 +2,7 @@
   "sourceHashes": {
     "scripts/test_trace_ui.mjs": "aa49104f1cc9ca3fdd0031c5dbfe20d5e7ccaf6150c47bd28b29d2b1d4223448",
     "scripts/fixtures/trace-ui/harness.tsx": "90bef1928e68fb736a4cf43150bb11153ba980414b5016b318f9ca494a24e136",
-    "src/components/ParentPortal.tsx": "7c3c3fd1167d59fae90f844b8edb114f9a3d1cd0b32b232213e59c8fb684d6da",
+    "src/components/ParentPortal.tsx": "a23af164c5cce58fc2b5eb1d7953860f66e19dae311238884ac7597264d4742d",
     "src/components/TeacherDashboard.tsx": "aecbeef44ccef3c3277c7ec9e8292c76265514e1e824944e5d3905a81d67ff3d",
     "src/components/AddRideModal.tsx": "1201ace278cd8563dd89d0c339b7b142d5b6fe454a4a9d8471812f653009f311",
     "src/services/api.ts": "9de6da24a594b1bb37d12d1dc4b2910a8cfdadf9124ed4abf22ac8104cd35e28",
