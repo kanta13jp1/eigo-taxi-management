@@ -1,0 +1,24 @@
+{
+  "checkedAt": "2026-11-21T00:15:50.458Z",
+  "url": "https://eigo-taxi-test.web.app",
+  "fix45PortalInvitations": {
+    "pass": true,
+    "alertText": null,
+    "emptyMsg": false,
+    "downloadAttr": "taxi-link-保護者デモ（架空の家庭）.png"
+  },
+  "fix46AddRideModalReset": {
+    "pass": true,
+    "reserveBtnsCount": 3,
+    "firstOpen": {
+      "studentId": "STU-001",
+      "location": "東京都世田谷区桜新町1-10-5 パークサイド201"
+    },
+    "secondOpen": {
+      "studentId": "STU-002",
+      "location": "東京都世田谷区用賀2-5-12",
+      "note": ""
+    }
+  },
+  "errors": []
+}

@@ -37,7 +37,7 @@ export function PortalInvitations() {
     {!loading && !error && !items.length && <p>配布できる個別URLはまだ登録されていません。管理担当者がご家庭と生徒の紐付けを確認して登録します。</p>}
     {!!items.length && <>
       <label className="block text-sm font-semibold" htmlFor="invitation-family">配布先のご家庭</label>
-      <select id="invitation-family" value={selected} onChange={e=>setSelected(e.target.value)} className="w-full rounded-lg border p-3">
+      <select id="invitation-family" value={selected} onChange={e=>{setSelected(e.target.value);setError('');setCopiedUrl('');}} className="w-full rounded-lg border p-3">
         {items.map(i=><option key={i.publicEntryId} value={i.publicEntryId}>{i.name}</option>)}
       </select>
       <p className="break-all rounded-lg bg-slate-50 p-3 text-sm" data-testid="invitation-url">{url}</p>
@@ -45,7 +45,7 @@ export function PortalInvitations() {
       {copiedUrl === url && <p role="status" className="text-xs font-semibold text-emerald-700">配布用URLをクリップボードにコピーしました</p>}
       {qr && <div className="space-y-3">
         <img src={qr} alt="ご家庭専用のログインURLのQRコード" className="mx-auto w-64 max-w-full" />
-        <a href={qr} download="taxi-link-invitation.png" className="block rounded-lg bg-emerald-700 p-3 text-center font-bold text-white">QR画像を保存</a>
+        <a href={qr} download={item ? `taxi-link-${item.name.replace(/[\\/:*?"<>|]/g, '_')}.png` : 'taxi-link-invitation.png'} className="block rounded-lg bg-emerald-700 p-3 text-center font-bold text-white">QR画像を保存</a>
       </div>}
       <p className="text-sm text-slate-600">配布前にご家庭名を確認してください。リンクの紛失時は「アカウント管理」で個別URLを再発行します。アカウント変更・退会時も管理者が利用登録を停止・変更します。</p>
     </>}

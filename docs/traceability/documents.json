@@ -71722,6 +71722,126 @@
       ]
     },
     {
+      "id": "DOC-0646",
+      "path": "docs/progress/2026-11-21-cumulative-fortysix.md",
+      "state": "historical",
+      "sha256": "3720f0fed8b70e74328fad3d1eab7e1d60e7f7abff60916b5a9585535166ef71",
+      "items": [
+        {
+          "id": "DOC-0646-ITEM-00001",
+          "line": 1,
+          "contentSha256": "b2ae9f3d63dcc76ae4ea4280a290b98f1d794dc3cf512cf9a47ada7a725888a9",
+          "occurrence": 1,
+          "preview": "# 11月21日 累計46件の実装修正・受入試験46項目（PortalInvitations QRファイル名・AddRideModal状態リセット改善）"
+        },
+        {
+          "id": "DOC-0646-ITEM-00002",
+          "line": 3,
+          "contentSha256": "e79e8976eb91cf8c58638c41a0a566d1ab36a7c78822c02c6008bfbd6635a453",
+          "occurrence": 1,
+          "preview": "小林さん、お疲れ様です。"
+        },
+        {
+          "id": "DOC-0646-ITEM-00003",
+          "line": 5,
+          "contentSha256": "259b9b1200d42cf9729372f88a1a02a20db3ae9d3117d6b3964f8b8c3b4a9a40",
+          "occurrence": 1,
+          "preview": "11月21日の追加対応により、実装修正は**累計46件**、実施した異なる受入試験は**累計46項目**となりました（先行2件は Claude Code Fable 5.2 の対応分、追加44件が後続の対応分です）。"
+        },
+        {
+          "id": "DOC-0646-ITEM-00004",
+          "line": 7,
+          "contentSha256": "e392a3d991c63c0c7c976067ddae83f2b974d9c93aaa6951a2926e47ed9f0834",
+          "occurrence": 1,
+          "preview": "### 【今回の追加修正内容（45〜46件目）】"
+        },
+        {
+          "id": "DOC-0646-ITEM-00005",
+          "line": 8,
+          "contentSha256": "5b40801bbddb321199619622f269d96ae9a295587b31cbef6a48f884b1381e07",
+          "occurrence": 1,
+          "preview": "* **45件目（`PortalInvitations.tsx`）**：ご家庭の個別URL・QR配布画面で、配布先のご家庭を切り替えた際に直前のエラーやコピー完了表示をクリアするよう改善しました。また、「QR画像を保存」のダウンロードファイル名をご家庭名入り（`taxi-link"
+        },
+        {
+          "id": "DOC-0646-ITEM-00006",
+          "line": 9,
+          "contentSha256": "0fa18fc6038be370210cbad4726b740a22fe29044512f2b9aab1f9c8d0702e82",
+          "occurrence": 1,
+          "preview": "* **46件目（`AddRideModal.tsx`）**：`AddRideModal` を `AddRideModalContent` へ分離（`key={initialStudentId || ...}`）することで、ある生徒のカードから予約モーダルを開いて閉じた後に別の生"
+        },
+        {
+          "id": "DOC-0646-ITEM-00007",
+          "line": 11,
+          "contentSha256": "1477f6a562a2a8e869a906ef5944cb45d67f572d74b5ff76f4192002beabc982",
+          "occurrence": 1,
+          "preview": "### 【今回実施した受入試験（45〜46項目目）】"
+        },
+        {
+          "id": "DOC-0646-ITEM-00008",
+          "line": 12,
+          "contentSha256": "71443d09e9179037edfc21bb0f278d8cd74c946adc7bea1e28c884773f8805b7",
+          "occurrence": 1,
+          "preview": "* **45項目目（個別URL・QR保存ファイル名識別検証［公開デモ］）**：公開検証サイト（`https://eigo-taxi-test.web.app/#/admin`）の「個別URL・QR」画面で、QR画像ダウンロードリンクの `download` 属性に家庭名入りのファ"
+        },
+        {
+          "id": "DOC-0646-ITEM-00009",
+          "line": 13,
+          "contentSha256": "d26994c62dd9211dfd96c164a97f643afb4b38b34b6ab921f8f3e4a251d7366a",
+          "occurrence": 1,
+          "preview": "* **46項目目（生徒別予約モーダル状態リセット検証［公開デモ］）**：公開検証サイトの「生徒・チケット管理」タブにて、生徒1（`STU-001`）の「予約」からモーダルを開いてメモ入力後に閉じ、続いて生徒2（`STU-002`）の「予約」から開き直した際に、生徒ID（`STU"
+        },
+        {
+          "id": "DOC-0646-ITEM-00010",
+          "line": 15,
+          "contentSha256": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+          "occurrence": 1,
+          "preview": "---"
+        },
+        {
+          "id": "DOC-0646-ITEM-00011",
+          "line": 17,
+          "contentSha256": "76c3519755d39acf199783847365abea0c2ba4aec32426a7addbe54a9ff2b9a7",
+          "occurrence": 1,
+          "preview": "### 【公開環境・確認範囲】"
+        },
+        {
+          "id": "DOC-0646-ITEM-00012",
+          "line": 18,
+          "contentSha256": "b8f8e26627fdd283f6f45ab1ae8e53d01b7ab6cd92e292bebaf1c240ff354448",
+          "occurrence": 1,
+          "preview": "* **検証サイト**: https://eigo-taxi-test.web.app/"
+        },
+        {
+          "id": "DOC-0646-ITEM-00013",
+          "line": 19,
+          "contentSha256": "7135b0b93553e1be9b3150733f6b2608f31c9a2d09ae4b5b2edb4b4e1b373cd8",
+          "occurrence": 1,
+          "preview": "* **反映版 (`sourceDigest`)**: `4fd0ee7967b03d5c2e8a9a81f62874e1bacecbedf495bcc8eadba14d73d4c0fd`（ビルド時刻: `2026-11-21T00:14:07.953Z`）"
+        },
+        {
+          "id": "DOC-0646-ITEM-00014",
+          "line": 20,
+          "contentSha256": "f53bc34eab1253cc01bde117c25866c81d6a7d5f250684317337be9f5b3b1294",
+          "occurrence": 1,
+          "preview": "* **配信照合**: [public-2026-11-21T00-15-12-185Z.json](../acceptance/deployment-verification/public-2026-11-21T00-15-12-185Z.json)（全7ファイル SHA-25"
+        },
+        {
+          "id": "DOC-0646-ITEM-00015",
+          "line": 21,
+          "contentSha256": "e8e618db8a0cdb03b74153bd7f9f16083f786acc3f042cf853ad1506bf41599e",
+          "occurrence": 1,
+          "preview": "* **公開UI証跡**: [public-ui-fortysix.json](../../outputs/daily-20261121/public-ui-fortysix.json)"
+        },
+        {
+          "id": "DOC-0646-ITEM-00016",
+          "line": 22,
+          "contentSha256": "f05b4c87239863444f5738c59c27a6864e67fabeb0482abfb963cdc48a292ac6",
+          "occurrence": 1,
+          "preview": "* **顧客確認・本番状況**: 小林様の顧客確認6手順（`CUST-01`〜`CUST-06`）は 0/6件（未実施）、顧客用の検証データはそのまま維持しており、**本番運用は開始していません**。"
+        }
+      ]
+    },
+    {
       "id": "DOC-0644",
       "path": "docs/progress/2026-11-21-cumulative-fortytwo.md",
       "state": "historical",

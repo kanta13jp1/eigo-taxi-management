@@ -21,8 +21,13 @@ interface AddRideModalProps {
 }
 
 // @trace CODE-09 REQ-09
-export const AddRideModal: React.FC<AddRideModalProps> = ({
-  isOpen,
+export const AddRideModal: React.FC<AddRideModalProps> = (props) => {
+  if (!props.isOpen) return null;
+  const modalKey = props.initialStudentId || props.students[0]?.id || 'empty';
+  return <AddRideModalContent key={modalKey} {...props} />;
+};
+
+const AddRideModalContent: React.FC<AddRideModalProps> = ({
   onClose,
   students,
   initialStudentId,
@@ -46,8 +51,6 @@ export const AddRideModal: React.FC<AddRideModalProps> = ({
       setPickupLocation(student.address);
     }
   };
-
-  if (!isOpen) return null;
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();

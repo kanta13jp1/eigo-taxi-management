@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "mode": "LOCAL_MOCK_UI_REHEARSAL",
-  "runStartedAt": "2026-11-21T00:05:52.498Z",
-  "finishedAt": "2026-11-21T00:06:59.909Z",
+  "runStartedAt": "2026-11-21T00:16:58.828Z",
+  "finishedAt": "2026-11-21T00:17:42.421Z",
   "nodeVersion": "24.22.1",
   "browserVersion": "158.0.8127.36",
   "timezone": "Asia/Tokyo",
@@ -14,14 +14,14 @@
     "src/assets/react.svg": "35ef61ed53b323ae94a16a8ec659b3d0af3880698791133f23b084085ab1c2e5",
     "src/assets/vite.svg": "5be21acd42eb7b896e517f4e0f0f11eb5c5d9e54fbbcebe9453f033008fcca6f",
     "src/components/AccountManagement.tsx": "dbd052165fbc4a11fa02be04d47ed55280353d5ca9570ebf8cdd1b20623d77b8",
-    "src/components/AddRideModal.tsx": "03be818bbd16dabe5da04c38df763d5c598a0da9d73ac006107d6b6b9a37f856",
+    "src/components/AddRideModal.tsx": "fa353c3925881fef95d6f6b751cfa06e94d8b84e02e2634a9c3b45b36a01ad72",
     "src/components/AddStudentModal.tsx": "cc9811224ad35e1576e9a4137a1f4f817944157ebd7078faa729c36c3065f3fc",
     "src/components/AddTicketModal.tsx": "d247f0fe3fdb918e077d17da82cd205a8b763b312f56fe71ab60d683aa9edb0b",
     "src/components/GoogleSettings.tsx": "c88f4b3f20cd1a0254cff4dec2bc525be722c58a28cf53a8b51a6e870df94f04",
     "src/components/LoginScreen.tsx": "9a4b0704d319c727e93b4030eac1c770c20287f8b4bf8fc620ed087a8dd72661",
     "src/components/Navbar.tsx": "77d967411aab9b6ec1181f22a9fa44caebf82fa59197aad9d63fc63f2594a3b0",
     "src/components/ParentPortal.tsx": "67163575d2d93c00de4588be2933d1e474febc0a3a0615db413683ebd86d4cce",
-    "src/components/PortalInvitations.tsx": "9c05d751fdd5912a6b31f641ef5265b699d73fb7fa5e368bc3c4f6e42804b845",
+    "src/components/PortalInvitations.tsx": "f1b7fa321d2e65a4cfb7bc9666d429f141b7e10cc12da781152395f089b9f501",
     "src/components/TeacherDashboard.tsx": "62cd608227041fe1fab81b3c27e03ec2dc8d3f89438bd4d3dd2c189fbd915fa3",
     "src/components/TermsModal.tsx": "9dad73ee08119eaf0d6dad5d56a5df9171d25c3ec8936cc502a80b9eb0984f83",
     "src/deployment-config.ts": "5c30aad36376487fcf2fbb664f2574bdd430890191675ca9813b5fdea516b6f1",
@@ -40,9 +40,9 @@
     "scripts/fixtures/local-acceptance/index.html": "a0030c371776b189471b5e18df159b04706dba1659ab740055c2d1954b62eb0b"
   },
   "buildHashes": {
+    "assets/index-3Zb06Vi5.js": "d004798770a9e34153d4caa6df2227df314f4280f51fadc87d5463763bb4a4a4",
     "assets/index-gPaggmg7.css": "6d123eabd5ffa8878b5ec79fdccef06e8b96b3ba93ab0cda5093670185575d0e",
-    "assets/index-H0dwJWJL.js": "2d71c948b09a5d4b2c7f691fb45f8d1c95ae43dc0fad8a006bd723705d9360b9",
-    "index.html": "6b6e6ace82ab7329a6aa8561049503c449aba88df139a26dfb49e2cf710a5936"
+    "index.html": "5e24bb652cc3ab160d62cbce688d2d2e9c4c236e0045ce217293ae54fbbe84d9"
   },
   "changedSources": [],
   "externalRequests": [],
@@ -76,8 +76,8 @@
         "file": "LOCAL-UI-01.png",
         "sha256": "36a7f1adc8745c2770ac40760ea3fedb7535c7b9799887efbcb7ae79e3b05b59"
       },
-      "startedAt": "2026-11-21T00:06:35.386Z",
-      "finishedAt": "2026-11-21T00:06:36.142Z"
+      "startedAt": "2026-11-21T00:17:05.924Z",
+      "finishedAt": "2026-11-21T00:17:06.942Z"
     },
     {
       "id": "LOCAL-UI-02",
@@ -91,8 +91,8 @@
         "file": "LOCAL-UI-02.png",
         "sha256": "8f1d45e5c769cf04c5d7a61a08c313fc9f8aa73d30c16de005cffc86a2b1ccb6"
       },
-      "startedAt": "2026-11-21T00:06:36.143Z",
-      "finishedAt": "2026-11-21T00:06:37.196Z"
+      "startedAt": "2026-11-21T00:17:06.943Z",
+      "finishedAt": "2026-11-21T00:17:08.710Z"
     },
     {
       "id": "LOCAL-UI-03",
@@ -105,8 +105,8 @@
         "file": "LOCAL-UI-03.png",
         "sha256": "6d89e7cfe6528f0112a85e445d2a75c8cb491600d201bbd3857feecd05c61cc9"
       },
-      "startedAt": "2026-11-21T00:06:37.196Z",
-      "finishedAt": "2026-11-21T00:06:38.956Z"
+      "startedAt": "2026-11-21T00:17:08.710Z",
+      "finishedAt": "2026-11-21T00:17:11.174Z"
     },
     {
       "id": "LOCAL-UI-04",
@@ -119,8 +119,8 @@
         "file": "LOCAL-UI-04.png",
         "sha256": "9c42da378e78c014e31a634c3826a7c4a2205707d990d51c4317e7829069d08e"
       },
-      "startedAt": "2026-11-21T00:06:38.956Z",
-      "finishedAt": "2026-11-21T00:06:40.844Z"
+      "startedAt": "2026-11-21T00:17:11.174Z",
+      "finishedAt": "2026-11-21T00:17:13.993Z"
     },
     {
       "id": "LOCAL-UI-05",
@@ -133,8 +133,8 @@
         "file": "LOCAL-UI-05.png",
         "sha256": "bd1687a53074256931f24c54d8fa00c751cadc0d2fb900deee18718db575e98d"
       },
-      "startedAt": "2026-11-21T00:06:40.845Z",
-      "finishedAt": "2026-11-21T00:06:42.557Z"
+      "startedAt": "2026-11-21T00:17:13.993Z",
+      "finishedAt": "2026-11-21T00:17:16.704Z"
     },
     {
       "id": "LOCAL-UI-06",
@@ -147,8 +147,8 @@
         "file": "LOCAL-UI-06.png",
         "sha256": "2b845001c70be6ba5a8cebc5f8d910c07f7a3b64d74b6c6efcb14b64a3341996"
       },
-      "startedAt": "2026-11-21T00:06:42.557Z",
-      "finishedAt": "2026-11-21T00:06:43.744Z"
+      "startedAt": "2026-11-21T00:17:16.704Z",
+      "finishedAt": "2026-11-21T00:17:18.412Z"
     },
     {
       "id": "LOCAL-UI-07",
@@ -162,8 +162,8 @@
         "file": "LOCAL-UI-07.png",
         "sha256": "8f6a3af2b6814da38a56474cbf0db6e3ed354222630b667a20c57459354f699a"
       },
-      "startedAt": "2026-11-21T00:06:43.744Z",
-      "finishedAt": "2026-11-21T00:06:45.528Z"
+      "startedAt": "2026-11-21T00:17:18.413Z",
+      "finishedAt": "2026-11-21T00:17:21.038Z"
     },
     {
       "id": "LOCAL-UI-08",
@@ -177,8 +177,8 @@
         "file": "LOCAL-UI-08.png",
         "sha256": "4bba98b077599752972f8951a4f175640a595bd09d6b9a7102506934d63658dc"
       },
-      "startedAt": "2026-11-21T00:06:45.528Z",
-      "finishedAt": "2026-11-21T00:06:47.220Z"
+      "startedAt": "2026-11-21T00:17:21.038Z",
+      "finishedAt": "2026-11-21T00:17:23.567Z"
     },
     {
       "id": "LOCAL-UI-09",
@@ -192,8 +192,8 @@
         "file": "LOCAL-UI-09.png",
         "sha256": "e3e1fe6b6b693266e9be4d47d68df2806d61d304628d9de60b9ed87ff9bc52bf"
       },
-      "startedAt": "2026-11-21T00:06:47.220Z",
-      "finishedAt": "2026-11-21T00:06:49.150Z"
+      "startedAt": "2026-11-21T00:17:23.567Z",
+      "finishedAt": "2026-11-21T00:17:26.086Z"
     },
     {
       "id": "LOCAL-UI-10",
@@ -204,10 +204,10 @@
       "status": "PASS",
       "screenshot": {
         "file": "LOCAL-UI-10.png",
-        "sha256": "2cb3ef01176be31895957c8a97c3bc543eb0587819a2d0a8dd900351fb51bcf1"
+        "sha256": "9ec2828f48e3686eec29a88fdabd81e1d8f25ff53595aeb76418b0bee70f9f92"
       },
-      "startedAt": "2026-11-21T00:06:49.150Z",
-      "finishedAt": "2026-11-21T00:06:50.114Z"
+      "startedAt": "2026-11-21T00:17:26.086Z",
+      "finishedAt": "2026-11-21T00:17:27.414Z"
     },
     {
       "id": "LOCAL-UI-11",
@@ -221,8 +221,8 @@
         "file": "LOCAL-UI-11.png",
         "sha256": "8f1d45e5c769cf04c5d7a61a08c313fc9f8aa73d30c16de005cffc86a2b1ccb6"
       },
-      "startedAt": "2026-11-21T00:06:50.114Z",
-      "finishedAt": "2026-11-21T00:06:51.966Z"
+      "startedAt": "2026-11-21T00:17:27.414Z",
+      "finishedAt": "2026-11-21T00:17:29.881Z"
     },
     {
       "id": "LOCAL-UI-12",
@@ -236,8 +236,8 @@
         "file": "LOCAL-UI-12.png",
         "sha256": "fee7bf58867eb0a18c91db86a181a7c014d97f9826f2f15211499c56f2c0ba0b"
       },
-      "startedAt": "2026-11-21T00:06:51.966Z",
-      "finishedAt": "2026-11-21T00:06:53.514Z"
+      "startedAt": "2026-11-21T00:17:29.881Z",
+      "finishedAt": "2026-11-21T00:17:31.479Z"
     },
     {
       "id": "LOCAL-UI-13",
@@ -251,8 +251,8 @@
         "file": "LOCAL-UI-13.png",
         "sha256": "36a7f1adc8745c2770ac40760ea3fedb7535c7b9799887efbcb7ae79e3b05b59"
       },
-      "startedAt": "2026-11-21T00:06:53.514Z",
-      "finishedAt": "2026-11-21T00:06:55.419Z"
+      "startedAt": "2026-11-21T00:17:31.479Z",
+      "finishedAt": "2026-11-21T00:17:33.617Z"
     },
     {
       "id": "LOCAL-UI-14",
@@ -265,8 +265,8 @@
         "file": "LOCAL-UI-14.png",
         "sha256": "9d3d6caf613b065fe3780f7f316e9bbc77b9364d81f3ca3df8b62f8b8fc19f92"
       },
-      "startedAt": "2026-11-21T00:06:55.420Z",
-      "finishedAt": "2026-11-21T00:06:59.594Z"
+      "startedAt": "2026-11-21T00:17:33.617Z",
+      "finishedAt": "2026-11-21T00:17:38.359Z"
     }
   ],
   "thirdPartyPassed": 0,
