@@ -71602,6 +71602,126 @@
       ]
     },
     {
+      "id": "DOC-0645",
+      "path": "docs/progress/2026-11-21-cumulative-fortyfour.md",
+      "state": "historical",
+      "sha256": "8b91b9774642176b2504425c1d2e68acc02d537a6fe216b098994cc3bb37178a",
+      "items": [
+        {
+          "id": "DOC-0645-ITEM-00001",
+          "line": 1,
+          "contentSha256": "24ac9a6a519dd218663f33b5146c992dac41df575cdda64f4a4810722c6079dd",
+          "occurrence": 1,
+          "preview": "# 11月21日 累計44件の実装修正・受入試験44項目（TeacherDashboard 無効telリンク抑止・全ボタン属性統一）"
+        },
+        {
+          "id": "DOC-0645-ITEM-00002",
+          "line": 3,
+          "contentSha256": "e79e8976eb91cf8c58638c41a0a566d1ab36a7c78822c02c6008bfbd6635a453",
+          "occurrence": 1,
+          "preview": "小林さん、お疲れ様です。"
+        },
+        {
+          "id": "DOC-0645-ITEM-00003",
+          "line": 5,
+          "contentSha256": "6630becbd1fd30c388df08a47e07f5edfa99fcd80b036908a3026b14cfeec264",
+          "occurrence": 1,
+          "preview": "11月21日の追加対応により、実装修正は**累計44件**、実施した異なる受入試験は**累計44項目**となりました（先行2件は Claude Code Fable 5.2 の対応分、追加42件が後続の対応分です）。"
+        },
+        {
+          "id": "DOC-0645-ITEM-00004",
+          "line": 7,
+          "contentSha256": "12eb2196fd72eba8a9bc47136420ee865db789b0e4fce7d6203fcab458c82338",
+          "occurrence": 1,
+          "preview": "### 【今回の追加修正内容（43〜44件目）】"
+        },
+        {
+          "id": "DOC-0645-ITEM-00005",
+          "line": 8,
+          "contentSha256": "379fe4408ff11579dc9f4640f414db2ef403f7dbe9c0451c88bd699c7dc4361a",
+          "occurrence": 1,
+          "preview": "* **43件目（`TeacherDashboard.tsx`）**：生徒台帳カードの電話番号表示で、電話番号が未登録（空）の場合に `<a href=\"tel:\">` の無効なリンクが生成されていた不具合を解消し、未登録時は通常の `<span>電話番号未登録</span>` "
+        },
+        {
+          "id": "DOC-0645-ITEM-00006",
+          "line": 9,
+          "contentSha256": "b4b2b24f0343e2d9df970ba7351e2726492b311d0afff169b5bb4be2a37880f3",
+          "occurrence": 1,
+          "preview": "* **44件目（`TeacherDashboard.tsx`）**：管理者画面内の残存アクションボタン（「新規生徒を登録」「チケット追加」「予約」「送迎予定を登録する」「送迎完了（〇回消費）」）へ `type=\"button\"` を明示し、`src/` 配下の全ボタンの `ty"
+        },
+        {
+          "id": "DOC-0645-ITEM-00007",
+          "line": 11,
+          "contentSha256": "7a5be1ea655bd7d391b982110058f914332658981c9bad9b08c1eaee220a6583",
+          "occurrence": 1,
+          "preview": "### 【今回実施した受入試験（43〜44項目目）】"
+        },
+        {
+          "id": "DOC-0645-ITEM-00008",
+          "line": 12,
+          "contentSha256": "b4d4d89a97d6bbc6578ea2bcb27167b86aa31fe28ab281a43e60cb7dc0aca4a9",
+          "occurrence": 1,
+          "preview": "* **43項目目（電話番号未登録生徒のリンク抑止検証［公開デモ］）**：公開検証サイト（`https://eigo-taxi-test.web.app/#/admin`）の管理者デモ画面で電話番号未登録の生徒を新規登録し、生徒台帳上に `a[href=\"tel:\"]` が0件、"
+        },
+        {
+          "id": "DOC-0645-ITEM-00009",
+          "line": 13,
+          "contentSha256": "651d7b3dc128330ea0bbd4dab4f5a0f5d59270a241b43885b1225580bf00ddad",
+          "occurrence": 1,
+          "preview": "* **44項目目（管理者画面カード・予定操作ボタン属性検証［公開デモ］）**：公開検証サイトの管理者デモ（「生徒・チケット管理」「本日の送迎」）にて、「新規生徒を登録」「チケット追加」「予約」「送迎完了」の各ボタンに `type=\"button\"` が付与されていることを確認し"
+        },
+        {
+          "id": "DOC-0645-ITEM-00010",
+          "line": 15,
+          "contentSha256": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+          "occurrence": 1,
+          "preview": "---"
+        },
+        {
+          "id": "DOC-0645-ITEM-00011",
+          "line": 17,
+          "contentSha256": "76c3519755d39acf199783847365abea0c2ba4aec32426a7addbe54a9ff2b9a7",
+          "occurrence": 1,
+          "preview": "### 【公開環境・確認範囲】"
+        },
+        {
+          "id": "DOC-0645-ITEM-00012",
+          "line": 18,
+          "contentSha256": "b8f8e26627fdd283f6f45ab1ae8e53d01b7ab6cd92e292bebaf1c240ff354448",
+          "occurrence": 1,
+          "preview": "* **検証サイト**: https://eigo-taxi-test.web.app/"
+        },
+        {
+          "id": "DOC-0645-ITEM-00013",
+          "line": 19,
+          "contentSha256": "475e6fc8c7f769365991a1c885705518d898b2443c0983df33d144daa5def324",
+          "occurrence": 1,
+          "preview": "* **反映版 (`sourceDigest`)**: `dd63a35e9de9bcae332d72c32423170fb8f69795e434e7e47bcd961838d4507f`（ビルド時刻: `2026-11-21T00:03:39.810Z`）"
+        },
+        {
+          "id": "DOC-0645-ITEM-00014",
+          "line": 20,
+          "contentSha256": "547d04059f9a2853ba6e669d6e07d6927ac22187d372abeeafd50dc68059152d",
+          "occurrence": 1,
+          "preview": "* **配信照合**: [public-2026-11-21T00-04-32-370Z.json](../acceptance/deployment-verification/public-2026-11-21T00-04-32-370Z.json)（全7ファイル SHA-25"
+        },
+        {
+          "id": "DOC-0645-ITEM-00015",
+          "line": 21,
+          "contentSha256": "5e2f3c5c1b734865260f62105497fe74df281a997ea80c03a4861181f2ca6783",
+          "occurrence": 1,
+          "preview": "* **公開UI証跡**: [public-ui-fortyfour.json](../../outputs/daily-20261121/public-ui-fortyfour.json)"
+        },
+        {
+          "id": "DOC-0645-ITEM-00016",
+          "line": 22,
+          "contentSha256": "f05b4c87239863444f5738c59c27a6864e67fabeb0482abfb963cdc48a292ac6",
+          "occurrence": 1,
+          "preview": "* **顧客確認・本番状況**: 小林様の顧客確認6手順（`CUST-01`〜`CUST-06`）は 0/6件（未実施）、顧客用の検証データはそのまま維持しており、**本番運用は開始していません**。"
+        }
+      ]
+    },
+    {
       "id": "DOC-0644",
       "path": "docs/progress/2026-11-21-cumulative-fortytwo.md",
       "state": "historical",

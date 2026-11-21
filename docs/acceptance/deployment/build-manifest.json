@@ -3,9 +3,9 @@
     "environment": "mighty-test",
     "projectId": "eigo-taxi-app",
     "siteId": "eigo-taxi-test",
-    "builtAt": "2026-11-20T22:19:25.939Z",
-    "baseCommit": "41d1c923994135f073de0562ec60d9ca299690e8",
-    "sourceDigest": "ffff7b3716ff2a44976c1ef0d8ea248bf9f8f5b01137cab3a2bef50dfa1df564"
+    "builtAt": "2026-11-21T00:03:39.810Z",
+    "baseCommit": "0b7f9c5f63b5bae4e944d6a43a8373c8883327b2",
+    "sourceDigest": "dd63a35e9de9bcae332d72c32423170fb8f69795e434e7e47bcd961838d4507f"
   },
   "sourceHashes": {
     ".firebaserc": "cb2d89a95d2550bcd6d4e2478e2bb8b7844c05bf79fec042220f226c815519f2",
@@ -30,7 +30,7 @@
     "src/components/Navbar.tsx": "77d967411aab9b6ec1181f22a9fa44caebf82fa59197aad9d63fc63f2594a3b0",
     "src/components/ParentPortal.tsx": "67163575d2d93c00de4588be2933d1e474febc0a3a0615db413683ebd86d4cce",
     "src/components/PortalInvitations.tsx": "9c05d751fdd5912a6b31f641ef5265b699d73fb7fa5e368bc3c4f6e42804b845",
-    "src/components/TeacherDashboard.tsx": "2580da87b909807af58be3878412c6bccc88ab25368e7928162b2a9cd5260d3c",
+    "src/components/TeacherDashboard.tsx": "62cd608227041fe1fab81b3c27e03ec2dc8d3f89438bd4d3dd2c189fbd915fa3",
     "src/components/TermsModal.tsx": "9dad73ee08119eaf0d6dad5d56a5df9171d25c3ec8936cc502a80b9eb0984f83",
     "src/deployment-config.ts": "5c30aad36376487fcf2fbb664f2574bdd430890191675ca9813b5fdea516b6f1",
     "src/index.css": "66baff8b6d7a116920270aba8584dd856cf5de345b59b511b849b96152ce91d8",
@@ -42,11 +42,11 @@
     "vite.config.ts": "116056c4029005abca8bc3a1ff86b54d37fd33e22530d43a59194969e4929e77"
   },
   "distHashes": {
-    "dist/assets/index-DxSmkVSF.js": "30244e0f9d54324ca1ecedff1fba15aa778cd811da52f82dcab070e203f5703a",
+    "dist/assets/index-BRb5-oxF.js": "2b6e9d71e8aeb98d308d960e9f44e38f9332d024e2b26bb31ca535e53b7cb249",
     "dist/assets/index-gPaggmg7.css": "6d123eabd5ffa8878b5ec79fdccef06e8b96b3ba93ab0cda5093670185575d0e",
     "dist/favicon.svg": "61bc9a161de58248288e6905425d7180f0624c2865007b97d763fdac12043a66",
     "dist/icons.svg": "b45fa506195cfcdef406ba9f0c77b36ddc1a7c224040926ec70abc2fdea7b93a",
-    "dist/index.html": "e1b562c3e2bd5afa1bc571c3702788d356b92387c348cfb79476a954c3e1dc40",
-    "dist/release.json": "fd486581d4f635e143089cefd80aa8852e10e3f6319242192dd59f8fb8d67892"
+    "dist/index.html": "78191c0af98935684128d4082e1a0b327ada70743b0bda381448a1e5fa92af53",
+    "dist/release.json": "dac8ec3a0d37964fce183e9dc3ea5c845da9ef2834605611e05dfbf28a435e9a"
   }
 }

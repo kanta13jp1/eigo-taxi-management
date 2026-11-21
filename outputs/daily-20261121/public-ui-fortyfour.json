@@ -1,0 +1,23 @@
+{
+  "checkedAt": "2026-11-21T00:04:58.949Z",
+  "url": "https://eigo-taxi-test.web.app",
+  "fix43NoEmptyTelLink": {
+    "pass": true,
+    "emptyTelLinks": 0,
+    "validTelLinks": 3,
+    "hasUnregisteredSpan": true
+  },
+  "fix44TeacherButtons": {
+    "pass": true,
+    "studentTabBtnTypes": {
+      "addStudentType": "button",
+      "cardAddTicketType": "button",
+      "cardReserveType": "button"
+    },
+    "todayEmptyOrActionBtnType": {
+      "emptyAddType": null,
+      "completeType": "button"
+    }
+  },
+  "errors": []
+}

@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "mode": "LOCAL_MOCK_UI_REHEARSAL",
-  "runStartedAt": "2026-11-20T22:21:36.316Z",
-  "finishedAt": "2026-11-20T22:22:47.659Z",
+  "runStartedAt": "2026-11-21T00:05:52.498Z",
+  "finishedAt": "2026-11-21T00:06:59.909Z",
   "nodeVersion": "24.22.1",
   "browserVersion": "158.0.8127.36",
   "timezone": "Asia/Tokyo",
@@ -22,7 +22,7 @@
     "src/components/Navbar.tsx": "77d967411aab9b6ec1181f22a9fa44caebf82fa59197aad9d63fc63f2594a3b0",
     "src/components/ParentPortal.tsx": "67163575d2d93c00de4588be2933d1e474febc0a3a0615db413683ebd86d4cce",
     "src/components/PortalInvitations.tsx": "9c05d751fdd5912a6b31f641ef5265b699d73fb7fa5e368bc3c4f6e42804b845",
-    "src/components/TeacherDashboard.tsx": "2580da87b909807af58be3878412c6bccc88ab25368e7928162b2a9cd5260d3c",
+    "src/components/TeacherDashboard.tsx": "62cd608227041fe1fab81b3c27e03ec2dc8d3f89438bd4d3dd2c189fbd915fa3",
     "src/components/TermsModal.tsx": "9dad73ee08119eaf0d6dad5d56a5df9171d25c3ec8936cc502a80b9eb0984f83",
     "src/deployment-config.ts": "5c30aad36376487fcf2fbb664f2574bdd430890191675ca9813b5fdea516b6f1",
     "src/index.css": "66baff8b6d7a116920270aba8584dd856cf5de345b59b511b849b96152ce91d8",
@@ -41,8 +41,8 @@
   },
   "buildHashes": {
     "assets/index-gPaggmg7.css": "6d123eabd5ffa8878b5ec79fdccef06e8b96b3ba93ab0cda5093670185575d0e",
-    "assets/index-_N-sHurn.js": "25cf05ad761867aa5f4381d56a234fd1a48ed6861ea5bd17988da153ba933183",
-    "index.html": "e8d61df77dab871b7eb5f38dc47da7a66688fcd1cbcb3c8871b287f506bb2860"
+    "assets/index-H0dwJWJL.js": "2d71c948b09a5d4b2c7f691fb45f8d1c95ae43dc0fad8a006bd723705d9360b9",
+    "index.html": "6b6e6ace82ab7329a6aa8561049503c449aba88df139a26dfb49e2cf710a5936"
   },
   "changedSources": [],
   "externalRequests": [],
@@ -76,8 +76,8 @@
         "file": "LOCAL-UI-01.png",
         "sha256": "36a7f1adc8745c2770ac40760ea3fedb7535c7b9799887efbcb7ae79e3b05b59"
       },
-      "startedAt": "2026-11-20T22:22:17.922Z",
-      "finishedAt": "2026-11-20T22:22:18.747Z"
+      "startedAt": "2026-11-21T00:06:35.386Z",
+      "finishedAt": "2026-11-21T00:06:36.142Z"
     },
     {
       "id": "LOCAL-UI-02",
@@ -91,8 +91,8 @@
         "file": "LOCAL-UI-02.png",
         "sha256": "8f1d45e5c769cf04c5d7a61a08c313fc9f8aa73d30c16de005cffc86a2b1ccb6"
       },
-      "startedAt": "2026-11-20T22:22:18.747Z",
-      "finishedAt": "2026-11-20T22:22:20.304Z"
+      "startedAt": "2026-11-21T00:06:36.143Z",
+      "finishedAt": "2026-11-21T00:06:37.196Z"
     },
     {
       "id": "LOCAL-UI-03",
@@ -105,8 +105,8 @@
         "file": "LOCAL-UI-03.png",
         "sha256": "6d89e7cfe6528f0112a85e445d2a75c8cb491600d201bbd3857feecd05c61cc9"
       },
-      "startedAt": "2026-11-20T22:22:20.304Z",
-      "finishedAt": "2026-11-20T22:22:22.647Z"
+      "startedAt": "2026-11-21T00:06:37.196Z",
+      "finishedAt": "2026-11-21T00:06:38.956Z"
     },
     {
       "id": "LOCAL-UI-04",
@@ -119,8 +119,8 @@
         "file": "LOCAL-UI-04.png",
         "sha256": "9c42da378e78c014e31a634c3826a7c4a2205707d990d51c4317e7829069d08e"
       },
-      "startedAt": "2026-11-20T22:22:22.647Z",
-      "finishedAt": "2026-11-20T22:22:24.857Z"
+      "startedAt": "2026-11-21T00:06:38.956Z",
+      "finishedAt": "2026-11-21T00:06:40.844Z"
     },
     {
       "id": "LOCAL-UI-05",
@@ -133,8 +133,8 @@
         "file": "LOCAL-UI-05.png",
         "sha256": "bd1687a53074256931f24c54d8fa00c751cadc0d2fb900deee18718db575e98d"
       },
-      "startedAt": "2026-11-20T22:22:24.857Z",
-      "finishedAt": "2026-11-20T22:22:26.900Z"
+      "startedAt": "2026-11-21T00:06:40.845Z",
+      "finishedAt": "2026-11-21T00:06:42.557Z"
     },
     {
       "id": "LOCAL-UI-06",
@@ -147,8 +147,8 @@
         "file": "LOCAL-UI-06.png",
         "sha256": "2b845001c70be6ba5a8cebc5f8d910c07f7a3b64d74b6c6efcb14b64a3341996"
       },
-      "startedAt": "2026-11-20T22:22:26.900Z",
-      "finishedAt": "2026-11-20T22:22:28.351Z"
+      "startedAt": "2026-11-21T00:06:42.557Z",
+      "finishedAt": "2026-11-21T00:06:43.744Z"
     },
     {
       "id": "LOCAL-UI-07",
@@ -162,8 +162,8 @@
         "file": "LOCAL-UI-07.png",
         "sha256": "8f6a3af2b6814da38a56474cbf0db6e3ed354222630b667a20c57459354f699a"
       },
-      "startedAt": "2026-11-20T22:22:28.351Z",
-      "finishedAt": "2026-11-20T22:22:31.503Z"
+      "startedAt": "2026-11-21T00:06:43.744Z",
+      "finishedAt": "2026-11-21T00:06:45.528Z"
     },
     {
       "id": "LOCAL-UI-08",
@@ -177,8 +177,8 @@
         "file": "LOCAL-UI-08.png",
         "sha256": "4bba98b077599752972f8951a4f175640a595bd09d6b9a7102506934d63658dc"
       },
-      "startedAt": "2026-11-20T22:22:31.503Z",
-      "finishedAt": "2026-11-20T22:22:34.422Z"
+      "startedAt": "2026-11-21T00:06:45.528Z",
+      "finishedAt": "2026-11-21T00:06:47.220Z"
     },
     {
       "id": "LOCAL-UI-09",
@@ -192,8 +192,8 @@
         "file": "LOCAL-UI-09.png",
         "sha256": "e3e1fe6b6b693266e9be4d47d68df2806d61d304628d9de60b9ed87ff9bc52bf"
       },
-      "startedAt": "2026-11-20T22:22:34.422Z",
-      "finishedAt": "2026-11-20T22:22:36.357Z"
+      "startedAt": "2026-11-21T00:06:47.220Z",
+      "finishedAt": "2026-11-21T00:06:49.150Z"
     },
     {
       "id": "LOCAL-UI-10",
@@ -206,8 +206,8 @@
         "file": "LOCAL-UI-10.png",
         "sha256": "2cb3ef01176be31895957c8a97c3bc543eb0587819a2d0a8dd900351fb51bcf1"
       },
-      "startedAt": "2026-11-20T22:22:36.358Z",
-      "finishedAt": "2026-11-20T22:22:37.612Z"
+      "startedAt": "2026-11-21T00:06:49.150Z",
+      "finishedAt": "2026-11-21T00:06:50.114Z"
     },
     {
       "id": "LOCAL-UI-11",
@@ -221,8 +221,8 @@
         "file": "LOCAL-UI-11.png",
         "sha256": "8f1d45e5c769cf04c5d7a61a08c313fc9f8aa73d30c16de005cffc86a2b1ccb6"
       },
-      "startedAt": "2026-11-20T22:22:37.612Z",
-      "finishedAt": "2026-11-20T22:22:39.512Z"
+      "startedAt": "2026-11-21T00:06:50.114Z",
+      "finishedAt": "2026-11-21T00:06:51.966Z"
     },
     {
       "id": "LOCAL-UI-12",
@@ -236,8 +236,8 @@
         "file": "LOCAL-UI-12.png",
         "sha256": "fee7bf58867eb0a18c91db86a181a7c014d97f9826f2f15211499c56f2c0ba0b"
       },
-      "startedAt": "2026-11-20T22:22:39.512Z",
-      "finishedAt": "2026-11-20T22:22:41.327Z"
+      "startedAt": "2026-11-21T00:06:51.966Z",
+      "finishedAt": "2026-11-21T00:06:53.514Z"
     },
     {
       "id": "LOCAL-UI-13",
@@ -251,8 +251,8 @@
         "file": "LOCAL-UI-13.png",
         "sha256": "36a7f1adc8745c2770ac40760ea3fedb7535c7b9799887efbcb7ae79e3b05b59"
       },
-      "startedAt": "2026-11-20T22:22:41.327Z",
-      "finishedAt": "2026-11-20T22:22:43.025Z"
+      "startedAt": "2026-11-21T00:06:53.514Z",
+      "finishedAt": "2026-11-21T00:06:55.419Z"
     },
     {
       "id": "LOCAL-UI-14",
@@ -265,8 +265,8 @@
         "file": "LOCAL-UI-14.png",
         "sha256": "9d3d6caf613b065fe3780f7f316e9bbc77b9364d81f3ca3df8b62f8b8fc19f92"
       },
-      "startedAt": "2026-11-20T22:22:43.025Z",
-      "finishedAt": "2026-11-20T22:22:47.301Z"
+      "startedAt": "2026-11-21T00:06:55.420Z",
+      "finishedAt": "2026-11-21T00:06:59.594Z"
     }
   ],
   "thirdPartyPassed": 0,
