@@ -59,9 +59,9 @@ export function LoginScreen({ onLogin, route, requiresLogin }: { requiresLogin?:
                 <p>このGoogleアカウントは、保護者用の入口には登録されていません。保護者の方は、教室から届いたご家庭専用のURLまたはQRコードを開いてください。</p>
                 <p>先生・管理者の方は、管理者専用の入口からログインしてください。</p>
               </> : <p>このGoogleアカウントは、管理者用の入口には登録されていません。生徒・保護者の方は、教室から届いたご家庭専用のURLまたはQRコードを開いてください。</p>}
-              {role === 'parent' && <a href="#/admin" className="inline-block rounded-lg border border-slate-300 bg-white p-2 font-bold">管理者専用の入口を開く</a>}
+              {role === 'parent' && <a href="#/admin" className="inline-block rounded-lg border border-slate-300 bg-white p-2 font-bold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-500">管理者専用の入口を開く</a>}
             </div>}
-            {configured && setupFailed && <button type="button" disabled={busy} onClick={async () => {
+            {configured && setupFailed && <button type="button" disabled={busy} aria-busy={busy} onClick={async () => {
               setBusy(true); setError('');
               try { await prepareGoogleSignIn(); setGoogleReady(true); setSetupFailed(false); }
               catch (err) { setError(err instanceof Error ? err.message : 'ログインを準備できませんでした。'); }
@@ -69,10 +69,10 @@ export function LoginScreen({ onLogin, route, requiresLogin }: { requiresLogin?:
             }} className="rounded-lg border p-3 text-sm disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-500">ログインの準備を再試行</button>}
             <p className="text-xs text-slate-600">ログインできない場合は、使用するGoogleアカウントを教室の担当者にご確認ください。</p>
           </>}
-          {(route.kind === 'admin' || (route.kind === 'parent' && (!route.entryId || route.entryId === DEMO_ENTRY_ID))) && <section className="space-y-3 border-t pt-4">
-            <h2 className="font-semibold">操作を体験する（架空データ）</h2>
-            <p className="text-xs text-slate-600">デモの操作はこのブラウザ内だけに保存されます。</p>
-            <button type="button" disabled={busy} onClick={()=>onLogin(ApiService.enterDemo(role))} className="rounded-lg border p-3 text-sm disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-500">{role === 'admin' ? '管理者デモを開く' : '保護者デモを開く'}</button>
+          {(route.kind === 'admin' || (route.kind === 'parent' && (!route.entryId || route.entryId === DEMO_ENTRY_ID))) && <section aria-labelledby="demo-entry-heading" className="space-y-3 border-t pt-4">
+            <h2 id="demo-entry-heading" className="font-semibold">操作を体験する（架空データ）</h2>
+            <p id="demo-entry-note" className="text-xs text-slate-600">デモの操作はこのブラウザ内だけに保存されます。</p>
+            <button type="button" disabled={busy} aria-describedby="demo-entry-note" onClick={()=>onLogin(ApiService.enterDemo(role))} className="rounded-lg border p-3 text-sm disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-500">{role === 'admin' ? '管理者デモを開く' : '保護者デモを開く'}</button>
           </section>}
         </>}
       </div>

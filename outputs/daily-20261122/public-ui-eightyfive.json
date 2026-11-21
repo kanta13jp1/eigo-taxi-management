@@ -1,0 +1,43 @@
+{
+  "checkedAt": "2026-11-21T22:55:05.937Z",
+  "url": "https://eigo-taxi-test.web.app",
+  "fix83AddStudentModalIconsAutocompleteAndLocks": {
+    "pass": true,
+    "svgCount": 6,
+    "allSvgsAriaHidden": true,
+    "nameValid": true,
+    "parentValid": true,
+    "phoneValid": true,
+    "balanceValid": true,
+    "addressValid": true,
+    "noteValid": true
+  },
+  "fix84AddTicketModalIconsLocksAndPreview": {
+    "pass": true,
+    "svgCount": 3,
+    "allSvgsAriaHidden": true,
+    "studentDisabledOpacity": true,
+    "countDisabledOpacity": true,
+    "amountDisabledOpacity": true,
+    "noteDisabledOpacity": true,
+    "countDescribedBy": "ticket-balance-preview",
+    "previewRole": "status",
+    "previewHasText": true
+  },
+  "fix85LoginScreenDemoLandmarks": {
+    "pass": true,
+    "parentDemoCheck": {
+      "hasSectionLabelledBy": true,
+      "hasHeadingId": true,
+      "hasNoteId": true,
+      "btnDescribedBy": "demo-entry-note"
+    },
+    "adminDemoCheck": {
+      "hasSectionLabelledBy": true,
+      "hasHeadingId": true,
+      "hasNoteId": true,
+      "btnDescribedBy": "demo-entry-note"
+    }
+  },
+  "errors": []
+}

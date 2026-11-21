@@ -18,7 +18,7 @@
   "src/App.tsx": "57273445ec7e69e0f167235ccbc061c67af0996b9076108780645dc15ca95802",
   "src/components/AccountManagement.tsx": "0126595ddbd5444e1064439b1b6e33c60ecd3e4b463368cec6566e970061af39",
   "src/components/AddRideModal.tsx": "5e4eba810cfa3548766c779ce2f5a99090a18a6762574acc557c5a0c4bd1931c",
-  "src/components/LoginScreen.tsx": "5d755c4aa46fe4cfdbd0fe0f9903bf06c15d521e435df7d19e9891abac391769",
+  "src/components/LoginScreen.tsx": "e5bb1cba35936aa8ea9d382f7336819c86275dc7df303a58ea0eedb02002928b",
   "src/components/Navbar.tsx": "ff2057a9ed768bcdfe0eb96538b75b6240a35266b1e7151139aea2527667d924",
   "src/components/ParentPortal.tsx": "badc556b31a0503969cf8d4a62e6bf69e4e26af8d0c435356e1ecfb2701601fd",
   "src/components/PortalInvitations.tsx": "f92b998977c00bc133d424755c38d58d029ace038edd7fbecc8329b825b71bcf",

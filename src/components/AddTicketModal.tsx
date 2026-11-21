@@ -97,7 +97,7 @@ const AddTicketModalContent: React.FC<AddTicketModalProps> = ({
         <div className="px-6 py-4 border-b border-slate-100 flex items-center justify-between bg-emerald-50/50">
           <div className="flex items-center gap-2">
             <div className="p-2 rounded-xl bg-emerald-100 text-emerald-700">
-              <Ticket className="w-5 h-5" />
+              <Ticket className="w-5 h-5" aria-hidden="true" />
             </div>
             <div>
               <h3 id="add-ticket-modal-title" className="font-bold text-slate-800 text-base">チケット購入・追加</h3>
@@ -111,7 +111,7 @@ const AddTicketModalContent: React.FC<AddTicketModalProps> = ({
             onClick={onClose}
             className="p-1 rounded-full text-slate-400 hover:text-slate-600 hover:bg-slate-100 transition-colors disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-400"
           >
-            <X className="w-5 h-5" />
+            <X className="w-5 h-5" aria-hidden="true" />
           </button>
         </div>
 
@@ -123,9 +123,9 @@ const AddTicketModalContent: React.FC<AddTicketModalProps> = ({
             <select
               id="ticket-student"
               value={studentId}
-              disabled={students.length === 0}
+              disabled={isSubmitting || students.length === 0}
               onChange={(e) => setStudentId(e.target.value)}
-              className="w-full px-3 py-2 border border-slate-200 rounded-xl focus:outline-hidden focus:ring-2 focus:ring-emerald-500 font-medium text-slate-800 text-sm"
+              className="w-full px-3 py-2 border border-slate-200 rounded-xl focus:outline-hidden focus:ring-2 focus:ring-emerald-500 font-medium text-slate-800 text-sm disabled:opacity-50"
             >
               {students.length === 0 && <option value="">登録済みの生徒がいません</option>}
               {students.map((student) => (
@@ -135,7 +135,7 @@ const AddTicketModalContent: React.FC<AddTicketModalProps> = ({
               ))}
             </select>
             {selectedStudent && (
-              <p className="text-xs text-slate-500 mt-1">
+              <p id="ticket-balance-preview" role="status" className="text-xs text-slate-500 mt-1">
                 現在の残数: <span className="font-bold text-slate-800">{selectedStudent.ticketBalance}枚</span> →
                 追加後: <span className="font-bold text-emerald-600">{selectedStudent.ticketBalance + previewAddCount}枚</span>
               </p>
@@ -193,9 +193,11 @@ const AddTicketModalContent: React.FC<AddTicketModalProps> = ({
                 max="100"
                 step="1"
                 inputMode="numeric"
+                disabled={isSubmitting}
+                aria-describedby={selectedStudent ? 'ticket-balance-preview' : undefined}
                 value={ticketCountInput}
                 onChange={(e) => setTicketCountInput(e.target.value)}
-                className="w-full px-3 py-2 border border-slate-200 rounded-xl focus:outline-hidden focus:ring-2 focus:ring-emerald-500 text-slate-800 text-sm font-semibold"
+                className="w-full px-3 py-2 border border-slate-200 rounded-xl focus:outline-hidden focus:ring-2 focus:ring-emerald-500 text-slate-800 text-sm font-semibold disabled:opacity-50"
                 required
               />
             </div>
@@ -208,9 +210,10 @@ const AddTicketModalContent: React.FC<AddTicketModalProps> = ({
                 step="1"
                 inputMode="numeric"
                 required
+                disabled={isSubmitting}
                 value={amountInput}
                 onChange={(e) => setAmountInput(e.target.value)}
-                className="w-full px-3 py-2 border border-slate-200 rounded-xl focus:outline-hidden focus:ring-2 focus:ring-emerald-500 text-slate-800 text-sm font-semibold"
+                className="w-full px-3 py-2 border border-slate-200 rounded-xl focus:outline-hidden focus:ring-2 focus:ring-emerald-500 text-slate-800 text-sm font-semibold disabled:opacity-50"
               />
             </div>
           </div>
@@ -222,10 +225,11 @@ const AddTicketModalContent: React.FC<AddTicketModalProps> = ({
               id="ticket-note"
               type="text"
               maxLength={200}
+              disabled={isSubmitting}
               value={note}
               onChange={(e) => setNote(e.target.value)}
               placeholder="例: 現金受領 / 口座振込確認済み"
-              className="w-full px-3 py-2 border border-slate-200 rounded-xl focus:outline-hidden focus:ring-2 focus:ring-emerald-500 text-slate-800 text-sm"
+              className="w-full px-3 py-2 border border-slate-200 rounded-xl focus:outline-hidden focus:ring-2 focus:ring-emerald-500 text-slate-800 text-sm disabled:opacity-50"
             />
           </div>
 
@@ -245,7 +249,7 @@ const AddTicketModalContent: React.FC<AddTicketModalProps> = ({
               aria-busy={isSubmitting}
               className="flex-1 py-2.5 px-4 rounded-xl bg-emerald-600 text-white font-semibold hover:bg-emerald-700 transition-colors flex items-center justify-center gap-1.5 shadow-sm text-sm disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
             >
-              <PlusCircle className="w-4 h-4" />
+              <PlusCircle className="w-4 h-4" aria-hidden="true" />
               {isSubmitting ? '処理中...' : 'チケットを追加する'}
             </button>
           </div>
