@@ -92,11 +92,12 @@ const AddStudentModalContent: React.FC<AddStudentModalProps> = ({
           {error && <p role="alert" className="rounded-lg bg-rose-50 p-3 text-sm text-rose-800">{error}</p>}
           <div className="grid grid-cols-2 gap-3">
             <div>
-              <label className="block text-xs font-semibold text-slate-600 mb-1 flex items-center gap-1">
+              <label htmlFor="student-name" className="block text-xs font-semibold text-slate-600 mb-1 flex items-center gap-1">
                 <User className="w-3.5 h-3.5 text-emerald-600" />
                 生徒氏名 (ふりがな)
               </label>
               <input
+                id="student-name"
                 type="text"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
@@ -106,8 +107,9 @@ const AddStudentModalContent: React.FC<AddStudentModalProps> = ({
               />
             </div>
             <div>
-              <label className="block text-xs font-semibold text-slate-600 mb-1">保護者氏名</label>
+              <label htmlFor="student-parent" className="block text-xs font-semibold text-slate-600 mb-1">保護者氏名</label>
               <input
+                id="student-parent"
                 type="text"
                 value={parentName}
                 onChange={(e) => setParentName(e.target.value)}
@@ -119,11 +121,12 @@ const AddStudentModalContent: React.FC<AddStudentModalProps> = ({
 
           <div className="grid grid-cols-2 gap-3">
             <div>
-              <label className="block text-xs font-semibold text-slate-600 mb-1 flex items-center gap-1">
+              <label htmlFor="student-phone" className="block text-xs font-semibold text-slate-600 mb-1 flex items-center gap-1">
                 <Phone className="w-3.5 h-3.5 text-slate-400" />
                 緊急連絡先 (電話番号)
               </label>
               <input
+                id="student-phone"
                 type="tel"
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
@@ -132,8 +135,9 @@ const AddStudentModalContent: React.FC<AddStudentModalProps> = ({
               />
             </div>
             <div>
-              <label className="block text-xs font-semibold text-slate-600 mb-1">初期チケット枚数</label>
+              <label htmlFor="student-balance" className="block text-xs font-semibold text-slate-600 mb-1">初期チケット枚数</label>
               <input
+                id="student-balance"
                 type="number"
                 min="0"
                 step="1"
@@ -146,11 +150,12 @@ const AddStudentModalContent: React.FC<AddStudentModalProps> = ({
           </div>
 
           <div>
-            <label className="block text-xs font-semibold text-slate-600 mb-1 flex items-center gap-1">
+            <label htmlFor="student-address" className="block text-xs font-semibold text-slate-600 mb-1 flex items-center gap-1">
               <MapPin className="w-3.5 h-3.5 text-emerald-600" />
               送迎場所・ご自宅住所
             </label>
             <input
+              id="student-address"
               type="text"
               value={address}
               onChange={(e) => setAddress(e.target.value)}
@@ -161,8 +166,9 @@ const AddStudentModalContent: React.FC<AddStudentModalProps> = ({
           </div>
 
           <div>
-            <label className="block text-xs font-semibold text-slate-600 mb-1">送迎時の注意メモ</label>
+            <label htmlFor="student-note" className="block text-xs font-semibold text-slate-600 mb-1">送迎時の注意メモ</label>
             <input
+              id="student-note"
               type="text"
               value={pickupNote}
               onChange={(e) => setPickupNote(e.target.value)}

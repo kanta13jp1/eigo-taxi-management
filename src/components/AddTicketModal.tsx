@@ -97,8 +97,9 @@ const AddTicketModalContent: React.FC<AddTicketModalProps> = ({
           {error && <p role="alert" className="rounded-lg bg-rose-50 p-3 text-sm text-rose-800">{error}</p>}
           {/* 対象生徒 */}
           <div>
-            <label className="block text-xs font-semibold text-slate-600 mb-1">対象の生徒</label>
+            <label htmlFor="ticket-student" className="block text-xs font-semibold text-slate-600 mb-1">対象の生徒</label>
             <select
+              id="ticket-student"
               value={studentId}
               onChange={(e) => setStudentId(e.target.value)}
               className="w-full px-3 py-2 border border-slate-200 rounded-xl focus:outline-hidden focus:ring-2 focus:ring-emerald-500 font-medium text-slate-800 text-sm"
@@ -119,7 +120,7 @@ const AddTicketModalContent: React.FC<AddTicketModalProps> = ({
 
           {/* プリセット選択ボタン */}
           <div>
-            <label className="block text-xs font-semibold text-slate-600 mb-1.5">よく使うセット</label>
+            <p className="block text-xs font-semibold text-slate-600 mb-1.5">よく使うセット</p>
             <div className="grid grid-cols-3 gap-2">
               <button
                 type="button"
@@ -154,8 +155,9 @@ const AddTicketModalContent: React.FC<AddTicketModalProps> = ({
           {/* 枚数と金額 */}
           <div className="grid grid-cols-2 gap-3">
             <div>
-              <label className="block text-xs font-semibold text-slate-600 mb-1">追加枚数（回）</label>
+              <label htmlFor="ticket-count" className="block text-xs font-semibold text-slate-600 mb-1">追加枚数（回）</label>
               <input
+                id="ticket-count"
                 type="number"
                 min="1"
                 max="100"
@@ -166,8 +168,9 @@ const AddTicketModalContent: React.FC<AddTicketModalProps> = ({
               />
             </div>
             <div>
-              <label className="block text-xs font-semibold text-slate-600 mb-1">受取金額 (円)</label>
+              <label htmlFor="ticket-amount" className="block text-xs font-semibold text-slate-600 mb-1">受取金額 (円)</label>
               <input
+                id="ticket-amount"
                 type="number"
                 min="0"
                 step="1"
@@ -181,8 +184,9 @@ const AddTicketModalContent: React.FC<AddTicketModalProps> = ({
 
           {/* 備考 */}
           <div>
-            <label className="block text-xs font-semibold text-slate-600 mb-1">メモ（任意）</label>
+            <label htmlFor="ticket-note" className="block text-xs font-semibold text-slate-600 mb-1">メモ（任意）</label>
             <input
+              id="ticket-note"
               type="text"
               value={note}
               onChange={(e) => setNote(e.target.value)}

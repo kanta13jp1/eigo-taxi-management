@@ -1,0 +1,76 @@
+{
+  "checkedAt": "2026-11-21T00:59:36.794Z",
+  "url": "https://eigo-taxi-test.web.app",
+  "fix49AddStudentModalLabels": {
+    "pass": true,
+    "studentLabels": [
+      {
+        "id": "student-name",
+        "inputExists": true,
+        "labelExists": true,
+        "labelControlsMatch": true
+      },
+      {
+        "id": "student-parent",
+        "inputExists": true,
+        "labelExists": true,
+        "labelControlsMatch": true
+      },
+      {
+        "id": "student-phone",
+        "inputExists": true,
+        "labelExists": true,
+        "labelControlsMatch": true
+      },
+      {
+        "id": "student-balance",
+        "inputExists": true,
+        "labelExists": true,
+        "labelControlsMatch": true
+      },
+      {
+        "id": "student-address",
+        "inputExists": true,
+        "labelExists": true,
+        "labelControlsMatch": true
+      },
+      {
+        "id": "student-note",
+        "inputExists": true,
+        "labelExists": true,
+        "labelControlsMatch": true
+      }
+    ]
+  },
+  "fix50AddTicketModalLabels": {
+    "pass": true,
+    "checks": [
+      {
+        "id": "ticket-student",
+        "controlExists": true,
+        "labelExists": true,
+        "labelControlsMatch": true
+      },
+      {
+        "id": "ticket-count",
+        "controlExists": true,
+        "labelExists": true,
+        "labelControlsMatch": true
+      },
+      {
+        "id": "ticket-amount",
+        "controlExists": true,
+        "labelExists": true,
+        "labelControlsMatch": true
+      },
+      {
+        "id": "ticket-note",
+        "controlExists": true,
+        "labelExists": true,
+        "labelControlsMatch": true
+      }
+    ],
+    "presetLabelCount": 0
+  },
+  "errors": []
+}

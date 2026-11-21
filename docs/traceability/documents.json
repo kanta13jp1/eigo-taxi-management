@@ -71482,6 +71482,126 @@
       ]
     },
     {
+      "id": "DOC-0648",
+      "path": "docs/progress/2026-11-21-cumulative-fifty.md",
+      "state": "historical",
+      "sha256": "3dd20ccb565e43574426495daebdab61856ee0614e64c9eaf9bc13ccbadb1bd3",
+      "items": [
+        {
+          "id": "DOC-0648-ITEM-00001",
+          "line": 1,
+          "contentSha256": "9acbee90fea383d15553e050c865c435779c72a01a5c87a7d3848149e05b0110",
+          "occurrence": 1,
+          "preview": "# 11月21日 累計50件の実装修正・受入試験50項目（AddStudentModal / AddTicketModal ラベル紐付け改善）"
+        },
+        {
+          "id": "DOC-0648-ITEM-00002",
+          "line": 3,
+          "contentSha256": "e79e8976eb91cf8c58638c41a0a566d1ab36a7c78822c02c6008bfbd6635a453",
+          "occurrence": 1,
+          "preview": "小林さん、お疲れ様です。"
+        },
+        {
+          "id": "DOC-0648-ITEM-00003",
+          "line": 5,
+          "contentSha256": "03a781b55a5021181e934a9b28fae5687713e4006b5f76de6de8feed33e04fd9",
+          "occurrence": 1,
+          "preview": "11月21日の追加対応により、実装修正は**累計50件**、実施した異なる受入試験は**累計50項目**となりました（先行2件は Claude Code Fable 5.2 の対応分、追加48件が後続の対応分です）。"
+        },
+        {
+          "id": "DOC-0648-ITEM-00004",
+          "line": 7,
+          "contentSha256": "8f5ab1765bb46ef471ea84075d5e2de9b33c1153b4726c71d4270ad16bdb184e",
+          "occurrence": 1,
+          "preview": "### 【今回の追加修正内容（49〜50件目）】"
+        },
+        {
+          "id": "DOC-0648-ITEM-00005",
+          "line": 8,
+          "contentSha256": "31a920e1829b1c42aa200e3330ac7daf3d26d136970ec5bbec9243a6d494c111",
+          "occurrence": 1,
+          "preview": "* **49件目（`AddStudentModal.tsx`）**：新規生徒登録モーダルの全6入力項目（生徒氏名・保護者氏名・電話番号・初期チケット枚数・住所・注意メモ）について、`<label htmlFor=\"...\">` と `<input id=\"...\">` の紐付けを"
+        },
+        {
+          "id": "DOC-0648-ITEM-00006",
+          "line": 9,
+          "contentSha256": "94113063ced7cb500b37df7025b7d3f91fb5376a86b07bc38c006ecf02e8d20f",
+          "occurrence": 1,
+          "preview": "* **50件目（`AddTicketModal.tsx`）**：チケット追加モーダルの全4入力項目（対象生徒・追加枚数・受取金額・メモ）について、`<label htmlFor=\"...\">` と `<select>`/`<input id=\"...\">` の紐付けを明示し、単"
+        },
+        {
+          "id": "DOC-0648-ITEM-00007",
+          "line": 11,
+          "contentSha256": "a95a2db38979d26f65cbe2fbfee7f35e53eaa3a3e3bacebc321425ac8b9561d8",
+          "occurrence": 1,
+          "preview": "### 【今回実施した受入試験（49〜50項目目）】"
+        },
+        {
+          "id": "DOC-0648-ITEM-00008",
+          "line": 12,
+          "contentSha256": "8133ad5ddc92f0df4e1866367a8959b443c0b7c89d1979ef5587f598d0cabe22",
+          "occurrence": 1,
+          "preview": "* **49項目目（新規生徒登録モーダル・ラベル紐付け検証［公開デモ］）**：公開検証サイト（`https://eigo-taxi-test.web.app/#/admin`）で「新規生徒を登録」を開き、`student-name`〜`student-note` の6項目すべてで"
+        },
+        {
+          "id": "DOC-0648-ITEM-00009",
+          "line": 13,
+          "contentSha256": "48465f06d11ee1643588f2272b609435f063633fd752b17fba39fe28e30fdf05",
+          "occurrence": 1,
+          "preview": "* **50項目目（チケット追加モーダル・ラベル紐付け検証［公開デモ］）**：公開検証サイトで「チケット追加」を開き、`ticket-student`〜`ticket-note` の4項目すべてで `<label>` とフォーム要素の `labels` 参照が一致すること、および"
+        },
+        {
+          "id": "DOC-0648-ITEM-00010",
+          "line": 15,
+          "contentSha256": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+          "occurrence": 1,
+          "preview": "---"
+        },
+        {
+          "id": "DOC-0648-ITEM-00011",
+          "line": 17,
+          "contentSha256": "76c3519755d39acf199783847365abea0c2ba4aec32426a7addbe54a9ff2b9a7",
+          "occurrence": 1,
+          "preview": "### 【公開環境・確認範囲】"
+        },
+        {
+          "id": "DOC-0648-ITEM-00012",
+          "line": 18,
+          "contentSha256": "b8f8e26627fdd283f6f45ab1ae8e53d01b7ab6cd92e292bebaf1c240ff354448",
+          "occurrence": 1,
+          "preview": "* **検証サイト**: https://eigo-taxi-test.web.app/"
+        },
+        {
+          "id": "DOC-0648-ITEM-00013",
+          "line": 19,
+          "contentSha256": "75b6aa868734c39e45d7df700a13319844b85a05f6c2b6e43dbb7f1b7d03dd6b",
+          "occurrence": 1,
+          "preview": "* **反映版 (`sourceDigest`)**: `d2563efae8c507e632257e97fd0f4daae19bf85b07b0cdc36a7a168a8e7b7970`（ビルド時刻: `2026-11-21T00:58:46.218Z`）"
+        },
+        {
+          "id": "DOC-0648-ITEM-00014",
+          "line": 20,
+          "contentSha256": "1e76cd3b26fdc47d40d4f481615439c98811d306e4c55440cf6647bd2eb5f95d",
+          "occurrence": 1,
+          "preview": "* **配信照合**: [public-2026-11-21T00-59-14-434Z.json](../acceptance/deployment-verification/public-2026-11-21T00-59-14-434Z.json)（全7ファイル SHA-25"
+        },
+        {
+          "id": "DOC-0648-ITEM-00015",
+          "line": 21,
+          "contentSha256": "7558a3aeb37a941cd74e5365b6defa9df18bc11647adc9670be4fe8b46901501",
+          "occurrence": 1,
+          "preview": "* **公開UI証跡**: [public-ui-fifty.json](../../outputs/daily-20261121/public-ui-fifty.json)"
+        },
+        {
+          "id": "DOC-0648-ITEM-00016",
+          "line": 22,
+          "contentSha256": "f05b4c87239863444f5738c59c27a6864e67fabeb0482abfb963cdc48a292ac6",
+          "occurrence": 1,
+          "preview": "* **顧客確認・本番状況**: 小林様の顧客確認6手順（`CUST-01`〜`CUST-06`）は 0/6件（未実施）、顧客用の検証データはそのまま維持しており、**本番運用は開始していません**。"
+        }
+      ]
+    },
+    {
       "id": "DOC-0643",
       "path": "docs/progress/2026-11-21-cumulative-forty.md",
       "state": "historical",
