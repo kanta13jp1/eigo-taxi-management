@@ -71722,6 +71722,126 @@
       ]
     },
     {
+      "id": "DOC-0651",
+      "path": "docs/progress/2026-11-21-cumulative-fiftysix.md",
+      "state": "historical",
+      "sha256": "7db7bc50652d0457560077db9f040b6a23ee649c8408c63989db7bd9905ec819",
+      "items": [
+        {
+          "id": "DOC-0651-ITEM-00001",
+          "line": 1,
+          "contentSha256": "e9d8c94d89e4871b5e31fb8e2e69c8aee6b01b7457b6acc5059d4fe90cdc1336",
+          "occurrence": 1,
+          "preview": "# 11月21日 累計56件の実装修正・受入試験56項目（TeacherDashboard アクセシビリティ・一覧並び順・住所ツールチップ改善）"
+        },
+        {
+          "id": "DOC-0651-ITEM-00002",
+          "line": 3,
+          "contentSha256": "e79e8976eb91cf8c58638c41a0a566d1ab36a7c78822c02c6008bfbd6635a453",
+          "occurrence": 1,
+          "preview": "小林さん、お疲れ様です。"
+        },
+        {
+          "id": "DOC-0651-ITEM-00003",
+          "line": 5,
+          "contentSha256": "faab93f834138cdf1a2aade828ddd11bf5a6edb56fcd2713ffb56d11357ac89f",
+          "occurrence": 1,
+          "preview": "11月21日の追加対応により、実装修正は**累計56件**、実施した異なる受入試験は**累計56項目**となりました（先行2件は Claude Code Fable 5.2 の対応分、追加54件が後続の対応分です）。"
+        },
+        {
+          "id": "DOC-0651-ITEM-00004",
+          "line": 7,
+          "contentSha256": "8f58158d41ebf68eafad2d4c30d7a424e488cf5ad8b74eca2dcc2e1d42f26df2",
+          "occurrence": 1,
+          "preview": "### 【今回の追加修正内容（55〜56件目）】"
+        },
+        {
+          "id": "DOC-0651-ITEM-00005",
+          "line": 8,
+          "contentSha256": "ebd5f00126fa4f0101f29a4ffa425f3b00fe735dd44b1dd613f8e78a15a45845",
+          "occurrence": 1,
+          "preview": "* **55件目（`TeacherDashboard.tsx`）**：管理者画面のクリック可能な「チケット残り2枚以下」サマリーカードを `<div>` から `<button type=\"button\">` へ変更し、キーボードおよびスクリーンリーダー操作に対応しました。また、"
+        },
+        {
+          "id": "DOC-0651-ITEM-00006",
+          "line": 9,
+          "contentSha256": "0cd803b6264240aee3a7acf679640a70951af3843df028c711ada7712ba4a9ba",
+          "occurrence": 1,
+          "preview": "* **56件目（`TeacherDashboard.tsx`）**：「本日の送迎」カードを時刻昇順（早い予定順）、「全送迎スケジュール・履歴」を新しい日時降順にソートするよう統一し、省略表示（`truncate`）される送迎場所セルおよび生徒カード住所へ `title` 属性（"
+        },
+        {
+          "id": "DOC-0651-ITEM-00007",
+          "line": 11,
+          "contentSha256": "d024d28c6a25e9fe7df80547df25bac479fc3703f27799178113193000ed6dc8",
+          "occurrence": 1,
+          "preview": "### 【今回実施した受入試験（55〜56項目目）】"
+        },
+        {
+          "id": "DOC-0651-ITEM-00008",
+          "line": 12,
+          "contentSha256": "aed8d46dd05dd21962b66a8fe395c54dbbb70ee7e4080fd496af831ed6e35211",
+          "occurrence": 1,
+          "preview": "* **55項目目（管理者画面サマリーボタン化・フィルターARIA検証［公開デモ］）**：公開検証サイト（`https://eigo-taxi-test.web.app/#/admin`）で、「チケット残り2枚以下」カードが `<button type=\"button\">` であ"
+        },
+        {
+          "id": "DOC-0651-ITEM-00009",
+          "line": 13,
+          "contentSha256": "3e656380a9f505c9b3eb33f7d4b0edcf8d3679125adec88431d65cb2e01e8924",
+          "occurrence": 1,
+          "preview": "* **56項目目（管理者画面一覧ソート順・住所ツールチップ検証［公開デモ］）**：公開検証サイトで本日の予約を遅い時刻（`18:00`）→早い時刻（`09:00`）の順に登録しても時刻昇順（`09:00, 16:00, 17:30, 18:00`）で並ぶこと、全送迎スケジュール"
+        },
+        {
+          "id": "DOC-0651-ITEM-00010",
+          "line": 15,
+          "contentSha256": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+          "occurrence": 1,
+          "preview": "---"
+        },
+        {
+          "id": "DOC-0651-ITEM-00011",
+          "line": 17,
+          "contentSha256": "76c3519755d39acf199783847365abea0c2ba4aec32426a7addbe54a9ff2b9a7",
+          "occurrence": 1,
+          "preview": "### 【公開環境・確認範囲】"
+        },
+        {
+          "id": "DOC-0651-ITEM-00012",
+          "line": 18,
+          "contentSha256": "b8f8e26627fdd283f6f45ab1ae8e53d01b7ab6cd92e292bebaf1c240ff354448",
+          "occurrence": 1,
+          "preview": "* **検証サイト**: https://eigo-taxi-test.web.app/"
+        },
+        {
+          "id": "DOC-0651-ITEM-00013",
+          "line": 19,
+          "contentSha256": "aa7609a37751cc193d7a2e1400c754f3cae7d15c0d7f7591bc66ba1d28d46d0c",
+          "occurrence": 1,
+          "preview": "* **反映版 (`sourceDigest`)**: `83f0fe7652ab344ba3ee93ffe1ffd432ac1c1fb8e265aafa35c2cb26b71057a5`（ビルド時刻: `2026-11-21T03:53:30.859Z`）"
+        },
+        {
+          "id": "DOC-0651-ITEM-00014",
+          "line": 20,
+          "contentSha256": "2e5921efc08abc840605fa5b49f9582cd0dc3c9d1990b7329a30a61479162d0a",
+          "occurrence": 1,
+          "preview": "* **配信照合**: [public-2026-11-21T03-54-28-389Z.json](../acceptance/deployment-verification/public-2026-11-21T03-54-28-389Z.json)（全7ファイル SHA-25"
+        },
+        {
+          "id": "DOC-0651-ITEM-00015",
+          "line": 21,
+          "contentSha256": "e8a7f05c19e28e956486b44bc9cba48017dabb05b844c58a865a1e9e8fb00004",
+          "occurrence": 1,
+          "preview": "* **公開UI証跡**: [public-ui-fiftysix.json](../../outputs/daily-20261121/public-ui-fiftysix.json)"
+        },
+        {
+          "id": "DOC-0651-ITEM-00016",
+          "line": 22,
+          "contentSha256": "f05b4c87239863444f5738c59c27a6864e67fabeb0482abfb963cdc48a292ac6",
+          "occurrence": 1,
+          "preview": "* **顧客確認・本番状況**: 小林様の顧客確認6手順（`CUST-01`〜`CUST-06`）は 0/6件（未実施）、顧客用の検証データはそのまま維持しており、**本番運用は開始していません**。"
+        }
+      ]
+    },
+    {
       "id": "DOC-0649",
       "path": "docs/progress/2026-11-21-cumulative-fiftytwo.md",
       "state": "historical",

@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "mode": "LOCAL_MOCK_UI_REHEARSAL",
-  "runStartedAt": "2026-11-21T03:46:42.370Z",
-  "finishedAt": "2026-11-21T03:47:44.776Z",
+  "runStartedAt": "2026-11-21T03:55:25.183Z",
+  "finishedAt": "2026-11-21T03:56:26.697Z",
   "nodeVersion": "24.22.1",
   "browserVersion": "158.0.8127.36",
   "timezone": "Asia/Tokyo",
@@ -22,7 +22,7 @@
     "src/components/Navbar.tsx": "77d967411aab9b6ec1181f22a9fa44caebf82fa59197aad9d63fc63f2594a3b0",
     "src/components/ParentPortal.tsx": "463961f5a0d3b41754ace6c0353406a2df9982ad95a0eff62ee0498a539af241",
     "src/components/PortalInvitations.tsx": "f1b7fa321d2e65a4cfb7bc9666d429f141b7e10cc12da781152395f089b9f501",
-    "src/components/TeacherDashboard.tsx": "62cd608227041fe1fab81b3c27e03ec2dc8d3f89438bd4d3dd2c189fbd915fa3",
+    "src/components/TeacherDashboard.tsx": "3dca5a0ffe3f5cd2759fb38ea276c3c902c17476db550ebeac68264c7a89399e",
     "src/components/TermsModal.tsx": "1e318cc932e937f6ca9df364006c2d5688f186e70587362ace9e299675bc9bd1",
     "src/deployment-config.ts": "5c30aad36376487fcf2fbb664f2574bdd430890191675ca9813b5fdea516b6f1",
     "src/index.css": "66baff8b6d7a116920270aba8584dd856cf5de345b59b511b849b96152ce91d8",
@@ -40,9 +40,9 @@
     "scripts/fixtures/local-acceptance/index.html": "a0030c371776b189471b5e18df159b04706dba1659ab740055c2d1954b62eb0b"
   },
   "buildHashes": {
-    "assets/index-B_w4Xitk.js": "81154904af0d7447d1a87f87edd2efc3f465597adb4c8f830f05f7401c9b1ed5",
+    "assets/index-CI2ukBsB.js": "4c86c96b61ec3ce6a168cb347fecc1d94b06ea575b00a38b57f4c089bdf788d1",
     "assets/index-gPaggmg7.css": "6d123eabd5ffa8878b5ec79fdccef06e8b96b3ba93ab0cda5093670185575d0e",
-    "index.html": "9037ac6eff94ebc9e63ead93f7c32b3fe382876f10cc1ca50de36b2433f3bc54"
+    "index.html": "4d957b052fdc27516838f25d2b060fc478b974b370ddc944860ac1be7afb0a4c"
   },
   "changedSources": [],
   "externalRequests": [],
@@ -76,8 +76,8 @@
         "file": "LOCAL-UI-01.png",
         "sha256": "36a7f1adc8745c2770ac40760ea3fedb7535c7b9799887efbcb7ae79e3b05b59"
       },
-      "startedAt": "2026-11-21T03:47:21.902Z",
-      "finishedAt": "2026-11-21T03:47:22.648Z"
+      "startedAt": "2026-11-21T03:56:02.961Z",
+      "finishedAt": "2026-11-21T03:56:03.734Z"
     },
     {
       "id": "LOCAL-UI-02",
@@ -91,8 +91,8 @@
         "file": "LOCAL-UI-02.png",
         "sha256": "8f1d45e5c769cf04c5d7a61a08c313fc9f8aa73d30c16de005cffc86a2b1ccb6"
       },
-      "startedAt": "2026-11-21T03:47:22.648Z",
-      "finishedAt": "2026-11-21T03:47:23.705Z"
+      "startedAt": "2026-11-21T03:56:03.734Z",
+      "finishedAt": "2026-11-21T03:56:04.775Z"
     },
     {
       "id": "LOCAL-UI-03",
@@ -103,10 +103,10 @@
       "status": "PASS",
       "screenshot": {
         "file": "LOCAL-UI-03.png",
-        "sha256": "6d89e7cfe6528f0112a85e445d2a75c8cb491600d201bbd3857feecd05c61cc9"
+        "sha256": "747d8409949c285666aef5ce8decdd05b1187051594b2dff99c4f59a4ceb77e7"
       },
-      "startedAt": "2026-11-21T03:47:23.705Z",
-      "finishedAt": "2026-11-21T03:47:25.480Z"
+      "startedAt": "2026-11-21T03:56:04.775Z",
+      "finishedAt": "2026-11-21T03:56:06.704Z"
     },
     {
       "id": "LOCAL-UI-04",
@@ -119,8 +119,8 @@
         "file": "LOCAL-UI-04.png",
         "sha256": "9c42da378e78c014e31a634c3826a7c4a2205707d990d51c4317e7829069d08e"
       },
-      "startedAt": "2026-11-21T03:47:25.480Z",
-      "finishedAt": "2026-11-21T03:47:27.368Z"
+      "startedAt": "2026-11-21T03:56:06.705Z",
+      "finishedAt": "2026-11-21T03:56:08.561Z"
     },
     {
       "id": "LOCAL-UI-05",
@@ -133,8 +133,8 @@
         "file": "LOCAL-UI-05.png",
         "sha256": "bd1687a53074256931f24c54d8fa00c751cadc0d2fb900deee18718db575e98d"
       },
-      "startedAt": "2026-11-21T03:47:27.368Z",
-      "finishedAt": "2026-11-21T03:47:29.129Z"
+      "startedAt": "2026-11-21T03:56:08.561Z",
+      "finishedAt": "2026-11-21T03:56:10.384Z"
     },
     {
       "id": "LOCAL-UI-06",
@@ -145,10 +145,10 @@
       "status": "PASS",
       "screenshot": {
         "file": "LOCAL-UI-06.png",
-        "sha256": "2b845001c70be6ba5a8cebc5f8d910c07f7a3b64d74b6c6efcb14b64a3341996"
+        "sha256": "a16b8b114743c4d990408dcb53bbef80a6e5ad674008a5c6f02c3095ab2b7ed6"
       },
-      "startedAt": "2026-11-21T03:47:29.129Z",
-      "finishedAt": "2026-11-21T03:47:30.187Z"
+      "startedAt": "2026-11-21T03:56:10.384Z",
+      "finishedAt": "2026-11-21T03:56:11.564Z"
     },
     {
       "id": "LOCAL-UI-07",
@@ -162,8 +162,8 @@
         "file": "LOCAL-UI-07.png",
         "sha256": "8f6a3af2b6814da38a56474cbf0db6e3ed354222630b667a20c57459354f699a"
       },
-      "startedAt": "2026-11-21T03:47:30.187Z",
-      "finishedAt": "2026-11-21T03:47:31.849Z"
+      "startedAt": "2026-11-21T03:56:11.565Z",
+      "finishedAt": "2026-11-21T03:56:13.377Z"
     },
     {
       "id": "LOCAL-UI-08",
@@ -175,10 +175,10 @@
       "status": "PASS",
       "screenshot": {
         "file": "LOCAL-UI-08.png",
-        "sha256": "4bba98b077599752972f8951a4f175640a595bd09d6b9a7102506934d63658dc"
+        "sha256": "1122c476a2404624df8a159e094da792277c25cfb1f696b36d8c502a343db077"
       },
-      "startedAt": "2026-11-21T03:47:31.849Z",
-      "finishedAt": "2026-11-21T03:47:33.470Z"
+      "startedAt": "2026-11-21T03:56:13.377Z",
+      "finishedAt": "2026-11-21T03:56:15.092Z"
     },
     {
       "id": "LOCAL-UI-09",
@@ -190,10 +190,10 @@
       "status": "PASS",
       "screenshot": {
         "file": "LOCAL-UI-09.png",
-        "sha256": "e3e1fe6b6b693266e9be4d47d68df2806d61d304628d9de60b9ed87ff9bc52bf"
+        "sha256": "948e35db7a259b6ad145e426151130b06c84284329a51177460e2cd2ff938ab5"
       },
-      "startedAt": "2026-11-21T03:47:33.470Z",
-      "finishedAt": "2026-11-21T03:47:35.235Z"
+      "startedAt": "2026-11-21T03:56:15.092Z",
+      "finishedAt": "2026-11-21T03:56:16.989Z"
     },
     {
       "id": "LOCAL-UI-10",
@@ -204,10 +204,10 @@
       "status": "PASS",
       "screenshot": {
         "file": "LOCAL-UI-10.png",
-        "sha256": "f33f79321e35b29170a90c8268a3cc70df7b7aab91dccd4cb60a1eb1596d0aea"
+        "sha256": "c99e31e1e76d9a74aa59332a37cdb41e9e29c6b91ae9d21a372c69e4db3a3220"
       },
-      "startedAt": "2026-11-21T03:47:35.236Z",
-      "finishedAt": "2026-11-21T03:47:36.149Z"
+      "startedAt": "2026-11-21T03:56:16.989Z",
+      "finishedAt": "2026-11-21T03:56:17.937Z"
     },
     {
       "id": "LOCAL-UI-11",
@@ -221,8 +221,8 @@
         "file": "LOCAL-UI-11.png",
         "sha256": "8f1d45e5c769cf04c5d7a61a08c313fc9f8aa73d30c16de005cffc86a2b1ccb6"
       },
-      "startedAt": "2026-11-21T03:47:36.150Z",
-      "finishedAt": "2026-11-21T03:47:37.895Z"
+      "startedAt": "2026-11-21T03:56:17.937Z",
+      "finishedAt": "2026-11-21T03:56:19.739Z"
     },
     {
       "id": "LOCAL-UI-12",
@@ -236,8 +236,8 @@
         "file": "LOCAL-UI-12.png",
         "sha256": "fee7bf58867eb0a18c91db86a181a7c014d97f9826f2f15211499c56f2c0ba0b"
       },
-      "startedAt": "2026-11-21T03:47:37.895Z",
-      "finishedAt": "2026-11-21T03:47:39.010Z"
+      "startedAt": "2026-11-21T03:56:19.739Z",
+      "finishedAt": "2026-11-21T03:56:20.831Z"
     },
     {
       "id": "LOCAL-UI-13",
@@ -251,8 +251,8 @@
         "file": "LOCAL-UI-13.png",
         "sha256": "36a7f1adc8745c2770ac40760ea3fedb7535c7b9799887efbcb7ae79e3b05b59"
       },
-      "startedAt": "2026-11-21T03:47:39.010Z",
-      "finishedAt": "2026-11-21T03:47:40.659Z"
+      "startedAt": "2026-11-21T03:56:20.831Z",
+      "finishedAt": "2026-11-21T03:56:22.429Z"
     },
     {
       "id": "LOCAL-UI-14",
@@ -265,8 +265,8 @@
         "file": "LOCAL-UI-14.png",
         "sha256": "9d3d6caf613b065fe3780f7f316e9bbc77b9364d81f3ca3df8b62f8b8fc19f92"
       },
-      "startedAt": "2026-11-21T03:47:40.659Z",
-      "finishedAt": "2026-11-21T03:47:44.534Z"
+      "startedAt": "2026-11-21T03:56:22.429Z",
+      "finishedAt": "2026-11-21T03:56:26.346Z"
     }
   ],
   "thirdPartyPassed": 0,

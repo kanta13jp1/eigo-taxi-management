@@ -84,7 +84,9 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
       document.removeEventListener('visibilitychange', syncDate);
     };
   }, []);
-  const todayRides = safeRides.filter((r) => r.rideDate === todayStr);
+  const todayRides = safeRides
+    .filter((r) => r.rideDate === todayStr)
+    .sort((a, b) => a.rideTime.localeCompare(b.rideTime) || a.id.localeCompare(b.id));
   const todayPendingRides = todayRides.filter((r) => r.status === 'scheduled');
   const todayCompletedRides = todayRides.filter((r) => r.status === 'completed');
 
@@ -92,10 +94,14 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
   const lowTicketStudents = safeStudents.filter((s) => s.ticketBalance <= 2);
 
   // フィルタ済み送迎
-  const filteredRides = safeRides.filter((r) => {
-    if (filterStatus === 'all') return true;
-    return r.status === filterStatus;
-  });
+  const filteredRides = safeRides
+    .filter((r) => {
+      if (filterStatus === 'all') return true;
+      return r.status === filterStatus;
+    })
+    .sort((a, b) => b.rideDate.localeCompare(a.rideDate)
+      || b.rideTime.localeCompare(a.rideTime)
+      || b.id.localeCompare(a.id));
 
   const getRideTypeLabel = (type: RideType) => {
     switch (type) {
@@ -164,9 +170,10 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
           </div>
         </div>
 
-        <div
+        <button
+          type="button"
           onClick={() => setActiveTab('students')}
-          className="bg-white p-4 rounded-2xl border border-slate-200/80 shadow-xs flex items-center justify-between cursor-pointer hover:border-amber-300 transition-colors"
+          className="bg-white p-4 rounded-2xl border border-slate-200/80 shadow-xs flex items-center justify-between cursor-pointer hover:border-amber-300 transition-colors text-left w-full"
         >
           <div>
             <p className="text-xs font-semibold text-slate-500">チケット残り2枚以下</p>
@@ -187,7 +194,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
           >
             <AlertTriangle className="w-5 h-5" />
           </div>
-        </div>
+        </button>
 
         <div className="bg-white p-4 rounded-2xl border border-slate-200/80 shadow-xs flex items-center justify-between">
           <div>
@@ -400,6 +407,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
             <div className="flex items-center gap-2">
               <Filter className="w-3.5 h-3.5 text-slate-400" />
               <select
+                aria-label="ステータスで絞り込み"
                 value={filterStatus}
                 onChange={(e) => setFilterStatus(e.target.value)}
                 className="bg-white border border-slate-200 rounded-xl px-2.5 py-1 text-xs font-semibold text-slate-700 focus:outline-hidden"
@@ -449,7 +457,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
                               {typeInfo.text}
                             </span>
                           </td>
-                          <td className="py-3 px-4 text-slate-600 max-w-xs truncate">{ride.pickupLocation}</td>
+                          <td className="py-3 px-4 text-slate-600 max-w-xs truncate" title={ride.pickupLocation}>{ride.pickupLocation}</td>
                           <td className="py-3 px-4 text-slate-500 whitespace-nowrap">
                             {ride.reservedBy === 'parent' ? '保護者予約' : '先生登録'}
                           </td>
@@ -594,7 +602,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
                       </div>
                       <div className="flex items-start gap-1">
                         <MapPin className="w-3.5 h-3.5 text-slate-400 shrink-0 mt-0.5" />
-                        <span className="truncate">{student.address}</span>
+                        <span className="truncate" title={student.address}>{student.address}</span>
                       </div>
                     </div>
                   </div>
