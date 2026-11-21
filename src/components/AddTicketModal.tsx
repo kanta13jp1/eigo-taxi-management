@@ -104,8 +104,9 @@ const AddTicketModalContent: React.FC<AddTicketModalProps> = ({
           <button
             type="button"
             aria-label="閉じる"
+            disabled={isSubmitting}
             onClick={onClose}
-            className="p-1 rounded-full text-slate-400 hover:text-slate-600 hover:bg-slate-100 transition-colors"
+            className="p-1 rounded-full text-slate-400 hover:text-slate-600 hover:bg-slate-100 transition-colors disabled:opacity-50"
           >
             <X className="w-5 h-5" />
           </button>
@@ -217,8 +218,9 @@ const AddTicketModalContent: React.FC<AddTicketModalProps> = ({
           <div className="pt-2 flex gap-3">
             <button
               type="button"
+              disabled={isSubmitting}
               onClick={onClose}
-              className="flex-1 py-2.5 px-4 rounded-xl border border-slate-200 text-slate-600 font-medium hover:bg-slate-50 transition-colors text-sm"
+              className="flex-1 py-2.5 px-4 rounded-xl border border-slate-200 text-slate-600 font-medium hover:bg-slate-50 transition-colors text-sm disabled:opacity-50"
             >
               閉じる
             </button>

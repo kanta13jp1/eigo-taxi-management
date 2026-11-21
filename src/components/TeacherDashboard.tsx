@@ -153,7 +153,11 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
 
       {/* 上部サマリーカード */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-        <div className="bg-white p-4 rounded-2xl border border-slate-200/80 shadow-xs flex items-center justify-between">
+        <button
+          type="button"
+          onClick={() => setActiveTab('today')}
+          className="bg-white p-4 rounded-2xl border border-slate-200/80 shadow-xs flex items-center justify-between cursor-pointer hover:border-emerald-300 transition-colors text-left w-full"
+        >
           <div>
             <p className="text-xs font-semibold text-slate-500">本日の送迎</p>
             <div className="flex items-baseline gap-2 mt-1">
@@ -168,7 +172,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
           <div className="p-3 bg-emerald-50 text-emerald-600 rounded-xl">
             <Car className="w-5 h-5" />
           </div>
-        </div>
+        </button>
 
         <button
           type="button"
@@ -196,7 +200,11 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
           </div>
         </button>
 
-        <div className="bg-white p-4 rounded-2xl border border-slate-200/80 shadow-xs flex items-center justify-between">
+        <button
+          type="button"
+          onClick={() => setActiveTab('students')}
+          className="bg-white p-4 rounded-2xl border border-slate-200/80 shadow-xs flex items-center justify-between cursor-pointer hover:border-blue-300 transition-colors text-left w-full"
+        >
           <div>
             <p className="text-xs font-semibold text-slate-500">登録生徒数</p>
             <div className="flex items-baseline gap-2 mt-1">
@@ -208,7 +216,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
           <div className="p-3 bg-blue-50 text-blue-600 rounded-xl">
             <UserPlus className="w-5 h-5" />
           </div>
-        </div>
+        </button>
       </div>
 
       {/* サブナビゲーション & アクションボタン */}

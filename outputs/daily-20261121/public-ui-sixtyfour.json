@@ -1,0 +1,53 @@
+{
+  "checkedAt": "2026-11-21T10:51:24.065Z",
+  "url": "https://eigo-taxi-test.web.app",
+  "fix63SummaryCardButtons": {
+    "pass": true,
+    "summaryCardsInfo": {
+      "todayCard": {
+        "tag": "BUTTON",
+        "type": "button"
+      },
+      "lowCard": {
+        "tag": "BUTTON",
+        "type": "button"
+      },
+      "studentsCard": {
+        "tag": "BUTTON",
+        "type": "button"
+      }
+    },
+    "switchedToStudents": true,
+    "switchedBackToToday": true
+  },
+  "fix64ModalCloseDisabledStyle": {
+    "pass": true,
+    "modalCloseChecks": [
+      {
+        "titleId": "add-ride-modal-title",
+        "topCloseType": "button",
+        "topCloseHasDisabledStyle": true,
+        "bottomCloseType": "button",
+        "bottomCloseHasDisabledStyle": true,
+        "closedOnClick": true
+      },
+      {
+        "titleId": "add-ticket-modal-title",
+        "topCloseType": "button",
+        "topCloseHasDisabledStyle": true,
+        "bottomCloseType": "button",
+        "bottomCloseHasDisabledStyle": true,
+        "closedOnClick": true
+      },
+      {
+        "titleId": "add-student-modal-title",
+        "topCloseType": "button",
+        "topCloseHasDisabledStyle": true,
+        "bottomCloseType": "button",
+        "bottomCloseHasDisabledStyle": true,
+        "closedOnClick": true
+      }
+    ]
+  },
+  "errors": []
+}

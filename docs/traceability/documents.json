@@ -40031,7 +40031,7 @@
       "id": "DOC-0527",
       "path": "docs/deliverables/README.md",
       "state": "historical",
-      "sha256": "c07fddec4f1cc6644dd3d794a24348587768c1b0b5b9e8d436044a6cdd2caba0",
+      "sha256": "2f4405ff4c1e67a1d0de4d421db047bcf2770513a969e377c4a7ff8019238274",
       "items": [
         {
           "id": "DOC-0527-ITEM-00001",
@@ -40041,29 +40041,36 @@
           "preview": "# 最新の配布資料"
         },
         {
-          "id": "DOC-0527-ITEM-00002",
+          "id": "DOC-0527-ITEM-00006",
           "line": 3,
+          "contentSha256": "4bb191499ee2db737a3cfe9aa25dbea1deffb379d7e768db0bf92659bdc37132",
+          "occurrence": 1,
+          "preview": "[最新の進捗追補（2026-11-21・累計62件）](2026-11-10-premeeting/progress-2026-11-21-cumulative62.pptx) は、11月18日時点の記録に最新検証版の画面と操作図を追加した22ページ版です。 [11月21日の公開"
+        },
+        {
+          "id": "DOC-0527-ITEM-00002",
+          "line": 5,
           "contentSha256": "507df043e94782e1614a235b72fd425d88c949ffd075fd3783f21039f110b1dc",
           "occurrence": 1,
           "preview": "現行の全工程資料・運用手順書・ユーザーマニュアル・残課題／進捗・対応表は [2026-10-23 共通デザイン版](2026-10-23-traceability/README.md) を使用してください。"
         },
         {
           "id": "DOC-0527-ITEM-00003",
-          "line": 5,
+          "line": 7,
           "contentSha256": "08ed9dac81aedc3490277273e7e3b81d4a200f78e26e3d0c7c250106c8df5a40",
           "occurrence": 1,
           "preview": "各日付フォルダーの過去版は検証証跡です。現行仕様と過去のPASSを混同しないでください。現在の機械検査結果と工程正本は [文書管理の入口](../traceability/README.md) を参照してください。"
         },
         {
           "id": "DOC-0527-ITEM-00004",
-          "line": 7,
+          "line": 9,
           "contentSha256": "82f321f4de0cd3c9f8a4b6068e87a6af81fb34c995e4ef5c8b916b24b7844c9a",
           "occurrence": 1,
           "preview": "## 今後のPowerPoint作成方針"
         },
         {
           "id": "DOC-0527-ITEM-00005",
-          "line": 9,
+          "line": 11,
           "contentSha256": "c712d1ebb6035f5fe6685c310cc1ef8decc56ea684bf7fdd6f4c52ab7229349a",
           "occurrence": 1,
           "preview": "一般の閲覧者にも伝わるよう、MightyLINKの配色・デザインを踏襲し、内容に合った説明用イラスト、編集可能な図・表、操作の流れを必要に応じて用いる。項目ID・正本への参照・重要な条件や未検証事項を保持し、イラストを実画面や検証証跡と誤認させない。各ページを描画して読みやすさと"
@@ -72802,10 +72809,130 @@
       ]
     },
     {
+      "id": "DOC-0655",
+      "path": "docs/progress/2026-11-21-cumulative-sixtyfour.md",
+      "state": "historical",
+      "sha256": "fce24044e322bebbe700515e41f115f1eefe8d894906e8ad349fcb5ee1fbe883",
+      "items": [
+        {
+          "id": "DOC-0655-ITEM-00001",
+          "line": 1,
+          "contentSha256": "7afb62011a3d6fffa988ac9f22db0d7b61cb858c845db0715320da897391f398",
+          "occurrence": 1,
+          "preview": "# 11月21日 累計64件の実装修正・受入試験64項目（TeacherDashboard サマリーカードボタン統一・3フォームモーダル送信中閉鎖防止）"
+        },
+        {
+          "id": "DOC-0655-ITEM-00002",
+          "line": 3,
+          "contentSha256": "e79e8976eb91cf8c58638c41a0a566d1ab36a7c78822c02c6008bfbd6635a453",
+          "occurrence": 1,
+          "preview": "小林さん、お疲れ様です。"
+        },
+        {
+          "id": "DOC-0655-ITEM-00003",
+          "line": 5,
+          "contentSha256": "b5e256b43154cf280570bdf8cca3c24bffd35c9c135380f33ff3c05d92cfb129",
+          "occurrence": 1,
+          "preview": "11月21日の追加対応により、実装修正は**累計64件**、実施した異なる受入試験は**累計64項目**となりました（先行2件は Claude Code Fable 5.2 の対応分、追加62件が後続の対応分です）。"
+        },
+        {
+          "id": "DOC-0655-ITEM-00004",
+          "line": 7,
+          "contentSha256": "1fe1fceefbfd72959b1276bf05cc35b493dbdd9b4f22bb6f4c462e50c26a1a1a",
+          "occurrence": 1,
+          "preview": "### 【今回の追加修正内容（63〜64件目）】"
+        },
+        {
+          "id": "DOC-0655-ITEM-00005",
+          "line": 8,
+          "contentSha256": "4a53100ada25439f722b3915d59893fc978e776ea6046f7f791bb169883b31c4",
+          "occurrence": 1,
+          "preview": "* **63件目（`TeacherDashboard.tsx`）**：管理者画面上部の残り2枚のサマリーカード（「本日の送迎」「登録生徒数」）を非インタラクティブな `<div>` からネイティブの `<button type=\"button\">` へ変更し、それぞれクリック時に"
+        },
+        {
+          "id": "DOC-0655-ITEM-00006",
+          "line": 9,
+          "contentSha256": "0062b393e6683ad2a3eb5384dbadee37ac4bf613a69f1c0ed62d7428fac69d84",
+          "occurrence": 1,
+          "preview": "* **64件目（`AddRideModal.tsx` / `AddStudentModal.tsx` / `AddTicketModal.tsx`）**：3つのフォームモーダル（「送迎予定を追加」「新規生徒を登録」「チケット追加」）すべてについて、右上の閉じるボタン（`aria"
+        },
+        {
+          "id": "DOC-0655-ITEM-00007",
+          "line": 11,
+          "contentSha256": "9a4eed7a5aaeba89b53e35c0950bfe870bf0c92a893c6d7f539747cf0d7866af",
+          "occurrence": 1,
+          "preview": "### 【今回実施した受入試験（63〜64項目目）】"
+        },
+        {
+          "id": "DOC-0655-ITEM-00008",
+          "line": 12,
+          "contentSha256": "b537b6de3abf703a6a8fded141aa355ef5f00a9b2781f4a85853a1eabd61bd00",
+          "occurrence": 1,
+          "preview": "* **63項目目（サマリーカード ボタン統一・タブ切替検証［公開デモ］）**：公開検証サイト（`https://eigo-taxi-test.web.app/#/admin`）の管理者デモで上段サマリーカード3枚（「本日の送迎」「チケット残少」「登録生徒数」）がいずれも `<b"
+        },
+        {
+          "id": "DOC-0655-ITEM-00009",
+          "line": 13,
+          "contentSha256": "ef2caa19dd11fada3695386f995cb9d8a4d2be39246108aa951fe9cdb0bbf59c",
+          "occurrence": 1,
+          "preview": "* **64項目目（3フォームモーダル 閉じる・キャンセル制御スタイル・閉鎖検証［公開デモ］）**：公開検証サイトの管理者デモで「送迎予定を追加」「チケット追加」「新規生徒を登録」の3モーダルを開き、右上の閉じるボタンおよび下部のキャンセル・閉じるボタンすべてに `type=\"b"
+        },
+        {
+          "id": "DOC-0655-ITEM-00010",
+          "line": 15,
+          "contentSha256": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+          "occurrence": 1,
+          "preview": "---"
+        },
+        {
+          "id": "DOC-0655-ITEM-00011",
+          "line": 17,
+          "contentSha256": "76c3519755d39acf199783847365abea0c2ba4aec32426a7addbe54a9ff2b9a7",
+          "occurrence": 1,
+          "preview": "### 【公開環境・確認範囲】"
+        },
+        {
+          "id": "DOC-0655-ITEM-00012",
+          "line": 18,
+          "contentSha256": "b8f8e26627fdd283f6f45ab1ae8e53d01b7ab6cd92e292bebaf1c240ff354448",
+          "occurrence": 1,
+          "preview": "* **検証サイト**: https://eigo-taxi-test.web.app/"
+        },
+        {
+          "id": "DOC-0655-ITEM-00013",
+          "line": 19,
+          "contentSha256": "fbeffdc9a63e31439b0205a9e0af878eca44734ed928c5aa9da48efc55adabdc",
+          "occurrence": 1,
+          "preview": "* **反映版 (`sourceDigest`)**: `856dcf76bf39b5779f9fcdd02658fdfeaf78b1099f653385cecf547cd77d8c63`（ビルド時刻: `2026-11-21T10:49:54.566Z`）"
+        },
+        {
+          "id": "DOC-0655-ITEM-00014",
+          "line": 20,
+          "contentSha256": "cce2c3e46d9343304017b0c7e0f84c53a79d662e82a89873502a98170a053293",
+          "occurrence": 1,
+          "preview": "* **配信照合**: [public-2026-11-21T10-50-43-243Z.json](../acceptance/deployment-verification/public-2026-11-21T10-50-43-243Z.json)（全7ファイル SHA-25"
+        },
+        {
+          "id": "DOC-0655-ITEM-00015",
+          "line": 21,
+          "contentSha256": "0c9f8038aa3e917e3bd2fef3bbba665f1a2cf9de24c3f519b97d32a6a2f99cc0",
+          "occurrence": 1,
+          "preview": "* **公開UI証跡**: [public-ui-sixtyfour.json](../../outputs/daily-20261121/public-ui-sixtyfour.json)"
+        },
+        {
+          "id": "DOC-0655-ITEM-00016",
+          "line": 22,
+          "contentSha256": "f05b4c87239863444f5738c59c27a6864e67fabeb0482abfb963cdc48a292ac6",
+          "occurrence": 1,
+          "preview": "* **顧客確認・本番状況**: 小林様の顧客確認6手順（`CUST-01`〜`CUST-06`）は 0/6件（未実施）、顧客用の検証データはそのまま維持しており、**本番運用は開始していません**。"
+        }
+      ]
+    },
+    {
       "id": "DOC-0654",
       "path": "docs/progress/2026-11-21-cumulative-sixtytwo.md",
       "state": "historical",
-      "sha256": "3e01f6e6c84c66e650befb7d9debd36c04e26fa52df3b549effa497a1393bb62",
+      "sha256": "27a7a2528dc37c28b70b6ef58ae9d9d00b06ac0948cf302cdb1d1b8ee816c3e2",
       "items": [
         {
           "id": "DOC-0654-ITEM-00001",
@@ -72918,6 +73045,20 @@
           "contentSha256": "f05b4c87239863444f5738c59c27a6864e67fabeb0482abfb963cdc48a292ac6",
           "occurrence": 1,
           "preview": "* **顧客確認・本番状況**: 小林様の顧客確認6手順（`CUST-01`〜`CUST-06`）は 0/6件（未実施）、顧客用の検証データはそのまま維持しており、**本番運用は開始していません**。"
+        },
+        {
+          "id": "DOC-0654-ITEM-00017",
+          "line": 24,
+          "contentSha256": "eeb3cd1f7fcca6b8841cbe2e1d39e6427f7864c40ba81cb2ab12d85344508b4a",
+          "occurrence": 1,
+          "preview": "### 18時台の再確認（日本時間）"
+        },
+        {
+          "id": "DOC-0654-ITEM-00018",
+          "line": 25,
+          "contentSha256": "e4cd42f3989fd881478da346e3411a6fde582313459c7a4869b26fb63b637d84",
+          "occurrence": 1,
+          "preview": "公開7応答のSHA-256を再照合し、管理者デモの画面で確認操作とアカウント管理の案内を再確認。独立AIレビューでは、初期化・消去がデモのブラウザー内データに限定されることと、アカウント管理の権限ガードを確認。公開デモではGoogleログイン後のアカウント更新は未実施。\n[再確認"
         }
       ]
     },
@@ -72925,7 +73066,7 @@
       "id": "DOC-0642",
       "path": "docs/progress/2026-11-21-terms-deployment-pending.md",
       "state": "historical",
-      "sha256": "c49952d449cfd8e0a35f22dd74adc9d38c38a3ddf94395777cd0466e9b09a48a",
+      "sha256": "8bb8b8323874153abc70ab8dd0d988ed0b8b52b56658cca15e620ef8115cde3f",
       "items": [
         {
           "id": "DOC-0642-ITEM-00001",
@@ -72968,6 +73109,13 @@
           "contentSha256": "93b898c35149d8f276485a035ee53ae9b6710af38787ac9b3ea08603b41aefaa",
           "occurrence": 1,
           "preview": "[修正前の公開結果](../../outputs/daily-20261121/before-terms.json)・[修正候補のローカル結果](../../outputs/daily-20261121/after-terms.json)・[11月20日の公開確認](2026-1"
+        },
+        {
+          "id": "DOC-0642-ITEM-00007",
+          "line": 14,
+          "contentSha256": "8bd58ef5f9d544f53ddd2b8f20fc00b63d1a0e879a08ed35b52db455208c819a",
+          "occurrence": 1,
+          "preview": "追記：その後の公開版で規約リンクの再表示（39件目）とEscapeによる閉鎖（52件目）を確認した。ここで扱った候補は配備せず、既存の公開版を優先する。元のボタンへのフォーカス復帰は別途確認が必要。[最新の公開記録](2026-11-21-cumulative-sixtytwo."
         }
       ]
     },
