@@ -71602,6 +71602,126 @@
       ]
     },
     {
+      "id": "DOC-0652",
+      "path": "docs/progress/2026-11-21-cumulative-fiftyeight.md",
+      "state": "historical",
+      "sha256": "38559ac431c5e178617e534fc1e926cfaf465d8396fb7045a9e1aa8e39cdc83c",
+      "items": [
+        {
+          "id": "DOC-0652-ITEM-00001",
+          "line": 1,
+          "contentSha256": "c0c476f7189ebd7873d910434440b5f4956c36af2ba7bb07b7c71fb4f6489221",
+          "occurrence": 1,
+          "preview": "# 11月21日 累計58件の実装修正・受入試験58項目（4モーダル背景クリック閉鎖・AddTicketModal入力トリム・残高プレビュー安全化）"
+        },
+        {
+          "id": "DOC-0652-ITEM-00002",
+          "line": 3,
+          "contentSha256": "e79e8976eb91cf8c58638c41a0a566d1ab36a7c78822c02c6008bfbd6635a453",
+          "occurrence": 1,
+          "preview": "小林さん、お疲れ様です。"
+        },
+        {
+          "id": "DOC-0652-ITEM-00003",
+          "line": 5,
+          "contentSha256": "35e286bf42e507fff3ee9f2bfe6045e310f13974a4a8044fc3e5a3da1ce2574c",
+          "occurrence": 1,
+          "preview": "11月21日の追加対応により、実装修正は**累計58件**、実施した異なる受入試験は**累計58項目**となりました（先行2件は Claude Code Fable 5.2 の対応分、追加56件が後続の対応分です）。"
+        },
+        {
+          "id": "DOC-0652-ITEM-00004",
+          "line": 7,
+          "contentSha256": "29549b49810eb9c1a65f254c1740f91df0a7f379d0eb21c527cc8a01c0102c11",
+          "occurrence": 1,
+          "preview": "### 【今回の追加修正内容（57〜58件目）】"
+        },
+        {
+          "id": "DOC-0652-ITEM-00005",
+          "line": 8,
+          "contentSha256": "b07db89a6d3e2ef1bfefd9e7ab8d504a39523165aa1495ddab8b7f9eaaec3330",
+          "occurrence": 1,
+          "preview": "* **57件目（`AddRideModal.tsx` / `AddStudentModal.tsx` / `AddTicketModal.tsx` / `TermsModal.tsx`）**：4つのモーダルすべてで、モーダル外の背景オーバーレイ（`e.target === e."
+        },
+        {
+          "id": "DOC-0652-ITEM-00006",
+          "line": 9,
+          "contentSha256": "7bf64140e0735ba4a564761738ef896579be6944ce17f6a0877089e106c7b38e",
+          "occurrence": 1,
+          "preview": "* **58件目（`AddTicketModal.tsx`）**：チケット追加モーダルの受取金額検証に空白トリム（`amountInput.trim()`）を追加して空白入力による誤変換を防止し、メモ（`note.trim()`）もトリム送信するよう改善しました。さらに、枚数欄に"
+        },
+        {
+          "id": "DOC-0652-ITEM-00007",
+          "line": 11,
+          "contentSha256": "ba54264007cbd0498b8610ef5b217190939cb6f3130e66d3936dbc11420a20d1",
+          "occurrence": 1,
+          "preview": "### 【今回実施した受入試験（57〜58項目目）】"
+        },
+        {
+          "id": "DOC-0652-ITEM-00008",
+          "line": 12,
+          "contentSha256": "b21835ef543ed597c69cf34f9e82dd9dd279687d7926cddca4ea3b24196cf895",
+          "occurrence": 1,
+          "preview": "* **57項目目（4モーダル背景クリック閉鎖・スクロール属性検証［公開デモ］）**：公開検証サイト（`https://eigo-taxi-test.web.app/#/admin`）で4モーダルそれぞれを開き、ダイアログ内クリックでは閉じず、背景オーバーレイ（座標 `(4, 4"
+        },
+        {
+          "id": "DOC-0652-ITEM-00009",
+          "line": 13,
+          "contentSha256": "d1a9d3cf6e37b64a7c4b9f5b7f36edf3668f95fcf6445358370550418dcd85c7",
+          "occurrence": 1,
+          "preview": "* **58項目目（チケット追加モーダル負数プレビュー安全化・空白金額拒否検証［公開デモ］）**：公開検証サイトの「チケット追加」モーダルで追加枚数に `-5` を入力した際にプレビューが `現在の残数: 7枚 → 追加後: 7枚` のまま安全に保たれること、および受取金額が空白"
+        },
+        {
+          "id": "DOC-0652-ITEM-00010",
+          "line": 15,
+          "contentSha256": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+          "occurrence": 1,
+          "preview": "---"
+        },
+        {
+          "id": "DOC-0652-ITEM-00011",
+          "line": 17,
+          "contentSha256": "76c3519755d39acf199783847365abea0c2ba4aec32426a7addbe54a9ff2b9a7",
+          "occurrence": 1,
+          "preview": "### 【公開環境・確認範囲】"
+        },
+        {
+          "id": "DOC-0652-ITEM-00012",
+          "line": 18,
+          "contentSha256": "b8f8e26627fdd283f6f45ab1ae8e53d01b7ab6cd92e292bebaf1c240ff354448",
+          "occurrence": 1,
+          "preview": "* **検証サイト**: https://eigo-taxi-test.web.app/"
+        },
+        {
+          "id": "DOC-0652-ITEM-00013",
+          "line": 19,
+          "contentSha256": "a0170ef941d3ab834f13fabbe2cb63f540adb34dcb181fa3dbf3e64d23923679",
+          "occurrence": 1,
+          "preview": "* **反映版 (`sourceDigest`)**: `be8eb97b3b32d404a7a03164552bf691bf19221fa96a532666189b8d94a4a9c2`（ビルド時刻: `2026-11-21T04:09:53.747Z`）"
+        },
+        {
+          "id": "DOC-0652-ITEM-00014",
+          "line": 20,
+          "contentSha256": "fdd1de9398abc3e090eb55adc2e6606c74a889801e0d6317947364c01357da8e",
+          "occurrence": 1,
+          "preview": "* **配信照合**: [public-2026-11-21T04-10-39-927Z.json](../acceptance/deployment-verification/public-2026-11-21T04-10-39-927Z.json)（全7ファイル SHA-25"
+        },
+        {
+          "id": "DOC-0652-ITEM-00015",
+          "line": 21,
+          "contentSha256": "5cbba34af0327bb4273eabe5f94eb31971ad36f2de77a4ea7ad12eea1e333809",
+          "occurrence": 1,
+          "preview": "* **公開UI証跡**: [public-ui-fiftyeight.json](../../outputs/daily-20261121/public-ui-fiftyeight.json)"
+        },
+        {
+          "id": "DOC-0652-ITEM-00016",
+          "line": 22,
+          "contentSha256": "f05b4c87239863444f5738c59c27a6864e67fabeb0482abfb963cdc48a292ac6",
+          "occurrence": 1,
+          "preview": "* **顧客確認・本番状況**: 小林様の顧客確認6手順（`CUST-01`〜`CUST-06`）は 0/6件（未実施）、顧客用の検証データはそのまま維持しており、**本番運用は開始していません**。"
+        }
+      ]
+    },
+    {
       "id": "DOC-0650",
       "path": "docs/progress/2026-11-21-cumulative-fiftyfour.md",
       "state": "historical",

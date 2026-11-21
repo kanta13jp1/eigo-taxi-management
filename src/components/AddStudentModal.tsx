@@ -74,7 +74,10 @@ const AddStudentModalContent: React.FC<AddStudentModalProps> = ({
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs">
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs"
+      onClick={(e) => { if (e.target === e.currentTarget && !isSubmitting) onClose(); }}
+    >
       <div
         role="dialog"
         aria-modal="true"

@@ -54,8 +54,9 @@ const AddTicketModalContent: React.FC<AddTicketModalProps> = ({
       setError('生徒と1〜100枚の整数を指定してください');
       return;
     }
-    const amount = Number(amountInput);
-    if (amountInput === '' || !Number.isSafeInteger(amount) || amount < 0) {
+    const trimmedAmount = amountInput.trim();
+    const amount = Number(trimmedAmount);
+    if (trimmedAmount === '' || !Number.isSafeInteger(amount) || amount < 0) {
       setError('受取金額を0円以上の整数で入力してください');
       return;
     }
@@ -66,7 +67,7 @@ const AddTicketModalContent: React.FC<AddTicketModalProps> = ({
         studentId,
         ticketCount,
         amount,
-        note,
+        note: note.trim(),
       });
       onClose();
     } catch (err) {
@@ -77,9 +78,13 @@ const AddTicketModalContent: React.FC<AddTicketModalProps> = ({
   };
 
   const selectedStudent = students.find((s) => s.id === studentId);
+  const previewAddCount = Number.isSafeInteger(ticketCount) && ticketCount > 0 ? ticketCount : 0;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs">
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs"
+      onClick={(e) => { if (e.target === e.currentTarget && !isSubmitting) onClose(); }}
+    >
       <div
         role="dialog"
         aria-modal="true"
@@ -126,7 +131,7 @@ const AddTicketModalContent: React.FC<AddTicketModalProps> = ({
             {selectedStudent && (
               <p className="text-xs text-slate-500 mt-1">
                 現在の残数: <span className="font-bold text-slate-800">{selectedStudent.ticketBalance}枚</span> →
-                追加後: <span className="font-bold text-emerald-600">{selectedStudent.ticketBalance + ticketCount}枚</span>
+                追加後: <span className="font-bold text-emerald-600">{selectedStudent.ticketBalance + previewAddCount}枚</span>
               </p>
             )}
           </div>

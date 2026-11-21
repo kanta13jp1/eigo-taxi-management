@@ -1,0 +1,39 @@
+{
+  "checkedAt": "2026-11-21T04:10:54.870Z",
+  "url": "https://eigo-taxi-test.web.app",
+  "fix57BackdropClose": {
+    "pass": true,
+    "modalResults": [
+      {
+        "titleId": "add-ride-modal-title",
+        "hasOverscrollContain": true,
+        "stayedOpenOnInnerClick": true,
+        "closedOnBackdropClick": true
+      },
+      {
+        "titleId": "add-ticket-modal-title",
+        "hasOverscrollContain": true,
+        "stayedOpenOnInnerClick": true,
+        "closedOnBackdropClick": true
+      },
+      {
+        "titleId": "add-student-modal-title",
+        "hasOverscrollContain": true,
+        "stayedOpenOnInnerClick": true,
+        "closedOnBackdropClick": true
+      },
+      {
+        "titleId": "terms-modal-title",
+        "hasOverscrollContain": true,
+        "stayedOpenOnInnerClick": true,
+        "closedOnBackdropClick": true
+      }
+    ]
+  },
+  "fix58TicketPreviewAndValidation": {
+    "pass": true,
+    "previewTextNegative": "現在の残数: 7枚 → 追加後: 7枚",
+    "emptyAmountAlert": "受取金額を0円以上の整数で入力してください"
+  },
+  "errors": []
+}

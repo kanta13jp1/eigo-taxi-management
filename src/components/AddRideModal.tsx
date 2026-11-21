@@ -90,12 +90,15 @@ const AddRideModalContent: React.FC<AddRideModalProps> = ({
   const selectedStudent = students.find((s) => s.id === studentId);
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs">
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs"
+      onClick={(e) => { if (e.target === e.currentTarget && !isSubmitting) onClose(); }}
+    >
       <div
         role="dialog"
         aria-modal="true"
         aria-labelledby="add-ride-modal-title"
-        className="bg-white rounded-2xl shadow-xl w-full max-w-lg max-h-[calc(100dvh-2rem)] overflow-y-auto border border-slate-100 animate-in fade-in zoom-in-95 duration-150"
+        className="bg-white rounded-2xl shadow-xl w-full max-w-lg max-h-[calc(100dvh-2rem)] overflow-y-auto overscroll-contain border border-slate-100 animate-in fade-in zoom-in-95 duration-150"
       >
         <div className="px-6 py-4 border-b border-slate-100 flex items-center justify-between bg-emerald-50/50">
           <div>

@@ -24,7 +24,10 @@ function TermsModalContent({ onClose, initialTab }: { onClose: () => void; initi
   }, [onClose]);
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm animate-in fade-in">
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm animate-in fade-in"
+      onClick={(e) => { if (e.target === e.currentTarget) onClose(); }}
+    >
       <div
         role="dialog"
         aria-modal="true"
