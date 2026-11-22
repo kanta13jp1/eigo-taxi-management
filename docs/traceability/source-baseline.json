@@ -16,7 +16,7 @@
   "scripts/test_traceability.py": "1bec894e08844f98373e8c61332891d4c288d384853234d5ad537ed92afd2178",
   "scripts/traceability.py": "74d1e2d9b0cdbdf3479242da4d085777e6de30c006013d9bf06affc4b8eb4a7f",
   "src/App.tsx": "862bd58b7b9874f8a896a27801bc95099a53d035229f2baa96370821fed9624e",
-  "src/components/AccountManagement.tsx": "0126595ddbd5444e1064439b1b6e33c60ecd3e4b463368cec6566e970061af39",
+  "src/components/AccountManagement.tsx": "7b45ef7a606da58786091031faabd783aa5126956f7cef26f6d665220d06d6eb",
   "src/components/AddRideModal.tsx": "b5feff9c4798a0d0e38ca12c41bd898efcb5fd9e3ee2e0dba8ce9b77cbb06cb3",
   "src/components/LoginScreen.tsx": "e5bb1cba35936aa8ea9d382f7336819c86275dc7df303a58ea0eedb02002928b",
   "src/components/Navbar.tsx": "d9b5fcef4d332e45d0028b023caf1f09f08a7ec3603c8a00fd92c0e40f858ab5",

@@ -1,0 +1,92 @@
+{
+  "date": "2026-11-23",
+  "round": "Round 11 (#95-#96)",
+  "reviewer": "Independent Swarm Auditor verifier-11 (board seq #103) & Coordinator live/local audit against WAI-ARIA APG 1.2, WCAG 2.1 AA, Tailwind v3.4.19",
+  "scope": [
+    "src/components/AccountManagement.tsx",
+    "src/components/GoogleSettings.tsx"
+  ],
+  "sourceHashes": {
+    "src/components/AccountManagement.tsx": "7b45ef7a606da58786091031faabd783aa5126956f7cef26f6d665220d06d6eb",
+    "src/components/GoogleSettings.tsx": "813fb6e30da6d1f739cc7e72960547d1955fc729f71e99f722a855e50e7a7c6d",
+    "src/hooks/useModalDialog.ts": "e42891b04ffaf2cb7d5ee143296d79f491b58618a41e3b479dc91bc6fb336da8"
+  },
+  "swarmReview": {
+    "verifier": "verifier-11",
+    "boardApprovalSeq": 103,
+    "reviewedCommits": {
+      "author-account-dialog": "a7ba160826d0f2c837f7b1dbe3870177df107d14",
+      "author-google-dialog": "8d9975c611d33e1b58af48936bb788ea26488c16"
+    },
+    "criteriaVerified": [
+      "Strict disjoint file ownership across author-account-dialog and author-google-dialog",
+      "verifier-11 caught and author-account-dialog fixed space-y-5 sibling margin leak onto fixed inset-0 overlay (#101 -> #102) by placing modal backdrop outside </section>",
+      "Both confirmation dialogs use useModalDialog with isDismissDisabled: busy and initialFocusRef: cancelButtonRef on 戻る, with zero remaining manual Escape listeners",
+      "Both dialogs provide aria-modal='true', tabIndex={-1}, semantic <h2> title (no skipped headings), aria-labelledby/aria-describedby, and Tailwind v3.4.19-only classes",
+      "GoogleSettings trigger buttons expose aria-haspopup='dialog' with no aria-expanded or dangling aria-controls"
+    ]
+  },
+  "findings": [
+    {
+      "status": "RESOLVED",
+      "detail": "author-account-dialog initial commit 7714aa5 rendered fixed inset-0 inside section.space-y-5; moved overlay outside </section> in a7ba160 and verified backdropTop === 0 in Chromium."
+    },
+    {
+      "status": "VERIFIED",
+      "detail": "Live public demo audit (https://eigo-taxi-test.web.app/#/admin Google連携 tab) verified GoogleSettings Reset/Purge confirm dialogs on desktop (1280x900) and mobile (375x667, scrollWidth=375): backdrop-blur(4px), initial focus on 戻る, body overflow hidden/restore, Tab/Shift+Tab trapping, Escape trigger focus return, and 0 heading skips."
+    },
+    {
+      "status": "VERIFIED",
+      "detail": "Local full-admin fixture audit (outputs/refresh-20261120/reviewer/site ?actor=admin&cap=true#/admin) verified AccountManagement Save/Delete confirm dialogs: backdropTop === 0, backdrop-blur(4px), initial focus on 戻る, body overflow hidden/restore, Tab/Shift+Tab trapping, Escape focus return without mutating managed users, and 0 heading skips."
+    }
+  ],
+  "visualReview": {
+    "inspectedViaReadFile": true,
+    "screenshots": {
+      "outputs/daily-20261123/screenshots/google-settings-confirm-modal-desktop.png": {
+        "sha256": "52abf53caace59758643fa008e9f83c2d22076b5910d4e274fb82e2e4e215a66",
+        "observation": "1280x900 live public demo: edge-to-edge backdrop-blur(4px) dimming, crisp amber-bordered modal card デモデータ操作の確認 with legible warning copy, destructive 消去を実行 and safe 戻る buttons with zero clipping."
+      },
+      "outputs/daily-20261123/screenshots/google-settings-confirm-modal-mobile.png": {
+        "sha256": "32c94071e99f5e4fdacd444a02ea765cdab5a5405f12cd09d4dca7870dde42f2",
+        "observation": "375x667 live public demo mobile: modal fits cleanly within 375px width, visible viewport fully blurred, 初期化を実行 and 戻る wrap cleanly; white strip at top of fullPage stitch reflects pre-scroll document header above position:fixed viewport."
+      },
+      "outputs/daily-20261123/screenshots/account-management-confirm-modal-local.png": {
+        "sha256": "a8dffd8d45ec8efcc6afd8d3fce0edfe9e724ed4d42359a52b4d1e48c8dfc145",
+        "observation": "1280x900 local full-admin fixture: centered アカウント変更の確認 modal clearly renders user summary (架空の検証担当 / review@example.test), role description, 保存を実行 and safe 戻る over blurred viewport; upper clear band in fullPage capture is scrolled-above document area outside the 900px fixed viewport."
+      }
+    }
+  },
+  "evidenceChecks": {
+    "outputs/daily-20261123/public-ui-ninetysix.json": {
+      "sha256": "58ff41ce3dd799ad0c364b0fa78b924266ce40685226d56f0b80000f9b9bdcbb",
+      "pass": true,
+      "sourceHashMatch": true
+    },
+    "docs/acceptance/deployment-verification/public-2026-11-22T16-29-45-870Z.json": {
+      "sha256": "cb295f0a4aa03582ec960d8d586b55b298a7da7fba56a405f01051a350c1811a",
+      "pass": true,
+      "urlsMatched": 7
+    },
+    "outputs/refresh-20261120/reviewer/results.json": {
+      "sha256": "9e9822aadc0bf5c6e6d52f04ab23ac9c28a395f22e92b8dafc4d879b59f5a8a8",
+      "pass": true,
+      "count": 8,
+      "sourceHashMatch": true
+    },
+    "outputs/refresh-20261120/local/results.json": {
+      "sha256": "a28c881c4f521bb76ff9ac89f4e93fcd084e6220ec1d10864188641279b6b01a",
+      "pass": true,
+      "count": 14,
+      "sourceHashMatch": true
+    }
+  },
+  "conclusion": "No unresolved blocking defect in Round 11 (#95-#96) dialog unification; all custom React role='dialog' overlays in src/ now use useModalDialog exclusively",
+  "limits": [
+    "AccountManagement confirm dialog is reachable only for authenticated full-admin sessions and was therefore audited in the local full-admin fixture (reviewer-ui site ?actor=admin&cap=true), not via live Google sign-in on the public demo site",
+    "GoogleSettings confirm dialogs were audited in public demo mode on https://eigo-taxi-test.web.app/",
+    "Customer acceptance CUST-01..06 remains 0/6 NOT_RUN",
+    "thirdPartyPassed: 0; release remains HOLD; production rollout has not started",
+    "No real Google OAuth login, live GAS/Spreadsheet execution, or physical mobile device testing claimed"
+  ]
+}

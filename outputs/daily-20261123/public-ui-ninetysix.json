@@ -1,0 +1,278 @@
+{
+  "executedAt": "2026-11-22T16:29:47.150Z",
+  "liveTargetUrl": "https://eigo-taxi-test.web.app/",
+  "localFixtureDir": "outputs/refresh-20261120/reviewer/site",
+  "googleSettingsTriggerAria": [
+    {
+      "label": "モック初期化",
+      "ariaHaspopup": "dialog",
+      "ariaExpanded": null,
+      "ariaControls": null
+    },
+    {
+      "label": "デモデータ消去",
+      "ariaHaspopup": "dialog",
+      "ariaExpanded": null,
+      "ariaControls": null
+    }
+  ],
+  "mobileDimensions": {
+    "innerWidth": 375,
+    "scrollWidth": 375
+  },
+  "dialogs": [
+    {
+      "name": "GoogleSettings-Reset-Desktop",
+      "environment": "live-public-demo",
+      "openSnap": {
+        "activeTag": "button",
+        "activeText": "戻る",
+        "insideDialog": true,
+        "bodyOverflow": "hidden",
+        "dialogId": "demo-data-confirm-dialog",
+        "ariaModal": "true",
+        "tabIndex": "-1",
+        "ariaLabelledBy": "demo-confirm-title",
+        "ariaDescribedBy": "demo-confirm-desc",
+        "titleText": "デモデータ操作の確認",
+        "backdropFilter": "blur(4px)",
+        "backdropTop": 0,
+        "backdropLeft": 0,
+        "viewportWidth": 1280,
+        "viewportHeight": 900
+      },
+      "headings": [
+        "h1:Mauro & Brenda Taxi Link",
+        "h2:Google連携の状態",
+        "h2:このブラウザのデモデータ",
+        "h2:デモデータ操作の確認"
+      ],
+      "deadClassHits": 0,
+      "focusablesCount": 2,
+      "tabTexts": [
+        "初期化を実行",
+        "戻る",
+        "初期化を実行",
+        "戻る"
+      ],
+      "shiftTabTexts": [
+        "初期化を実行",
+        "戻る",
+        "初期化を実行",
+        "戻る"
+      ],
+      "afterClose": {
+        "bodyOverflow": "",
+        "restoredMarker": "GoogleSettings-Reset-Desktop",
+        "expectedMarker": "GoogleSettings-Reset-Desktop",
+        "restoredText": "モック初期化"
+      }
+    },
+    {
+      "name": "GoogleSettings-Purge-Desktop",
+      "environment": "live-public-demo",
+      "openSnap": {
+        "activeTag": "button",
+        "activeText": "戻る",
+        "insideDialog": true,
+        "bodyOverflow": "hidden",
+        "dialogId": "demo-data-confirm-dialog",
+        "ariaModal": "true",
+        "tabIndex": "-1",
+        "ariaLabelledBy": "demo-confirm-title",
+        "ariaDescribedBy": "demo-confirm-desc",
+        "titleText": "デモデータ操作の確認",
+        "backdropFilter": "blur(4px)",
+        "backdropTop": 0,
+        "backdropLeft": 0,
+        "viewportWidth": 1280,
+        "viewportHeight": 900
+      },
+      "headings": [
+        "h1:Mauro & Brenda Taxi Link",
+        "h2:Google連携の状態",
+        "h2:このブラウザのデモデータ",
+        "h2:デモデータ操作の確認"
+      ],
+      "deadClassHits": 0,
+      "focusablesCount": 2,
+      "tabTexts": [
+        "消去を実行",
+        "戻る",
+        "消去を実行",
+        "戻る"
+      ],
+      "shiftTabTexts": [
+        "消去を実行",
+        "戻る",
+        "消去を実行",
+        "戻る"
+      ],
+      "afterClose": {
+        "bodyOverflow": "",
+        "restoredMarker": "GoogleSettings-Purge-Desktop",
+        "expectedMarker": "GoogleSettings-Purge-Desktop",
+        "restoredText": "デモデータ消去"
+      }
+    },
+    {
+      "name": "GoogleSettings-Reset-Mobile",
+      "environment": "live-public-demo-mobile",
+      "openSnap": {
+        "activeTag": "button",
+        "activeText": "戻る",
+        "insideDialog": true,
+        "bodyOverflow": "hidden",
+        "dialogId": "demo-data-confirm-dialog",
+        "ariaModal": "true",
+        "tabIndex": "-1",
+        "ariaLabelledBy": "demo-confirm-title",
+        "ariaDescribedBy": "demo-confirm-desc",
+        "titleText": "デモデータ操作の確認",
+        "backdropFilter": "blur(4px)",
+        "backdropTop": 0,
+        "backdropLeft": 0,
+        "viewportWidth": 375,
+        "viewportHeight": 667
+      },
+      "headings": [
+        "h1:Mauro & Brenda Taxi Link",
+        "h2:Google連携の状態",
+        "h2:このブラウザのデモデータ",
+        "h2:デモデータ操作の確認"
+      ],
+      "deadClassHits": 0,
+      "focusablesCount": 2,
+      "tabTexts": [
+        "初期化を実行",
+        "戻る",
+        "初期化を実行",
+        "戻る"
+      ],
+      "shiftTabTexts": [
+        "初期化を実行",
+        "戻る",
+        "初期化を実行",
+        "戻る"
+      ],
+      "afterClose": {
+        "bodyOverflow": "",
+        "restoredMarker": "GoogleSettings-Reset-Mobile",
+        "expectedMarker": "GoogleSettings-Reset-Mobile",
+        "restoredText": "モック初期化"
+      }
+    },
+    {
+      "name": "AccountManagement-Save-Local",
+      "environment": "local-full-admin-fixture",
+      "openSnap": {
+        "activeTag": "button",
+        "activeText": "戻る",
+        "insideDialog": true,
+        "bodyOverflow": "hidden",
+        "dialogId": null,
+        "ariaModal": "true",
+        "tabIndex": "-1",
+        "ariaLabelledBy": "account-confirm-title",
+        "ariaDescribedBy": "account-confirm-desc",
+        "titleText": "アカウント変更の確認",
+        "backdropFilter": "blur(4px)",
+        "backdropTop": 0,
+        "backdropLeft": 0,
+        "viewportWidth": 1280,
+        "viewportHeight": 900
+      },
+      "headings": [
+        "h1:Mauro & Brenda Taxi Link",
+        "h2:アカウント管理",
+        "h3:利用登録を編集",
+        "h2:アカウント変更の確認"
+      ],
+      "deadClassHits": 0,
+      "focusablesCount": 2,
+      "tabTexts": [
+        "保存を実行",
+        "戻る",
+        "保存を実行",
+        "戻る"
+      ],
+      "shiftTabTexts": [
+        "保存を実行",
+        "戻る",
+        "保存を実行",
+        "戻る"
+      ],
+      "afterClose": {
+        "bodyOverflow": "",
+        "restoredMarker": "AccountManagement-Save-Local",
+        "expectedMarker": "AccountManagement-Save-Local",
+        "restoredText": "内容を確認"
+      }
+    },
+    {
+      "name": "AccountManagement-Delete-Local",
+      "environment": "local-full-admin-fixture",
+      "openSnap": {
+        "activeTag": "button",
+        "activeText": "戻る",
+        "insideDialog": true,
+        "bodyOverflow": "hidden",
+        "dialogId": null,
+        "ariaModal": "true",
+        "tabIndex": "-1",
+        "ariaLabelledBy": "account-confirm-title",
+        "ariaDescribedBy": "account-confirm-desc",
+        "titleText": "アカウント変更の確認",
+        "backdropFilter": "blur(4px)",
+        "backdropTop": 0,
+        "backdropLeft": 0,
+        "viewportWidth": 1280,
+        "viewportHeight": 900
+      },
+      "headings": [
+        "h1:Mauro & Brenda Taxi Link",
+        "h2:アカウント管理",
+        "h3:利用登録を編集",
+        "h2:アカウント変更の確認"
+      ],
+      "deadClassHits": 0,
+      "focusablesCount": 2,
+      "tabTexts": [
+        "削除を実行",
+        "戻る",
+        "削除を実行",
+        "戻る"
+      ],
+      "shiftTabTexts": [
+        "削除を実行",
+        "戻る",
+        "削除を実行",
+        "戻る"
+      ],
+      "afterClose": {
+        "bodyOverflow": "",
+        "restoredMarker": "AccountManagement-Delete-Local",
+        "expectedMarker": "AccountManagement-Delete-Local",
+        "restoredText": "利用登録を削除"
+      }
+    }
+  ],
+  "screenshots": {
+    "googleSettingsConfirmDesktop": {
+      "path": "outputs/daily-20261123/screenshots/google-settings-confirm-modal-desktop.png",
+      "sha256": "52abf53caace59758643fa008e9f83c2d22076b5910d4e274fb82e2e4e215a66"
+    },
+    "googleSettingsConfirmMobile": {
+      "path": "outputs/daily-20261123/screenshots/google-settings-confirm-modal-mobile.png",
+      "sha256": "32c94071e99f5e4fdacd444a02ea765cdab5a5405f12cd09d4dca7870dde42f2"
+    },
+    "accountManagementConfirmLocal": {
+      "path": "outputs/daily-20261123/screenshots/account-management-confirm-modal-local.png",
+      "sha256": "a8dffd8d45ec8efcc6afd8d3fce0edfe9e724ed4d42359a52b4d1e48c8dfc145"
+    }
+  },
+  "localExternalRequests": [],
+  "pageErrors": [],
+  "consoleErrors": [],
+  "status": "PASS"
+}

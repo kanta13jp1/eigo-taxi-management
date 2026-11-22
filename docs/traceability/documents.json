@@ -74481,6 +74481,133 @@
       ]
     },
     {
+      "id": "DOC-0666",
+      "path": "docs/progress/2026-11-23-cumulative-ninetysix.md",
+      "state": "historical",
+      "sha256": "5e906cd97605d9af52359fdfa8c92b6e74e5b1a830ffbad08a657a13b67094e4",
+      "items": [
+        {
+          "id": "DOC-0666-ITEM-00001",
+          "line": 1,
+          "contentSha256": "92074c308f9221ae00ffaa96b351325478d716531d765809f190f7e3b21da194",
+          "occurrence": 1,
+          "preview": "# 11月23日 累計96件の実装修正・受入試験96項目（AccountManagement / GoogleSettings 確認ダイアログの useModalDialog 完全統一）"
+        },
+        {
+          "id": "DOC-0666-ITEM-00002",
+          "line": 3,
+          "contentSha256": "e79e8976eb91cf8c58638c41a0a566d1ab36a7c78822c02c6008bfbd6635a453",
+          "occurrence": 1,
+          "preview": "小林さん、お疲れ様です。"
+        },
+        {
+          "id": "DOC-0666-ITEM-00003",
+          "line": 5,
+          "contentSha256": "ef034d860fe6b9c474ab6cf3b8cd6af18d35206909b9a7343649d216536cc8a7",
+          "occurrence": 1,
+          "preview": "11月23日の標準準拠是正（Round 11: 95〜96件目）により、実装修正は**累計96件**、実施した異なる受入試験は**累計96項目**となりました（先行2件は Claude Code Fable 5.2 の対応分、追加94件が後続の対応分です）。今回により、`src/"
+        },
+        {
+          "id": "DOC-0666-ITEM-00004",
+          "line": 7,
+          "contentSha256": "e6e972fc0dd20df6cf553078d0d0f44499688004f9f4d270fa2e2d8bfa413cf8",
+          "occurrence": 1,
+          "preview": "### 【今回の追加修正内容（95〜96件目）】"
+        },
+        {
+          "id": "DOC-0666-ITEM-00005",
+          "line": 8,
+          "contentSha256": "d0078d0f4227fe4ab65e3d036d116d332ee06a906f469f50188ebed722543b03",
+          "occurrence": 1,
+          "preview": "* **95件目（`src/components/AccountManagement.tsx`）**：アカウント保存／削除の確認ダイアログに存在していた個別の `Escape` リスナーを廃止し、`useModalDialog`（`isDismissDisabled: busy`"
+        },
+        {
+          "id": "DOC-0666-ITEM-00006",
+          "line": 9,
+          "contentSha256": "7a891544c62cef8405bdf8cd690895d6efd32cd772af32ae3f3a838ef8bd6891",
+          "occurrence": 1,
+          "preview": "* **96件目（`src/components/GoogleSettings.tsx`）**：デモデータ「モック初期化」「デモデータ消去」確認ダイアログから個別 `useEffect` `Escape` リスナーを削除し、`useModalDialog`（`isDismissD"
+        },
+        {
+          "id": "DOC-0666-ITEM-00007",
+          "line": 11,
+          "contentSha256": "e57c28cc43ffa8e89fbb019b3be7d7168963dc80048a151741ad0f88922a16d2",
+          "occurrence": 1,
+          "preview": "### 【今回実施した受入試験（95〜96項目目）】"
+        },
+        {
+          "id": "DOC-0666-ITEM-00008",
+          "line": 12,
+          "contentSha256": "4d018fdea5e456ac544377c35298551a0b4c1a2d91c29d86157c6c34983a664c",
+          "occurrence": 1,
+          "preview": "* **95項目目（`AccountManagement` 保存／削除確認ダイアログ フォーカストラップ・安全な初期フォーカス・復元検証［ローカルフル管理者フィクスチャ］）**：ローカルのフル管理者モック画面（`outputs/refresh-20261120/reviewer/"
+        },
+        {
+          "id": "DOC-0666-ITEM-00009",
+          "line": 13,
+          "contentSha256": "03df33337cf051c8a4622e2262dcd62fc3654ed68daebc405584b0ae79644058",
+          "occurrence": 1,
+          "preview": "* **96項目目（`GoogleSettings` デモデータ初期化／消去確認ダイアログ PC/モバイル検証［公開デモ］）**：公開検証サイト（`https://eigo-taxi-test.web.app/#/admin`「Google連携」タブ）の PC（1280×900）"
+        },
+        {
+          "id": "DOC-0666-ITEM-00010",
+          "line": 15,
+          "contentSha256": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+          "occurrence": 1,
+          "preview": "---"
+        },
+        {
+          "id": "DOC-0666-ITEM-00011",
+          "line": 17,
+          "contentSha256": "76c3519755d39acf199783847365abea0c2ba4aec32426a7addbe54a9ff2b9a7",
+          "occurrence": 1,
+          "preview": "### 【公開環境・確認範囲】"
+        },
+        {
+          "id": "DOC-0666-ITEM-00012",
+          "line": 18,
+          "contentSha256": "b8f8e26627fdd283f6f45ab1ae8e53d01b7ab6cd92e292bebaf1c240ff354448",
+          "occurrence": 1,
+          "preview": "* **検証サイト**: https://eigo-taxi-test.web.app/"
+        },
+        {
+          "id": "DOC-0666-ITEM-00013",
+          "line": 19,
+          "contentSha256": "0419d2dc4b7c86d9ad393cdaafc09fa24c723aca0f1a4b0d1f1533ec4d8c0e65",
+          "occurrence": 1,
+          "preview": "* **反映版 (`sourceDigest`)**: `9ffedcfdf065d79513d39e005a279b793fbfb498daf0de1fc9915a1436f60fba`（ビルド時刻: `2026-11-22T16:28:04.325Z`、`baseCommit"
+        },
+        {
+          "id": "DOC-0666-ITEM-00014",
+          "line": 20,
+          "contentSha256": "8d4069775598bb4fd341de192abc2f825fd93a7e1d1b84e8b5f291050a77b4ba",
+          "occurrence": 1,
+          "preview": "* **配信照合**: [public-2026-11-22T16-29-45-870Z.json](../acceptance/deployment-verification/public-2026-11-22T16-29-45-870Z.json)（全7ファイル SHA-25"
+        },
+        {
+          "id": "DOC-0666-ITEM-00015",
+          "line": 21,
+          "contentSha256": "1d44c70f53be25ea1ca00f9ca7e37ebd22af637c6b3a923a9ef556a50f75da8e",
+          "occurrence": 1,
+          "preview": "* **UI証跡**: [public-ui-ninetysix.json](../../outputs/daily-20261123/public-ui-ninetysix.json)"
+        },
+        {
+          "id": "DOC-0666-ITEM-00016",
+          "line": 22,
+          "contentSha256": "0c835811b2533217f2470ccdffa57daa068cfbf68daeeda4b85255be18559ad3",
+          "occurrence": 1,
+          "preview": "* **AI ソースレビュー証跡**: [frontend-review.json](../traceability/reports/review-20261123/frontend-review.json)"
+        },
+        {
+          "id": "DOC-0666-ITEM-00017",
+          "line": 23,
+          "contentSha256": "8c91612d9a1ca8673c92d6fb2066d779e47ab4d45c82a1c5cb1abeb1c0d19964",
+          "occurrence": 1,
+          "preview": "* **顧客確認・本番状況**: 小林様の顧客確認6手順（`CUST-01`〜`CUST-06`）は **0/6件（`NOT_RUN`、`thirdPartyPassed: 0`、`release: \"HOLD\"`）** のままであり、実Googleログイン・実GAS/Sprea"
+        }
+      ]
+    },
+    {
       "id": "DOC-0552",
       "path": "docs/progress/SHARED_TRACKER_UPDATE.md",
       "state": "historical",

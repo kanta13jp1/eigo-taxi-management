@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { ApiService } from '../services/api';
 import type { ManagedUsers, ManagedUserInput, ManagedUser, ManagedRole } from '../services/api';
 import type { Student } from '../types';
+import { useModalDialog } from '../hooks/useModalDialog';
 
 const empty: ManagedUserInput = { name:'',email:'',role:'parent',active:true,studentIds:[] };
 export function AccountManagement({students}:{students:Student[]}) {
@@ -13,6 +14,8 @@ export function AccountManagement({students}:{students:Student[]}) {
   const [error,setError]=useState('');
   const [message,setMessage]=useState('');
   const mountedRef=useRef(true);
+  const confirmDialogRef = useRef<HTMLDivElement>(null);
+  const cancelButtonRef = useRef<HTMLButtonElement>(null);
   const self=ApiService.getSession()?.user.id;
   const needsStudents=form.role==='parent'||form.role==='reviewer';
   const load=async()=>{const next=await ApiService.getManagedUsers();if(mountedRef.current)setDirectory(next);};
@@ -25,12 +28,13 @@ export function AccountManagement({students}:{students:Student[]}) {
       .finally(()=>{if(active&&mountedRef.current)setLoading(false);});
     return()=>{active=false;mountedRef.current=false;};
   },[]);
-  useEffect(()=>{
-    if(!confirm)return;
-    const handleKeyDown=(e:KeyboardEvent)=>{if(e.key==='Escape'&&!busy)setConfirm(null);};
-    window.addEventListener('keydown',handleKeyDown);
-    return()=>window.removeEventListener('keydown',handleKeyDown);
-  },[confirm,busy]);
+  useModalDialog({
+    isOpen: confirm !== null,
+    onClose: () => setConfirm(null),
+    isDismissDisabled: busy,
+    dialogRef: confirmDialogRef,
+    initialFocusRef: cancelButtonRef,
+  });
   const edit=(u:ManagedUser)=>{setForm({userId:u.id,name:u.name,email:u.email,role:u.role,active:u.active,studentIds:[...u.studentIds]});setConfirm(null);setMessage('');setError('');};
   const run=async()=>{
     if(!directory)return;setBusy(true);setError('');
@@ -41,7 +45,9 @@ export function AccountManagement({students}:{students:Student[]}) {
     }catch(e){if(mountedRef.current){setError(e instanceof Error?e.message:'保存できませんでした');setConfirm(null);}try{await load();}catch{/* Keep original error. */}}
     finally{if(mountedRef.current)setBusy(false);}
   };
-  return <section className="mx-auto max-w-3xl space-y-5 rounded-2xl bg-white p-5 shadow-sm">
+  return (
+    <>
+      <section className="mx-auto max-w-3xl space-y-5 rounded-2xl bg-white p-5 shadow-sm">
     <h2 className="text-xl font-bold">アカウント管理</h2>
     <p className="text-sm">Googleアカウントのメールアドレス、役割、対象の生徒を登録します。本人の初回Googleログインで本人確認が完了します。Googleアカウント自体の作成・削除は行いません。</p>
     <p className="text-sm text-slate-600">停止・削除は次の通信から反映します。退会前に予約の確認を行ってください。自分自身の停止・削除はできません。</p>
@@ -66,7 +72,58 @@ export function AccountManagement({students}:{students:Student[]}) {
         {form.userId&&needsStudents&&<label className="block"><input type="checkbox" disabled={busy} className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600" checked={!!form.rotateEntry} onChange={e=>setForm({...form,rotateEntry:e.target.checked})} /> 個別URLを再発行する（以前のURLは使えなくなります）</label>}
         <div className="flex flex-wrap gap-3"><button type="submit" disabled={busy} className="rounded bg-emerald-700 px-4 py-2 text-white disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600">内容を確認</button><button type="button" disabled={busy} className="rounded border px-4 py-2 disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-500" onClick={()=>{setForm({...empty});setConfirm(null);setError('');setMessage('');}}>新規登録に戻る</button>{form.userId&&form.userId!==self&&<button type="button" disabled={busy} className="rounded border border-rose-400 px-4 py-2 text-rose-700 disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-600" onClick={()=>setConfirm('delete')}>利用登録を削除</button>}</div>
       </form>
-      {confirm&&<div role="dialog" aria-label="アカウント変更の確認" aria-describedby="account-confirm-desc" className="space-y-3 rounded-lg border-2 border-amber-400 p-4"><p>{form.name} / {form.email}</p><p id="account-confirm-desc">{confirm==='delete'?'このシステムの利用権限を削除します。生徒台帳・履歴・Googleアカウントは削除されません。':`${form.role==='admin'?'全生徒とアカウントを管理できる管理者':form.role==='reviewer'?'選択した架空生徒だけを両方の画面で検証する利用者':'選択した生徒のみ利用する保護者'}として${form.active?'有効':'停止'}で保存します。`}</p><div className="flex flex-wrap gap-3"><button type="button" disabled={busy} aria-busy={busy} className={`rounded px-4 py-2 text-white disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 ${confirm === 'delete' ? 'bg-rose-700' : 'bg-emerald-700'} ${confirm === 'delete' ? 'focus-visible:ring-rose-600' : 'focus-visible:ring-emerald-600'}`} onClick={run}>{busy?'処理中…':confirm==='delete'?'削除を実行':'保存を実行'}</button><button type="button" disabled={busy} className="rounded border px-4 py-2 disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-500" onClick={()=>setConfirm(null)}>戻る</button></div></div>}
     </>}
-  </section>;
+      </section>
+      {directory && confirm && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm"
+          onClick={(e) => {
+            if (e.target === e.currentTarget && !busy) setConfirm(null);
+          }}
+        >
+          <div
+            ref={confirmDialogRef}
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="account-confirm-title"
+            aria-describedby="account-confirm-desc"
+            tabIndex={-1}
+            className="bg-white rounded-2xl shadow-xl w-full max-w-md max-h-[calc(100dvh-2rem)] overflow-y-auto overscroll-contain border-2 border-amber-400 p-5 space-y-3"
+          >
+            <h2 id="account-confirm-title" className="text-base font-bold text-slate-900">
+              アカウント変更の確認
+            </h2>
+            <p>
+              {form.name} / {form.email}
+            </p>
+            <p id="account-confirm-desc">
+              {confirm === 'delete'
+                ? 'このシステムの利用権限を削除します。生徒台帳・履歴・Googleアカウントは削除されません。'
+                : `${form.role === 'admin' ? '全生徒とアカウントを管理できる管理者' : form.role === 'reviewer' ? '選択した架空生徒だけを両方の画面で検証する利用者' : '選択した生徒のみ利用する保護者'}として${form.active ? '有効' : '停止'}で保存します。`}
+            </p>
+            <div className="flex flex-wrap gap-3">
+              <button
+                type="button"
+                disabled={busy}
+                aria-busy={busy}
+                className={`rounded px-4 py-2 text-white disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 ${confirm === 'delete' ? 'bg-rose-700' : 'bg-emerald-700'} ${confirm === 'delete' ? 'focus-visible:ring-rose-600' : 'focus-visible:ring-emerald-600'}`}
+                onClick={run}
+              >
+                {busy ? '処理中…' : confirm === 'delete' ? '削除を実行' : '保存を実行'}
+              </button>
+              <button
+                ref={cancelButtonRef}
+                type="button"
+                disabled={busy}
+                className="rounded border px-4 py-2 disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-500"
+                onClick={() => setConfirm(null)}
+              >
+                戻る
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+    </>
+  );
 }
