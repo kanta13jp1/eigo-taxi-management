@@ -25,6 +25,17 @@ function TermsModalContent({ onClose, initialTab }: { onClose: () => void; initi
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [onClose]);
 
+  useEffect(() => {
+    const prevFocused = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    document.getElementById(`terms-tab-${initialTab}`)?.focus();
+    return () => {
+      document.body.style.overflow = prevOverflow;
+      if (prevFocused && prevFocused.isConnected) prevFocused.focus();
+    };
+  }, [initialTab]);
+
   const handleTabKeyDown = (e: ReactKeyboardEvent<HTMLDivElement>) => {
     const currentIndex = TABS.indexOf(activeTab);
     let nextTab: 'terms' | 'privacy' | 'disclaimer' | null = null;

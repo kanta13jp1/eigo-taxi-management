@@ -241,19 +241,19 @@ export function App() {
   return (
     <div className="min-h-screen bg-slate-100/70 text-slate-800 flex flex-col font-sans">
       <Navbar currentTab={reviewOnly ? 'teacher' : currentTab} setCurrentTab={setCurrentTab} isAdmin={isAdmin} reviewOnly={reviewOnly} />
-      <div className="mx-auto flex w-full max-w-5xl flex-wrap items-center justify-between gap-2 px-4 pt-3 text-xs">
+      <section aria-label="ログイン状態" className="mx-auto flex w-full max-w-5xl flex-wrap items-center justify-between gap-2 px-4 pt-3 text-xs">
         <p>{session.mode === 'demo' ? 'デモ環境・架空データ（Google連携なし）' : reviewOnly ? '検証専用・指定した架空生徒のみ' : '教室の連携環境'} / {session.user.name}</p>
         <button type="button" className="rounded-lg border bg-white px-3 py-2 hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-500" onClick={()=>{
           ApiService.logout(); setStudents([]); setRides([]); setErrorMessage(''); setToastMessage(null); setSession(null);
           setIsAddRideOpen(false); setIsAddTicketOpen(false); setIsAddStudentOpen(false); setIsTermsOpen(false);
         }}>ログアウト</button>
-      </div>
+      </section>
 
       {/* メインコンテンツ */}
       <main className="max-w-5xl mx-auto px-4 sm:px-6 py-6 flex-1 w-full">
         {errorMessage && <p role="alert" className="mb-4 rounded-xl border border-rose-200 bg-rose-50 p-4 text-sm text-rose-800">{errorMessage}</p>}
           {errorMessage ? (
-            <button type="button" className="rounded-xl border px-4 py-2 hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-500" onClick={() => { setIsLoading(true); void loadData(); }}>台帳を再取得する</button>
+            <button type="button" disabled={isLoading} aria-busy={isLoading} className="rounded-xl border px-4 py-2 hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-500 disabled:opacity-50" onClick={() => { setIsLoading(true); void loadData(); }}>台帳を再取得する</button>
           ) : isLoading ? (
           <div role="status" className="flex items-center justify-center py-20">
             <div aria-hidden="true" className="animate-spin rounded-full h-8 w-8 border-b-2 border-emerald-600"></div>
@@ -309,7 +309,7 @@ export function App() {
           <p className="font-medium text-slate-600">
             © 2026 Mauro & Brenda English School. All rights reserved.
           </p>
-          <div className="flex items-center gap-4 text-xs font-medium">
+          <nav aria-label="規約・法務リンク" className="flex items-center gap-4 text-xs font-medium">
             <button
               type="button"
               onClick={() => openTerms('terms')}
@@ -317,7 +317,7 @@ export function App() {
             >
               利用規約
             </button>
-            <span className="text-slate-300">|</span>
+            <span aria-hidden="true" className="text-slate-300">|</span>
             <button
               type="button"
               onClick={() => openTerms('privacy')}
@@ -325,7 +325,7 @@ export function App() {
             >
               個人情報の取扱い
             </button>
-            <span className="text-slate-300">|</span>
+            <span aria-hidden="true" className="text-slate-300">|</span>
             <button
               type="button"
               onClick={() => openTerms('disclaimer')}
@@ -333,13 +333,13 @@ export function App() {
             >
               免責事項
             </button>
-          </div>
+          </nav>
         </div>
       </footer>
 
       {/* トースト通知 */}
       {toastMessage && (
-        <div role="status" aria-live="polite" className="fixed bottom-6 right-6 z-50 bg-slate-900 text-white text-xs sm:text-sm font-semibold px-4 py-3 rounded-2xl shadow-xl flex items-center gap-2 animate-in fade-in slide-in-from-bottom-5">
+        <div role="status" aria-live="polite" aria-atomic="true" className="fixed bottom-6 right-6 z-50 bg-slate-900 text-white text-xs sm:text-sm font-semibold px-4 py-3 rounded-2xl shadow-xl flex items-center gap-2 animate-in fade-in slide-in-from-bottom-5">
           {toastMessage}
         </div>
       )}

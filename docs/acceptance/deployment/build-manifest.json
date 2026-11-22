@@ -3,9 +3,9 @@
     "environment": "mighty-test",
     "projectId": "eigo-taxi-app",
     "siteId": "eigo-taxi-test",
-    "builtAt": "2026-11-21T23:12:33.613Z",
-    "baseCommit": "1c70a441dc9563ce7393f39f8f464acc3c0c7436",
-    "sourceDigest": "cd9381acadeba3188336a81aa5b007013a0e168a3927a90a25564ec6ee2b6761"
+    "builtAt": "2026-11-21T23:33:04.035Z",
+    "baseCommit": "ae40155589f90438ac743db93f2bf71b6bb6962f",
+    "sourceDigest": "f37ca513757415ec6c7c9a70af5233af619fa26651b4d661ed3402a720c4e985"
   },
   "sourceHashes": {
     ".firebaserc": "cb2d89a95d2550bcd6d4e2478e2bb8b7844c05bf79fec042220f226c815519f2",
@@ -17,13 +17,13 @@
     "public/favicon.svg": "61bc9a161de58248288e6905425d7180f0624c2865007b97d763fdac12043a66",
     "public/icons.svg": "b45fa506195cfcdef406ba9f0c77b36ddc1a7c224040926ec70abc2fdea7b93a",
     "src/App.css": "6e25a776d3e8102da5bacb3cb99f4a5fc662a2e01e6143140671a556d28c3d5c",
-    "src/App.tsx": "57273445ec7e69e0f167235ccbc061c67af0996b9076108780645dc15ca95802",
+    "src/App.tsx": "e8e1b9fce3c86d3b9d59206e141cbe6f51c792d15f24be25cd2892f875a2b7b8",
     "src/assets/hero.png": "881ffbcaafc212e49addad08846a5b82761355fa20624253af3477ba33262c5c",
     "src/assets/react.svg": "35ef61ed53b323ae94a16a8ec659b3d0af3880698791133f23b084085ab1c2e5",
     "src/assets/vite.svg": "5be21acd42eb7b896e517f4e0f0f11eb5c5d9e54fbbcebe9453f033008fcca6f",
     "src/components/AccountManagement.tsx": "0126595ddbd5444e1064439b1b6e33c60ecd3e4b463368cec6566e970061af39",
     "src/components/AddRideModal.tsx": "5e4eba810cfa3548766c779ce2f5a99090a18a6762574acc557c5a0c4bd1931c",
-    "src/components/AddStudentModal.tsx": "433b77182b730b426325d13b03ba13b4e9fc1db96ff109d0311169165456ee0e",
+    "src/components/AddStudentModal.tsx": "ad3a965341e10583348cc1c74dd1d6569d6c3466033338ee77d4471df0b35c2e",
     "src/components/AddTicketModal.tsx": "147d1d94bf50dd6c19d0db27e79b80a869dc91a490489eda291aa48b84693d98",
     "src/components/GoogleSettings.tsx": "d00c75996ed4bf39c17e72917bbeca7f12c0f0804bac1909ace93704b15b8eb2",
     "src/components/LoginScreen.tsx": "e5bb1cba35936aa8ea9d382f7336819c86275dc7df303a58ea0eedb02002928b",
@@ -31,7 +31,7 @@
     "src/components/ParentPortal.tsx": "badc556b31a0503969cf8d4a62e6bf69e4e26af8d0c435356e1ecfb2701601fd",
     "src/components/PortalInvitations.tsx": "d070747b00152acb81436ab851110bf07fc67b9a7e886296112f5376c8a1f278",
     "src/components/TeacherDashboard.tsx": "fd2d5ad4692c2a3edf3f3c8341d1f0ab3765dd97bb11b811b13e9c9b920d2a90",
-    "src/components/TermsModal.tsx": "2a68879ce1162983cc30a3dd106a03e1fc1edc50586333d9c5c335df11391e47",
+    "src/components/TermsModal.tsx": "ebc3b9c9f69e404fa096a95a53cb63df4aafd0ff00b37e132681e2592da5ed5b",
     "src/deployment-config.ts": "5c30aad36376487fcf2fbb664f2574bdd430890191675ca9813b5fdea516b6f1",
     "src/index.css": "66baff8b6d7a116920270aba8584dd856cf5de345b59b511b849b96152ce91d8",
     "src/main.tsx": "6e9e5807fcbd48b75a96db5cbef36c996262196be42e6d4760dc86babbe61ad2",
@@ -42,11 +42,11 @@
     "vite.config.ts": "116056c4029005abca8bc3a1ff86b54d37fd33e22530d43a59194969e4929e77"
   },
   "distHashes": {
-    "dist/assets/index-BHE-JgoK.css": "20b3c1392689e89dab4e6951c2efe792742e4ea968ee68d3ddd4596744d2edd9",
-    "dist/assets/index-DfYE21vX.js": "471c6d3fa04d95d90527573971d0f1ee0a73e99b06f9baba419bee737df461dd",
+    "dist/assets/index-B7Qhbloj.css": "fa9bf00160219d02a9d5be49daf47868c0078b24d2f823376710daa2c58b3070",
+    "dist/assets/index-D5B_Axn3.js": "abe9e0d691239bcc69e1aafbf2ee522cdbaf02341c1f9fa7ea7b859070e82b81",
     "dist/favicon.svg": "61bc9a161de58248288e6905425d7180f0624c2865007b97d763fdac12043a66",
     "dist/icons.svg": "b45fa506195cfcdef406ba9f0c77b36ddc1a7c224040926ec70abc2fdea7b93a",
-    "dist/index.html": "5e95f89643ff3438bec5e4eb9ae5610354f981194959fc8b0192c80eb91411f3",
-    "dist/release.json": "cec001120b47f34b5bf2b7332746a4ac03eebed7851f887778a1e3fd4ddde05e"
+    "dist/index.html": "421617891400170aeced2868212c598fff532814de1314030e94a5ce3d49612e",
+    "dist/release.json": "b76c74f8965e85cc9a87dc43eaffdf5044b9210b4c5dff0b6673d480bcfa9636"
   }
 }

@@ -1,0 +1,35 @@
+{
+  "checkedAt": "2026-11-21T23:35:10.564Z",
+  "url": "https://eigo-taxi-test.web.app",
+  "fix89AppLandmarksAndToast": {
+    "pass": true,
+    "landmarksCheck": {
+      "hasSessionSection": true,
+      "logoutInSec": true,
+      "hasFooterNav": true,
+      "legalBtnCount": 3,
+      "hiddenSepCount": 2
+    },
+    "toastCheck": {
+      "found": true,
+      "ariaAtomic": "true",
+      "textLength": 31
+    }
+  },
+  "fix90TermsModalFocusAndScrollLock": {
+    "pass": true,
+    "activeIdOnOpen": "terms-tab-terms",
+    "bodyOverflowOnOpen": "hidden",
+    "termsArrowRightActiveId": "terms-tab-privacy",
+    "bodyOverflowAfterClose": "",
+    "activeTextAfterClose": "利用規約"
+  },
+  "fix91AddStudentModalFocusAndScrollLock": {
+    "pass": true,
+    "activeIdOnOpen": "student-name",
+    "bodyOverflowOnOpen": "hidden",
+    "bodyOverflowAfterClose": "",
+    "activeTextAfterClose": "新規生徒を登録"
+  },
+  "errors": []
+}

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import type { Student } from '../types';
 import { X, UserPlus, MapPin, Phone, User } from 'lucide-react';
 
@@ -25,6 +25,18 @@ const AddStudentModalContent: React.FC<AddStudentModalProps> = ({
   const [ticketBalance, setTicketBalance] = useState('10');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState('');
+  const nameInputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    const prevFocused = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    nameInputRef.current?.focus();
+    return () => {
+      document.body.style.overflow = prevOverflow;
+      if (prevFocused && prevFocused.isConnected) prevFocused.focus();
+    };
+  }, []);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -114,6 +126,7 @@ const AddStudentModalContent: React.FC<AddStudentModalProps> = ({
                 生徒氏名 (ふりがな)
               </label>
               <input
+                ref={nameInputRef}
                 id="student-name"
                 type="text"
                 maxLength={100}
