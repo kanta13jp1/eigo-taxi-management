@@ -105,7 +105,7 @@ const AddStudentModalContent: React.FC<AddStudentModalProps> = ({
             aria-label="閉じる"
             disabled={isSubmitting}
             onClick={onClose}
-            className="p-1 rounded-full text-slate-400 hover:text-slate-600 hover:bg-slate-100 transition-colors disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-400"
+            className="p-1 rounded-full text-slate-500 hover:text-slate-700 hover:bg-slate-100 transition-colors disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-400"
           >
             <X className="w-5 h-5" aria-hidden="true" />
           </button>

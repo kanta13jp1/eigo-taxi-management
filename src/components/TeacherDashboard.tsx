@@ -55,9 +55,15 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
   const activeCancelId = cancelTarget?.id;
   useEffect(() => {
     if (!activeCancelId) return;
+    const previousActive = document.activeElement instanceof HTMLElement ? document.activeElement : null;
     const dialog = cancelDialog.current;
     dialog?.showModal();
-    return () => { dialog?.close(); };
+    return () => {
+      dialog?.close();
+      if (previousActive?.isConnected) {
+        previousActive.focus({ preventScroll: true });
+      }
+    };
   }, [activeCancelId]);
   const dismissCancellation = () => {
     cancelDialog.current?.close();
@@ -303,7 +309,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
             <div className="bg-white rounded-2xl border border-dashed border-slate-300 p-8 text-center">
               <Car aria-hidden="true" className="w-10 h-10 text-slate-300 mx-auto mb-2" />
               <p className="text-sm font-semibold text-slate-600">本日の送迎予定はありません</p>
-              <p className="text-xs text-slate-400 mt-1">
+              <p className="text-xs text-slate-600 mt-1">
                 右上の「送迎予定を追加」ボタンから急な送迎もすぐに追加できます。
               </p>
               <button
@@ -461,7 +467,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
                 <tbody className="divide-y divide-slate-100">
                   {filteredRides.length === 0 ? (
                     <tr>
-                      <td colSpan={7} className="py-8 text-center text-slate-400">
+                      <td colSpan={7} className="py-8 text-center text-slate-600">
                         該当する送迎データはありません
                       </td>
                     </tr>
@@ -497,7 +503,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
                                   完了済 (-{typeInfo.consume}回)
                                 </span>
                                 {ride.completedAt && (
-                                  <span className="text-[10px] text-slate-400">{ride.completedAt}</span>
+                                  <span className="text-[10px] text-slate-600">{ride.completedAt}</span>
                                 )}
                               </div>
                             )}
@@ -549,7 +555,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
           aria-describedby="admin-cancel-details admin-cancel-effect"
           onCancel={(e) => { if (cancelPending) { e.preventDefault(); return; } dismissCancellation(); }}
           onClick={(e) => { if (e.target === e.currentTarget && !cancelPending) dismissCancellation(); }}
-          className="m-auto w-11/12 max-w-md rounded-2xl p-0 shadow-xl backdrop:bg-slate-900/50">
+          className="m-auto w-11/12 max-w-md rounded-2xl p-0 shadow-xl backdrop:bg-slate-900/60 backdrop:backdrop-blur-sm">
           <div className="p-5">
             <h2 id="admin-cancel-heading" className="text-lg font-bold">予約取消の確認</h2>
             <div id="admin-cancel-details" className="mt-3 space-y-1 [overflow-wrap:anywhere]">
@@ -598,7 +604,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
                   <div>
                     <div className="flex items-start justify-between gap-2 mb-2">
                       <div>
-                        <span className="text-[10px] font-mono text-slate-400 font-semibold">{student.id}</span>
+                        <span className="text-[10px] font-mono text-slate-600 font-semibold">{student.id}</span>
                         <h3 className="font-bold text-slate-900 text-base">{student.name}</h3>
                         <p className="text-xs text-slate-500">保護者: {student.parentName || '未設定'}</p>
                       </div>

@@ -1,0 +1,195 @@
+{
+  "executedAt": "2026-11-22T17:53:54.946Z",
+  "targetUrl": "https://eigo-taxi-test.web.app/",
+  "titles": {
+    "adminLogin": "管理者専用ログイン | Mauro & Brenda Taxi Link",
+    "adminDashboard": "管理者ダッシュボード | Mauro & Brenda Taxi Link",
+    "invitations": "ご家庭の個別URL・QR | Mauro & Brenda Taxi Link",
+    "accounts": "アカウント管理 | Mauro & Brenda Taxi Link",
+    "settings": "Google連携 | Mauro & Brenda Taxi Link",
+    "parentLogin": "生徒・保護者専用ログイン | Mauro & Brenda Taxi Link",
+    "parentPortal": "保護者ポータル | Mauro & Brenda Taxi Link"
+  },
+  "skipLink": {
+    "focused": {
+      "tag": "a",
+      "href": "#main-content",
+      "text": "メインコンテンツへスキップ",
+      "width": 170.015625,
+      "height": 36
+    },
+    "afterEnter": {
+      "hash": "#/admin",
+      "activeId": "main-content",
+      "activeTag": "main",
+      "hasLogout": true
+    }
+  },
+  "contrastAudits": [
+    {
+      "label": "TeacherDashboard-Students",
+      "readableSlate400": [],
+      "upgradedCount": 12,
+      "minUpgradedRatio": 6.43,
+      "sampleRatios": [
+        {
+          "text": "個別URL・QR",
+          "ratio": 6.92
+        },
+        {
+          "text": "アカウント管理",
+          "ratio": 6.92
+        },
+        {
+          "text": "Google連携",
+          "ratio": 6.92
+        },
+        {
+          "text": "本日の送迎 (2)",
+          "ratio": 6.68
+        },
+        {
+          "text": "送迎スケジュール一覧 (3)",
+          "ratio": 6.43
+        }
+      ],
+      "closeBtnMetrics": null
+    },
+    {
+      "label": "TeacherDashboard-Schedule",
+      "readableSlate400": [],
+      "upgradedCount": 10,
+      "minUpgradedRatio": 6.43,
+      "sampleRatios": [
+        {
+          "text": "個別URL・QR",
+          "ratio": 6.92
+        },
+        {
+          "text": "アカウント管理",
+          "ratio": 6.92
+        },
+        {
+          "text": "Google連携",
+          "ratio": 6.92
+        },
+        {
+          "text": "本日の送迎 (2)",
+          "ratio": 6.43
+        },
+        {
+          "text": "生徒・チケット管理 (3)",
+          "ratio": 6.68
+        }
+      ],
+      "closeBtnMetrics": null
+    },
+    {
+      "label": "AddRideModal-CloseButton",
+      "readableSlate400": [],
+      "upgradedCount": 20,
+      "minUpgradedRatio": 6.43,
+      "sampleRatios": [
+        {
+          "text": "個別URL・QR",
+          "ratio": 6.92
+        },
+        {
+          "text": "アカウント管理",
+          "ratio": 6.92
+        },
+        {
+          "text": "Google連携",
+          "ratio": 6.92
+        },
+        {
+          "text": "本日の送迎 (2)",
+          "ratio": 6.43
+        },
+        {
+          "text": "生徒・チケット管理 (3)",
+          "ratio": 6.43
+        }
+      ],
+      "closeBtnMetrics": {
+        "className": "p-1 rounded-full text-slate-500 hover:text-slate-700 hover:bg-slate-100 transition-colors disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-400",
+        "ratio": 4.64
+      }
+    },
+    {
+      "label": "ParentPortal-Mobile",
+      "readableSlate400": [],
+      "upgradedCount": 7,
+      "minUpgradedRatio": 7.24,
+      "sampleRatios": [
+        {
+          "text": "1 件",
+          "ratio": 7.58
+        },
+        {
+          "text": "東京都世田谷区桜新町1-10-5 パークサイド201",
+          "ratio": 7.36
+        },
+        {
+          "text": "1 件",
+          "ratio": 7.58
+        },
+        {
+          "text": "往復",
+          "ratio": 7.58
+        },
+        {
+          "text": "登録済みのご住所・連絡先送迎先: 東京都世田谷区桜新町1-10-5 パークサイド",
+          "ratio": 7.24
+        }
+      ],
+      "closeBtnMetrics": null
+    }
+  ],
+  "nativeDialogs": [
+    {
+      "name": "TeacherDashboard-CancelDialog",
+      "open": {
+        "className": "m-auto w-11/12 max-w-md rounded-2xl p-0 shadow-xl backdrop:bg-slate-900/60 backdrop:backdrop-blur-sm",
+        "backdropFilter": "blur(4px)",
+        "activeText": "戻る",
+        "insideDialog": true
+      },
+      "afterEscape": {
+        "activeMarker": "admin-cancel",
+        "activeText": "取消"
+      }
+    },
+    {
+      "name": "ParentPortal-CancelDialog",
+      "open": {
+        "className": "m-auto w-11/12 max-w-md rounded-2xl p-0 shadow-xl backdrop:bg-slate-900/60 backdrop:backdrop-blur-sm",
+        "activeText": "戻る",
+        "insideDialog": true,
+        "viewport": 375,
+        "scrollWidth": 375
+      },
+      "afterEscape": {
+        "activeMarker": "parent-cancel",
+        "activeText": "キャンセル"
+      }
+    }
+  ],
+  "screenshots": {
+    "skipLinkFocusDesktop": {
+      "path": "outputs/daily-20261123/screenshots-r12/skip-link-focus-desktop.png",
+      "sha256": "4dfbfad6e729a480857b0f6315c8c4679ec0287476cce83fee6eda4290ae0e0f"
+    },
+    "adminCancelDialogDesktop": {
+      "path": "outputs/daily-20261123/screenshots-r12/admin-cancel-dialog-desktop.png",
+      "sha256": "859f24657dc2847525d787fc690eb67211a3bf9aa7968bfc79deb28720e0763f"
+    },
+    "parentCancelDialogMobile": {
+      "path": "outputs/daily-20261123/screenshots-r12/parent-cancel-dialog-mobile.png",
+      "sha256": "db2fe138ce66e2c8ab8f6b1e713a6d170d06eaf9d7fc4be8d993a392a41ce59e"
+    }
+  },
+  "pageErrors": [],
+  "consoleErrors": [],
+  "status": "PASS"
+}

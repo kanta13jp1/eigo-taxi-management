@@ -52,6 +52,35 @@ export function App() {
   const isFullAdmin = isAdmin && !reviewOnly;
 
   useEffect(() => {
+    if (typeof document === 'undefined') return;
+    let pageTitle: string;
+    if (checkingSession) {
+      pageTitle = '確認中';
+    } else if (!session) {
+      if (route.kind === 'admin') {
+        pageTitle = '管理者専用ログイン';
+      } else if (route.kind === 'parent') {
+        pageTitle = '生徒・保護者専用ログイン';
+      } else if (route.kind === 'invalid') {
+        pageTitle = 'URL確認';
+      } else {
+        pageTitle = '送迎サービス入口';
+      }
+    } else if (!isAdmin) {
+      pageTitle = '保護者ポータル';
+    } else if (currentTab === 'invitations' && isFullAdmin) {
+      pageTitle = 'ご家庭の個別URL・QR';
+    } else if (currentTab === 'accounts' && isFullAdmin) {
+      pageTitle = 'アカウント管理';
+    } else if (currentTab === 'settings' && isFullAdmin) {
+      pageTitle = 'Google連携';
+    } else {
+      pageTitle = '管理者ダッシュボード';
+    }
+    document.title = `${pageTitle} | Mauro & Brenda Taxi Link`;
+  }, [checkingSession, session, route, currentTab, isAdmin, isFullAdmin]);
+
+  useEffect(() => {
     const changed = () => {
       setSession(null); setStudents([]); setRides([]); setToastMessage(null); setErrorMessage('');
       setIsAddRideOpen(false); setIsAddTicketOpen(false); setIsAddStudentOpen(false); setIsTermsOpen(false);
@@ -240,6 +269,18 @@ export function App() {
   const visibleRides = rides.filter(ride => !reviewOnly || session.user.studentIds.includes(ride.studentId));
   return (
     <div className="min-h-screen bg-slate-100/70 text-slate-800 flex flex-col font-sans">
+      <a
+        href="#main-content"
+        onClick={(e) => {
+          e.preventDefault();
+          const main = document.getElementById('main-content');
+          main?.focus();
+          main?.scrollIntoView({ block: 'start' });
+        }}
+        className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-50 focus:rounded-lg focus:bg-slate-900 focus:px-4 focus:py-2 focus:text-sm focus:font-bold focus:text-white focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-emerald-500"
+      >
+        メインコンテンツへスキップ
+      </a>
       <Navbar currentTab={reviewOnly ? 'teacher' : currentTab} setCurrentTab={setCurrentTab} isAdmin={isAdmin} reviewOnly={reviewOnly} />
       <section aria-label="ログイン状態" className="mx-auto flex w-full max-w-5xl flex-wrap items-center justify-between gap-2 px-4 pt-3 text-xs">
         <p>{session.mode === 'demo' ? 'デモ環境・架空データ（Google連携なし）' : reviewOnly ? '検証専用・指定した架空生徒のみ' : '教室の連携環境'} / {session.user.name}</p>
@@ -250,7 +291,7 @@ export function App() {
       </section>
 
       {/* メインコンテンツ */}
-      <main className="max-w-5xl mx-auto px-4 sm:px-6 py-6 flex-1 w-full">
+      <main id="main-content" tabIndex={-1} className="max-w-5xl mx-auto px-4 sm:px-6 py-6 flex-1 w-full">
         {errorMessage && <p role="alert" className="mb-4 rounded-xl border border-rose-200 bg-rose-50 p-4 text-sm text-rose-800">{errorMessage}</p>}
           {errorMessage ? (
             <button type="button" disabled={isLoading} aria-busy={isLoading} className="rounded-xl border px-4 py-2 hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-500 disabled:opacity-50" onClick={() => { setIsLoading(true); void loadData(); }}>台帳を再取得する</button>

@@ -3,9 +3,9 @@
     "environment": "mighty-test",
     "projectId": "eigo-taxi-app",
     "siteId": "eigo-taxi-test",
-    "builtAt": "2026-11-22T16:28:04.325Z",
-    "baseCommit": "bc6baa9f0403e88efa59e9060b94f7133c5dae96",
-    "sourceDigest": "9ffedcfdf065d79513d39e005a279b793fbfb498daf0de1fc9915a1436f60fba"
+    "builtAt": "2026-11-22T17:24:29.669Z",
+    "baseCommit": "0ab6dafeff0396671f066b7f63dfea96575f9a32",
+    "sourceDigest": "40740504c86ea988eb35dacfe5e5ea7022a8f38bc22f8ffe1d6ec40c134defec"
   },
   "sourceHashes": {
     ".firebaserc": "cb2d89a95d2550bcd6d4e2478e2bb8b7844c05bf79fec042220f226c815519f2",
@@ -17,21 +17,21 @@
     "public/favicon.svg": "61bc9a161de58248288e6905425d7180f0624c2865007b97d763fdac12043a66",
     "public/icons.svg": "b45fa506195cfcdef406ba9f0c77b36ddc1a7c224040926ec70abc2fdea7b93a",
     "src/App.css": "6e25a776d3e8102da5bacb3cb99f4a5fc662a2e01e6143140671a556d28c3d5c",
-    "src/App.tsx": "862bd58b7b9874f8a896a27801bc95099a53d035229f2baa96370821fed9624e",
+    "src/App.tsx": "688ba5e6fe3c3dcee1248a70db2895846acf8292428e1b8a878850ed3c579c7c",
     "src/assets/hero.png": "881ffbcaafc212e49addad08846a5b82761355fa20624253af3477ba33262c5c",
     "src/assets/react.svg": "35ef61ed53b323ae94a16a8ec659b3d0af3880698791133f23b084085ab1c2e5",
     "src/assets/vite.svg": "5be21acd42eb7b896e517f4e0f0f11eb5c5d9e54fbbcebe9453f033008fcca6f",
     "src/components/AccountManagement.tsx": "7b45ef7a606da58786091031faabd783aa5126956f7cef26f6d665220d06d6eb",
-    "src/components/AddRideModal.tsx": "b5feff9c4798a0d0e38ca12c41bd898efcb5fd9e3ee2e0dba8ce9b77cbb06cb3",
-    "src/components/AddStudentModal.tsx": "69b6c0fc92bc82d14cfc5cf032bcceb52a6ccd4742adea82b728a01500cf3a51",
-    "src/components/AddTicketModal.tsx": "e4c791a335ad59413f78255b41c9ebae871351a907e0dd2708ba4a03e60b8b80",
+    "src/components/AddRideModal.tsx": "612c1d35fcc491cab753e82ca0ebfcb52b665a7b9cd1b658189a9ca8cbd59f4b",
+    "src/components/AddStudentModal.tsx": "f1e3fba5d38c8f31fc7bdcddaa44e98f98485d3e28cf0e7a528ff6b3a2983994",
+    "src/components/AddTicketModal.tsx": "f4d9fdda7152cab00de6cb0f09829704bd26eac6fd9085e126dbb34a7ea6a4d7",
     "src/components/GoogleSettings.tsx": "813fb6e30da6d1f739cc7e72960547d1955fc729f71e99f722a855e50e7a7c6d",
     "src/components/LoginScreen.tsx": "e5bb1cba35936aa8ea9d382f7336819c86275dc7df303a58ea0eedb02002928b",
     "src/components/Navbar.tsx": "d9b5fcef4d332e45d0028b023caf1f09f08a7ec3603c8a00fd92c0e40f858ab5",
-    "src/components/ParentPortal.tsx": "3b2360eed0a57af32758457647107e2f28dc86e574a314c9cae769837e75d43e",
+    "src/components/ParentPortal.tsx": "334da922e4cde148bf403dfb07318f383200c349f29fde68ebe6c92cc3fe73d4",
     "src/components/PortalInvitations.tsx": "d070747b00152acb81436ab851110bf07fc67b9a7e886296112f5376c8a1f278",
-    "src/components/TeacherDashboard.tsx": "a9cb0d4734204547f5e8b5d71c205326bb2a7dea21b539e389960d5f5066a0c9",
-    "src/components/TermsModal.tsx": "150a96d3e7c29a0c0873f117d4daec478a49ef65e934636c5a2e9b652268ae5d",
+    "src/components/TeacherDashboard.tsx": "aabff91d7e44f6699afa80e2edba041c1f9ec7bfb6a247c5ed1c23c464e52469",
+    "src/components/TermsModal.tsx": "3033077b7bebd72370e91e5d016d03b734378de3bbfcefbbf13f663270f2ccef",
     "src/deployment-config.ts": "5c30aad36376487fcf2fbb664f2574bdd430890191675ca9813b5fdea516b6f1",
     "src/hooks/useModalDialog.ts": "e42891b04ffaf2cb7d5ee143296d79f491b58618a41e3b479dc91bc6fb336da8",
     "src/index.css": "66baff8b6d7a116920270aba8584dd856cf5de345b59b511b849b96152ce91d8",
@@ -43,11 +43,11 @@
     "vite.config.ts": "116056c4029005abca8bc3a1ff86b54d37fd33e22530d43a59194969e4929e77"
   },
   "distHashes": {
-    "dist/assets/index-BYzXBDhF.css": "9d932c3a4d6b99e243029f9b9523b561487088e479f3f1fb1f3484b70658c62a",
-    "dist/assets/index-JIoRWqVF.js": "851e3a607d2e09166bbe884b2f814ab35efafb7f6b3b9b8a0eab247750dbcf84",
+    "dist/assets/index-BTyXYBR6.js": "f04c5682486c363127fcdb2218559974ee198622d30b71b0447173611eb05d45",
+    "dist/assets/index-DdE9Bfxi.css": "bb81e7aa85cdbc1e47cde8e0199b8197c0ce2d0f95c5f5206af6910814829ca8",
     "dist/favicon.svg": "61bc9a161de58248288e6905425d7180f0624c2865007b97d763fdac12043a66",
     "dist/icons.svg": "b45fa506195cfcdef406ba9f0c77b36ddc1a7c224040926ec70abc2fdea7b93a",
-    "dist/index.html": "1f1eedea477154ebf566ef110f72c368c953e5c702a7e61c472439538ab463bb",
-    "dist/release.json": "0e6b0ecf9bc047e7a0d25638d21bd40950082cde6dedf851611cf9db5dedf783"
+    "dist/index.html": "b6d368ababba75accf918865babbc8cf1224d6238ad22077449978938ae4d5bf",
+    "dist/release.json": "8b36f388270747ff4f84a2f79eece2b2c26414307f835f6a9945455efe43df8d"
   }
 }

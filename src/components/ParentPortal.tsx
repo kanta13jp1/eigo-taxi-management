@@ -56,9 +56,15 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({
   const activeCancelId = cancelTarget?.id;
   useEffect(() => {
     if (!activeCancelId) return;
+    const previousActive = document.activeElement instanceof HTMLElement ? document.activeElement : null;
     const dialog = cancelDialog.current;
     dialog?.showModal();
-    return () => dialog?.close();
+    return () => {
+      dialog?.close();
+      if (previousActive?.isConnected) {
+        previousActive.focus({ preventScroll: true });
+      }
+    };
   }, [activeCancelId]);
   const dismissCancellation = () => {
     cancelDialog.current?.close();
@@ -177,14 +183,14 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({
                 <Calendar aria-hidden="true" className="w-4 h-4 text-emerald-600" />
                 現在予約中の送迎
               </h3>
-              <span className="text-xs text-slate-400">{upcomingRides.length} 件</span>
+              <span className="text-xs text-slate-600">{upcomingRides.length} 件</span>
             </div>
             <p className="text-[11px] text-slate-500 mb-3">
               ※ 日時・送迎場所を変更する場合は、元の予約をキャンセルしてから新しくお申し込みください。
             </p>
 
             {upcomingRides.length === 0 ? (
-              <div className="text-center py-6 text-slate-400 text-xs">
+              <div className="text-center py-6 text-slate-600 text-xs">
                 現在予約されている送迎はありません。
               </div>
             ) : (
@@ -243,7 +249,7 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({
               aria-describedby="parent-cancel-details parent-cancel-effect"
               onCancel={(e) => { if (cancelPending) { e.preventDefault(); return; } dismissCancellation(); }}
               onClick={(e) => { if (e.target === e.currentTarget && !cancelPending) dismissCancellation(); }}
-              className="m-auto w-11/12 max-w-md rounded-2xl p-0 shadow-xl backdrop:bg-slate-900/50">
+              className="m-auto w-11/12 max-w-md rounded-2xl p-0 shadow-xl backdrop:bg-slate-900/60 backdrop:backdrop-blur-sm">
               <div className="p-5">
                 <h2 id="parent-cancel-heading" className="text-lg font-bold">予約取消の確認</h2>
                 <div id="parent-cancel-details" className="mt-3 space-y-1 [overflow-wrap:anywhere]">
@@ -268,11 +274,11 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({
                 <Clock aria-hidden="true" className="w-4 h-4 text-slate-500" />
                 過去の利用履歴
               </h3>
-              <span className="text-xs text-slate-400">{pastRides.length} 件</span>
+              <span className="text-xs text-slate-600">{pastRides.length} 件</span>
             </div>
 
             {pastRides.length === 0 ? (
-              <p className="text-center py-4 text-slate-400 text-xs">過去の利用履歴はありません</p>
+              <p className="text-center py-4 text-slate-600 text-xs">過去の利用履歴はありません</p>
             ) : (
               <div className="divide-y divide-slate-100 text-xs">
                 {pastRides.map((ride) => (
@@ -281,7 +287,7 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({
                       <span className="font-semibold text-slate-800">
                         {ride.rideDate} {ride.rideTime}
                       </span>
-                      <span className="text-slate-400 ml-2">
+                      <span className="text-slate-600 ml-2">
                         {ride.rideType === 'pickup' ? 'お迎え' : ride.rideType === 'dropoff' ? '送り' : '往復'}
                       </span>
                     </div>
@@ -292,7 +298,7 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({
                         </span>
                       )}
                       {ride.status === 'cancelled' && (
-                        <span className="text-slate-400 font-medium">キャンセル済</span>
+                        <span className="text-slate-600 font-medium">キャンセル済</span>
                       )}
                     </div>
                   </div>
@@ -306,7 +312,7 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({
             <p className="font-bold text-slate-700">登録済みのご住所・連絡先</p>
             <p className="[overflow-wrap:anywhere]">送迎先: {student.address || '未登録'}</p>
             <p>緊急連絡先: {student.phone || '未登録'}</p>
-            <p className="text-[11px] text-slate-400 mt-1">
+            <p className="text-[11px] text-slate-600 mt-1">
               ※ 送迎場所の変更や連絡先変更は先生へ直接お知らせください。
             </p>
           </div>

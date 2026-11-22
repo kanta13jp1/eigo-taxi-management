@@ -1,0 +1,118 @@
+{
+  "date": "2026-11-23",
+  "round": "Round 12 (#97-#99)",
+  "reviewer": "Independent Swarm Auditor verifier-12 (board seq #112) & Coordinator live WCAG 2.1 AA audit",
+  "scope": [
+    "src/App.tsx",
+    "src/components/ParentPortal.tsx",
+    "src/components/TeacherDashboard.tsx",
+    "src/components/AddRideModal.tsx",
+    "src/components/AddStudentModal.tsx",
+    "src/components/AddTicketModal.tsx",
+    "src/components/TermsModal.tsx"
+  ],
+  "sourceHashes": {
+    "src/App.tsx": "688ba5e6fe3c3dcee1248a70db2895846acf8292428e1b8a878850ed3c579c7c",
+    "src/components/ParentPortal.tsx": "334da922e4cde148bf403dfb07318f383200c349f29fde68ebe6c92cc3fe73d4",
+    "src/components/TeacherDashboard.tsx": "aabff91d7e44f6699afa80e2edba041c1f9ec7bfb6a247c5ed1c23c464e52469",
+    "src/components/AddRideModal.tsx": "612c1d35fcc491cab753e82ca0ebfcb52b665a7b9cd1b658189a9ca8cbd59f4b",
+    "src/components/AddStudentModal.tsx": "f1e3fba5d38c8f31fc7bdcddaa44e98f98485d3e28cf0e7a528ff6b3a2983994",
+    "src/components/AddTicketModal.tsx": "f4d9fdda7152cab00de6cb0f09829704bd26eac6fd9085e126dbb34a7ea6a4d7",
+    "src/components/TermsModal.tsx": "3033077b7bebd72370e91e5d016d03b734378de3bbfcefbbf13f663270f2ccef"
+  },
+  "swarmReview": {
+    "verifier": "verifier-12",
+    "boardApprovalSeq": 112,
+    "reviewedCommits": {
+      "author-app-wcag": "ba3654445c3436c1c1a3c65d740762608d71e397",
+      "author-portals-wcag": "ece4fac0f0efa7520edc10d4f3178d0630558eeb",
+      "author-modals-contrast": "e59db56370bc8cf863011cd011255b5315998d37"
+    },
+    "criteriaVerified": [
+      "Strict disjoint ownership across all 3 worker branches (App.tsx / ParentPortal+TeacherDashboard / 4 modals)",
+      "Skip-to-main link calls e.preventDefault() and focuses #main-content (tabIndex=-1) without changing window.location.hash; dynamic document.title effect sits before early returns with typeof document === 'undefined' Node VM guard",
+      "All 11 readable text-slate-400 elements across ParentPortal.tsx (7) and TeacherDashboard.tsx (4) upgraded to text-slate-600; all 4 modal close buttons upgraded to text-slate-500 hover:text-slate-700",
+      "Native <dialog> effects in ParentPortal.tsx and TeacherDashboard.tsx capture previousActive before showModal(), restore connected previousActive with preventScroll: true, and use backdrop:bg-slate-900/60 backdrop:backdrop-blur-sm",
+      "Zero dead Tailwind v4 or animate-in classes; tsc --noEmit and oxlint pass cleanly"
+    ]
+  },
+  "findings": [
+    {
+      "status": "VERIFIED",
+      "detail": "Live public demo verified dynamic document.title across all 7 login/portal/tab states, Tab-1 skip link visibility (170.02x36px), Enter focus transfer to #main-content while preserving #/admin hash & session."
+    },
+    {
+      "status": "VERIFIED",
+      "detail": "WCAG 2.1 relative luminance calculations on live rendered styles measured >= 6.43:1 across TeacherDashboard tabs, >= 7.24:1 on ParentPortal mobile, 4.64:1 on AddRideModal close button, and 0 remaining readable text-slate-400 text nodes."
+    },
+    {
+      "status": "VERIFIED",
+      "detail": "Native <dialog> cancellation confirmation in both TeacherDashboard (1280x900) and ParentPortal (375x667) uses frosted ::backdrop (blur(4px)) and restores focus directly to exact trigger button on Escape."
+    }
+  ],
+  "visualReview": {
+    "inspectedViaReadFile": true,
+    "screenshots": {
+      "outputs/daily-20261123/screenshots-r12/skip-link-focus-desktop.png": {
+        "sha256": "4dfbfad6e729a480857b0f6315c8c4679ec0287476cce83fee6eda4290ae0e0f",
+        "observation": "1280x900 live public demo: focused skip link メインコンテンツへスキップ renders clearly at top-left in high-contrast slate-900/white with emerald focus ring without breaking navbar layout."
+      },
+      "outputs/daily-20261123/screenshots-r12/admin-cancel-dialog-desktop.png": {
+        "sha256": "859f24657dc2847525d787fc690eb67211a3bf9aa7968bfc79deb28720e0763f",
+        "observation": "1280x900 live public demo: native <dialog> 予約取消の確認 centered with full-screen frosted ::backdrop blur(4px), crisp detail text and unclipped 戻る / 取消を確定 buttons."
+      },
+      "outputs/daily-20261123/screenshots-r12/parent-cancel-dialog-mobile.png": {
+        "sha256": "db2fe138ce66e2c8ab8f6b1e713a6d170d06eaf9d7fc4be8d993a392a41ce59e",
+        "observation": "375x667 mobile live public demo: native <dialog> fits cleanly within 375px viewport with blurred ::backdrop around modal; darker slate-600 labels in history and footer notes read crisply."
+      }
+    }
+  },
+  "evidenceChecks": {
+    "outputs/daily-20261123/public-ui-ninetynine.json": {
+      "sha256": "f756e8295c81911ccc6ec0d748ec6bd7c16de602eae19dca26d1eb87631b667f",
+      "pass": true,
+      "sourceHashMatch": true
+    },
+    "docs/acceptance/deployment-verification/public-2026-11-22T17-26-17-824Z.json": {
+      "sha256": "33debdef38e7b1d4025dc9c5901fc5774ac64f4dd799792151b9b871ed1f694e",
+      "pass": true,
+      "urlsMatched": 7
+    },
+    "outputs/refresh-20261120/local/results.json": {
+      "sha256": "10833b31596664aafd495076241d3f1b86dea63ac65fd896ff4ac8d303ec159a",
+      "pass": true,
+      "count": 14,
+      "sourceHashMatch": true
+    },
+    "outputs/refresh-20261120/reviewer/results.json": {
+      "sha256": "4b532591c84b248ffa70c15d2cd79c70fa4cf510fba950085f05ccfa7326caf7",
+      "pass": true,
+      "count": 8,
+      "sourceHashMatch": true
+    },
+    "outputs/refresh-20261120/modal-scroll/results.json": {
+      "sha256": "03492d4cdc11d5830e2f7aeb846cd1144c9df4e46dd60c4794bd7e682e73e9f1",
+      "pass": true,
+      "count": 2,
+      "sourceHashMatch": true
+    },
+    "outputs/r19-adoption-20261111/regression/trace-ui/results.json": {
+      "sha256": "4bfc91a3af87c4486a9d066ad50a872ea62764c8ed5b714e93c41335b8b878c1",
+      "pass": true,
+      "count": 6,
+      "sourceHashMatch": true
+    },
+    "outputs/refresh-20261120/offline/reservation-retry-ui.json": {
+      "sha256": "86e345028385ce24c987c2ade9c6edd33fad0733771bba423bf1709c0443c935",
+      "pass": true,
+      "count": 1,
+      "sourceHashMatch": true
+    }
+  },
+  "conclusion": "No unresolved blocking defect in Round 12 (#97-#99) WCAG 2.1 AA navigation, title, contrast, or native dialog focus restoration",
+  "limits": [
+    "Customer acceptance CUST-01..06 remains 0/6 NOT_RUN",
+    "thirdPartyPassed: 0; release remains HOLD; production rollout has not started",
+    "No real Google OAuth login, live GAS/Spreadsheet/Calendar execution, or physical mobile device testing claimed; public audit exercised public demo mode only"
+  ]
+}

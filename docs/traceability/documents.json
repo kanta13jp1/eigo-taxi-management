@@ -74481,6 +74481,147 @@
       ]
     },
     {
+      "id": "DOC-0667",
+      "path": "docs/progress/2026-11-23-cumulative-ninetynine.md",
+      "state": "historical",
+      "sha256": "743e205e2abb3a409ef8d5680a4d1aaad143c9af603c95c15d0a0f1f0ea8943c",
+      "items": [
+        {
+          "id": "DOC-0667-ITEM-00001",
+          "line": 1,
+          "contentSha256": "430b67aa464d0edf3349db25e25a53e4a87a82b4aa454713b10ded8fe90680fe",
+          "occurrence": 1,
+          "preview": "# 11月23日 累計99件の実装修正・受入試験99項目（スキップリンク・動的タイトル / WCAG AA コントラスト引き上げ / ネイティブ `<dialog>` フォーカス復帰統一）"
+        },
+        {
+          "id": "DOC-0667-ITEM-00002",
+          "line": 3,
+          "contentSha256": "e79e8976eb91cf8c58638c41a0a566d1ab36a7c78822c02c6008bfbd6635a453",
+          "occurrence": 1,
+          "preview": "小林さん、お疲れ様です。"
+        },
+        {
+          "id": "DOC-0667-ITEM-00003",
+          "line": 5,
+          "contentSha256": "3cc27321193300bc00055c85bcb25c2eaff3d47b25c52e073d8e2ae0e0ba4fcc",
+          "occurrence": 1,
+          "preview": "11月23日の第2弾（Round 12: 97〜99件目）により、実装修正は**累計99件**、実施した異なる受入試験は**累計99項目**となりました（先行2件は Claude Code Fable 5.2 の対応分、追加97件が後続の対応分です）。Agent Swarms（`"
+        },
+        {
+          "id": "DOC-0667-ITEM-00004",
+          "line": 7,
+          "contentSha256": "9253b3cdee9a35abc73d51279c6bdd0c82586918be0b77fe6d1f9ca2fecd535d",
+          "occurrence": 1,
+          "preview": "### 【今回の追加修正内容（97〜99件目）】"
+        },
+        {
+          "id": "DOC-0667-ITEM-00005",
+          "line": 8,
+          "contentSha256": "8a90ca95144eb9bad95ba7d5dae232e5c11517c0cfd8621ca0f190e4372271c7",
+          "occurrence": 1,
+          "preview": "* **97件目（`src/App.tsx`：WCAG 2.1 SC 2.4.1 / SC 2.4.2 対応）**：ハッシュルーターを壊さない（`e.preventDefault()` により `#main-content` 遷移での誤ログアウトを防止）スキップリンク「メインコン"
+        },
+        {
+          "id": "DOC-0667-ITEM-00006",
+          "line": 9,
+          "contentSha256": "c501727dc300370ef27fff8856da8f772073cd871ce6af89db4dfbea34a79ec6",
+          "occurrence": 1,
+          "preview": "* **98件目（`ParentPortal.tsx` / `TeacherDashboard.tsx` / 4カスタムモーダル：WCAG 2.1 SC 1.4.3 / SC 1.4.11 コントラスト改善）**：視認可能な本文・件数・空状態・履歴ラベル計11箇所の `text-"
+        },
+        {
+          "id": "DOC-0667-ITEM-00007",
+          "line": 10,
+          "contentSha256": "4594c838d83b1e2be394ed6886dda13549cbf67a9f4b6dd13f8f939cd9cf1826",
+          "occurrence": 1,
+          "preview": "* **99件目（`ParentPortal.tsx` / `TeacherDashboard.tsx`：ネイティブ `<dialog>` フォーカス復帰と背景統一）**：両画面の予約取消確認 `<dialog>` について、`showModal()` 直前のフォーカス要素を捕捉"
+        },
+        {
+          "id": "DOC-0667-ITEM-00008",
+          "line": 12,
+          "contentSha256": "0ca4b13d1981b8352f99186c713d9b62b8e196d819a341e8cd6c84573b6cf601",
+          "occurrence": 1,
+          "preview": "### 【今回実施した受入試験（97〜99項目目）】"
+        },
+        {
+          "id": "DOC-0667-ITEM-00009",
+          "line": 13,
+          "contentSha256": "0ceb4e33520aed01c6559ed7da81290297f031a5234828a4b293323a37f0b83b",
+          "occurrence": 1,
+          "preview": "* **97項目目（スキップリンク・動的 `document.title` 検証［公開デモ］）**：公開検証サイト（`https://eigo-taxi-test.web.app/`）で全 7 状態（管理者/保護者ログイン、管理者 4 タブ、保護者ポータル）の `document"
+        },
+        {
+          "id": "DOC-0667-ITEM-00010",
+          "line": 14,
+          "contentSha256": "7b6e64c3ee1f9e2766dec7252219bb23fc39530107bd4489a229608714a83050",
+          "occurrence": 1,
+          "preview": "* **98項目目（WCAG 2.1 相対輝度コントラスト実測検証［公開デモ］）**：公開サイトの計算済み色と実効背景色から相対輝度比を算出し、`TeacherDashboard` 各タブで最小 **`6.43:1`**、`ParentPortal` モバイルで最小 **`7.2"
+        },
+        {
+          "id": "DOC-0667-ITEM-00011",
+          "line": 15,
+          "contentSha256": "941f975da9f2b57a53aeb662f939205f1358a2019a0117757d3e15d59da317fd",
+          "occurrence": 1,
+          "preview": "* **99項目目（ネイティブ `<dialog>` 背景ブラー・`Escape` フォーカス復帰＋全回帰テスト検証）**：公開サイトの `TeacherDashboard`（1280×900）および `ParentPortal`（375×667）で予約取消 `<dialog>`"
+        },
+        {
+          "id": "DOC-0667-ITEM-00012",
+          "line": 17,
+          "contentSha256": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+          "occurrence": 1,
+          "preview": "---"
+        },
+        {
+          "id": "DOC-0667-ITEM-00013",
+          "line": 19,
+          "contentSha256": "76c3519755d39acf199783847365abea0c2ba4aec32426a7addbe54a9ff2b9a7",
+          "occurrence": 1,
+          "preview": "### 【公開環境・確認範囲】"
+        },
+        {
+          "id": "DOC-0667-ITEM-00014",
+          "line": 20,
+          "contentSha256": "b8f8e26627fdd283f6f45ab1ae8e53d01b7ab6cd92e292bebaf1c240ff354448",
+          "occurrence": 1,
+          "preview": "* **検証サイト**: https://eigo-taxi-test.web.app/"
+        },
+        {
+          "id": "DOC-0667-ITEM-00015",
+          "line": 21,
+          "contentSha256": "306cd905f3718d341a13f3c97636d5a13bc0a6f01b25a6751cde91ad7339191d",
+          "occurrence": 1,
+          "preview": "* **反映版 (`sourceDigest`)**: `40740504c86ea988eb35dacfe5e5ea7022a8f38bc22f8ffe1d6ec40c134defec`（ビルド時刻: `2026-11-22T17:24:29.669Z`、`baseCommit"
+        },
+        {
+          "id": "DOC-0667-ITEM-00016",
+          "line": 22,
+          "contentSha256": "ec2b938c693df35ba674ee7fafbb060595c8e91409058fced7b443be0efb4fd1",
+          "occurrence": 1,
+          "preview": "* **配信照合**: [public-2026-11-22T17-26-17-824Z.json](../acceptance/deployment-verification/public-2026-11-22T17-26-17-824Z.json)（全7ファイル SHA-25"
+        },
+        {
+          "id": "DOC-0667-ITEM-00017",
+          "line": 23,
+          "contentSha256": "26962514a246dc94420742488e0611c6cdc89332041e22cc00b52bb62c752f2f",
+          "occurrence": 1,
+          "preview": "* **公開UI証跡**: [public-ui-ninetynine.json](../../outputs/daily-20261123/public-ui-ninetynine.json)"
+        },
+        {
+          "id": "DOC-0667-ITEM-00018",
+          "line": 24,
+          "contentSha256": "f7005a00271823ef638a6fbbe83c97a686322a7aff7513ebc86f18efc429f390",
+          "occurrence": 1,
+          "preview": "* **AI ソースレビュー証跡**: [frontend-review.json](../traceability/reports/review-20261123-r12/frontend-review.json)"
+        },
+        {
+          "id": "DOC-0667-ITEM-00019",
+          "line": 25,
+          "contentSha256": "93478e90e671941299d670d859bc4008392c820d33a2703e7cc138eca9d395c1",
+          "occurrence": 1,
+          "preview": "* **顧客確認・本番状況**: 小林様の顧客確認6手順（`CUST-01`〜`CUST-06`）は **0/6件（`NOT_RUN`、`thirdPartyPassed: 0`、`release: \"HOLD\"`）** のままであり、実Googleアカウントログイン・実GAS/"
+        }
+      ]
+    },
+    {
       "id": "DOC-0666",
       "path": "docs/progress/2026-11-23-cumulative-ninetysix.md",
       "state": "historical",

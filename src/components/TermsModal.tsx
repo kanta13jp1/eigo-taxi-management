@@ -71,7 +71,7 @@ function TermsModalContent({ onClose, initialTab }: { onClose: () => void; initi
             type="button"
             aria-label="閉じる"
             onClick={onClose}
-            className="p-2 text-slate-400 hover:text-slate-600 hover:bg-slate-100 rounded-full transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500"
+            className="p-2 text-slate-500 hover:text-slate-700 hover:bg-slate-100 rounded-full transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500"
           >
             <X className="w-5 h-5" aria-hidden="true" />
           </button>

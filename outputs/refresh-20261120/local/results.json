@@ -1,29 +1,29 @@
 {
   "schemaVersion": 1,
   "mode": "LOCAL_MOCK_UI_REHEARSAL",
-  "runStartedAt": "2026-11-22T16:27:32.141Z",
-  "finishedAt": "2026-11-22T16:27:59.202Z",
+  "runStartedAt": "2026-11-22T17:23:55.632Z",
+  "finishedAt": "2026-11-22T17:24:24.057Z",
   "nodeVersion": "24.22.1",
   "browserVersion": "158.0.8127.36",
   "timezone": "Asia/Tokyo",
   "testDate": "2026-11-23",
   "sourceHashes": {
     "src/App.css": "6e25a776d3e8102da5bacb3cb99f4a5fc662a2e01e6143140671a556d28c3d5c",
-    "src/App.tsx": "862bd58b7b9874f8a896a27801bc95099a53d035229f2baa96370821fed9624e",
+    "src/App.tsx": "688ba5e6fe3c3dcee1248a70db2895846acf8292428e1b8a878850ed3c579c7c",
     "src/assets/hero.png": "881ffbcaafc212e49addad08846a5b82761355fa20624253af3477ba33262c5c",
     "src/assets/react.svg": "35ef61ed53b323ae94a16a8ec659b3d0af3880698791133f23b084085ab1c2e5",
     "src/assets/vite.svg": "5be21acd42eb7b896e517f4e0f0f11eb5c5d9e54fbbcebe9453f033008fcca6f",
     "src/components/AccountManagement.tsx": "7b45ef7a606da58786091031faabd783aa5126956f7cef26f6d665220d06d6eb",
-    "src/components/AddRideModal.tsx": "b5feff9c4798a0d0e38ca12c41bd898efcb5fd9e3ee2e0dba8ce9b77cbb06cb3",
-    "src/components/AddStudentModal.tsx": "69b6c0fc92bc82d14cfc5cf032bcceb52a6ccd4742adea82b728a01500cf3a51",
-    "src/components/AddTicketModal.tsx": "e4c791a335ad59413f78255b41c9ebae871351a907e0dd2708ba4a03e60b8b80",
+    "src/components/AddRideModal.tsx": "612c1d35fcc491cab753e82ca0ebfcb52b665a7b9cd1b658189a9ca8cbd59f4b",
+    "src/components/AddStudentModal.tsx": "f1e3fba5d38c8f31fc7bdcddaa44e98f98485d3e28cf0e7a528ff6b3a2983994",
+    "src/components/AddTicketModal.tsx": "f4d9fdda7152cab00de6cb0f09829704bd26eac6fd9085e126dbb34a7ea6a4d7",
     "src/components/GoogleSettings.tsx": "813fb6e30da6d1f739cc7e72960547d1955fc729f71e99f722a855e50e7a7c6d",
     "src/components/LoginScreen.tsx": "e5bb1cba35936aa8ea9d382f7336819c86275dc7df303a58ea0eedb02002928b",
     "src/components/Navbar.tsx": "d9b5fcef4d332e45d0028b023caf1f09f08a7ec3603c8a00fd92c0e40f858ab5",
-    "src/components/ParentPortal.tsx": "3b2360eed0a57af32758457647107e2f28dc86e574a314c9cae769837e75d43e",
+    "src/components/ParentPortal.tsx": "334da922e4cde148bf403dfb07318f383200c349f29fde68ebe6c92cc3fe73d4",
     "src/components/PortalInvitations.tsx": "d070747b00152acb81436ab851110bf07fc67b9a7e886296112f5376c8a1f278",
-    "src/components/TeacherDashboard.tsx": "a9cb0d4734204547f5e8b5d71c205326bb2a7dea21b539e389960d5f5066a0c9",
-    "src/components/TermsModal.tsx": "150a96d3e7c29a0c0873f117d4daec478a49ef65e934636c5a2e9b652268ae5d",
+    "src/components/TeacherDashboard.tsx": "aabff91d7e44f6699afa80e2edba041c1f9ec7bfb6a247c5ed1c23c464e52469",
+    "src/components/TermsModal.tsx": "3033077b7bebd72370e91e5d016d03b734378de3bbfcefbbf13f663270f2ccef",
     "src/deployment-config.ts": "5c30aad36376487fcf2fbb664f2574bdd430890191675ca9813b5fdea516b6f1",
     "src/hooks/useModalDialog.ts": "e42891b04ffaf2cb7d5ee143296d79f491b58618a41e3b479dc91bc6fb336da8",
     "src/index.css": "66baff8b6d7a116920270aba8584dd856cf5de345b59b511b849b96152ce91d8",
@@ -41,9 +41,9 @@
     "scripts/fixtures/local-acceptance/index.html": "a0030c371776b189471b5e18df159b04706dba1659ab740055c2d1954b62eb0b"
   },
   "buildHashes": {
-    "assets/index-BYzXBDhF.css": "9d932c3a4d6b99e243029f9b9523b561487088e479f3f1fb1f3484b70658c62a",
-    "assets/index-pPKiKEPx.js": "16969a57b53b425458c754867ec7d0986ff8f78ce8dcdd5beda92be5197d24e0",
-    "index.html": "3a88349534c8216f31cf38c77f13b3d537ba0b54910116c9c80e8bd8f2f6a23d"
+    "assets/index-CMFYiTWk.js": "b43b1b700cac472ab574724d7a7d02d5f43a3f0dd7f423cf7b68d40815e7386f",
+    "assets/index-DdE9Bfxi.css": "bb81e7aa85cdbc1e47cde8e0199b8197c0ce2d0f95c5f5206af6910814829ca8",
+    "index.html": "3c03fc3560635739582b0a26031f37c5888cabfd7bbb26e053cd73a61cd3f11c"
   },
   "changedSources": [],
   "externalRequests": [],
@@ -75,10 +75,10 @@
       "status": "PASS",
       "screenshot": {
         "file": "LOCAL-UI-01.png",
-        "sha256": "36a7f1adc8745c2770ac40760ea3fedb7535c7b9799887efbcb7ae79e3b05b59"
+        "sha256": "fa696b4250fde7ee7ffe51b67047593c63470361a9738a3525be9c01bcc2a74b"
       },
-      "startedAt": "2026-11-22T16:27:34.930Z",
-      "finishedAt": "2026-11-22T16:27:35.708Z"
+      "startedAt": "2026-11-22T17:23:58.069Z",
+      "finishedAt": "2026-11-22T17:23:58.907Z"
     },
     {
       "id": "LOCAL-UI-02",
@@ -90,10 +90,10 @@
       "status": "PASS",
       "screenshot": {
         "file": "LOCAL-UI-02.png",
-        "sha256": "1b46aed9bfe636447b05efb5f1d6ebeaac60be6a17d40363168b4c257726fc7d"
+        "sha256": "eacbf6fb3a1ae7a3fa7791dd873293534d70d15ad0ed4bcee1e8a55064b8e91c"
       },
-      "startedAt": "2026-11-22T16:27:35.708Z",
-      "finishedAt": "2026-11-22T16:27:36.805Z"
+      "startedAt": "2026-11-22T17:23:58.907Z",
+      "finishedAt": "2026-11-22T17:24:00.237Z"
     },
     {
       "id": "LOCAL-UI-03",
@@ -104,10 +104,10 @@
       "status": "PASS",
       "screenshot": {
         "file": "LOCAL-UI-03.png",
-        "sha256": "a9ab63a9fff778ad997057b70266c7ac814907c557853d84cf4c90fdbd7b4b29"
+        "sha256": "63b40bda8e3b3ebd057715d9f4e674f4682d6b2c98da0619d498f5bfadce2fff"
       },
-      "startedAt": "2026-11-22T16:27:36.805Z",
-      "finishedAt": "2026-11-22T16:27:38.748Z"
+      "startedAt": "2026-11-22T17:24:00.238Z",
+      "finishedAt": "2026-11-22T17:24:02.130Z"
     },
     {
       "id": "LOCAL-UI-04",
@@ -118,10 +118,10 @@
       "status": "PASS",
       "screenshot": {
         "file": "LOCAL-UI-04.png",
-        "sha256": "d38d6e3b7c224551c72d4ec0a5719e0791d593557216e87c9092f006af72cbbc"
+        "sha256": "b08a565a2e00c2f9120951f4444c066b8a361b5782e42443cbb9c95fdab8860d"
       },
-      "startedAt": "2026-11-22T16:27:38.748Z",
-      "finishedAt": "2026-11-22T16:27:40.743Z"
+      "startedAt": "2026-11-22T17:24:02.131Z",
+      "finishedAt": "2026-11-22T17:24:04.141Z"
     },
     {
       "id": "LOCAL-UI-05",
@@ -132,10 +132,10 @@
       "status": "PASS",
       "screenshot": {
         "file": "LOCAL-UI-05.png",
-        "sha256": "2fbfb3efd5599976f8f2472923215526870923a75b1a9af8846c7485ecedde75"
+        "sha256": "66a4f27681462131ee377e6b1d115eb3fe95fc4f041beee05a0cc20bb2859bdb"
       },
-      "startedAt": "2026-11-22T16:27:40.744Z",
-      "finishedAt": "2026-11-22T16:27:42.609Z"
+      "startedAt": "2026-11-22T17:24:04.141Z",
+      "finishedAt": "2026-11-22T17:24:06.191Z"
     },
     {
       "id": "LOCAL-UI-06",
@@ -146,10 +146,10 @@
       "status": "PASS",
       "screenshot": {
         "file": "LOCAL-UI-06.png",
-        "sha256": "4b735c63ff944da772521801724dd654ab1cfd7c013eed76bf19a586ecbe5122"
+        "sha256": "78b560e76b97314045e20aae77cbcff0f885f5989db436dc12c52efc6bcb2424"
       },
-      "startedAt": "2026-11-22T16:27:42.609Z",
-      "finishedAt": "2026-11-22T16:27:43.854Z"
+      "startedAt": "2026-11-22T17:24:06.191Z",
+      "finishedAt": "2026-11-22T17:24:07.570Z"
     },
     {
       "id": "LOCAL-UI-07",
@@ -161,10 +161,10 @@
       "status": "PASS",
       "screenshot": {
         "file": "LOCAL-UI-07.png",
-        "sha256": "623b512804d4a92bbef985f4addb308d97fc57abb923a536498791a165b6d44f"
+        "sha256": "e99dad63708cc783b5f7f05853ed6da452ff39d8a54c61d48d92d10d998bcb74"
       },
-      "startedAt": "2026-11-22T16:27:43.854Z",
-      "finishedAt": "2026-11-22T16:27:45.677Z"
+      "startedAt": "2026-11-22T17:24:07.571Z",
+      "finishedAt": "2026-11-22T17:24:09.573Z"
     },
     {
       "id": "LOCAL-UI-08",
@@ -176,10 +176,10 @@
       "status": "PASS",
       "screenshot": {
         "file": "LOCAL-UI-08.png",
-        "sha256": "4974d127c652d7dd6c263dba05b62b2fd280a5343103864317347ce6ddb876fc"
+        "sha256": "5c1310c161a482d41ef862863f88277d7d4d12f4be56c8b25e8892cddfe36c8e"
       },
-      "startedAt": "2026-11-22T16:27:45.677Z",
-      "finishedAt": "2026-11-22T16:27:47.450Z"
+      "startedAt": "2026-11-22T17:24:09.573Z",
+      "finishedAt": "2026-11-22T17:24:11.413Z"
     },
     {
       "id": "LOCAL-UI-09",
@@ -191,10 +191,10 @@
       "status": "PASS",
       "screenshot": {
         "file": "LOCAL-UI-09.png",
-        "sha256": "ff2282e8bc1d8baffb8f0b10933f55f6d0e70725f2604941b0562f84fa9ed1be"
+        "sha256": "42fafb3974cba3005d3eda7179070ecb8920dff27475bfe7d282b883dc5c964a"
       },
-      "startedAt": "2026-11-22T16:27:47.450Z",
-      "finishedAt": "2026-11-22T16:27:49.500Z"
+      "startedAt": "2026-11-22T17:24:11.413Z",
+      "finishedAt": "2026-11-22T17:24:13.540Z"
     },
     {
       "id": "LOCAL-UI-10",
@@ -205,10 +205,10 @@
       "status": "PASS",
       "screenshot": {
         "file": "LOCAL-UI-10.png",
-        "sha256": "5f692b06f45b6965da0493379cc1c34d9a2a6f301f683a04b1763d37eaaae11a"
+        "sha256": "49b5f446a56f85c5200b419389f7be0353753335491dde7cbcb9fd032ef447e2"
       },
-      "startedAt": "2026-11-22T16:27:49.500Z",
-      "finishedAt": "2026-11-22T16:27:50.473Z"
+      "startedAt": "2026-11-22T17:24:13.541Z",
+      "finishedAt": "2026-11-22T17:24:14.703Z"
     },
     {
       "id": "LOCAL-UI-11",
@@ -220,10 +220,10 @@
       "status": "PASS",
       "screenshot": {
         "file": "LOCAL-UI-11.png",
-        "sha256": "1b46aed9bfe636447b05efb5f1d6ebeaac60be6a17d40363168b4c257726fc7d"
+        "sha256": "eacbf6fb3a1ae7a3fa7791dd873293534d70d15ad0ed4bcee1e8a55064b8e91c"
       },
-      "startedAt": "2026-11-22T16:27:50.473Z",
-      "finishedAt": "2026-11-22T16:27:52.347Z"
+      "startedAt": "2026-11-22T17:24:14.704Z",
+      "finishedAt": "2026-11-22T17:24:16.708Z"
     },
     {
       "id": "LOCAL-UI-12",
@@ -235,10 +235,10 @@
       "status": "PASS",
       "screenshot": {
         "file": "LOCAL-UI-12.png",
-        "sha256": "9f503ede1a8d43d70e64acae756bec754ecc16195d317f74009fd58e3679a880"
+        "sha256": "34b5d96ea2c77a6af8ca54ca1b00f2b2306c13787d966b567958933727d40480"
       },
-      "startedAt": "2026-11-22T16:27:52.347Z",
-      "finishedAt": "2026-11-22T16:27:53.478Z"
+      "startedAt": "2026-11-22T17:24:16.708Z",
+      "finishedAt": "2026-11-22T17:24:18.030Z"
     },
     {
       "id": "LOCAL-UI-13",
@@ -250,10 +250,10 @@
       "status": "PASS",
       "screenshot": {
         "file": "LOCAL-UI-13.png",
-        "sha256": "36a7f1adc8745c2770ac40760ea3fedb7535c7b9799887efbcb7ae79e3b05b59"
+        "sha256": "fa696b4250fde7ee7ffe51b67047593c63470361a9738a3525be9c01bcc2a74b"
       },
-      "startedAt": "2026-11-22T16:27:53.478Z",
-      "finishedAt": "2026-11-22T16:27:55.026Z"
+      "startedAt": "2026-11-22T17:24:18.030Z",
+      "finishedAt": "2026-11-22T17:24:19.795Z"
     },
     {
       "id": "LOCAL-UI-14",
@@ -264,10 +264,10 @@
       "status": "PASS",
       "screenshot": {
         "file": "LOCAL-UI-14.png",
-        "sha256": "d750deeadac01bbf1b72622428a653e69fe426660f7cfaeba402e3f856c627f9"
+        "sha256": "c0e8ccd14d4a00e839d625389f154d8d71de26ec4b4d5937bcd554ca17a63a83"
       },
-      "startedAt": "2026-11-22T16:27:55.026Z",
-      "finishedAt": "2026-11-22T16:27:58.932Z"
+      "startedAt": "2026-11-22T17:24:19.795Z",
+      "finishedAt": "2026-11-22T17:24:23.726Z"
     }
   ],
   "thirdPartyPassed": 0,
