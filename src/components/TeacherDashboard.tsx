@@ -163,7 +163,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
       {/* 管理者バナー */}
       <div className="bg-emerald-50/80 border border-emerald-200 rounded-2xl p-3.5 px-4 flex flex-col sm:flex-row sm:items-center justify-between gap-2 shadow-sm">
         <div className="flex items-center gap-2 text-emerald-900 font-bold text-sm">
-          <span className="bg-emerald-600 text-white text-[10px] font-black px-2 py-0.5 rounded-md">{reviewOnly ? '検証専用画面' : '管理者画面'}</span>
+          <span className="bg-emerald-700 text-white text-[10px] font-black px-2 py-0.5 rounded-md">{reviewOnly ? '検証専用画面' : '管理者画面'}</span>
           <span>{reviewOnly ? '指定した架空生徒の送迎・チケットだけを確認できます' : 'Mauro・Brenda 先生用管理ダッシュボード'}</span>
         </div>
         <p className="text-xs text-emerald-700 font-medium">
@@ -185,7 +185,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
                 {todayPendingRides.length} <span className="text-sm font-normal text-slate-500">件 予定</span>
               </span>
               {todayCompletedRides.length > 0 && (
-                <span className="text-xs text-emerald-600 font-medium">({todayCompletedRides.length}件 完了)</span>
+                <span className="text-xs text-emerald-700 font-medium">({todayCompletedRides.length}件 完了)</span>
               )}
             </div>
           </div>
@@ -204,7 +204,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
             <div className="flex items-baseline gap-2 mt-1">
               <span
                 className={`text-2xl font-black ${
-                  lowTicketStudents.length > 0 ? 'text-amber-600' : 'text-slate-800'
+                  lowTicketStudents.length > 0 ? 'text-amber-700' : 'text-slate-800'
                 }`}
               >
                 {lowTicketStudents.length} <span className="text-sm font-normal text-slate-500">名</span>
@@ -278,7 +278,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
           <button
             type="button"
             onClick={() => onOpenAddRide()}
-            className="flex-1 sm:flex-none flex items-center justify-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 text-white px-3.5 py-2 rounded-xl text-xs font-bold shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
+            className="flex-1 sm:flex-none flex items-center justify-center gap-1.5 bg-emerald-700 hover:bg-emerald-800 text-white px-3.5 py-2 rounded-xl text-xs font-bold shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
           >
             <Plus aria-hidden="true" className="w-4 h-4" />
             送迎予定を追加
@@ -353,7 +353,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
                           </span>
                         )}
                         {ride.status === 'cancelled' && (
-                          <span className="inline-flex items-center gap-1 text-xs font-bold text-slate-500 bg-slate-200 px-2.5 py-1 rounded-full">
+                          <span className="inline-flex items-center gap-1 text-xs font-bold text-slate-700 bg-slate-200 px-2.5 py-1 rounded-full">
                             <XCircle aria-hidden="true" className="w-3.5 h-3.5" /> キャンセル
                           </span>
                         )}
@@ -367,7 +367,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
                           保護者: {student.parentName}（残チケット:{' '}
                           <span
                             className={`font-bold ${
-                              student.ticketBalance <= 2 ? 'text-amber-600' : 'text-emerald-600'
+                              student.ticketBalance <= 2 ? 'text-amber-700' : 'text-emerald-700'
                             }`}
                           >
                             {student.ticketBalance}枚
@@ -383,7 +383,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
                         <span className="break-all">{ride.pickupLocation}</span>
                       </div>
                       {ride.note && (
-                        <div className="text-slate-500 border-t border-slate-200/60 pt-1 text-[11px]">
+                        <div className="text-slate-600 border-t border-slate-200/60 pt-1 text-[11px]">
                           💬 メモ: {ride.note}
                         </div>
                       )}
@@ -412,7 +412,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
                           disabled={pendingRideIds.has(ride.id)}
                           aria-busy={pendingRideIds.has(ride.id)}
                           aria-label={completionLabel(ride)}
-                          className="bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs py-2 px-3.5 rounded-xl shadow-sm inline-flex items-center gap-1.5 transition-colors disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
+                          className="bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs py-2 px-3.5 rounded-xl shadow-sm inline-flex items-center gap-1.5 transition-colors disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
                         >
                           <CheckCircle2 aria-hidden="true" className="w-4 h-4" />
                           {pendingRideIds.has(ride.id) ? '完了処理中' : `送迎完了（${typeInfo.consume}回消費）`}
@@ -453,7 +453,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
           <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
             <div className="overflow-x-auto">
               <table aria-label="全送迎スケジュール一覧" className="w-full text-left text-xs">
-                <thead className="bg-slate-50 border-b border-slate-200 text-slate-500 font-semibold">
+                <thead className="bg-slate-50 border-b border-slate-200 text-slate-600 font-semibold">
                   <tr>
                     <th scope="col" className="py-3 px-4">日時</th>
                     <th scope="col" className="py-3 px-4">生徒名</th>
@@ -508,7 +508,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
                               </div>
                             )}
                             {ride.status === 'cancelled' && (
-                              <span className="text-slate-500 bg-slate-100 px-2 py-0.5 rounded-full font-medium text-[11px]">
+                              <span className="text-slate-700 bg-slate-100 px-2 py-0.5 rounded-full font-medium text-[11px]">
                                 取消
                               </span>
                             )}
@@ -522,7 +522,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
                                   disabled={pendingRideIds.has(ride.id)}
                                   aria-busy={pendingRideIds.has(ride.id)}
                                   aria-label={completionLabel(ride)}
-                                  className="text-xs bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-1 px-2.5 rounded-lg disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
+                                  className="text-xs bg-emerald-700 hover:bg-emerald-800 text-white font-bold py-1 px-2.5 rounded-lg disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
                                 >
                                   {pendingRideIds.has(ride.id) ? '完了処理中' : '完了'}
                                 </button>
@@ -624,12 +624,12 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
                           <span className="text-xs font-normal ml-0.5">回</span>
                         </span>
                         {isZero && <p className="text-[10px] font-bold text-rose-600 mt-0.5">チケット切れ</p>}
-                        {isLow && <p className="text-[10px] font-bold text-amber-600 mt-0.5">残り{student.ticketBalance}回</p>}
+                        {isLow && <p className="text-[10px] font-bold text-amber-700 mt-0.5">残り{student.ticketBalance}回</p>}
                       </div>
                     </div>
 
                     <div className="space-y-1 text-xs text-slate-600 bg-slate-50 p-2.5 rounded-xl border border-slate-100 mt-2 mb-3">
-                      <div className="flex items-center gap-1 text-slate-500">
+                      <div className="flex items-center gap-1 text-slate-600">
                         <Phone aria-hidden="true" className="w-3 h-3 text-slate-400" />
                         {student.phone ? (
                           <a href={`tel:${student.phone}`} className="hover:underline rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500">

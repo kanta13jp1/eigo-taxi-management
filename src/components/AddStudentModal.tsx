@@ -27,8 +27,15 @@ const AddStudentModalContent: React.FC<AddStudentModalProps> = ({
   const [ticketBalance, setTicketBalance] = useState('10');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState('');
+  const [invalidFields, setInvalidFields] = useState<{
+    name?: boolean;
+    balance?: boolean;
+    address?: boolean;
+  }>({});
   const dialogRef = useRef<HTMLDivElement>(null);
   const nameInputRef = useRef<HTMLInputElement>(null);
+  const balanceInputRef = useRef<HTMLInputElement>(null);
+  const addressInputRef = useRef<HTMLInputElement>(null);
 
   useModalDialog({
     isOpen,
@@ -43,16 +50,21 @@ const AddStudentModalContent: React.FC<AddStudentModalProps> = ({
     const trimmedName = name.trim();
     const trimmedAddress = address.trim();
     if (!trimmedName || !trimmedAddress) {
+      setInvalidFields({ name: !trimmedName, address: !trimmedAddress });
       setError('生徒名と送迎場所を入力してください');
+      (!trimmedName ? nameInputRef : addressInputRef).current?.focus();
       return;
     }
     const initialBalance = Number(ticketBalance);
     if (!ticketBalance.trim() || !Number.isSafeInteger(initialBalance) || initialBalance < 0) {
+      setInvalidFields({ balance: true });
       setError('初期チケット枚数は0以上の整数で入力してください');
+      balanceInputRef.current?.focus();
       return;
     }
     setIsSubmitting(true);
     setError('');
+    setInvalidFields({});
     try {
       await onSubmit({
         name: trimmedName,
@@ -69,6 +81,7 @@ const AddStudentModalContent: React.FC<AddStudentModalProps> = ({
       setAddress('');
       setPickupNote('');
       setTicketBalance('10');
+      setInvalidFields({});
       onClose();
     } catch (err) {
       setError(err instanceof Error ? err.message : '生徒を登録できませんでした');
@@ -105,14 +118,14 @@ const AddStudentModalContent: React.FC<AddStudentModalProps> = ({
             aria-label="閉じる"
             disabled={isSubmitting}
             onClick={onClose}
-            className="p-1 rounded-full text-slate-500 hover:text-slate-700 hover:bg-slate-100 transition-colors disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-400"
+            className="p-2 rounded-full text-slate-500 hover:text-slate-700 hover:bg-slate-100 transition-colors disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-400"
           >
             <X className="w-5 h-5" aria-hidden="true" />
           </button>
         </div>
 
-        <form onSubmit={handleSubmit} className="p-6 space-y-4">
-          {error && <p role="alert" className="rounded-lg bg-rose-50 p-3 text-sm text-rose-800">{error}</p>}
+        <form noValidate onSubmit={handleSubmit} className="p-6 space-y-4">
+          {error && <p id="add-student-error" role="alert" className="rounded-lg bg-rose-50 p-3 text-sm text-rose-800">{error}</p>}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div>
               <label htmlFor="student-name" className="block text-xs font-semibold text-slate-600 mb-1 flex items-center gap-1">
@@ -127,9 +140,18 @@ const AddStudentModalContent: React.FC<AddStudentModalProps> = ({
                 autoComplete="name"
                 disabled={isSubmitting}
                 value={name}
-                onChange={(e) => setName(e.target.value)}
+                onChange={(e) => {
+                  setName(e.target.value);
+                  setInvalidFields((prev) => ({ ...prev, name: false }));
+                }}
                 placeholder="例: 佐藤 陽菜 (ひな)"
-                className="w-full px-3 py-2 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500 text-slate-800 text-sm disabled:opacity-50"
+                aria-invalid={invalidFields.name ? 'true' : undefined}
+                aria-describedby={invalidFields.name ? 'add-student-error' : undefined}
+                className={`w-full px-3 py-2 border ${
+                  invalidFields.name
+                    ? 'border-rose-400 focus:ring-rose-500'
+                    : 'border-slate-200 focus:ring-emerald-500'
+                } rounded-xl focus:outline-none focus:ring-2 text-slate-800 text-sm disabled:opacity-50`}
                 required
               />
             </div>
@@ -170,6 +192,7 @@ const AddStudentModalContent: React.FC<AddStudentModalProps> = ({
             <div>
               <label htmlFor="student-balance" className="block text-xs font-semibold text-slate-600 mb-1">初期チケット枚数</label>
               <input
+                ref={balanceInputRef}
                 id="student-balance"
                 type="number"
                 inputMode="numeric"
@@ -178,8 +201,17 @@ const AddStudentModalContent: React.FC<AddStudentModalProps> = ({
                 required
                 disabled={isSubmitting}
                 value={ticketBalance}
-                onChange={(e) => setTicketBalance(e.target.value)}
-                className="w-full px-3 py-2 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500 text-slate-800 text-sm font-semibold disabled:opacity-50"
+                onChange={(e) => {
+                  setTicketBalance(e.target.value);
+                  setInvalidFields((prev) => ({ ...prev, balance: false }));
+                }}
+                aria-invalid={invalidFields.balance ? 'true' : undefined}
+                aria-describedby={invalidFields.balance ? 'add-student-error' : undefined}
+                className={`w-full px-3 py-2 border ${
+                  invalidFields.balance
+                    ? 'border-rose-400 focus:ring-rose-500'
+                    : 'border-slate-200 focus:ring-emerald-500'
+                } rounded-xl focus:outline-none focus:ring-2 text-slate-800 text-sm font-semibold disabled:opacity-50`}
               />
             </div>
           </div>
@@ -190,15 +222,25 @@ const AddStudentModalContent: React.FC<AddStudentModalProps> = ({
               送迎場所・ご自宅住所
             </label>
             <input
+              ref={addressInputRef}
               id="student-address"
               type="text"
               maxLength={200}
               autoComplete="street-address"
               disabled={isSubmitting}
               value={address}
-              onChange={(e) => setAddress(e.target.value)}
+              onChange={(e) => {
+                setAddress(e.target.value);
+                setInvalidFields((prev) => ({ ...prev, address: false }));
+              }}
               placeholder="例: 東京都世田谷区桜新町1-2-3 ○○マンション101"
-              className="w-full px-3 py-2 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500 text-slate-800 text-sm disabled:opacity-50"
+              aria-invalid={invalidFields.address ? 'true' : undefined}
+              aria-describedby={invalidFields.address ? 'add-student-error' : undefined}
+              className={`w-full px-3 py-2 border ${
+                invalidFields.address
+                  ? 'border-rose-400 focus:ring-rose-500'
+                  : 'border-slate-200 focus:ring-emerald-500'
+              } rounded-xl focus:outline-none focus:ring-2 text-slate-800 text-sm disabled:opacity-50`}
               required
             />
           </div>
@@ -230,7 +272,7 @@ const AddStudentModalContent: React.FC<AddStudentModalProps> = ({
               type="submit"
               disabled={isSubmitting}
               aria-busy={isSubmitting}
-              className="flex-1 py-2.5 px-4 rounded-xl bg-emerald-600 text-white font-semibold hover:bg-emerald-700 transition-colors flex items-center justify-center gap-1.5 shadow-sm text-sm disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
+              className="flex-1 py-2.5 px-4 rounded-xl bg-emerald-700 text-white font-semibold hover:bg-emerald-800 transition-colors flex items-center justify-center gap-1.5 shadow-sm text-sm disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
             >
               <UserPlus className="w-4 h-4" aria-hidden="true" />
               {isSubmitting ? '登録中...' : '登録を完了する'}

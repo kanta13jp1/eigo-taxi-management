@@ -1,0 +1,122 @@
+{
+  "date": "2026-11-23",
+  "round": "Round 13 (#100-#102)",
+  "reviewer": "Independent Swarm Auditor verifier-13 (board seq #122) & Coordinator live OWASP/WCAG 2.1 AA/2.2 audit",
+  "scope": [
+    "firebase.json",
+    "src/components/AddRideModal.tsx",
+    "src/components/AddStudentModal.tsx",
+    "src/components/AddTicketModal.tsx",
+    "src/components/AccountManagement.tsx",
+    "src/components/TeacherDashboard.tsx",
+    "src/components/ParentPortal.tsx"
+  ],
+  "sourceHashes": {
+    "firebase.json": "fb3f0d5c6d82f4d2aa360f964e00a1ca4dba0de038a1d3a33795108c4c0757e1",
+    "src/components/AddRideModal.tsx": "3fa6fc52eeaaacc048b20b0f738613bba01938ea6339d38001f8fd3624ea282b",
+    "src/components/AddStudentModal.tsx": "77ba545197604cff0d75612d5d6ca9734aa5ccd068795839e0500f94afdbea60",
+    "src/components/AddTicketModal.tsx": "7400ed263f9a68f2a39935886edb7c392348f09323121feabb36c66d6823a64c",
+    "src/components/AccountManagement.tsx": "f2ded6a91bab10b75a2df4477de53d3e56524fd31a2ab81b8334c64594f0170f",
+    "src/components/TeacherDashboard.tsx": "a4d255bc1344cc5206b88077cc4159227c1fc3017fadd03d5bc2a0b8c6e07d36",
+    "src/components/ParentPortal.tsx": "7b83cc09fad89fa17515163652742e9e4ee894b0a6a70474cb4c8f9f7a13ceb8"
+  },
+  "swarmReview": {
+    "verifier": "verifier-13",
+    "boardApprovalSeq": 122,
+    "reviewedCommits": {
+      "author-sec-headers": "0dc7de2f0b84ba07e3ac5eb1eb72a6a71311fa5c",
+      "author-modal-forms-a11y": "95fe272645d536f57022256eee7bebf4c6ea3c38",
+      "author-admin-a11y": "36f6983218d0dd544ca4302c4525d460d75d1c31"
+    },
+    "criteriaVerified": [
+      "Strict disjoint ownership across all 3 worker branches on 0cebbfe (firebase.json / 3 modals / AccountManagement+TeacherDashboard+ParentPortal)",
+      "#100 OWASP hosting security headers: valid JSON adding Permissions-Policy camera=(), microphone=(), geolocation=(), payment=(), usb=() and Firebase Auth signInWithPopup-safe Cross-Origin-Opener-Policy same-origin-allow-popups",
+      "#101 Modal forms: noValidate preserves HTML5 constraints (form.checkValidity() false on invalid data), adds error alert IDs, aria-invalid, aria-describedby (preserving ride-student-low-ticket & ticket-balance-preview), first-invalid-enabled-control focus, rose invalid borders, AddTicketModal initialFocusRef on #ticket-student, p-2 (36x36px) close buttons, and >=4.5:1 AA contrast upgrades",
+      "#102 AccountManagement & portals: noValidate with ordered validation (empty -> email format -> studentIds -> reviewModeAvailable), aria-invalid / aria-describedby (#account-email-help + #account-form-error), focus transfer (including firstStudentCheckboxRef), invalidFields clear on edit/reset/run/onChange, confirm dialog outside </section>, and portal AA contrast upgrades preserving test_student_low_ticket_ui badge classes",
+      "Zero dead Tailwind v4 or animate-in classes; tsc --noEmit, oxlint, compiled CSS emission, and offline contracts pass cleanly"
+    ]
+  },
+  "findings": [
+    {
+      "status": "VERIFIED",
+      "detail": "Live HTTP response headers on https://eigo-taxi-test.web.app/ verified status 200 with permissions-policy=camera=(), microphone=(), geolocation=(), payment=(), usb=(), cross-origin-opener-policy=same-origin-allow-popups, x-content-type-options=nosniff, referrer-policy=no-referrer, x-frame-options=DENY, and strict-transport-security."
+    },
+    {
+      "status": "VERIFIED",
+      "detail": "Live public demo verified WCAG 2.1 SC 3.3.1/3.3.3 form validation & SC 2.5.8 36x36px close targets across AddRideModal, AddStudentModal, and AddTicketModal (including initialFocusRef on #ticket-student, aria-describedby preservation for ticket-balance-preview, aria-invalid clearing on input, and focus move to first invalid control), plus ordered AccountManagement validation on local full-admin reviewer fixture."
+    },
+    {
+      "status": "VERIFIED",
+      "detail": "Live WCAG 2.1 AA contrast & DOM audit measured minimum contrast ratios of 5.02:1 (admin-today 1280x900), 5.02:1 (admin-allRides 1280x900), 4.51:1 (admin-students 1280x900), and 5.48:1 (parent 375x667) with 0 below-AA samples, 0 heading skips, 0 dead Tailwind classes, and 0 horizontal overflow on 375px mobile."
+    }
+  ],
+  "visualReview": {
+    "inspectedViaReadFile": true,
+    "screenshots": {
+      "outputs/daily-20261123/screenshots-r13/add-ride-validation-desktop.png": {
+        "sha256": "c22785a7375e6b528ffa0a77100ed55cddb794765c86f803352e3c843921b8e7",
+        "observation": "1280x900 live public demo: AddRideModal centered over full frosted backdrop, displays alert 必須項目をすべて入力してください, focuses required #ride-location with rose border/ring, shows darkened emerald-700 submit CTA and readable emerald-700/amber-700 ticket labels, and cleanly spaced 36x36px close button."
+      },
+      "outputs/daily-20261123/screenshots-r13/add-student-validation-desktop.png": {
+        "sha256": "d3b36688dcaceb2698bb52118899f992a1b4ea8c391ebecf5af480f6caa13ee9",
+        "observation": "1280x900 live public demo: AddStudentModal displays alert 生徒名と送迎場所を入力してください, focuses #student-name with clear rose ring and marks #student-address invalid with rose border, paired with darkened emerald-700 登録を完了する CTA and unclipped layout."
+      },
+      "outputs/daily-20261123/screenshots-r13/parent-portal-contrast-mobile.png": {
+        "sha256": "96e52d4aad784bcadfe6a5d1143ef4987595be6a07ecc0e0d898bf6c3551968f",
+        "observation": "375x667 mobile live public demo: ParentPortal renders inside 375px width with 0 horizontal overflow; darker rose-700 キャンセル pill button on rose-50 background and slate-600 explanatory notes and counts read cleanly without overlap."
+      },
+      "outputs/daily-20261123/screenshots-r13/account-validation-local.png": {
+        "sha256": "4618aa204a5e32175d86bf85557ad89fb6da0ac3aba81e9ebf6e42be4c7a98a5",
+        "observation": "1280x900 local full-admin reviewer fixture: AccountManagement displays alert 表示名とGoogleメールアドレスを入力してください above user list, focuses name input with rose ring, marks email input with rose border alongside linked help text, and keeps emerald-700 内容を確認 CTA sharp and aligned."
+      }
+    }
+  },
+  "evidenceChecks": {
+    "outputs/daily-20261123/public-ui-102.json": {
+      "sha256": "2a942984170bb7ad2c723012754cf96174adddde9082b998e89189c4886778a0",
+      "pass": true,
+      "sourceHashMatch": true
+    },
+    "docs/acceptance/deployment-verification/public-2026-11-22T19-49-53-664Z.json": {
+      "sha256": "c1862e29de92b2c41fb92a0bb58cd3565db1248bfed8fa9625ca3bedb1bc51e5",
+      "pass": true,
+      "urlsMatched": 7
+    },
+    "outputs/refresh-20261120/local/results.json": {
+      "sha256": "79ccd6d46a8f44db269bd469fdf47c522905af27a9bf587df2fa74dda3c854cb",
+      "pass": true,
+      "count": 14,
+      "sourceHashMatch": true
+    },
+    "outputs/refresh-20261120/reviewer/results.json": {
+      "sha256": "f2a86510adf388b99a13dc2d054d245cb5d9c2c0fc44dcf27a484e79a506f4fa",
+      "pass": true,
+      "count": 8,
+      "sourceHashMatch": true
+    },
+    "outputs/refresh-20261120/modal-scroll/results.json": {
+      "sha256": "50f38eb542a5f0385b38ff9ca50f4f5a5a6132ef518bdb9ef5246bd9a558f4e3",
+      "pass": true,
+      "count": 2,
+      "sourceHashMatch": true
+    },
+    "outputs/r19-adoption-20261111/regression/trace-ui/results.json": {
+      "sha256": "28c213b42445f933437735d8739bcc8f02cd51cc198d6e4fb32b891d1a1f5daa",
+      "pass": true,
+      "count": 6,
+      "sourceHashMatch": true
+    },
+    "outputs/refresh-20261120/offline/release-contract.json": {
+      "sha256": "cf3b9ce2ad6092a91ca6c205e5cdbd334a1fbe1b9e6a1b72a2bd067e74683cf5",
+      "pass": true,
+      "count": 1,
+      "sourceHashMatch": true
+    }
+  },
+  "conclusion": "No unresolved blocking defect in Round 13 (#100-#102) OWASP security headers, WCAG form validation accessibility, close touch targets, or WCAG 2.1 AA text/button contrast",
+  "limits": [
+    "Customer acceptance CUST-01..06 remains 0/6 NOT_RUN",
+    "thirdPartyPassed: 0; release remains HOLD; production rollout has not started",
+    "No real Google OAuth login, live GAS/Spreadsheet/Calendar execution, or physical mobile device testing claimed; public audit exercised public demo mode only and AccountManagement validation used the local full-admin reviewer fixture"
+  ]
+}

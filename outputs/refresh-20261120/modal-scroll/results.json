@@ -1,8 +1,8 @@
 {
-  "executedAt": "2026-11-22T17:23:44.032Z",
+  "executedAt": "2026-11-22T19:47:40.521Z",
   "mode": "Local Chromium mobile/touch emulation; fixture only; not real Google or physical device acceptance",
   "sourceHashes": {
-    "src/components/AddRideModal.tsx": "612c1d35fcc491cab753e82ca0ebfcb52b665a7b9cd1b658189a9ca8cbd59f4b",
+    "src/components/AddRideModal.tsx": "3fa6fc52eeaaacc048b20b0f738613bba01938ea6339d38001f8fd3624ea282b",
     "scripts/fixtures/trace-ui/harness.tsx": "90bef1928e68fb736a4cf43150bb11153ba980414b5016b318f9ca494a24e136",
     "scripts/test_booking_modal_scroll.mjs": "9a25aef88e322840dc290910ee903c34a69f9f6c3a083092ded3ac35c45083df"
   },
@@ -18,10 +18,10 @@
         "height": 60
       },
       "closeBox": {
-        "x": 306,
-        "y": 41,
-        "width": 28,
-        "height": 28
+        "x": 298,
+        "y": 37,
+        "width": 36,
+        "height": 36
       }
     },
     {
@@ -34,10 +34,10 @@
         "height": 42
       },
       "closeBox": {
-        "x": 609,
-        "y": 41,
-        "width": 28,
-        "height": 28
+        "x": 601,
+        "y": 37,
+        "width": 36,
+        "height": 36
       }
     }
   ]

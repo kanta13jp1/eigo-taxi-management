@@ -45,8 +45,17 @@ const AddRideModalContent: React.FC<AddRideModalProps> = ({
   const [note, setNote] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState('');
+  const [invalidFields, setInvalidFields] = useState<{
+    student?: boolean;
+    date?: boolean;
+    time?: boolean;
+    location?: boolean;
+  }>({});
   const dialogRef = useRef<HTMLDivElement>(null);
   const studentSelectRef = useRef<HTMLSelectElement>(null);
+  const rideDateRef = useRef<HTMLInputElement>(null);
+  const rideTimeRef = useRef<HTMLInputElement>(null);
+  const pickupLocationRef = useRef<HTMLInputElement>(null);
 
   const handleStudentChange = (id: string) => {
     setStudentId(id);
@@ -54,6 +63,11 @@ const AddRideModalContent: React.FC<AddRideModalProps> = ({
     if (student) {
       setPickupLocation(student.address);
     }
+    setInvalidFields((prev) => ({
+      ...prev,
+      student: false,
+      ...(student ? { location: false } : {}),
+    }));
   };
 
   useModalDialog({
@@ -67,12 +81,32 @@ const AddRideModalContent: React.FC<AddRideModalProps> = ({
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const trimmedLocation = pickupLocation.trim();
-    if (!studentId || !rideDate || !rideTime || !trimmedLocation) {
+    const missingStudent = !studentId;
+    const missingDate = !rideDate;
+    const missingTime = !rideTime;
+    const missingLocation = !trimmedLocation;
+    if (missingStudent || missingDate || missingTime || missingLocation) {
+      setInvalidFields({
+        student: missingStudent,
+        date: missingDate,
+        time: missingTime,
+        location: missingLocation,
+      });
       setError('必須項目をすべて入力してください');
+      if (missingStudent && !studentSelectRef.current?.disabled) {
+        studentSelectRef.current?.focus();
+      } else if (missingDate) {
+        rideDateRef.current?.focus();
+      } else if (missingTime) {
+        rideTimeRef.current?.focus();
+      } else {
+        pickupLocationRef.current?.focus();
+      }
       return;
     }
     setIsSubmitting(true);
     setError('');
+    setInvalidFields({});
     try {
       await onSubmit({
         studentId,
@@ -118,14 +152,14 @@ const AddRideModalContent: React.FC<AddRideModalProps> = ({
             aria-label="閉じる"
             disabled={isSubmitting}
             onClick={onClose}
-            className="p-1 rounded-full text-slate-500 hover:text-slate-700 hover:bg-slate-100 transition-colors disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-400"
+            className="p-2 rounded-full text-slate-500 hover:text-slate-700 hover:bg-slate-100 transition-colors disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-400"
           >
             <X className="w-5 h-5" aria-hidden="true" />
           </button>
         </div>
 
-        <form onSubmit={handleSubmit} className="p-6 space-y-4">
-          {error && <p role="alert" className="rounded-lg bg-rose-50 p-3 text-sm text-rose-800">{error}</p>}
+        <form noValidate onSubmit={handleSubmit} className="p-6 space-y-4">
+          {error && <p id="add-ride-error" role="alert" className="rounded-lg bg-rose-50 p-3 text-sm text-rose-800">{error}</p>}
           {/* 生徒選択 */}
           <div>
             <label htmlFor="ride-student" className="block text-xs font-semibold text-slate-600 mb-1">生徒</label>
@@ -134,9 +168,21 @@ const AddRideModalContent: React.FC<AddRideModalProps> = ({
               id="ride-student"
               value={studentId}
               onChange={(e) => handleStudentChange(e.target.value)}
-              className="w-full px-3 py-2 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500 font-medium text-slate-800 disabled:opacity-50"
+              className={`w-full px-3 py-2 border ${
+                invalidFields.student
+                  ? 'border-rose-400 focus:ring-rose-500'
+                  : 'border-slate-200 focus:ring-emerald-500'
+              } rounded-xl focus:outline-none focus:ring-2 font-medium text-slate-800 disabled:opacity-50`}
               disabled={isSubmitting || (!isTeacher && Boolean(initialStudentId)) || students.length === 0}
-              aria-describedby={selectedStudent && selectedStudent.ticketBalance <= 2 ? 'ride-student-low-ticket' : undefined}
+              aria-invalid={invalidFields.student ? 'true' : undefined}
+              aria-describedby={
+                [
+                  selectedStudent && selectedStudent.ticketBalance <= 2 ? 'ride-student-low-ticket' : '',
+                  invalidFields.student ? 'add-ride-error' : '',
+                ]
+                  .filter(Boolean)
+                  .join(' ') || undefined
+              }
             >
               {students.length === 0 && <option value="">登録済みの生徒がいません</option>}
               {students.map((student) => (
@@ -146,7 +192,7 @@ const AddRideModalContent: React.FC<AddRideModalProps> = ({
               ))}
             </select>
             {selectedStudent && selectedStudent.ticketBalance <= 2 && (
-              <p id="ride-student-low-ticket" role="status" className="text-xs text-amber-600 mt-1 font-medium">
+              <p id="ride-student-low-ticket" role="status" className="text-xs text-amber-700 mt-1 font-medium">
                 ⚠️ 現在のチケット残数が残り {selectedStudent.ticketBalance} 枚です。
               </p>
             )}
@@ -160,12 +206,22 @@ const AddRideModalContent: React.FC<AddRideModalProps> = ({
                 送迎日
               </label>
               <input
+                ref={rideDateRef}
                 id="ride-date"
                 type="date"
                 value={rideDate}
-                onChange={(e) => setRideDate(e.target.value)}
+                onChange={(e) => {
+                  setRideDate(e.target.value);
+                  setInvalidFields((prev) => ({ ...prev, date: false }));
+                }}
                 disabled={isSubmitting}
-                className="w-full px-3 py-2 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500 text-slate-800 disabled:opacity-50"
+                aria-invalid={invalidFields.date ? 'true' : undefined}
+                aria-describedby={invalidFields.date ? 'add-ride-error' : undefined}
+                className={`w-full px-3 py-2 border ${
+                  invalidFields.date
+                    ? 'border-rose-400 focus:ring-rose-500'
+                    : 'border-slate-200 focus:ring-emerald-500'
+                } rounded-xl focus:outline-none focus:ring-2 text-slate-800 disabled:opacity-50`}
                 required
               />
             </div>
@@ -175,12 +231,22 @@ const AddRideModalContent: React.FC<AddRideModalProps> = ({
                 {rideType === 'dropoff' ? 'お送り時間' : 'お迎え時間'}
               </label>
               <input
+                ref={rideTimeRef}
                 id="ride-time"
                 type="time"
                 value={rideTime}
-                onChange={(e) => setRideTime(e.target.value)}
+                onChange={(e) => {
+                  setRideTime(e.target.value);
+                  setInvalidFields((prev) => ({ ...prev, time: false }));
+                }}
                 disabled={isSubmitting}
-                className="w-full px-3 py-2 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500 text-slate-800 disabled:opacity-50"
+                aria-invalid={invalidFields.time ? 'true' : undefined}
+                aria-describedby={invalidFields.time ? 'add-ride-error' : undefined}
+                className={`w-full px-3 py-2 border ${
+                  invalidFields.time
+                    ? 'border-rose-400 focus:ring-rose-500'
+                    : 'border-slate-200 focus:ring-emerald-500'
+                } rounded-xl focus:outline-none focus:ring-2 text-slate-800 disabled:opacity-50`}
                 required
               />
             </div>
@@ -190,7 +256,7 @@ const AddRideModalContent: React.FC<AddRideModalProps> = ({
           <fieldset>
             <legend className="block text-xs font-semibold text-slate-600 mb-1.5 flex w-full items-center justify-between">
               <span>送迎区分（フレックス予約）</span>
-              <span className="text-[11px] text-emerald-600 font-medium">片道1回＝チケット1枚</span>
+              <span className="text-[11px] text-emerald-700 font-medium">片道1回＝チケット1枚</span>
             </legend>
             <div className="grid grid-cols-3 gap-2">
               <label
@@ -210,7 +276,7 @@ const AddRideModalContent: React.FC<AddRideModalProps> = ({
                   className="sr-only"
                 />
                 <span>行き（お迎え）</span>
-                <span className="text-[10px] text-emerald-600 font-semibold mt-0.5">チケット1枚</span>
+                <span className="text-[10px] text-emerald-700 font-semibold mt-0.5">チケット1枚</span>
               </label>
 
               <label
@@ -230,7 +296,7 @@ const AddRideModalContent: React.FC<AddRideModalProps> = ({
                   className="sr-only"
                 />
                 <span>帰り（送り）</span>
-                <span className="text-[10px] text-emerald-600 font-semibold mt-0.5">チケット1枚</span>
+                <span className="text-[10px] text-emerald-700 font-semibold mt-0.5">チケット1枚</span>
               </label>
 
               <label
@@ -250,7 +316,7 @@ const AddRideModalContent: React.FC<AddRideModalProps> = ({
                   className="sr-only"
                 />
                 <span>往復</span>
-                <span className="text-[10px] text-amber-600 font-semibold mt-0.5">チケット2枚</span>
+                <span className="text-[10px] text-amber-700 font-semibold mt-0.5">チケット2枚</span>
               </label>
             </div>
             <p className="mt-2 rounded-lg bg-slate-50 p-2 text-xs leading-relaxed text-slate-600">
@@ -265,14 +331,24 @@ const AddRideModalContent: React.FC<AddRideModalProps> = ({
               送迎場所・住所
             </label>
             <input
+              ref={pickupLocationRef}
               id="ride-location"
               type="text"
               value={pickupLocation}
-              onChange={(e) => setPickupLocation(e.target.value)}
+              onChange={(e) => {
+                setPickupLocation(e.target.value);
+                setInvalidFields((prev) => ({ ...prev, location: false }));
+              }}
               maxLength={200}
               placeholder="例: 東京都世田谷区... または エントランス前"
               disabled={isSubmitting}
-              className="w-full px-3 py-2 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500 text-slate-800 text-sm disabled:opacity-50"
+              aria-invalid={invalidFields.location ? 'true' : undefined}
+              aria-describedby={invalidFields.location ? 'add-ride-error' : undefined}
+              className={`w-full px-3 py-2 border ${
+                invalidFields.location
+                  ? 'border-rose-400 focus:ring-rose-500'
+                  : 'border-slate-200 focus:ring-emerald-500'
+              } rounded-xl focus:outline-none focus:ring-2 text-slate-800 text-sm disabled:opacity-50`}
               required
             />
           </div>
@@ -309,7 +385,7 @@ const AddRideModalContent: React.FC<AddRideModalProps> = ({
               type="submit"
               disabled={isSubmitting || !studentId}
               aria-busy={isSubmitting}
-              className="flex-1 py-2.5 px-4 rounded-xl bg-emerald-600 text-white font-semibold hover:bg-emerald-700 transition-colors flex items-center justify-center gap-1.5 shadow-sm text-sm disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
+              className="flex-1 py-2.5 px-4 rounded-xl bg-emerald-700 text-white font-semibold hover:bg-emerald-800 transition-colors flex items-center justify-center gap-1.5 shadow-sm text-sm disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
             >
               <CheckCircle2 className="w-4 h-4" aria-hidden="true" />
               {isSubmitting ? '登録中...' : '送迎予定を登録する'}

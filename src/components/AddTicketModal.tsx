@@ -35,7 +35,15 @@ const AddTicketModalContent: React.FC<AddTicketModalProps> = ({
   const [note, setNote] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState('');
+  const [invalidFields, setInvalidFields] = useState<{
+    student?: boolean;
+    count?: boolean;
+    amount?: boolean;
+  }>({});
   const dialogRef = useRef<HTMLDivElement>(null);
+  const studentSelectRef = useRef<HTMLSelectElement>(null);
+  const ticketCountRef = useRef<HTMLInputElement>(null);
+  const amountRef = useRef<HTMLInputElement>(null);
 
   const trimmedCount = ticketCountInput.trim();
   const parsedTicketCount = trimmedCount === '' ? NaN : Number(trimmedCount);
@@ -45,28 +53,41 @@ const AddTicketModalContent: React.FC<AddTicketModalProps> = ({
     onClose,
     isDismissDisabled: isSubmitting,
     dialogRef,
+    initialFocusRef: studentSelectRef,
   });
 
   const handlePresetSelect = (count: number, price: number, label: string) => {
     setTicketCountInput(String(count));
     setAmountInput(String(price));
     setNote(`${label}購入`);
+    setInvalidFields((prev) => ({ ...prev, count: false, amount: false }));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!studentId || !Number.isSafeInteger(parsedTicketCount) || parsedTicketCount < 1 || parsedTicketCount > 100) {
+    const invalidStudent = !studentId;
+    const invalidCount =
+      !Number.isSafeInteger(parsedTicketCount) || parsedTicketCount < 1 || parsedTicketCount > 100;
+    if (invalidStudent || invalidCount) {
+      setInvalidFields({ student: invalidStudent, count: invalidCount });
       setError('生徒と1〜100枚の整数を指定してください');
+      (invalidStudent && !studentSelectRef.current?.disabled
+        ? studentSelectRef
+        : ticketCountRef
+      ).current?.focus();
       return;
     }
     const trimmedAmount = amountInput.trim();
     const amount = Number(trimmedAmount);
     if (trimmedAmount === '' || !Number.isSafeInteger(amount) || amount < 0) {
+      setInvalidFields({ amount: true });
       setError('受取金額を0円以上の整数で入力してください');
+      amountRef.current?.focus();
       return;
     }
     setIsSubmitting(true);
     setError('');
+    setInvalidFields({});
     try {
       await onSubmit({
         studentId,
@@ -113,23 +134,33 @@ const AddTicketModalContent: React.FC<AddTicketModalProps> = ({
             aria-label="閉じる"
             disabled={isSubmitting}
             onClick={onClose}
-            className="p-1 rounded-full text-slate-500 hover:text-slate-700 hover:bg-slate-100 transition-colors disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-400"
+            className="p-2 rounded-full text-slate-500 hover:text-slate-700 hover:bg-slate-100 transition-colors disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-400"
           >
             <X className="w-5 h-5" aria-hidden="true" />
           </button>
         </div>
 
-        <form onSubmit={handleSubmit} className="p-6 space-y-4">
-          {error && <p role="alert" className="rounded-lg bg-rose-50 p-3 text-sm text-rose-800">{error}</p>}
+        <form noValidate onSubmit={handleSubmit} className="p-6 space-y-4">
+          {error && <p id="add-ticket-error" role="alert" className="rounded-lg bg-rose-50 p-3 text-sm text-rose-800">{error}</p>}
           {/* 対象生徒 */}
           <div>
             <label htmlFor="ticket-student" className="block text-xs font-semibold text-slate-600 mb-1">対象の生徒</label>
             <select
+              ref={studentSelectRef}
               id="ticket-student"
               value={studentId}
               disabled={isSubmitting || students.length === 0}
-              onChange={(e) => setStudentId(e.target.value)}
-              className="w-full px-3 py-2 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500 font-medium text-slate-800 text-sm disabled:opacity-50"
+              onChange={(e) => {
+                setStudentId(e.target.value);
+                setInvalidFields((prev) => ({ ...prev, student: false }));
+              }}
+              aria-invalid={invalidFields.student ? 'true' : undefined}
+              aria-describedby={invalidFields.student ? 'add-ticket-error' : undefined}
+              className={`w-full px-3 py-2 border ${
+                invalidFields.student
+                  ? 'border-rose-400 focus:ring-rose-500'
+                  : 'border-slate-200 focus:ring-emerald-500'
+              } rounded-xl focus:outline-none focus:ring-2 font-medium text-slate-800 text-sm disabled:opacity-50`}
             >
               {students.length === 0 && <option value="">登録済みの生徒がいません</option>}
               {students.map((student) => (
@@ -141,7 +172,7 @@ const AddTicketModalContent: React.FC<AddTicketModalProps> = ({
             {selectedStudent && (
               <p id="ticket-balance-preview" role="status" className="text-xs text-slate-500 mt-1">
                 現在の残数: <span className="font-bold text-slate-800">{selectedStudent.ticketBalance}枚</span> →
-                追加後: <span className="font-bold text-emerald-600">{selectedStudent.ticketBalance + previewAddCount}枚</span>
+                追加後: <span className="font-bold text-emerald-700">{selectedStudent.ticketBalance + previewAddCount}枚</span>
               </p>
             )}
           </div>
@@ -191,6 +222,7 @@ const AddTicketModalContent: React.FC<AddTicketModalProps> = ({
             <div>
               <label htmlFor="ticket-count" className="block text-xs font-semibold text-slate-600 mb-1">追加枚数（回）</label>
               <input
+                ref={ticketCountRef}
                 id="ticket-count"
                 type="number"
                 min="1"
@@ -198,16 +230,32 @@ const AddTicketModalContent: React.FC<AddTicketModalProps> = ({
                 step="1"
                 inputMode="numeric"
                 disabled={isSubmitting}
-                aria-describedby={selectedStudent ? 'ticket-balance-preview' : undefined}
+                aria-invalid={invalidFields.count ? 'true' : undefined}
+                aria-describedby={
+                  [
+                    selectedStudent ? 'ticket-balance-preview' : '',
+                    invalidFields.count ? 'add-ticket-error' : '',
+                  ]
+                    .filter(Boolean)
+                    .join(' ') || undefined
+                }
                 value={ticketCountInput}
-                onChange={(e) => setTicketCountInput(e.target.value)}
-                className="w-full px-3 py-2 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500 text-slate-800 text-sm font-semibold disabled:opacity-50"
+                onChange={(e) => {
+                  setTicketCountInput(e.target.value);
+                  setInvalidFields((prev) => ({ ...prev, count: false }));
+                }}
+                className={`w-full px-3 py-2 border ${
+                  invalidFields.count
+                    ? 'border-rose-400 focus:ring-rose-500'
+                    : 'border-slate-200 focus:ring-emerald-500'
+                } rounded-xl focus:outline-none focus:ring-2 text-slate-800 text-sm font-semibold disabled:opacity-50`}
                 required
               />
             </div>
             <div>
               <label htmlFor="ticket-amount" className="block text-xs font-semibold text-slate-600 mb-1">受取金額 (円)</label>
               <input
+                ref={amountRef}
                 id="ticket-amount"
                 type="number"
                 min="0"
@@ -215,9 +263,18 @@ const AddTicketModalContent: React.FC<AddTicketModalProps> = ({
                 inputMode="numeric"
                 required
                 disabled={isSubmitting}
+                aria-invalid={invalidFields.amount ? 'true' : undefined}
+                aria-describedby={invalidFields.amount ? 'add-ticket-error' : undefined}
                 value={amountInput}
-                onChange={(e) => setAmountInput(e.target.value)}
-                className="w-full px-3 py-2 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500 text-slate-800 text-sm font-semibold disabled:opacity-50"
+                onChange={(e) => {
+                  setAmountInput(e.target.value);
+                  setInvalidFields((prev) => ({ ...prev, amount: false }));
+                }}
+                className={`w-full px-3 py-2 border ${
+                  invalidFields.amount
+                    ? 'border-rose-400 focus:ring-rose-500'
+                    : 'border-slate-200 focus:ring-emerald-500'
+                } rounded-xl focus:outline-none focus:ring-2 text-slate-800 text-sm font-semibold disabled:opacity-50`}
               />
             </div>
           </div>
@@ -251,7 +308,7 @@ const AddTicketModalContent: React.FC<AddTicketModalProps> = ({
               type="submit"
               disabled={isSubmitting || !studentId}
               aria-busy={isSubmitting}
-              className="flex-1 py-2.5 px-4 rounded-xl bg-emerald-600 text-white font-semibold hover:bg-emerald-700 transition-colors flex items-center justify-center gap-1.5 shadow-sm text-sm disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
+              className="flex-1 py-2.5 px-4 rounded-xl bg-emerald-700 text-white font-semibold hover:bg-emerald-800 transition-colors flex items-center justify-center gap-1.5 shadow-sm text-sm disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
             >
               <PlusCircle className="w-4 h-4" aria-hidden="true" />
               {isSubmitting ? '処理中...' : 'チケットを追加する'}

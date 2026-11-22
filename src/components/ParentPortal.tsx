@@ -218,7 +218,7 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({
                             <span className="min-w-0 [overflow-wrap:anywhere]">{ride.pickupLocation}</span>
                           </div>
                           {ride.note && (
-                            <p className="break-words text-[11px] text-slate-500 mt-1 pl-4 border-l-2 border-slate-300">
+                            <p className="break-words text-[11px] text-slate-600 mt-1 pl-4 border-l-2 border-slate-300">
                               {ride.note}
                             </p>
                           )}
@@ -231,7 +231,7 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({
                           aria-busy={cancelPending}
                           disabled={cancelPending}
                           onClick={() => setCancelRideId(ride.id)}
-                          className="shrink-0 text-xs text-rose-600 hover:text-rose-700 bg-rose-50 hover:bg-rose-100 font-bold px-2.5 py-1.5 rounded-lg border border-rose-200 transition-colors flex items-center gap-1 disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-500"
+                          className="shrink-0 text-xs text-rose-700 hover:text-rose-800 bg-rose-50 hover:bg-rose-100 font-bold px-2.5 py-1.5 rounded-lg border border-rose-200 transition-colors flex items-center gap-1 disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-500"
                         >
                           <XCircle aria-hidden="true" className="w-3.5 h-3.5" />
                           キャンセル
@@ -293,7 +293,7 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({
                     </div>
                     <div>
                       {ride.status === 'completed' && (
-                        <span className="inline-flex items-center gap-1 text-emerald-600 font-bold">
+                        <span className="inline-flex items-center gap-1 text-emerald-700 font-bold">
                           <CheckCircle2 aria-hidden="true" className="w-3.5 h-3.5" /> 送迎済 (-{ride.rideType === 'roundtrip' ? 2 : 1}回)
                         </span>
                       )}

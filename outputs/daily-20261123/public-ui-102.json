@@ -1,0 +1,206 @@
+{
+  "checkedAt": "2026-11-22T19:50:00.714Z",
+  "url": "https://eigo-taxi-test.web.app",
+  "mode": "Public demo mode on eigo-taxi-test.web.app + offline full-admin reviewer fixture for AccountManagement only; zero real Google/GAS/customer actions",
+  "sourceHashes": {
+    "firebase.json": "fb3f0d5c6d82f4d2aa360f964e00a1ca4dba0de038a1d3a33795108c4c0757e1",
+    "src/components/AddRideModal.tsx": "3fa6fc52eeaaacc048b20b0f738613bba01938ea6339d38001f8fd3624ea282b",
+    "src/components/AddStudentModal.tsx": "77ba545197604cff0d75612d5d6ca9734aa5ccd068795839e0500f94afdbea60",
+    "src/components/AddTicketModal.tsx": "7400ed263f9a68f2a39935886edb7c392348f09323121feabb36c66d6823a64c",
+    "src/components/AccountManagement.tsx": "f2ded6a91bab10b75a2df4477de53d3e56524fd31a2ab81b8334c64594f0170f",
+    "src/components/TeacherDashboard.tsx": "a4d255bc1344cc5206b88077cc4159227c1fc3017fadd03d5bc2a0b8c6e07d36",
+    "src/components/ParentPortal.tsx": "7b83cc09fad89fa17515163652742e9e4ee894b0a6a70474cb4c8f9f7a13ceb8"
+  },
+  "headersReport": {
+    "status": 200,
+    "permissionsPolicy": "camera=(), microphone=(), geolocation=(), payment=(), usb=()",
+    "crossOriginOpenerPolicy": "same-origin-allow-popups",
+    "xContentTypeOptions": "nosniff",
+    "referrerPolicy": "no-referrer",
+    "xFrameOptions": "DENY",
+    "strictTransportSecurity": "max-age=31556926; includeSubDomains; preload"
+  },
+  "modals": {
+    "addRide": {
+      "closeBox": {
+        "x": 835,
+        "y": 138.5,
+        "width": 36,
+        "height": 36
+      },
+      "validity": false,
+      "errorText": "必須項目をすべて入力してください",
+      "ariaInvalid": "true",
+      "ariaDescribedBy": "add-ride-error",
+      "activeId": "ride-location"
+    },
+    "addStudent": {
+      "closeBox": {
+        "x": 835,
+        "y": 234.5,
+        "width": 36,
+        "height": 36
+      },
+      "validity": false,
+      "errorText": "生徒名と送迎場所を入力してください",
+      "nameInvalid": "true",
+      "nameDesc": "add-student-error",
+      "addrInvalid": "true",
+      "addrDesc": "add-student-error",
+      "activeId": "student-name"
+    },
+    "addTicket": {
+      "initialFocusId": "ticket-student",
+      "closeBox": {
+        "x": 803,
+        "y": 225,
+        "width": 36,
+        "height": 36
+      },
+      "validity": false,
+      "errorText": "生徒と1〜100枚の整数を指定してください",
+      "ariaInvalid": "true",
+      "ariaDescribedBy": "ticket-balance-preview add-ticket-error",
+      "activeId": "ticket-count"
+    }
+  },
+  "accountManagementLocal": {
+    "empty": {
+      "errorText": "表示名とGoogleメールアドレスを入力してください",
+      "nameInvalid": "true",
+      "emailInvalid": "true",
+      "emailDesc": "account-email-help account-form-error",
+      "activeIsName": true
+    },
+    "invalidEmail": {
+      "errorText": "有効なGoogleメールアドレスを入力してください",
+      "emailInvalid": "true",
+      "activeIsEmail": true
+    },
+    "noStudents": {
+      "errorText": "対象の生徒を1名以上選択してください",
+      "fieldsetInvalid": "true",
+      "fieldsetDesc": "account-form-error",
+      "activeIsFirstCheckbox": true
+    }
+  },
+  "domContrastAudits": [
+    {
+      "label": "admin-today-1280x900",
+      "scrollWidth": 1280,
+      "innerWidth": 1280,
+      "deadClasses": [],
+      "headings": [
+        {
+          "level": 1,
+          "text": "Mauro & Brenda Taxi Link"
+        },
+        {
+          "level": 2,
+          "text": "本日（2026-11-23）の送迎予定"
+        },
+        {
+          "level": 3,
+          "text": "田中 陽菜 (ひな)"
+        },
+        {
+          "level": 3,
+          "text": "山本 颯太 (そうた)"
+        }
+      ],
+      "headingSkips": [],
+      "checkedCount": 20,
+      "minRatio": 5.02,
+      "belowAA": []
+    },
+    {
+      "label": "admin-allRides-1280x900",
+      "scrollWidth": 1280,
+      "innerWidth": 1280,
+      "deadClasses": [],
+      "headings": [
+        {
+          "level": 1,
+          "text": "Mauro & Brenda Taxi Link"
+        },
+        {
+          "level": 2,
+          "text": "全送迎スケジュール・履歴"
+        }
+      ],
+      "headingSkips": [],
+      "checkedCount": 28,
+      "minRatio": 5.02,
+      "belowAA": []
+    },
+    {
+      "label": "admin-students-1280x900",
+      "scrollWidth": 1280,
+      "innerWidth": 1280,
+      "deadClasses": [],
+      "headings": [
+        {
+          "level": 1,
+          "text": "Mauro & Brenda Taxi Link"
+        },
+        {
+          "level": 2,
+          "text": "生徒台帳・チケット残数状況"
+        },
+        {
+          "level": 3,
+          "text": "田中 陽菜 (ひな)"
+        },
+        {
+          "level": 3,
+          "text": "山本 颯太 (そうた)"
+        },
+        {
+          "level": 3,
+          "text": "高橋 莉子 (りこ)"
+        }
+      ],
+      "headingSkips": [],
+      "checkedCount": 27,
+      "minRatio": 4.51,
+      "belowAA": []
+    },
+    {
+      "label": "parent-375x667",
+      "scrollWidth": 375,
+      "innerWidth": 375,
+      "deadClasses": [],
+      "headings": [
+        {
+          "level": 1,
+          "text": "Mauro & Brenda Taxi Link"
+        },
+        {
+          "level": 2,
+          "text": "田中 陽菜 (ひな) さん"
+        },
+        {
+          "level": 3,
+          "text": "現在予約中の送迎"
+        },
+        {
+          "level": 3,
+          "text": "過去の利用履歴"
+        }
+      ],
+      "headingSkips": [],
+      "checkedCount": 11,
+      "minRatio": 5.48,
+      "belowAA": []
+    }
+  ],
+  "screenshots": {
+    "outputs/daily-20261123/screenshots-r13/add-ride-validation-desktop.png": "c22785a7375e6b528ffa0a77100ed55cddb794765c86f803352e3c843921b8e7",
+    "outputs/daily-20261123/screenshots-r13/add-student-validation-desktop.png": "d3b36688dcaceb2698bb52118899f992a1b4ea8c391ebecf5af480f6caa13ee9",
+    "outputs/daily-20261123/screenshots-r13/parent-portal-contrast-mobile.png": "96e52d4aad784bcadfe6a5d1143ef4987595be6a07ecc0e0d898bf6c3551968f",
+    "outputs/daily-20261123/screenshots-r13/account-validation-local.png": "4618aa204a5e32175d86bf85557ad89fb6da0ac3aba81e9ebf6e42be4c7a98a5"
+  },
+  "pageErrors": [],
+  "consoleErrors": [],
+  "pass": true
+}

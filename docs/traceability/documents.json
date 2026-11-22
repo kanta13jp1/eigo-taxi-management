@@ -74481,6 +74481,259 @@
       ]
     },
     {
+      "id": "DOC-0668",
+      "path": "docs/progress/2026-11-23-cumulative-102.md",
+      "state": "historical",
+      "sha256": "005226fab4b0c02313fdb6d05a741a80e6708727bf0dcb1e500a144ef0e530c2",
+      "items": [
+        {
+          "id": "DOC-0668-ITEM-00001",
+          "line": 1,
+          "contentSha256": "527eeb8ab7ac13a9b67385d9dd0d0e169e3cdcc02b1d9d7a80e66a5b15379e62",
+          "occurrence": 1,
+          "preview": "# 2026-11-23 累積改善 Round 13（#100〜#102）完了報告"
+        },
+        {
+          "id": "DOC-0668-ITEM-00002",
+          "line": 3,
+          "contentSha256": "791ff12122ae06f291e9178e026f34dc5dfc4a87cadb812ac3a9739a7b40f3b7",
+          "occurrence": 1,
+          "preview": "## 1. 実装内容（OWASP / W3C WCAG 2.1 AA / WCAG 2.2）"
+        },
+        {
+          "id": "DOC-0668-ITEM-00003",
+          "line": 5,
+          "contentSha256": "7e12de23741f35f49fe60d7a77fde3cc17f8b25e4e52da8c20a63367665e9094",
+          "occurrence": 1,
+          "preview": "1. **#100 OWASP ホスティングセキュリティヘッダー強化**（[firebase.json](file:///c:/Users/kanta/GitHub/eigo-taxi-management/firebase.json)）"
+        },
+        {
+          "id": "DOC-0668-ITEM-00004",
+          "line": 6,
+          "contentSha256": "244aa7812cccb36e4d3d6bc1d28508d330cef7a3f3680a9e51cc9353ac0910ba",
+          "occurrence": 1,
+          "preview": "- `Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=()` を全レスポンスへ追加し、不要なブラウザ権限を明示拒否。"
+        },
+        {
+          "id": "DOC-0668-ITEM-00005",
+          "line": 7,
+          "contentSha256": "1a6afeb6107a61c2456366cf91121bdd7b1e3137996d2a03b7f54fe5334ec6ed",
+          "occurrence": 1,
+          "preview": "- `Cross-Origin-Opener-Policy: same-origin-allow-popups` を追加し、オリジン分離を強化しつつ Firebase Auth の `signInWithPopup`（[src/services/google-auth.ts](f"
+        },
+        {
+          "id": "DOC-0668-ITEM-00006",
+          "line": 8,
+          "contentSha256": "c247f82eaad2c5abefef21bbbb8c9c4bfde3edebda4a3c43a69d1f3c7d684efa",
+          "occurrence": 1,
+          "preview": "2. **#101 モーダル 3 フォームのバリデーション A11y（WCAG SC 3.3.1/3.3.3）・SC 2.5.8・AA コントラスト**（[AddRideModal.tsx](file:///c:/Users/kanta/GitHub/eigo-taxi-mana"
+        },
+        {
+          "id": "DOC-0668-ITEM-00007",
+          "line": 9,
+          "contentSha256": "7a2dcd01493297ba85fc1fab72f626dd62f97d449dda4baa4bbd90ed3833977e",
+          "occurrence": 1,
+          "preview": "- ネイティブ制約属性（`required`/`min`/`max`/`step`）と `form.checkValidity()` 契約を保ったまま `<form noValidate>` を適用し、日本語エラー `<p id=\"add-*-error\" role=\"alert"
+        },
+        {
+          "id": "DOC-0668-ITEM-00008",
+          "line": 10,
+          "contentSha256": "47b12def9c2a8bc135c3f4b07aff754ae1c5d212d4f5ea9dae0c15cf68d87562",
+          "occurrence": 1,
+          "preview": "- [AddTicketModal.tsx](file:///c:/Users/kanta/GitHub/eigo-taxi-management/src/components/AddTicketModal.tsx#L51-L57) の `initialFocusRef` を `"
+        },
+        {
+          "id": "DOC-0668-ITEM-00009",
+          "line": 11,
+          "contentSha256": "ad7a3e6606cb6ce28e12e007bcb6726aca7669fc26d9b5a1fc6f66061033dd9c",
+          "occurrence": 1,
+          "preview": "- 3 モーダルの閉じる `×` ボタン余白を `p-1` → `p-2`（実測 `36×36px`）へ拡大。"
+        },
+        {
+          "id": "DOC-0668-ITEM-00010",
+          "line": 12,
+          "contentSha256": "8f7dd9bb512e223d5cb79821d5729931245061470b82f3bf175e7026ec9f0bb2",
+          "occurrence": 1,
+          "preview": "- 送信ボタン（`bg-emerald-700 hover:bg-emerald-800`）および警告・補助ラベル（`text-amber-700`・`text-emerald-700`）を WCAG AA（4.5:1 以上）へ引き上げ。"
+        },
+        {
+          "id": "DOC-0668-ITEM-00011",
+          "line": 13,
+          "contentSha256": "7d4be8809a8d7ad619ee000b425e3f015410c10b45ae40da6cbb6618f55e2e0a",
+          "occurrence": 1,
+          "preview": "3. **#102 アカウント管理フォーム検証 A11y ＆ ポータル画面コントラスト底上げ**（[AccountManagement.tsx](file:///c:/Users/kanta/GitHub/eigo-taxi-management/src/components/A"
+        },
+        {
+          "id": "DOC-0668-ITEM-00012",
+          "line": 14,
+          "contentSha256": "a98b75809c2370816025c001030db63e2ea3f6b63c4c705d493688c32a277443",
+          "occurrence": 1,
+          "preview": "- [AccountManagement.tsx](file:///c:/Users/kanta/GitHub/eigo-taxi-management/src/components/AccountManagement.tsx) に `<form noValidate>`・`#a"
+        },
+        {
+          "id": "DOC-0668-ITEM-00013",
+          "line": 15,
+          "contentSha256": "1cc6bf0d14bda6ad4bfa6b940d6cc54d2e944b76be6aa981f89eab2a0c77ad1f",
+          "occurrence": 1,
+          "preview": "- [TeacherDashboard.tsx](file:///c:/Users/kanta/GitHub/eigo-taxi-management/src/components/TeacherDashboard.tsx) と [ParentPortal.tsx](file:/"
+        },
+        {
+          "id": "DOC-0668-ITEM-00014",
+          "line": 17,
+          "contentSha256": "459976ebaeacdad16a5c614780d85535f40010ffe8cfae16140ac42804893272",
+          "occurrence": 1,
+          "preview": "## 2. ビルド・配信・実測検証結果"
+        },
+        {
+          "id": "DOC-0668-ITEM-00015",
+          "line": 19,
+          "contentSha256": "02b8ae37cb6fc1821956452fc2a57472472bf86e4e64b091ea10cf09a4781d8d",
+          "occurrence": 1,
+          "preview": "- **Swarm 独立監査（`verifier-13`）**: 3 ワーカーの排他コミット（`0dc7de2` / `95fe272` / `36f6983`）をレビューし承認（ボード `#122`）。"
+        },
+        {
+          "id": "DOC-0668-ITEM-00016",
+          "line": 20,
+          "contentSha256": "f83e83393c761f46f68fcd9ac8b1d049c60da510ed7fb4808c81eb759d78a62f",
+          "occurrence": 1,
+          "preview": "- **静的検査・ビルド・オフライン契約**:"
+        },
+        {
+          "id": "DOC-0668-ITEM-00017",
+          "line": 21,
+          "contentSha256": "53d3ca83757fb5e89d79433a50cb672d16480c8f09b3718cf5cf883dedf7df65",
+          "occurrence": 1,
+          "preview": "- `npx tsc --noEmit`: PASS（exit 0）"
+        },
+        {
+          "id": "DOC-0668-ITEM-00018",
+          "line": 22,
+          "contentSha256": "d68e4c7608f92232ad7e7bff512ce1466aef158c3b5bdc190755086954dbccd9",
+          "occurrence": 1,
+          "preview": "- `npx oxlint src/`: 0 warnings / 0 errors"
+        },
+        {
+          "id": "DOC-0668-ITEM-00019",
+          "line": 23,
+          "contentSha256": "4840c1cdea192dfd7116d7addc8a979be0dfe5945c44cacf5a7e3c5c79adb23b",
+          "occurrence": 1,
+          "preview": "- Tailwind v3.4.19 コンパイル CSS（`dist/assets/index-BnOQUAo3.css`）に `.bg-emerald-700`・`.text-amber-700`・`.text-emerald-700`・`.text-rose-700`・`.b"
+        },
+        {
+          "id": "DOC-0668-ITEM-00020",
+          "line": 24,
+          "contentSha256": "8037bf81ae626d6ae9ad2c5b1f2799f27572d9f3c57b1e7327e173f32e60e9cb",
+          "occurrence": 1,
+          "preview": "- `npm run test:traceability`: **34/34 PASS**"
+        },
+        {
+          "id": "DOC-0668-ITEM-00021",
+          "line": 25,
+          "contentSha256": "f41df6d01493abf0d46cafededde9c915bb0acfb612b7f182da4154c3d5e03c6",
+          "occurrence": 1,
+          "preview": "- オフライン契約（`test_release_contract.cjs` / `test_student_low_ticket_ui.cjs` 5/5 / `test_reservation_retry_ui.cjs` / `test_portals.cjs` / `test_"
+        },
+        {
+          "id": "DOC-0668-ITEM-00022",
+          "line": 26,
+          "contentSha256": "5a1d593daff3443478a04ccd87d859be6c36ccfed7e15ec9ac48c804e9bb3a40",
+          "occurrence": 1,
+          "preview": "- **Playwright ローカル 4 スイート**:"
+        },
+        {
+          "id": "DOC-0668-ITEM-00023",
+          "line": 27,
+          "contentSha256": "1039be5b4b789b37496a9a483791d1863ed962012310d30aec58c891e1b5051d",
+          "occurrence": 1,
+          "preview": "- `test_trace_ui.mjs`: **6/6 PASS**（`outputs/r19-adoption-20261111/regression/trace-ui/results.json`）"
+        },
+        {
+          "id": "DOC-0668-ITEM-00024",
+          "line": 28,
+          "contentSha256": "28c5900d8ac95fc1d4b5df4ea16e81ce19dac0f63830f3435f0aa650ba700153",
+          "occurrence": 1,
+          "preview": "- `test_booking_modal_scroll.mjs`: **2/2 PASS**（`outputs/refresh-20261120/modal-scroll/results.json`）"
+        },
+        {
+          "id": "DOC-0668-ITEM-00025",
+          "line": 29,
+          "contentSha256": "807c7ac79734de909b30da29261b8536834d0f63f31cdbae69be8fb05a525ac2",
+          "occurrence": 1,
+          "preview": "- `tests/reviewer-ui/run.mjs`: **8/8 PASS**（`outputs/refresh-20261120/reviewer/results.json`）"
+        },
+        {
+          "id": "DOC-0668-ITEM-00026",
+          "line": 30,
+          "contentSha256": "b22f3a73862b89eef00df887411ca26ca39f95f4b61341b924683009ad528b35",
+          "occurrence": 1,
+          "preview": "- `scripts/run_local_acceptance.mjs`: **14/14 PASS**（`outputs/refresh-20261120/local/results.json`）"
+        },
+        {
+          "id": "DOC-0668-ITEM-00027",
+          "line": 31,
+          "contentSha256": "04a5b149289bdb2731fc40ae059fb9d8ffc5a5274b4a1f8f92fe27f74160749e",
+          "occurrence": 1,
+          "preview": "- **公開テストサイト配信・SHA-256 照合**:"
+        },
+        {
+          "id": "DOC-0668-ITEM-00028",
+          "line": 32,
+          "contentSha256": "97fcd7017458fd3b508c8b0a89cf54decd292f13b080e09c5383eb9d12590b14",
+          "occurrence": 1,
+          "preview": "- `https://eigo-taxi-test.web.app/` へデプロイ（`builtAt: 2026-11-22T19:48:23.276Z`, `baseCommit: 0cebbfea72ef38abcd4193efb31efe587676dd4d`, `sour"
+        },
+        {
+          "id": "DOC-0668-ITEM-00029",
+          "line": 33,
+          "contentSha256": "d81f1859b2fb442f49879b4a86f3c67d8a29787b51b5bdf643cc86cc49e2ca5b",
+          "occurrence": 1,
+          "preview": "- [verify_mighty_release.cjs](file:///c:/Users/kanta/GitHub/eigo-taxi-management/scripts/verify_mighty_release.cjs) ＆ [public-2026-11-22T19-"
+        },
+        {
+          "id": "DOC-0668-ITEM-00030",
+          "line": 34,
+          "contentSha256": "ecfd0f606e3d1729fd61492364bad65de3f666ab59b204617c1c6b0cd6f12072",
+          "occurrence": 1,
+          "preview": "- **公開デモ HTTP ヘッダー・WCAG 実画面監査**:"
+        },
+        {
+          "id": "DOC-0668-ITEM-00031",
+          "line": 35,
+          "contentSha256": "78c7f603a3536498c2b7e40c9635bd34a9f045825477fe322c4a64b34510bab6",
+          "occurrence": 1,
+          "preview": "- [public-ui-102.json](file:///c:/Users/kanta/GitHub/eigo-taxi-management/outputs/daily-20261123/public-ui-102.json): OWASP 6 ヘッダー検証 PASS、3 "
+        },
+        {
+          "id": "DOC-0668-ITEM-00032",
+          "line": 36,
+          "contentSha256": "e75432e339d361e7f6ef3af422a96aabccf6327f4f41454ef6aa5c59e2d78459",
+          "occurrence": 1,
+          "preview": "- スクリーンショット全 4 枚（`outputs/daily-20261123/screenshots-r13/*.png`）を `read_file` で目視確認済み、独立レビュー記録を [review-20261123-r13/frontend-review.json](f"
+        },
+        {
+          "id": "DOC-0668-ITEM-00033",
+          "line": 38,
+          "contentSha256": "9dfe207023d5ddeb8b4e9f43c1e374ebd21612cee82bf05ff8674b93fca1a505",
+          "occurrence": 1,
+          "preview": "## 3. 未実施・制限事項"
+        },
+        {
+          "id": "DOC-0668-ITEM-00034",
+          "line": 40,
+          "contentSha256": "6518f03d9b779a8bf6c1276af21ca68f491395d79d70ef17797b1317a67650a4",
+          "occurrence": 1,
+          "preview": "- 顧客受入 `CUST-01`〜`CUST-06` は `0/6`（`NOT_RUN`）、`thirdPartyPassed: 0`、`release: \"HOLD\"` を維持（本番未開始）。"
+        },
+        {
+          "id": "DOC-0668-ITEM-00035",
+          "line": 41,
+          "contentSha256": "f06948143b6129f0ad0ad51e3c8c531cab2bdc565b62d61426d8abcd42ebdb32",
+          "occurrence": 1,
+          "preview": "- 公開実画面監査は公開デモモード範囲であり、実 Google OAuth ログイン・実 GAS / スプレッドシート / カレンダー通信およびモバイル実機確認は含まない（`AccountManagement` のフォーム検証はローカル管理者フィクスチャで実施）。"
+        }
+      ]
+    },
+    {
       "id": "DOC-0667",
       "path": "docs/progress/2026-11-23-cumulative-ninetynine.md",
       "state": "historical",
