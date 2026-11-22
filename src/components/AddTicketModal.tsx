@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import type { Student } from '../types';
+import { useModalDialog } from '../hooks/useModalDialog';
 import { X, Ticket, PlusCircle } from 'lucide-react';
 
 interface AddTicketModalProps {
@@ -22,6 +23,7 @@ export const AddTicketModal: React.FC<AddTicketModalProps> = (props) => {
 };
 
 const AddTicketModalContent: React.FC<AddTicketModalProps> = ({
+  isOpen,
   onClose,
   students,
   initialStudentId,
@@ -33,17 +35,17 @@ const AddTicketModalContent: React.FC<AddTicketModalProps> = ({
   const [note, setNote] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState('');
+  const dialogRef = useRef<HTMLDivElement>(null);
 
   const trimmedCount = ticketCountInput.trim();
   const parsedTicketCount = trimmedCount === '' ? NaN : Number(trimmedCount);
 
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Escape' && !isSubmitting) onClose();
-    };
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [isSubmitting, onClose]);
+  useModalDialog({
+    isOpen,
+    onClose,
+    isDismissDisabled: isSubmitting,
+    dialogRef,
+  });
 
   const handlePresetSelect = (count: number, price: number, label: string) => {
     setTicketCountInput(String(count));
@@ -85,14 +87,16 @@ const AddTicketModalContent: React.FC<AddTicketModalProps> = ({
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs"
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm"
       onClick={(e) => { if (e.target === e.currentTarget && !isSubmitting) onClose(); }}
     >
       <div
+        ref={dialogRef}
         role="dialog"
         aria-modal="true"
         aria-labelledby="add-ticket-modal-title"
-        className="bg-white rounded-2xl shadow-xl w-full max-w-md max-h-[calc(100dvh-2rem)] overflow-y-auto overscroll-contain border border-slate-100 animate-in fade-in zoom-in-95 duration-150"
+        tabIndex={-1}
+        className="bg-white rounded-2xl shadow-xl w-full max-w-md max-h-[calc(100dvh-2rem)] overflow-y-auto overscroll-contain border border-slate-100"
       >
         <div className="px-6 py-4 border-b border-slate-100 flex items-center justify-between bg-emerald-50/50">
           <div className="flex items-center gap-2">
@@ -100,7 +104,7 @@ const AddTicketModalContent: React.FC<AddTicketModalProps> = ({
               <Ticket className="w-5 h-5" aria-hidden="true" />
             </div>
             <div>
-              <h3 id="add-ticket-modal-title" className="font-bold text-slate-800 text-base">チケット購入・追加</h3>
+              <h2 id="add-ticket-modal-title" className="font-bold text-slate-800 text-base">チケット購入・追加</h2>
               <p className="text-xs text-slate-500">生徒の回数券残数をチャージします</p>
             </div>
           </div>
@@ -125,7 +129,7 @@ const AddTicketModalContent: React.FC<AddTicketModalProps> = ({
               value={studentId}
               disabled={isSubmitting || students.length === 0}
               onChange={(e) => setStudentId(e.target.value)}
-              className="w-full px-3 py-2 border border-slate-200 rounded-xl focus:outline-hidden focus:ring-2 focus:ring-emerald-500 font-medium text-slate-800 text-sm disabled:opacity-50"
+              className="w-full px-3 py-2 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500 font-medium text-slate-800 text-sm disabled:opacity-50"
             >
               {students.length === 0 && <option value="">登録済みの生徒がいません</option>}
               {students.map((student) => (
@@ -197,7 +201,7 @@ const AddTicketModalContent: React.FC<AddTicketModalProps> = ({
                 aria-describedby={selectedStudent ? 'ticket-balance-preview' : undefined}
                 value={ticketCountInput}
                 onChange={(e) => setTicketCountInput(e.target.value)}
-                className="w-full px-3 py-2 border border-slate-200 rounded-xl focus:outline-hidden focus:ring-2 focus:ring-emerald-500 text-slate-800 text-sm font-semibold disabled:opacity-50"
+                className="w-full px-3 py-2 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500 text-slate-800 text-sm font-semibold disabled:opacity-50"
                 required
               />
             </div>
@@ -213,7 +217,7 @@ const AddTicketModalContent: React.FC<AddTicketModalProps> = ({
                 disabled={isSubmitting}
                 value={amountInput}
                 onChange={(e) => setAmountInput(e.target.value)}
-                className="w-full px-3 py-2 border border-slate-200 rounded-xl focus:outline-hidden focus:ring-2 focus:ring-emerald-500 text-slate-800 text-sm font-semibold disabled:opacity-50"
+                className="w-full px-3 py-2 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500 text-slate-800 text-sm font-semibold disabled:opacity-50"
               />
             </div>
           </div>
@@ -229,7 +233,7 @@ const AddTicketModalContent: React.FC<AddTicketModalProps> = ({
               value={note}
               onChange={(e) => setNote(e.target.value)}
               placeholder="例: 現金受領 / 口座振込確認済み"
-              className="w-full px-3 py-2 border border-slate-200 rounded-xl focus:outline-hidden focus:ring-2 focus:ring-emerald-500 text-slate-800 text-sm disabled:opacity-50"
+              className="w-full px-3 py-2 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500 text-slate-800 text-sm disabled:opacity-50"
             />
           </div>
 

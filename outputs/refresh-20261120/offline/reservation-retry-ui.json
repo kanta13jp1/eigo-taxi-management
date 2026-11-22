@@ -1,5 +1,5 @@
 {
-  "executedAt": "2026-11-21T23:31:28.870Z",
+  "executedAt": "2026-11-22T12:21:29.985Z",
   "mode": "Offline Node VM; actual App handlers with synthetic React hooks and API responses; no browser or real Google operation",
   "command": [
     "node",
@@ -7,7 +7,7 @@
   ],
   "stdout": "PASS Reservation replay updates one dashboard row, preserves terminal state and inserts new IDs\n",
   "sourceHashes": {
-    "src/App.tsx": "e8e1b9fce3c86d3b9d59206e141cbe6f51c792d15f24be25cd2892f875a2b7b8",
+    "src/App.tsx": "862bd58b7b9874f8a896a27801bc95099a53d035229f2baa96370821fed9624e",
     "scripts/test_reservation_retry_ui.cjs": "cdc3b0a72991daa58639d1f61c83626fb850db1e64fea8eb0916521a835dda75"
   },
   "results": [

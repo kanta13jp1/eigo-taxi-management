@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import type { Student, RideType } from '../types';
 import { getLocalDateString } from '../services/api';
+import { useModalDialog } from '../hooks/useModalDialog';
 import { X, Calendar, Clock, MapPin, FileText, CheckCircle2 } from 'lucide-react';
 
 interface AddRideModalProps {
@@ -28,6 +29,7 @@ export const AddRideModal: React.FC<AddRideModalProps> = (props) => {
 };
 
 const AddRideModalContent: React.FC<AddRideModalProps> = ({
+  isOpen,
   onClose,
   students,
   initialStudentId,
@@ -43,6 +45,8 @@ const AddRideModalContent: React.FC<AddRideModalProps> = ({
   const [note, setNote] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState('');
+  const dialogRef = useRef<HTMLDivElement>(null);
+  const studentSelectRef = useRef<HTMLSelectElement>(null);
 
   const handleStudentChange = (id: string) => {
     setStudentId(id);
@@ -52,13 +56,13 @@ const AddRideModalContent: React.FC<AddRideModalProps> = ({
     }
   };
 
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Escape' && !isSubmitting) onClose();
-    };
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [isSubmitting, onClose]);
+  useModalDialog({
+    isOpen,
+    onClose,
+    isDismissDisabled: isSubmitting,
+    dialogRef,
+    initialFocusRef: studentSelectRef,
+  });
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -91,18 +95,20 @@ const AddRideModalContent: React.FC<AddRideModalProps> = ({
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs"
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm"
       onClick={(e) => { if (e.target === e.currentTarget && !isSubmitting) onClose(); }}
     >
       <div
+        ref={dialogRef}
         role="dialog"
         aria-modal="true"
         aria-labelledby="add-ride-modal-title"
-        className="bg-white rounded-2xl shadow-xl w-full max-w-lg max-h-[calc(100dvh-2rem)] overflow-y-auto overscroll-contain border border-slate-100 animate-in fade-in zoom-in-95 duration-150"
+        tabIndex={-1}
+        className="bg-white rounded-2xl shadow-xl w-full max-w-lg max-h-[calc(100dvh-2rem)] overflow-y-auto overscroll-contain border border-slate-100"
       >
         <div className="px-6 py-4 border-b border-slate-100 flex items-center justify-between bg-emerald-50/50">
           <div>
-            <h3 id="add-ride-modal-title" className="font-bold text-slate-800 text-lg">送迎予定の登録</h3>
+            <h2 id="add-ride-modal-title" className="font-bold text-slate-800 text-lg">送迎予定の登録</h2>
             <p className="text-xs text-slate-500">
               {isTeacher ? '先生側からのスケジュール追加' : '生徒・保護者からの送迎予約'}
             </p>
@@ -124,10 +130,11 @@ const AddRideModalContent: React.FC<AddRideModalProps> = ({
           <div>
             <label htmlFor="ride-student" className="block text-xs font-semibold text-slate-600 mb-1">生徒</label>
             <select
+              ref={studentSelectRef}
               id="ride-student"
               value={studentId}
               onChange={(e) => handleStudentChange(e.target.value)}
-              className="w-full px-3 py-2 border border-slate-200 rounded-xl focus:outline-hidden focus:ring-2 focus:ring-emerald-500 font-medium text-slate-800 disabled:opacity-50"
+              className="w-full px-3 py-2 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500 font-medium text-slate-800 disabled:opacity-50"
               disabled={isSubmitting || (!isTeacher && Boolean(initialStudentId)) || students.length === 0}
               aria-describedby={selectedStudent && selectedStudent.ticketBalance <= 2 ? 'ride-student-low-ticket' : undefined}
             >
@@ -158,7 +165,7 @@ const AddRideModalContent: React.FC<AddRideModalProps> = ({
                 value={rideDate}
                 onChange={(e) => setRideDate(e.target.value)}
                 disabled={isSubmitting}
-                className="w-full px-3 py-2 border border-slate-200 rounded-xl focus:outline-hidden focus:ring-2 focus:ring-emerald-500 text-slate-800 disabled:opacity-50"
+                className="w-full px-3 py-2 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500 text-slate-800 disabled:opacity-50"
                 required
               />
             </div>
@@ -173,7 +180,7 @@ const AddRideModalContent: React.FC<AddRideModalProps> = ({
                 value={rideTime}
                 onChange={(e) => setRideTime(e.target.value)}
                 disabled={isSubmitting}
-                className="w-full px-3 py-2 border border-slate-200 rounded-xl focus:outline-hidden focus:ring-2 focus:ring-emerald-500 text-slate-800 disabled:opacity-50"
+                className="w-full px-3 py-2 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500 text-slate-800 disabled:opacity-50"
                 required
               />
             </div>
@@ -189,7 +196,7 @@ const AddRideModalContent: React.FC<AddRideModalProps> = ({
               <label
                 className={`flex flex-col items-center justify-center p-2.5 rounded-xl border text-xs cursor-pointer transition-all focus-within:ring-2 focus-within:ring-emerald-700 focus-within:ring-offset-2 ${
                   rideType === 'pickup'
-                    ? 'border-emerald-500 bg-emerald-50 text-emerald-800 font-bold shadow-xs'
+                    ? 'border-emerald-500 bg-emerald-50 text-emerald-800 font-bold shadow-sm'
                     : 'border-slate-200 text-slate-600 hover:bg-slate-50'
                 } ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
               >
@@ -209,7 +216,7 @@ const AddRideModalContent: React.FC<AddRideModalProps> = ({
               <label
                 className={`flex flex-col items-center justify-center p-2.5 rounded-xl border text-xs cursor-pointer transition-all focus-within:ring-2 focus-within:ring-emerald-700 focus-within:ring-offset-2 ${
                   rideType === 'dropoff'
-                    ? 'border-emerald-500 bg-emerald-50 text-emerald-800 font-bold shadow-xs'
+                    ? 'border-emerald-500 bg-emerald-50 text-emerald-800 font-bold shadow-sm'
                     : 'border-slate-200 text-slate-600 hover:bg-slate-50'
                 } ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
               >
@@ -229,7 +236,7 @@ const AddRideModalContent: React.FC<AddRideModalProps> = ({
               <label
                 className={`flex flex-col items-center justify-center p-2.5 rounded-xl border text-xs cursor-pointer transition-all focus-within:ring-2 focus-within:ring-emerald-700 focus-within:ring-offset-2 ${
                   rideType === 'roundtrip'
-                    ? 'border-emerald-500 bg-emerald-50 text-emerald-800 font-bold shadow-xs'
+                    ? 'border-emerald-500 bg-emerald-50 text-emerald-800 font-bold shadow-sm'
                     : 'border-slate-200 text-slate-600 hover:bg-slate-50'
                 } ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
               >
@@ -265,7 +272,7 @@ const AddRideModalContent: React.FC<AddRideModalProps> = ({
               maxLength={200}
               placeholder="例: 東京都世田谷区... または エントランス前"
               disabled={isSubmitting}
-              className="w-full px-3 py-2 border border-slate-200 rounded-xl focus:outline-hidden focus:ring-2 focus:ring-emerald-500 text-slate-800 text-sm disabled:opacity-50"
+              className="w-full px-3 py-2 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500 text-slate-800 text-sm disabled:opacity-50"
               required
             />
           </div>
@@ -284,7 +291,7 @@ const AddRideModalContent: React.FC<AddRideModalProps> = ({
               placeholder="例: 今日は雨のため傘を持って行きます / 到着5分前に連絡ください"
               rows={2}
               disabled={isSubmitting}
-              className="w-full px-3 py-2 border border-slate-200 rounded-xl focus:outline-hidden focus:ring-2 focus:ring-emerald-500 text-slate-800 text-sm disabled:opacity-50"
+              className="w-full px-3 py-2 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500 text-slate-800 text-sm disabled:opacity-50"
             />
           </div>
 

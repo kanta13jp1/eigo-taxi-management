@@ -31,7 +31,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentTab, setCurrentTab, isAdm
             onClick={() => setCurrentTab('teacher')}
             className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600 ${
               currentTab === 'teacher'
-                ? 'bg-white text-emerald-700 font-bold shadow-xs'
+                ? 'bg-white text-emerald-700 font-bold shadow-sm'
                 : 'text-slate-600 hover:text-slate-900'
             }`}
           >
@@ -44,7 +44,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentTab, setCurrentTab, isAdm
             onClick={() => setCurrentTab('invitations')}
             className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600 ${
               currentTab === 'invitations'
-                ? 'bg-white text-emerald-700 font-bold shadow-xs'
+                ? 'bg-white text-emerald-700 font-bold shadow-sm'
                 : 'text-slate-600 hover:text-slate-900'
             }`}
           >
@@ -57,7 +57,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentTab, setCurrentTab, isAdm
             onClick={() => setCurrentTab('accounts')}
             className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600 ${
               currentTab === 'accounts'
-                ? 'bg-white text-emerald-700 font-bold shadow-xs'
+                ? 'bg-white text-emerald-700 font-bold shadow-sm'
                 : 'text-slate-600 hover:text-slate-900'
             }`}
           >
@@ -70,7 +70,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentTab, setCurrentTab, isAdm
             onClick={() => setCurrentTab('settings')}
             className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600 ${
               currentTab === 'settings'
-                ? 'bg-white text-emerald-700 font-bold shadow-xs'
+                ? 'bg-white text-emerald-700 font-bold shadow-sm'
                 : 'text-slate-600 hover:text-slate-900'
             }`}
           >

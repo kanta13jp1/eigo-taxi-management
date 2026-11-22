@@ -339,7 +339,7 @@ export function App() {
 
       {/* トースト通知 */}
       {toastMessage && (
-        <div role="status" aria-live="polite" aria-atomic="true" className="fixed bottom-6 right-6 z-50 bg-slate-900 text-white text-xs sm:text-sm font-semibold px-4 py-3 rounded-2xl shadow-xl flex items-center gap-2 animate-in fade-in slide-in-from-bottom-5">
+        <div role="status" aria-live="polite" aria-atomic="true" className="fixed bottom-6 right-6 z-50 bg-slate-900 text-white text-xs sm:text-sm font-semibold px-4 py-3 rounded-2xl shadow-xl flex items-center gap-2">
           {toastMessage}
         </div>
       )}

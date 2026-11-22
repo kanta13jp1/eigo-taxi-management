@@ -1,0 +1,285 @@
+{
+  "executedAt": "2026-11-22T12:26:38.895Z",
+  "targetUrl": "https://eigo-taxi-test.web.app/",
+  "viewportDesktop": {
+    "width": 1280,
+    "height": 900
+  },
+  "viewportMobile": {
+    "width": 375,
+    "height": 667
+  },
+  "adminTabs": [
+    {
+      "tab": "送迎スケジュール一覧",
+      "headings": [
+        "h1:Mauro & Brenda Taxi Link",
+        "h2:全送迎スケジュール・履歴"
+      ],
+      "deadClassHits": 0
+    },
+    {
+      "tab": "生徒・チケット管理",
+      "headings": [
+        "h1:Mauro & Brenda Taxi Link",
+        "h2:生徒台帳・チケット残数状況",
+        "h3:田中 陽菜 (ひな)",
+        "h3:山本 颯太 (そうた)",
+        "h3:高橋 莉子 (りこ)"
+      ],
+      "deadClassHits": 0
+    },
+    {
+      "tab": "個別URL・QR",
+      "headings": [
+        "h1:Mauro & Brenda Taxi Link",
+        "h2:ご家庭の個別URL・QR"
+      ],
+      "deadClassHits": 0
+    },
+    {
+      "tab": "Google連携",
+      "headings": [
+        "h1:Mauro & Brenda Taxi Link",
+        "h2:Google連携の状態",
+        "h2:このブラウザのデモデータ"
+      ],
+      "deadClassHits": 0
+    },
+    {
+      "tab": "アカウント管理",
+      "headings": [
+        "h1:Mauro & Brenda Taxi Link",
+        "h2:アカウント管理"
+      ],
+      "deadClassHits": 0
+    }
+  ],
+  "modals": [
+    {
+      "name": "AddRideModal-Admin",
+      "triggerBefore": {
+        "tag": "button",
+        "text": "送迎予定を追加"
+      },
+      "openSnap": {
+        "tag": "select",
+        "id": "ride-student",
+        "role": null,
+        "ariaLabel": null,
+        "text": "田中 陽菜 (ひな)（残チケット: 7枚）山本 颯太 (そうた)（残チケット: 1枚）高橋 莉子 (りこ)（残チケット:",
+        "insideDialog": true,
+        "bodyOverflow": "hidden",
+        "dialogAriaModal": "true",
+        "dialogTabIndex": "-1",
+        "dialogTitle": "送迎予定の登録"
+      },
+      "focusablesCount": 11,
+      "tabTrailLength": 13,
+      "shiftTabTrailLength": 13,
+      "backdropStyle": {
+        "backdropFilter": "blur(4px)"
+      },
+      "arrowRightCheck": null,
+      "headingCount": 3,
+      "headingSkips": [],
+      "deadClassHits": 0,
+      "afterClose": {
+        "bodyOverflow": "",
+        "restoredTag": "button",
+        "restoredTriggerMarker": "AddRideModal-Admin",
+        "expectedTrigger": "AddRideModal-Admin"
+      }
+    },
+    {
+      "name": "AddStudentModal",
+      "triggerBefore": {
+        "tag": "button",
+        "text": "新規生徒を登録"
+      },
+      "openSnap": {
+        "tag": "input",
+        "id": "student-name",
+        "role": null,
+        "ariaLabel": null,
+        "text": "",
+        "insideDialog": true,
+        "bodyOverflow": "hidden",
+        "dialogAriaModal": "true",
+        "dialogTabIndex": "-1",
+        "dialogTitle": "新規生徒の登録"
+      },
+      "focusablesCount": 9,
+      "tabTrailLength": 11,
+      "shiftTabTrailLength": 11,
+      "backdropStyle": {
+        "backdropFilter": "blur(4px)"
+      },
+      "arrowRightCheck": null,
+      "headingCount": 6,
+      "headingSkips": [],
+      "deadClassHits": 0,
+      "afterClose": {
+        "bodyOverflow": "",
+        "restoredTag": "button",
+        "restoredTriggerMarker": "AddStudentModal",
+        "expectedTrigger": "AddStudentModal"
+      }
+    },
+    {
+      "name": "AddTicketModal",
+      "triggerBefore": {
+        "tag": "button",
+        "text": "チケット追加"
+      },
+      "openSnap": {
+        "tag": "button",
+        "id": null,
+        "role": null,
+        "ariaLabel": "閉じる",
+        "text": "",
+        "insideDialog": true,
+        "bodyOverflow": "hidden",
+        "dialogAriaModal": "true",
+        "dialogTabIndex": "-1",
+        "dialogTitle": "チケット購入・追加"
+      },
+      "focusablesCount": 10,
+      "tabTrailLength": 12,
+      "shiftTabTrailLength": 12,
+      "backdropStyle": {
+        "backdropFilter": "blur(4px)"
+      },
+      "arrowRightCheck": null,
+      "headingCount": 6,
+      "headingSkips": [],
+      "deadClassHits": 0,
+      "afterClose": {
+        "bodyOverflow": "",
+        "restoredTag": "button",
+        "restoredTriggerMarker": "AddTicketModal",
+        "expectedTrigger": "AddTicketModal"
+      }
+    },
+    {
+      "name": "TermsModal",
+      "triggerBefore": {
+        "tag": "button",
+        "text": "利用規約"
+      },
+      "openSnap": {
+        "tag": "button",
+        "id": "terms-tab-terms",
+        "role": "tab",
+        "ariaLabel": null,
+        "text": "利用規約",
+        "insideDialog": true,
+        "bodyOverflow": "hidden",
+        "dialogAriaModal": "true",
+        "dialogTabIndex": "-1",
+        "dialogTitle": "規約・プライバシー保護・免責事項"
+      },
+      "focusablesCount": 4,
+      "tabTrailLength": 6,
+      "shiftTabTrailLength": 6,
+      "backdropStyle": {
+        "backdropFilter": "blur(4px)"
+      },
+      "arrowRightCheck": {
+        "beforeId": "terms-tab-terms",
+        "afterId": "terms-tab-privacy"
+      },
+      "headingCount": 7,
+      "headingSkips": [],
+      "deadClassHits": 0,
+      "afterClose": {
+        "bodyOverflow": "",
+        "restoredTag": "button",
+        "restoredTriggerMarker": "TermsModal",
+        "expectedTrigger": "TermsModal"
+      }
+    },
+    {
+      "name": "AddRideModal-Parent",
+      "triggerBefore": {
+        "tag": "button",
+        "text": "送迎の予約を申し込む（前日・当日可）"
+      },
+      "openSnap": {
+        "tag": "button",
+        "id": null,
+        "role": null,
+        "ariaLabel": "閉じる",
+        "text": "",
+        "insideDialog": true,
+        "bodyOverflow": "hidden",
+        "dialogAriaModal": "true",
+        "dialogTabIndex": "-1",
+        "dialogTitle": "送迎予定の登録"
+      },
+      "focusablesCount": 10,
+      "tabTrailLength": 12,
+      "shiftTabTrailLength": 12,
+      "backdropStyle": {
+        "backdropFilter": "blur(4px)"
+      },
+      "arrowRightCheck": null,
+      "headingCount": 5,
+      "headingSkips": [],
+      "deadClassHits": 0,
+      "afterClose": {
+        "bodyOverflow": "",
+        "restoredTag": "button",
+        "restoredTriggerMarker": "AddRideModal-Parent",
+        "expectedTrigger": "AddRideModal-Parent"
+      }
+    }
+  ],
+  "computedCssChecks": {
+    "navbarShadowSm": {
+      "className": "flex items-center gap-1.5 px-3 py-1.5 rounded-lg transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600 bg-white text-emerald-700 font-bold shadow-sm",
+      "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px"
+    },
+    "focusOutlineNoneInput": {
+      "id": "ride-location",
+      "className": "w-full px-3 py-2 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500 text-slate-800 text-sm disabled:opacity-50",
+      "outlineStyle": "solid",
+      "outlineWidth": "2px",
+      "outlineColor": "rgba(0, 0, 0, 0)"
+    }
+  },
+  "parentMobile": {
+    "dimensions": {
+      "innerWidth": 375,
+      "scrollWidth": 375
+    },
+    "headings": [
+      "h1:Mauro & Brenda Taxi Link",
+      "h2:田中 陽菜 (ひな) さん",
+      "h3:現在予約中の送迎",
+      "h3:過去の利用履歴"
+    ],
+    "deadClassHits": 0
+  },
+  "screenshots": {
+    "adminDashboardDesktop": {
+      "path": "outputs/daily-20261122/screenshots/admin-dashboard-desktop.png",
+      "sha256": "d1493d234d6e03de76f6e16cfbb5b62615769fc72fbf0e042d38434c459a5d5c"
+    },
+    "adminAddRideModalDesktop": {
+      "path": "outputs/daily-20261122/screenshots/admin-add-ride-modal-desktop.png",
+      "sha256": "fcc6e999909b9cea9c182866e5621191033f75d74331326eed7637590f6f21d5"
+    },
+    "termsModalDesktop": {
+      "path": "outputs/daily-20261122/screenshots/terms-modal-desktop.png",
+      "sha256": "fb31746d9780340c645ce7669389c37d5a5c59d3a4163bcb2e7e720cb022da5c"
+    },
+    "parentPortalMobile": {
+      "path": "outputs/daily-20261122/screenshots/parent-portal-mobile.png",
+      "sha256": "0c61caae3cb74d42c21e643c2fd8edb45838fda530e55fa6689b775d59dbeec2"
+    }
+  },
+  "pageErrors": [],
+  "consoleErrors": [],
+  "status": "PASS"
+}

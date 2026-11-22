@@ -1,5 +1,6 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import type { Student } from '../types';
+import { useModalDialog } from '../hooks/useModalDialog';
 import { X, UserPlus, MapPin, Phone, User } from 'lucide-react';
 
 interface AddStudentModalProps {
@@ -14,6 +15,7 @@ export const AddStudentModal: React.FC<AddStudentModalProps> = (props) => {
 };
 
 const AddStudentModalContent: React.FC<AddStudentModalProps> = ({
+  isOpen,
   onClose,
   onSubmit,
 }) => {
@@ -25,26 +27,16 @@ const AddStudentModalContent: React.FC<AddStudentModalProps> = ({
   const [ticketBalance, setTicketBalance] = useState('10');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState('');
+  const dialogRef = useRef<HTMLDivElement>(null);
   const nameInputRef = useRef<HTMLInputElement>(null);
 
-  useEffect(() => {
-    const prevFocused = document.activeElement instanceof HTMLElement ? document.activeElement : null;
-    const prevOverflow = document.body.style.overflow;
-    document.body.style.overflow = 'hidden';
-    nameInputRef.current?.focus();
-    return () => {
-      document.body.style.overflow = prevOverflow;
-      if (prevFocused && prevFocused.isConnected) prevFocused.focus();
-    };
-  }, []);
-
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Escape' && !isSubmitting) onClose();
-    };
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [isSubmitting, onClose]);
+  useModalDialog({
+    isOpen,
+    onClose,
+    isDismissDisabled: isSubmitting,
+    dialogRef,
+    initialFocusRef: nameInputRef,
+  });
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -87,14 +79,16 @@ const AddStudentModalContent: React.FC<AddStudentModalProps> = ({
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs"
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm"
       onClick={(e) => { if (e.target === e.currentTarget && !isSubmitting) onClose(); }}
     >
       <div
+        ref={dialogRef}
         role="dialog"
         aria-modal="true"
         aria-labelledby="add-student-modal-title"
-        className="bg-white rounded-2xl shadow-xl w-full max-w-lg max-h-[calc(100dvh-2rem)] overflow-y-auto overscroll-contain border border-slate-100 animate-in fade-in zoom-in-95 duration-150"
+        tabIndex={-1}
+        className="bg-white rounded-2xl shadow-xl w-full max-w-lg max-h-[calc(100dvh-2rem)] overflow-y-auto overscroll-contain border border-slate-100"
       >
         <div className="px-6 py-4 border-b border-slate-100 flex items-center justify-between bg-emerald-50/50">
           <div className="flex items-center gap-2">
@@ -102,7 +96,7 @@ const AddStudentModalContent: React.FC<AddStudentModalProps> = ({
               <UserPlus className="w-5 h-5" aria-hidden="true" />
             </div>
             <div>
-              <h3 id="add-student-modal-title" className="font-bold text-slate-800 text-base">新規生徒の登録</h3>
+              <h2 id="add-student-modal-title" className="font-bold text-slate-800 text-base">新規生徒の登録</h2>
               <p className="text-xs text-slate-500">送迎対象の生徒と保護者情報を登録します</p>
             </div>
           </div>
@@ -135,7 +129,7 @@ const AddStudentModalContent: React.FC<AddStudentModalProps> = ({
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 placeholder="例: 佐藤 陽菜 (ひな)"
-                className="w-full px-3 py-2 border border-slate-200 rounded-xl focus:outline-hidden focus:ring-2 focus:ring-emerald-500 text-slate-800 text-sm disabled:opacity-50"
+                className="w-full px-3 py-2 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500 text-slate-800 text-sm disabled:opacity-50"
                 required
               />
             </div>
@@ -150,7 +144,7 @@ const AddStudentModalContent: React.FC<AddStudentModalProps> = ({
                 value={parentName}
                 onChange={(e) => setParentName(e.target.value)}
                 placeholder="例: 佐藤 美咲"
-                className="w-full px-3 py-2 border border-slate-200 rounded-xl focus:outline-hidden focus:ring-2 focus:ring-emerald-500 text-slate-800 text-sm disabled:opacity-50"
+                className="w-full px-3 py-2 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500 text-slate-800 text-sm disabled:opacity-50"
               />
             </div>
           </div>
@@ -170,7 +164,7 @@ const AddStudentModalContent: React.FC<AddStudentModalProps> = ({
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
                 placeholder="例: 090-1234-5678"
-                className="w-full px-3 py-2 border border-slate-200 rounded-xl focus:outline-hidden focus:ring-2 focus:ring-emerald-500 text-slate-800 text-sm disabled:opacity-50"
+                className="w-full px-3 py-2 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500 text-slate-800 text-sm disabled:opacity-50"
               />
             </div>
             <div>
@@ -185,7 +179,7 @@ const AddStudentModalContent: React.FC<AddStudentModalProps> = ({
                 disabled={isSubmitting}
                 value={ticketBalance}
                 onChange={(e) => setTicketBalance(e.target.value)}
-                className="w-full px-3 py-2 border border-slate-200 rounded-xl focus:outline-hidden focus:ring-2 focus:ring-emerald-500 text-slate-800 text-sm font-semibold disabled:opacity-50"
+                className="w-full px-3 py-2 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500 text-slate-800 text-sm font-semibold disabled:opacity-50"
               />
             </div>
           </div>
@@ -204,7 +198,7 @@ const AddStudentModalContent: React.FC<AddStudentModalProps> = ({
               value={address}
               onChange={(e) => setAddress(e.target.value)}
               placeholder="例: 東京都世田谷区桜新町1-2-3 ○○マンション101"
-              className="w-full px-3 py-2 border border-slate-200 rounded-xl focus:outline-hidden focus:ring-2 focus:ring-emerald-500 text-slate-800 text-sm disabled:opacity-50"
+              className="w-full px-3 py-2 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500 text-slate-800 text-sm disabled:opacity-50"
               required
             />
           </div>
@@ -219,7 +213,7 @@ const AddStudentModalContent: React.FC<AddStudentModalProps> = ({
               value={pickupNote}
               onChange={(e) => setPickupNote(e.target.value)}
               placeholder="例: マンション正面入口前に停車 / 到着時インターホン"
-              className="w-full px-3 py-2 border border-slate-200 rounded-xl focus:outline-hidden focus:ring-2 focus:ring-emerald-500 text-slate-800 text-sm disabled:opacity-50"
+              className="w-full px-3 py-2 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500 text-slate-800 text-sm disabled:opacity-50"
             />
           </div>
 

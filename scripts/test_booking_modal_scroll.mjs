@@ -45,7 +45,7 @@ try {
       await page.waitForFunction(() => Boolean(document.body.dataset.submitted));
       assert.equal(JSON.parse(await page.locator('body').getAttribute('data-submitted')).studentId, 'A');
       // Scrolling back to the heading must also make closing reachable.
-      const close = page.locator('h3').locator('../..').locator('button');
+      const close = page.getByRole('heading', { name: '送迎予定の登録' }).locator('../..').locator('button');
       await close.scrollIntoViewIfNeeded({ timeout: 2000 });
       const closeBox = await close.boundingBox();
       assert.ok(closeBox && closeBox.y >= 0 && closeBox.y + closeBox.height <= viewport.height);

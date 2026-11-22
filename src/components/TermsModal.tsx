@@ -1,4 +1,5 @@
-import { useEffect, useState, type KeyboardEvent as ReactKeyboardEvent } from 'react';
+import { useRef, useState, type KeyboardEvent as ReactKeyboardEvent } from 'react';
+import { useModalDialog } from '../hooks/useModalDialog';
 import { X, Shield, FileText, AlertCircle } from 'lucide-react';
 
 const TABS: Array<'terms' | 'privacy' | 'disclaimer'> = ['terms', 'privacy', 'disclaimer'];
@@ -16,25 +17,15 @@ export function TermsModal({ isOpen, onClose, initialTab = 'terms' }: TermsModal
 
 function TermsModalContent({ onClose, initialTab }: { onClose: () => void; initialTab: 'terms' | 'privacy' | 'disclaimer' }) {
   const [activeTab, setActiveTab] = useState<'terms' | 'privacy' | 'disclaimer'>(initialTab);
+  const dialogRef = useRef<HTMLDivElement>(null);
+  const initialTabRef = useRef<HTMLButtonElement>(null);
 
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') onClose();
-    };
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [onClose]);
-
-  useEffect(() => {
-    const prevFocused = document.activeElement instanceof HTMLElement ? document.activeElement : null;
-    const prevOverflow = document.body.style.overflow;
-    document.body.style.overflow = 'hidden';
-    document.getElementById(`terms-tab-${initialTab}`)?.focus();
-    return () => {
-      document.body.style.overflow = prevOverflow;
-      if (prevFocused && prevFocused.isConnected) prevFocused.focus();
-    };
-  }, [initialTab]);
+  useModalDialog({
+    isOpen: true,
+    onClose,
+    dialogRef,
+    initialFocusRef: initialTabRef,
+  });
 
   const handleTabKeyDown = (e: ReactKeyboardEvent<HTMLDivElement>) => {
     const currentIndex = TABS.indexOf(activeTab);
@@ -59,20 +50,22 @@ function TermsModalContent({ onClose, initialTab }: { onClose: () => void; initi
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm animate-in fade-in"
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm"
       onClick={(e) => { if (e.target === e.currentTarget) onClose(); }}
     >
       <div
+        ref={dialogRef}
         role="dialog"
         aria-modal="true"
         aria-labelledby="terms-modal-title"
+        tabIndex={-1}
         className="bg-white w-full max-w-2xl rounded-3xl shadow-2xl overflow-hidden flex flex-col max-h-[calc(100dvh-2rem)] overscroll-contain"
       >
         {/* ヘッダー */}
         <div className="px-6 py-4 bg-slate-50 border-b border-slate-100 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <Shield className="w-5 h-5 text-indigo-600" aria-hidden="true" />
-            <h3 id="terms-modal-title" className="font-bold text-slate-800 text-base sm:text-lg">規約・プライバシー保護・免責事項</h3>
+            <h2 id="terms-modal-title" className="font-bold text-slate-800 text-base sm:text-lg">規約・プライバシー保護・免責事項</h2>
           </div>
           <button
             type="button"
@@ -92,6 +85,7 @@ function TermsModalContent({ onClose, initialTab }: { onClose: () => void; initi
           className="flex border-b border-slate-100 px-6 pt-2 gap-4 text-sm font-medium overflow-x-auto"
         >
           <button
+            ref={initialTab === 'terms' ? initialTabRef : undefined}
             type="button"
             role="tab"
             id="terms-tab-terms"
@@ -109,6 +103,7 @@ function TermsModalContent({ onClose, initialTab }: { onClose: () => void; initi
             利用規約
           </button>
           <button
+            ref={initialTab === 'privacy' ? initialTabRef : undefined}
             type="button"
             role="tab"
             id="terms-tab-privacy"
@@ -126,6 +121,7 @@ function TermsModalContent({ onClose, initialTab }: { onClose: () => void; initi
             個人情報の取扱い
           </button>
           <button
+            ref={initialTab === 'disclaimer' ? initialTabRef : undefined}
             type="button"
             role="tab"
             id="terms-tab-disclaimer"
@@ -154,7 +150,7 @@ function TermsModalContent({ onClose, initialTab }: { onClose: () => void; initi
         >
           {activeTab === 'terms' && (
             <div className="space-y-3">
-              <h4 className="font-bold text-slate-800 text-base">送迎サービス利用規約</h4>
+              <h3 className="font-bold text-slate-800 text-base">送迎サービス利用規約</h3>
               <p>Mauro & Brenda 英語教室の送迎管理システム（以下、「本システム」）のご利用にあたり、以下の規約を定めます。</p>
               <div className="bg-slate-50 p-3.5 rounded-2xl border border-slate-100 space-y-2">
                 <p className="font-semibold text-slate-700">1. 送迎チケットの消費</p>
@@ -173,7 +169,7 @@ function TermsModalContent({ onClose, initialTab }: { onClose: () => void; initi
 
           {activeTab === 'privacy' && (
             <div className="space-y-3">
-              <h4 className="font-bold text-slate-800 text-base">プライバシーポリシー（個人情報の取扱い）</h4>
+              <h3 className="font-bold text-slate-800 text-base">プライバシーポリシー（個人情報の取扱い）</h3>
               <p>本教室は、生徒様および保護者様の個人情報を厳重に管理し、以下の通り適切に取り扱います。</p>
               <div className="space-y-2.5">
                 <div>
@@ -194,7 +190,7 @@ function TermsModalContent({ onClose, initialTab }: { onClose: () => void; initi
 
           {activeTab === 'disclaimer' && (
             <div className="space-y-3">
-              <h4 className="font-bold text-slate-800 text-base">免責事項</h4>
+              <h3 className="font-bold text-slate-800 text-base">免責事項</h3>
               <ul className="list-disc pl-5 space-y-2 text-xs sm:text-sm">
                 <li>天候の急変、自然災害、道路工事、事故等の交通渋滞により、送迎到着時刻が前後する場合がございます。あらかじめご了承ください。</li>
                 <li>外部クラウド基盤（Google スプレッドシート、Google カレンダー等）の計画メンテナンスや一時的な通信障害等により、即座に同期が行われない場合がございます。</li>

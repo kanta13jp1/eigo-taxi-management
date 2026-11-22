@@ -74206,6 +74206,147 @@
       ]
     },
     {
+      "id": "DOC-0665",
+      "path": "docs/progress/2026-11-22-cumulative-ninetyfour.md",
+      "state": "historical",
+      "sha256": "81a9501bd89a8370bd1e4ebbb08125a523a7c836e8cc08aba71a73dac968df0d",
+      "items": [
+        {
+          "id": "DOC-0665-ITEM-00001",
+          "line": 1,
+          "contentSha256": "ec25df7390b02f5d631b66410e4863347de35dd4046cdd1d85b89469efa580f9",
+          "occurrence": 1,
+          "preview": "# 11月22日 累計94件の実装修正・受入試験94項目（WAI-ARIA APG 1.2 モーダルフォーカストラップ / Tailwind v3.4.19 CSS 互換化 / WCAG 2.1 見出し階層是正）"
+        },
+        {
+          "id": "DOC-0665-ITEM-00002",
+          "line": 3,
+          "contentSha256": "e79e8976eb91cf8c58638c41a0a566d1ab36a7c78822c02c6008bfbd6635a453",
+          "occurrence": 1,
+          "preview": "小林さん、お疲れ様です。"
+        },
+        {
+          "id": "DOC-0665-ITEM-00003",
+          "line": 5,
+          "contentSha256": "82ca4a20d565d2807c2582f6a2911db8d9a98e67f912281b29846c0cae3e8275",
+          "occurrence": 1,
+          "preview": "11月22日の標準準拠是正（Round 10: 92〜94件目）により、実装修正は**累計94件**、実施した異なる受入試験は**累計94項目**となりました（先行2件は Claude Code Fable 5.2 の対応分、追加92件が後続の対応分です）。今回も Agent S"
+        },
+        {
+          "id": "DOC-0665-ITEM-00004",
+          "line": 7,
+          "contentSha256": "52cdd5757d898cc82d0dc7a36550e3c69d2a136b54fafe1d137668076fdff0e5",
+          "occurrence": 1,
+          "preview": "### 【今回の追加修正内容（92〜94件目）】"
+        },
+        {
+          "id": "DOC-0665-ITEM-00005",
+          "line": 8,
+          "contentSha256": "b10856bb5c4563193a550322f532a3afb1ac46b2853cba294c00585ead659907",
+          "occurrence": 1,
+          "preview": "* **92件目（`src/hooks/useModalDialog.ts` / 4カスタムモーダル共通統合）**：W3C WAI-ARIA APG 1.2 Dialog パターンに基づき共通フック `useModalDialog` を新設し、`AddRideModal.tsx`"
+        },
+        {
+          "id": "DOC-0665-ITEM-00006",
+          "line": 9,
+          "contentSha256": "5081a61f8474d1f6ed4787e752d17eb8b0c2b4927d69b71411cb35b4bbf17ae3",
+          "occurrence": 1,
+          "preview": "* **93件目（`Tailwind CSS v3.4.19` 未コンパイルクラス解消）**：本リポジトリの Tailwind CSS v3.4.19（`tailwindcss-animate` 未導入）で CSS 生成されていなかった Tailwind v4 系・アニメーション"
+        },
+        {
+          "id": "DOC-0665-ITEM-00007",
+          "line": 10,
+          "contentSha256": "8a5647c45555d6deb7773195fac1de6157d21ddcab3dbd80a52ace6a663e3efb",
+          "occurrence": 1,
+          "preview": "* **94件目（`WCAG 2.1 SC 1.3.1` 見出し階層是正＋テスト更新）**：既存の見た目用タイポグラフィクラスを保ったまま、`Navbar` の単一 `<h1>` 配下で見出しレベルの飛び級（`h1 -> h3`、`h2 -> h4`）を解消しました（4カスタムモ"
+        },
+        {
+          "id": "DOC-0665-ITEM-00008",
+          "line": 12,
+          "contentSha256": "fb4b0a30d4cbffa858fa3a39f5325307f4d8e1ae806919842ac7f32545a9de51",
+          "occurrence": 1,
+          "preview": "### 【今回実施した受入試験（92〜94項目目）】"
+        },
+        {
+          "id": "DOC-0665-ITEM-00009",
+          "line": 13,
+          "contentSha256": "09bdc8a84c1e6a3fa4ed18c8fbab490cad4c869c96ab2a236f334d3c209a7d4b",
+          "occurrence": 1,
+          "preview": "* **92項目目（WAI-ARIA APG 1.2 全4モーダル フォーカストラップ・背面スクロール・フォーカス復帰検証［公開デモ］）**：公開検証サイト（`https://eigo-taxi-test.web.app/`）において、`AddRideModal`（管理者モードで"
+        },
+        {
+          "id": "DOC-0665-ITEM-00010",
+          "line": 14,
+          "contentSha256": "338f1a9afbcbbc348547cc8f28c8e7a7e6f8cf9aa9d63ec967578db929d97e8d",
+          "occurrence": 1,
+          "preview": "* **93項目目（Tailwind CSS v3.4.19 実算出スタイル・ゼロ未定義クラス検証［ビルドCSS＋公開デモ］）**：公開サイトの DOM 全要素から dead クラス 0件、`getComputedStyle` によるモーダル背面の `backdropFilter"
+        },
+        {
+          "id": "DOC-0665-ITEM-00011",
+          "line": 15,
+          "contentSha256": "5c33ac5dbcbb25dcadec8958f0736773faf934e4df145d1a464f5cd52ff4b112",
+          "occurrence": 1,
+          "preview": "* **94項目目（WCAG 2.1 見出し階層連番検証＋全ローカル・オフライン回帰スイート検証）**：公開サイトの管理者5タブ・保護者モバイル画面・4モーダルすべてで見出しレベル飛び級 0件を確認したほか、`tsc --noEmit`（エラー0）・`oxlint src/`（警"
+        },
+        {
+          "id": "DOC-0665-ITEM-00012",
+          "line": 17,
+          "contentSha256": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+          "occurrence": 1,
+          "preview": "---"
+        },
+        {
+          "id": "DOC-0665-ITEM-00013",
+          "line": 19,
+          "contentSha256": "76c3519755d39acf199783847365abea0c2ba4aec32426a7addbe54a9ff2b9a7",
+          "occurrence": 1,
+          "preview": "### 【公開環境・確認範囲】"
+        },
+        {
+          "id": "DOC-0665-ITEM-00014",
+          "line": 20,
+          "contentSha256": "b8f8e26627fdd283f6f45ab1ae8e53d01b7ab6cd92e292bebaf1c240ff354448",
+          "occurrence": 1,
+          "preview": "* **検証サイト**: https://eigo-taxi-test.web.app/"
+        },
+        {
+          "id": "DOC-0665-ITEM-00015",
+          "line": 21,
+          "contentSha256": "167a28d6734b602028386d9e17bd6a67875183bc5bae8b527f8f850064a51954",
+          "occurrence": 1,
+          "preview": "* **反映版 (`sourceDigest`)**: `973c6c2152af83fa1428b9bb877da9e063fbdedfcdd1f9e258b45d6147f8909e`（ビルド時刻: `2026-11-22T12:22:35.787Z`、`baseCommit"
+        },
+        {
+          "id": "DOC-0665-ITEM-00016",
+          "line": 22,
+          "contentSha256": "7a0d83157c119d0933a3d455afa56ff6a862ee22c22251ef2ac341fe116130ed",
+          "occurrence": 1,
+          "preview": "* **配信照合**: [public-2026-11-22T12-24-24-963Z.json](../acceptance/deployment-verification/public-2026-11-22T12-24-24-963Z.json)（全7ファイル SHA-25"
+        },
+        {
+          "id": "DOC-0665-ITEM-00017",
+          "line": 23,
+          "contentSha256": "2089a53f9a505c90bdc6f38386444fb96001077a15c28b42ef482f5841dc569e",
+          "occurrence": 1,
+          "preview": "* **公開UI証跡**: [public-ui-ninetyfour.json](../../outputs/daily-20261122/public-ui-ninetyfour.json)"
+        },
+        {
+          "id": "DOC-0665-ITEM-00018",
+          "line": 24,
+          "contentSha256": "8da976b6e2c5e095ea82da1939ee0a0f069c23577648f9a5238aa35505e243eb",
+          "occurrence": 1,
+          "preview": "* **AI ソースレビュー証跡**: [frontend-review.json](../traceability/reports/review-20261122/frontend-review.json)"
+        },
+        {
+          "id": "DOC-0665-ITEM-00019",
+          "line": 25,
+          "contentSha256": "93478e90e671941299d670d859bc4008392c820d33a2703e7cc138eca9d395c1",
+          "occurrence": 1,
+          "preview": "* **顧客確認・本番状況**: 小林様の顧客確認6手順（`CUST-01`〜`CUST-06`）は **0/6件（`NOT_RUN`、`thirdPartyPassed: 0`、`release: \"HOLD\"`）** のままであり、実Googleアカウントログイン・実GAS/"
+        }
+      ]
+    },
+    {
       "id": "DOC-0664",
       "path": "docs/progress/2026-11-22-cumulative-ninetyone.md",
       "state": "historical",

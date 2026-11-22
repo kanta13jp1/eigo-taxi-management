@@ -99,13 +99,13 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({
   return (
     <div className="max-w-xl mx-auto space-y-5 pb-8">
       {/* 生徒選択バー（保護者が複数の兄弟姉妹を通わせている場合もスムーズに切替可能） */}
-      <div className="bg-white p-3 rounded-2xl border border-slate-200 shadow-xs flex items-center justify-between gap-3">
+      <div className="bg-white p-3 rounded-2xl border border-slate-200 shadow-sm flex items-center justify-between gap-3">
         <label htmlFor="parent-portal-student" className="text-xs font-bold text-slate-500 whitespace-nowrap">表示する生徒:</label>
         <select
           id="parent-portal-student"
           value={student.id}
           onChange={(e) => setPreferredStudentId(e.target.value)}
-          className="bg-slate-50 border border-slate-200 font-bold text-slate-800 text-sm rounded-xl px-3 py-1.5 focus:outline-hidden focus:ring-2 focus:ring-emerald-500 w-full"
+          className="bg-slate-50 border border-slate-200 font-bold text-slate-800 text-sm rounded-xl px-3 py-1.5 focus:outline-none focus:ring-2 focus:ring-emerald-500 w-full"
         >
           {safeStudents.map((s) => (
             <option key={s.id} value={s.id}>
@@ -129,7 +129,7 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({
                   <span className="text-xs font-medium text-emerald-100 bg-emerald-500/30 px-2.5 py-1 rounded-full">
                     送迎チケット残高
                   </span>
-                  <h3 className="text-lg font-bold mt-1.5">{student.name} さん</h3>
+                  <h2 className="text-lg font-bold mt-1.5">{student.name} さん</h2>
                 </div>
                 <div className="text-right">
                   <span className="text-4xl font-black tracking-tight">{student.ticketBalance}</span>
@@ -171,12 +171,12 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({
           </button>
 
           {/* 予約中の送迎（キャンセル可能） */}
-          <div className="bg-white rounded-2xl border border-slate-200 p-5 shadow-xs">
+          <div className="bg-white rounded-2xl border border-slate-200 p-5 shadow-sm">
             <div className="flex items-center justify-between mb-1">
-              <h4 className="font-bold text-slate-800 text-sm flex items-center gap-2">
+              <h3 className="font-bold text-slate-800 text-sm flex items-center gap-2">
                 <Calendar aria-hidden="true" className="w-4 h-4 text-emerald-600" />
                 現在予約中の送迎
-              </h4>
+              </h3>
               <span className="text-xs text-slate-400">{upcomingRides.length} 件</span>
             </div>
             <p className="text-[11px] text-slate-500 mb-3">
@@ -262,12 +262,12 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({
           )}
 
           {/* これまでの利用履歴 */}
-          <div className="bg-white rounded-2xl border border-slate-200 p-5 shadow-xs">
+          <div className="bg-white rounded-2xl border border-slate-200 p-5 shadow-sm">
             <div className="flex items-center justify-between mb-3">
-              <h4 className="font-bold text-slate-800 text-sm flex items-center gap-2">
+              <h3 className="font-bold text-slate-800 text-sm flex items-center gap-2">
                 <Clock aria-hidden="true" className="w-4 h-4 text-slate-500" />
                 過去の利用履歴
-              </h4>
+              </h3>
               <span className="text-xs text-slate-400">{pastRides.length} 件</span>
             </div>
 

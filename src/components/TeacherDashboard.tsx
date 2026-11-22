@@ -155,7 +155,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
     <div className="space-y-6">
       {completionError && <p role="alert" className="rounded-xl border border-rose-200 bg-rose-50 p-4 text-sm text-rose-800">{completionError}</p>}
       {/* 管理者バナー */}
-      <div className="bg-emerald-50/80 border border-emerald-200 rounded-2xl p-3.5 px-4 flex flex-col sm:flex-row sm:items-center justify-between gap-2 shadow-xs">
+      <div className="bg-emerald-50/80 border border-emerald-200 rounded-2xl p-3.5 px-4 flex flex-col sm:flex-row sm:items-center justify-between gap-2 shadow-sm">
         <div className="flex items-center gap-2 text-emerald-900 font-bold text-sm">
           <span className="bg-emerald-600 text-white text-[10px] font-black px-2 py-0.5 rounded-md">{reviewOnly ? '検証専用画面' : '管理者画面'}</span>
           <span>{reviewOnly ? '指定した架空生徒の送迎・チケットだけを確認できます' : 'Mauro・Brenda 先生用管理ダッシュボード'}</span>
@@ -170,7 +170,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
         <button
           type="button"
           onClick={() => setActiveTab('today')}
-          className="bg-white p-4 rounded-2xl border border-slate-200/80 shadow-xs flex items-center justify-between cursor-pointer hover:border-emerald-300 transition-colors text-left w-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
+          className="bg-white p-4 rounded-2xl border border-slate-200/80 shadow-sm flex items-center justify-between cursor-pointer hover:border-emerald-300 transition-colors text-left w-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
         >
           <div>
             <p className="text-xs font-semibold text-slate-500">本日の送迎</p>
@@ -191,7 +191,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
         <button
           type="button"
           onClick={() => setActiveTab('students')}
-          className="bg-white p-4 rounded-2xl border border-slate-200/80 shadow-xs flex items-center justify-between cursor-pointer hover:border-amber-300 transition-colors text-left w-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500"
+          className="bg-white p-4 rounded-2xl border border-slate-200/80 shadow-sm flex items-center justify-between cursor-pointer hover:border-amber-300 transition-colors text-left w-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500"
         >
           <div>
             <p className="text-xs font-semibold text-slate-500">チケット残り2枚以下</p>
@@ -217,7 +217,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
         <button
           type="button"
           onClick={() => setActiveTab('students')}
-          className="bg-white p-4 rounded-2xl border border-slate-200/80 shadow-xs flex items-center justify-between cursor-pointer hover:border-blue-300 transition-colors text-left w-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+          className="bg-white p-4 rounded-2xl border border-slate-200/80 shadow-sm flex items-center justify-between cursor-pointer hover:border-blue-300 transition-colors text-left w-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
         >
           <div>
             <p className="text-xs font-semibold text-slate-500">登録生徒数</p>
@@ -241,7 +241,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
             aria-pressed={activeTab === 'today'}
             onClick={() => setActiveTab('today')}
             className={`px-3 py-1.5 rounded-lg transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600 ${
-              activeTab === 'today' ? 'bg-white text-slate-900 shadow-xs' : 'text-slate-600 hover:text-slate-900'
+              activeTab === 'today' ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-600 hover:text-slate-900'
             }`}
           >
             本日の送迎 ({todayRides.length})
@@ -251,7 +251,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
             aria-pressed={activeTab === 'allRides'}
             onClick={() => setActiveTab('allRides')}
             className={`px-3 py-1.5 rounded-lg transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600 ${
-              activeTab === 'allRides' ? 'bg-white text-slate-900 shadow-xs' : 'text-slate-600 hover:text-slate-900'
+              activeTab === 'allRides' ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-600 hover:text-slate-900'
             }`}
           >
             送迎スケジュール一覧 ({rides.length})
@@ -261,7 +261,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
             aria-pressed={activeTab === 'students'}
             onClick={() => setActiveTab('students')}
             className={`px-3 py-1.5 rounded-lg transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600 ${
-              activeTab === 'students' ? 'bg-white text-slate-900 shadow-xs' : 'text-slate-600 hover:text-slate-900'
+              activeTab === 'students' ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-600 hover:text-slate-900'
             }`}
           >
             生徒・チケット管理 ({students.length})
@@ -272,7 +272,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
           <button
             type="button"
             onClick={() => onOpenAddRide()}
-            className="flex-1 sm:flex-none flex items-center justify-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 text-white px-3.5 py-2 rounded-xl text-xs font-bold shadow-xs transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
+            className="flex-1 sm:flex-none flex items-center justify-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 text-white px-3.5 py-2 rounded-xl text-xs font-bold shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
           >
             <Plus aria-hidden="true" className="w-4 h-4" />
             送迎予定を追加
@@ -280,7 +280,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
           <button
             type="button"
             onClick={() => onOpenAddTicket()}
-            className="flex-1 sm:flex-none flex items-center justify-center gap-1.5 bg-white border border-slate-300 hover:bg-slate-50 text-slate-700 px-3 py-2 rounded-xl text-xs font-bold shadow-xs transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
+            className="flex-1 sm:flex-none flex items-center justify-center gap-1.5 bg-white border border-slate-300 hover:bg-slate-50 text-slate-700 px-3 py-2 rounded-xl text-xs font-bold shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
           >
             <Ticket aria-hidden="true" className="w-4 h-4 text-emerald-600" />
             チケット追加
@@ -326,7 +326,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
                 return (
                   <div
                     key={ride.id}
-                    className={`bg-white rounded-2xl border p-4 shadow-xs transition-all ${
+                    className={`bg-white rounded-2xl border p-4 shadow-sm transition-all ${
                       isCompleted ? 'border-slate-200 bg-slate-50/60 opacity-80' : 'border-emerald-200 hover:border-emerald-300'
                     }`}
                   >
@@ -355,7 +355,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
                     </div>
 
                     <div className="mb-3">
-                      <h4 className="font-bold text-slate-800 text-base">{ride.studentName}</h4>
+                      <h3 className="font-bold text-slate-800 text-base">{ride.studentName}</h3>
                       {student && (
                         <p className="text-xs text-slate-500 mt-0.5">
                           保護者: {student.parentName}（残チケット:{' '}
@@ -406,7 +406,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
                           disabled={pendingRideIds.has(ride.id)}
                           aria-busy={pendingRideIds.has(ride.id)}
                           aria-label={completionLabel(ride)}
-                          className="bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs py-2 px-3.5 rounded-xl shadow-xs inline-flex items-center gap-1.5 transition-colors disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
+                          className="bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs py-2 px-3.5 rounded-xl shadow-sm inline-flex items-center gap-1.5 transition-colors disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
                         >
                           <CheckCircle2 aria-hidden="true" className="w-4 h-4" />
                           {pendingRideIds.has(ride.id) ? '完了処理中' : `送迎完了（${typeInfo.consume}回消費）`}
@@ -434,7 +434,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
                 aria-label="ステータスで絞り込み"
                 value={filterStatus}
                 onChange={(e) => setFilterStatus(e.target.value)}
-                className="bg-white border border-slate-200 rounded-xl px-2.5 py-1 text-xs font-semibold text-slate-700 focus:outline-hidden focus-visible:ring-2 focus-visible:ring-emerald-500"
+                className="bg-white border border-slate-200 rounded-xl px-2.5 py-1 text-xs font-semibold text-slate-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
               >
                 <option value="all">すべてのステータス</option>
                 <option value="scheduled">予定中のみ</option>
@@ -444,7 +444,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
             </div>
           </div>
 
-          <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-xs">
+          <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
             <div className="overflow-x-auto">
               <table aria-label="全送迎スケジュール一覧" className="w-full text-left text-xs">
                 <thead className="bg-slate-50 border-b border-slate-200 text-slate-500 font-semibold">
@@ -593,13 +593,13 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
               return (
                 <div
                   key={student.id}
-                  className="bg-white rounded-2xl border border-slate-200 p-4 shadow-xs flex flex-col justify-between"
+                  className="bg-white rounded-2xl border border-slate-200 p-4 shadow-sm flex flex-col justify-between"
                 >
                   <div>
                     <div className="flex items-start justify-between gap-2 mb-2">
                       <div>
                         <span className="text-[10px] font-mono text-slate-400 font-semibold">{student.id}</span>
-                        <h4 className="font-bold text-slate-900 text-base">{student.name}</h4>
+                        <h3 className="font-bold text-slate-900 text-base">{student.name}</h3>
                         <p className="text-xs text-slate-500">保護者: {student.parentName || '未設定'}</p>
                       </div>
 

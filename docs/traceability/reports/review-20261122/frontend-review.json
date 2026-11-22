@@ -1,0 +1,129 @@
+{
+  "date": "2026-11-22",
+  "round": "Round 10 (#92-#94)",
+  "reviewer": "Independent Swarm Auditor verifier-10 (board seq #92) & Coordinator live/visual audit against WAI-ARIA APG 1.2, WCAG 2.1 AA, Tailwind v3.4.19",
+  "scope": [
+    "src/hooks/useModalDialog.ts",
+    "src/components/AddRideModal.tsx",
+    "src/components/AddTicketModal.tsx",
+    "src/components/AddStudentModal.tsx",
+    "src/components/TermsModal.tsx",
+    "src/components/TeacherDashboard.tsx",
+    "src/components/ParentPortal.tsx",
+    "src/components/Navbar.tsx",
+    "src/App.tsx",
+    "scripts/test_booking_modal_scroll.mjs"
+  ],
+  "sourceHashes": {
+    "src/hooks/useModalDialog.ts": "e42891b04ffaf2cb7d5ee143296d79f491b58618a41e3b479dc91bc6fb336da8",
+    "src/components/AddRideModal.tsx": "b5feff9c4798a0d0e38ca12c41bd898efcb5fd9e3ee2e0dba8ce9b77cbb06cb3",
+    "src/components/AddTicketModal.tsx": "e4c791a335ad59413f78255b41c9ebae871351a907e0dd2708ba4a03e60b8b80",
+    "src/components/AddStudentModal.tsx": "69b6c0fc92bc82d14cfc5cf032bcceb52a6ccd4742adea82b728a01500cf3a51",
+    "src/components/TermsModal.tsx": "150a96d3e7c29a0c0873f117d4daec478a49ef65e934636c5a2e9b652268ae5d",
+    "src/components/TeacherDashboard.tsx": "a9cb0d4734204547f5e8b5d71c205326bb2a7dea21b539e389960d5f5066a0c9",
+    "src/components/ParentPortal.tsx": "3b2360eed0a57af32758457647107e2f28dc86e574a314c9cae769837e75d43e",
+    "src/components/Navbar.tsx": "d9b5fcef4d332e45d0028b023caf1f09f08a7ec3603c8a00fd92c0e40f858ab5",
+    "src/App.tsx": "862bd58b7b9874f8a896a27801bc95099a53d035229f2baa96370821fed9624e",
+    "scripts/test_booking_modal_scroll.mjs": "9a25aef88e322840dc290910ee903c34a69f9f6c3a083092ded3ac35c45083df"
+  },
+  "swarmReview": {
+    "verifier": "verifier-10",
+    "boardApprovalSeq": 92,
+    "reviewedCommits": {
+      "author-modal-system": "9f17cea1f61178f04df207754508841a43497052",
+      "author-dashboards-css": "9c61099d3396d0b4a11981a879509e0c8f5ba32b",
+      "author-shell-css": "955b0db9a641172be71d82a2cd40b7df8538738b"
+    },
+    "criteriaVerified": [
+      "Strict disjoint file ownership across all 3 worker branches",
+      "useModalDialog uses ref-stabilized callbacks with [isOpen, dialogRef, initialFocusRef] deps, ref-counted body overflow lock, stack-top guard, visible/enabled descendant Tab wrap, Escape dismiss guard, and isConnected focus restore",
+      "All 4 custom modals wire dialogRef (tabIndex=-1) + useModalDialog and preserve TermsModal ArrowLeft/ArrowRight tab switching",
+      "Zero remaining Tailwind v4 / uncompiled animate-in utility classes in src/",
+      "Zero skipped heading levels across Navbar (h1), Admin views, ParentPortal, and custom modals while keeping visual classes intact"
+    ]
+  },
+  "findings": [
+    {
+      "status": "RESOLVED",
+      "detail": "scripts/test_booking_modal_scroll.mjs line 48 previously hardcoded locator('h3') for AddRideModal title; updated to semantic role heading selector after changing modal titles from h3 to h2 per WCAG 2.1 SC 1.3.1."
+    },
+    {
+      "status": "VERIFIED",
+      "detail": "Compiled Tailwind CSS v3.4.19 (dist/assets/index-BYzXBDhF.css) emits .focus:outline-none, .backdrop-blur-sm, and .shadow-sm with 0 dead v4/animate-in rules, and matches live https://eigo-taxi-test.web.app/ via SHA-256."
+    },
+    {
+      "status": "VERIFIED",
+      "detail": "Live public demo Chromium audit verified Tab/Shift+Tab focus containment, body.style.overflow locking/restoration, disabled #ride-student skip fallback in parent mode, ArrowRight tab switching in TermsModal, Escape focus return to trigger, computed backdrop-blur(4px)/boxShadow/transparent outline, and 0 heading skips across all admin tabs, parent mobile view, and 4 modals."
+    }
+  ],
+  "visualReview": {
+    "inspectedViaReadFile": true,
+    "screenshots": {
+      "outputs/daily-20261122/screenshots/admin-dashboard-desktop.png": {
+        "sha256": "d1493d234d6e03de76f6e16cfbb5b62615769fc72fbf0e042d38434c459a5d5c",
+        "observation": "1280x900 admin dashboard: active Navbar button elevation (shadow-sm), summary cards, schedule cards, and footer legal nav render crisply with no wrapping overlap or clipping."
+      },
+      "outputs/daily-20261122/screenshots/admin-add-ride-modal-desktop.png": {
+        "sha256": "fcc6e999909b9cea9c182866e5621191033f75d74331326eed7637590f6f21d5",
+        "observation": "1280x900 AddRideModal: full-viewport backdrop-blur-sm dimming visibly softens background table; centered modal card is unclipped and #ride-student select shows clean emerald focus ring without double browser outline."
+      },
+      "outputs/daily-20261122/screenshots/terms-modal-desktop.png": {
+        "sha256": "fb31746d9780340c645ce7669389c37d5a5c59d3a4163bcb2e7e720cb022da5c",
+        "observation": "1280x900 TermsModal: frosted backdrop intact, ArrowRight focus advanced cleanly to privacy tab with indigo focus ring and legible Japanese legal sections; close button clear at bottom right."
+      },
+      "outputs/daily-20261122/screenshots/parent-portal-mobile.png": {
+        "sha256": "0c61caae3cb74d42c21e643c2fd8edb45838fda530e55fa6689b775d59dbeec2",
+        "observation": "375x667 mobile parent portal: vertical card stack fits 375px viewport cleanly with zero horizontal scrollbar, sharp typography, clear contrast on emerald ticket balance card and dark CTA."
+      }
+    }
+  },
+  "evidenceChecks": {
+    "outputs/daily-20261122/public-ui-ninetyfour.json": {
+      "sha256": "9dbcb165588d359801d601f2a644b2232c8343375c54dafc9e578f7f9c8c20f5",
+      "pass": true,
+      "sourceHashMatch": true
+    },
+    "docs/acceptance/deployment-verification/public-2026-11-22T12-24-24-963Z.json": {
+      "sha256": "b2e9521fbac8c9a552fa4b171841b967653cda992a37e7477f7d6faa761c04af",
+      "pass": true,
+      "urlsMatched": 7
+    },
+    "outputs/refresh-20261120/local/results.json": {
+      "sha256": "395ea0aba28f92d51c43a4d230b27873a9411e28fd9853fb178d769a39a7877a",
+      "pass": true,
+      "count": 14,
+      "sourceHashMatch": true
+    },
+    "outputs/refresh-20261120/reviewer/results.json": {
+      "sha256": "17e2166f392a8dcb3844261699b97315565f76787463e76d9b19ed437d94c714",
+      "pass": true,
+      "count": 8,
+      "sourceHashMatch": true
+    },
+    "outputs/refresh-20261120/modal-scroll/results.json": {
+      "sha256": "2bb87fd6d17e7dd21a20aca6cd7588638c9fc03d0cb61eee3366a66cdf17d13a",
+      "pass": true,
+      "count": 2,
+      "sourceHashMatch": true
+    },
+    "outputs/r19-adoption-20261111/regression/trace-ui/results.json": {
+      "sha256": "765aa28e16a51fbd663fbab4df21008b6ad495efef2cb574716cfe0b46d60604",
+      "pass": true,
+      "count": 6,
+      "sourceHashMatch": true
+    },
+    "outputs/refresh-20261120/offline/reservation-retry-ui.json": {
+      "sha256": "c1da22b9de03266374a8ee5bc19615ac6c3d3c27bbdcde0f71b9bcef725ceaad",
+      "pass": true,
+      "count": 1,
+      "sourceHashMatch": true
+    }
+  },
+  "conclusion": "No unresolved blocking defect in Round 10 (#92-#94) accessibility, CSS compilation, heading semantics, local fixtures, or live public demo verification",
+  "limits": [
+    "Customer acceptance CUST-01..06 remains 0/6 NOT_RUN",
+    "thirdPartyPassed: 0; release remains HOLD",
+    "No real Google OAuth login, live GAS/Spreadsheet/Calendar execution, or physical smartphone testing claimed; public audit exercised public demo mode only",
+    "Production rollout has not started"
+  ]
+}
