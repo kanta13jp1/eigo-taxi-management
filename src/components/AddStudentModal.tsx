@@ -137,7 +137,7 @@ const AddStudentModalContent: React.FC<AddStudentModalProps> = ({
                 id="student-name"
                 type="text"
                 maxLength={100}
-                autoComplete="name"
+                autoComplete="off"
                 disabled={isSubmitting}
                 value={name}
                 onChange={(e) => {
@@ -161,7 +161,7 @@ const AddStudentModalContent: React.FC<AddStudentModalProps> = ({
                 id="student-parent"
                 type="text"
                 maxLength={100}
-                autoComplete="name"
+                autoComplete="off"
                 disabled={isSubmitting}
                 value={parentName}
                 onChange={(e) => setParentName(e.target.value)}
@@ -181,7 +181,7 @@ const AddStudentModalContent: React.FC<AddStudentModalProps> = ({
                 id="student-phone"
                 type="tel"
                 maxLength={30}
-                autoComplete="tel"
+                autoComplete="off"
                 disabled={isSubmitting}
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
@@ -226,7 +226,7 @@ const AddStudentModalContent: React.FC<AddStudentModalProps> = ({
               id="student-address"
               type="text"
               maxLength={200}
-              autoComplete="street-address"
+              autoComplete="off"
               disabled={isSubmitting}
               value={address}
               onChange={(e) => {

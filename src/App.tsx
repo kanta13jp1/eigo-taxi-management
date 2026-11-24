@@ -345,7 +345,7 @@ export function App() {
       </main>
 
       {/* フッター */}
-      <footer className="mt-12 py-8 border-t border-slate-200/80 bg-white/60 backdrop-blur-sm text-center text-xs text-slate-500">
+      <footer className="mt-12 py-8 border-t border-slate-200/80 bg-white/60 backdrop-blur-sm text-center text-xs text-slate-600">
         <div className="max-w-5xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="font-medium text-slate-600">
             © 2026 Mauro & Brenda English School. All rights reserved.
@@ -354,7 +354,7 @@ export function App() {
             <button
               type="button"
               onClick={() => openTerms('terms')}
-              className="text-slate-500 hover:text-indigo-600 transition-colors underline-offset-4 hover:underline rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500"
+              className="text-slate-600 hover:text-indigo-600 transition-colors underline-offset-4 hover:underline rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500"
             >
               利用規約
             </button>
@@ -362,7 +362,7 @@ export function App() {
             <button
               type="button"
               onClick={() => openTerms('privacy')}
-              className="text-slate-500 hover:text-indigo-600 transition-colors underline-offset-4 hover:underline rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500"
+              className="text-slate-600 hover:text-indigo-600 transition-colors underline-offset-4 hover:underline rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500"
             >
               個人情報の取扱い
             </button>
@@ -370,7 +370,7 @@ export function App() {
             <button
               type="button"
               onClick={() => openTerms('disclaimer')}
-              className="text-slate-500 hover:text-indigo-600 transition-colors underline-offset-4 hover:underline rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500"
+              className="text-slate-600 hover:text-indigo-600 transition-colors underline-offset-4 hover:underline rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500"
             >
               免責事項
             </button>

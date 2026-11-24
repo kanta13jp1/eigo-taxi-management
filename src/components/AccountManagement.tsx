@@ -6,8 +6,10 @@ import { useModalDialog } from '../hooks/useModalDialog';
 
 const empty: ManagedUserInput = { name:'',email:'',role:'parent',active:true,studentIds:[] };
 export function AccountManagement({students}:{students:Student[]}) {
+  const session = ApiService.getSession();
+  const isDemo = session?.mode === 'demo';
   const [directory,setDirectory]=useState<ManagedUsers|null>(null);
-  const [loading,setLoading]=useState(true);
+  const [loading,setLoading]=useState(!isDemo);
   const [form,setForm]=useState<ManagedUserInput>({...empty});
   const [confirm,setConfirm]=useState<'save'|'delete'|null>(null);
   const [busy,setBusy]=useState(false);
@@ -21,18 +23,21 @@ export function AccountManagement({students}:{students:Student[]}) {
   const emailInputRef = useRef<HTMLInputElement>(null);
   const roleSelectRef = useRef<HTMLSelectElement>(null);
   const firstStudentCheckboxRef = useRef<HTMLInputElement>(null);
-  const self=ApiService.getSession()?.user.id;
+  const self=session?.user.id;
   const needsStudents=form.role==='parent'||form.role==='reviewer';
   const load=async()=>{const next=await ApiService.getManagedUsers();if(mountedRef.current)setDirectory(next);};
   useEffect(()=>{
     mountedRef.current=true;
+    if (isDemo) {
+      return () => { mountedRef.current = false; };
+    }
     let active=true;
     ApiService.getManagedUsers()
       .then(data=>{if(active&&mountedRef.current)setDirectory(data);})
       .catch(e=>{if(active&&mountedRef.current)setError(e instanceof Error?e.message:'取得できませんでした');})
       .finally(()=>{if(active&&mountedRef.current)setLoading(false);});
     return()=>{active=false;mountedRef.current=false;};
-  },[]);
+  },[isDemo]);
   useModalDialog({
     isOpen: confirm !== null,
     onClose: () => setConfirm(null),
@@ -56,6 +61,12 @@ export function AccountManagement({students}:{students:Student[]}) {
     <h2 className="text-xl font-bold">アカウント管理</h2>
     <p className="text-sm">Googleアカウントのメールアドレス、役割、対象の生徒を登録します。本人の初回Googleログインで本人確認が完了します。Googleアカウント自体の作成・削除は行いません。</p>
     <p className="text-sm text-slate-600">停止・削除は次の通信から反映します。退会前に予約の確認を行ってください。自分自身の停止・削除はできません。</p>
+    {isDemo ? (
+      <p role="status" className="rounded-lg border border-amber-200 bg-amber-50 p-3 text-sm text-amber-900">
+        デモモードではアカウント管理を利用できません。Googleログインした管理者アカウントでご利用ください。
+      </p>
+    ) : (
+      <>
     {error&&<p id="account-form-error" role="alert" className="rounded-lg bg-rose-50 p-3 text-rose-800">{error}</p>}
     {message&&<p role="status" className="rounded-lg bg-emerald-50 p-3">{message}</p>}
     <button type="button" disabled={busy||loading} aria-busy={loading} className="rounded border px-3 py-2 disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-500" onClick={async()=>{setError('');setMessage('');setLoading(true);try{await load();}catch(e){if(mountedRef.current)setError(e instanceof Error?e.message:'取得できませんでした');}finally{if(mountedRef.current)setLoading(false);}}}>{loading?'読込中…':'一覧を再取得'}</button>
@@ -103,14 +114,15 @@ export function AccountManagement({students}:{students:Student[]}) {
         }}
       >
         <h3 className="font-bold">{form.userId ? '利用登録を編集' : '新しく利用登録'}</h3>
-        <label className="block">
+        <label htmlFor="account-name" className="block">
           表示名
           <input
             ref={nameInputRef}
+            id="account-name"
             required
             maxLength={100}
             disabled={busy}
-            autoComplete="name"
+            autoComplete="off"
             aria-invalid={invalidFields.name ? 'true' : undefined}
             aria-describedby={invalidFields.name ? 'account-form-error' : undefined}
             value={form.name}
@@ -121,15 +133,16 @@ export function AccountManagement({students}:{students:Student[]}) {
             className={`mt-1 w-full rounded border p-2 disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 ${invalidFields.name ? 'border-rose-400 focus-visible:ring-rose-500' : 'focus-visible:ring-emerald-600'}`}
           />
         </label>
-        <label className="block">
+        <label htmlFor="account-email" className="block">
           Googleメールアドレス
           <input
             ref={emailInputRef}
+            id="account-email"
             required
             type="email"
             maxLength={254}
             disabled={busy}
-            autoComplete="email"
+            autoComplete="off"
             aria-invalid={invalidFields.email ? 'true' : undefined}
             aria-describedby={invalidFields.email ? 'account-email-help account-form-error' : 'account-email-help'}
             value={form.email}
@@ -206,6 +219,8 @@ export function AccountManagement({students}:{students:Student[]}) {
         </div>
       </form>
     </>}
+      </>
+    )}
       </section>
       {directory && confirm && (
         <div

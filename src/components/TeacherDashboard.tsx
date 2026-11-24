@@ -157,9 +157,26 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
     }
   };
 
+  const selectTab = (tab: 'today' | 'allRides' | 'students') => {
+    setCompletionError('');
+    setActiveTab(tab);
+  };
+
   return (
     <div className="space-y-6">
-      {completionError && <p role="alert" className="rounded-xl border border-rose-200 bg-rose-50 p-4 text-sm text-rose-800">{completionError}</p>}
+      {completionError && (
+        <div role="alert" className="flex items-start justify-between gap-3 rounded-xl border border-rose-200 bg-rose-50 p-4 text-sm text-rose-800">
+          <span>{completionError}</span>
+          <button
+            type="button"
+            aria-label="エラーを閉じる"
+            onClick={() => setCompletionError('')}
+            className="shrink-0 rounded-lg px-2 py-1 text-xs font-semibold text-rose-800 hover:bg-rose-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-500"
+          >
+            閉じる
+          </button>
+        </div>
+      )}
       {/* 管理者バナー */}
       <div className="bg-emerald-50/80 border border-emerald-200 rounded-2xl p-3.5 px-4 flex flex-col sm:flex-row sm:items-center justify-between gap-2 shadow-sm">
         <div className="flex items-center gap-2 text-emerald-900 font-bold text-sm">
@@ -175,7 +192,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
         <button
           type="button"
-          onClick={() => setActiveTab('today')}
+          onClick={() => selectTab('today')}
           className="bg-white p-4 rounded-2xl border border-slate-200/80 shadow-sm flex items-center justify-between cursor-pointer hover:border-emerald-300 transition-colors text-left w-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
         >
           <div>
@@ -196,7 +213,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
 
         <button
           type="button"
-          onClick={() => setActiveTab('students')}
+          onClick={() => selectTab('students')}
           className="bg-white p-4 rounded-2xl border border-slate-200/80 shadow-sm flex items-center justify-between cursor-pointer hover:border-amber-300 transition-colors text-left w-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500"
         >
           <div>
@@ -222,14 +239,14 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
 
         <button
           type="button"
-          onClick={() => setActiveTab('students')}
+          onClick={() => selectTab('students')}
           className="bg-white p-4 rounded-2xl border border-slate-200/80 shadow-sm flex items-center justify-between cursor-pointer hover:border-blue-300 transition-colors text-left w-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
         >
           <div>
             <p className="text-xs font-semibold text-slate-500">登録生徒数</p>
             <div className="flex items-baseline gap-2 mt-1">
               <span className="text-2xl font-black text-slate-800">
-                {students.length} <span className="text-sm font-normal text-slate-500">名</span>
+                {safeStudents.length} <span className="text-sm font-normal text-slate-500">名</span>
               </span>
             </div>
           </div>
@@ -245,7 +262,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
           <button
             type="button"
             aria-pressed={activeTab === 'today'}
-            onClick={() => setActiveTab('today')}
+            onClick={() => selectTab('today')}
             className={`px-3 py-1.5 rounded-lg transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600 ${
               activeTab === 'today' ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-600 hover:text-slate-900'
             }`}
@@ -255,22 +272,22 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
           <button
             type="button"
             aria-pressed={activeTab === 'allRides'}
-            onClick={() => setActiveTab('allRides')}
+            onClick={() => selectTab('allRides')}
             className={`px-3 py-1.5 rounded-lg transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600 ${
               activeTab === 'allRides' ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-600 hover:text-slate-900'
             }`}
           >
-            送迎スケジュール一覧 ({rides.length})
+            送迎スケジュール一覧 ({safeRides.length})
           </button>
           <button
             type="button"
             aria-pressed={activeTab === 'students'}
-            onClick={() => setActiveTab('students')}
+            onClick={() => selectTab('students')}
             className={`px-3 py-1.5 rounded-lg transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600 ${
               activeTab === 'students' ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-600 hover:text-slate-900'
             }`}
           >
-            生徒・チケット管理 ({students.length})
+            生徒・チケット管理 ({safeStudents.length})
           </button>
         </div>
 
@@ -302,7 +319,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
               <Calendar aria-hidden="true" className="w-4 h-4 text-emerald-600" />
               本日（{todayStr}）の送迎予定
             </h2>
-            <span className="text-xs text-slate-500">{isDemo ? 'デモの予定はこのブラウザ内にだけ保存されます' : 'Googleカレンダー・シートと自動同期'}</span>
+            <span className="text-xs text-slate-600">{isDemo ? 'デモの予定はこのブラウザ内にだけ保存されます' : 'Googleカレンダー・シートと自動同期'}</span>
           </div>
 
           {todayRides.length === 0 ? (
@@ -325,7 +342,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
               {todayRides.map((ride) => {
                 const typeInfo = getRideTypeLabel(ride.rideType);
-                const student = students.find((s) => s.id === ride.studentId);
+                const student = safeStudents.find((s) => s.id === ride.studentId);
                 const isScheduled = ride.status === 'scheduled';
                 const isCompleted = ride.status === 'completed';
 
@@ -532,7 +549,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
                                   disabled={pendingRideIds.has(ride.id) || cancelPending}
                                   aria-busy={cancelPending}
                                   aria-label={`${ride.studentName} ${ride.rideDate} ${ride.rideTime} ${typeInfo.text} の予約を取消`}
-                                  className="text-xs text-rose-600 hover:bg-rose-50 py-1 px-2 rounded-lg font-bold transition-colors disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-500"
+                                  className="text-xs text-rose-700 hover:bg-rose-50 py-1 px-2 rounded-lg font-bold transition-colors disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-500"
                                 >
                                   取消
                                 </button>

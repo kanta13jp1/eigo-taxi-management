@@ -82,7 +82,7 @@ function TermsModalContent({ onClose, initialTab }: { onClose: () => void; initi
           role="tablist"
           aria-label="規約タブ"
           onKeyDown={handleTabKeyDown}
-          className="flex border-b border-slate-100 px-6 pt-2 gap-4 text-sm font-medium overflow-x-auto"
+          className="flex flex-wrap gap-x-4 gap-y-1 border-b border-slate-100 px-4 pt-2 text-sm font-medium sm:px-6"
         >
           <button
             ref={initialTab === 'terms' ? initialTabRef : undefined}
@@ -141,14 +141,15 @@ function TermsModalContent({ onClose, initialTab }: { onClose: () => void; initi
         </div>
 
         {/* 本文エリア */}
-        <div
-          role="tabpanel"
-          id={`terms-panel-${activeTab}`}
-          aria-labelledby={`terms-tab-${activeTab}`}
-          tabIndex={0}
-          className="p-6 overflow-y-auto text-sm text-slate-600 leading-relaxed space-y-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500"
-        >
-          {activeTab === 'terms' && (
+        <div className="p-6 overflow-y-auto text-sm text-slate-600 leading-relaxed">
+          <div
+            role="tabpanel"
+            id="terms-panel-terms"
+            aria-labelledby="terms-tab-terms"
+            hidden={activeTab !== 'terms'}
+            tabIndex={activeTab === 'terms' ? 0 : -1}
+            className="space-y-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 rounded-lg"
+          >
             <div className="space-y-3">
               <h3 className="font-bold text-slate-800 text-base">送迎サービス利用規約</h3>
               <p>Mauro & Brenda 英語教室の送迎管理システム（以下、「本システム」）のご利用にあたり、以下の規約を定めます。</p>
@@ -165,9 +166,16 @@ function TermsModalContent({ onClose, initialTab }: { onClose: () => void; initi
                 <p className="text-xs sm:text-sm">指定の乗降場所にてお待ちいただきますようお願いいたします。交通安全上の理由により、安全に駐停車できる場所への変更をお願いする場合がございます。</p>
               </div>
             </div>
-          )}
+          </div>
 
-          {activeTab === 'privacy' && (
+          <div
+            role="tabpanel"
+            id="terms-panel-privacy"
+            aria-labelledby="terms-tab-privacy"
+            hidden={activeTab !== 'privacy'}
+            tabIndex={activeTab === 'privacy' ? 0 : -1}
+            className="space-y-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 rounded-lg"
+          >
             <div className="space-y-3">
               <h3 className="font-bold text-slate-800 text-base">プライバシーポリシー（個人情報の取扱い）</h3>
               <p>本教室は、生徒様および保護者様の個人情報を厳重に管理し、以下の通り適切に取り扱います。</p>
@@ -186,9 +194,16 @@ function TermsModalContent({ onClose, initialTab }: { onClose: () => void; initi
                 </div>
               </div>
             </div>
-          )}
+          </div>
 
-          {activeTab === 'disclaimer' && (
+          <div
+            role="tabpanel"
+            id="terms-panel-disclaimer"
+            aria-labelledby="terms-tab-disclaimer"
+            hidden={activeTab !== 'disclaimer'}
+            tabIndex={activeTab === 'disclaimer' ? 0 : -1}
+            className="space-y-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 rounded-lg"
+          >
             <div className="space-y-3">
               <h3 className="font-bold text-slate-800 text-base">免責事項</h3>
               <ul className="list-disc pl-5 space-y-2 text-xs sm:text-sm">
@@ -197,7 +212,7 @@ function TermsModalContent({ onClose, initialTab }: { onClose: () => void; initi
                 <li>本システムを利用したこと、または利用できなかったことにより生じるいかなる損害についても、教室の故意または重大な過失による場合を除き、一切の責任を負いかねます。</li>
               </ul>
             </div>
-          )}
+          </div>
         </div>
 
         {/* フッター */}
