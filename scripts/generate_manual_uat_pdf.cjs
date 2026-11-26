@@ -123,7 +123,7 @@ async function run() {
     <div class="step-card">
       <div class="step-title"><span class="step-badge">Step 5</span> 予約キャンセルとカレンダー予定自動削除の確認</div>
       <ol>
-        <li>Webアプリでいま登録した予約カードの <strong>「キャンセル」</strong> をクリックし、確認ダイアログで「OK」を押します。</li>
+        <li>Webアプリでいま登録した予約カードの <strong>「キャンセル」</strong> をクリックし、画面内の確認ダイアログで <strong>「取消を確定」</strong> を押します（「戻る」を押すと取り消されずに画面へ戻ります）。</li>
         <li>Googleカレンダーを開いて更新（F5）し、<strong>『🚗【送迎】山本 颯太』の予定が綺麗に自動削除されたこと</strong> を確認します。</li>
         <li>スプレッドシートのステータス列が <code>scheduled</code> から <strong><code>cancelled</code></strong> に自動変更されたことを確認します。</li>
       </ol>

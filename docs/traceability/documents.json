@@ -6868,7 +6868,7 @@
           "preview": "| D04 | アカウント変更確認 | 管理者 | A06内の確認dialog | 保存／削除→A06 |"
         },
         {
-          "id": "DOC-0015-ITEM-00027",
+          "id": "DOC-0015-ITEM-00077",
           "line": 33,
           "contentSha256": "ec91fbc01fcdd4ba48e435a4ce24414b38fd3cdc9323d40640ba4ceb6830e9c2",
           "occurrence": 1,
@@ -6903,7 +6903,7 @@
           "preview": "| E04 | 導入・保守設定 | 外部 | Firebase Console／GAS | 初期設定・緊急復旧 |"
         },
         {
-          "id": "DOC-0015-ITEM-00032",
+          "id": "DOC-0015-ITEM-00078",
           "line": 39,
           "contentSha256": "396517fbf3aa864425128586681b1f8262ea13cd506408ecd7b42284c1dff839",
           "occurrence": 1,
@@ -7099,7 +7099,7 @@
           "preview": "- A02〜04→D01/D02、A04→D03。成功・閉じるは呼出元へ。保存失敗はモーダル内にエラー。"
         },
         {
-          "id": "DOC-0015-ITEM-00060",
+          "id": "DOC-0015-ITEM-00079",
           "line": 74,
           "contentSha256": "41e779c37df4351ff00f25d23492d48a27efc09f3fa2d1444156bf882605f577",
           "occurrence": 1,
@@ -33058,7 +33058,7 @@
           "preview": "### CUST-03　予約を取り消して残数を確認"
         },
         {
-          "id": "DOC-0581-ITEM-00079",
+          "id": "DOC-0581-ITEM-00081",
           "line": 54,
           "contentSha256": "5ba9ab14b006020b4b96ab2770e1fc4496235ac5ac544f6f4afafd07da1a0491",
           "occurrence": 1,
@@ -74998,6 +74998,336 @@
           "contentSha256": "8c91612d9a1ca8673c92d6fb2066d779e47ab4d45c82a1c5cb1abeb1c0d19964",
           "occurrence": 1,
           "preview": "* **顧客確認・本番状況**: 小林様の顧客確認6手順（`CUST-01`〜`CUST-06`）は **0/6件（`NOT_RUN`、`thirdPartyPassed: 0`、`release: \"HOLD\"`）** のままであり、実Googleログイン・実GAS/Sprea"
+        }
+      ]
+    },
+    {
+      "id": "DOC-0670",
+      "path": "docs/progress/2026-11-27-kobayashi-chat-alignment-and-handoff.md",
+      "state": "historical",
+      "sha256": "be69aa0463a33d0848aa8f78cf5657104e152374539a17e545aefc00d7471ede",
+      "items": [
+        {
+          "id": "DOC-0670-ITEM-00001",
+          "line": 1,
+          "contentSha256": "59656e0fba033c5702d20faa22ff60f3e23949943ea11968ef9e4cb576a0fe64",
+          "occurrence": 1,
+          "preview": "# 小林さんチャット経緯（10/7〜11/27）棚卸し・共有表更新案・引き継ぎ対応記録"
+        },
+        {
+          "id": "DOC-0670-ITEM-00002",
+          "line": 3,
+          "contentSha256": "b986833dcddf564bd232cedf13f6ff07365f5a58fac5d1bb4647516e5a553ab9",
+          "occurrence": 1,
+          "preview": "本メモは、小林雅水さんとのチャット履歴（2026-10-07〜2026-11-20）および 2026-11-27 時点の検証サイト最新状態（PR #9 マージ後、`sourceDigest: 0b77363bfa65bdeff67322aec73ff3fc218aaccb37ee"
+        },
+        {
+          "id": "DOC-0670-ITEM-00003",
+          "line": 5,
+          "contentSha256": "5e6180ece941c4420227f2dc035486c1055f80abd364cd2737402b065d08891c",
+          "occurrence": 1,
+          "preview": "> **運用境界の維持**: 顧客受入 `CUST-01`〜`CUST-06` は `NOT_RUN` (`0/6`)、`thirdPartyPassed: 0`、`release: \"HOLD\"` を維持しており、本番運用開始は行っていない。"
+        },
+        {
+          "id": "DOC-0670-ITEM-00004",
+          "line": 7,
+          "contentSha256": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+          "occurrence": 1,
+          "preview": "---"
+        },
+        {
+          "id": "DOC-0670-ITEM-00005",
+          "line": 9,
+          "contentSha256": "73de2651b04b138eae7c38bba7c25b80bf530d3854d0d79271ddb781b3a2cddd",
+          "occurrence": 1,
+          "preview": "## 1. 合意済み仕様・スコープ外事項（10/7〜11/11 チャット確認済み）"
+        },
+        {
+          "id": "DOC-0670-ITEM-00006",
+          "line": 11,
+          "contentSha256": "5431ee98a6e46adaa493dbb6cec29c1234d8a131ad1c6c98210e59a72de389fc",
+          "occurrence": 1,
+          "preview": "| 項目 | 合意内容 | 確認日 |"
+        },
+        {
+          "id": "DOC-0670-ITEM-00007",
+          "line": 12,
+          "contentSha256": "23cca02b74f386463efa24796c7a9011b0d2c93f0c38b4d15d5d276205b59b43",
+          "occurrence": 1,
+          "preview": "|---|---|---|"
+        },
+        {
+          "id": "DOC-0670-ITEM-00008",
+          "line": 13,
+          "contentSha256": "26cc27ea74498574b351a93aad00cb81a74d270b1eb8011bac4ef6627cc742cd",
+          "occurrence": 1,
+          "preview": "| 利用役割の分離 | 管理者（Mauro・Brenda）2名と送迎利用者（保護者・家庭別専用URL／QR）の2画面分離 | 10/8, 10/22 |"
+        },
+        {
+          "id": "DOC-0670-ITEM-00009",
+          "line": 14,
+          "contentSha256": "37a99610cad0a9bea9092ad7aa265da55bb9f2d8d1653a434acbb33343ef1383",
+          "occurrence": 1,
+          "preview": "| チケット消費ルール | 完全予約制（フレックス都度予約）。予約登録時ではなく送迎「完了」時に片道1回・往復2回を消費 | 10/8, 11/9 |"
+        },
+        {
+          "id": "DOC-0670-ITEM-00010",
+          "line": 15,
+          "contentSha256": "5e893197359eb6cc62dc440ac8d7da63531f940a08022c81cd8d7c499c2a7654",
+          "occurrence": 1,
+          "preview": "| 残数低下アラート | 残数2回以下で保護者画面に「Mauro・Brenda に連絡してね！」等の案内を表示 | 10/8, 11/7 |"
+        },
+        {
+          "id": "DOC-0670-ITEM-00011",
+          "line": 16,
+          "contentSha256": "7b9738d4f9069528f12bb71a8f4387d71c3ad167ab68498847431b2a006d1597",
+          "occurrence": 1,
+          "preview": "| ログイン方式 | 接続先URL／長いアクセスキー入力を廃止し、事前登録済み Google アカウントでログイン（デモモード併設） | 10/22 |"
+        },
+        {
+          "id": "DOC-0670-ITEM-00012",
+          "line": 17,
+          "contentSha256": "84c997157fc658f870f22a25d1805dd4aa552f02c7d441a174efcb94c0cd6ac2",
+          "occurrence": 1,
+          "preview": "| 現段階で不要とした拡張 | ①定期スケジュール一括自動生成、②LINE 公式アカウント（Messaging API）通知、③PayPay/Stripe 決済 | 10/8 |"
+        },
+        {
+          "id": "DOC-0670-ITEM-00013",
+          "line": 18,
+          "contentSha256": "63e880b8de34ce47c60c08d62bc0e44cce00db67dde274a3f4d833fad9b543a9",
+          "occurrence": 1,
+          "preview": "| 顧客受入の進め方 | 30件一括ではなく顧客日常確認6件（`CUST-01`〜`CUST-06`）に絞ってマイティ側検証台帳・検証専用カレンダーで実施（11/11 事前打合せ済み） | 11/7, 11/11 |"
+        },
+        {
+          "id": "DOC-0670-ITEM-00014",
+          "line": 20,
+          "contentSha256": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+          "occurrence": 2,
+          "preview": "---"
+        },
+        {
+          "id": "DOC-0670-ITEM-00015",
+          "line": 22,
+          "contentSha256": "e30c8527be41ca88aad690aaf2893c3baf81f96f487053b82d6f984b9ac6a64f",
+          "occurrence": 1,
+          "preview": "## 2. 未決事項・先方確認待ち（10/24 依頼分〜11/27 現在）"
+        },
+        {
+          "id": "DOC-0670-ITEM-00016",
+          "line": 24,
+          "contentSha256": "13f4ad01541936afd065ebbfbdb31434dec8d199cd82592e7870eb803b68324f",
+          "occurrence": 1,
+          "preview": "1. **アカウント準備状況**"
+        },
+        {
+          "id": "DOC-0670-ITEM-00017",
+          "line": 25,
+          "contentSha256": "6f510157d7bf4feef29fa0bcd3d72cf78ef1b4afb23b6f19b7241e3489f44e92",
+          "occurrence": 1,
+          "preview": "- **先生の個人ログイン用メール**: `b***@excolovitajp.com`（詳細は既存記録 `2026-11-07-brenda-invitation.md` 参照）が Google アカウントとして使用中であることを 11/5 に確認済み（Mauro 先生分・変更"
+        },
+        {
+          "id": "DOC-0670-ITEM-00018",
+          "line": 26,
+          "contentSha256": "3a347e2e01f31b9dc61522f1f18441b29e1ffd8407ae12197ab664ad972e1d33",
+          "occurrence": 1,
+          "preview": "- **教室の運用用 Google アカウント（必須・未受領）**: 本番用の Google スプレッドシートと Google カレンダーを所有・管理する教室側アカウントが未定・未提供（`CUST-01`〜`06` 完了と並行して準備確認が必要）。"
+        },
+        {
+          "id": "DOC-0670-ITEM-00019",
+          "line": 27,
+          "contentSha256": "63e3104b7951600447cd0c77a85135d72baf19aad5c70ba26348cfae5109bd89",
+          "occurrence": 1,
+          "preview": "2. **運用ルール 5 点（10/24 共有スプレッドシート「残タスク・確認事項」にて回答依頼中・未記入）**"
+        },
+        {
+          "id": "DOC-0670-ITEM-00020",
+          "line": 28,
+          "contentSha256": "49d1129df19a1ba0ac25b51d14936b6156339dea5aceec4cb3fa9306a6da4961",
+          "occurrence": 1,
+          "preview": "- ① 第三者／顧客確認（`CUST-01`〜`06`）の先生側・小林さん側での実施見込み時期（11/20 返信：「英語の先生お忙しいようで少しテストまで時間かかりそう」）"
+        },
+        {
+          "id": "DOC-0670-ITEM-00021",
+          "line": 29,
+          "contentSha256": "8b27acd035560100c16edcb6b26547c05c5a1ca7d62d259f48eb34e04d13621a",
+          "occurrence": 1,
+          "preview": "- ② 教室側で管理する運用用 Google アカウントの準備状況"
+        },
+        {
+          "id": "DOC-0670-ITEM-00022",
+          "line": 30,
+          "contentSha256": "eef09b87c842fef08f17933df776ace2b21660a9474a59c702ca5128eb1e3357",
+          "occurrence": 1,
+          "preview": "- ③ 取消期限・当日変更・返金・往復の片道のみ実施した場合の精算ルール"
+        },
+        {
+          "id": "DOC-0670-ITEM-00023",
+          "line": 31,
+          "contentSha256": "617a6c39283cc58473638206a0c7c952da8fc841b7c814d1e44e4129f1e940fa",
+          "occurrence": 1,
+          "preview": "- ④ バックアップの担当者・頻度・保管先・復元時の承認者"
+        },
+        {
+          "id": "DOC-0670-ITEM-00024",
+          "line": 32,
+          "contentSha256": "2d6c4db1d83b46323abcc7578f0bcb0c055354e568d4062bdae76a39a43c3c5b",
+          "occurrence": 1,
+          "preview": "- ⑤ 本番公開後の確認項目（`AT-30`）とリリース判定の進め方"
+        },
+        {
+          "id": "DOC-0670-ITEM-00025",
+          "line": 33,
+          "contentSha256": "302a221544dfca901a47cc7c17661873aa776e1fa14b664e5399c269bf104593",
+          "occurrence": 1,
+          "preview": "3. **手順表記のズレ解消（今回是正済み）**"
+        },
+        {
+          "id": "DOC-0670-ITEM-00026",
+          "line": 34,
+          "contentSha256": "5b8f94e32e04be09b92bac6a5aa99613b4f4a595114428a1cc0771a33e23dcc3",
+          "occurrence": 1,
+          "preview": "- 11/7 送付メッセージ③では「確認画面の『OK』で確定」と案内していたが、現行 UI はブラウザ標準ダイアログではなく **画面内確認ダイアログ（「戻る」／「取消を確定」）** である。"
+        },
+        {
+          "id": "DOC-0670-ITEM-00047",
+          "line": 35,
+          "contentSha256": "a447812ef9a3ab550a7ad81f191680982c1564d9f1aa31d9998ae2851db0ffa4",
+          "occurrence": 1,
+          "preview": "- [CUSTOMER_ACCEPTANCE_MINIMUM_20261107.md](../acceptance/CUSTOMER_ACCEPTANCE_MINIMUM_20261107.md)（および生成元 `docs/traceability/registry.json`・"
+        },
+        {
+          "id": "DOC-0670-ITEM-00028",
+          "line": 37,
+          "contentSha256": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+          "occurrence": 3,
+          "preview": "---"
+        },
+        {
+          "id": "DOC-0670-ITEM-00029",
+          "line": 39,
+          "contentSha256": "df37425d4406c09475d2ed2e5350e8d3dad33e95bfc7e3c0d7ba3e465a77e4af",
+          "occurrence": 1,
+          "preview": "## 3. 共有スプレッドシート更新追記案（個人情報・秘密キー記載なし）"
+        },
+        {
+          "id": "DOC-0670-ITEM-00030",
+          "line": 41,
+          "contentSha256": "de86d3d98e373ee2ea9aa6cc18feb94b2e148724c131eab8252669ad8a95f81a",
+          "occurrence": 1,
+          "preview": "共有表（スプレッドシートID `1PqUq7BoBBVlPolivap0eg1UPik47vNNWphyBd0DNwvU`、本作業からは自動書込しない）への追記案："
+        },
+        {
+          "id": "DOC-0670-ITEM-00031",
+          "line": 43,
+          "contentSha256": "8d180922c4c8acd7d23c9c801e6528c18da135ccad26242fdedebca417e221b3",
+          "occurrence": 1,
+          "preview": "- **「進捗概要」シート追記案**:"
+        },
+        {
+          "id": "DOC-0670-ITEM-00032",
+          "line": 44,
+          "contentSha256": "81816f0a026103fc2a4c62bf47ee2c12a617db68df18eddfd61f1e65136077d6",
+          "occurrence": 1,
+          "preview": "- `2026-11-27`: テストサイト（`https://eigo-taxi-test.web.app/`）最新版へ反映（`sourceDigest: 0b77363bfa65bdeff67322aec73ff3fc218aaccb37ee6fb5ab85dbd7d20c0"
+        },
+        {
+          "id": "DOC-0670-ITEM-00033",
+          "line": 45,
+          "contentSha256": "54354e8e8bb517c462449cb36c2ab7153640931adf899c1e3b493995a3c8ac56",
+          "occurrence": 1,
+          "preview": "- **「顧客確認6件」シート（`CUST-03` 手順欄）補足案**:"
+        },
+        {
+          "id": "DOC-0670-ITEM-00034",
+          "line": 46,
+          "contentSha256": "b59b6846868099634bbb2eb57ad6a432f164cd0c0f7d6ef2e71be4d171248048",
+          "occurrence": 1,
+          "preview": "- 「キャンセル」押下後は画面内の確認ダイアログ（「戻る」／「取消を確定」）が表示されるため、「取消を確定」を押して確定するよう文言を補足。"
+        },
+        {
+          "id": "DOC-0670-ITEM-00035",
+          "line": 47,
+          "contentSha256": "49173ac4ae16b5821f08b709a0b8fc4e0ee949e5c5aa41ef8221b552c63056ba",
+          "occurrence": 1,
+          "preview": "- **「残タスク・確認事項」シート確認欄**:"
+        },
+        {
+          "id": "DOC-0670-ITEM-00036",
+          "line": 48,
+          "contentSha256": "d5c2f6cdbf7d4c040e95e675cffeae8fd1ec62f4706e55acc73a799ed23e2258",
+          "occurrence": 1,
+          "preview": "- 既存の5問（実施可能時期／教室運用用 Google アカウント／当日変更・片道精算ルール／バックアップ担当・承認者／本番リリース判定手順）を引き続きご記入待ちとして保持。"
+        },
+        {
+          "id": "DOC-0670-ITEM-00037",
+          "line": 50,
+          "contentSha256": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+          "occurrence": 4,
+          "preview": "---"
+        },
+        {
+          "id": "DOC-0670-ITEM-00038",
+          "line": 52,
+          "contentSha256": "7a64894c84818b91443cc349a15b0aef73e9253ff9dda60b021f20502b56a34b",
+          "occurrence": 1,
+          "preview": "## 4. 小林さん向け連絡文（下書き・未送信）"
+        },
+        {
+          "id": "DOC-0670-ITEM-00039",
+          "line": 54,
+          "contentSha256": "799552cac6fe444c7cdf717dc7db201d188e01b81abc8103ecc57ee7c35fe1e7",
+          "occurrence": 1,
+          "preview": "> ※ 外部送信ゲート厳守のためエージェントからは直接送信しません。ご確認のうえ適宜調整してご送信ください。"
+        },
+        {
+          "id": "DOC-0670-ITEM-00040",
+          "line": 56,
+          "contentSha256": "53dbca5694f774e807991e110d1321437b458551ae792c4e0fb6cb1c2129141b",
+          "occurrence": 1,
+          "preview": "```text\n@小林雅水\nお疲れ様です。\n英語の先生方もお忙しいところ、ありがとうございます。テストのお時間はお急ぎではありませんので、先生方のご都合が落ち着いたタイミングでご確認いただければ大丈夫です。\n\n一点だけ共有と手順の補足です。\n先日ご案内したテストサイト（https"
+        },
+        {
+          "id": "DOC-0670-ITEM-00041",
+          "line": 74,
+          "contentSha256": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+          "occurrence": 5,
+          "preview": "---"
+        },
+        {
+          "id": "DOC-0670-ITEM-00042",
+          "line": 76,
+          "contentSha256": "0e09b08c372698be4cbcdab8635992feb7ebfa88bb41062204de291cd315291d",
+          "occurrence": 1,
+          "preview": "## 5. 引き継ぎ残課題（`CLAUDE_CODE_TO_ANTIGRAVITY.md`）対応記録"
+        },
+        {
+          "id": "DOC-0670-ITEM-00043",
+          "line": 78,
+          "contentSha256": "c37f9d92739257fabbaf1323a765a987255232a4b9ada566120e0fbc0ef351e7",
+          "occurrence": 1,
+          "preview": "- **IR-02（「戻る」試験追加）**: `scripts/run_local_acceptance.mjs` の `LOCAL-UI-07` に、確認ダイアログで「戻る」をクリックしても対象予約が `scheduled` のままリロード後も保持される検証を追加。"
+        },
+        {
+          "id": "DOC-0670-ITEM-00044",
+          "line": 79,
+          "contentSha256": "519a2975e46e36a9af3e05a5412f409300dd191361e99e17fa3fb98ae18f9346",
+          "occurrence": 1,
+          "preview": "- **IR-03（他予約の非干渉確認）**: 同 `LOCAL-UI-07` で「取消を確定」後、対象以外の予約中（`scheduled`）データがすべて `scheduled` のままリロード前後とも残ることを検証追加。"
+        },
+        {
+          "id": "DOC-0670-ITEM-00045",
+          "line": 80,
+          "contentSha256": "4794c227a8efd9e674a343a3e618246bfd7c7d227d0e1a08b4017d01ff5adae0",
+          "occurrence": 1,
+          "preview": "- **IR-04（サイレント自動承諾ハンドラー廃止）**: `scripts/run_local_acceptance.mjs` と `tests/reviewer-ui/run.mjs` の `page.on('dialog', ... => accept())` を、`pa"
+        },
+        {
+          "id": "DOC-0670-ITEM-00048",
+          "line": 81,
+          "contentSha256": "1fc64bf9c1b8cf4e14d7056b20ad470de8b7f01fd678b57e55bc2ee49a3dd721",
+          "occurrence": 1,
+          "preview": "- **手順書・旧 E2E スクリプト整合**: `scripts/generate_manual_uat_pdf.cjs` の Step 5（画面内確認ダイアログ「取消を確定」／「戻る」）を整合した（PDF 再生成は既存原本保護のため未実施）。正本 `docs/traceabi"
         }
       ]
     },

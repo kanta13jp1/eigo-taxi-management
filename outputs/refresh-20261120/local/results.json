@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "mode": "LOCAL_MOCK_UI_REHEARSAL",
-  "runStartedAt": "2026-11-26T18:19:40.374Z",
-  "finishedAt": "2026-11-26T18:20:10.226Z",
+  "runStartedAt": "2026-11-26T19:06:16.840Z",
+  "finishedAt": "2026-11-26T19:06:50.541Z",
   "nodeVersion": "24.22.1",
   "browserVersion": "158.0.8127.88",
   "timezone": "Asia/Tokyo",
@@ -34,7 +34,7 @@
     "src/types/index.ts": "bf24cc2caa853a440a5abe9fad2d78645f5720491f48e00f2a0e49b5776abe20",
     "package.json": "5572415baa7778a349f5ee2047d83fb2173246a98c64143fcaa38e6356eb2302",
     "package-lock.json": "ad3a4848723b7b1dc3ce3c840ffdf44ae8c9ea8cb58fb793cf5b5d58f2f3b805",
-    "scripts/run_local_acceptance.mjs": "33bf5b1add2104eac2f7ac2298ee0a607e1f84cf994507cc213fa97fd5be9f89",
+    "scripts/run_local_acceptance.mjs": "4b42eaef7b2dbf36b39dcf2c04709664d656b1f2b4863c2db9d17b2c0dfa5b70",
     "scripts/local_acceptance_safety.mjs": "a7c512fdc80788c246aa1eb5a6dbca9ad7573859fc8dab0a1b0a2d099e370b34",
     "scripts/fixtures/local-acceptance/harness.tsx": "9ba68515c51b783d8ce17d81015993391e4bd3ec1ff85e9f881513117fb07cc2",
     "scripts/fixtures/local-acceptance/google-auth.ts": "cdf798e20c6329ea53de6e037ef41fdb26754a8412d67f2d45fb1d6747bca40a",
@@ -77,8 +77,8 @@
         "file": "LOCAL-UI-01.png",
         "sha256": "fa696b4250fde7ee7ffe51b67047593c63470361a9738a3525be9c01bcc2a74b"
       },
-      "startedAt": "2026-11-26T18:19:43.815Z",
-      "finishedAt": "2026-11-26T18:19:44.757Z"
+      "startedAt": "2026-11-26T19:06:21.805Z",
+      "finishedAt": "2026-11-26T19:06:22.802Z"
     },
     {
       "id": "LOCAL-UI-02",
@@ -92,8 +92,8 @@
         "file": "LOCAL-UI-02.png",
         "sha256": "990cd2e294fbf5d800cd3d7f30bbf187e5ae3ef65eff8f0121eeccb7ca89f7d3"
       },
-      "startedAt": "2026-11-26T18:19:44.757Z",
-      "finishedAt": "2026-11-26T18:19:46.312Z"
+      "startedAt": "2026-11-26T19:06:22.802Z",
+      "finishedAt": "2026-11-26T19:06:24.500Z"
     },
     {
       "id": "LOCAL-UI-03",
@@ -106,8 +106,8 @@
         "file": "LOCAL-UI-03.png",
         "sha256": "0a5de0f57dbffaae1de1a2af69aff6e0edb63a423d99ffe97fa898068ece2a2a"
       },
-      "startedAt": "2026-11-26T18:19:46.312Z",
-      "finishedAt": "2026-11-26T18:19:48.324Z"
+      "startedAt": "2026-11-26T19:06:24.500Z",
+      "finishedAt": "2026-11-26T19:06:26.801Z"
     },
     {
       "id": "LOCAL-UI-04",
@@ -120,8 +120,8 @@
         "file": "LOCAL-UI-04.png",
         "sha256": "a95b8cf003bb22e22433739ce415b6d35e23c7dc5bb3fccb915aa18c8b044d3b"
       },
-      "startedAt": "2026-11-26T18:19:48.324Z",
-      "finishedAt": "2026-11-26T18:19:50.256Z"
+      "startedAt": "2026-11-26T19:06:26.802Z",
+      "finishedAt": "2026-11-26T19:06:29.120Z"
     },
     {
       "id": "LOCAL-UI-05",
@@ -134,8 +134,8 @@
         "file": "LOCAL-UI-05.png",
         "sha256": "6f6c194ebff9c8bc13a45d6df7d58b60e1d4e090e89d57fe1139eb5525461090"
       },
-      "startedAt": "2026-11-26T18:19:50.256Z",
-      "finishedAt": "2026-11-26T18:19:52.218Z"
+      "startedAt": "2026-11-26T19:06:29.120Z",
+      "finishedAt": "2026-11-26T19:06:31.208Z"
     },
     {
       "id": "LOCAL-UI-06",
@@ -146,10 +146,10 @@
       "status": "PASS",
       "screenshot": {
         "file": "LOCAL-UI-06.png",
-        "sha256": "9cdb253f8d4b97a28b3362069f209fb4729e42c2634dc2d5c108413f5f463cf4"
+        "sha256": "a883f001d8ffee7ab4ea7f74cdbb22c7bd3270cbca3a6587132d05270e3b2f3e"
       },
-      "startedAt": "2026-11-26T18:19:52.219Z",
-      "finishedAt": "2026-11-26T18:19:53.517Z"
+      "startedAt": "2026-11-26T19:06:31.209Z",
+      "finishedAt": "2026-11-26T19:06:32.592Z"
     },
     {
       "id": "LOCAL-UI-07",
@@ -157,14 +157,14 @@
         "AT-10",
         "AT-22"
       ],
-      "name": "Parent cancels a newly booked reservation through its current UI; balance unchanged after reload",
+      "name": "Parent confirms or backs out of cancellation via in-page dialog without cancelling other rides; balance unchanged after reload",
       "status": "PASS",
       "screenshot": {
         "file": "LOCAL-UI-07.png",
         "sha256": "e863d67ceaf86c2483e821c70d51004d7d6482ee0ec0e3c85ec0de7a1ea7e25e"
       },
-      "startedAt": "2026-11-26T18:19:53.518Z",
-      "finishedAt": "2026-11-26T18:19:55.424Z"
+      "startedAt": "2026-11-26T19:06:32.592Z",
+      "finishedAt": "2026-11-26T19:06:35.286Z"
     },
     {
       "id": "LOCAL-UI-08",
@@ -176,10 +176,10 @@
       "status": "PASS",
       "screenshot": {
         "file": "LOCAL-UI-08.png",
-        "sha256": "45a2d851ea5bcee10c0c829befc9598d41a68d3a1e39e698b9a8de099a736e34"
+        "sha256": "a393fe8f61442669e244f02223fa2545d140a28d37c05d1e9e8b220906e1d653"
       },
-      "startedAt": "2026-11-26T18:19:55.424Z",
-      "finishedAt": "2026-11-26T18:19:57.281Z"
+      "startedAt": "2026-11-26T19:06:35.286Z",
+      "finishedAt": "2026-11-26T19:06:37.172Z"
     },
     {
       "id": "LOCAL-UI-09",
@@ -193,8 +193,8 @@
         "file": "LOCAL-UI-09.png",
         "sha256": "3dd3c43f361d60ec18ef9a104c358fde2210d6f48cbf4d98e5e5dd566acfdd71"
       },
-      "startedAt": "2026-11-26T18:19:57.281Z",
-      "finishedAt": "2026-11-26T18:19:59.197Z"
+      "startedAt": "2026-11-26T19:06:37.172Z",
+      "finishedAt": "2026-11-26T19:06:39.423Z"
     },
     {
       "id": "LOCAL-UI-10",
@@ -205,10 +205,10 @@
       "status": "PASS",
       "screenshot": {
         "file": "LOCAL-UI-10.png",
-        "sha256": "e1c4a2e38a3a356806e14e4be2803171a54d92e722d865995a08372fd981bb6f"
+        "sha256": "706100ad0495113832a63572b1300c2fea895ccc88d52405fde6e113cef463d2"
       },
-      "startedAt": "2026-11-26T18:19:59.197Z",
-      "finishedAt": "2026-11-26T18:20:00.145Z"
+      "startedAt": "2026-11-26T19:06:39.423Z",
+      "finishedAt": "2026-11-26T19:06:40.498Z"
     },
     {
       "id": "LOCAL-UI-11",
@@ -222,8 +222,8 @@
         "file": "LOCAL-UI-11.png",
         "sha256": "990cd2e294fbf5d800cd3d7f30bbf187e5ae3ef65eff8f0121eeccb7ca89f7d3"
       },
-      "startedAt": "2026-11-26T18:20:00.145Z",
-      "finishedAt": "2026-11-26T18:20:02.026Z"
+      "startedAt": "2026-11-26T19:06:40.498Z",
+      "finishedAt": "2026-11-26T19:06:42.637Z"
     },
     {
       "id": "LOCAL-UI-12",
@@ -237,8 +237,8 @@
         "file": "LOCAL-UI-12.png",
         "sha256": "fce4f89bbd86f86d4e2b9e7a6568372d765d9fc00e9ead2d52a09bfe6aeac42d"
       },
-      "startedAt": "2026-11-26T18:20:02.026Z",
-      "finishedAt": "2026-11-26T18:20:03.207Z"
+      "startedAt": "2026-11-26T19:06:42.638Z",
+      "finishedAt": "2026-11-26T19:06:44.230Z"
     },
     {
       "id": "LOCAL-UI-13",
@@ -252,8 +252,8 @@
         "file": "LOCAL-UI-13.png",
         "sha256": "fa696b4250fde7ee7ffe51b67047593c63470361a9738a3525be9c01bcc2a74b"
       },
-      "startedAt": "2026-11-26T18:20:03.207Z",
-      "finishedAt": "2026-11-26T18:20:04.790Z"
+      "startedAt": "2026-11-26T19:06:44.230Z",
+      "finishedAt": "2026-11-26T19:06:46.044Z"
     },
     {
       "id": "LOCAL-UI-14",
@@ -266,8 +266,8 @@
         "file": "LOCAL-UI-14.png",
         "sha256": "65d2bb4293d91adbe294f43f6fd73f1ff47fb0b8de9ca6441b1517485d93af20"
       },
-      "startedAt": "2026-11-26T18:20:04.790Z",
-      "finishedAt": "2026-11-26T18:20:08.665Z"
+      "startedAt": "2026-11-26T19:06:46.044Z",
+      "finishedAt": "2026-11-26T19:06:50.154Z"
     }
   ],
   "thirdPartyPassed": 0,
