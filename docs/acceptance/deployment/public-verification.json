@@ -1,68 +1,60 @@
 {
-  "checkedAt": "2026-11-22T19:49:53.563Z",
+  "checkedAt": "2026-11-26T18:22:35.858Z",
   "url": "https://eigo-taxi-test.web.app",
   "release": {
     "environment": "mighty-test",
     "projectId": "eigo-taxi-app",
     "siteId": "eigo-taxi-test",
-    "builtAt": "2026-11-22T19:48:23.276Z",
-    "baseCommit": "0cebbfea72ef38abcd4193efb31efe587676dd4d",
-    "sourceDigest": "dc37b162456d529641ab27cc0172d8c6717f7a40e36a04e5bb07c4eaf65cb7ea"
+    "builtAt": "2026-11-26T18:20:31.477Z",
+    "baseCommit": "2b320ec23f2058253a566b2e61391a54dcfa07b1",
+    "sourceDigest": "0b77363bfa65bdeff67322aec73ff3fc218aaccb37ee6fb5ab85dbd7d20c013b"
   },
   "results": [
     {
-      "path": "/assets/index-BnOQUAo3.css",
+      "path": "/assets/index-C1hp1v-I.css",
       "status": 200,
-      "sha256": "752750d177a577f48bd1c6a785a023f485a135d2e9457464399455d924f74870",
-      "expectedSha256": "752750d177a577f48bd1c6a785a023f485a135d2e9457464399455d924f74870",
+      "sha256": "855c80ce9ff3fa1d28c7ecb347c3bf236b439ad9e7d69406b545ca87c7c9d3d0",
+      "expectedSha256": "855c80ce9ff3fa1d28c7ecb347c3bf236b439ad9e7d69406b545ca87c7c9d3d0",
       "match": true,
       "cacheControl": "public, max-age=31536000, immutable"
     },
     {
-      "path": "/assets/index-DSqUuRtL.js",
+      "path": "/assets/index-oko0gJTF.js",
       "status": 200,
-      "sha256": "2b0d70f0a814fd8970a4099d31f422ebecc8aa572ef13989949e3e5a38e21eef",
-      "expectedSha256": "2b0d70f0a814fd8970a4099d31f422ebecc8aa572ef13989949e3e5a38e21eef",
+      "sha256": "ef2a2cf4260ecf039145e6a073d19057608b7a0f8255c3640197dd24a408db24",
+      "expectedSha256": "ef2a2cf4260ecf039145e6a073d19057608b7a0f8255c3640197dd24a408db24",
       "match": true,
       "cacheControl": "public, max-age=31536000, immutable"
     },
     {
       "path": "/favicon.svg",
       "status": 200,
-      "sha256": "61bc9a161de58248288e6905425d7180f0624c2865007b97d763fdac12043a66",
-      "expectedSha256": "61bc9a161de58248288e6905425d7180f0624c2865007b97d763fdac12043a66",
-      "match": true,
-      "cacheControl": "max-age=3600"
-    },
-    {
-      "path": "/icons.svg",
-      "status": 200,
-      "sha256": "b45fa506195cfcdef406ba9f0c77b36ddc1a7c224040926ec70abc2fdea7b93a",
-      "expectedSha256": "b45fa506195cfcdef406ba9f0c77b36ddc1a7c224040926ec70abc2fdea7b93a",
+      "sha256": "0d29ab267cc58d4f1a8255459ed101ef85c6de588af9781217c4babcb93fdf25",
+      "expectedSha256": "0d29ab267cc58d4f1a8255459ed101ef85c6de588af9781217c4babcb93fdf25",
       "match": true,
       "cacheControl": "max-age=3600"
     },
     {
       "path": "/index.html",
       "status": 200,
-      "sha256": "8bd7d451604318e1d3fdefa26ab325fc3ed166ab5dae5845f61fcae6031f5032",
-      "expectedSha256": "8bd7d451604318e1d3fdefa26ab325fc3ed166ab5dae5845f61fcae6031f5032",
+      "sha256": "f5ed04f15e2f59d2b917aafce9f14be3ffc497bccb5c363b780350387bf45676",
+      "expectedSha256": "f5ed04f15e2f59d2b917aafce9f14be3ffc497bccb5c363b780350387bf45676",
       "match": true,
       "cacheControl": "no-cache, max-age=0, must-revalidate"
     },
     {
       "path": "/release.json",
       "status": 200,
-      "sha256": "d0aa8d19b88f56809ebe0bd3c9d2475d3d798172b099032968608c0cdfc94627",
-      "expectedSha256": "d0aa8d19b88f56809ebe0bd3c9d2475d3d798172b099032968608c0cdfc94627",
+      "sha256": "8bf102530c11c79dddbeaf00157b195cfe4673fcf247ace2d6d85a487127d1a0",
+      "expectedSha256": "8bf102530c11c79dddbeaf00157b195cfe4673fcf247ace2d6d85a487127d1a0",
       "match": true,
       "cacheControl": "no-cache, max-age=0, must-revalidate"
     },
     {
       "path": "/",
       "status": 200,
-      "sha256": "8bd7d451604318e1d3fdefa26ab325fc3ed166ab5dae5845f61fcae6031f5032",
-      "expectedSha256": "8bd7d451604318e1d3fdefa26ab325fc3ed166ab5dae5845f61fcae6031f5032",
+      "sha256": "f5ed04f15e2f59d2b917aafce9f14be3ffc497bccb5c363b780350387bf45676",
+      "expectedSha256": "f5ed04f15e2f59d2b917aafce9f14be3ffc497bccb5c363b780350387bf45676",
       "match": true,
       "cacheControl": "no-cache, max-age=0, must-revalidate"
     }

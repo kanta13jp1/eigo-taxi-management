@@ -1,29 +1,29 @@
 {
   "schemaVersion": 1,
   "mode": "LOCAL_MOCK_UI_REHEARSAL",
-  "runStartedAt": "2026-11-22T19:47:51.433Z",
-  "finishedAt": "2026-11-22T19:48:17.955Z",
+  "runStartedAt": "2026-11-26T18:19:40.374Z",
+  "finishedAt": "2026-11-26T18:20:10.226Z",
   "nodeVersion": "24.22.1",
-  "browserVersion": "158.0.8127.36",
+  "browserVersion": "158.0.8127.88",
   "timezone": "Asia/Tokyo",
-  "testDate": "2026-11-23",
+  "testDate": "2026-11-27",
   "sourceHashes": {
     "src/App.css": "6e25a776d3e8102da5bacb3cb99f4a5fc662a2e01e6143140671a556d28c3d5c",
-    "src/App.tsx": "688ba5e6fe3c3dcee1248a70db2895846acf8292428e1b8a878850ed3c579c7c",
+    "src/App.tsx": "8be57b717e57b7c6136f2b19f4828ec64e69bd46ee8401964f5e4c3145560bca",
     "src/assets/hero.png": "881ffbcaafc212e49addad08846a5b82761355fa20624253af3477ba33262c5c",
     "src/assets/react.svg": "35ef61ed53b323ae94a16a8ec659b3d0af3880698791133f23b084085ab1c2e5",
     "src/assets/vite.svg": "5be21acd42eb7b896e517f4e0f0f11eb5c5d9e54fbbcebe9453f033008fcca6f",
-    "src/components/AccountManagement.tsx": "f2ded6a91bab10b75a2df4477de53d3e56524fd31a2ab81b8334c64594f0170f",
+    "src/components/AccountManagement.tsx": "d4ac0346d30a24fe170463ea1e3834a0d034d4a0b16fa6f06e2911e79ad856d7",
     "src/components/AddRideModal.tsx": "3fa6fc52eeaaacc048b20b0f738613bba01938ea6339d38001f8fd3624ea282b",
-    "src/components/AddStudentModal.tsx": "77ba545197604cff0d75612d5d6ca9734aa5ccd068795839e0500f94afdbea60",
+    "src/components/AddStudentModal.tsx": "641010fd2d5a4b5557a3e3090d2760180812e881c38e19ffee4a37013e2da5c2",
     "src/components/AddTicketModal.tsx": "7400ed263f9a68f2a39935886edb7c392348f09323121feabb36c66d6823a64c",
     "src/components/GoogleSettings.tsx": "813fb6e30da6d1f739cc7e72960547d1955fc729f71e99f722a855e50e7a7c6d",
     "src/components/LoginScreen.tsx": "e5bb1cba35936aa8ea9d382f7336819c86275dc7df303a58ea0eedb02002928b",
     "src/components/Navbar.tsx": "d9b5fcef4d332e45d0028b023caf1f09f08a7ec3603c8a00fd92c0e40f858ab5",
-    "src/components/ParentPortal.tsx": "7b83cc09fad89fa17515163652742e9e4ee894b0a6a70474cb4c8f9f7a13ceb8",
+    "src/components/ParentPortal.tsx": "ce436fc381f2bf5d523c115c77af9d7687ddcf791153145deaf9498c385d2589",
     "src/components/PortalInvitations.tsx": "d070747b00152acb81436ab851110bf07fc67b9a7e886296112f5376c8a1f278",
-    "src/components/TeacherDashboard.tsx": "a4d255bc1344cc5206b88077cc4159227c1fc3017fadd03d5bc2a0b8c6e07d36",
-    "src/components/TermsModal.tsx": "3033077b7bebd72370e91e5d016d03b734378de3bbfcefbbf13f663270f2ccef",
+    "src/components/TeacherDashboard.tsx": "c60d46066a6c0e5b77b04e56f5cf8f34b838be557033ade9a6f256f8f3a3772b",
+    "src/components/TermsModal.tsx": "4316cdf48c240993c1c95765f952d5aab622360fbf996c4e24235a545a24ead1",
     "src/deployment-config.ts": "5c30aad36376487fcf2fbb664f2574bdd430890191675ca9813b5fdea516b6f1",
     "src/hooks/useModalDialog.ts": "e42891b04ffaf2cb7d5ee143296d79f491b58618a41e3b479dc91bc6fb336da8",
     "src/index.css": "66baff8b6d7a116920270aba8584dd856cf5de345b59b511b849b96152ce91d8",
@@ -32,7 +32,7 @@
     "src/services/api.ts": "9de6da24a594b1bb37d12d1dc4b2910a8cfdadf9124ed4abf22ac8104cd35e28",
     "src/services/google-auth.ts": "01667af44fce383f3763c8bb73497dafc690381592ddcf383d46aaafe90fe0d8",
     "src/types/index.ts": "bf24cc2caa853a440a5abe9fad2d78645f5720491f48e00f2a0e49b5776abe20",
-    "package.json": "20528469ab1c1c2bd32f8f95b071a36ba9ea4eafcf62f2eccf683da755901375",
+    "package.json": "5572415baa7778a349f5ee2047d83fb2173246a98c64143fcaa38e6356eb2302",
     "package-lock.json": "ad3a4848723b7b1dc3ce3c840ffdf44ae8c9ea8cb58fb793cf5b5d58f2f3b805",
     "scripts/run_local_acceptance.mjs": "33bf5b1add2104eac2f7ac2298ee0a607e1f84cf994507cc213fa97fd5be9f89",
     "scripts/local_acceptance_safety.mjs": "a7c512fdc80788c246aa1eb5a6dbca9ad7573859fc8dab0a1b0a2d099e370b34",
@@ -41,9 +41,9 @@
     "scripts/fixtures/local-acceptance/index.html": "a0030c371776b189471b5e18df159b04706dba1659ab740055c2d1954b62eb0b"
   },
   "buildHashes": {
-    "assets/index-BnOQUAo3.css": "752750d177a577f48bd1c6a785a023f485a135d2e9457464399455d924f74870",
-    "assets/index-Du1clIxt.js": "a2c8b4172c017f1b10afee28d6dfe13c96ee005df1dcf0c1b2106326c4e2c933",
-    "index.html": "46c8ebdce9bead3861b68af39de6095f0365ff172894ab318966c75ee5d55a9e"
+    "assets/index-C1hp1v-I.css": "855c80ce9ff3fa1d28c7ecb347c3bf236b439ad9e7d69406b545ca87c7c9d3d0",
+    "assets/index-DYbWPjKz.js": "48402331dd371f4616a968aefebc750908b0bb67e54b112b98e2ac5a34a4995f",
+    "index.html": "a1763776c437f379b35f22f5ccbf8dceaba2de6e135698bee564c4b1a14f42d0"
   },
   "changedSources": [],
   "externalRequests": [],
@@ -77,8 +77,8 @@
         "file": "LOCAL-UI-01.png",
         "sha256": "fa696b4250fde7ee7ffe51b67047593c63470361a9738a3525be9c01bcc2a74b"
       },
-      "startedAt": "2026-11-22T19:47:54.059Z",
-      "finishedAt": "2026-11-22T19:47:54.821Z"
+      "startedAt": "2026-11-26T18:19:43.815Z",
+      "finishedAt": "2026-11-26T18:19:44.757Z"
     },
     {
       "id": "LOCAL-UI-02",
@@ -90,10 +90,10 @@
       "status": "PASS",
       "screenshot": {
         "file": "LOCAL-UI-02.png",
-        "sha256": "1ae0d4322cb22e714a865444b6552955b713c7239d6f452307b5a9c095740825"
+        "sha256": "990cd2e294fbf5d800cd3d7f30bbf187e5ae3ef65eff8f0121eeccb7ca89f7d3"
       },
-      "startedAt": "2026-11-22T19:47:54.821Z",
-      "finishedAt": "2026-11-22T19:47:56.123Z"
+      "startedAt": "2026-11-26T18:19:44.757Z",
+      "finishedAt": "2026-11-26T18:19:46.312Z"
     },
     {
       "id": "LOCAL-UI-03",
@@ -104,10 +104,10 @@
       "status": "PASS",
       "screenshot": {
         "file": "LOCAL-UI-03.png",
-        "sha256": "bac085e889619b408a1f12abbbb701cd780a87cc218d62a1f2329d74bb37c539"
+        "sha256": "0a5de0f57dbffaae1de1a2af69aff6e0edb63a423d99ffe97fa898068ece2a2a"
       },
-      "startedAt": "2026-11-22T19:47:56.123Z",
-      "finishedAt": "2026-11-22T19:47:57.990Z"
+      "startedAt": "2026-11-26T18:19:46.312Z",
+      "finishedAt": "2026-11-26T18:19:48.324Z"
     },
     {
       "id": "LOCAL-UI-04",
@@ -118,10 +118,10 @@
       "status": "PASS",
       "screenshot": {
         "file": "LOCAL-UI-04.png",
-        "sha256": "7bdad585ea6328c082fdfe45801048f9cc20dbb6cb77c28c8917689f8dd23b9c"
+        "sha256": "a95b8cf003bb22e22433739ce415b6d35e23c7dc5bb3fccb915aa18c8b044d3b"
       },
-      "startedAt": "2026-11-22T19:47:57.990Z",
-      "finishedAt": "2026-11-22T19:47:59.754Z"
+      "startedAt": "2026-11-26T18:19:48.324Z",
+      "finishedAt": "2026-11-26T18:19:50.256Z"
     },
     {
       "id": "LOCAL-UI-05",
@@ -132,10 +132,10 @@
       "status": "PASS",
       "screenshot": {
         "file": "LOCAL-UI-05.png",
-        "sha256": "c933ef3e5829859623040507b9dbb8132042170f215b05e41bcbb6f4ca2481de"
+        "sha256": "6f6c194ebff9c8bc13a45d6df7d58b60e1d4e090e89d57fe1139eb5525461090"
       },
-      "startedAt": "2026-11-22T19:47:59.754Z",
-      "finishedAt": "2026-11-22T19:48:01.473Z"
+      "startedAt": "2026-11-26T18:19:50.256Z",
+      "finishedAt": "2026-11-26T18:19:52.218Z"
     },
     {
       "id": "LOCAL-UI-06",
@@ -146,10 +146,10 @@
       "status": "PASS",
       "screenshot": {
         "file": "LOCAL-UI-06.png",
-        "sha256": "b6a23bd1916ee8ffb471a620dd0a9a9498870c0935909ec985eafb5f05fc7496"
+        "sha256": "9cdb253f8d4b97a28b3362069f209fb4729e42c2634dc2d5c108413f5f463cf4"
       },
-      "startedAt": "2026-11-22T19:48:01.473Z",
-      "finishedAt": "2026-11-22T19:48:02.739Z"
+      "startedAt": "2026-11-26T18:19:52.219Z",
+      "finishedAt": "2026-11-26T18:19:53.517Z"
     },
     {
       "id": "LOCAL-UI-07",
@@ -161,10 +161,10 @@
       "status": "PASS",
       "screenshot": {
         "file": "LOCAL-UI-07.png",
-        "sha256": "217c1db69188f247a4be01d0c78fdcc14153b5204d0568114312ae51c0d5bc61"
+        "sha256": "e863d67ceaf86c2483e821c70d51004d7d6482ee0ec0e3c85ec0de7a1ea7e25e"
       },
-      "startedAt": "2026-11-22T19:48:02.739Z",
-      "finishedAt": "2026-11-22T19:48:04.556Z"
+      "startedAt": "2026-11-26T18:19:53.518Z",
+      "finishedAt": "2026-11-26T18:19:55.424Z"
     },
     {
       "id": "LOCAL-UI-08",
@@ -176,10 +176,10 @@
       "status": "PASS",
       "screenshot": {
         "file": "LOCAL-UI-08.png",
-        "sha256": "65672bff10dc86784ecac5c5fe5eb708468fed283483f65ffe0bd286b9972b73"
+        "sha256": "45a2d851ea5bcee10c0c829befc9598d41a68d3a1e39e698b9a8de099a736e34"
       },
-      "startedAt": "2026-11-22T19:48:04.556Z",
-      "finishedAt": "2026-11-22T19:48:06.336Z"
+      "startedAt": "2026-11-26T18:19:55.424Z",
+      "finishedAt": "2026-11-26T18:19:57.281Z"
     },
     {
       "id": "LOCAL-UI-09",
@@ -191,10 +191,10 @@
       "status": "PASS",
       "screenshot": {
         "file": "LOCAL-UI-09.png",
-        "sha256": "bba88d7f1b09aadec7eaf19249a420558ac44de89efa929ff7f9af76c1a10c63"
+        "sha256": "3dd3c43f361d60ec18ef9a104c358fde2210d6f48cbf4d98e5e5dd566acfdd71"
       },
-      "startedAt": "2026-11-22T19:48:06.336Z",
-      "finishedAt": "2026-11-22T19:48:08.175Z"
+      "startedAt": "2026-11-26T18:19:57.281Z",
+      "finishedAt": "2026-11-26T18:19:59.197Z"
     },
     {
       "id": "LOCAL-UI-10",
@@ -205,10 +205,10 @@
       "status": "PASS",
       "screenshot": {
         "file": "LOCAL-UI-10.png",
-        "sha256": "529bfcb9822e1a5aa6d6fcd9d65b3f871037e2ea6b12924936e33001ee04252b"
+        "sha256": "e1c4a2e38a3a356806e14e4be2803171a54d92e722d865995a08372fd981bb6f"
       },
-      "startedAt": "2026-11-22T19:48:08.175Z",
-      "finishedAt": "2026-11-22T19:48:09.146Z"
+      "startedAt": "2026-11-26T18:19:59.197Z",
+      "finishedAt": "2026-11-26T18:20:00.145Z"
     },
     {
       "id": "LOCAL-UI-11",
@@ -220,10 +220,10 @@
       "status": "PASS",
       "screenshot": {
         "file": "LOCAL-UI-11.png",
-        "sha256": "1ae0d4322cb22e714a865444b6552955b713c7239d6f452307b5a9c095740825"
+        "sha256": "990cd2e294fbf5d800cd3d7f30bbf187e5ae3ef65eff8f0121eeccb7ca89f7d3"
       },
-      "startedAt": "2026-11-22T19:48:09.146Z",
-      "finishedAt": "2026-11-22T19:48:11.107Z"
+      "startedAt": "2026-11-26T18:20:00.145Z",
+      "finishedAt": "2026-11-26T18:20:02.026Z"
     },
     {
       "id": "LOCAL-UI-12",
@@ -235,10 +235,10 @@
       "status": "PASS",
       "screenshot": {
         "file": "LOCAL-UI-12.png",
-        "sha256": "434d1945ddf690736d7766894f22a96e7aeaade06f03808acf393ffcfebeb7c7"
+        "sha256": "fce4f89bbd86f86d4e2b9e7a6568372d765d9fc00e9ead2d52a09bfe6aeac42d"
       },
-      "startedAt": "2026-11-22T19:48:11.107Z",
-      "finishedAt": "2026-11-22T19:48:12.312Z"
+      "startedAt": "2026-11-26T18:20:02.026Z",
+      "finishedAt": "2026-11-26T18:20:03.207Z"
     },
     {
       "id": "LOCAL-UI-13",
@@ -252,8 +252,8 @@
         "file": "LOCAL-UI-13.png",
         "sha256": "fa696b4250fde7ee7ffe51b67047593c63470361a9738a3525be9c01bcc2a74b"
       },
-      "startedAt": "2026-11-22T19:48:12.312Z",
-      "finishedAt": "2026-11-22T19:48:13.876Z"
+      "startedAt": "2026-11-26T18:20:03.207Z",
+      "finishedAt": "2026-11-26T18:20:04.790Z"
     },
     {
       "id": "LOCAL-UI-14",
@@ -264,10 +264,10 @@
       "status": "PASS",
       "screenshot": {
         "file": "LOCAL-UI-14.png",
-        "sha256": "6203c2480f6c7025b36277a8cf592640c4dd333b9aa3e039facf3a891c0dc56d"
+        "sha256": "65d2bb4293d91adbe294f43f6fd73f1ff47fb0b8de9ca6441b1517485d93af20"
       },
-      "startedAt": "2026-11-22T19:48:13.876Z",
-      "finishedAt": "2026-11-22T19:48:17.729Z"
+      "startedAt": "2026-11-26T18:20:04.790Z",
+      "finishedAt": "2026-11-26T18:20:08.665Z"
     }
   ],
   "thirdPartyPassed": 0,

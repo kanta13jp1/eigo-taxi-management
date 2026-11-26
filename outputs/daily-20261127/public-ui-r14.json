@@ -1,0 +1,198 @@
+{
+  "checkedAt": "2026-11-26T18:22:46.826Z",
+  "liveUrl": "https://eigo-taxi-test.web.app",
+  "release": {
+    "environment": "mighty-test",
+    "projectId": "eigo-taxi-app",
+    "siteId": "eigo-taxi-test",
+    "builtAt": "2026-11-26T18:20:31.477Z",
+    "baseCommit": "2b320ec23f2058253a566b2e61391a54dcfa07b1",
+    "sourceDigest": "0b77363bfa65bdeff67322aec73ff3fc218aaccb37ee6fb5ab85dbd7d20c013b"
+  },
+  "sourceHashes": {
+    "index.html": "bd2f9b6896e72e1314851896665987bbc28cdd39f75c69fde75519dad10df1fb",
+    "public/favicon.svg": "0d29ab267cc58d4f1a8255459ed101ef85c6de588af9781217c4babcb93fdf25",
+    "src/App.tsx": "8be57b717e57b7c6136f2b19f4828ec64e69bd46ee8401964f5e4c3145560bca",
+    "src/components/AccountManagement.tsx": "d4ac0346d30a24fe170463ea1e3834a0d034d4a0b16fa6f06e2911e79ad856d7",
+    "src/components/AddStudentModal.tsx": "641010fd2d5a4b5557a3e3090d2760180812e881c38e19ffee4a37013e2da5c2",
+    "src/components/ParentPortal.tsx": "ce436fc381f2bf5d523c115c77af9d7687ddcf791153145deaf9498c385d2589",
+    "src/components/TeacherDashboard.tsx": "c60d46066a6c0e5b77b04e56f5cf8f34b838be557033ade9a6f256f8f3a3772b",
+    "src/components/TermsModal.tsx": "4316cdf48c240993c1c95765f952d5aab622360fbf996c4e24235a545a24ead1"
+  },
+  "httpChecks": {
+    "homeStatus": 200,
+    "homeHeaders": {
+      "x-content-type-options": "nosniff",
+      "referrer-policy": "no-referrer",
+      "x-frame-options": "DENY",
+      "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=(), usb=()",
+      "cross-origin-opener-policy": "same-origin-allow-popups"
+    },
+    "faviconStatus": 200,
+    "faviconContentType": "image/svg+xml",
+    "faviconUses047857": true,
+    "faviconNo863bff": true,
+    "iconsSvgContentType": "text/html; charset=utf-8",
+    "iconsSvgInManifest": false
+  },
+  "metaCheck": {
+    "description": "Mauro & Brenda 英語教室の送迎予約・回数券チケット残数管理システム（Eigo Taxi Link）",
+    "themeColor": "#047857"
+  },
+  "focusOutlineStyle": {
+    "outlineStyle": "solid",
+    "outlineColor": "rgba(0, 0, 0, 0)"
+  },
+  "termsModal320px": {
+    "overflowHidden": true,
+    "initialFocusDisabled": false,
+    "clientWidth": 288,
+    "scrollWidth": 288,
+    "tabs": [
+      {
+        "text": "利用規約",
+        "visible": true
+      },
+      {
+        "text": "個人情報の取扱い",
+        "visible": true
+      },
+      {
+        "text": "免責事項",
+        "visible": true
+      }
+    ],
+    "panels": [
+      true,
+      true,
+      true
+    ]
+  },
+  "addStudentAutoComplete": [
+    "off",
+    "off",
+    "off",
+    "off"
+  ],
+  "reviewerAccountLabels": {
+    "nameLabelFor": "account-name",
+    "emailLabelFor": "account-email",
+    "nameAuto": "off",
+    "emailAuto": "off"
+  },
+  "domAudits": [
+    {
+      "label": "live-terms-modal-320px",
+      "scrollWidth": 320,
+      "innerWidth": 320,
+      "overflowX": false,
+      "deadClasses": [],
+      "headingCount": 6,
+      "headingSkips": [],
+      "danglingIdrefs": [],
+      "checkedSamples": 62,
+      "minRatio": 4.76,
+      "contrastFailures": []
+    },
+    {
+      "label": "live-account-demo-1280px",
+      "scrollWidth": 1280,
+      "innerWidth": 1280,
+      "overflowX": false,
+      "deadClasses": [],
+      "headingCount": 2,
+      "headingSkips": [],
+      "danglingIdrefs": [],
+      "checkedSamples": 16,
+      "minRatio": 4.76,
+      "contrastFailures": []
+    },
+    {
+      "label": "live-admin-students-1280px",
+      "scrollWidth": 1280,
+      "innerWidth": 1280,
+      "overflowX": false,
+      "deadClasses": [],
+      "headingCount": 5,
+      "headingSkips": [],
+      "danglingIdrefs": [],
+      "checkedSamples": 60,
+      "minRatio": 4.51,
+      "contrastFailures": []
+    },
+    {
+      "label": "live-admin-today-error-1280px",
+      "scrollWidth": 1280,
+      "innerWidth": 1280,
+      "overflowX": false,
+      "deadClasses": [],
+      "headingCount": 5,
+      "headingSkips": [],
+      "danglingIdrefs": [],
+      "checkedSamples": 60,
+      "minRatio": 4.76,
+      "contrastFailures": []
+    },
+    {
+      "label": "live-admin-allRides-1280px",
+      "scrollWidth": 1280,
+      "innerWidth": 1280,
+      "overflowX": false,
+      "deadClasses": [],
+      "headingCount": 2,
+      "headingSkips": [],
+      "danglingIdrefs": [],
+      "checkedSamples": 69,
+      "minRatio": 4.76,
+      "contrastFailures": []
+    },
+    {
+      "label": "live-parent-normal-375px",
+      "scrollWidth": 375,
+      "innerWidth": 375,
+      "overflowX": false,
+      "deadClasses": [],
+      "headingCount": 4,
+      "headingSkips": [],
+      "danglingIdrefs": [],
+      "checkedSamples": 34,
+      "minRatio": 4.76,
+      "contrastFailures": []
+    },
+    {
+      "label": "live-parent-low-ticket-375px",
+      "scrollWidth": 375,
+      "innerWidth": 375,
+      "overflowX": false,
+      "deadClasses": [],
+      "headingCount": 4,
+      "headingSkips": [],
+      "danglingIdrefs": [],
+      "checkedSamples": 36,
+      "minRatio": 4.76,
+      "contrastFailures": []
+    },
+    {
+      "label": "local-reviewer-account-1280px",
+      "scrollWidth": 1280,
+      "innerWidth": 1280,
+      "overflowX": false,
+      "deadClasses": [],
+      "headingCount": 3,
+      "headingSkips": [],
+      "danglingIdrefs": [],
+      "checkedSamples": 32,
+      "minRatio": 4.76,
+      "contrastFailures": []
+    }
+  ],
+  "screenshots": {
+    "outputs/daily-20261127/screenshots-r14/terms-320px-live.png": "349cc42edd358d1c38a74159aaca94d71bf9f289e4fa4bfe2d372779273c5a3c",
+    "outputs/daily-20261127/screenshots-r14/account-demo-desktop-live.png": "10866fb058ce47001b46bc4974c325861f623831a97b3e4afc78387370dc1614",
+    "outputs/daily-20261127/screenshots-r14/admin-error-dismiss-desktop-live.png": "f1c44f68c49daaffb10a67e19793b5a0566a2af060e5805deb2271a454452789",
+    "outputs/daily-20261127/screenshots-r14/parent-hero-mobile-live.png": "b4fb4780423c9912f14b8f19c96f6fdd9b6e4d86f8439a4b6ad3f5ae21109f63",
+    "outputs/daily-20261127/screenshots-r14/parent-low-ticket-mobile-live.png": "c8b00b544178c7cb5766f6a0ba63cf5ab2391c8824cb4848fa4eb3737d45d27f",
+    "outputs/daily-20261127/screenshots-r14/account-fulladmin-local.png": "4618aa204a5e32175d86bf85557ad89fb6da0ac3aba81e9ebf6e42be4c7a98a5"
+  },
+  "pass": true
+}

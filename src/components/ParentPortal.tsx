@@ -124,7 +124,7 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({
       {student && (
         <>
           {/* チケット残数カード */}
-          <div className="bg-gradient-to-br from-emerald-600 to-teal-700 text-white rounded-3xl p-6 shadow-md relative overflow-hidden">
+          <div className="bg-gradient-to-br from-emerald-700 to-teal-800 text-white rounded-3xl p-6 shadow-md relative overflow-hidden">
             <div className="absolute right-[-10px] bottom-[-20px] opacity-10">
               <Ticket aria-hidden="true" className="w-48 h-48" />
             </div>
@@ -132,18 +132,18 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({
             <div className="relative z-10">
               <div className="flex items-center justify-between">
                 <div>
-                  <span className="text-xs font-medium text-emerald-100 bg-emerald-500/30 px-2.5 py-1 rounded-full">
+                  <span className="text-xs font-semibold text-white bg-emerald-950/35 px-2.5 py-1 rounded-full">
                     送迎チケット残高
                   </span>
                   <h2 className="text-lg font-bold mt-1.5">{student.name} さん</h2>
                 </div>
                 <div className="text-right">
                   <span className="text-4xl font-black tracking-tight">{student.ticketBalance}</span>
-                  <span className="text-base font-bold ml-1 text-emerald-100">回分</span>
+                  <span className="text-base font-bold ml-1 text-emerald-50">回分</span>
                 </div>
               </div>
 
-              <p className="mt-4 text-xs leading-relaxed text-emerald-100/90 flex items-start gap-1.5">
+              <p className="mt-4 text-xs leading-relaxed text-emerald-50 flex items-start gap-1.5">
                 <Sparkles aria-hidden="true" className="w-4 h-4 text-amber-300 shrink-0 mt-0.5" />
                 <span>
                   <span className="block font-semibold">予約しただけでは残数は減りません。</span>
@@ -153,10 +153,10 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({
               </p>
 
               {student.ticketBalance <= 2 && (
-                <div role="status" className="mt-4 bg-amber-500/25 border border-amber-300/50 rounded-xl p-3 flex items-start gap-2.5 text-xs text-amber-100">
+                <div role="status" className="mt-4 bg-amber-950/45 border border-amber-300/60 rounded-xl p-3 flex items-start gap-2.5 text-xs text-amber-50">
                   <AlertCircle aria-hidden="true" className="w-5 h-5 text-amber-300 shrink-0 mt-0.5" />
                   <div>
-                    <span className="font-bold text-amber-200 block text-sm">
+                    <span className="font-bold text-amber-100 block text-sm">
                       ⚠️ チケットが無くなりそうです（残り{student.ticketBalance}回）
                     </span>
                     <span>Mauro・Brenda に連絡してね！ 次回のチケットをご用意します。</span>
