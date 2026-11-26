@@ -1,0 +1,143 @@
+{
+  "date": "2026-11-27",
+  "round": "Round 14 (PR #9 / Issues #5-#8)",
+  "reviewer": "Independent Read-Only AI Auditor deep-reviewer (conversationId 8eef3345-302f-43d6-8d9e-ef09ac5b8b46) & Coordinator live browser/visual verification",
+  "scope": [
+    "index.html",
+    "public/favicon.svg",
+    "public/icons.svg (deleted)",
+    "src/App.tsx",
+    "src/components/AccountManagement.tsx",
+    "src/components/AddStudentModal.tsx",
+    "src/components/ParentPortal.tsx",
+    "src/components/TeacherDashboard.tsx",
+    "src/components/TermsModal.tsx"
+  ],
+  "reviewedCommit": "2b320ec23f2058253a566b2e61391a54dcfa07b1",
+  "sourceHashes": {
+    "index.html": "bd2f9b6896e72e1314851896665987bbc28cdd39f75c69fde75519dad10df1fb",
+    "public/favicon.svg": "0d29ab267cc58d4f1a8255459ed101ef85c6de588af9781217c4babcb93fdf25",
+    "src/App.tsx": "8be57b717e57b7c6136f2b19f4828ec64e69bd46ee8401964f5e4c3145560bca",
+    "src/components/AccountManagement.tsx": "d4ac0346d30a24fe170463ea1e3834a0d034d4a0b16fa6f06e2911e79ad856d7",
+    "src/components/AddStudentModal.tsx": "641010fd2d5a4b5557a3e3090d2760180812e881c38e19ffee4a37013e2da5c2",
+    "src/components/ParentPortal.tsx": "ce436fc381f2bf5d523c115c77af9d7687ddcf791153145deaf9498c385d2589",
+    "src/components/TeacherDashboard.tsx": "c60d46066a6c0e5b77b04e56f5cf8f34b838be557033ade9a6f256f8f3a3772b",
+    "src/components/TermsModal.tsx": "4316cdf48c240993c1c95765f952d5aab622360fbf996c4e24235a545a24ead1"
+  },
+  "independentAiReview": {
+    "agentType": "deep-reviewer",
+    "conversationId": "8eef3345-302f-43d6-8d9e-ef09ac5b8b46",
+    "verdict": "NON-BLOCKING / PASS",
+    "criteriaVerified": [
+      "Issue #5 WCAG 2.1 AA contrast & TeacherDashboard robustness: ParentPortal hero gradient deepened to from-emerald-700 to-teal-800 with text-white/emerald-50 and amber-950/45 low-ticket notice; App.tsx footer and TeacherDashboard sync note updated to text-slate-600; TeacherDashboard cancel action updated to text-rose-700; completionError alert includes dismiss button ('エラーを閉じる', aria-label='エラーを閉じる') and clears via selectTab across tabs/cards; remaining raw students/rides references normalized via safeStudents/safeRides.",
+      "Issue #6 TermsModal 320px wrap & ARIA tabs: role='tablist' uses flex-wrap gap-x-4 gap-y-1 with clientWidth === scrollWidth === 288px at 320px width; all 3 role='tabpanel' panels remain mounted using hidden/tabIndex toggling, eliminating dangling aria-controls IDREFs and preserving Escape/Tab focus trap.",
+      "Issue #7 AccountManagement demo guard & autoComplete hygiene: AccountManagement detects session.mode === 'demo', initializes loading to false, skips getManagedUsers(), renders calm role='status' banner without '一覧を再取得', preserves App/ApiService/GAS fail-closed guards, binds htmlFor/id on #account-name and #account-email, and sets autoComplete='off' on third-party AccountManagement and AddStudentModal inputs.",
+      "Issue #8 Branding & dead asset removal: public/favicon.svg replaced with #047857 shuttle SVG, unused public/icons.svg deleted (absent from build-manifest.json distHashes), index.html adds description and theme-color=#047857 meta tags.",
+      "Tailwind v3.4.19 & App.tsx hook constraints: dist/assets/index-C1hp1v-I.css emits all newly used utility classes; 0 dead Tailwind v4/animate-in classes; App.tsx continues using only useState/useEffect/useCallback.",
+      "LF-normalized deployment & evidence SHA-256 consistency: sourceHashes and release metadata (builtAt 2026-11-26T18:20:31.477Z, baseCommit 2b320ec23f2058253a566b2e61391a54dcfa07b1, sourceDigest 0b77363bfa65bdeff67322aec73ff3fc218aaccb37ee6fb5ab85dbd7d20c013b) match across build-manifest.json, public-verification.json, and public-ui-r14.json."
+    ]
+  },
+  "findings": [
+    {
+      "status": "VERIFIED",
+      "detail": "Live deployment https://eigo-taxi-test.web.app/ verified SHA-256 match across all 6 hosted paths (/assets/index-C1hp1v-I.css, /assets/index-oko0gJTF.js, /favicon.svg, /index.html, /release.json, /) with HTTP 200 and OWASP security headers intact; dist/icons.svg is absent from build-manifest.json and /icons.svg falls back to SPA index.html rather than Vite's starter SVG."
+    },
+    {
+      "status": "VERIFIED",
+      "detail": "Live 320x667 mobile TermsModal verified zero horizontal tab clipping (scrollWidth=288 <= clientWidth=288), all 3 tabs visible, all 3 role='tabpanel' elements present with 0 dangling aria-controls, Tab/Shift+Tab focus containment inside [role='dialog'], body.style.overflow='hidden' toggle, and Escape focus restore to triggering button."
+    },
+    {
+      "status": "VERIFIED",
+      "detail": "Live 1280x900 admin demo & 375x667 parent mobile demo + local full-admin reviewer fixture verified 0 WCAG 2.1 AA contrast failures across 8 DOM audits (minRatio 4.51:1 to 4.76:1), 0 dead Tailwind classes, 0 heading skips, 0 horizontal overflow, dismissible & tab-cleared TeacherDashboard completionError, calm role='status' AccountManagement notice in demo mode, and autoComplete='off' + explicit labels on third-party forms."
+    }
+  ],
+  "visualReview": {
+    "inspectedViaReadFile": true,
+    "screenshots": {
+      "outputs/daily-20261127/screenshots-r14/terms-320px-live.png": {
+        "sha256": "349cc42edd358d1c38a74159aaca94d71bf9f289e4fa4bfe2d372779273c5a3c",
+        "observation": "320x667 live public demo: TermsModal tablist wraps cleanly onto two lines inside 288px width with all 3 tabs ('利用規約', '個人情報の取扱い', '免責事項') unclipped and body text sharp over frosted backdrop."
+      },
+      "outputs/daily-20261127/screenshots-r14/account-demo-desktop-live.png": {
+        "sha256": "10866fb058ce47001b46bc4974c325861f623831a97b3e4afc78387370dc1614",
+        "observation": "1280x900 live public demo: AccountManagement renders active 'アカウント管理' nav pill, calm amber role='status' banner ('デモモードではアカウント管理を利用できません...'), zero alert errors, no reload button, and readable text-slate-600 footer links."
+      },
+      "outputs/daily-20261127/screenshots-r14/admin-error-dismiss-desktop-live.png": {
+        "sha256": "f1c44f68c49daaffb10a67e19793b5a0566a2af060e5805deb2271a454452789",
+        "observation": "1280x900 live public demo: TeacherDashboard renders red role='alert' banner with accessible '閉じる' dismiss button alongside legible sync notes (text-slate-600) and cleanly aligned ride cards."
+      },
+      "outputs/daily-20261127/screenshots-r14/parent-hero-mobile-live.png": {
+        "sha256": "b4fb4780423c9912f14b8f19c96f6fdd9b6e4d86f8439a4b6ad3f5ae21109f63",
+        "observation": "375x667 live mobile demo: ParentPortal hero card renders deepened emerald-700/teal-800 gradient with crisp white badge pill, readable white/emerald-50 copy, darkened rose-700 cancel pill button, and zero horizontal overflow."
+      },
+      "outputs/daily-20261127/screenshots-r14/parent-low-ticket-mobile-live.png": {
+        "sha256": "c8b00b544178c7cb5766f6a0ba63cf5ab2391c8824cb4848fa4eb3737d45d27f",
+        "observation": "375x667 live mobile demo (ticketBalance=1): Darkened amber-950/45 low-ticket notice box contrasts cleanly against the emerald/teal hero card with legible amber-100 heading and amber-50 guidance copy."
+      },
+      "outputs/daily-20261127/screenshots-r14/account-fulladmin-local.png": {
+        "sha256": "4618aa204a5e32175d86bf85557ad89fb6da0ac3aba81e9ebf6e42be4c7a98a5",
+        "observation": "1280x900 local full-admin reviewer fixture: AccountManagement renders explicit labels bound to #account-name and #account-email (both autocomplete='off'), validation alert banner, and rose invalid border/focus ring."
+      }
+    }
+  },
+  "evidenceChecks": {
+    "outputs/daily-20261127/public-ui-r14.json": {
+      "sha256": "6fce681b0890e701a508689177d3513f883b953203e4e65e5f350297b0d22fbc",
+      "pass": true,
+      "sourceHashMatch": true
+    },
+    "docs/acceptance/deployment/build-manifest.json": {
+      "sha256": "8d064c0f6aab8b1ed7ae12f67e47a517a140012e4b4d1643aadb435e04573ece",
+      "pass": true
+    },
+    "docs/acceptance/deployment/public-verification.json": {
+      "sha256": "3374c3971ba777bd3989561f95a768d3570205af344ae505e9365dfc855a4971",
+      "pass": true,
+      "urlsMatched": 6
+    },
+    "docs/acceptance/deployment-verification/public-2026-11-26T18-22-35-923Z.json": {
+      "sha256": "354b8c132d47f7126fdb8088614f976be72e8bfd555c809a66c90e6e4125d2b9",
+      "pass": true,
+      "urlsMatched": 6
+    },
+    "outputs/refresh-20261120/local/results.json": {
+      "sha256": "d427583cf467fca91668e1ddb4d535a79f92d30b7f53d21168175d72d7ff1fe3",
+      "pass": true,
+      "count": 14,
+      "sourceHashMatch": true
+    },
+    "outputs/refresh-20261120/reviewer/results.json": {
+      "sha256": "10e1c8c6a6bc0bfdb232bcefb7ae5231d445364d5b118a7665b4880286aad5d1",
+      "pass": true,
+      "count": 8,
+      "sourceHashMatch": true
+    },
+    "outputs/refresh-20261120/modal-scroll/results.json": {
+      "sha256": "0a21bb592d7ca539376a2170479fb141e9683955effbb67100914a7fb65ceab5",
+      "pass": true,
+      "count": 2,
+      "sourceHashMatch": true
+    },
+    "outputs/r19-adoption-20261111/regression/trace-ui/results.json": {
+      "sha256": "e36045c12fd952eb03a577a422afcd384c9069ebdb7e522e30406f310f2fe364",
+      "pass": true,
+      "count": 6,
+      "sourceHashMatch": true
+    },
+    "outputs/refresh-20261120/offline/release-contract.json": {
+      "sha256": "4e45ecc1cc81e94cb962022ed9a321c3bd9e6aa80b55456a0276d4eeb244edcc",
+      "pass": true
+    },
+    "outputs/refresh-20261120/offline/reservation-retry-ui.json": {
+      "sha256": "99c47937fd4028a529531f349a3acb54985ba6a814678a128460d69da7f816a9",
+      "pass": true,
+      "sourceHashMatch": true
+    }
+  },
+  "conclusion": "No unresolved blocking defect in Round 14 (PR #9 / Issues #5-#8): WCAG AA contrast, 320px responsive ARIA tabs, demo AccountManagement notice, autoComplete hygiene, TeacherDashboard defensive guards/error dismissal, and brand favicon replacement all verified",
+  "limits": [
+    "Customer acceptance CUST-01..06 remains 0/6 NOT_RUN",
+    "thirdPartyPassed: 0; release remains HOLD; production rollout has not started",
+    "No real Google OAuth login, live GAS/Spreadsheet/Calendar execution, or physical mobile device testing claimed; live audit exercised public demo mode on https://eigo-taxi-test.web.app and local full-admin reviewer fixture"
+  ]
+}

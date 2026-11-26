@@ -75002,6 +75002,252 @@
       ]
     },
     {
+      "id": "DOC-0669",
+      "path": "docs/progress/2026-11-27-site-review-r14-delivery.md",
+      "state": "historical",
+      "sha256": "1580bb97213cd196320a8e448a266134527398fd7322e94141beab2d3e0d4dec",
+      "items": [
+        {
+          "id": "DOC-0669-ITEM-00001",
+          "line": 1,
+          "contentSha256": "52c7a4804393d325f1bf11b588358b64f38dbfdb704ec26a232fb81515aa352e",
+          "occurrence": 1,
+          "preview": "# Round 14: サイトレビュー不具合修正（PR #9 / Issues #5〜#8）検証・テストサイト配信報告（2026-11-27）"
+        },
+        {
+          "id": "DOC-0669-ITEM-00002",
+          "line": 3,
+          "contentSha256": "ec7d041182719c33dc3dfd25c30f20abed92249d82a1b295786269bc3017b6f7",
+          "occurrence": 1,
+          "preview": "公開テスト環境（`https://eigo-taxi-test.web.app/`）への再認証完了を受け、PR #9（ブランチ `fix/site-review-issues-20261125`、修正コミット `2b320ec23f2058253a566b2e61391a54dc"
+        },
+        {
+          "id": "DOC-0669-ITEM-00003",
+          "line": 5,
+          "contentSha256": "114f13c59c8c7f049f13e89c48e07e46fa03999720028507f60869d0b36046be",
+          "occurrence": 1,
+          "preview": "> **運用境界の維持**: 顧客確認 `CUST-01`〜`CUST-06` は `NOT_RUN`、`thirdPartyPassed: 0`、`release: \"HOLD\"` のままであり、本番運用開始は行っていない。公開画面検証は公開デモ経路およびローカル検証フィクスチ"
+        },
+        {
+          "id": "DOC-0669-ITEM-00004",
+          "line": 7,
+          "contentSha256": "81a3b9441759ac7f9510deccfac10ab7f7557ecf917128af8b69fd79ca784a2e",
+          "occurrence": 1,
+          "preview": "## 対象 Issue と修正内容"
+        },
+        {
+          "id": "DOC-0669-ITEM-00005",
+          "line": 9,
+          "contentSha256": "775f0397fc16f62977fe044aabbe8119c2794028f7d0b7ce699fa135670c7527",
+          "occurrence": 1,
+          "preview": "- **Issue #5**:"
+        },
+        {
+          "id": "DOC-0669-ITEM-00006",
+          "line": 10,
+          "contentSha256": "68172ef0e99670a1f1be442fff65b801f76b6d46d8dbd3a1211b2976f7066850",
+          "occurrence": 1,
+          "preview": "- `src/components/ParentPortal.tsx`: 残高カードのグラデーションを `from-emerald-700 to-teal-800` へ濃色化し、バッジ・本文・残数低下警告（`bg-amber-950/45 border-amber-300/60 "
+        },
+        {
+          "id": "DOC-0669-ITEM-00007",
+          "line": 11,
+          "contentSha256": "f3fc15ceaa8688bb786e17acf87f0caef70f677ca94c73831df7308b727b4975",
+          "occurrence": 1,
+          "preview": "- `src/components/TeacherDashboard.tsx`: 完了処理エラー（`completionError`）に「閉じる」ボタン追加およびタブ／カード切替時のクリア（`selectTab`）、残存していた生の `students` / `rides` 配列"
+        },
+        {
+          "id": "DOC-0669-ITEM-00008",
+          "line": 12,
+          "contentSha256": "7cd80021e70906cb59a6d22cfea4cb5fb56eed0157b66206f3ce6c1ee3d4ba6e",
+          "occurrence": 1,
+          "preview": "- `src/App.tsx`: フッターおよび法的ボタン3件のテキストを `text-slate-600` へ改善（フック制約 `{ useState, useEffect, useCallback }` 維持）。"
+        },
+        {
+          "id": "DOC-0669-ITEM-00009",
+          "line": 13,
+          "contentSha256": "50986811884826b465637ccf74686e6bbfa6af21c637e37253bd32bc5b1d3623",
+          "occurrence": 1,
+          "preview": "- **Issue #6**:"
+        },
+        {
+          "id": "DOC-0669-ITEM-00010",
+          "line": 14,
+          "contentSha256": "fcb042d486b248e088394673ad5206f5e50c0fabdada0dceaa850657dc2ad982",
+          "occurrence": 1,
+          "preview": "- `src/components/TermsModal.tsx`: `role=\"tablist\"` を `flex-wrap` 対応にして 320px 幅でのタブ見切れを解消し、3つの `role=\"tabpanel\"` を常時マウントしつつ `hidden` / `tabI"
+        },
+        {
+          "id": "DOC-0669-ITEM-00011",
+          "line": 15,
+          "contentSha256": "0a65ee9f04938b17248ab2e11ce2c60f352972d5bde590571b8c848451b02581",
+          "occurrence": 1,
+          "preview": "- **Issue #7**:"
+        },
+        {
+          "id": "DOC-0669-ITEM-00012",
+          "line": 16,
+          "contentSha256": "a3f7a3fc703af36e17727acdbdea415aa55e5e5e447770816b174c0a391dfd6c",
+          "occurrence": 1,
+          "preview": "- `src/components/AccountManagement.tsx`: `session?.mode === 'demo'` 時は `getManagedUsers()` の初期読込を抑止して穏当な `role=\"status\"` 案内へ切り替え（fail-close"
+        },
+        {
+          "id": "DOC-0669-ITEM-00013",
+          "line": 17,
+          "contentSha256": "c31d917b4e96921c6f7c908416360550799ffb07dadc24798b0f56935597ecb9",
+          "occurrence": 1,
+          "preview": "- `src/components/AddStudentModal.tsx`: 第三者入力欄の `autoComplete` をすべて `autoComplete=\"off\"` へ統一。"
+        },
+        {
+          "id": "DOC-0669-ITEM-00014",
+          "line": 18,
+          "contentSha256": "1b9a68f08b28727181bee7c755ad4d71333fd6d59f2fb07e18190ff2e620610f",
+          "occurrence": 1,
+          "preview": "- **Issue #8**:"
+        },
+        {
+          "id": "DOC-0669-ITEM-00015",
+          "line": 19,
+          "contentSha256": "69ae027d3402b7b9874b1ef1fb3f5251ff540c0d8f507cc374705bfe55d25d5c",
+          "occurrence": 1,
+          "preview": "- `public/favicon.svg` を `#047857` シャトルアイコンへ刷新し、未使用 `public/icons.svg` を削除、`index.html` に `description` および `theme-color` メタタグを追加。"
+        },
+        {
+          "id": "DOC-0669-ITEM-00016",
+          "line": 21,
+          "contentSha256": "5b60b4808fac29ddab9b46ad9b1c5b785b2f04955c6009cfcc3c6c275a829d64",
+          "occurrence": 1,
+          "preview": "## 実施した検証・証跡"
+        },
+        {
+          "id": "DOC-0669-ITEM-00017",
+          "line": 23,
+          "contentSha256": "7964698380edf504abbc205a52cbddf42bf8b88c5bae49838850efef7e044058",
+          "occurrence": 1,
+          "preview": "1. **ビルド・CSS 実ルール・オフライン契約テスト**"
+        },
+        {
+          "id": "DOC-0669-ITEM-00018",
+          "line": 24,
+          "contentSha256": "508aeeb40fed460ebead44efdf0deae62b7656845b31d0310f25f34affeca28e",
+          "occurrence": 1,
+          "preview": "- `npx tsc --noEmit` PASS、`npx oxlint src/` 0 warnings / 0 errors、死んだ Tailwind v4 / `animate-in` 系クラス 0 件。"
+        },
+        {
+          "id": "DOC-0669-ITEM-00019",
+          "line": 25,
+          "contentSha256": "e10ca30f9aa64edb7e22750cfc05d156af7dd6c8de78a5c27993b794e371fac5",
+          "occurrence": 1,
+          "preview": "- `npm run build` 出力（`dist/assets/index-C1hp1v-I.css`）に `.focus\\:outline-none`・`.from-emerald-700`・`.to-teal-800`・`.bg-emerald-950\\/35`・`.bg"
+        },
+        {
+          "id": "DOC-0669-ITEM-00020",
+          "line": 26,
+          "contentSha256": "1667efafcc89040990b16aa531ae28138a90fc316f1ce1848f890a55185e5d73",
+          "occurrence": 1,
+          "preview": "- `npm run test:traceability` 34/34 PASS、およびオフライン契約スクリプト 8 本（`test_student_low_ticket_ui`, `test_reservation_retry_ui`, `test_release_contra"
+        },
+        {
+          "id": "DOC-0669-ITEM-00035",
+          "line": 27,
+          "contentSha256": "fb01f912f5d202ebf1b2087a91e37ec9ea2dbe95f7de36682711d1901e19406e",
+          "occurrence": 1,
+          "preview": "2. **Playwright 回帰 4 スイート（LF バイト列基準で実行）**"
+        },
+        {
+          "id": "DOC-0669-ITEM-00022",
+          "line": 28,
+          "contentSha256": "a612d3840cbfccd77e011583f1f95167ff3752555bee3ba2a616ee1c80c0cb44",
+          "occurrence": 1,
+          "preview": "- `scripts/test_trace_ui.mjs` (`UI-01`〜`UI-06` 6/6 PASS)"
+        },
+        {
+          "id": "DOC-0669-ITEM-00023",
+          "line": 29,
+          "contentSha256": "3fe64ab36ceb88d9d6eabbd937c142eba5180af48efb84fd9eed072f5fd46364",
+          "occurrence": 1,
+          "preview": "- `scripts/test_booking_modal_scroll.mjs` (`375x500` / `812x375` 2/2 PASS)"
+        },
+        {
+          "id": "DOC-0669-ITEM-00024",
+          "line": 30,
+          "contentSha256": "a0715b6570ef7485c6364e22ac5e352f144c51b1473eabdeb8dd5de00fa070c1",
+          "occurrence": 1,
+          "preview": "- `tests/reviewer-ui/run.mjs` (`REVIEW-UI-01`〜`REVIEW-UI-08` 8/8 PASS)"
+        },
+        {
+          "id": "DOC-0669-ITEM-00025",
+          "line": 31,
+          "contentSha256": "2c826a52a062445038e2bd6840c8734b8241480279753906ddb700d76f8cb1e0",
+          "occurrence": 1,
+          "preview": "- `scripts/run_local_acceptance.mjs` (`LOCAL-UI-01`〜`LOCAL-UI-14` 14/14 PASS)"
+        },
+        {
+          "id": "DOC-0669-ITEM-00026",
+          "line": 32,
+          "contentSha256": "6bbc86b077e5da5770870b295d62324e6736aa19a884a9a29c4b716f58e9377c",
+          "occurrence": 1,
+          "preview": "3. **公開テストサイト配信＆SHA-256 照合**"
+        },
+        {
+          "id": "DOC-0669-ITEM-00036",
+          "line": 33,
+          "contentSha256": "51a86927035d0402d8584a316a0f19ed3fb6c5bc0199339f4227ad7eeec555dd",
+          "occurrence": 1,
+          "preview": "- `npm run deploy:mighty-test` (`builtAt`: `2026-11-26T18:20:31.477Z` / `baseCommit`: `2b320ec23f2058253a566b2e61391a54dcfa07b1` / `sourceDi"
+        },
+        {
+          "id": "DOC-0669-ITEM-00037",
+          "line": 34,
+          "contentSha256": "417cc4bc12c287d73d98c66a2adff093365d34436a01fd900b2bb0e57983a7b3",
+          "occurrence": 1,
+          "preview": "- `verify_mighty_release.cjs` および `verify_mighty_release_snapshot.cjs`（`docs/acceptance/deployment-verification/public-2026-11-26T18-22-35-9"
+        },
+        {
+          "id": "DOC-0669-ITEM-00029",
+          "line": 35,
+          "contentSha256": "1e3fa976f7d3ea425f7e376e6e08123fca60bcf763cc24ecf84d0eebf4e0bd22",
+          "occurrence": 1,
+          "preview": "4. **公開デモ実ブラウザ標準監査＋全 6 枚スクリーンショット目視確認**"
+        },
+        {
+          "id": "DOC-0669-ITEM-00030",
+          "line": 36,
+          "contentSha256": "3e2a5649f19441ec1338261ae83591860716614c9594be0976f41342bdbeb445",
+          "occurrence": 1,
+          "preview": "- 記録ファイル: `outputs/daily-20261127/public-ui-r14.json` および `outputs/daily-20261127/screenshots-r14/*.png`（6枚すべてを `read_file` で目視確認）。"
+        },
+        {
+          "id": "DOC-0669-ITEM-00031",
+          "line": 37,
+          "contentSha256": "c8311f4bae05fdc38eee58bec964c216b6b654c1e66e990f0f25a53dcc8fea79",
+          "occurrence": 1,
+          "preview": "- DOM 監査 8 条件すべてで `contrastFailures: []`（最小コントラスト比 4.51:1〜4.76:1）、`deadClasses: []`、`headingSkips: []`、`danglingIdrefs: []`、`overflowX: fals"
+        },
+        {
+          "id": "DOC-0669-ITEM-00032",
+          "line": 38,
+          "contentSha256": "3f4d184bf41b14d65845f7a1a0b1b6f40df4268f88e09cdb7d649540b34071ab",
+          "occurrence": 1,
+          "preview": "5. **独立 AI レビュー＆厳格ゲート**"
+        },
+        {
+          "id": "DOC-0669-ITEM-00033",
+          "line": 39,
+          "contentSha256": "ad1384ea1c103933d1382326f01269dedcad683833e8e64c069d426682463cbd",
+          "occurrence": 1,
+          "preview": "- `deep-reviewer`（conversationId: `8eef3345-302f-43d6-8d9e-ef09ac5b8b46`）による独立レビュー完了（ブロッカーなし、`NON-BLOCKING / PASS`）。"
+        },
+        {
+          "id": "DOC-0669-ITEM-00034",
+          "line": 40,
+          "contentSha256": "6605a4334b1b3d017cd23648e737ecb98a3c750f43b7594b1079c305cbbc6fac",
+          "occurrence": 1,
+          "preview": "- レビュー証跡: `docs/traceability/reports/review-20261127-r14/frontend-review.json`"
+        }
+      ]
+    },
+    {
       "id": "DOC-0552",
       "path": "docs/progress/SHARED_TRACKER_UPDATE.md",
       "state": "historical",
