@@ -33,7 +33,7 @@ const mockEndpoint = 'https://acceptance.invalid/exec';
 const keys = { students: 'eigo_taxi_students', rides: 'eigo_taxi_rides', purchases: 'eigo_taxi_purchases' };
 const results = [], assetMap = new Map(), assetJobs = [], networkAudit = [], runtimeErrors = [];
 let browser, context, page, current, mock, profile, browserVersion, fatalError;
-let dialogAction = 'dismiss';
+// Cancellation confirmation uses the in-page dialog ('戻る' / '取消を確定').
 
 async function text() { return page.evaluate(() => document.body.innerText); }
 async function storage() {
@@ -196,15 +196,17 @@ const cases = [
     await enter('admin'); const first=await book('pickup','teacher',`${current.id}-teacher`); assert.equal(first.reservedBy,'teacher');
     await click('送迎利用者'); await waitText('送迎チケット残高'); const second=await book('dropoff','parent',`${current.id}-admin-parent-view`); assert.equal(second.reservedBy,'teacher');
   }},
-  { id:'PUB-11', acceptanceIds:['AT-10','AT-16'], title:'保護者の取消確認・取消後表示', scope:'Confirmation dismiss/accept and canceled UI; not direct-call rejection proof', run:async()=>{
-    await enter('parent'); const ride=await book(); dialogAction='dismiss'; await parentCancel(ride.pickupLocation);
+  { id:'PUB-11', acceptanceIds:['AT-10','AT-16'], title:'保護者の取消確認・取消後表示', scope:'In-page confirmation dialog dismiss/confirm and canceled UI; not direct-call rejection proof', run:async()=>{
+    await enter('parent'); const ride=await book(); await parentCancel(ride.pickupLocation);
+    await page.waitForSelector('dialog[open]'); await click('戻る',{exact:true});
+    await page.waitForFunction(()=>!document.querySelector('dialog[open]'));
     assert.equal((await storage()).rides.find(r=>r.id===ride.id).status,'scheduled');
-    dialogAction='accept'; await parentCancel(ride.pickupLocation); await waitText('キャンセル済');
+    await parentCancel(ride.pickupLocation); await page.waitForSelector('dialog[open]'); await click('取消を確定',{exact:true}); await waitText('キャンセル済');
     assert.equal((await storage()).rides.find(r=>r.id===ride.id).status,'cancelled'); assert.equal((await storage()).students[0].ticketBalance,7);
-    assert.equal(current.dialogs.filter(d=>d.type==='confirm').length,2); assert.deepEqual(current.dialogs.map(d=>d.action),['dismiss','accept']);
+    assert.equal(current.dialogs.length,0);
   }},
   { id:'PUB-12', acceptanceIds:['AT-11','AT-16'], title:'管理者取消と取消後の操作非表示', scope:'UI cancel and no completion/cancel buttons on canceled row; not server rejection proof', run:async()=>{
-    await enter('admin'); const ride=await book('pickup','teacher'); await click('送迎スケジュール一覧'); dialogAction='accept'; await rowButton(ride.pickupLocation,'取消');
+    await enter('admin'); const ride=await book('pickup','teacher'); await click('送迎スケジュール一覧'); await rowButton(ride.pickupLocation,'取消'); await page.waitForSelector('dialog[open]'); await click('取消を確定',{exact:true});
     await page.waitForFunction(id=>JSON.parse(localStorage.getItem('eigo_taxi_rides')).find(r=>r.id===id).status==='cancelled',{},ride.id);
     assert.equal((await storage()).students[0].ticketBalance,7); assert.ok((await rowText(ride.pickupLocation)).includes('取消'));
     assert.equal(await page.$eval('tbody',(body,m)=>[...body.querySelectorAll('tr')].find(r=>r.textContent.includes(m)).querySelectorAll('button').length,ride.pickupLocation),0);
@@ -275,8 +277,8 @@ const cases = [
     for(const failure of ['abort','http','json','response']){mock.failure=failure;await click('チケットを追加する');await assertFormFailure();await shot(`tickets-${failure}`);}
     await click('閉じる',{exact:true});mock.failure='abort';await addStudent(false);await click('登録を完了する');await assertFormFailure();await shot('student-failure');await click('閉じる',{exact:true});
     await click('送迎スケジュール一覧');await rowButton(mock.rides.find(r=>r.id==='RIDE-101').pickupLocation,'完了');
-    await waitText('通信または連携処理に失敗しました');await shot('complete-failure');dialogAction='accept';
-    await rowButton(mock.rides.find(r=>r.id==='RIDE-102').pickupLocation,'取消');await waitText('通信または連携処理に失敗しました');
+    await waitText('通信または連携処理に失敗しました');await shot('complete-failure');
+    await rowButton(mock.rides.find(r=>r.id==='RIDE-102').pickupLocation,'取消');await page.waitForSelector('dialog[open]');await click('取消を確定',{exact:true});await waitText('通信または連携処理に失敗しました');
     await page.waitForFunction(()=>!document.querySelector('form'));assert.deepEqual(await storage(),before);
     assert.deepEqual([...new Set(mock.audit.map(a=>a.action))].sort(),['addTickets','cancelReservation','completeRide','createReservation','createStudent'].sort());current.observations.mockRequests=mock.audit;
     assert.ok(!(await text()).includes('送迎予約のキャンセルが完了しました'));assert.ok(!(await text()).includes('送迎が完了しました'));
@@ -331,11 +333,11 @@ async function main() {
   profile=fs.mkdtempSync(path.join(os.tmpdir(),'eigo-hosted-acceptance-'));
   browser=await puppeteer.launch({executablePath,userDataDir:profile,headless:'shell',args:['--disable-gpu','--disable-extensions','--renderer-process-limit=1']});browserVersion=await browser.version();
   for(const c of selectedCases){
-    current={id:c.id,acceptanceIds:c.acceptanceIds,title:c.title,mode:c.mode||'hosted-ui-synthetic-demo',scope:c.scope,status:'NOT RUN',startedAt:new Date().toISOString(),screenshots:[],dialogs:[],observations:{}};mock=null;dialogAction='dismiss';
+    current={id:c.id,acceptanceIds:c.acceptanceIds,title:c.title,mode:c.mode||'hosted-ui-synthetic-demo',scope:c.scope,status:'NOT RUN',startedAt:new Date().toISOString(),screenshots:[],dialogs:[],observations:{}};mock=null;
     try{
       context=await browser.createBrowserContext();page=await context.newPage();page.setDefaultTimeout(8000);page.setDefaultNavigationTimeout(25000);
       await page.setViewport({width:1280,height:900});await page.emulateTimezone('Asia/Tokyo');await page.setCacheEnabled(false);
-      page.on('dialog',async d=>{current.dialogs.push({type:d.type(),message:d.message(),action:dialogAction});await d[dialogAction]();});
+      page.on('dialog',async d=>{current.dialogs.push({type:d.type(),message:d.message(),action:'unexpected-dismiss'});runtimeErrors.push({caseId:current.id,type:'unexpected-dialog',message:d.message()});await d.dismiss();});
       page.on('pageerror',error=>runtimeErrors.push({caseId:current.id,type:'pageerror',message:error.message}));
       page.on('response',recordResponse);await page.setRequestInterception(true);page.on('request',r=>intercept(r).catch(e=>runtimeErrors.push({caseId:current.id,type:'interception',message:e.message})));
       const response=await page.goto(target.href,{waitUntil:'networkidle0'});assert.equal(response.status(),200);assert.equal(new URL(page.url()).origin,target.origin,'Unexpected cross-origin redirect');
@@ -369,5 +371,5 @@ main().catch(error=>{fatalError=error.stack;process.exitCode=1;}).finally(async(
   fs.writeFileSync(path.join(root,'docs/acceptance/hosted-latest.json'),JSON.stringify({runId,url:target.href,resultsSha256:hashFile(path.join(out,'results.json'))},null,2));
   if(profile){const safeRoot=path.resolve(os.tmpdir())+path.sep;const resolved=path.resolve(profile);if(resolved.startsWith(safeRoot)&&path.basename(resolved).startsWith('eigo-hosted-acceptance-'))try{fs.rmSync(resolved,{recursive:true,force:true});}catch{ /* Browser is closed; abandoned synthetic-only profile is harmless. */ }}
   console.log(`Hosted report: ${path.join(out,'results.json')}`);
-  if(fatalError||results.some(r=>r.status!=='PASS')||!servedAssets.some(a=>a.resourceType==='script'&&a.status===200)||runtimeErrors.some(e=>e.type==='pageerror'))process.exitCode=1;
+  if(fatalError||results.some(r=>r.status!=='PASS')||!servedAssets.some(a=>a.resourceType==='script'&&a.status===200)||runtimeErrors.some(e=>e.type==='pageerror'||e.type==='unexpected-dialog'))process.exitCode=1;
 });

@@ -16,7 +16,7 @@ const browser=await chromium.launch({headless:true,executablePath:process.env.EI
 async function boot(actor='reviewer',role='admin',cap='false'){
  await context?.close();context=await browser.newContext({viewport:{width:375,height:812},serviceWorkers:'block'});
  await context.route('**/*',r=>r.request().url().startsWith(origin+'/')?r.continue():(external.push(r.request().url()),r.abort()));await context.routeWebSocket('**/*',s=>{external.push(s.url());s.close();});
- page=await context.newPage();page.setDefaultTimeout(8000);page.on('pageerror',e=>pageErrors.push(e.message));page.on('dialog',d=>d.accept());
+ page=await context.newPage();page.setDefaultTimeout(8000);page.on('pageerror',e=>pageErrors.push(e.message));page.on('dialog',async d=>{pageErrors.push(`Unexpected browser dialog (${d.type()}): ${d.message()}`);await d.dismiss();});
  await page.goto(`${origin}/?actor=${actor}&cap=${cap}#/${role}${role==='parent'?'/12345678-1234-4123-8123-123456789abc':''}`);
  await page.getByRole('button',{name:'Googleでログイン',exact:true}).click();await page.getByRole('button',{name:'ログアウト',exact:true}).waitFor();
  await page.getByRole('button',{name:role==='admin'?/送迎スケジュール一覧/:/送迎の予約を申し込む/}).waitFor();

@@ -47,7 +47,7 @@ async function boot(role = 'admin', options = {}) {
   await guardNetwork(context);
   page = await context.newPage(); page.setDefaultTimeout(10000);
   page.on('pageerror', error => pageErrors.push(error.message));
-  page.on('dialog', dialog => dialog.accept());
+  page.on('dialog', async dialog => { pageErrors.push(`Unexpected browser dialog (${dialog.type()}): ${dialog.message()}`); await dialog.dismiss(); });
   await page.goto(`${origin}/#/${role}`, { waitUntil: 'networkidle' });
   if (options.unauthenticated) return;
   await page.getByRole('button', { name: role === 'admin' ? '管理者デモを開く' : '保護者デモを開く', exact: true }).click();
@@ -153,19 +153,40 @@ async function run() {
     await boot(); const before = await state(); await book('admin');
     const ride = (await state()).rides.find(r => !before.rides.some(old => old.id === r.id)); assert.equal(ride.reservedBy, 'teacher');
   });
-  await check('LOCAL-UI-07', ['AT-10', 'AT-22'], 'Parent cancels a newly booked reservation through its current UI; balance unchanged after reload', async () => {
-    await boot('parent'); const before = await state(); await book();
+  await check('LOCAL-UI-07', ['AT-10', 'AT-22'], 'Parent confirms or backs out of cancellation via in-page dialog without cancelling other rides; balance unchanged after reload', async () => {
+    await boot('parent'); const before = await state();
+    const studentOtherIds = (await api('getRides')).filter(r => r.status === 'scheduled').map(r => r.id);
+    const allOtherIds = before.rides.filter(r => r.status === 'scheduled').map(r => r.id);
+    assert.ok(studentOtherIds.length >= 1, 'Expected existing scheduled reservation(s) for this student');
+    await book();
     const ride = (await state()).rides.find(r => !before.rides.some(old => old.id === r.id));
-    // Unique memo is part of the visible booking card; choose the smallest card with its cancel button.
-    await page.getByText('LOCAL-ONLY', { exact: true }).locator('../..').getByRole('button', { name: /キャンセル/ }).click();
-    // Cancellation is confirmed in an in-page dialog (not the browser confirm); nothing changes before it is confirmed.
+    const cardCancelBtn = () => page.getByText('LOCAL-ONLY', { exact: true }).locator('../..').getByRole('button', { name: /キャンセル/ });
+    // IR-02: Opening confirmation dialog and pressing「戻る」must keep the reservation scheduled across reload.
+    await cardCancelBtn().click();
     const confirmDialog = page.getByRole('dialog', { name: '予約取消の確認' }); await confirmDialog.waitFor();
     assert.ok(/LOCAL-ONLY/.test(await confirmDialog.innerText()), 'dialog names the selected reservation');
     assert.equal((await state()).rides.find(r => r.id === ride.id).status, 'scheduled');
+    await confirmDialog.getByRole('button', { name: '戻る', exact: true }).click();
+    await confirmDialog.waitFor({ state: 'detached' });
+    assert.equal((await state()).rides.find(r => r.id === ride.id).status, 'scheduled');
+    await page.reload({ waitUntil: 'networkidle' });
+    assert.equal((await api('getRides')).find(r => r.id === ride.id).status, 'scheduled');
+    // Confirming「取消を確定」cancels only the target ride; balance and all other scheduled rides remain intact (IR-03).
+    await cardCancelBtn().click();
+    await confirmDialog.waitFor();
     await confirmDialog.getByRole('button', { name: '取消を確定', exact: true }).click();
     await waitState(id => JSON.parse(localStorage.getItem('eigo_taxi_rides')).find(r => r.id === id)?.status === 'cancelled', ride.id);
     assert.equal((await state()).students[0].ticketBalance, before.students[0].ticketBalance);
-    await page.reload({ waitUntil: 'networkidle' }); assert.equal((await api('getRides')).find(r => r.id === ride.id).status, 'cancelled');
+    await page.reload({ waitUntil: 'networkidle' });
+    const persistedApi = await api('getRides');
+    const persistedStorage = await state();
+    assert.equal(persistedApi.find(r => r.id === ride.id).status, 'cancelled');
+    for (const id of studentOtherIds) {
+      assert.equal(persistedApi.find(r => r.id === id)?.status, 'scheduled');
+    }
+    for (const id of allOtherIds) {
+      assert.equal(persistedStorage.rides.find(r => r.id === id)?.status, 'scheduled');
+    }
   });
   for (const [type, consume, id] of [['pickup', 1, '08'], ['roundtrip', 2, '09']]) {
     await check(`LOCAL-UI-${id}`, [consume === 1 ? 'AT-13' : 'AT-14', 'AT-15'], `${type} completion consumes ${consume} and replay consumes zero`, async () => {

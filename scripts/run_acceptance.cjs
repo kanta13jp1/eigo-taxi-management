@@ -83,7 +83,7 @@ const handlers = {
  'AT-07':async()=>{const n=(await api('getRides')).length;const r=await ride('dropoff');assert.equal((await api('getRides')).length,n+1);assert.equal(r.rideType,'dropoff');assert.equal((await api('getStudentById','STU-001')).ticketBalance,7);await render();await parent();},
  'AT-08':async()=>{const n=(await api('getRides')).length;const r=await ride('roundtrip');assert.equal((await api('getRides')).length,n+1);assert.equal(r.rideType,'roundtrip');assert.equal((await api('getStudentById','STU-001')).ticketBalance,7);await render();await parent();},
  'AT-09':async()=>{const n=(await api('getRides')).length;await uiRide('teacher');const r=(await api('getRides')).find(r=>!['RIDE-101','RIDE-102','RIDE-103'].includes(r.id));assert.equal((await api('getRides')).length,n+1);assert.equal(r.reservedBy,'teacher');},
- 'AT-10':async()=>{await parent(); await click('キャンセル'); await page.waitForFunction(()=>JSON.parse(localStorage.getItem('eigo_taxi_rides')).some(r=>r.status==='cancelled'));assert.equal((await api('getRides')).find(r=>r.id==='RIDE-101').status,'cancelled');assert.equal((await api('getStudentById','STU-001')).ticketBalance,7);},
+ 'AT-10':async()=>{await parent(); await click('キャンセル'); await page.waitForSelector('dialog[open]'); await click('戻る'); await page.waitForFunction(()=>!document.querySelector('dialog[open]')); assert.equal((await api('getRides')).find(r=>r.id==='RIDE-101').status,'scheduled'); await click('キャンセル'); await page.waitForSelector('dialog[open]'); await click('取消を確定'); await page.waitForFunction(()=>JSON.parse(localStorage.getItem('eigo_taxi_rides')).some(r=>r.status==='cancelled'));assert.equal((await api('getRides')).find(r=>r.id==='RIDE-101').status,'cancelled');assert.equal((await api('getStudentById','STU-001')).ticketBalance,7);},
  'AT-11':async()=>{const r=await ride('pickup','teacher');assert.equal(await api('cancelReservation',r.id),true);assert.equal((await api('getRides')).find(x=>x.id===r.id).status,'cancelled');assert.equal((await api('getStudentById','STU-001')).ticketBalance,7);await render();await click('送迎スケジュール一覧');},
  'AT-12':async()=>{const links=await page.$$eval('a',as=>as.map(a=>a.href));assert.ok(links.some(l=>l.includes('google.com/maps/search/')));assert.ok((await page.evaluate(()=>document.body.innerText)).includes('本日の送迎'));},
  'AT-13':async()=>{const r=await ride();await api('completeRide',r.id);const x=(await api('getRides')).find(x=>x.id===r.id);assert.equal(x.status,'completed');assert.ok(x.completedAt);assert.equal((await api('getStudentById','STU-001')).ticketBalance,6);await render();await parent();},
@@ -134,7 +134,7 @@ async function main(){
  browser=await puppeteer.launch({executablePath,headless:'shell',args:['--disable-gpu','--renderer-process-limit=1','--disable-extensions']});
  page=await browser.newPage();
  await page.emulateTimezone('Asia/Tokyo');
- page.on('dialog',d=>d.accept());
+ page.on('dialog',async d=>{serverOutput+=`Unexpected browser dialog (${d.type()}): ${d.message()}\n`;await d.dismiss();});
  await page.setRequestInterception(true);
  page.on('request',r=>{
    if(r.url()===url+'/test-gas'){
@@ -188,5 +188,5 @@ main().catch(e=>{console.error(e);serverOutput+=e.stack+'\n';process.exitCode=1;
  const report={runId,url,mode:'Built dist UI + TypeScript-transpiled source API assertions / fresh headless shell profile / demo LocalStorage; external requests blocked',timezone:'Asia/Tokyo',commit:execFileSync('git',['rev-parse','HEAD'],{cwd:root,encoding:'utf8'}).trim(),sourceHashes:Object.fromEntries([...files,...builtFiles,'dist/index.html'].map(f=>[f,hash(path.join(root,f))])),browser:executablePath,results};
  fs.writeFileSync(path.join(out,'results.json'),JSON.stringify(report,null,2));
  fs.writeFileSync(path.join(root,'docs/acceptance/latest-run.json'),JSON.stringify({runId},null,2));
- if(results.some(r=>r.status!=='PASS')||results.length!==cases.length)process.exitCode=1;
+ if(results.some(r=>r.status!=='PASS')||results.length!==cases.length||serverOutput.includes('Unexpected browser dialog'))process.exitCode=1;
 });

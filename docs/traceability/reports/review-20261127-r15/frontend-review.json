@@ -1,0 +1,85 @@
+{
+  "date": "2026-11-27",
+  "round": "Round 15 (Handoff IR-02/IR-03/IR-04, Guide/E2E Alignment & Chat Inventory)",
+  "reviewer": "Independent Read-Only AI Auditor deep-reviewer (conversationId b9eb4228-0dca-40fd-942b-7fb742b8cbe9) & Coordinator test/visual verification",
+  "scope": [
+    "docs/progress/2026-11-27-kobayashi-chat-alignment-and-handoff.md",
+    "scripts/run_local_acceptance.mjs",
+    "tests/reviewer-ui/run.mjs",
+    "scripts/generate_manual_uat_pdf.cjs",
+    "scripts/run_acceptance.cjs",
+    "scripts/run_hosted_acceptance.cjs",
+    "scripts/run_all_e2e_evidence.cjs"
+  ],
+  "sourceHashes": {
+    "docs/progress/2026-11-27-kobayashi-chat-alignment-and-handoff.md": "be69aa0463a33d0848aa8f78cf5657104e152374539a17e545aefc00d7471ede",
+    "scripts/run_local_acceptance.mjs": "4b42eaef7b2dbf36b39dcf2c04709664d656b1f2b4863c2db9d17b2c0dfa5b70",
+    "tests/reviewer-ui/run.mjs": "d9a5fd113aae14b8b04f7b8daa8aa13304bf5e02e30f80dbca8c07bc2923532f",
+    "scripts/generate_manual_uat_pdf.cjs": "00ac62adeb27c3f714d0d9f58a037b0a59a606dfe57294d7ae7277bf57212215",
+    "scripts/run_acceptance.cjs": "22624ac4e239f3cd2ac0b44ec2a69084c0db1901d92e5209284f9f969cf7b98d",
+    "scripts/run_hosted_acceptance.cjs": "77426a97723209468fb6f6071778b5bc7b06b1c66c79e0212da27a96c39a317a",
+    "scripts/run_all_e2e_evidence.cjs": "2896b9bdfe84247a0cb7377a687758d0a921581762efa85d4c00b99e37dbbb43"
+  },
+  "independentAiReview": {
+    "agentType": "deep-reviewer",
+    "conversationId": "b9eb4228-0dca-40fd-942b-7fb742b8cbe9",
+    "verdict": "NON-BLOCKING / PASS",
+    "criteriaVerified": [
+      "IR-02 & IR-03: scripts/run_local_acceptance.mjs LOCAL-UI-07 verifies clicking '戻る' in the in-page '予約取消の確認' dialog preserves scheduled status across reload, and clicking '取消を確定' cancels only the target reservation while keeping studentOtherIds and allOtherIds scheduled across reload and preserving ticketBalance.",
+      "IR-04: Removed silent page.on('dialog', d => d.accept()) in scripts/run_local_acceptance.mjs and tests/reviewer-ui/run.mjs (recording unexpected dialogs into pageErrors and calling dismiss()), as well as in legacy scripts/run_acceptance.cjs, scripts/run_hosted_acceptance.cjs, and scripts/run_all_e2e_evidence.cjs.",
+      "Legacy Puppeteer & PDF Generator Alignment (not-run): Updated [role='dialog'] selectors to native dialog[open] / dialog[open] button in scripts/run_acceptance.cjs, scripts/run_hosted_acceptance.cjs, and scripts/run_all_e2e_evidence.cjs, gated run_acceptance.cjs / run_hosted_acceptance.cjs non-zero exit on unexpected native dialogs, and updated scripts/generate_manual_uat_pdf.cjs Step 5 wording; syntax checked with node --check (runtime execution not-run due to legacy #login-key selectors / PDF artifact preservation).",
+      "r19 SSOT & v36 PowerPoint Preservation: docs/traceability/registry.json, CUSTOMER_ACCEPTANCE_MINIMUM_20261107.md, and docs/SCREEN_INTERFACE_DESIGN.md retain r19 text intentionally because docs/traceability/presentations.json pins registrySha256 across all 12 v36 PowerPoint deliverables; CUST-03/D05 SSOT updates are queued for the next r20 12-deck rebuild while immediate user guidance is handled via supplement and chat draft.",
+      "No src/ changes: Application source and live test-site bundle (sourceDigest 0b77363bfa65bdeff67322aec73ff3fc218aaccb37ee6fb5ab85dbd7d20c013b) remain unchanged; CUST-01..06 remain 0/6 NOT_RUN with release HOLD; teacher email masked in 2026-11-27-kobayashi-chat-alignment-and-handoff.md."
+    ]
+  },
+  "findings": [
+    {
+      "status": "VERIFIED",
+      "detail": "tests/local_acceptance_safety.test.mjs passed 4/4 (RUN-SAFE-01..04) with updated safety-results.json hashes matching scripts/run_local_acceptance.mjs on disk (4b42eaef7b2dbf36b39dcf2c04709664d656b1f2b4863c2db9d17b2c0dfa5b70)."
+    },
+    {
+      "status": "VERIFIED",
+      "detail": "scripts/run_local_acceptance.mjs passed 14/14 (LOCAL-UI-01..14, pageErrors=[]) and tests/reviewer-ui/run.mjs passed 8/8 (REVIEW-UI-01..08, pageErrors=[]) on unmodified src/ with zero unexpected native browser dialogs."
+    },
+    {
+      "status": "VERIFIED",
+      "detail": "r19/v36 PowerPoint presentations.json registrySha256 invariant preserved alongside supplemental handoff alignment memo, Kobayashi draft reply, and legacy script syntax/selector alignment; no blocking findings remain per deep-reviewer audit."
+    }
+  ],
+  "visualReview": {
+    "inspectedViaReadFile": true,
+    "screenshots": {
+      "outputs/refresh-20261120/local/LOCAL-UI-07.png": {
+        "sha256": "e863d67ceaf86c2483e821c70d51004d7d6482ee0ec0e3c85ec0de7a1ea7e25e",
+        "observation": "Post-reload parent portal after LOCAL-UI-07 confirms target reservation (2026-11-27 16:30 お迎え) appears under 過去の利用履歴 as キャンセル済 while pre-existing scheduled reservation (2026-11-27 16:00 お迎え（教室へ）) remains active under 現在予約中の送迎 1 件 and balance stays 7回分."
+      }
+    },
+    "note": "Other refreshed Playwright screenshots in outputs/refresh-20261120/{local,reviewer}/ were verified programmatically by their suites; only LOCAL-UI-07.png was directly opened via read_file in Round 15."
+  },
+  "evidenceChecks": {
+    "outputs/refresh-20261120/offline/safety-results.json": {
+      "sha256": "8813ad9960373878029724473a28ec11c2052db0b4218f2165ca5a18cca79a13",
+      "pass": true,
+      "sourceHashMatch": true
+    },
+    "outputs/refresh-20261120/local/results.json": {
+      "sha256": "bcf8b159f79727a37e13d738695b820c77eeb3d5d23533749d9f9741119350fb",
+      "pass": true,
+      "count": 14,
+      "sourceHashMatch": true
+    },
+    "outputs/refresh-20261120/reviewer/results.json": {
+      "sha256": "f1c9af43d49c64ba7846a0acdbd43f118c9406eb2f1fe031cc5c20d5a881ede3",
+      "pass": true,
+      "count": 8,
+      "sourceHashMatch": true
+    }
+  },
+  "conclusion": "No unresolved blocking defect in Round 15: IR-02/IR-03/IR-04 verified via Playwright local & reviewer suites, legacy scripts & PDF generator aligned with in-page cancel confirmation dialog while preserving r19/v36 SSOT, and Kobayashi chat history (10/7-11/27) inventoried with unsent draft message.",
+  "limits": [
+    "Customer acceptance CUST-01..06 remains 0/6 NOT_RUN",
+    "thirdPartyPassed: 0; release remains HOLD; production rollout has not started",
+    "src/ and live https://eigo-taxi-test.web.app/ deployment (sourceDigest 0b77363bfa65bdeff67322aec73ff3fc218aaccb37ee6fb5ab85dbd7d20c013b) were not modified or redeployed in Round 15",
+    "Legacy Puppeteer scripts (run_acceptance.cjs, run_hosted_acceptance.cjs, run_all_e2e_evidence.cjs) and generate_manual_uat_pdf.cjs binary output are syntax/selector aligned only (not-run); r19 SSOT registry.json/CUSTOMER_ACCEPTANCE_MINIMUM_20261107.md/SCREEN_INTERFACE_DESIGN.md retained unchanged for v36 PPTX consistency"
+  ]
+}

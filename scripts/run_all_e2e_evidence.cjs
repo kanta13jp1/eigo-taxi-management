@@ -32,9 +32,8 @@ async function run() {
   await page.setViewport({ width: 1280, height: 800 });
 
   page.on('dialog', async (dialog) => {
-    log(`[Dialog Triggered] Type: ${dialog.type()}, Message: "${dialog.message()}"`);
-    await dialog.accept();
-    log(`[Dialog Accepted]`);
+    log(`[Unexpected Native Dialog] Type: ${dialog.type()}, Message: "${dialog.message()}"`);
+    await dialog.dismiss();
   });
 
   log(`Navigating to ${TARGET_URL}...`);
@@ -244,6 +243,11 @@ async function run() {
     await page.evaluate(() => {
       const cancelBtns = Array.from(document.querySelectorAll('button')).filter((b) => b.textContent.includes('キャンセル'));
       if (cancelBtns.length > 0) cancelBtns[0].click();
+    });
+    await page.waitForSelector('dialog[open]');
+    await page.evaluate(() => {
+      const confirmBtn = Array.from(document.querySelectorAll('dialog[open] button')).find((b) => b.textContent.trim() === '取消を確定');
+      if (confirmBtn) confirmBtn.click();
     });
     await new Promise((r) => setTimeout(r, 800));
 
