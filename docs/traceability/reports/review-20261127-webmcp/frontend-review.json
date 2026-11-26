@@ -1,0 +1,164 @@
+{
+  "date": "2026-11-27",
+  "completedAt": "2026-11-27T05:21:51.937096+09:00",
+  "round": "Antigravity MCP / MCP Apps / W3C WebMCP Integration (on origin/main Round 14 + PR #10)",
+  "reviewer": "Independent subagent deep-reviewer (conversation 0053bd83-d484-4f57-84b4-84f01d84ee8e) + live public deployment & browser verification",
+  "verdict": "APPROVE",
+  "scope": [
+    "src/App.tsx",
+    "src/components/WebMcpBridge.tsx",
+    "scripts/test_webmcp_bridge.cjs",
+    "docs/MCP_INTEGRATION.md",
+    "AGENTS.md",
+    ".agents/skills/eigo-taxi-delivery-verification/SKILL.md",
+    "mcp/package.json",
+    "mcp/tsconfig.json",
+    "mcp/tsconfig.app.json",
+    "mcp/scripts/build.mjs",
+    "mcp/src/types.ts",
+    "mcp/src/store.ts",
+    "mcp/src/gas-client.ts",
+    "mcp/src/backend.ts",
+    "mcp/src/server.ts",
+    "mcp/src/cli.ts",
+    "mcp/app/main.ts",
+    "mcp/app/styles.css",
+    "mcp/tests/store.test.mjs",
+    "mcp/tests/gas-client.test.mjs",
+    "mcp/tests/mcp-e2e.test.mjs",
+    ".agents/plugins/eigo-taxi-mcp/plugin.json",
+    ".agents/plugins/eigo-taxi-mcp/mcp_config.json",
+    ".agents/plugins/eigo-taxi-mcp/skills/eigo-taxi-mcp/SKILL.md",
+    ".agents/plugins/eigo-taxi-mcp/assets/logo.svg",
+    ".agents/plugins/eigo-taxi-mcp/bin/server.mjs",
+    ".agents/plugins/eigo-taxi-mcp/bin/dashboard.html"
+  ],
+  "sourceHashes": {
+    "src/App.tsx": "1b651eacd5401dcf531a76ee38494be15b35b2b58cbc376fc9bf50d00800257e",
+    "src/components/WebMcpBridge.tsx": "f9a505e558a3e12298429752c0cbe1ea3f11639b007404c51895459108098592",
+    "scripts/test_webmcp_bridge.cjs": "1ec4fbda9d02ba9eb25467702d9b2c2a05a2195f167af3adfa08d6e0cab2d863",
+    "docs/MCP_INTEGRATION.md": "98d30420f1930303409edbcad98ed7b56b9d5c00b4933e994f89584f70932595",
+    "AGENTS.md": "707aa7c83777a8b97ffbae00a7753a33573de2b827fa5ab953a893346cc26108",
+    ".agents/skills/eigo-taxi-delivery-verification/SKILL.md": "b088e242b6d359b1cb4a2a2e1e54b05d44b3f0e5ecda1c5c70a41421f14b6c2c",
+    "mcp/package.json": "35ec5f839ffac9277e179f68392a3b9e7b1e0764dbda10d620e5e391c46994da",
+    "mcp/tsconfig.json": "6146660deaa4c0d1ca097e96cefc19d3f680dcff74a496611c7435db0490dce1",
+    "mcp/tsconfig.app.json": "b50a2b06b013105e470360c13b1ab8938506adafa2abbe0e062e45c1d942673c",
+    "mcp/scripts/build.mjs": "830035a62fa3c4d38b2ca7a8d51487f13bb6419c204bc5735214054df793a019",
+    "mcp/src/types.ts": "70c4b0cb1b52d1cb9bf2f9ec77729d80e8f2c5cf53671849a95f514ed70c4815",
+    "mcp/src/store.ts": "a9251a1e47dcdee84679329e2e37553af3cc274e8dee30266e89c40a75081ff7",
+    "mcp/src/gas-client.ts": "797c547d4ea5a30193e2448e809a92cdac4080a44ca136cac8bec7cf432a6ba6",
+    "mcp/src/backend.ts": "9a6ab11860644468359ddcfff9658e6f623ef29c1be74645590ea2795f8590d9",
+    "mcp/src/server.ts": "62a56b04323bc9c09c631ca6cf27d388044d5824644ee90cbbb1c9a95a1e2744",
+    "mcp/src/cli.ts": "fb5c7a0673f5fed4ad19673abd471b59e471fec0d3c02956907dcdb7f3dd7c5b",
+    "mcp/app/main.ts": "c5de2cf91ffd2884d1c234fe97d07dc65df1bd09182bb281f550d96590521e57",
+    "mcp/app/styles.css": "68fc78de5f29a6967742c480317a58f72dd11df4f8c4a15ed3e8a6671b364a9f",
+    "mcp/tests/store.test.mjs": "ac55db081c6b9143d6e4920c4a564e7c9aee938dc459868ed5293aff3dee60fa",
+    "mcp/tests/gas-client.test.mjs": "f1c61112523685e6b5ba39d01d9c9b9230251174f6a6111f93d1b1604262360c",
+    "mcp/tests/mcp-e2e.test.mjs": "815f68cddddb091370fcaf88ee378468bf4312441de5dca45740ada60f2804ee",
+    ".agents/plugins/eigo-taxi-mcp/plugin.json": "f8661a91a51d2d3607abf520e17c99c754b521876a4d5a2d45896563704608ad",
+    ".agents/plugins/eigo-taxi-mcp/mcp_config.json": "96763e54d2c66c551e5d561b54aacd9c2ea1334c58714fef641d1d5bd298bc26",
+    ".agents/plugins/eigo-taxi-mcp/skills/eigo-taxi-mcp/SKILL.md": "5e1e24b79a843d2227fed5e27aff5a775e3fe1e665f5d81c8284e45665ef90b4",
+    ".agents/plugins/eigo-taxi-mcp/assets/logo.svg": "daca81f6a088119d35ce95b3d22317daf01cf7acbebcd65788ddeaeb72cd421e",
+    ".agents/plugins/eigo-taxi-mcp/bin/server.mjs": "e832fc163954184716445908cf9ea6698db3260a22e0e2faca8711c19b5a9cd5",
+    ".agents/plugins/eigo-taxi-mcp/bin/dashboard.html": "a12901d121d398f0e737bb93b32d698b80ba983d1e18c2ca419980efe8c1a3b7"
+  },
+  "deployment": {
+    "environment": "mighty-test",
+    "projectId": "eigo-taxi-app",
+    "siteId": "eigo-taxi-test",
+    "url": "https://eigo-taxi-test.web.app",
+    "hostingVersion": "882b71593ffa7310",
+    "builtAt": "2026-11-26T20:13:21.650Z",
+    "baseCommit": "98e4a27f3709d80b7ebb2eeb03361e229a31700d",
+    "sourceDigest": "99284e780dec40fbaa902a59d8f12cfab31af69a1bd781e09a9bf3de06403208",
+    "publicVerificationSnapshot": "docs/acceptance/deployment-verification/public-2026-11-26T20-15-12-443Z.json",
+    "publicVerificationSha256": "e9ed58701977b47da97ad77796099b0737c9ae2d147009534134334723abb1fa",
+    "publicUrlsMatched": "6/6"
+  },
+  "independentAudit": {
+    "subagent": "deep-reviewer",
+    "conversationId": "0053bd83-d484-4f57-84b4-84f01d84ee8e",
+    "verdict": "APPROVE",
+    "blockingFindings": [],
+    "nonBlockingNotes": [
+      "NB-01: App.tsx switches root element across !session Fragment and logged-in div; history.replaceState + direct state updates keep demo transition deterministic without hashchange reset.",
+      "NB-02: WebMcpBridge execute handlers rely on compliant WebMCP object arguments.",
+      "NB-03: mcp/src/cli.ts invalid EIGO_TAXI_MCP_PORT falls back to 8787 while Store.switchRole honors forcedRole at loadState.",
+      "NB-04: Step A5 traceability baseline and frontend-review.json recorded after visual and deep-reviewer gates."
+    ]
+  },
+  "visualReview": {
+    "inspectedViaReadFile": true,
+    "screenshots": {
+      "outputs/daily-20261127/screenshots-webmcp/webmcp-admin-desktop-live.png": {
+        "sha256": "2b17f1008fe36c5557a5484b2c368e5b27745233d8ef749a05e18a40782ae589",
+        "observation": "1280x900 live public admin demo after WebMCP login, 19:15 roundtrip reservation creation, and RIDE-102 completion: status toast, -1 badge, and cards render cleanly with zero clipping."
+      },
+      "outputs/daily-20261127/screenshots-webmcp/webmcp-modal-desktop-live.png": {
+        "sha256": "69ad127f787adb1ec6fa36bb4bf475260f2384b35cc9d9bddf6db65b873f0b07",
+        "observation": "1280x900 live public AddRideModal centered over frosted backdrop with focus ring on student selector and body overflow hidden."
+      },
+      "outputs/daily-20261127/screenshots-webmcp/webmcp-parent-mobile-live.png": {
+        "sha256": "b4fb4780423c9912f14b8f19c96f6fdd9b6e4d86f8439a4b6ad3f5ae21109f63",
+        "observation": "375x667 live public parent portal via WebMCP: Round 14 emerald-700 to teal-800 card contrast preserved, single assigned student STU-001 shown, zero horizontal overflow."
+      },
+      "outputs/daily-20261127/screenshots-webmcp/webmcp-terms-320px-live.png": {
+        "sha256": "cece0384d811535d60eb343bce779db322f9820bfba5dbe430be57743a589e81",
+        "observation": "320x667 live public TermsModal: Round 14 3-tab wrap into 2 rows with zero clipping, active underline + focus ring on disclaimer tab, and visible close button."
+      }
+    }
+  },
+  "evidenceChecks": {
+    "mcp_unit_and_e2e_tests": {
+      "status": "PASS",
+      "passed": 8,
+      "total": 8
+    },
+    "traceability_negative_tests": {
+      "status": "PASS",
+      "passed": 34,
+      "total": 34
+    },
+    "offline_contract_suites": {
+      "status": "PASS",
+      "count": 9,
+      "includes": "scripts/test_webmcp_bridge.cjs"
+    },
+    "outputs/refresh-20261120/offline/reservation-retry-ui.json": {
+      "sha256": "5168ba2f268fba6c2efa3c156b665c03d40771b9f5343c9ea68f26766a165ae4",
+      "pass": true
+    },
+    "outputs/refresh-20261120/local/results.json": {
+      "sha256": "384ab28e787db3749db246f79338f01cdceaed009abb144e7986ea8d454f65d2",
+      "pass": true,
+      "count": 14
+    },
+    "outputs/refresh-20261120/reviewer/results.json": {
+      "sha256": "7e66c1540744e0086c7f4b6be5440b469e945e9d8a510d99a531bf0505d040e7",
+      "pass": true,
+      "count": 8
+    },
+    "outputs/refresh-20261120/modal-scroll/results.json": {
+      "sha256": "7adfb79b61fef735bb1edd5c25ccd04190ec07e7bcd977d69585ddd4f4aca18b",
+      "pass": true,
+      "count": 2
+    },
+    "outputs/r19-adoption-20261111/regression/trace-ui/results.json": {
+      "sha256": "e36045c12fd952eb03a577a422afcd384c9069ebdb7e522e30406f310f2fe364",
+      "pass": true,
+      "count": 6
+    },
+    "outputs/daily-20261127/public-ui-webmcp.json": {
+      "sha256": "68b2dbe0f75f60da14c37c6c3c51a35a65b8a78df5be7c04a2cae7c016a8ecaf",
+      "pass": true
+    }
+  },
+  "conclusion": "Antigravity MCP / MCP Apps / W3C WebMCP integration cleanly merged onto origin/main (Round 14 + PR #10), deployed to eigo-taxi-test (6/6 SHA-256 match), visually audited on live public URL, and approved by independent deep-reviewer.",
+  "limits": [
+    "Customer acceptance CUST-01..06 remains NOT_RUN (0/6)",
+    "thirdPartyPassed: 0; release remains HOLD; production rollout has not started",
+    "gas/Code.gs is unmodified; scripts/test_gas.cjs was not run",
+    "Public live audit uses frontend demo route with synthetic document.modelContext; no real Google OAuth login, live GAS/Spreadsheet/Calendar mutation, or physical device testing claimed",
+    "Shared Google Spreadsheet API write remains blocked by disabled Google Sheets API on GCP project 994752997370"
+  ]
+}

@@ -1,5 +1,5 @@
 {
-  "executedAt": "2026-11-22T17:21:39.700Z",
+  "executedAt": "2026-11-26T20:11:58.412Z",
   "mode": "Node VM; Firebase SDK and GAS responses stubbed; no real Google sign-in claim",
   "passed": 33,
   "total": 33,
@@ -8,7 +8,7 @@
     "src/services/api.ts": "9de6da24a594b1bb37d12d1dc4b2910a8cfdadf9124ed4abf22ac8104cd35e28",
     "src/services/google-auth.ts": "01667af44fce383f3763c8bb73497dafc690381592ddcf383d46aaafe90fe0d8",
     "src/portal.ts": "874dce7f269e59073b75d6ae47c7fb3b682686fa2ab214d8cb0eacb48c59cac7",
-    "C:\\Users\\kanta\\GitHub\\eigo-taxi-management\\scripts\\test_portals.cjs": "05a3b663dc381ccdd69f24ece44e9400f12f5d48fb114b7f68bb4ea82de3086c"
+    "C:\\Users\\kanta\\.gemini\\antigravity\\worktrees\\3d591f93-7b51-463e-8cee-ed8405ec1b64\\feat-webmcp-20261127\\scripts\\test_portals.cjs": "05a3b663dc381ccdd69f24ece44e9400f12f5d48fb114b7f68bb4ea82de3086c"
   },
   "results": [
     {

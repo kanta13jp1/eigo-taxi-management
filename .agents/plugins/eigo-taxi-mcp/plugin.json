@@ -1,0 +1,13 @@
+{
+  "$schema": "https://antigravity.google/schemas/v1/plugin.json",
+  "name": "eigo-taxi-mcp",
+  "displayName": "Eigo Taxi Link MCP",
+  "version": "1.0.0",
+  "description": "Eigo Taxi Link (英語教室 送迎チケット管理システム) を Antigravity から直接参照・操作するための MCP サーバーおよびインタラクティブ MCP App プラグイン",
+  "logo": "assets/logo.svg",
+  "suggestedPrompts": [
+    "open_dashboard を開いて、本日の送迎予定と残チケットが少ない生徒を確認して",
+    "Eigo Taxi の本日の送迎ブリーフィングを作成して",
+    "demo モードで新規送迎予約を作成して完了処理まで確認して"
+  ]
+}

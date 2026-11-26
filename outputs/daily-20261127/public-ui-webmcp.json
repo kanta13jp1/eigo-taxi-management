@@ -1,0 +1,106 @@
+{
+  "executedAt": "2026-11-26T20:16:28.016Z",
+  "target": "https://eigo-taxi-test.web.app",
+  "mode": "Public frontend demo route with synthetic W3C document.modelContext; external non-origin & mutation requests blocked; no real Google OAuth or GAS mutation",
+  "unauthTools": [
+    "eigo_taxi_enter_demo",
+    "eigo_taxi_get_status"
+  ],
+  "unauthStatus": {
+    "loggedIn": false,
+    "portalRoute": "home",
+    "releasePolicy": "HOLD"
+  },
+  "adminTools": [
+    "eigo_taxi_add_tickets",
+    "eigo_taxi_cancel_reservation",
+    "eigo_taxi_complete_ride",
+    "eigo_taxi_create_reservation",
+    "eigo_taxi_create_student",
+    "eigo_taxi_get_status",
+    "eigo_taxi_list_rides",
+    "eigo_taxi_list_students",
+    "eigo_taxi_refresh_data",
+    "eigo_taxi_switch_tab"
+  ],
+  "parentTools": [
+    "eigo_taxi_cancel_reservation",
+    "eigo_taxi_create_reservation",
+    "eigo_taxi_get_status",
+    "eigo_taxi_list_rides",
+    "eigo_taxi_list_students",
+    "eigo_taxi_refresh_data"
+  ],
+  "postLogoutTools": [
+    "eigo_taxi_enter_demo",
+    "eigo_taxi_get_status"
+  ],
+  "webmcpActions": {
+    "badCancelIsError": true,
+    "createdReservation": true,
+    "completedRideId": "RIDE-102"
+  },
+  "adminStandards": {
+    "headingsCount": 5,
+    "headingSkips": [],
+    "deadHits": [],
+    "overflowX": 0
+  },
+  "modalAudit": {
+    "overflowHidden": true,
+    "focusInsideAfterTab": true,
+    "focusInsideAfterShiftTab": true,
+    "overflowRestored": true,
+    "focusRestoredToOpener": true
+  },
+  "parentStandards": {
+    "headingsCount": 4,
+    "headingSkips": [],
+    "deadHits": [],
+    "overflowX": 0
+  },
+  "terms320Audit": {
+    "scrollWidth": 288,
+    "clientWidth": 288,
+    "tabs": [
+      {
+        "label": "利用規約",
+        "visible": true
+      },
+      {
+        "label": "個人情報の取扱い",
+        "visible": true
+      },
+      {
+        "label": "免責事項",
+        "visible": true
+      }
+    ],
+    "panels": [
+      {
+        "id": "terms-panel-terms",
+        "hidden": true
+      },
+      {
+        "id": "terms-panel-privacy",
+        "hidden": true
+      },
+      {
+        "id": "terms-panel-disclaimer",
+        "hidden": false
+      }
+    ],
+    "switchedToTerms": true,
+    "termsFocusRestored": true
+  },
+  "blockedExternal": [],
+  "pageErrors": [],
+  "consoleErrors": [],
+  "screenshots": [
+    "outputs/daily-20261127/screenshots-webmcp/webmcp-admin-desktop-live.png",
+    "outputs/daily-20261127/screenshots-webmcp/webmcp-modal-desktop-live.png",
+    "outputs/daily-20261127/screenshots-webmcp/webmcp-parent-mobile-live.png",
+    "outputs/daily-20261127/screenshots-webmcp/webmcp-terms-320px-live.png"
+  ],
+  "status": "PASS"
+}

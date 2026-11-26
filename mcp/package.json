@@ -1,0 +1,28 @@
+{
+  "name": "eigo-taxi-mcp",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Antigravity MCP server (Stdio / Streamable HTTP / MCP Apps UI) for Eigo Taxi Link",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json && tsc -p tsconfig.app.json",
+    "build": "node scripts/build.mjs",
+    "pretest": "npm run build",
+    "test": "node --test tests/*.test.mjs",
+    "start": "node dist/server.mjs",
+    "start:http": "node dist/server.mjs --transport http"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/ext-apps": "^1.7.5",
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^24.13.3",
+    "esbuild": "^0.27.3",
+    "typescript": "~6.0.2"
+  }
+}

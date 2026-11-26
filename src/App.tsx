@@ -13,6 +13,7 @@ import { AddStudentModal } from './components/AddStudentModal';
 import { TermsModal } from './components/TermsModal';
 import { PortalInvitations } from './components/PortalInvitations';
 import { AccountManagement } from './components/AccountManagement';
+import { WebMcpBridge } from './components/WebMcpBridge';
 import { assertPortal, parsePortal, portalHash } from './portal';
 
 // @trace CODE-22 REQ-22
@@ -133,7 +134,7 @@ export function App() {
     };
   }, [toastMessage]);
 
-  const loadData = useCallback(async () => {
+  const loadData = useCallback(async (rethrow = false) => {
     const expectedSession = JSON.stringify(ApiService.getSession());
     try {
       const [studentsData, ridesData] = await Promise.all([
@@ -146,10 +147,12 @@ export function App() {
         setErrorMessage('');
         return ridesData;
       }
+      if (rethrow) throw new Error('ログイン状態が変わりました');
     } catch (err) {
       if (JSON.stringify(ApiService.getSession()) === expectedSession) {
         setErrorMessage(err instanceof Error ? err.message : 'データを取得できませんでした');
       }
+      if (rethrow) throw err instanceof Error ? err : new Error('データを取得できませんでした');
     } finally {
       setIsLoading(false);
     }
@@ -199,16 +202,24 @@ export function App() {
   };
 
   // 送迎キャンセルハンドラ
-  const handleCancelRide = async (rideId: string) => {
+  const handleCancelRide = async (rideId: string, rethrow = false) => {
     const expectedSession = JSON.stringify(ApiService.getSession());
     setToastMessage(null);
     try {
       await ApiService.cancelReservation(rideId);
-      if (JSON.stringify(ApiService.getSession()) !== expectedSession) return;
-      const refreshed = await loadData();
-      if (JSON.stringify(ApiService.getSession()) !== expectedSession) return;
+      if (JSON.stringify(ApiService.getSession()) !== expectedSession) {
+        if (rethrow) throw new Error('ログイン状態が変わりました');
+        return;
+      }
+      const refreshed = await loadData(rethrow);
+      if (JSON.stringify(ApiService.getSession()) !== expectedSession) {
+        if (rethrow) throw new Error('ログイン状態が変わりました');
+        return;
+      }
       if (refreshed?.find(ride => ride.id === rideId)?.status !== 'cancelled') {
-        setErrorMessage('予約の取消結果を確認できませんでした。台帳を再取得して、対象の予約の状態を確認してください。');
+        const msg = '予約の取消結果を確認できませんでした。台帳を再取得して、対象の予約の状態を確認してください。';
+        setErrorMessage(msg);
+        if (rethrow) throw new Error(msg);
         return;
       }
       showToast('送迎予約のキャンセルが完了しました');
@@ -216,6 +227,7 @@ export function App() {
       if (JSON.stringify(ApiService.getSession()) === expectedSession) {
         setErrorMessage(e instanceof Error ? e.message : 'キャンセルできませんでした');
       }
+      if (rethrow) throw e instanceof Error ? e : new Error('キャンセルできませんでした');
     }
   };
 
@@ -256,19 +268,66 @@ export function App() {
     showToast(`👤 新規生徒「${newStudent.name}」さんを登録しました`);
   };
 
-  if (checkingSession) return <main className="p-12 text-center"><p role="status">ログイン状態を確認しています…</p></main>;
-  if (!session) return <LoginScreen key={JSON.stringify(route)} route={route} requiresLogin={requiresLogin} onLogin={next => {
-    try { assertPortal(parsePortal(window.location.hash),next.user); }
-    catch (error) { ApiService.logout(); throw error; }
-    setRequiresLogin(false); setIsLoading(true); setErrorMessage('');
+  const handleEnterDemoFromMcp = (role: 'admin' | 'parent') => {
+    const targetHash = role === 'admin' ? '#/admin' : '#/parent';
+    const nextSession = ApiService.enterDemo(role);
+    if (window.location.hash !== targetHash) {
+      if (typeof window.history?.replaceState === 'function') {
+        window.history.replaceState(
+          null,
+          '',
+          `${window.location.pathname || '/'}${window.location.search || ''}${targetHash}`,
+        );
+        setRoute(parsePortal(targetHash));
+      } else {
+        window.location.hash = targetHash;
+      }
+    }
+    setCheckingSession(false);
+    setRequiresLogin(false);
+    setIsLoading(true);
+    setErrorMessage('');
     setCurrentTab('teacher');
-    setSession(next);
-  }} />;
+    setSession(nextSession);
+  };
+
+  if (checkingSession) return <main className="p-12 text-center"><p role="status">ログイン状態を確認しています…</p></main>;
   const activeTab = isAdmin ? (reviewOnly ? 'teacher' : currentTab) : 'parent';
-  const visibleStudents = students.filter(student => !reviewOnly || session.user.studentIds.includes(student.id));
-  const visibleRides = rides.filter(ride => !reviewOnly || session.user.studentIds.includes(ride.studentId));
+  const visibleStudents = students.filter(student => !reviewOnly || session?.user.studentIds.includes(student.id));
+  const visibleRides = rides.filter(ride => !reviewOnly || session?.user.studentIds.includes(ride.studentId));
+  const webMcpBridge = (
+    <WebMcpBridge
+      session={session}
+      route={route}
+      students={visibleStudents}
+      rides={visibleRides}
+      currentTab={currentTab}
+      isAdmin={isAdmin}
+      reviewOnly={reviewOnly}
+      isFullAdmin={isFullAdmin}
+      onEnterDemo={handleEnterDemoFromMcp}
+      onCreateRide={handleCreateRide}
+      onCancelRide={(rideId) => handleCancelRide(rideId, true)}
+      onCompleteRide={handleCompleteRide}
+      onAddTickets={handleAddTickets}
+      onAddStudent={handleAddStudent}
+      onSwitchTab={setCurrentTab}
+      onRefreshData={() => loadData(true)}
+    />
+  );
+  if (!session) return <>
+    {webMcpBridge}
+    <LoginScreen key={JSON.stringify(route)} route={route} requiresLogin={requiresLogin} onLogin={next => {
+      try { assertPortal(parsePortal(window.location.hash),next.user); }
+      catch (error) { ApiService.logout(); throw error; }
+      setRequiresLogin(false); setIsLoading(true); setErrorMessage('');
+      setCurrentTab('teacher');
+      setSession(next);
+    }} />
+  </>;
   return (
     <div className="min-h-screen bg-slate-100/70 text-slate-800 flex flex-col font-sans">
+      {webMcpBridge}
       <a
         href="#main-content"
         onClick={(e) => {

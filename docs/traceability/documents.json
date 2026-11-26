@@ -5432,6 +5432,392 @@
       ]
     },
     {
+      "id": "DOC-0671",
+      "path": "docs/MCP_INTEGRATION.md",
+      "state": "reference",
+      "sha256": "98d30420f1930303409edbcad98ed7b56b9d5c00b4933e994f89584f70932595",
+      "items": [
+        {
+          "id": "DOC-0671-ITEM-00001",
+          "line": 1,
+          "contentSha256": "8f87ae82d7c6ce50db9a2c4a0657b4386b23f1851034ca0b9f7223f761d753fb",
+          "occurrence": 1,
+          "preview": "# Antigravity 向け MCP / MCP Apps / W3C WebMCP 統合ガイド"
+        },
+        {
+          "id": "DOC-0671-ITEM-00002",
+          "line": 3,
+          "contentSha256": "0bc004285cd5ce6dbd16e21ba56dfaed2dfa570448143c2c19644723732e0ac0",
+          "occurrence": 1,
+          "preview": "本ドキュメントは、`eigo-taxi-management`（Eigo Taxi Link）を Google Antigravity（App / CLI / IDE）および対応ブラウザエージェントから直接参照・操作するための 3 層 MCP 統合仕様をまとめます。"
+        },
+        {
+          "id": "DOC-0671-ITEM-00003",
+          "line": 5,
+          "contentSha256": "a5fbac643ffc6ea018474c570b8b7a4d4736069ecb50de804158a31a726bc958",
+          "occurrence": 1,
+          "preview": "> **受入・本番凍結境界**: 顧客確認 `CUST-01`〜`CUST-06` は `NOT_RUN`（0/6）、`thirdPartyPassed: 0`、`release: \"HOLD\"` を維持します。MCP 経由の操作やデモ実行を顧客受入合格・本番運用開始とみなしては"
+        },
+        {
+          "id": "DOC-0671-ITEM-00004",
+          "line": 7,
+          "contentSha256": "71f955773c32206fc4bc3ade5cda9b775e1017a08766bf304920cf2966f75ff9",
+          "occurrence": 1,
+          "preview": "## 1. 全体構成（3 層統合）"
+        },
+        {
+          "id": "DOC-0671-ITEM-00005",
+          "line": 9,
+          "contentSha256": "6e8d0d980b3ea3cd26f0ed227d6296fa5775752fde4512e1ed6523781c46d3f2",
+          "occurrence": 1,
+          "preview": "| 層 | 実装先 | 方式 | 用途 |"
+        },
+        {
+          "id": "DOC-0671-ITEM-00006",
+          "line": 10,
+          "contentSha256": "f1a346b3c63ca7ac887076df3f598cbd2f85f0c97e31d43fb3803be524f20102",
+          "occurrence": 1,
+          "preview": "| --- | --- | --- | --- |"
+        },
+        {
+          "id": "DOC-0671-ITEM-00007",
+          "line": 11,
+          "contentSha256": "5becbd98df7318af62a8a219c6430fdcac23b3096197a71469eae5f3b31b6c8c",
+          "occurrence": 1,
+          "preview": "| **MCP サーバー** | `mcp/` (`server.mjs`) | Stdio / Streamable HTTP (`/mcp`, `/health`) | Antigravity App / CLI / IDE からの直接操作（`demo` 既定 / `live"
+        },
+        {
+          "id": "DOC-0671-ITEM-00008",
+          "line": 12,
+          "contentSha256": "2549abd584dbfdfe5e2ea7151b031ee4e4c85fe9b5f5fd75c88ed2cf1262ff90",
+          "occurrence": 1,
+          "preview": "| **MCP App UI** | `mcp/app/` (`dashboard.html`) | `ui://eigo-taxi/dashboard.html` (`text/html;profile=mcp-app`) | チャット内インライン、サイドペイン (`aux_p"
+        },
+        {
+          "id": "DOC-0671-ITEM-00009",
+          "line": 13,
+          "contentSha256": "d65d80722d17547cca02f559c0ba3a748e30b7ba5f1e33041dc03d8468fb0dba",
+          "occurrence": 1,
+          "preview": "| **Antigravity プラグイン** | `.agents/plugins/eigo-taxi-mcp/` | `plugin.json` + `mcp_config.json` + `SKILL.md` | Antigravity への単一パッケージ配布・ツール/スキ"
+        },
+        {
+          "id": "DOC-0671-ITEM-00010",
+          "line": 14,
+          "contentSha256": "5bdfccf4125a2f85f7e2f6f8ed4ea841d13421d533b68048490735b7dc6f1780",
+          "occurrence": 1,
+          "preview": "| **Web サイト WebMCP** | `src/components/WebMcpBridge.tsx` | `document.modelContext ?? navigator.modelContext` | 公開サイト開覧中の現在ログインセッション権限に同期したブラ"
+        },
+        {
+          "id": "DOC-0671-ITEM-00011",
+          "line": 16,
+          "contentSha256": "71485fe6927717d0bafdd131036c184ec77573d8f21b0ea47ba110ec63f130bd",
+          "occurrence": 1,
+          "preview": "## 2. MCP サーバー機能一覧（`mcp/src/server.ts`）"
+        },
+        {
+          "id": "DOC-0671-ITEM-00012",
+          "line": 18,
+          "contentSha256": "5860a06e1f8aeb799b496b65115a7ae2e3595bb28a60f73b848b69630bc7b05e",
+          "occurrence": 1,
+          "preview": "### 2.1 ツール（14 種）"
+        },
+        {
+          "id": "DOC-0671-ITEM-00013",
+          "line": 20,
+          "contentSha256": "a2e0babae161034aaa96d96e7fdcc779bc4cafcf4d1fd04f94bb53bdc263d723",
+          "occurrence": 1,
+          "preview": "| ツール名 | 権限 / モード | 主な役割 |"
+        },
+        {
+          "id": "DOC-0671-ITEM-00014",
+          "line": 21,
+          "contentSha256": "b8ec48555607bc6202126c5db642f11cf898151fb6f2aa19d2e28aea19d7e532",
+          "occurrence": 1,
+          "preview": "| --- | --- | --- |"
+        },
+        {
+          "id": "DOC-0671-ITEM-00015",
+          "line": 22,
+          "contentSha256": "3b6db4089ab5cef6ddbf581680c4c6cf21c0f286c22467d647f93ebe41980823",
+          "occurrence": 1,
+          "preview": "| `get_service_status` | 共通（読取専用） | 動作モード、現在ロール、`readonly` 設定、`HOLD` 方針、任意で GAS `GET` ヘルスチェック |"
+        },
+        {
+          "id": "DOC-0671-ITEM-00016",
+          "line": 23,
+          "contentSha256": "0e975007011083dd8b4258b4d76e1c67542ab07de8952890770831674ceb6936",
+          "occurrence": 1,
+          "preview": "| `open_dashboard` | 共通（読取専用・UI付） | 引数 `{}` でも起動可。`ui://eigo-taxi/dashboard.html` と最新スナップショット返却 |"
+        },
+        {
+          "id": "DOC-0671-ITEM-00017",
+          "line": 24,
+          "contentSha256": "2858434096f92122950e291b4e14e14286e281d30625490ddd4ba24a03bde068",
+          "occurrence": 1,
+          "preview": "| `list_students` | ログイン権限内（読取専用） | 生徒一覧取得（部分一致 `query` / 残少 `lowTicketOnly` 絞り込み） |"
+        },
+        {
+          "id": "DOC-0671-ITEM-00018",
+          "line": 25,
+          "contentSha256": "6774d2e49d84e1a718443d7554b9ccea5c78bbe57563115011863997e2d32dff",
+          "occurrence": 1,
+          "preview": "| `get_student` | 担当生徒範囲内（読取専用） | 指定生徒の詳細情報と関連予約一覧 |"
+        },
+        {
+          "id": "DOC-0671-ITEM-00019",
+          "line": 26,
+          "contentSha256": "58bd5e8eb85184e3092471112ccba3e0d7e92d700b86e48e13a8d827ac433410",
+          "occurrence": 1,
+          "preview": "| `create_student` | 管理者（`readonly` 時拒否） | 新規生徒登録（冪等 ID 対応） |"
+        },
+        {
+          "id": "DOC-0671-ITEM-00020",
+          "line": 27,
+          "contentSha256": "c025d50d3451746b5727023337d5f4f74d67b60aae62e329f3355e8dae3e9c53",
+          "occurrence": 1,
+          "preview": "| `list_rides` | ログイン権限内（読取専用） | 送迎予約一覧（`date`, `todayOnly`, `studentId`, `status` 絞り込み） |"
+        },
+        {
+          "id": "DOC-0671-ITEM-00021",
+          "line": 28,
+          "contentSha256": "a8deb22cf88599dc60fb818dc665cad5958f20938fadb993c654dde661003869",
+          "occurrence": 1,
+          "preview": "| `create_reservation` | 担当生徒範囲内（`readonly` 時拒否） | 送迎予約登録（予約時は残高消費なし、冪等 ID 対応） |"
+        },
+        {
+          "id": "DOC-0671-ITEM-00022",
+          "line": 29,
+          "contentSha256": "297a11bf23d9ee379da4d0a8a7825d7701ea9c5db77150909b38d7149ba44314",
+          "occurrence": 1,
+          "preview": "| `cancel_reservation` | 担当生徒範囲内（`readonly` 時拒否） | 予約中 (`scheduled`) のキャンセル（完了済みは拒否） |"
+        },
+        {
+          "id": "DOC-0671-ITEM-00023",
+          "line": 30,
+          "contentSha256": "93edbade2ac4ffb51631cac2029a387c22d4c61cba4e12a0b6e5098751d805a7",
+          "occurrence": 1,
+          "preview": "| `complete_ride` | 管理者（`readonly` 時拒否） | 送迎完了＆チケット消費（片道 1 枚 / 往復 2 枚、残高不足拒否） |"
+        },
+        {
+          "id": "DOC-0671-ITEM-00024",
+          "line": 31,
+          "contentSha256": "8be927900d017e22e0a7a2a87ae18600ac9f6d92676ca7f4b81245b8a6500b35",
+          "occurrence": 1,
+          "preview": "| `add_tickets` | 管理者（`readonly` 時拒否） | チケット追加（1〜100 枚、0 円以上）と購入履歴記録 |"
+        },
+        {
+          "id": "DOC-0671-ITEM-00025",
+          "line": 32,
+          "contentSha256": "101ea4051ae46ea90226f0be65abd4c00069df2d3c7a935312126c14add7591e",
+          "occurrence": 1,
+          "preview": "| `list_portal_invitations` | 管理者（読取専用） | 保護者専用エントリ URL（`#/parent/<publicEntryId>`）一覧 |"
+        },
+        {
+          "id": "DOC-0671-ITEM-00026",
+          "line": 33,
+          "contentSha256": "ac5cb9d008337e459ed2cdb83db15eea230dacbd1bdffa52b4df2b3b6cfc2d53",
+          "occurrence": 1,
+          "preview": "| `list_managed_users` | `live-gas` フル管理者（読取専用） | 登録済み Google アカウント一覧の参照 |"
+        },
+        {
+          "id": "DOC-0671-ITEM-00027",
+          "line": 34,
+          "contentSha256": "52f439bff5d761ddf04bef14cdc58c4facad7daa25ff8f0a9b8d4e67bdd8238d",
+          "occurrence": 1,
+          "preview": "| `switch_demo_role` | `demo` モード専用 | `admin` / `parent` のデモロール切替 |"
+        },
+        {
+          "id": "DOC-0671-ITEM-00028",
+          "line": 35,
+          "contentSha256": "fff1e865639dae7e48cf50b6cfad0815434882538a705a7bc60a834a13c1ef63",
+          "occurrence": 1,
+          "preview": "| `reset_demo_data` | `demo` モード専用（要 `confirm: true`） | ローカルデモ保存データの初期状態へのリセット |"
+        },
+        {
+          "id": "DOC-0671-ITEM-00029",
+          "line": 37,
+          "contentSha256": "83a979775035f70009f3810612def2b711ed5e517cfb38926c3f1f4b6161cd6f",
+          "occurrence": 1,
+          "preview": "### 2.2 リソース（4 種）とプロンプト（2 種）"
+        },
+        {
+          "id": "DOC-0671-ITEM-00030",
+          "line": 39,
+          "contentSha256": "629e74d094a17561129b343c310f1993cf9c5ee46f0d8055f3be4623ba5d3fec",
+          "occurrence": 1,
+          "preview": "- **リソース**: `ui://eigo-taxi/dashboard.html`（`text/html;profile=mcp-app`）、`eigo-taxi://overview`、`eigo-taxi://students`、`eigo-taxi://rides/to"
+        },
+        {
+          "id": "DOC-0671-ITEM-00031",
+          "line": 40,
+          "contentSha256": "bcec76bb019d210bf574b6a28ed8f6d090b60775e76d596e8d9194327f317e08",
+          "occurrence": 1,
+          "preview": "- **プロンプト**: `daily_dispatch_briefing`、`low_ticket_followup`"
+        },
+        {
+          "id": "DOC-0671-ITEM-00032",
+          "line": 42,
+          "contentSha256": "34c5253bba189c65d421b00a2943a440f96ca3d15a56edc0e533d69c6497e8b9",
+          "occurrence": 1,
+          "preview": "## 3. Antigravity でのビルド・起動・接続方法"
+        },
+        {
+          "id": "DOC-0671-ITEM-00033",
+          "line": 44,
+          "contentSha256": "8556d7bbee7cda871c56c9dc8393ae1ef90ac928ed902fa66792cc0fd845e62b",
+          "occurrence": 1,
+          "preview": "### 3.1 ビルドと単体テスト"
+        },
+        {
+          "id": "DOC-0671-ITEM-00034",
+          "line": 46,
+          "contentSha256": "74b2ae10a71417856af03b351b732cb0b59ec1596eda46bb5ab203f43ce39faf",
+          "occurrence": 1,
+          "preview": "```powershell\ncd mcp\nnpm install\nnpm run typecheck\nnpm run build\nnpm test\n```"
+        },
+        {
+          "id": "DOC-0671-ITEM-00035",
+          "line": 54,
+          "contentSha256": "df6aa440c2920f6d8f4f36fd13aff1df887b8a9b7698db20d57774a43d6465cd",
+          "occurrence": 1,
+          "preview": "`npm run build` により自己完結型バンドル `dist/server.mjs` と単一 HTML `dist/dashboard.html` が生成され、`.agents/plugins/eigo-taxi-mcp/bin/`（および導入済みの場合は `~/.gem"
+        },
+        {
+          "id": "DOC-0671-ITEM-00036",
+          "line": 56,
+          "contentSha256": "e8651d04b07eea69cd3cc5fdca25764622dee4169d35869d92e89a14c7ff1621",
+          "occurrence": 1,
+          "preview": "### 3.2 Antigravity プラグイン配置と検証"
+        },
+        {
+          "id": "DOC-0671-ITEM-00037",
+          "line": 58,
+          "contentSha256": "2cc8a9e0faa661ae4b7a4b39dcde9cb89489b6a66818e45e73981b3cc41652e8",
+          "occurrence": 1,
+          "preview": "1. リポジトリ同梱のプラグイン定義 `.agents/plugins/eigo-taxi-mcp/` を `agy plugin validate --strict .agents/plugins/eigo-taxi-mcp` で検証します。"
+        },
+        {
+          "id": "DOC-0671-ITEM-00038",
+          "line": 59,
+          "contentSha256": "c156a2ab9c905de50778604a97f132b23c1d946f4ba324e31b1e9fcc51c66ba7",
+          "occurrence": 1,
+          "preview": "2. ローカル Antigravity で有効化するには `~/.gemini/config/plugins/eigo-taxi-mcp/` へ配置します（二重登録を防ぐため `.agents/mcp_config.json` は併用しない単一構成を推奨）。"
+        },
+        {
+          "id": "DOC-0671-ITEM-00039",
+          "line": 60,
+          "contentSha256": "7e5a6d13b4d2e269b03a0dbd44141ccedc70e196c7e2ae0826a077a8931c3e60",
+          "occurrence": 1,
+          "preview": "3. `agy plugin list --json` で `eigo-taxi-mcp`（`enabled: true`, `mcpServers: [\"eigo-taxi\"]`, `skills: [\"eigo-taxi-mcp\"]`）を確認します。"
+        },
+        {
+          "id": "DOC-0671-ITEM-00040",
+          "line": 62,
+          "contentSha256": "757e6eff9bd4eba69bed6198dd41ebc0f3f67a378cbb1e911592684394306426",
+          "occurrence": 1,
+          "preview": "### 3.3 動作モード切替と Streamable HTTP"
+        },
+        {
+          "id": "DOC-0671-ITEM-00041",
+          "line": 64,
+          "contentSha256": "9d83f6fc1307f100eb54b93fa100ca4e95ae184403bea28588cdc288021003ad",
+          "occurrence": 1,
+          "preview": "- **既定 `demo` モード**: `EIGO_TAXI_MCP_MODE=demo`。`EIGO_TAXI_MCP_DATA_DIR` 配下の `demo-state.json` にローカル保存し、GAS や本番台帳へは一切送信しません。"
+        },
+        {
+          "id": "DOC-0671-ITEM-00042",
+          "line": 65,
+          "contentSha256": "29865882fd1e955a26a6f78e3877c738e15248f069dc19d3d56e8c599f42b75c",
+          "occurrence": 1,
+          "preview": "- **オプトイン `live-gas` モード**:"
+        },
+        {
+          "id": "DOC-0671-ITEM-00043",
+          "line": 66,
+          "contentSha256": "2ec5429db10d7af9d0b2558f02db9a4af1319f0eacf809190de4ca7acc5839b8",
+          "occurrence": 1,
+          "preview": "- `EIGO_TAXI_MCP_MODE=live-gas`"
+        },
+        {
+          "id": "DOC-0671-ITEM-00044",
+          "line": 67,
+          "contentSha256": "b42a21c118d3d56df366435bcb72e055de97eb52c9226d9687d612fb9c38e7b6",
+          "occurrence": 1,
+          "preview": "- `EIGO_TAXI_GAS_ID_TOKEN`: 有効な Firebase Google ID トークン（未設定時はデータ取得を Fail-Closed 拒否）"
+        },
+        {
+          "id": "DOC-0671-ITEM-00045",
+          "line": 68,
+          "contentSha256": "b54a3f56652cf66859a49a2ff0f1b21426c17f8515e6cb95633723b4d078e4a8",
+          "occurrence": 1,
+          "preview": "- `EIGO_TAXI_PORTAL_ROLE`: `admin` または `parent`"
+        },
+        {
+          "id": "DOC-0671-ITEM-00046",
+          "line": 69,
+          "contentSha256": "a3f8f7ed6bf368ccda8dcd9e6405dbfc68e7b87fbd1d6e490723af7019f053e4",
+          "occurrence": 1,
+          "preview": "- `EIGO_TAXI_ENTRY_ID`: 保護者エントリ UUID（任意）"
+        },
+        {
+          "id": "DOC-0671-ITEM-00047",
+          "line": 70,
+          "contentSha256": "7de8a9da81ec99065d97d55e28ff833e6042ffa4e7bb3435b826775e3a9b0a96",
+          "occurrence": 1,
+          "preview": "- `EIGO_TAXI_MCP_READONLY=true`: すべての書き込み系ツールをサーバー側で強制拒否"
+        },
+        {
+          "id": "DOC-0671-ITEM-00048",
+          "line": 71,
+          "contentSha256": "dff52cf36b450d4b59e1bd0ab401bc18ba79025717f5db537e13877bbac8cc5b",
+          "occurrence": 1,
+          "preview": "- **Streamable HTTP サーバー起動**:"
+        },
+        {
+          "id": "DOC-0671-ITEM-00049",
+          "line": 73,
+          "contentSha256": "d43be937ef3e6ac2a3cc4723211bcb1c43d3335803439a6b04eb19dd5dd89d3a",
+          "occurrence": 1,
+          "preview": "```powershell\nnode .agents/plugins/eigo-taxi-mcp/bin/server.mjs --transport http --host 127.0.0.1 --port 8787\n```"
+        },
+        {
+          "id": "DOC-0671-ITEM-00050",
+          "line": 77,
+          "contentSha256": "5a9b770207d1bb7a8fbe6334aa30accc8f18a1d783eb1abe533d06a9f509d12a",
+          "occurrence": 1,
+          "preview": "`EIGO_TAXI_MCP_HTTP_TOKEN` を設定した場合、`POST /mcp` は `Authorization: Bearer <token>` をタイミングセーフ検証します（`GET /health` で稼働確認可）。ループバックバインド時は `Host` / "
+        },
+        {
+          "id": "DOC-0671-ITEM-00051",
+          "line": 79,
+          "contentSha256": "2c03643fdfa76421c2cbff7aa83172cb6a211d4e0851f170e5ee5703bc240caf",
+          "occurrence": 1,
+          "preview": "## 4. Web サイト本体（W3C WebMCP）連携"
+        },
+        {
+          "id": "DOC-0671-ITEM-00052",
+          "line": 81,
+          "contentSha256": "6544b9cc420fce445047f02c57eb5ed1f52602df06a46bea61f9d103b322e070",
+          "occurrence": 1,
+          "preview": "`src/components/WebMcpBridge.tsx` は `document.modelContext ?? navigator.modelContext` に対応したエージェント・ブラウザ上で自動有効化されます（非対応ブラウザでは完全にノーオペレーション）。"
+        },
+        {
+          "id": "DOC-0671-ITEM-00053",
+          "line": 83,
+          "contentSha256": "51b52d3db4f16e3f2f0991bd3d832f2ba12da8c633dc6fe5e8e6625672ce8018",
+          "occurrence": 1,
+          "preview": "- **未ログイン時**: 個人情報を含まない `eigo_taxi_get_status` と、ローカルデモ体験を開始する `eigo_taxi_enter_demo` のみを公開。"
+        },
+        {
+          "id": "DOC-0671-ITEM-00054",
+          "line": 84,
+          "contentSha256": "f0c7fb155a4fc03c5c84a21987a1fc424f93ff2e954ee1da599f6a20cae39784",
+          "occurrence": 1,
+          "preview": "- **ログイン中**: 現行セッション（`admin` / `parent` / `reviewOnly`）の許可範囲内ツール（`eigo_taxi_list_students`, `eigo_taxi_list_rides`, `eigo_taxi_create_reserv"
+        }
+      ]
+    },
+    {
       "id": "DOC-0013",
       "path": "docs/OPERATION_RUNBOOK.md",
       "state": "current",
@@ -75574,6 +75960,182 @@
           "contentSha256": "6605a4334b1b3d017cd23648e737ecb98a3c750f43b7594b1079c305cbbc6fac",
           "occurrence": 1,
           "preview": "- レビュー証跡: `docs/traceability/reports/review-20261127-r14/frontend-review.json`"
+        }
+      ]
+    },
+    {
+      "id": "DOC-0672",
+      "path": "docs/progress/2026-11-27-webmcp-r15-delivery.md",
+      "state": "historical",
+      "sha256": "ee2149abdb0c588267ce862ede874bc85ddff772d03d975e59a8be9dc54ee7d1",
+      "items": [
+        {
+          "id": "DOC-0672-ITEM-00001",
+          "line": 1,
+          "contentSha256": "d99c4a22b361388c64cf90550e7565452ac1d59de169c75c38fd0a4765b139e0",
+          "occurrence": 1,
+          "preview": "# 2026年11月27日　Antigravity MCP / MCP Apps / W3C WebMCP 統合のテストサイト反映・公開検証報告"
+        },
+        {
+          "id": "DOC-0672-ITEM-00002",
+          "line": 3,
+          "contentSha256": "a97bda30b5b6264c18ae3354b25f208bbc85c1c031b5ff4f7e6cd153741d2e88",
+          "occurrence": 1,
+          "preview": "> **位置づけ**: `origin/main`（Round 14 / PR #9 および PR #10、コミット `98e4a27`）を保持したまま、未配備だった **Antigravity MCP サーバー（`mcp/`）・MCP App UI（`ui://eigo-tax"
+        },
+        {
+          "id": "DOC-0672-ITEM-00003",
+          "line": 5,
+          "contentSha256": "114938a957e8144142374fffafde7e3a9a9fe8b38d46409db347b6b4bc720501",
+          "occurrence": 1,
+          "preview": "## 1. 実装・統合内容（Round 14 非退行＋WebMCP）"
+        },
+        {
+          "id": "DOC-0672-ITEM-00004",
+          "line": 7,
+          "contentSha256": "82c3f7a376f1b7358e0b110f591293c65fee6fc92e076762c1608f0dfcd7a0bb",
+          "occurrence": 1,
+          "preview": "- **[src/App.tsx](../../src/App.tsx)**: Round 14 のフッター `text-slate-600` および `{ useState, useEffect, useCallback }` フック制約を保持したまま、`WebMcpBridg"
+        },
+        {
+          "id": "DOC-0672-ITEM-00005",
+          "line": 8,
+          "contentSha256": "5df881b1df60d2262af32623ae460615f8b49e7e2071f12a3d27eb187d0f3b93",
+          "occurrence": 1,
+          "preview": "- **[src/components/WebMcpBridge.tsx](../../src/components/WebMcpBridge.tsx)**: `document.modelContext ?? navigator.modelContext` へセッション権限同期"
+        },
+        {
+          "id": "DOC-0672-ITEM-00006",
+          "line": 9,
+          "contentSha256": "c76b661504ab95a0b3605796d0d199321d4258de2c941583e6e8b6c5a80171ae",
+          "occurrence": 1,
+          "preview": "- **`mcp/`・`.agents/plugins/eigo-taxi-mcp/`**: Stdio / Streamable HTTP（非ループバック無認証拒否、最小 `/health`、`timingSafeEqual` Bearer 検証）・14 ツール / 4 リソー"
+        },
+        {
+          "id": "DOC-0672-ITEM-00007",
+          "line": 11,
+          "contentSha256": "3df83ace42d742fe22489b4cdfb3f3c9f50c5adf7141636798174ffbe9812033",
+          "occurrence": 1,
+          "preview": "## 2. ビルド・試験・公開 SHA-256 照合・実画面監査"
+        },
+        {
+          "id": "DOC-0672-ITEM-00008",
+          "line": 13,
+          "contentSha256": "61808b75249d7c6cbe928ff34b21368f7ab1db4164c5c8d99b1774572b246f55",
+          "occurrence": 1,
+          "preview": "1. **静的検査・オフライン契約・`mcp/`・Playwright ローカル回帰 4 スイート**:"
+        },
+        {
+          "id": "DOC-0672-ITEM-00009",
+          "line": 14,
+          "contentSha256": "4f978b4c762f04cccbc39f2996e9640f83a34910fdab0d61bf04031b3a1aacec",
+          "occurrence": 1,
+          "preview": "- `npx tsc --noEmit` PASS、`npx oxlint src/` 0 warnings / 0 errors、死んだ Tailwind v4 クラス 0 件、生成 CSS（`dist/assets/index-C1hp1v-I.css`）実出力確認。"
+        },
+        {
+          "id": "DOC-0672-ITEM-00010",
+          "line": 15,
+          "contentSha256": "117fe2da807af5d19f97072c495f465ac277ce9114e9bc821f4d6a5a98e22077",
+          "occurrence": 1,
+          "preview": "- `mcp/`：`npm run typecheck`・`npm test` **8/8 PASS**。"
+        },
+        {
+          "id": "DOC-0672-ITEM-00011",
+          "line": 16,
+          "contentSha256": "2b4b98994289af69ab907711b1d03dc41ee34f27d5adfd7ab37d60e2b37f984e",
+          "occurrence": 1,
+          "preview": "- `npm run test:traceability` **34/34 PASS**、オフライン契約 9 本（[test_webmcp_bridge.cjs](../../scripts/test_webmcp_bridge.cjs) 含む）全 PASS。"
+        },
+        {
+          "id": "DOC-0672-ITEM-00012",
+          "line": 17,
+          "contentSha256": "45596b587bdce5c799f28ee49b16c9455f077ecf9bc6845e9fe9be36e554e7fb",
+          "occurrence": 1,
+          "preview": "- Playwright 回帰 4 スイート：`test_trace_ui.mjs` 6/6、`test_booking_modal_scroll.mjs` 2/2、`tests/reviewer-ui/run.mjs` 8/8、`scripts/run_local_accept"
+        },
+        {
+          "id": "DOC-0672-ITEM-00013",
+          "line": 18,
+          "contentSha256": "e57a71d434ff1e633ac0a4b0a6a9e0e59a4abf2f72460291136d9345e86a997a",
+          "occurrence": 1,
+          "preview": "2. **検証サイト配備＆公開 6 応答 SHA-256 照合（DAILY-C03・C04）**:"
+        },
+        {
+          "id": "DOC-0672-ITEM-00014",
+          "line": 19,
+          "contentSha256": "3ff40c320e8cfcf6163a36848c53b1c65eae466612a535a6989244219593a87c",
+          "occurrence": 1,
+          "preview": "- Hosting Version: `882b71593ffa7310`（`eigo-taxi-app` / `eigo-taxi-test`）"
+        },
+        {
+          "id": "DOC-0672-ITEM-00015",
+          "line": 20,
+          "contentSha256": "9af04b3cc4b4711d32c2cec8b918b9303b066562afd0b363d1931ff1e451c469",
+          "occurrence": 1,
+          "preview": "- `builtAt`: `2026-11-26T20:13:21.650Z` / `baseCommit`: `98e4a27f3709d80b7ebb2eeb03361e229a31700d` / `sourceDigest`: `99284e780dec40fbaa902a"
+        },
+        {
+          "id": "DOC-0672-ITEM-00016",
+          "line": 21,
+          "contentSha256": "d7c09360959a89df6bf5e5776ba67bd662826b8097d044fb30ff382a4a2c87b9",
+          "occurrence": 1,
+          "preview": "- [public-2026-11-26T20-15-12-443Z.json](../acceptance/deployment-verification/public-2026-11-26T20-15-12-443Z.json): **6/6 URL HTTP 200・SHA"
+        },
+        {
+          "id": "DOC-0672-ITEM-00017",
+          "line": 22,
+          "contentSha256": "ac981087429fb76d812a542f68cae07f04aacf7ff4939cd9e37e33e08d5560e0",
+          "occurrence": 1,
+          "preview": "3. **公開デモ実ブラウザ監査＋目視確認＋独立 AI レビュー（DAILY-C02・C05）**:"
+        },
+        {
+          "id": "DOC-0672-ITEM-00018",
+          "line": 23,
+          "contentSha256": "a0dea1f77bf638c2d159365707ea892fb7ea1e40c6dbd663cfd7e9f24303b96f",
+          "occurrence": 1,
+          "preview": "- [public-ui-webmcp.json](../../outputs/daily-20261127/public-ui-webmcp.json): 未認証 2 ツール（PII なし）→ WebMCP 管理者デモ 10 ツール（不正 ID `isError: true`、"
+        },
+        {
+          "id": "DOC-0672-ITEM-00019",
+          "line": 24,
+          "contentSha256": "f1bfbf9dcd9015cd4b0338aaa527ced0d5ab43bb42324dcb9a67dd4491f47bff",
+          "occurrence": 1,
+          "preview": "- スクリーンショット全 4 枚（`outputs/daily-20261127/screenshots-webmcp/*.png`）を `read_file` で直接目視確認済み。"
+        },
+        {
+          "id": "DOC-0672-ITEM-00020",
+          "line": 25,
+          "contentSha256": "7b3a85f085cf5c5e04d3183d4f04401c9d8b5e7be373c86e73dfac8427b9e4a5",
+          "occurrence": 1,
+          "preview": "- 独立サブエージェント `deep-reviewer`（会話 `0053bd83-d484-4f57-84b4-84f01d84ee8e`）が **APPROVE**（ブロッカー 0 件）。詳細は [review-20261127-webmcp/frontend-review."
+        },
+        {
+          "id": "DOC-0672-ITEM-00021",
+          "line": 27,
+          "contentSha256": "ae9146224746b0f61dea6d10b674d8b714a419e889d0cc2a6035da35bb30c2ab",
+          "occurrence": 1,
+          "preview": "## 3. 未確認範囲・外部ブロック・運用境界"
+        },
+        {
+          "id": "DOC-0672-ITEM-00022",
+          "line": 29,
+          "contentSha256": "a5fa186db654602cf5aa6d5509f7b20f139a261fa199a41ad6c75e43f869c9d6",
+          "occurrence": 1,
+          "preview": "- **顧客確認・本番凍結**: `CUST-01`〜`CUST-06` は `NOT_RUN`（0/6）、`thirdPartyPassed: 0`、`release: \"HOLD\"`（本番運用未開始）。"
+        },
+        {
+          "id": "DOC-0672-ITEM-00023",
+          "line": 30,
+          "contentSha256": "670d16aac91aa2ef7be96db9d974e9f06151629a366684bcb3caaee95823116d",
+          "occurrence": 1,
+          "preview": "- **公開デモ範囲の限定**: 本監査は公開フロントエンドのデモ経路＋合成 `document.modelContext` 範囲であり、実 Google OAuth ログイン、実 GAS／スプレッドシート／カレンダー書込み、物理 iOS/Android 実機検証は含みません。"
+        },
+        {
+          "id": "DOC-0672-ITEM-00024",
+          "line": 31,
+          "contentSha256": "e3ef6569b7a099891db8b5fd134b658b9434c40382b7bb13e5f7dd039c28b978",
+          "occurrence": 1,
+          "preview": "- **共有スプレッドシート API ブロック**: GCP プロジェクト `994752997370` で Google Sheets API が無効のため、共有表の直接更新および AT-28 `protectedRanges` API 実測は未実施（`BLOCKED / no"
         }
       ]
     },
