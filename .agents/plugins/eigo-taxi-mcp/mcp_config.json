@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "eigo-taxi": {
+      "command": "node",
+      "args": ["${PLUGIN_ROOT}/bin/server.mjs"],
+      "env": {
+        "EIGO_TAXI_MCP_MODE": "demo",
+        "EIGO_TAXI_MCP_DATA_DIR": "${PLUGIN_DATA}"
+      }
+    }
+  }
+}

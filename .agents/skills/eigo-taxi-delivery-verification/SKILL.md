@@ -4,7 +4,8 @@ description: >-
   Run local static checks, contract suites, Playwright browser suites, Firebase hosting
   mighty-test deployment, SHA-256 verification, live standards audits, screenshot inspection,
   and strict traceability baselines for eigo-taxi-management. Use whenever modifying src/,
-  frontend tests, or preparing a test-site delivery in this repository.
+  mcp/, .agents/plugins/eigo-taxi-mcp/, frontend tests, or preparing a test-site delivery
+  in this repository.
 ---
 
 # eigo-taxi-management デリバリー検証・標準監査ランブック
@@ -27,7 +28,7 @@ $env:EIGO_CHROMIUM_EXECUTABLE = 'C:\Program Files\Google\Chrome\Application\chro
 **出力先指定や事前削除のルールを誤ると別ディレクトリ汚染または `EEXIST` エラーになるため厳守する。**
 
 1. トレーサビリティ負例試験: `npm run test:traceability`（34/34 PASS）
-2. 変更影響に応じたオフライン契約スクリプト（`scripts/test_portals.cjs`, `test_google_auth.cjs`, `test_google_signout_retry.cjs`, `test_google_auth_retry_ui.cjs`, `test_portal_mismatch_ui.cjs`, `test_student_low_ticket_ui.cjs`, `test_release_contract.cjs`, `test_reservation_retry_ui.cjs`）。
+2. 変更影響に応じたオフライン契約スクリプト（`scripts/test_portals.cjs`, `test_google_auth.cjs`, `test_google_signout_retry.cjs`, `test_google_auth_retry_ui.cjs`, `test_portal_mismatch_ui.cjs`, `test_student_low_ticket_ui.cjs`, `test_release_contract.cjs`, `test_reservation_retry_ui.cjs`, `test_webmcp_bridge.cjs`）。
    - `src/App.tsx` を変更した場合、`outputs/refresh-20261120/offline/reservation-retry-ui.json` を最新 `stdout` と `src/App.tsx` の SHA-256 で更新する。
    - `gas/Code.gs` 未変更時は `test_gas.cjs` を不用意に回さない（回した場合は `docs/acceptance/service-checks/` の生成物を整理する）。
 3. ブラウザ検証 4 スイート:
@@ -47,6 +48,9 @@ $env:EIGO_CHROMIUM_EXECUTABLE = 'C:\Program Files\Google\Chrome\Application\chro
      node tests\reviewer-ui\run.mjs outputs\refresh-20261120\reviewer
      node scripts/run_local_acceptance.mjs --out outputs\refresh-20261120\local
      ```
+4. **`mcp/`・プラグイン検証（`mcp/` または `.agents/plugins/eigo-taxi-mcp/` 変更時）**:
+   - `cd mcp; npm run typecheck; npm test`（`pretest` で `node scripts/build.mjs` 自動実行、`engines.node >=22.0.0`・esbuild `target: ['node22']` 維持）。
+   - `.agents/plugins/eigo-taxi-mcp/` と `C:\Users\kanta\.gemini\config\plugins\eigo-taxi-mcp/` を同期し、両ディレクトリで `agy plugin validate --strict` PASS と `bin/server.mjs`・`bin/dashboard.html` の SHA-256 一致を確認する。
 
 ## Step 3: テストサイト配信＆SHA-256 スナップショット検証
 1. `npm run deploy:mighty-test` を実行し、[docs/acceptance/deployment/build-manifest.json](docs/acceptance/deployment/build-manifest.json) の `builtAt`・`baseCommit`・`sourceDigest` を控える。
@@ -56,6 +60,7 @@ $env:EIGO_CHROMIUM_EXECUTABLE = 'C:\Program Files\Google\Chrome\Application\chro
    node scripts/verify_mighty_release.cjs
    node scripts/verify_mighty_release_snapshot.cjs
    ```
+- **Firebase CLI 認証失効時のガード**: `firebase projects:list` が認証失効（`Authentication Error: Your credentials are no longer valid` / exit code 2）で失敗した場合は、`npm run build:firebase` や `node scripts/traceability_cli.cjs baseline` を先走り実行せず、[docs/acceptance/deployment/build-manifest.json](docs/acceptance/deployment/build-manifest.json) を現行のまま保持し、公開配備・公開監査・baseline を `BLOCKED` / `not-run` / `DEFERRED` として記録して `firebase login --reauth` 後の再開手順を残す。
 
 ## Step 4: 公開デモ実ブラウザ標準監査＋目視画像検査
 1. `https://eigo-taxi-test.web.app/`（`#/admin`・`#/parent`、PC `1280x900`・モバイル `375x667`）に対し Playwright で以下を検証する:
