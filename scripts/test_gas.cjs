@@ -194,7 +194,7 @@ check('GAS-02', 'authentication', ['DEF-05'], 'GET cannot expose students/rides 
 });
 check('GAS-03', 'authentication', ['DEF-05'], 'Every POST action rejects missing/invalid keys before accessing data', () => {
   const f = fixture(); const before = f.snapshot();
-  for (const action of ['login', 'getStudents', 'getRides', 'createStudent', 'createReservation', 'cancelReservation', 'completeRide', 'addTickets']) {
+  for (const action of ['login', 'getStudents', 'getRides', 'getPurchases', 'createStudent', 'updateStudent', 'createReservation', 'cancelReservation', 'completeRide', 'addTickets']) {
     for (const token of [undefined, '', 'admin123', 'invalid-long-key-0000000000000000000000']) {
       rejected(f.raw({ action, token, role: 'admin', studentIds: ['STU-1', 'STU-2'] }), 'UNAUTHORIZED');
     }
@@ -232,9 +232,9 @@ check('GAS-07', 'parent-authorization', ['DEF-06'], 'A parent with no assignment
   const f = fixture(); assert.deepEqual(f.post('getStudents', {}, emptyKey).data, []); assert.deepEqual(f.post('getRides', {}, emptyKey).data, []);
   unchanged(f, () => f.post('createReservation', reservation, emptyKey), 'FORBIDDEN');
 });
-check('GAS-08', 'parent-authorization', ['DEF-05', 'DEF-06'], 'Parent cannot register students, add tickets or complete rides', () => {
+check('GAS-08', 'parent-authorization', ['DEF-05', 'DEF-06'], 'Parent cannot register/edit students, add tickets or complete rides', () => {
   const f = fixture();
-  for (const [action, params] of [['createStudent', newStudent], ['addTickets', purchase], ['completeRide', { rideId: 'RIDE-1' }]]) {
+  for (const [action, params] of [['createStudent', newStudent], ['updateStudent', { id: 'STU-1', name: 'X', address: 'X' }], ['addTickets', purchase], ['completeRide', { rideId: 'RIDE-1' }]]) {
     unchanged(f, () => f.post(action, { ...params, role: 'admin', isAdmin: true }, parentKey), 'FORBIDDEN');
   }
   assert.ok(!f.state.calls.includes('calendar.create')); released(f);
@@ -908,6 +908,74 @@ check('GAS-85', reviewerCategory, [], 'Recheck under lock pins the verified UID,
     const code={'uid moved':'ACCOUNT_NOT_REGISTERED','scope reassigned':'FORBIDDEN','review disabled':'REVIEW_UNAVAILABLE','role demoted':'PORTAL_MISMATCH'}[mode];
     unchanged(f,()=>f.as('admin','addTickets',purchase),code);
     assert.ok(!f.state.calls.includes('property.set:'+pending));released(f);
+  }
+});
+
+check('GAS-86', 'purchases', ['DEF-06'], 'getPurchases returns only accessible students rows, normalizes fields, and rejects unauthenticated requests', () => {
+  const f = reviewFixture();
+  f.state.sheets[P].push(['PUR-1', 'STU-1', 'Synthetic Student One', new Date('2026-10-19T15:00:00Z'), 5, 5000, 'Accessible purchase']);
+  f.state.sheets[P].push(['PUR-2', 'STU-2', 'Synthetic Student Two', '2026-10-21', 3, 0, '']);
+  assert.deepEqual(f.as('parent', 'getPurchases').data, [{
+    id: 'PUR-1', studentId: 'STU-1', studentName: 'Synthetic Student One', purchaseDate: '2026-10-20', ticketCount: 5, amount: 5000, note: 'Accessible purchase',
+  }]);
+  assert.deepEqual(f.as('admin', 'getPurchases').data.map(x => x.id), ['PUR-1']);
+  f.admin();
+  assert.deepEqual(f.googlePost('getPurchases').data.map(x => x.id), ['PUR-1', 'PUR-2']);
+  const legacy = fixture();
+  legacy.state.sheets[P].push(['PUR-L1', 'STU-1', 'One', '2026-10-01', 1, 1000, '']);
+  legacy.state.sheets[P].push(['PUR-L2', 'STU-2', 'Two', '2026-10-02', 2, 2000, '']);
+  assert.deepEqual(legacy.post('getPurchases', {}, parentKey).data.map(x => x.id), ['PUR-L1']);
+  assert.deepEqual(legacy.post('getPurchases').data.map(x => x.id), ['PUR-L1', 'PUR-L2']);
+  rejected(legacy.raw({ action: 'getPurchases' }), 'UNAUTHORIZED');
+  released(legacy);
+});
+check('GAS-87', 'students', ['DEF-04'], 'updateStudent updates profile columns only, stores formula strings literally, preserves balance/createdAt, and rejects ticketBalance tampering', () => {
+  const f = fixture();
+  const res = f.post('updateStudent', {
+    id: 'STU-1', name: 'Updated Name', parentName: 'Updated Parent', phone: '090-9999-0000',
+    address: 'Updated Address', pickupNote: '=1+1', createdAt: '1999-01-01',
+  });
+  assert.equal(res.success, true);
+  assert.deepEqual(res.data, {
+    id: 'STU-1', name: 'Updated Name', parentName: 'Updated Parent', phone: '090-9999-0000',
+    address: 'Updated Address', pickupNote: '=1+1', ticketBalance: 7, createdAt: '2026-10-01',
+  });
+  assert.equal(f.state.sheets[S][1][5], '=1+1');
+  assert.equal(f.state.sheets[S][1][6], 7);
+  assert.equal(f.state.sheets[S][1][7], '2026-10-01');
+  unchanged(f, () => f.post('updateStudent', {
+    id: 'STU-1', name: 'Tamper', address: 'Tamper', ticketBalance: 99,
+  }), 'INVALID_INPUT');
+  released(f);
+});
+check('GAS-88', 'students', ['DEF-05', 'DEF-06'], 'updateStudent rejects parents, reviewers, unknown IDs, blank required fields, and duplicate IDs without writes', () => {
+  const rf = reviewFixture();
+  for (const role of ['admin', 'parent']) {
+    noChange(rf, () => rf.as(role, 'updateStudent', { id: 'STU-1', name: 'Blocked', address: 'Blocked', reviewOnly: false, role: 'admin' }), 'FORBIDDEN');
+  }
+  const f = fixture();
+  unchanged(f, () => f.post('updateStudent', { id: 'STU-1', name: 'Blocked', address: 'Blocked' }, parentKey), 'FORBIDDEN');
+  unchanged(f, () => f.post('updateStudent', { id: 'STU-UNKNOWN', name: 'Missing', address: 'Missing' }), 'NOT_FOUND');
+  unchanged(f, () => f.post('updateStudent', { id: 'STU-1', name: '   ', address: 'Valid' }), 'INVALID_INPUT');
+  unchanged(f, () => f.post('updateStudent', { id: 'STU-1', name: 'Valid', address: '' }), 'INVALID_INPUT');
+  f.state.sheets[S].push([...f.state.sheets[S][1]]);
+  unchanged(f, () => f.post('updateStudent', { id: 'STU-1', name: 'Dup', address: 'Dup' }), 'DATA_CONFLICT');
+  released(f);
+});
+check('GAS-89', 'failures', ['DEF-04'], 'updateStudent write failure rolls back all modified columns and clears pending guard', () => {
+  for (const label of [`${S}.set:2:2`, `${S}.set:2:5`, 'flush']) {
+    for (const after of [false, true]) {
+      const f = fixture();
+      f.fail(label, after);
+      unchanged(f, () => f.post('updateStudent', {
+        id: 'STU-1', name: 'Failed Name', parentName: 'Failed Parent', phone: '000', address: 'Failed Addr', pickupNote: 'Failed Note',
+      }), 'OPERATION_FAILED');
+      assert.equal(f.state.props[pending], undefined);
+      assert.equal(f.post('updateStudent', {
+        id: 'STU-1', name: 'Recovered Name', parentName: 'Recovered Parent', phone: '090-1111-2222', address: 'Recovered Addr', pickupNote: 'Recovered Note',
+      }).data.name, 'Recovered Name');
+      released(f);
+    }
   }
 });
 

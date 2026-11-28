@@ -1,0 +1,33 @@
+{
+  "executedAt": "2026-11-28T02:44:09.076Z",
+  "mode": "offline local dist build + real Chrome browser; demo storage only; not live GAS or deployed site",
+  "externalRequests": [],
+  "pageErrors": [],
+  "consoleErrors": [],
+  "results": [
+    {
+      "id": "BROWSER-01",
+      "status": "PASS",
+      "name": "Admin edits student profile, modal blocks balance edit, changes persist across reload with unchanged balance"
+    },
+    {
+      "id": "BROWSER-02",
+      "status": "PASS",
+      "name": "Admin purchases tab reflects newly added tickets, filters by student, and shows accurate totals"
+    },
+    {
+      "id": "BROWSER-03",
+      "status": "PASS",
+      "name": "Admin purchases tab fits cleanly in 375px viewport with 0 horizontal overflow",
+      "innerWidth": 375,
+      "scrollWidth": 375
+    },
+    {
+      "id": "BROWSER-04",
+      "status": "PASS",
+      "name": "Parent portal shows only STU-001 purchases and fits cleanly in 375px viewport",
+      "innerWidth": 375,
+      "scrollWidth": 375
+    }
+  ]
+}

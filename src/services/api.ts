@@ -144,6 +144,7 @@ export type ManagedRole = 'admin' | 'parent' | 'reviewer';
 export type ManagedUser = Omit<AppUser, 'role'> & { role: ManagedRole; email: string; active: boolean; linked: boolean };
 export type ManagedUsers = { users: ManagedUser[]; revision: string; reviewModeAvailable?: boolean };
 export type ManagedUserInput = { userId?: string; name: string; email: string; role: ManagedRole; active: boolean; studentIds: string[]; rotateEntry?: boolean };
+export type StudentProfileUpdate = { id: string; name: string; parentName: string; phone: string; address: string; pickupNote: string };
 const SESSION_KEY = 'eigo_taxi_session';
 let sessionRevision = 0;
 type ReservationInput = {studentId:string;rideDate:string;rideTime:string;rideType:RideType;pickupLocation:string;note?:string;reservedBy:'parent'|'teacher'};
@@ -231,7 +232,7 @@ async function live(session:AppSession,action:string,params:object = {}) {
   }
   if (JSON.stringify(getSession()) !== JSON.stringify(session)) throw new Error('ログイン状態が変わりました。');
   const result=await request(session.endpoint, idToken, action, {...params, portalRole:session.user.role, ...(session.entryId ? {entryId:session.entryId} : {})}, session);
-  if (['getStudents','getRides','getPortalInvitations'].includes(action) && !Array.isArray(result.data)) {
+  if (['getStudents','getRides','getPurchases','getPortalInvitations'].includes(action) && !Array.isArray(result.data)) {
     throw new Error('台帳の応答形式を確認できませんでした。表示件数は未確認です。再取得しても変わらない場合は担当者へ連絡してください。');
   }
   if (JSON.stringify(getSession())!==JSON.stringify(session)) throw new Error('ログイン状態が変わりました。処理結果を管理者に確認してください');
@@ -365,6 +366,43 @@ export const ApiService = {
     const students=allStudents();
     const created:Student={...student,id:'STU-'+crypto.randomUUID(),createdAt:getLocalDateString()};
     students.push(created);setStored(STORAGE_KEYS.STUDENTS,students);return created;
+  },
+  async getPurchases():Promise<TicketPurchase[]> {
+    const session=requireSession();
+    const purchases=isDemo(session)
+      ? getStored<TicketPurchase>(STORAGE_KEYS.PURCHASES, INITIAL_PURCHASES)
+      : (await live(session,'getPurchases')).data as TicketPurchase[];
+    return purchases.filter(p=>mayAccessStudent(session,p.studentId))
+      .sort((a,b)=>(b.purchaseDate+' '+b.id).localeCompare(a.purchaseDate+' '+a.id));
+  },
+  async updateStudent(input:StudentProfileUpdate):Promise<Student> {
+    const session=requireFullAdmin();
+    const payload:StudentProfileUpdate={
+      id:input.id.trim(),
+      name:input.name.trim(),
+      parentName:input.parentName.trim(),
+      phone:input.phone.trim(),
+      address:input.address.trim(),
+      pickupNote:input.pickupNote.trim(),
+    };
+    if(!payload.id||!payload.name||!payload.address) throw new Error('生徒ID・氏名・住所を指定してください');
+    if(!isDemo(session)) {
+      const result=await live(session,'updateStudent',payload);
+      const updated=result.data as Partial<Student> | null | undefined;
+      if(!updated||updated.id!==payload.id||updated.name!==payload.name||updated.address!==payload.address||
+          !Number.isSafeInteger(updated.ticketBalance)||(updated.ticketBalance as number)<0) {
+        throw new Error('生徒情報の更新結果を確認できませんでした。生徒一覧を再読込して確認してください。');
+      }
+      return updated as Student;
+    }
+    const students=allStudents();
+    const index=students.findIndex(s=>s.id===payload.id);
+    if(index===-1) throw new Error('生徒が見つかりません');
+    const current=students[index];
+    const updated:Student={...current,name:payload.name,parentName:payload.parentName,phone:payload.phone,address:payload.address,pickupNote:payload.pickupNote};
+    students[index]=updated;
+    setStored(STORAGE_KEYS.STUDENTS,students);
+    return updated;
   },
   async getRides():Promise<RideReservation[]> {
     const session=requireSession();

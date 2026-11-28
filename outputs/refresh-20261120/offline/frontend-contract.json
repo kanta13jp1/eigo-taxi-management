@@ -1,11 +1,11 @@
 {
-  "executedAt": "2026-11-19T16:46:17.217Z",
+  "executedAt": "2026-11-28T02:35:36.495Z",
   "mode": "Node VM; Firebase SDK and GAS responses stubbed; no real Google sign-in claim",
   "passed": 33,
   "total": 33,
   "sourceHashes": {
     "src/deployment-config.ts": "5c30aad36376487fcf2fbb664f2574bdd430890191675ca9813b5fdea516b6f1",
-    "src/services/api.ts": "9de6da24a594b1bb37d12d1dc4b2910a8cfdadf9124ed4abf22ac8104cd35e28",
+    "src/services/api.ts": "82bcc47676e19dd980508b37ac1e39337a505c1d0ed066aa6db9118e05b5ba8e",
     "src/services/google-auth.ts": "01667af44fce383f3763c8bb73497dafc690381592ddcf383d46aaafe90fe0d8",
     "src/portal.ts": "874dce7f269e59073b75d6ae47c7fb3b682686fa2ab214d8cb0eacb48c59cac7",
     "scripts/test_portals.cjs": "05a3b663dc381ccdd69f24ece44e9400f12f5d48fb114b7f68bb4ea82de3086c"

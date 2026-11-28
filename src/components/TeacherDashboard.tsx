@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import type { Student, RideReservation, RideType } from '../types';
+import type { Student, RideReservation, TicketPurchase, RideType } from '../types';
 import { getLocalDateString } from '../services/api';
 import { useModalDialog } from '../hooks/useModalDialog';
 import {
@@ -13,6 +13,7 @@ import {
   Plus,
   Ticket,
   UserPlus,
+  Pencil,
   Phone,
   ExternalLink,
   ChevronRight,
@@ -23,11 +24,14 @@ interface TeacherDashboardProps {
   isDemo: boolean;
   students: Student[];
   rides: RideReservation[];
+  purchases?: TicketPurchase[];
+  purchasesError?: string;
   onCompleteRide: (rideId: string) => Promise<void>;
   onCancelRide: (rideId: string) => Promise<void>;
   onOpenAddRide: (studentId?: string) => void;
   onOpenAddTicket: (studentId?: string) => void;
   onOpenAddStudent: () => void;
+  onOpenEditStudent?: (student: Student) => void;
   reviewOnly?: boolean;
 }
 
@@ -36,18 +40,23 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
   isDemo,
   students,
   rides,
+  purchases = [],
+  purchasesError = '',
   onCompleteRide,
   onCancelRide,
   onOpenAddRide,
   onOpenAddTicket,
   onOpenAddStudent,
+  onOpenEditStudent,
   reviewOnly = false,
 }) => {
   const safeStudents = Array.isArray(students) ? students : [];
   const safeRides = Array.isArray(rides) ? rides : [];
+  const safePurchases = Array.isArray(purchases) ? purchases : [];
 
   const [filterStatus, setFilterStatus] = useState<string>('all');
   const [studentFilter, setStudentFilter] = useState<'all' | 'low'>('all');
+  const [purchaseStudentFilter, setPurchaseStudentFilter] = useState<string>('all');
   const [completionError, setCompletionError] = useState('');
   const [cancelRideId, setCancelRideId] = useState<string | null>(null);
   const [cancelPending, setCancelPending] = useState(false);
@@ -110,7 +119,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
     }
   };
   const [pendingRideIds, setPendingRideIds] = useState<ReadonlySet<string>>(new Set());
-  const [activeTab, setActiveTab] = useState<'today' | 'allRides' | 'students'>(() => reviewOnly ? 'allRides' : 'today');
+  const [activeTab, setActiveTab] = useState<'today' | 'allRides' | 'students' | 'purchases'>(() => reviewOnly ? 'allRides' : 'today');
 
   // 予約日と同じ端末の暦日を使用し、画面を開いたままでも翌日に切り替える。
   const [todayStr, setTodayStr] = useState(() => getLocalDateString());
@@ -151,6 +160,12 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
       || b.rideTime.localeCompare(a.rideTime)
       || b.id.localeCompare(a.id));
 
+  const filteredPurchases = safePurchases
+    .filter((p) => purchaseStudentFilter === 'all' || p.studentId === purchaseStudentFilter)
+    .sort((a, b) => b.purchaseDate.localeCompare(a.purchaseDate) || b.id.localeCompare(a.id));
+  const totalPurchaseTickets = filteredPurchases.reduce((sum, p) => sum + p.ticketCount, 0);
+  const totalPurchaseAmount = filteredPurchases.reduce((sum, p) => sum + p.amount, 0);
+
   const getRideTypeLabel = (type: RideType) => {
     switch (type) {
       case 'pickup':
@@ -189,7 +204,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
     }
   };
 
-  const selectTab = (tab: 'today' | 'allRides' | 'students', nextStudentFilter?: 'all' | 'low') => {
+  const selectTab = (tab: 'today' | 'allRides' | 'students' | 'purchases', nextStudentFilter?: 'all' | 'low') => {
     setCompletionError('');
     setActiveTab(tab);
     if (nextStudentFilter) {
@@ -325,6 +340,16 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
             }`}
           >
             生徒・チケット管理 ({safeStudents.length})
+          </button>
+          <button
+            type="button"
+            aria-pressed={activeTab === 'purchases'}
+            onClick={() => selectTab('purchases')}
+            className={`px-3 py-1.5 rounded-lg transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600 ${
+              activeTab === 'purchases' ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-600 hover:text-slate-900'
+            }`}
+          >
+            購入履歴 ({safePurchases.length})
           </button>
         </div>
 
@@ -775,7 +800,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
                     </div>
                   </div>
 
-                  <div className="pt-2 border-t border-slate-100 flex items-center justify-between gap-2">
+                  <div className="pt-2 border-t border-slate-100 flex flex-wrap items-center justify-between gap-2">
                     <button
                       type="button"
                       onClick={() => onOpenAddTicket(student.id)}
@@ -784,6 +809,17 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
                       <Ticket aria-hidden="true" className="w-3.5 h-3.5" />
                       チケット追加
                     </button>
+                    {!reviewOnly && onOpenEditStudent && (
+                      <button
+                        type="button"
+                        aria-label={`${student.name} の生徒情報を編集`}
+                        onClick={() => onOpenEditStudent(student)}
+                        className="py-1.5 px-2.5 rounded-lg border border-slate-200 hover:bg-slate-50 text-slate-700 font-semibold text-xs inline-flex items-center gap-1 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
+                      >
+                        <Pencil aria-hidden="true" className="w-3.5 h-3.5" />
+                        編集
+                      </button>
+                    )}
                     <button
                       type="button"
                       onClick={() => onOpenAddRide(student.id)}
@@ -797,6 +833,99 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
               );
             })}
           </div>
+          )}
+        </div>
+      )}
+
+      {/* タブ4: チケット購入履歴 */}
+      {activeTab === 'purchases' && (
+        <div className="space-y-4">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+            <h2 className="text-base font-bold text-slate-800">チケット購入履歴</h2>
+
+            <div className="flex items-center gap-2">
+              <Filter aria-hidden="true" className="w-3.5 h-3.5 text-slate-400" />
+              <select
+                aria-label="生徒で絞り込み"
+                value={purchaseStudentFilter}
+                onChange={(e) => setPurchaseStudentFilter(e.target.value)}
+                className="bg-white border border-slate-200 rounded-xl px-2.5 py-1 text-xs font-semibold text-slate-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
+              >
+                <option value="all">すべての生徒</option>
+                {safeStudents.map((student) => (
+                  <option key={student.id} value={student.id}>
+                    {student.name}
+                  </option>
+                ))}
+              </select>
+            </div>
+          </div>
+
+          {purchasesError ? (
+            <p role="alert" className="rounded-xl border border-rose-200 bg-rose-50 p-4 text-sm text-rose-800">
+              {purchasesError}
+            </p>
+          ) : (
+            <>
+              <div className="bg-white rounded-2xl border border-slate-200 px-4 py-3 text-xs text-slate-700 flex flex-wrap items-center gap-4 shadow-sm">
+                <span>
+                  対象: <strong className="text-slate-900">{filteredPurchases.length} 件</strong>
+                </span>
+                <span>
+                  合計追加枚数: <strong className="text-emerald-800">+{totalPurchaseTickets}回</strong>
+                </span>
+                <span>
+                  合計金額: <strong className="text-slate-900">¥{totalPurchaseAmount.toLocaleString('ja-JP')}</strong>
+                </span>
+              </div>
+
+              <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+                <div className="overflow-x-auto">
+                  <table aria-label="チケット購入履歴一覧" className="w-full text-left text-xs">
+                    <thead className="bg-slate-50 border-b border-slate-200 text-slate-600 font-semibold">
+                      <tr>
+                        <th scope="col" className="py-3 px-4 whitespace-nowrap">購入日</th>
+                        <th scope="col" className="py-3 px-4 whitespace-nowrap">生徒名</th>
+                        <th scope="col" className="py-3 px-4 whitespace-nowrap">追加枚数</th>
+                        <th scope="col" className="py-3 px-4 whitespace-nowrap">金額</th>
+                        <th scope="col" className="py-3 px-4 whitespace-nowrap">備考</th>
+                      </tr>
+                    </thead>
+                  <tbody className="divide-y divide-slate-100">
+                    {filteredPurchases.length === 0 ? (
+                      <tr>
+                        <td colSpan={5} className="py-8 text-center text-slate-600">
+                          該当する購入履歴はありません
+                        </td>
+                      </tr>
+                    ) : (
+                      filteredPurchases.map((purchase) => (
+                        <tr key={purchase.id} className="hover:bg-slate-50/80 transition-colors">
+                          <td className="py-3 px-4 font-semibold text-slate-800 whitespace-nowrap">
+                            {purchase.purchaseDate}
+                          </td>
+                          <td className="py-3 px-4 font-bold text-slate-900 whitespace-nowrap">
+                            {purchase.studentName || purchase.studentId}
+                          </td>
+                          <td className="py-3 px-4 whitespace-nowrap">
+                            <span className="text-emerald-800 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-full font-bold text-[11px]">
+                              +{purchase.ticketCount}回
+                            </span>
+                          </td>
+                          <td className="py-3 px-4 font-semibold text-slate-700 whitespace-nowrap">
+                            ¥{purchase.amount.toLocaleString('ja-JP')}
+                          </td>
+                          <td className="py-3 px-4 text-slate-600 max-w-xs">
+                            <div className="[overflow-wrap:anywhere]">{purchase.note || '—'}</div>
+                          </td>
+                        </tr>
+                      ))
+                    )}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            </>
           )}
         </div>
       )}

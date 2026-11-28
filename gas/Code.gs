@@ -47,7 +47,8 @@ function doPost(e) {
     validatePortal_(body, user);
     if (body.action === "login") return jsonResponse({ success: true, data: user });
     const handlers = {
-      getStudents: getStudents_, getRides: getRides_, createStudent: createStudent_,
+      getStudents: getStudents_, getRides: getRides_, getPurchases: getPurchases_,
+      createStudent: createStudent_, updateStudent: updateStudent_,
       createReservation: createReservation_, cancelReservation: cancelReservation_,
       completeRide: completeRide_, addTickets: addTickets_, getPortalInvitations: getPortalInvitations_,
       getManagedUsers: getManagedUsers_, saveManagedUser: saveManagedUser_, deleteManagedUser: deleteManagedUser_
@@ -386,6 +387,10 @@ function getRides_(body, user) {
   return { success: true, data: rows_(sheet_(RIDES_)).filter(function (r) { return canAccess_(user, String(r[1])); }).map(ride_) };
 }
 
+function getPurchases_(body, user) {
+  return { success: true, data: rows_(sheet_(PURCHASES_)).filter(function (r) { return canAccess_(user, String(r[1])); }).map(purchase_) };
+}
+
 // @trace CODE-02 REQ-02
 function createStudent_(body, user) {
   requireAdmin_(user);
@@ -401,6 +406,29 @@ function createStudent_(body, user) {
   return mutate_("createStudent", id, function (tx) {
     append_(tx, sheet, row);
     return { success: true, data: student_(row) };
+  });
+}
+
+function updateStudent_(body, user) {
+  requireAdmin_(user);
+  if (body.ticketBalance !== undefined) fail_("INVALID_INPUT", "チケット残数はチケット追加画面から変更してください");
+  const id = id_(body.id, "生徒ID");
+  const name = text_(body.name, "生徒名", true);
+  const parentName = text_(body.parentName, "保護者名");
+  const phone = text_(body.phone, "電話番号");
+  const address = text_(body.address, "住所", true);
+  const pickupNote = text_(body.pickupNote, "送迎メモ");
+  const sheet = sheet_(STUDENTS_);
+  const target = required_(sheet, id, "生徒");
+  const balance = integer_(target.values[6], "保存された残チケット数", 0);
+  return mutate_("updateStudent", id, function (tx) {
+    replace_(tx, sheet, target.row, 2, name, target.values[1]);
+    replace_(tx, sheet, target.row, 3, parentName, target.values[2]);
+    replace_(tx, sheet, target.row, 4, phone, target.values[3]);
+    replace_(tx, sheet, target.row, 5, address, target.values[4]);
+    replace_(tx, sheet, target.row, 6, pickupNote, target.values[5]);
+    const updated = [target.values[0], name, parentName, phone, address, pickupNote, balance, target.values[7]];
+    return { success: true, data: student_(updated) };
   });
 }
 
@@ -631,6 +659,10 @@ function ride_(r) {
   return { id: String(r[0]), studentId: String(r[1]), studentName: String(r[2]), rideDate: formatted_(r[3], "yyyy-MM-dd"),
     rideTime: formatted_(r[4], "HH:mm"), rideType: String(r[5]), pickupLocation: String(r[6]), status: String(r[7]),
     calendarEventId: String(r[8] || ""), reservedBy: String(r[9]), note: String(r[10] || ""), completedAt: formatted_(r[11], "yyyy/MM/dd HH:mm:ss") || undefined };
+}
+function purchase_(r) {
+  return { id: String(r[0]), studentId: String(r[1]), studentName: String(r[2] || ""), purchaseDate: formatted_(r[3], "yyyy-MM-dd"),
+    ticketCount: integer_(r[4], "追加枚数", 1), amount: integer_(r[5], "金額", 0), note: String(r[6] || "") };
 }
 function fail_(code, message) { const error = new Error(message); error.apiCode = code; throw error; }
 function jsonResponse(data) { return ContentService.createTextOutput(JSON.stringify(data)).setMimeType(ContentService.MimeType.JSON); }

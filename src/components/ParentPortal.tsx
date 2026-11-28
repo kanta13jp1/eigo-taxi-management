@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import type { Student, RideReservation, RideType } from '../types';
+import type { Student, RideReservation, TicketPurchase, RideType } from '../types';
 import { useModalDialog } from '../hooks/useModalDialog';
 import {
   Ticket,
@@ -17,6 +17,8 @@ interface ParentPortalProps {
   isDemo: boolean;
   students: Student[];
   rides: RideReservation[];
+  purchases?: TicketPurchase[];
+  purchasesError?: string;
   onOpenAddRide: (studentId: string) => void;
   onCancelRide: (rideId: string) => Promise<void>;
 }
@@ -28,16 +30,22 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({
   isDemo,
   students,
   rides,
+  purchases = [],
+  purchasesError = '',
   onOpenAddRide,
   onCancelRide,
 }) => {
   const safeStudents = Array.isArray(students) ? students : [];
   const safeRides = Array.isArray(rides) ? rides : [];
+  const safePurchases = Array.isArray(purchases) ? purchases : [];
 
   const [preferredStudentId, setPreferredStudentId] = useState('');
   const student = safeStudents.find((s) => s.id === preferredStudentId) ?? safeStudents[0];
 
-  // この生徒の送迎データ
+  // この生徒の送迎・購入データ
+  const studentPurchases = safePurchases
+    .filter((p) => p.studentId === student?.id)
+    .sort((a, b) => b.purchaseDate.localeCompare(a.purchaseDate) || b.id.localeCompare(a.id));
   const studentRides = safeRides.filter((r) => r.studentId === student?.id);
   const upcomingRides = studentRides
     .filter((r) => r.status === 'scheduled')
@@ -343,6 +351,48 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({
                         <span className="text-slate-600 font-medium">キャンセル済</span>
                       )}
                     </div>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+
+          {/* チケット購入履歴 */}
+          <div className="bg-white rounded-2xl border border-slate-200 p-5 shadow-sm">
+            <div className="flex items-center justify-between mb-3">
+              <h3 className="font-bold text-slate-800 text-sm flex items-center gap-2">
+                <Ticket aria-hidden="true" className="w-4 h-4 text-emerald-600" />
+                チケット購入履歴
+              </h3>
+              {!purchasesError && (
+                <span className="text-xs text-slate-600">{studentPurchases.length} 件</span>
+              )}
+            </div>
+
+            {purchasesError ? (
+              <p role="status" className="rounded-xl border border-amber-200 bg-amber-50 p-3 text-xs text-amber-800">
+                {purchasesError}
+              </p>
+            ) : studentPurchases.length === 0 ? (
+              <p className="text-center py-4 text-slate-600 text-xs">チケット購入履歴はありません</p>
+            ) : (
+              <div className="divide-y divide-slate-100 text-xs">
+                {studentPurchases.map((purchase) => (
+                  <div key={purchase.id} className="py-2.5 flex flex-wrap items-start justify-between gap-2">
+                    <div className="min-w-0 flex-1">
+                      <div className="flex flex-wrap items-center gap-2">
+                        <span className="font-semibold text-slate-800">{purchase.purchaseDate}</span>
+                        <span className="text-emerald-800 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-full font-bold">
+                          +{purchase.ticketCount}回
+                        </span>
+                      </div>
+                      {purchase.note && (
+                        <p className="text-[11px] text-slate-600 mt-1 [overflow-wrap:anywhere]">{purchase.note}</p>
+                      )}
+                    </div>
+                    <span className="font-semibold text-slate-700 whitespace-nowrap">
+                      ¥{purchase.amount.toLocaleString('ja-JP')}
+                    </span>
                   </div>
                 ))}
               </div>
