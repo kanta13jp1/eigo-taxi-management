@@ -3,4 +3,12 @@
 /src/** -text
 /gas/** -text
 /scripts/** -text
+/tests/** -text
+/public/** -text
 /README.md -text
+/package.json -text
+/package-lock.json -text
+/.firebaserc -text
+/firebase.json -text
+/index.html -text
+/vite.config.ts -text
