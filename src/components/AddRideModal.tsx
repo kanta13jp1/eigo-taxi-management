@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import type { Student, RideType } from '../types';
 import { getLocalDateString } from '../services/api';
 import { useModalDialog } from '../hooks/useModalDialog';
@@ -56,6 +56,15 @@ const AddRideModalContent: React.FC<AddRideModalProps> = ({
   const rideDateRef = useRef<HTMLInputElement>(null);
   const rideTimeRef = useRef<HTMLInputElement>(null);
   const pickupLocationRef = useRef<HTMLInputElement>(null);
+  const submittingRef = useRef(false);
+  const mountedRef = useRef(true);
+
+  useEffect(() => {
+    mountedRef.current = true;
+    return () => {
+      mountedRef.current = false;
+    };
+  }, []);
 
   const handleStudentChange = (id: string) => {
     setStudentId(id);
@@ -80,6 +89,7 @@ const AddRideModalContent: React.FC<AddRideModalProps> = ({
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (submittingRef.current) return;
     const trimmedLocation = pickupLocation.trim();
     const missingStudent = !studentId;
     const missingDate = !rideDate;
@@ -104,6 +114,7 @@ const AddRideModalContent: React.FC<AddRideModalProps> = ({
       }
       return;
     }
+    submittingRef.current = true;
     setIsSubmitting(true);
     setError('');
     setInvalidFields({});
@@ -117,15 +128,25 @@ const AddRideModalContent: React.FC<AddRideModalProps> = ({
         note: note.trim(),
         reservedBy: isTeacher ? 'teacher' : 'parent',
       });
-      onClose();
+      if (mountedRef.current) {
+        onClose();
+      }
     } catch (err) {
-      setError(err instanceof Error ? err.message : '予約できませんでした');
+      if (mountedRef.current) {
+        setError(err instanceof Error ? err.message : '予約できませんでした');
+      }
     } finally {
-      setIsSubmitting(false);
+      submittingRef.current = false;
+      if (mountedRef.current) {
+        setIsSubmitting(false);
+      }
     }
   };
 
   const selectedStudent = students.find((s) => s.id === studentId);
+  const requiredTickets = rideType === 'roundtrip' ? 2 : 1;
+  const isTicketShortage = Boolean(selectedStudent && selectedStudent.ticketBalance < requiredTickets);
+  const isLowTicket = Boolean(selectedStudent && !isTicketShortage && selectedStudent.ticketBalance <= 2);
 
   return (
     <div
@@ -177,7 +198,7 @@ const AddRideModalContent: React.FC<AddRideModalProps> = ({
               aria-invalid={invalidFields.student ? 'true' : undefined}
               aria-describedby={
                 [
-                  selectedStudent && selectedStudent.ticketBalance <= 2 ? 'ride-student-low-ticket' : '',
+                  isTicketShortage || isLowTicket ? 'ride-student-low-ticket' : '',
                   invalidFields.student ? 'add-ride-error' : '',
                 ]
                   .filter(Boolean)
@@ -191,15 +212,20 @@ const AddRideModalContent: React.FC<AddRideModalProps> = ({
                 </option>
               ))}
             </select>
-            {selectedStudent && selectedStudent.ticketBalance <= 2 && (
-              <p id="ride-student-low-ticket" role="status" className="text-xs text-amber-700 mt-1 font-medium">
+            {selectedStudent && isTicketShortage && (
+              <p id="ride-student-low-ticket" role="status" aria-live="polite" className="mt-1.5 rounded-lg border border-rose-200 bg-rose-50 px-2.5 py-2 text-xs text-rose-800 font-medium">
+                ⚠️ 現在のチケット残数が残り {selectedStudent.ticketBalance} 枚のため、この予約（{requiredTickets}枚消費）の完了時にはチケットが不足します。予約は可能ですが、完了前にチケット追加が必要です。
+              </p>
+            )}
+            {selectedStudent && isLowTicket && (
+              <p id="ride-student-low-ticket" role="status" aria-live="polite" className="text-xs text-amber-700 mt-1 font-medium">
                 ⚠️ 現在のチケット残数が残り {selectedStudent.ticketBalance} 枚です。
               </p>
             )}
           </div>
 
           {/* 日付＆時間 */}
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div>
               <label htmlFor="ride-date" className="block text-xs font-semibold text-slate-600 mb-1 flex items-center gap-1">
                 <Calendar className="w-3.5 h-3.5 text-emerald-600" aria-hidden="true" />

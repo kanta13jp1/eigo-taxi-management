@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import type { Student } from '../types';
 import { useModalDialog } from '../hooks/useModalDialog';
 import { X, UserPlus, MapPin, Phone, User } from 'lucide-react';
@@ -36,6 +36,15 @@ const AddStudentModalContent: React.FC<AddStudentModalProps> = ({
   const nameInputRef = useRef<HTMLInputElement>(null);
   const balanceInputRef = useRef<HTMLInputElement>(null);
   const addressInputRef = useRef<HTMLInputElement>(null);
+  const submittingRef = useRef(false);
+  const mountedRef = useRef(true);
+
+  useEffect(() => {
+    mountedRef.current = true;
+    return () => {
+      mountedRef.current = false;
+    };
+  }, []);
 
   useModalDialog({
     isOpen,
@@ -47,6 +56,7 @@ const AddStudentModalContent: React.FC<AddStudentModalProps> = ({
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (submittingRef.current) return;
     const trimmedName = name.trim();
     const trimmedAddress = address.trim();
     if (!trimmedName || !trimmedAddress) {
@@ -62,6 +72,7 @@ const AddStudentModalContent: React.FC<AddStudentModalProps> = ({
       balanceInputRef.current?.focus();
       return;
     }
+    submittingRef.current = true;
     setIsSubmitting(true);
     setError('');
     setInvalidFields({});
@@ -74,19 +85,26 @@ const AddStudentModalContent: React.FC<AddStudentModalProps> = ({
         pickupNote: pickupNote.trim(),
         ticketBalance: initialBalance,
       });
-      // リセット
-      setName('');
-      setParentName('');
-      setPhone('');
-      setAddress('');
-      setPickupNote('');
-      setTicketBalance('10');
-      setInvalidFields({});
-      onClose();
+      if (mountedRef.current) {
+        // リセット
+        setName('');
+        setParentName('');
+        setPhone('');
+        setAddress('');
+        setPickupNote('');
+        setTicketBalance('10');
+        setInvalidFields({});
+        onClose();
+      }
     } catch (err) {
-      setError(err instanceof Error ? err.message : '生徒を登録できませんでした');
+      if (mountedRef.current) {
+        setError(err instanceof Error ? err.message : '生徒を登録できませんでした');
+      }
     } finally {
-      setIsSubmitting(false);
+      submittingRef.current = false;
+      if (mountedRef.current) {
+        setIsSubmitting(false);
+      }
     }
   };
 

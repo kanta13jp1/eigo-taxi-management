@@ -1,0 +1,44 @@
+{
+  "executedAt": "2026-11-28T00:48:28.038Z",
+  "mode": "offline React server rendering + source contract verification",
+  "sourceHashes": {
+    "src/components/TeacherDashboard.tsx": "e5b55d4422dca3b3c857925461fab1b043a3ee5913d74edbc6f58a892d106a34",
+    "src/components/ParentPortal.tsx": "0dc09466231c53879f73400ed37dbc605d87f1f030fba15b99937dbb0839cc82",
+    "src/components/AddRideModal.tsx": "d36e690b3edd4b05a89ede9a58abb6b04c50165072659b28697484fdced3ebfa",
+    "src/components/AddStudentModal.tsx": "a641a5a1864ae5d7b93c385e40f936dca314dbefad3dc610079a8872249a7979",
+    "src/components/AddTicketModal.tsx": "fab0f06624ee0437bd9a1a9a67aeb57cb0e8b7191f458a084d270086dad5904a",
+    "scripts/test_notes_and_form_safety.cjs": "0c2966f58bac2174c415d437295711660cab7cc03ada41855dd4fe0cb6d6d386"
+  },
+  "results": [
+    {
+      "id": "R17-01",
+      "name": "TeacherDashboard Today card shows both student.pickupNote and ride.note",
+      "status": "PASS"
+    },
+    {
+      "id": "R17-02",
+      "name": "TeacherDashboard AllRides table wraps pickupLocation without truncate and renders ride.note",
+      "status": "PASS"
+    },
+    {
+      "id": "R17-03",
+      "name": "TeacherDashboard Students card wraps address without truncate and shows student.pickupNote",
+      "status": "PASS"
+    },
+    {
+      "id": "R17-04",
+      "name": "ParentPortal registered info shows student.pickupNote and 未登録 fallback",
+      "status": "PASS"
+    },
+    {
+      "id": "R17-05",
+      "name": "AddRideModal switches ticket shortage warning by rideType and uses responsive date/time grid",
+      "status": "PASS"
+    },
+    {
+      "id": "R17-06",
+      "name": "Modal forms use synchronous submittingRef + mountedRef guards and cancel cleanup includes cancelPending",
+      "status": "PASS"
+    }
+  ]
+}

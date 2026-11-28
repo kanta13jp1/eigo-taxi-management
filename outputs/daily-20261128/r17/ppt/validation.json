@@ -1,0 +1,15 @@
+{
+  "outputPath": "docs/deliverables/2026-11-10-premeeting/progress-2026-11-28-r17-daily.pptx",
+  "sha256": "d8a88d122d9b86da887e356d5f03eb110c45cf68e1a9b2526f4ede3e801884b0",
+  "slideCount": 24,
+  "slideSizeEmu": [
+    12192000,
+    6858000
+  ],
+  "zipIntegrity": "OK",
+  "reimport": "OK",
+  "outOfBoundsCount": 0,
+  "overlapCount": 0,
+  "previewPng": "outputs/daily-20261128/r17/ppt/slide-24-r17.png",
+  "version": "3775af5aa84763e0"
+}

@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import type { Student } from '../types';
 import { useModalDialog } from '../hooks/useModalDialog';
 import { X, Ticket, PlusCircle } from 'lucide-react';
@@ -44,6 +44,15 @@ const AddTicketModalContent: React.FC<AddTicketModalProps> = ({
   const studentSelectRef = useRef<HTMLSelectElement>(null);
   const ticketCountRef = useRef<HTMLInputElement>(null);
   const amountRef = useRef<HTMLInputElement>(null);
+  const submittingRef = useRef(false);
+  const mountedRef = useRef(true);
+
+  useEffect(() => {
+    mountedRef.current = true;
+    return () => {
+      mountedRef.current = false;
+    };
+  }, []);
 
   const trimmedCount = ticketCountInput.trim();
   const parsedTicketCount = trimmedCount === '' ? NaN : Number(trimmedCount);
@@ -65,6 +74,7 @@ const AddTicketModalContent: React.FC<AddTicketModalProps> = ({
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (submittingRef.current) return;
     const invalidStudent = !studentId;
     const invalidCount =
       !Number.isSafeInteger(parsedTicketCount) || parsedTicketCount < 1 || parsedTicketCount > 100;
@@ -85,6 +95,7 @@ const AddTicketModalContent: React.FC<AddTicketModalProps> = ({
       amountRef.current?.focus();
       return;
     }
+    submittingRef.current = true;
     setIsSubmitting(true);
     setError('');
     setInvalidFields({});
@@ -95,11 +106,18 @@ const AddTicketModalContent: React.FC<AddTicketModalProps> = ({
         amount,
         note: note.trim(),
       });
-      onClose();
+      if (mountedRef.current) {
+        onClose();
+      }
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'チケットを追加できませんでした');
+      if (mountedRef.current) {
+        setError(err instanceof Error ? err.message : 'チケットを追加できませんでした');
+      }
     } finally {
-      setIsSubmitting(false);
+      submittingRef.current = false;
+      if (mountedRef.current) {
+        setIsSubmitting(false);
+      }
     }
   };
 

@@ -1,8 +1,8 @@
 {
-  "executedAt": "2026-11-27T11:43:52.258Z",
+  "executedAt": "2026-11-28T00:48:45.161Z",
   "mode": "Local Chromium mobile/touch emulation; fixture only; not real Google or physical device acceptance",
   "sourceHashes": {
-    "src/components/AddRideModal.tsx": "3fa6fc52eeaaacc048b20b0f738613bba01938ea6339d38001f8fd3624ea282b",
+    "src/components/AddRideModal.tsx": "d36e690b3edd4b05a89ede9a58abb6b04c50165072659b28697484fdced3ebfa",
     "scripts/fixtures/trace-ui/harness.tsx": "90bef1928e68fb736a4cf43150bb11153ba980414b5016b318f9ca494a24e136",
     "scripts/test_booking_modal_scroll.mjs": "9a25aef88e322840dc290910ee903c34a69f9f6c3a083092ded3ac35c45083df"
   },

@@ -1,0 +1,37 @@
+{
+  "executedAt": "2026-11-28T00:48:28.655Z",
+  "mode": "offline React server rendering + source contract verification",
+  "sourceHashes": {
+    "src/hooks/useModalDialog.ts": "3316e91d0348660be765f5b4abf08f2af1096c056969d833136c0300c4b5774b",
+    "src/components/TeacherDashboard.tsx": "e5b55d4422dca3b3c857925461fab1b043a3ee5913d74edbc6f58a892d106a34",
+    "src/components/ParentPortal.tsx": "0dc09466231c53879f73400ed37dbc605d87f1f030fba15b99937dbb0839cc82",
+    "scripts/test_dashboard_cancel_and_filter.cjs": "da882d6f7c71dac98e088ad92c5774e96994618adc4279a149cb48628399c46d"
+  },
+  "results": [
+    {
+      "id": "R16-01",
+      "name": "Today tab renders direct cancel button for scheduled rides only",
+      "status": "PASS"
+    },
+    {
+      "id": "R16-02",
+      "name": "Students tab filters to <=2 tickets when low filter active and shows empty-state recovery when none match",
+      "status": "PASS"
+    },
+    {
+      "id": "R16-03",
+      "name": "TeacherDashboard unifies cancel dialog on useModalDialog with error catch, race guard, and note display",
+      "status": "PASS"
+    },
+    {
+      "id": "R16-04",
+      "name": "ParentPortal unifies cancel dialog on useModalDialog with error catch and stale-id cleanup",
+      "status": "PASS"
+    },
+    {
+      "id": "R16-05",
+      "name": "useModalDialog falls back to #main-content when previous trigger is disconnected",
+      "status": "PASS"
+    }
+  ]
+}

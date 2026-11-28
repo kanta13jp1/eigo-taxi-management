@@ -68,7 +68,7 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({
       setCancelRideId(null);
       setCancelError('');
     }
-  }, [cancelRideId, cancelTarget]);
+  }, [cancelRideId, cancelTarget, cancelPending]);
   const openCancelDialog = (rideId: string) => {
     if (cancellationInFlight.current) return;
     setCancelError('');
@@ -354,6 +354,7 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({
             <p className="font-bold text-slate-700">登録済みのご住所・連絡先</p>
             <p className="[overflow-wrap:anywhere]">送迎先: {student.address || '未登録'}</p>
             <p>緊急連絡先: {student.phone || '未登録'}</p>
+            <p className="[overflow-wrap:anywhere]">送迎メモ: {student.pickupNote || '未登録'}</p>
             <p className="text-[11px] text-slate-600 mt-1">
               ※ 送迎場所の変更や連絡先変更は先生へ直接お知らせください。
             </p>

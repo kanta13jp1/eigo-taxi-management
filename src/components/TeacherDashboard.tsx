@@ -69,7 +69,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
       setCancelRideId(null);
       setCancelError('');
     }
-  }, [cancelRideId, cancelTarget]);
+  }, [cancelRideId, cancelTarget, cancelPending]);
   const openCancelDialog = (rideId: string) => {
     if (cancellationInFlight.current || inFlightCompletions.current.has(rideId)) return;
     setCancelError('');
@@ -436,6 +436,11 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
                         <MapPin aria-hidden="true" className="w-3.5 h-3.5 text-slate-400 shrink-0 mt-0.5" />
                         <span className="break-all">{ride.pickupLocation}</span>
                       </div>
+                      {student?.pickupNote && (
+                        <div className="text-amber-800 bg-amber-50/70 border border-amber-200/80 rounded-lg px-2 py-1 text-[11px] font-medium [overflow-wrap:anywhere]">
+                          📌 送迎メモ: {student.pickupNote}
+                        </div>
+                      )}
                       {ride.note && (
                         <div className="text-slate-600 border-t border-slate-200/60 pt-1 text-[11px] [overflow-wrap:anywhere]">
                           💬 メモ: {ride.note}
@@ -553,7 +558,14 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
                               {typeInfo.text}
                             </span>
                           </td>
-                          <td className="py-3 px-4 text-slate-600 max-w-xs truncate" title={ride.pickupLocation}>{ride.pickupLocation}</td>
+                          <td className="py-3 px-4 text-slate-600 max-w-xs">
+                            <div className="[overflow-wrap:anywhere]">{ride.pickupLocation}</div>
+                            {ride.note && (
+                              <div className="mt-0.5 text-[11px] text-slate-600 [overflow-wrap:anywhere]">
+                                💬 {ride.note}
+                              </div>
+                            )}
+                          </td>
                           <td className="py-3 px-4 text-slate-500 whitespace-nowrap">
                             {ride.reservedBy === 'parent' ? '保護者予約' : '先生登録'}
                           </td>
@@ -753,8 +765,13 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
                       </div>
                       <div className="flex items-start gap-1">
                         <MapPin aria-hidden="true" className="w-3.5 h-3.5 text-slate-400 shrink-0 mt-0.5" />
-                        <span className="truncate" title={student.address}>{student.address}</span>
+                        <span className="[overflow-wrap:anywhere]">{student.address}</span>
                       </div>
+                      {student.pickupNote && (
+                        <div className="border-t border-slate-200/70 pt-1 text-[11px] text-slate-700 [overflow-wrap:anywhere]">
+                          📌 送迎メモ: {student.pickupNote}
+                        </div>
+                      )}
                     </div>
                   </div>
 

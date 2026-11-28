@@ -1,0 +1,48 @@
+{
+  "executedAt": "2026-11-28T00:48:31.838Z",
+  "mode": "Offline Node VM; Firebase SDK stubbed; no browser or Google authentication",
+  "sourceHashes": {
+    "src/services/google-auth.ts": "01667af44fce383f3763c8bb73497dafc690381592ddcf383d46aaafe90fe0d8",
+    "scripts/test_google_signout_retry.cjs": "6613c7fe2bcfb040111df272648db3cdfae106f88289199917425b74e7688e7f"
+  },
+  "passed": 9,
+  "total": 9,
+  "results": [
+    {
+      "name": "Failure keeps previous user blocked until a real sign-out retry succeeds",
+      "status": "PASS"
+    },
+    {
+      "name": "A pending logout blocks popup and token and concurrent preparation shares it",
+      "status": "PASS"
+    },
+    {
+      "name": "Concurrent preparations after a failed logout share one real retry",
+      "status": "PASS"
+    },
+    {
+      "name": "Logout during initialization does not reopen the popup before logout finishes",
+      "status": "PASS"
+    },
+    {
+      "name": "A failed initialization does not discard the SDK instance needed for logout",
+      "status": "PASS"
+    },
+    {
+      "name": "A popup completing after logout is cleared before login can resume",
+      "status": "PASS"
+    },
+    {
+      "name": "A later queued logout keeps the gate closed even if an earlier logout fails",
+      "status": "PASS"
+    },
+    {
+      "name": "A late login token is rejected even after logout has completed",
+      "status": "PASS"
+    },
+    {
+      "name": "An in-flight data token is rejected if logout completes first",
+      "status": "PASS"
+    }
+  ]
+}
