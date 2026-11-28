@@ -1,0 +1,97 @@
+{
+  "date": "2026-11-28",
+  "completedAt": "2026-11-28T11:45:00+09:00",
+  "topic": "Issue #4: Student Profile Editing (updateStudent) and Ticket Purchase History View (getPurchases)",
+  "reviewer": "Independent subagent deep-reviewer (conversation e848875c-0d45-4668-a342-168662744107) + local dist real-browser visual verification",
+  "verdict": "APPROVE",
+  "scope": [
+    "gas/Code.gs",
+    "src/services/api.ts",
+    "src/App.tsx",
+    "src/components/EditStudentModal.tsx",
+    "src/components/TeacherDashboard.tsx",
+    "src/components/ParentPortal.tsx",
+    "scripts/test_gas.cjs",
+    "scripts/test_issue4_student_edit_and_purchases.cjs"
+  ],
+  "sourceHashes": {
+    "gas/Code.gs": "1da8285c565a04c70e2702e6570a665e7c639ec769ab6233e92988659e28f0d4",
+    "src/services/api.ts": "82bcc47676e19dd980508b37ac1e39337a505c1d0ed066aa6db9118e05b5ba8e",
+    "src/App.tsx": "5230a0c2b5cb8b99b963263ecd0df6a0dd7323e7ae015790ad9f0f2507042083",
+    "src/components/EditStudentModal.tsx": "4a04d594feffc1d24045b55a8c9d39e03ea98e464d0e24a58cc8c9b73cd7fb06",
+    "src/components/TeacherDashboard.tsx": "768e47b617486b925098a502667ae634df29c11132b1efd1d1676a6e56c46d97",
+    "src/components/ParentPortal.tsx": "79739001bfc484a5e9f86a58924bba7d7c0d276a9061d222ae9e95458adb48c8",
+    "scripts/test_gas.cjs": "45365a820c2cf94d4684af2f1903ff5c1769a620c763a2680708e272a82e90b6",
+    "scripts/test_issue4_student_edit_and_purchases.cjs": "d39e512eae4972e1badc08653c3491272d0c79e10ec528ba2be36d65a41366b4"
+  },
+  "independentAudit": {
+    "subagent": "deep-reviewer",
+    "conversationId": "e848875c-0d45-4668-a342-168662744107",
+    "verdict": "APPROVE",
+    "blockingFindings": [],
+    "addressedNotes": [
+      "Added defensive ?? '' initializers in EditStudentModal.tsx.",
+      "Hid purchase summary bar and count badge during purchasesError in TeacherDashboard.tsx and ParentPortal.tsx.",
+      "Added whitespace-nowrap to purchase table <th> headers in TeacherDashboard.tsx.",
+      "Fixed ISS4-05 assertion in scripts/test_issue4_student_edit_and_purchases.cjs to scope to the チケット購入履歴 card and confirmed error assertions."
+    ],
+    "remainingNonBlockingNotes": [
+      "TeacherDashboard tab label still shows 購入履歴 ({safePurchases.length}) during purchasesError.",
+      "App.tsx loadData waits on fetchPurchases (bounded by 20s request timeout when live GAS fails).",
+      "Offline contract harness tests demo storage for updateStudent/getPurchases; live fetch response validation paths in ApiService remain verified by static inspection and GAS VM tests rather than mocked live fetch tests.",
+      "sheetValue_ follows existing repo policy (leading '=' formula escape only)."
+    ]
+  },
+  "visualReview": {
+    "inspectedViaReadFile": true,
+    "screenshots": {
+      "outputs/daily-20261128/issue4/screenshots/admin-edit-student-1280.png": {
+        "sha256": "c1175d890d3a899ace69f90ed5b61507f917805e2a213c879ec2b0337d263f5b",
+        "observation": "1280x900 local build admin EditStudentModal: readonly 生徒ID and 現在のチケット残数 7回 banner clearly shown, all 5 profile fields cleanly styled, 閉じる and 保存する buttons aligned without clipping."
+      },
+      "outputs/daily-20261128/issue4/screenshots/admin-purchases-1280.png": {
+        "sha256": "e5976b292c56835fecd668cf15395798d75d20768a88dbe4bee111517e3011b3",
+        "observation": "1280x900 local build admin 購入履歴 (3) tab: displays filter select, totals (+18回, ¥18,000), and all 3 rows descending with AA contrast."
+      },
+      "outputs/daily-20261128/issue4/screenshots/admin-purchases-375.png": {
+        "sha256": "c1f3aad6c00ec043af6efb0a78eefc880d480aa3a6ec756ade23ecc44a4ff1b1",
+        "observation": "375x667 local build mobile admin 購入履歴 tab: headers stay single-line via whitespace-nowrap inside overflow-x-auto container with 0px page horizontal overflow."
+      },
+      "outputs/daily-20261128/issue4/screenshots/parent-purchases-375.png": {
+        "sha256": "af8b3eaeee6a30095e08e80d493a99e760aa8d056819756e3d53209d2c4e7835",
+        "observation": "375x667 local build mobile ParentPortal: displays STU-001 チケット購入履歴 (1 件, +10回, ¥10,000) only with zero horizontal overflow."
+      }
+    }
+  },
+  "evidenceChecks": {
+    "gas_vm_tests": {
+      "path": "docs/acceptance/service-checks/2026-11-28T02-35-33-441Z/gas-results.json",
+      "sha256": "ed001524375abfc7cf0f66cb629e38596eb5dd97fae8440deb10118351c5205b",
+      "passed": 89,
+      "total": 89
+    },
+    "issue4_contract_suite": {
+      "path": "outputs/daily-20261128/issue4/issue4-student-edit-and-purchases.json",
+      "sha256": "983c92949be668c4d2e7a9df17650a790005f3545bf48da22234c4f6ad409524",
+      "passed": 5,
+      "total": 5
+    },
+    "local_browser_audit": {
+      "path": "outputs/daily-20261128/issue4/local-ui-issue4.json",
+      "sha256": "018327e680a1eae73b5b2c6ea6c916f695dd43c0962389b0f4091078be940de5",
+      "passed": 4,
+      "total": 4
+    },
+    "playwright_suites": {
+      "test_trace_ui": "6/6 PASS",
+      "reviewer_ui": "8/8 PASS",
+      "run_local_acceptance": "14/14 PASS"
+    }
+  },
+  "unverifiedAreas": [
+    "Live Google Apps Script deployment and live Spreadsheet/Calendar writes (not-run)",
+    "Firebase Hosting test site redeployment (intentionally not deployed from feature branch)",
+    "Live Google OAuth sign-in, physical smartphone devices, and customer acceptance CUST-01..CUST-06 (NOT_RUN 0/6, release: HOLD)",
+    "Student deletion (deleteStudent) intentionally deferred pending customer data retention/refund specification"
+  ]
+}

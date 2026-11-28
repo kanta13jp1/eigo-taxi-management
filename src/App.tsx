@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
-import type { Student, RideReservation, RideType } from './types';
+import type { Student, RideReservation, TicketPurchase, RideType } from './types';
 import { ApiService, InactiveReservationError } from './services/api';
-import type { AppSession } from './services/api';
+import type { AppSession, StudentProfileUpdate } from './services/api';
 import { LoginScreen } from './components/LoginScreen';
 import { Navbar } from './components/Navbar';
 import { TeacherDashboard } from './components/TeacherDashboard';
@@ -10,6 +10,7 @@ import { GoogleSettings } from './components/GoogleSettings';
 import { AddRideModal } from './components/AddRideModal';
 import { AddTicketModal } from './components/AddTicketModal';
 import { AddStudentModal } from './components/AddStudentModal';
+import { EditStudentModal } from './components/EditStudentModal';
 import { TermsModal } from './components/TermsModal';
 import { PortalInvitations } from './components/PortalInvitations';
 import { AccountManagement } from './components/AccountManagement';
@@ -27,6 +28,8 @@ export function App() {
   const [currentTab, setCurrentTab] = useState<'teacher' | 'invitations' | 'accounts' | 'settings'>('teacher');
   const [students, setStudents] = useState<Student[]>([]);
   const [rides, setRides] = useState<RideReservation[]>([]);
+  const [purchases, setPurchases] = useState<TicketPurchase[]>([]);
+  const [purchasesError, setPurchasesError] = useState('');
   const [isLoading, setIsLoading] = useState(true);
 
   // モーダル管理
@@ -38,6 +41,7 @@ export function App() {
   const [addTicketStudentId, setAddTicketStudentId] = useState<string | undefined>();
 
   const [isAddStudentOpen, setIsAddStudentOpen] = useState(false);
+  const [editingStudent, setEditingStudent] = useState<Student | null>(null);
   const [isTermsOpen, setIsTermsOpen] = useState(false);
   const [termsTab, setTermsTab] = useState<'terms' | 'privacy' | 'disclaimer'>('terms');
 
@@ -83,8 +87,8 @@ export function App() {
 
   useEffect(() => {
     const changed = () => {
-      setSession(null); setStudents([]); setRides([]); setToastMessage(null); setErrorMessage('');
-      setIsAddRideOpen(false); setIsAddTicketOpen(false); setIsAddStudentOpen(false); setIsTermsOpen(false);
+      setSession(null); setStudents([]); setRides([]); setPurchases([]); setPurchasesError(''); setToastMessage(null); setErrorMessage('');
+      setIsAddRideOpen(false); setIsAddTicketOpen(false); setIsAddStudentOpen(false); setEditingStudent(null); setIsTermsOpen(false);
       setRequiresLogin(false); setCheckingSession(true); setRoute(parsePortal(window.location.hash));
     };
     window.addEventListener('hashchange', changed);
@@ -113,8 +117,8 @@ export function App() {
   useEffect(() => {
     const ended = (event: Event) => {
       setRequiresLogin(event instanceof CustomEvent && event.detail === 'reauthenticate');
-      setSession(null); setStudents([]); setRides([]); setToastMessage(null);
-      setIsAddRideOpen(false); setIsAddTicketOpen(false); setIsAddStudentOpen(false); setIsTermsOpen(false);
+      setSession(null); setStudents([]); setRides([]); setPurchases([]); setPurchasesError(''); setToastMessage(null);
+      setIsAddRideOpen(false); setIsAddTicketOpen(false); setIsAddStudentOpen(false); setEditingStudent(null); setIsTermsOpen(false);
     };
     window.addEventListener('eigo-taxi-session-ended', ended);
     return () => window.removeEventListener('eigo-taxi-session-ended', ended);
@@ -134,12 +138,30 @@ export function App() {
     };
   }, [toastMessage]);
 
+  const fetchPurchases = useCallback(async (expectedSession: string) => {
+    if (typeof ApiService.getPurchases !== 'function') return;
+    try {
+      const purchasesData = await ApiService.getPurchases();
+      if (JSON.stringify(ApiService.getSession()) === expectedSession) {
+        setPurchases(purchasesData);
+        setPurchasesError('');
+      }
+    } catch (err) {
+      if (JSON.stringify(ApiService.getSession()) === expectedSession) {
+        setPurchasesError(err instanceof Error ? err.message : '購入履歴を取得できませんでした');
+      }
+    }
+  }, []);
+
   const loadData = useCallback(async (rethrow = false) => {
     const expectedSession = JSON.stringify(ApiService.getSession());
     try {
-      const [studentsData, ridesData] = await Promise.all([
-        ApiService.getStudents(),
-        ApiService.getRides(),
+      const [[studentsData, ridesData]] = await Promise.all([
+        Promise.all([
+          ApiService.getStudents(),
+          ApiService.getRides(),
+        ]),
+        fetchPurchases(expectedSession),
       ]);
       if (JSON.stringify(ApiService.getSession()) === expectedSession) {
         setStudents(studentsData);
@@ -156,11 +178,28 @@ export function App() {
     } finally {
       setIsLoading(false);
     }
-  }, []);
+  }, [fetchPurchases]);
 
   useEffect(() => {
     if (!session) return;
     let active = true;
+    const expectedSession = JSON.stringify(ApiService.getSession());
+    const purchasesPromise = typeof ApiService.getPurchases === 'function'
+      ? ApiService.getPurchases().then(
+          (data) => ({ ok: true as const, data }),
+          (err: unknown) => ({ ok: false as const, message: err instanceof Error ? err.message : '購入履歴を取得できませんでした' }),
+        )
+      : Promise.resolve({ ok: true as const, data: [] as TicketPurchase[] });
+    purchasesPromise.then((res) => {
+      if (active && JSON.stringify(ApiService.getSession()) === expectedSession) {
+        if (res.ok) {
+          setPurchases(res.data);
+          setPurchasesError('');
+        } else {
+          setPurchasesError(res.message);
+        }
+      }
+    });
     Promise.all([ApiService.getStudents(), ApiService.getRides()])
       .then(([studentsData, ridesData]) => {
         if (active) {
@@ -268,6 +307,14 @@ export function App() {
     showToast(`👤 新規生徒「${newStudent.name}」さんを登録しました`);
   };
 
+  // 生徒情報更新ハンドラ
+  const handleUpdateStudent = async (studentData: StudentProfileUpdate) => {
+    if (!isFullAdmin) throw new Error('生徒情報の編集には通常の管理者権限が必要です');
+    const updated = await ApiService.updateStudent(studentData);
+    setStudents((prev) => prev.map((s) => (s.id === updated.id ? updated : s)));
+    showToast(`✏️ 「${updated.name}」さんの生徒情報を更新しました`);
+  };
+
   const handleEnterDemoFromMcp = (role: 'admin' | 'parent') => {
     const targetHash = role === 'admin' ? '#/admin' : '#/parent';
     const nextSession = ApiService.enterDemo(role);
@@ -295,6 +342,7 @@ export function App() {
   const activeTab = isAdmin ? (reviewOnly ? 'teacher' : currentTab) : 'parent';
   const visibleStudents = students.filter(student => !reviewOnly || session?.user.studentIds.includes(student.id));
   const visibleRides = rides.filter(ride => !reviewOnly || session?.user.studentIds.includes(ride.studentId));
+  const visiblePurchases = purchases.filter(purchase => !reviewOnly || session?.user.studentIds.includes(purchase.studentId));
   const webMcpBridge = (
     <WebMcpBridge
       session={session}
@@ -344,8 +392,8 @@ export function App() {
       <section aria-label="ログイン状態" className="mx-auto flex w-full max-w-5xl flex-wrap items-center justify-between gap-2 px-4 pt-3 text-xs">
         <p>{session.mode === 'demo' ? 'デモ環境・架空データ（Google連携なし）' : reviewOnly ? '検証専用・指定した架空生徒のみ' : '教室の連携環境'} / {session.user.name}</p>
         <button type="button" className="rounded-lg border bg-white px-3 py-2 hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-500" onClick={()=>{
-          ApiService.logout(); setStudents([]); setRides([]); setErrorMessage(''); setToastMessage(null); setSession(null);
-          setIsAddRideOpen(false); setIsAddTicketOpen(false); setIsAddStudentOpen(false); setIsTermsOpen(false);
+          ApiService.logout(); setStudents([]); setRides([]); setPurchases([]); setPurchasesError(''); setErrorMessage(''); setToastMessage(null); setSession(null);
+          setIsAddRideOpen(false); setIsAddTicketOpen(false); setIsAddStudentOpen(false); setEditingStudent(null); setIsTermsOpen(false);
         }}>ログアウト</button>
       </section>
 
@@ -366,6 +414,8 @@ export function App() {
                 isDemo={session.mode === 'demo'}
                 students={visibleStudents}
                 rides={visibleRides}
+                purchases={visiblePurchases}
+                purchasesError={purchasesError}
                 reviewOnly={reviewOnly}
                 onCompleteRide={handleCompleteRide}
                 onCancelRide={handleCancelRide}
@@ -379,6 +429,7 @@ export function App() {
                   setIsAddTicketOpen(true);
                 }}
                 onOpenAddStudent={() => { if (isFullAdmin) setIsAddStudentOpen(true); }}
+                onOpenEditStudent={(student) => { if (isFullAdmin) setEditingStudent(student); }}
               />
             )}
 
@@ -387,6 +438,8 @@ export function App() {
                 isDemo={session.mode === 'demo'}
                 students={visibleStudents}
                 rides={visibleRides}
+                purchases={visiblePurchases}
+                purchasesError={purchasesError}
                 onOpenAddRide={(studentId) => {
                   setAddRideStudentId(studentId);
                   setAddRideIsTeacher(false);
@@ -468,6 +521,14 @@ export function App() {
         isOpen={isAddStudentOpen}
         onClose={() => setIsAddStudentOpen(false)}
         onSubmit={handleAddStudent}
+      />}
+
+      {isFullAdmin && <EditStudentModal
+        key={`edit-student-${editingStudent?.id || 'none'}`}
+        isOpen={Boolean(editingStudent)}
+        student={editingStudent}
+        onClose={() => setEditingStudent(null)}
+        onSubmit={handleUpdateStudent}
       />}
 
       <TermsModal

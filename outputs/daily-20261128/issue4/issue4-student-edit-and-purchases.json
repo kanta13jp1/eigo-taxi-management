@@ -1,0 +1,39 @@
+{
+  "executedAt": "2026-11-28T02:43:19.422Z",
+  "mode": "offline Node VM + React server rendering; no real Google/GAS deployment",
+  "sourceHashes": {
+    "src/services/api.ts": "82bcc47676e19dd980508b37ac1e39337a505c1d0ed066aa6db9118e05b5ba8e",
+    "src/App.tsx": "5230a0c2b5cb8b99b963263ecd0df6a0dd7323e7ae015790ad9f0f2507042083",
+    "src/components/EditStudentModal.tsx": "4a04d594feffc1d24045b55a8c9d39e03ea98e464d0e24a58cc8c9b73cd7fb06",
+    "src/components/TeacherDashboard.tsx": "768e47b617486b925098a502667ae634df29c11132b1efd1d1676a6e56c46d97",
+    "src/components/ParentPortal.tsx": "79739001bfc484a5e9f86a58924bba7d7c0d276a9061d222ae9e95458adb48c8",
+    "scripts/test_issue4_student_edit_and_purchases.cjs": "d39e512eae4972e1badc08653c3491272d0c79e10ec528ba2be36d65a41366b4"
+  },
+  "results": [
+    {
+      "id": "ISS4-01",
+      "name": "ApiService.updateStudent updates profile fields only, persists in demo storage, and blocks parent/reviewer/invalid input",
+      "status": "PASS"
+    },
+    {
+      "id": "ISS4-02",
+      "name": "ApiService.getPurchases enforces student scope, descending order, and includes newly added purchases",
+      "status": "PASS"
+    },
+    {
+      "id": "ISS4-03",
+      "name": "EditStudentModal shows readonly ID/balance, pre-fills editable fields, and uses submittingRef/mountedRef/useModalDialog",
+      "status": "PASS"
+    },
+    {
+      "id": "ISS4-04",
+      "name": "TeacherDashboard renders 購入履歴 tab with totals/error state and hides 編集 button for reviewOnly",
+      "status": "PASS"
+    },
+    {
+      "id": "ISS4-05",
+      "name": "ParentPortal renders チケット購入履歴 for selected student only and shows purchasesError cleanly",
+      "status": "PASS"
+    }
+  ]
+}

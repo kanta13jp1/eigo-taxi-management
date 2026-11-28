@@ -3909,7 +3909,7 @@
       ],
       "scope": "ローカルのコンポーネントまたはGAS処理契約の自動検査。本人操作の実受入合格は別。",
       "evidence": {
-        "path": "docs/acceptance/service-checks/2026-11-19T16-43-27-271Z/gas-results.json",
+        "path": "docs/acceptance/service-checks/2026-11-28T02-35-33-441Z/gas-results.json",
         "key": "GAS-63",
         "requiredSources": [
           "gas/Code.gs",
@@ -3926,7 +3926,7 @@
       ],
       "scope": "ローカルのコンポーネントまたはGAS処理契約の自動検査。本人操作の実受入合格は別。",
       "evidence": {
-        "path": "docs/acceptance/service-checks/2026-11-19T16-43-27-271Z/gas-results.json",
+        "path": "docs/acceptance/service-checks/2026-11-28T02-35-33-441Z/gas-results.json",
         "key": "GAS-64",
         "requiredSources": [
           "gas/Code.gs",
@@ -3943,7 +3943,7 @@
       ],
       "scope": "ローカルのコンポーネントまたはGAS処理契約の自動検査。本人操作の実受入合格は別。",
       "evidence": {
-        "path": "docs/acceptance/service-checks/2026-11-19T16-43-27-271Z/gas-results.json",
+        "path": "docs/acceptance/service-checks/2026-11-28T02-35-33-441Z/gas-results.json",
         "key": "GAS-65",
         "requiredSources": [
           "gas/Code.gs",
@@ -3985,7 +3985,7 @@
       ],
       "scope": "ローカルのコンポーネントまたはGAS処理契約の自動検査。本人操作の実受入合格は別。",
       "evidence": {
-        "path": "docs/acceptance/service-checks/2026-11-19T16-43-27-271Z/gas-results.json",
+        "path": "docs/acceptance/service-checks/2026-11-28T02-35-33-441Z/gas-results.json",
         "key": "GAS-66",
         "requiredSources": [
           "gas/Code.gs",
@@ -4072,7 +4072,7 @@
       ],
       "scope": "GASのCalendarアダプタ契約と予定説明欄の予約IDをスタブで検証。実Calendar同期の受入AT-24は未完。",
       "evidence": {
-        "path": "docs/acceptance/service-checks/2026-11-19T16-43-27-271Z/gas-results.json",
+        "path": "docs/acceptance/service-checks/2026-11-28T02-35-33-441Z/gas-results.json",
         "key": "GAS-67",
         "requiredSources": [
           "gas/Code.gs",
@@ -4089,7 +4089,7 @@
       ],
       "scope": "GASの取消アダプタ契約をスタブで検証。実Calendar削除の受入AT-25は未完。",
       "evidence": {
-        "path": "docs/acceptance/service-checks/2026-11-19T16-43-27-271Z/gas-results.json",
+        "path": "docs/acceptance/service-checks/2026-11-28T02-35-33-441Z/gas-results.json",
         "key": "GAS-68",
         "requiredSources": [
           "gas/Code.gs",
@@ -4148,7 +4148,7 @@
       ],
       "scope": "分離したメモリ台帳で次回取得・非連動を検証。実Google資源の手修正手順と保全は別。",
       "evidence": {
-        "path": "docs/acceptance/service-checks/2026-11-19T16-43-27-271Z/gas-results.json",
+        "path": "docs/acceptance/service-checks/2026-11-28T02-35-33-441Z/gas-results.json",
         "key": "GAS-69",
         "requiredSources": [
           "gas/Code.gs",
@@ -4165,7 +4165,7 @@
       ],
       "scope": "正常な取消→新規と、Calendar結果不明時の再送禁止・照合待ちを検証。日時・場所の原子的編集ではない。",
       "evidence": {
-        "path": "docs/acceptance/service-checks/2026-11-19T16-43-27-271Z/gas-results.json",
+        "path": "docs/acceptance/service-checks/2026-11-28T02-35-33-441Z/gas-results.json",
         "key": "GAS-70",
         "requiredSources": [
           "gas/Code.gs",
@@ -5319,7 +5319,7 @@
       "category": "calendar-target",
       "scope": "接続先未設定なら予約・取消を書込み前に拒否。Node VMの模擬確認であり実Google同意・配備・受入は別。",
       "evidence": {
-        "path": "docs/acceptance/service-checks/2026-11-19T16-43-27-271Z/gas-results.json",
+        "path": "docs/acceptance/service-checks/2026-11-28T02-35-33-441Z/gas-results.json",
         "key": "GAS-71",
         "requiredSources": [
           "gas/Code.gs",
@@ -5343,7 +5343,7 @@
       "category": "calendar-target",
       "scope": "認可不足・取得失敗・既定・非所有・ID不一致の対象を拒否。Node VMの模擬確認であり実Google同意・配備・受入は別。",
       "evidence": {
-        "path": "docs/acceptance/service-checks/2026-11-19T16-43-27-271Z/gas-results.json",
+        "path": "docs/acceptance/service-checks/2026-11-28T02-35-33-441Z/gas-results.json",
         "key": "GAS-72",
         "requiredSources": [
           "gas/Code.gs",
@@ -5365,7 +5365,7 @@
       "category": "calendar-target",
       "scope": "取消イベントIDが指定した検証カレンダー内に存在することを要求。Node VMの模擬確認であり実Google同意・配備・受入は別。",
       "evidence": {
-        "path": "docs/acceptance/service-checks/2026-11-19T16-43-27-271Z/gas-results.json",
+        "path": "docs/acceptance/service-checks/2026-11-28T02-35-33-441Z/gas-results.json",
         "key": "GAS-73",
         "requiredSources": [
           "gas/Code.gs",
@@ -5388,7 +5388,7 @@
       "category": "calendar-target",
       "scope": "指定先だけで作成・取消・再送しリクエストから上書きさせない。Node VMの模擬確認であり実Google同意・配備・受入は別。",
       "evidence": {
-        "path": "docs/acceptance/service-checks/2026-11-19T16-43-27-271Z/gas-results.json",
+        "path": "docs/acceptance/service-checks/2026-11-28T02-35-33-441Z/gas-results.json",
         "key": "GAS-74",
         "requiredSources": [
           "gas/Code.gs",
@@ -5636,7 +5636,7 @@
       "category": "scoped-reviewer",
       "scope": "Google本人応答を模擬したVMで指定検証台帳・両入口・生徒範囲・権限失効・更新の制約を確認。実Google本人・顧客6件は別。",
       "evidence": {
-        "path": "docs/acceptance/service-checks/2026-11-19T16-43-27-271Z/gas-results.json",
+        "path": "docs/acceptance/service-checks/2026-11-28T02-35-33-441Z/gas-results.json",
         "key": "GAS-75",
         "requiredSources": [
           "gas/Code.gs",
@@ -5655,7 +5655,7 @@
       "category": "scoped-reviewer",
       "scope": "Google本人応答を模擬したVMで指定検証台帳・両入口・生徒範囲・権限失効・更新の制約を確認。実Google本人・顧客6件は別。",
       "evidence": {
-        "path": "docs/acceptance/service-checks/2026-11-19T16-43-27-271Z/gas-results.json",
+        "path": "docs/acceptance/service-checks/2026-11-28T02-35-33-441Z/gas-results.json",
         "key": "GAS-76",
         "requiredSources": [
           "gas/Code.gs",
@@ -5674,7 +5674,7 @@
       "category": "scoped-reviewer",
       "scope": "Google本人応答を模擬したVMで指定検証台帳・両入口・生徒範囲・権限失効・更新の制約を確認。実Google本人・顧客6件は別。",
       "evidence": {
-        "path": "docs/acceptance/service-checks/2026-11-19T16-43-27-271Z/gas-results.json",
+        "path": "docs/acceptance/service-checks/2026-11-28T02-35-33-441Z/gas-results.json",
         "key": "GAS-77",
         "requiredSources": [
           "gas/Code.gs",
@@ -5693,7 +5693,7 @@
       "category": "scoped-reviewer",
       "scope": "Google本人応答を模擬したVMで指定検証台帳・両入口・生徒範囲・権限失効・更新の制約を確認。実Google本人・顧客6件は別。",
       "evidence": {
-        "path": "docs/acceptance/service-checks/2026-11-19T16-43-27-271Z/gas-results.json",
+        "path": "docs/acceptance/service-checks/2026-11-28T02-35-33-441Z/gas-results.json",
         "key": "GAS-78",
         "requiredSources": [
           "gas/Code.gs",
@@ -5712,7 +5712,7 @@
       "category": "scoped-reviewer",
       "scope": "Google本人応答を模擬したVMで指定検証台帳・両入口・生徒範囲・権限失効・更新の制約を確認。実Google本人・顧客6件は別。",
       "evidence": {
-        "path": "docs/acceptance/service-checks/2026-11-19T16-43-27-271Z/gas-results.json",
+        "path": "docs/acceptance/service-checks/2026-11-28T02-35-33-441Z/gas-results.json",
         "key": "GAS-79",
         "requiredSources": [
           "gas/Code.gs",
@@ -5731,7 +5731,7 @@
       "category": "scoped-reviewer",
       "scope": "Google本人応答を模擬したVMで指定検証台帳・両入口・生徒範囲・権限失効・更新の制約を確認。実Google本人・顧客6件は別。",
       "evidence": {
-        "path": "docs/acceptance/service-checks/2026-11-19T16-43-27-271Z/gas-results.json",
+        "path": "docs/acceptance/service-checks/2026-11-28T02-35-33-441Z/gas-results.json",
         "key": "GAS-80",
         "requiredSources": [
           "gas/Code.gs",
@@ -5750,7 +5750,7 @@
       "category": "scoped-reviewer",
       "scope": "Google本人応答を模擬したVMで指定検証台帳・両入口・生徒範囲・権限失効・更新の制約を確認。実Google本人・顧客6件は別。",
       "evidence": {
-        "path": "docs/acceptance/service-checks/2026-11-19T16-43-27-271Z/gas-results.json",
+        "path": "docs/acceptance/service-checks/2026-11-28T02-35-33-441Z/gas-results.json",
         "key": "GAS-81",
         "requiredSources": [
           "gas/Code.gs",
@@ -5769,7 +5769,7 @@
       "category": "scoped-reviewer",
       "scope": "Google本人応答を模擬したVMで指定検証台帳・両入口・生徒範囲・権限失効・更新の制約を確認。実Google本人・顧客6件は別。",
       "evidence": {
-        "path": "docs/acceptance/service-checks/2026-11-19T16-43-27-271Z/gas-results.json",
+        "path": "docs/acceptance/service-checks/2026-11-28T02-35-33-441Z/gas-results.json",
         "key": "GAS-82",
         "requiredSources": [
           "gas/Code.gs",
@@ -5788,7 +5788,7 @@
       "category": "scoped-reviewer",
       "scope": "Google本人応答を模擬したVMで指定検証台帳・両入口・生徒範囲・権限失効・更新の制約を確認。実Google本人・顧客6件は別。",
       "evidence": {
-        "path": "docs/acceptance/service-checks/2026-11-19T16-43-27-271Z/gas-results.json",
+        "path": "docs/acceptance/service-checks/2026-11-28T02-35-33-441Z/gas-results.json",
         "key": "GAS-83",
         "requiredSources": [
           "gas/Code.gs",
@@ -5807,7 +5807,7 @@
       "category": "scoped-reviewer",
       "scope": "Google本人応答を模擬したVMで指定検証台帳・両入口・生徒範囲・権限失効・更新の制約を確認。実Google本人・顧客6件は別。",
       "evidence": {
-        "path": "docs/acceptance/service-checks/2026-11-19T16-43-27-271Z/gas-results.json",
+        "path": "docs/acceptance/service-checks/2026-11-28T02-35-33-441Z/gas-results.json",
         "key": "GAS-84",
         "requiredSources": [
           "gas/Code.gs",
@@ -5826,7 +5826,7 @@
       "category": "scoped-reviewer",
       "scope": "Google本人応答を模擬したVMで指定検証台帳・両入口・生徒範囲・権限失効・更新の制約を確認。実Google本人・顧客6件は別。",
       "evidence": {
-        "path": "docs/acceptance/service-checks/2026-11-19T16-43-27-271Z/gas-results.json",
+        "path": "docs/acceptance/service-checks/2026-11-28T02-35-33-441Z/gas-results.json",
         "key": "GAS-85",
         "requiredSources": [
           "gas/Code.gs",

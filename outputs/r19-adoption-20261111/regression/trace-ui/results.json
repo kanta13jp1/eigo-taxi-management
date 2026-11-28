@@ -2,10 +2,10 @@
   "sourceHashes": {
     "scripts/test_trace_ui.mjs": "aa49104f1cc9ca3fdd0031c5dbfe20d5e7ccaf6150c47bd28b29d2b1d4223448",
     "scripts/fixtures/trace-ui/harness.tsx": "90bef1928e68fb736a4cf43150bb11153ba980414b5016b318f9ca494a24e136",
-    "src/components/ParentPortal.tsx": "0dc09466231c53879f73400ed37dbc605d87f1f030fba15b99937dbb0839cc82",
-    "src/components/TeacherDashboard.tsx": "e5b55d4422dca3b3c857925461fab1b043a3ee5913d74edbc6f58a892d106a34",
+    "src/components/ParentPortal.tsx": "79739001bfc484a5e9f86a58924bba7d7c0d276a9061d222ae9e95458adb48c8",
+    "src/components/TeacherDashboard.tsx": "768e47b617486b925098a502667ae634df29c11132b1efd1d1676a6e56c46d97",
     "src/components/AddRideModal.tsx": "d36e690b3edd4b05a89ede9a58abb6b04c50165072659b28697484fdced3ebfa",
-    "src/services/api.ts": "9de6da24a594b1bb37d12d1dc4b2910a8cfdadf9124ed4abf22ac8104cd35e28",
+    "src/services/api.ts": "82bcc47676e19dd980508b37ac1e39337a505c1d0ed066aa6db9118e05b5ba8e",
     "src/services/google-auth.ts": "01667af44fce383f3763c8bb73497dafc690381592ddcf383d46aaafe90fe0d8",
     "src/deployment-config.ts": "5c30aad36376487fcf2fbb664f2574bdd430890191675ca9813b5fdea516b6f1",
     "src/portal.ts": "874dce7f269e59073b75d6ae47c7fb3b682686fa2ab214d8cb0eacb48c59cac7",

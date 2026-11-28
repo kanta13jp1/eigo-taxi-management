@@ -76393,6 +76393,189 @@
       ]
     },
     {
+      "id": "DOC-0675",
+      "path": "docs/progress/2026-11-28-issue4-student-edit-and-purchase-history.md",
+      "state": "historical",
+      "sha256": "78439071ce201ca4fd122ca80e9512a83c390a09b4ffdbe08aec4cee5896efde",
+      "items": [
+        {
+          "id": "DOC-0675-ITEM-00001",
+          "line": 1,
+          "contentSha256": "0cf3259c1fcc0f9d8296cf6cc18d948ad14f8ec6795f2d4284f7e0fcdf41638d",
+          "occurrence": 1,
+          "preview": "# 2026年11月28日（Issue #4）生徒情報編集・チケット購入履歴表示の設計・検証報告"
+        },
+        {
+          "id": "DOC-0675-ITEM-00002",
+          "line": 3,
+          "contentSha256": "6ebdcd6fdeeb25fbed642406b0e2df626662ac328a4451f371eebe08a62cb401",
+          "occurrence": 1,
+          "preview": "> **運用境界の維持**: 顧客確認 `CUST-01`〜`CUST-06` は `NOT_RUN`（0/6）、`thirdPartyPassed: 0`、`release: \"HOLD\"`（本番運用未開始）を維持しています。本ブランチ（`feat/issue-4-studen"
+        },
+        {
+          "id": "DOC-0675-ITEM-00003",
+          "line": 5,
+          "contentSha256": "240cfebdf2e44d0654efbc25fc85cd8fcce1f6d3c0601339e0aec7b8d8ac0f4f",
+          "occurrence": 1,
+          "preview": "## 1. Issue #4 項目の棚卸し（Fit / Gap とスコープ判定）"
+        },
+        {
+          "id": "DOC-0675-ITEM-00004",
+          "line": 7,
+          "contentSha256": "b9e37b993edec2beba9b5f8121b979a87103c5b3d9470261e293e2622ebebe34",
+          "occurrence": 1,
+          "preview": "[Issue #4](https://github.com/kanta13jp1/eigo-taxi-management/issues/4) の 3 項目について現行コードベースとの差分を棚卸しし、安全かつ不可逆リスクの低い 2 機能を今回実装しました。"
+        },
+        {
+          "id": "DOC-0675-ITEM-00005",
+          "line": 9,
+          "contentSha256": "35827029606ba03c31eab2d4aa0bc1b837bf2ea11deddf2160255ad329063bfe",
+          "occurrence": 1,
+          "preview": "| Issue #4 項目 | 現行状態・判定 | 今回の方針・実装内容 |"
+        },
+        {
+          "id": "DOC-0675-ITEM-00006",
+          "line": 10,
+          "contentSha256": "b2d9dcd5ffc5d4b2c205fa068b00f76b385a88745f5277b052c360ce5171b3ca",
+          "occurrence": 1,
+          "preview": "| :--- | :--- | :--- |"
+        },
+        {
+          "id": "DOC-0675-ITEM-00007",
+          "line": 11,
+          "contentSha256": "c25f19477a68d594e9086d77e4de8548de03302925c475cbfd9f2ee51b4f37fc",
+          "occurrence": 1,
+          "preview": "| **1. アクセス制御（誤操作防止）** | **Fit（既実装）** | Google OAuth（ID トークン検証）＋ サーバー側 `AUTH_GOOGLE_USERS_JSON` 許可リスト ＋ `#/admin` / `#/parent/<publicEntryId"
+        },
+        {
+          "id": "DOC-0675-ITEM-00008",
+          "line": 12,
+          "contentSha256": "7d613ef6edabfe4ccf3df030bab6ebc85a5a85c8b628d8a84345aa81b51f044a",
+          "occurrence": 1,
+          "preview": "| **2. 生徒情報の編集・削除** | **編集のみ今回実装 / 削除は保留** | `updateStudent` を `gas/Code.gs`・`ApiService`・`EditStudentModal` へ実装（氏名・保護者氏名・電話番号・住所・送迎メモの 5 項目"
+        },
+        {
+          "id": "DOC-0675-ITEM-00009",
+          "line": 13,
+          "contentSha256": "98b3042cea396f28748235bcea2f1c3684222a20951e22d3d9f18f6047d8e5a1",
+          "occurrence": 1,
+          "preview": "| **3. チケット購入履歴表示** | **今回実装** | 既存 7 列シート `チケット購入履歴`・`eigo_taxi_purchases` を使い（8/12/7 列スキーマ不変）、`getPurchases` を実装。保護者・`reviewOnly` へは `canA"
+        },
+        {
+          "id": "DOC-0675-ITEM-00010",
+          "line": 15,
+          "contentSha256": "e76a0be8842a04cbfd9ba3f42d287eaf53a27d7bace956a16b14e7e83d3d82a5",
+          "occurrence": 1,
+          "preview": "## 2. 変更対象一覧"
+        },
+        {
+          "id": "DOC-0675-ITEM-00011",
+          "line": 17,
+          "contentSha256": "4b99ba9734e03834985fc89091f0cd7ac543202ed9ac2efbacda7a9230c2a080",
+          "occurrence": 1,
+          "preview": "- [gas/Code.gs](../../gas/Code.gs): `doPost` へ `getPurchases`・`updateStudent` を追加、`purchase_` ヘルパーおよび `mutate_(\"updateStudent\", ...)`（ロールバック"
+        },
+        {
+          "id": "DOC-0675-ITEM-00012",
+          "line": 18,
+          "contentSha256": "5f48234ecbdbef5a088735bbc12adc75e85b9a29c4a0ce15ddb828a46b82f50a",
+          "occurrence": 1,
+          "preview": "- [src/services/api.ts](../../src/services/api.ts): `StudentProfileUpdate` 型、`ApiService.getPurchases()`、`ApiService.updateStudent()` を追加し、`"
+        },
+        {
+          "id": "DOC-0675-ITEM-00013",
+          "line": 19,
+          "contentSha256": "7af9b816e5901b772a0bf4675186902d38e9a957a4ab3f1e310f743443ff7b89",
+          "occurrence": 1,
+          "preview": "- [src/components/EditStudentModal.tsx](../../src/components/EditStudentModal.tsx): WAI-ARIA モーダル（`useModalDialog`・`submittingRef`・`mountedR"
+        },
+        {
+          "id": "DOC-0675-ITEM-00014",
+          "line": 20,
+          "contentSha256": "3ab9773b43e19d5e869c760a9f906d4bf9328ec6008a2af5867e81cacf02ca18",
+          "occurrence": 1,
+          "preview": "- [src/components/TeacherDashboard.tsx](../../src/components/TeacherDashboard.tsx): 生徒カードへ通常管理者向け `編集` ボタン（`reviewOnly` 非表示）、第 4 タブ `購入履歴`（生"
+        },
+        {
+          "id": "DOC-0675-ITEM-00015",
+          "line": 21,
+          "contentSha256": "651ea8045384bf36e0122f86d97804a359f38417add7dfb05182143b19002fee",
+          "occurrence": 1,
+          "preview": "- [src/components/ParentPortal.tsx](../../src/components/ParentPortal.tsx): 選択中生徒の `チケット購入履歴` カードおよび取得エラー案内を追加。"
+        },
+        {
+          "id": "DOC-0675-ITEM-00016",
+          "line": 22,
+          "contentSha256": "1ac1399077b76ff76b83a8bfd4351a8daf993ae4b9ad32f44262a4b1936f93ab",
+          "occurrence": 1,
+          "preview": "- [src/App.tsx](../../src/App.tsx): `purchases` / `purchasesError` / `editingStudent` 状態管理、`fetchPurchases` の Graceful Degrade 取得、`handleUpd"
+        },
+        {
+          "id": "DOC-0675-ITEM-00017",
+          "line": 23,
+          "contentSha256": "7e4d6a3fc056996e8c8ee8ec36a6cc44ec5b5a08177c045a9a614c2e9436f556",
+          "occurrence": 1,
+          "preview": "- [scripts/test_gas.cjs](../../scripts/test_gas.cjs): `GAS-03` / `GAS-08` 拡張および `GAS-86`〜`GAS-89` を追加。"
+        },
+        {
+          "id": "DOC-0675-ITEM-00018",
+          "line": 24,
+          "contentSha256": "eed10d37ac4bf27e0aea30ce957dcf50c7b73e9b666462b8ce5632fb4044d77b",
+          "occurrence": 1,
+          "preview": "- [scripts/test_issue4_student_edit_and_purchases.cjs](../../scripts/test_issue4_student_edit_and_purchases.cjs): オフライン挙動・描画契約 5 件（`ISS4-01`"
+        },
+        {
+          "id": "DOC-0675-ITEM-00019",
+          "line": 26,
+          "contentSha256": "df46936bee3e146fbc97ca351dc74bcc0dbcaa43f741d92e18b3e494fa994bd8",
+          "occurrence": 1,
+          "preview": "## 3. 検証結果と未確認範囲（2026-11-28）"
+        },
+        {
+          "id": "DOC-0675-ITEM-00020",
+          "line": 28,
+          "contentSha256": "96e060bc53c3a94f4af591331d38517947de4d5bd2001389ffb4dfc6ab4ec52d",
+          "occurrence": 1,
+          "preview": "- **静的検査・ビルド**: `tsc --noEmit`、`oxlint src/`、`npm run build` PASS。"
+        },
+        {
+          "id": "DOC-0675-ITEM-00021",
+          "line": 29,
+          "contentSha256": "b04114f495bf9470a332e013b0cc27cbef8349a79a9f4ff5c3e61d31beb46bf2",
+          "occurrence": 1,
+          "preview": "- **GAS VM 契約試験（`node scripts/test_gas.cjs`）**: 89/89 PASS（Google サービス・ロック競合はオフライン VM スタブ。**実 GAS への配備・実シート書込み・実 Calendar 連携は `not-run`**）。"
+        },
+        {
+          "id": "DOC-0675-ITEM-00022",
+          "line": 30,
+          "contentSha256": "338ae0c2c53563b0973cf94f761a08cf0b35f74b8a832b114e29c37f3e527cd4",
+          "occurrence": 1,
+          "preview": "- **オフライン契約・React 描画・Playwright 回帰**: `test_issue4_student_edit_and_purchases.cjs` 5/5、`test_notes_and_form_safety.cjs` 6/6、`test_portals.cj"
+        },
+        {
+          "id": "DOC-0675-ITEM-00023",
+          "line": 31,
+          "contentSha256": "c06c33f9b566a72d0756d6952223179549cfceae2170300c90f262e67c1b242b",
+          "occurrence": 1,
+          "preview": "- **ローカル実ブラウザ目視検証**: `dist` ビルドのローカルサーバー上で 1280px・375px の 4 スクリーンショットを取得し、`read_file` で目視確認済み（`outputs/daily-20261128/issue4/screenshots/`。公"
+        },
+        {
+          "id": "DOC-0675-ITEM-00024",
+          "line": 32,
+          "contentSha256": "4bda5a63d78b1e2cfd376da5b58dc577992d7ad28c58ab9f4c67c5e9f20758de",
+          "occurrence": 1,
+          "preview": "- **独立 AI レビュー（`deep-reviewer`）**: ブロッカー 0 件を確認（[review.json](../traceability/reports/review-20261128-issue4/review.json)）。"
+        },
+        {
+          "id": "DOC-0675-ITEM-00025",
+          "line": 33,
+          "contentSha256": "c915ec57320a990a9ae77748c237c07f86a6c124aa9508dd68f8482c95550e7c",
+          "occurrence": 1,
+          "preview": "- **厳格トレーサビリティ**: `baseline` / `docs:generate` / `docs:index` / `docs:check` / `docs:check:strict` PASS、`npm run test:traceability` 34/34 PA"
+        }
+      ]
+    },
+    {
       "id": "DOC-0674",
       "path": "docs/progress/2026-11-28-r17-notes-and-form-safety-delivery.md",
       "state": "historical",
