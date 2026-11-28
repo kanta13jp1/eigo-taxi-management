@@ -1,0 +1,54 @@
+{
+  "checkedAt": "2026-11-28T00:54:25.012Z",
+  "completedAt": "2026-11-28T00:54:25.686Z",
+  "url": "https://eigo-taxi-test.web.app",
+  "releaseId": "632e9bfe71922f10",
+  "manifestPath": "docs/acceptance/deployment/build-manifest.json",
+  "manifestSha256": "c934144932972047a3e1e40456c4d1463b39a02acc6901c12d13ae966e37b25e",
+  "scope": "Public frontend bytes only; no Google service acceptance or deployment",
+  "results": [
+    {
+      "path": "/assets/index-M521UVcn.css",
+      "status": 200,
+      "sha256": "e2c969ac20eed0a6be60846c9f867fc90d3912b51da3dfbb47ad08ea7474aa42",
+      "expectedSha256": "e2c969ac20eed0a6be60846c9f867fc90d3912b51da3dfbb47ad08ea7474aa42",
+      "match": true
+    },
+    {
+      "path": "/assets/index-s9ZRqGsu.js",
+      "status": 200,
+      "sha256": "71c34aa3777fd994182e9ba7ffd5d4db6979b5c21f01e3d25c3b800edcaa606c",
+      "expectedSha256": "71c34aa3777fd994182e9ba7ffd5d4db6979b5c21f01e3d25c3b800edcaa606c",
+      "match": true
+    },
+    {
+      "path": "/favicon.svg",
+      "status": 200,
+      "sha256": "0d29ab267cc58d4f1a8255459ed101ef85c6de588af9781217c4babcb93fdf25",
+      "expectedSha256": "0d29ab267cc58d4f1a8255459ed101ef85c6de588af9781217c4babcb93fdf25",
+      "match": true
+    },
+    {
+      "path": "/index.html",
+      "status": 200,
+      "sha256": "f2d778728d15c62c689267d1957a69ab732e28383bd1c6c81487476c44541e33",
+      "expectedSha256": "f2d778728d15c62c689267d1957a69ab732e28383bd1c6c81487476c44541e33",
+      "match": true
+    },
+    {
+      "path": "/release.json",
+      "status": 200,
+      "sha256": "3fcd3c6794b7ea637877a32abfbef88e3ec06b9e6929c443b5a2e7c477c1e8ee",
+      "expectedSha256": "3fcd3c6794b7ea637877a32abfbef88e3ec06b9e6929c443b5a2e7c477c1e8ee",
+      "match": true
+    },
+    {
+      "path": "/",
+      "status": 200,
+      "sha256": "f2d778728d15c62c689267d1957a69ab732e28383bd1c6c81487476c44541e33",
+      "expectedSha256": "f2d778728d15c62c689267d1957a69ab732e28383bd1c6c81487476c44541e33",
+      "match": true
+    }
+  ],
+  "pass": true
+}

@@ -1,8 +1,8 @@
 # 最新の配布資料
 
-[最新の進捗追補（2026-11-27・Round 16・23ページ）](2026-11-10-premeeting/progress-2026-11-27-r16-daily.pptx) は、11月21日版（22ページ）に検証版 `23cb92b1ecfa50d2`（`sourceDigest 24e506a420ea`）の公開画面と Round 16 改善（本日の直接取消・取消確認モーダル一元化・残少クイック絞り込み）を追加した23ページ版です。[11月27日 Round 16 公開検証記録](../progress/2026-11-27-r16-cancel-and-filter-delivery.md)
+[最新の進捗追補（2026-11-28・Round 17・24ページ）](2026-11-10-premeeting/progress-2026-11-28-r17-daily.pptx) は、11月27日版（23ページ）に検証版 `3775af5aa84763e0`（`sourceDigest 632e9bfe7192`）の公開画面と Round 17 改善（送迎メモ常時可視化・住所全文折り返し・往復チケット不足警告・フォーム二重送信防止）を追加した24ページ版です。[11月28日 Round 17 公開検証記録](../progress/2026-11-28-r17-notes-and-form-safety-delivery.md)
 
-前版：[進捗追補（2026-11-21・累計62件・22ページ）](2026-11-10-premeeting/progress-2026-11-21-cumulative62.pptx) ／ [11月21日の公開検証記録](../progress/2026-11-21-cumulative-sixtytwo.md)
+前版：[進捗追補（2026-11-27・Round 16・23ページ）](2026-11-10-premeeting/progress-2026-11-27-r16-daily.pptx) ／ [11月27日 Round 16 公開検証記録](../progress/2026-11-27-r16-cancel-and-filter-delivery.md)
 
 現行の全工程資料・運用手順書・ユーザーマニュアル・残課題／進捗・対応表は [2026-10-23 共通デザイン版](2026-10-23-traceability/README.md) を使用してください。
 

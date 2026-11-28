@@ -1,0 +1,149 @@
+{
+  "date": "2026-11-28",
+  "completedAt": "2026-11-28T09:57:00+09:00",
+  "round": "Round 17 (Daily 2026-11-28): Pickup/Ride Notes Visibility & Address Wrapping, Roundtrip Ticket Shortage Alert, and Synchronous Modal Submit/Unmount Safety",
+  "reviewer": "Independent subagent deep-reviewer (conversation f914de1e-71fa-4053-ae25-e991dc183703) + live public deployment & visual browser verification",
+  "verdict": "APPROVE",
+  "scope": [
+    "src/components/TeacherDashboard.tsx",
+    "src/components/ParentPortal.tsx",
+    "src/components/AddRideModal.tsx",
+    "src/components/AddStudentModal.tsx",
+    "src/components/AddTicketModal.tsx",
+    "scripts/test_notes_and_form_safety.cjs"
+  ],
+  "sourceHashes": {
+    "src/components/TeacherDashboard.tsx": "e5b55d4422dca3b3c857925461fab1b043a3ee5913d74edbc6f58a892d106a34",
+    "src/components/ParentPortal.tsx": "0dc09466231c53879f73400ed37dbc605d87f1f030fba15b99937dbb0839cc82",
+    "src/components/AddRideModal.tsx": "d36e690b3edd4b05a89ede9a58abb6b04c50165072659b28697484fdced3ebfa",
+    "src/components/AddStudentModal.tsx": "a641a5a1864ae5d7b93c385e40f936dca314dbefad3dc610079a8872249a7979",
+    "src/components/AddTicketModal.tsx": "fab0f06624ee0437bd9a1a9a67aeb57cb0e8b7191f458a084d270086dad5904a",
+    "scripts/test_notes_and_form_safety.cjs": "0c2966f58bac2174c415d437295711660cab7cc03ada41855dd4fe0cb6d6d386"
+  },
+  "deployment": {
+    "environment": "mighty-test",
+    "projectId": "eigo-taxi-app",
+    "siteId": "eigo-taxi-test",
+    "url": "https://eigo-taxi-test.web.app",
+    "hostingVersion": "3775af5aa84763e0",
+    "builtAt": "2026-11-28T00:52:54.899Z",
+    "baseCommit": "f0a0da0fb39815090cdeda2972b295d4da0b766d",
+    "sourceDigest": "632e9bfe71922f1014f89e0ab0c0244dc4f5d105ed8ebc2e4c15e3e6c31140ee",
+    "publicVerificationSnapshot": "docs/acceptance/deployment-verification/public-2026-11-28T00-54-25-012Z.json",
+    "publicVerificationSha256": "ef409f9eb9b2e5686e72961e05557002c033bd81ebec8673b3113b72fa73f5fc",
+    "publicUrlsMatched": "6/6"
+  },
+  "independentAudit": {
+    "subagent": "deep-reviewer",
+    "conversationId": "f914de1e-71fa-4053-ae25-e991dc183703",
+    "verdict": "APPROVE",
+    "verifiedAreas": [
+      "Permanent student.pickupNote and ride.note visibility across Today cards, AllRides table, Students cards, and ParentPortal registered info section without breaking low-ticket test selectors.",
+      "Address wrapping via [overflow-wrap:anywhere] (replacing truncate) in TeacherDashboard AllRides table and Students cards.",
+      "Roundtrip-aware ticket shortage alert (requiredTickets = 2 vs 1, mutually exclusive #ride-student-low-ticket status/live-region, accurate aria-describedby wiring) and responsive grid-cols-1 sm:grid-cols-2 date/time layout in AddRideModal.",
+      "Synchronous double-submit guard (submittingRef) and unmount safety (mountedRef) across AddRideModal, AddStudentModal, and AddTicketModal, plus cancelPending dependency update in cancel cleanup effects.",
+      "XSS/PII isolation, WCAG 2.1 AA contrast, WAI-ARIA dialog behavior, and Tailwind CSS v3.4.19 compliance."
+    ],
+    "blockingFindings": [],
+    "nonBlockingNotes": [
+      "R17-06 checks submittingRef/mountedRef via source contract regex rather than runtime concurrent click simulation; manual audit confirmed unconditional finally reset and mountedRef guards.",
+      "Dynamic mounting of #ride-student-low-ticket matches existing codebase pattern and keeps aria-describedby free of dangling IDs.",
+      "In AllRides table and Students cards, max-w-xs / min-w-0 mirroring on inner wrappers can be considered in a future polish pass."
+    ]
+  },
+  "visualReview": {
+    "inspectedViaReadFile": true,
+    "screenshots": {
+      "outputs/daily-20261128/r17/screenshots/admin-today-notes-1280.png": {
+        "sha256": "5c90c08ef420e6d06722d6aa44c352438bae7740ab78aa5e8708fb195a0c0422",
+        "observation": "1280x900 live public admin Today tab: both scheduled cards render 📌 送迎メモ: (amber badge) and 💬 メモ: cleanly above the 地図アプリ / 取消 / 送迎完了 actions with AA contrast."
+      },
+      "outputs/daily-20261128/r17/screenshots/admin-schedule-notes-1280.png": {
+        "sha256": "ea86dc08b153d725313975e9d3d57ce8b7ac5ee716e71579831cd4d9ba71904e",
+        "observation": "1280x900 live public admin AllRides table: full addresses wrap cleanly without truncation and 💬 ride notes appear directly beneath each location."
+      },
+      "outputs/daily-20261128/r17/screenshots/admin-students-notes-1280.png": {
+        "sha256": "5f0eb9f4b367156e17fb8ff25877f467313f35eb63367cf37e31882e0aef7d68",
+        "observation": "1280x900 live public admin Students tab: full addresses including パークサイド201 wrap without clipping and 📌 送迎メモ: appears on all 3 student cards."
+      },
+      "outputs/daily-20261128/r17/screenshots/admin-booking-shortage-1280.png": {
+        "sha256": "1bffe836c7a1a5d3dbee575a4fe4d917d8b426f12ee3709c658a7c77d1efcccb",
+        "observation": "1280x900 live public AddRideModal: selecting 山本 颯太 (1 ticket) and 往復 (2 tickets) displays the rose-bordered shortage warning (2枚消費・完了前にチケット追加が必要) clearly below the student selector."
+      },
+      "outputs/daily-20261128/r17/screenshots/admin-booking-shortage-375.png": {
+        "sha256": "9bb84982960326204ca9e1b78e046cbea28f8f6235eefd4a690a0530c5662337",
+        "observation": "375x667 live public mobile AddRideModal: date and time inputs stack vertically in 1 column cleanly with readable shortage notice and zero horizontal overflow."
+      },
+      "outputs/daily-20261128/r17/screenshots/parent-notes-375.png": {
+        "sha256": "4d257bb202304b9205e7c563b030dfac61e78e76fc4146d3ec4b2e02d9b49117",
+        "observation": "375x667 live public mobile ParentPortal: registered info box displays 送迎メモ: エントランス前。到着時インターホンかLINE cleanly with zero overflow."
+      }
+    },
+    "pptPreview": {
+      "outputs/daily-20261128/r17/ppt/slide-24-r17.png": "Verified via read_file: Slide 24 uses MightyLINK cyan/navy/orange styling, zero overlap, zero out-of-bounds, clear hostingVersion 3775af5aa84763e0, sourceDigest 632e9bfe7192, and explicit CUST 0/6 HOLD notice."
+    }
+  },
+  "deliverables": {
+    "pptx": "docs/deliverables/2026-11-10-premeeting/progress-2026-11-28-r17-daily.pptx",
+    "pptxSha256": "d8a88d122d9b86da887e356d5f03eb110c45cf68e1a9b2526f4ede3e801884b0",
+    "validationJson": "outputs/daily-20261128/r17/ppt/validation.json",
+    "validationSha256": "d1e7c0adb1cbdd2f3ff4fe7aa25fe5027451c6df439de3410fd002e9ce15fe88"
+  },
+  "evidenceChecks": {
+    "traceability_negative_tests": {
+      "status": "PASS",
+      "passed": 34,
+      "total": 34
+    },
+    "r17_contract_suite": {
+      "path": "outputs/daily-20261128/r17/r17-notes-and-form-safety.json",
+      "sha256": "c03a088ca563dc1797a2a61c20ce8b5bb763e7a4526e2ee9dab5b922fb08f5b3",
+      "passed": 6,
+      "total": 6
+    },
+    "r16_contract_suite": {
+      "path": "outputs/daily-20261127/r16/r16-cancel-and-filter-contract.json",
+      "sha256": "3fd76e0528467a8a9c8b723a601f0f5669a36683e69f12c018774c538757e1e2",
+      "passed": 5,
+      "total": 5
+    },
+    "student_low_ticket_contract": {
+      "status": "PASS",
+      "passed": 5,
+      "total": 5
+    },
+    "outputs/refresh-20261120/local/results.json": {
+      "sha256": "2de6583d3913840ead97aecb09e54e126b67f515423b2ae88a8e79c042864a96",
+      "pass": true,
+      "count": 14
+    },
+    "outputs/refresh-20261120/reviewer/results.json": {
+      "sha256": "381226a6a2ab67b0dd12b6bff2c2f3fb2b72a39e87d558cb64cef2592e11cbc2",
+      "pass": true,
+      "count": 8
+    },
+    "outputs/refresh-20261120/modal-scroll/results.json": {
+      "sha256": "4cd133693edd715e5cb52eb9350a6742a42ce7b4b4bae1cc9fcecb845965690b",
+      "pass": true,
+      "count": 2
+    },
+    "outputs/r19-adoption-20261111/regression/trace-ui/results.json": {
+      "sha256": "7fd66c82505eceee25b213afced1c641c013f92ee9581d4226cee88a18721f8a",
+      "pass": true,
+      "count": 6
+    },
+    "outputs/daily-20261128/r17/public-ui-r17.json": {
+      "sha256": "7ce7ad5abe6a0a84090cc661708512290bbed80fb98ab761b1ebccdeea870839",
+      "pass": true,
+      "count": 6
+    }
+  },
+  "conclusion": "Round 17 fixes (pickupNote/ride.note visibility and wrapped addresses across admin/parent views, roundtrip-aware ticket shortage alert and responsive mobile date/time grid in AddRideModal, and synchronous double-submit/unmount safety across all 3 modal forms) passed independent deep-reviewer APPROVE, full offline/Playwright suites, live eigo-taxi-test 6/6 SHA-256 verification, and 6/6 live browser + visual checks.",
+  "limits": [
+    "Customer acceptance CUST-01..06 remains NOT_RUN (0/6)",
+    "thirdPartyPassed: 0; release remains HOLD; production rollout has not started",
+    "gas/Code.gs and src/App.tsx are unmodified; scripts/test_gas.cjs was not run",
+    "Public live verification covers the public frontend demo route only; no real Google OAuth login, live GAS/Spreadsheet/Calendar write, or physical mobile device testing claimed",
+    "PowerPoint slide rendering was verified via structural/geometry validation and Pillow preview; Microsoft PowerPoint desktop app rendering is not-run"
+  ]
+}

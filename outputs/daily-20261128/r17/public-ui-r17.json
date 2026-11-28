@@ -1,0 +1,107 @@
+{
+  "auditedAt": "2026-11-28T00:54:54.929Z",
+  "url": "https://eigo-taxi-test.web.app",
+  "mode": "public-frontend-demo-route (external network blocked; no real Google OAuth / GAS / Spreadsheet / Calendar / physical device)",
+  "expectedSourceDigest": "632e9bfe71922f1014f89e0ab0c0244dc4f5d105ed8ebc2e4c15e3e6c31140ee",
+  "checks": [
+    {
+      "id": "LIVE-R17-01",
+      "status": "PASS",
+      "description": "Live release.json matches deployed sourceDigest",
+      "detail": {
+        "environment": "mighty-test",
+        "projectId": "eigo-taxi-app",
+        "siteId": "eigo-taxi-test",
+        "builtAt": "2026-11-28T00:52:54.899Z",
+        "baseCommit": "f0a0da0fb39815090cdeda2972b295d4da0b766d",
+        "sourceDigest": "632e9bfe71922f1014f89e0ab0c0244dc4f5d105ed8ebc2e4c15e3e6c31140ee"
+      }
+    },
+    {
+      "id": "LIVE-R17-02",
+      "status": "PASS",
+      "description": "Admin Today tab displays both permanent student.pickupNote and ride.note and passes DOM standards at 1280x900",
+      "detail": {
+        "deadMatches": [],
+        "headingsCount": 4,
+        "headingSkips": [],
+        "overflowX": 0
+      }
+    },
+    {
+      "id": "LIVE-R17-03",
+      "status": "PASS",
+      "description": "Admin AllRides table and Students tab show notes and wrapped addresses without truncate at 1280x900",
+      "detail": {
+        "stdAll": {
+          "deadMatches": [],
+          "headingsCount": 2,
+          "headingSkips": [],
+          "overflowX": 0
+        },
+        "stdStu": {
+          "deadMatches": [],
+          "headingsCount": 5,
+          "headingSkips": [],
+          "overflowX": 0
+        }
+      }
+    },
+    {
+      "id": "LIVE-R17-04",
+      "status": "PASS",
+      "description": "AddRideModal switches ticket shortage warning for roundtrip and enforces WAI-ARIA modal trap/focus restore at 1280x900",
+      "detail": {
+        "shortageText": "⚠️ 現在のチケット残数が残り 1 枚のため、この予約（2枚消費）の完了時にはチケットが不足します。予約は可能ですが、完了前にチケット追加が必要です。",
+        "restoredToTrigger": true
+      }
+    },
+    {
+      "id": "LIVE-R17-05",
+      "status": "PASS",
+      "description": "Mobile 375x667 AddRideModal stacks date/time vertically with zero horizontal overflow and shows roundtrip shortage warning",
+      "detail": {
+        "std": {
+          "deadMatches": [],
+          "headingsCount": 5,
+          "headingSkips": [],
+          "overflowX": 0
+        },
+        "dateBox": {
+          "x": 41,
+          "y": 287,
+          "width": 293,
+          "height": 44
+        },
+        "timeBox": {
+          "x": 41,
+          "y": 363,
+          "width": 293,
+          "height": 44
+        }
+      }
+    },
+    {
+      "id": "LIVE-R17-06",
+      "status": "PASS",
+      "description": "Mobile 375x667 Parent Portal shows registered pickupNote and passes DOM standards",
+      "detail": {
+        "deadMatches": [],
+        "headingsCount": 4,
+        "headingSkips": [],
+        "overflowX": 0
+      }
+    }
+  ],
+  "pageErrors": [],
+  "consoleErrors": [],
+  "screenshots": [
+    "outputs/daily-20261128/r17/screenshots/admin-today-notes-1280.png",
+    "outputs/daily-20261128/r17/screenshots/admin-schedule-notes-1280.png",
+    "outputs/daily-20261128/r17/screenshots/admin-students-notes-1280.png",
+    "outputs/daily-20261128/r17/screenshots/admin-booking-shortage-1280.png",
+    "outputs/daily-20261128/r17/screenshots/admin-booking-shortage-375.png",
+    "outputs/daily-20261128/r17/screenshots/parent-notes-375.png"
+  ],
+  "status": "PASS"
+}

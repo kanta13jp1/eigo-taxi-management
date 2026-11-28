@@ -1,0 +1,31 @@
+{
+  "executedAt": "2026-11-28T00:48:32.498Z",
+  "mode": "Node VM; synthetic React hooks and stubbed services; no browser, network or real Google login",
+  "sourceHashes": {
+    "src/components/LoginScreen.tsx": "e5bb1cba35936aa8ea9d382f7336819c86275dc7df303a58ea0eedb02002928b",
+    "src/portal.ts": "874dce7f269e59073b75d6ae47c7fb3b682686fa2ab214d8cb0eacb48c59cac7",
+    "scripts/test_portal_mismatch_ui.cjs": "8cb6e7f873ec42895e4629962f176a22ad5de9ae20192ea1b1997112caa0e9f2"
+  },
+  "results": [
+    {
+      "name": "PM-01 Server and client wrong-entrance refusals are recognised; other refusals are not",
+      "status": "PASS"
+    },
+    {
+      "name": "PM-02 Parent entrance shows family-URL guidance and a link to the admin entrance after a wrong-entrance refusal",
+      "status": "PASS"
+    },
+    {
+      "name": "PM-03 Admin entrance shows guidance without any link to a parent or family URL",
+      "status": "PASS"
+    },
+    {
+      "name": "PM-04 Unregistered account, revoked URL and interrupted login show no entrance guidance or admin link",
+      "status": "PASS"
+    },
+    {
+      "name": "PM-05 No guidance before a login attempt",
+      "status": "PASS"
+    }
+  ]
+}
