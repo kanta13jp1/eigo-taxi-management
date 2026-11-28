@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import type { Student, RideReservation, RideType } from '../types';
 import { getLocalDateString } from '../services/api';
+import { useModalDialog } from '../hooks/useModalDialog';
 import {
   Car,
   Calendar,
@@ -46,42 +47,68 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
   const safeRides = Array.isArray(rides) ? rides : [];
 
   const [filterStatus, setFilterStatus] = useState<string>('all');
+  const [studentFilter, setStudentFilter] = useState<'all' | 'low'>('all');
   const [completionError, setCompletionError] = useState('');
   const [cancelRideId, setCancelRideId] = useState<string | null>(null);
   const [cancelPending, setCancelPending] = useState(false);
+  const [cancelError, setCancelError] = useState('');
+  const mountedRef = useRef(true);
   const cancellationInFlight = useRef(false);
-  const cancelDialog = useRef<HTMLDialogElement>(null);
+  const inFlightCompletions = useRef(new Set<string>());
+  const cancelDialogRef = useRef<HTMLDivElement>(null);
+  const cancelBackButtonRef = useRef<HTMLButtonElement>(null);
   const cancelTarget = safeRides.find(ride => ride.id === cancelRideId && ride.status === 'scheduled');
-  const activeCancelId = cancelTarget?.id;
   useEffect(() => {
-    if (!activeCancelId) return;
-    const previousActive = document.activeElement instanceof HTMLElement ? document.activeElement : null;
-    const dialog = cancelDialog.current;
-    dialog?.showModal();
+    mountedRef.current = true;
     return () => {
-      dialog?.close();
-      if (previousActive?.isConnected) {
-        previousActive.focus({ preventScroll: true });
-      }
+      mountedRef.current = false;
     };
-  }, [activeCancelId]);
+  }, []);
+  useEffect(() => {
+    if (cancelRideId && !cancelTarget && !cancellationInFlight.current) {
+      setCancelRideId(null);
+      setCancelError('');
+    }
+  }, [cancelRideId, cancelTarget]);
+  const openCancelDialog = (rideId: string) => {
+    if (cancellationInFlight.current || inFlightCompletions.current.has(rideId)) return;
+    setCancelError('');
+    setCancelRideId(rideId);
+  };
   const dismissCancellation = () => {
-    cancelDialog.current?.close();
+    if (cancellationInFlight.current) return;
+    setCancelError('');
     setCancelRideId(null);
   };
+  useModalDialog({
+    isOpen: Boolean(cancelTarget),
+    onClose: dismissCancellation,
+    isDismissDisabled: cancelPending,
+    dialogRef: cancelDialogRef,
+    initialFocusRef: cancelBackButtonRef,
+  });
   const confirmCancellation = async () => {
-    if (!cancelTarget || cancellationInFlight.current) return;
+    if (!cancelTarget || cancellationInFlight.current || inFlightCompletions.current.has(cancelTarget.id)) return;
+    const targetId = cancelTarget.id;
     cancellationInFlight.current = true;
     setCancelPending(true);
-    dismissCancellation();
+    setCancelError('');
     try {
-      await onCancelRide(cancelTarget.id);
+      await onCancelRide(targetId);
+      if (mountedRef.current) {
+        setCancelRideId(null);
+      }
+    } catch (error) {
+      if (mountedRef.current) {
+        setCancelError(error instanceof Error ? error.message : 'キャンセルできませんでした');
+      }
     } finally {
       cancellationInFlight.current = false;
-      setCancelPending(false);
+      if (mountedRef.current) {
+        setCancelPending(false);
+      }
     }
   };
-  const inFlightCompletions = useRef(new Set<string>());
   const [pendingRideIds, setPendingRideIds] = useState<ReadonlySet<string>>(new Set());
   const [activeTab, setActiveTab] = useState<'today' | 'allRides' | 'students'>(() => reviewOnly ? 'allRides' : 'today');
 
@@ -112,6 +139,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
 
   // チケット残少・ゼロの生徒
   const lowTicketStudents = safeStudents.filter((s) => s.ticketBalance <= 2);
+  const displayedStudents = studentFilter === 'low' ? lowTicketStudents : safeStudents;
 
   // フィルタ済み送迎
   const filteredRides = safeRides
@@ -142,24 +170,33 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
 
   const completeRide = async (ride: RideReservation) => {
     const inFlight = inFlightCompletions.current;
-    if (inFlight.has(ride.id)) return;
+    if (inFlight.has(ride.id) || cancellationInFlight.current) return;
     inFlight.add(ride.id);
     setPendingRideIds(new Set(inFlight));
     setCompletionError('');
     try {
       await onCompleteRide(ride.id);
     } catch (error) {
-      const reason = error instanceof Error ? error.message : '完了処理できませんでした';
-      setCompletionError(`${ride.studentName}（${ride.rideDate} ${ride.rideTime}）: ${reason}`);
+      if (mountedRef.current) {
+        const reason = error instanceof Error ? error.message : '完了処理できませんでした';
+        setCompletionError(`${ride.studentName}（${ride.rideDate} ${ride.rideTime}）: ${reason}`);
+      }
     } finally {
       inFlight.delete(ride.id);
-      setPendingRideIds(new Set(inFlight));
+      if (mountedRef.current) {
+        setPendingRideIds(new Set(inFlight));
+      }
     }
   };
 
-  const selectTab = (tab: 'today' | 'allRides' | 'students') => {
+  const selectTab = (tab: 'today' | 'allRides' | 'students', nextStudentFilter?: 'all' | 'low') => {
     setCompletionError('');
     setActiveTab(tab);
+    if (nextStudentFilter) {
+      setStudentFilter(nextStudentFilter);
+    } else if (tab === 'students') {
+      setStudentFilter('all');
+    }
   };
 
   return (
@@ -213,7 +250,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
 
         <button
           type="button"
-          onClick={() => selectTab('students')}
+          onClick={() => selectTab('students', 'low')}
           className="bg-white p-4 rounded-2xl border border-slate-200/80 shadow-sm flex items-center justify-between cursor-pointer hover:border-amber-300 transition-colors text-left w-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500"
         >
           <div>
@@ -239,7 +276,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
 
         <button
           type="button"
-          onClick={() => selectTab('students')}
+          onClick={() => selectTab('students', 'all')}
           className="bg-white p-4 rounded-2xl border border-slate-200/80 shadow-sm flex items-center justify-between cursor-pointer hover:border-blue-300 transition-colors text-left w-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
         >
           <div>
@@ -400,21 +437,21 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
                         <span className="break-all">{ride.pickupLocation}</span>
                       </div>
                       {ride.note && (
-                        <div className="text-slate-600 border-t border-slate-200/60 pt-1 text-[11px]">
+                        <div className="text-slate-600 border-t border-slate-200/60 pt-1 text-[11px] [overflow-wrap:anywhere]">
                           💬 メモ: {ride.note}
                         </div>
                       )}
                     </div>
 
                     {/* アクションボタン */}
-                    <div className="flex items-center justify-between gap-2 pt-1">
+                    <div className="flex flex-wrap items-center justify-between gap-2 pt-1">
                       <a
                         href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
                           ride.pickupLocation
                         )}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        aria-label={`${ride.studentName} の送迎先をGoogleマップで開く`}
+                        aria-label={`${ride.studentName || student?.name || ''} の送迎先をGoogleマップで開く`}
                         className="text-xs text-blue-600 hover:text-blue-700 inline-flex items-center gap-1 font-medium rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
                       >
                         <MapPin aria-hidden="true" className="w-3.5 h-3.5" />
@@ -423,17 +460,29 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
                       </a>
 
                       {isScheduled && (
-                        <button
-                          type="button"
-                          onClick={() => completeRide(ride)}
-                          disabled={pendingRideIds.has(ride.id)}
-                          aria-busy={pendingRideIds.has(ride.id)}
-                          aria-label={completionLabel(ride)}
-                          className="bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs py-2 px-3.5 rounded-xl shadow-sm inline-flex items-center gap-1.5 transition-colors disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
-                        >
-                          <CheckCircle2 aria-hidden="true" className="w-4 h-4" />
-                          {pendingRideIds.has(ride.id) ? '完了処理中' : `送迎完了（${typeInfo.consume}回消費）`}
-                        </button>
+                        <div className="flex flex-wrap items-center justify-end gap-2">
+                          <button
+                            type="button"
+                            onClick={() => openCancelDialog(ride.id)}
+                            disabled={pendingRideIds.has(ride.id) || cancelPending}
+                            aria-busy={cancelPending && cancelRideId === ride.id}
+                            aria-label={`${ride.studentName || student?.name || ''} ${ride.rideDate} ${ride.rideTime} ${typeInfo.text} の予約を取消`}
+                            className="text-xs text-rose-700 border border-rose-300 bg-rose-50/60 hover:bg-rose-50 py-2 px-3 rounded-xl font-bold transition-colors disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-500"
+                          >
+                            取消
+                          </button>
+                          <button
+                            type="button"
+                            onClick={() => completeRide(ride)}
+                            disabled={pendingRideIds.has(ride.id) || cancelPending}
+                            aria-busy={pendingRideIds.has(ride.id)}
+                            aria-label={completionLabel(ride)}
+                            className="bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs py-2 px-3.5 rounded-xl shadow-sm inline-flex items-center gap-1.5 transition-colors disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
+                          >
+                            <CheckCircle2 aria-hidden="true" className="w-4 h-4" />
+                            {pendingRideIds.has(ride.id) ? '完了処理中' : `送迎完了（${typeInfo.consume}回消費）`}
+                          </button>
+                        </div>
                       )}
                     </div>
                   </div>
@@ -536,7 +585,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
                                 <button
                                   type="button"
                                   onClick={() => completeRide(ride)}
-                                  disabled={pendingRideIds.has(ride.id)}
+                                  disabled={pendingRideIds.has(ride.id) || cancelPending}
                                   aria-busy={pendingRideIds.has(ride.id)}
                                   aria-label={completionLabel(ride)}
                                   className="text-xs bg-emerald-700 hover:bg-emerald-800 text-white font-bold py-1 px-2.5 rounded-lg disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
@@ -545,10 +594,10 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
                                 </button>
                                 <button
                                   type="button"
-                                  onClick={() => setCancelRideId(ride.id)}
+                                  onClick={() => openCancelDialog(ride.id)}
                                   disabled={pendingRideIds.has(ride.id) || cancelPending}
-                                  aria-busy={cancelPending}
-                                  aria-label={`${ride.studentName} ${ride.rideDate} ${ride.rideTime} ${typeInfo.text} の予約を取消`}
+                                  aria-busy={cancelPending && cancelRideId === ride.id}
+                                  aria-label={`${ride.studentName || ''} ${ride.rideDate} ${ride.rideTime} ${typeInfo.text} の予約を取消`}
                                   className="text-xs text-rose-700 hover:bg-rose-50 py-1 px-2 rounded-lg font-bold transition-colors disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-500"
                                 >
                                   取消
@@ -568,47 +617,93 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
       )}
 
       {cancelTarget && (
-        <dialog ref={cancelDialog} aria-labelledby="admin-cancel-heading"
-          aria-describedby="admin-cancel-details admin-cancel-effect"
-          onCancel={(e) => { if (cancelPending) { e.preventDefault(); return; } dismissCancellation(); }}
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm"
           onClick={(e) => { if (e.target === e.currentTarget && !cancelPending) dismissCancellation(); }}
-          className="m-auto w-11/12 max-w-md rounded-2xl p-0 shadow-xl backdrop:bg-slate-900/60 backdrop:backdrop-blur-sm">
-          <div className="p-5">
+        >
+          <div
+            ref={cancelDialogRef}
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="admin-cancel-heading"
+            aria-describedby="admin-cancel-details admin-cancel-effect"
+            tabIndex={-1}
+            className="w-full max-w-md max-h-[calc(100dvh-2rem)] overflow-y-auto overscroll-contain rounded-2xl bg-white text-slate-900 p-5 shadow-xl"
+          >
             <h2 id="admin-cancel-heading" className="text-lg font-bold">予約取消の確認</h2>
             <div id="admin-cancel-details" className="mt-3 space-y-1 [overflow-wrap:anywhere]">
               <p className="font-semibold">{cancelTarget.studentName}</p>
               <p>{cancelTarget.rideDate} {cancelTarget.rideTime}・{getRideTypeLabel(cancelTarget.rideType).text}</p>
               <p>送迎先: {cancelTarget.pickupLocation}</p>
+              {cancelTarget.note && <p>備考: {cancelTarget.note}</p>}
             </div>
-            <p id="admin-cancel-effect" className="mt-3 text-sm">{isDemo ? 'このブラウザ内のデモ予約を取り消します。教室の予定は変わりません。' : '台帳の予約を取消にし、対応するカレンダーの予定を削除します。'}</p>
+            <p id="admin-cancel-effect" className="mt-3 text-sm text-slate-700">{isDemo ? 'このブラウザ内のデモ予約を取り消します。教室の予定は変わりません。' : '台帳の予約を取消にし、対応するカレンダーの予定を削除します。'}</p>
+            {cancelError && (
+              <p role="alert" className="mt-3 rounded-lg bg-rose-50 p-2.5 text-xs font-medium text-rose-800">{cancelError}</p>
+            )}
             <div className="mt-5 flex justify-end gap-2">
-              <button type="button" disabled={cancelPending} className="rounded-lg border px-3 py-2 disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-500" onClick={dismissCancellation}>戻る</button>
-              <button type="button" disabled={cancelPending} aria-busy={cancelPending} className="rounded-lg bg-rose-700 px-3 py-2 font-bold text-white disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-500" onClick={() => void confirmCancellation()}>取消を確定</button>
+              <button ref={cancelBackButtonRef} type="button" disabled={cancelPending} className="rounded-lg border border-slate-300 px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50 disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-500" onClick={dismissCancellation}>戻る</button>
+              <button type="button" disabled={cancelPending} aria-busy={cancelPending} className="rounded-lg bg-rose-700 hover:bg-rose-800 px-3 py-2 text-sm font-bold text-white disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-500" onClick={() => void confirmCancellation()}>{cancelPending ? '取消処理中…' : '取消を確定'}</button>
             </div>
           </div>
-        </dialog>
+        </div>
       )}
 
       {/* タブ3: 生徒台帳＆チケット管理 */}
       {activeTab === 'students' && (
         <div className="space-y-4">
-          <div className="flex items-center justify-between">
+          <div className="flex flex-wrap items-center justify-between gap-2">
             <h2 className="text-base font-bold text-slate-800">生徒台帳・チケット残数状況</h2>
-            {!reviewOnly && <button
-              type="button"
-              onClick={onOpenAddStudent}
-              className="inline-flex items-center gap-1.5 bg-slate-900 hover:bg-slate-800 text-white px-3 py-1.5 rounded-xl text-xs font-bold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
-            >
-              <UserPlus aria-hidden="true" className="w-3.5 h-3.5" />
-              新規生徒を登録
-            </button>}
+            <div className="flex flex-wrap items-center gap-2">
+              <div role="group" aria-label="チケット残数で絞り込み" className="inline-flex rounded-xl bg-slate-200/70 p-0.5 text-xs font-semibold">
+                <button
+                  type="button"
+                  aria-pressed={studentFilter === 'all'}
+                  onClick={() => setStudentFilter('all')}
+                  className={`px-2.5 py-1 rounded-lg transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600 ${
+                    studentFilter === 'all' ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-600 hover:text-slate-900'
+                  }`}
+                >
+                  全員 ({safeStudents.length})
+                </button>
+                <button
+                  type="button"
+                  aria-pressed={studentFilter === 'low'}
+                  onClick={() => setStudentFilter('low')}
+                  className={`px-2.5 py-1 rounded-lg transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 ${
+                    studentFilter === 'low' ? 'bg-white text-amber-800 shadow-sm' : 'text-slate-600 hover:text-slate-900'
+                  }`}
+                >
+                  残り2枚以下のみ ({lowTicketStudents.length})
+                </button>
+              </div>
+              {!reviewOnly && <button
+                type="button"
+                onClick={onOpenAddStudent}
+                className="inline-flex items-center gap-1.5 bg-slate-900 hover:bg-slate-800 text-white px-3 py-1.5 rounded-xl text-xs font-bold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
+              >
+                <UserPlus aria-hidden="true" className="w-3.5 h-3.5" />
+                新規生徒を登録
+              </button>}
+            </div>
           </div>
 
           {safeStudents.length === 0 ? (
             <div className="bg-white rounded-2xl border border-dashed border-slate-300 p-8 text-center text-sm text-slate-500">登録されている生徒はまだいません。</div>
+          ) : displayedStudents.length === 0 ? (
+            <div className="bg-white rounded-2xl border border-dashed border-slate-300 p-8 text-center space-y-3">
+              <p className="text-sm font-semibold text-slate-700">チケット残り2枚以下の生徒はいません。</p>
+              <button
+                type="button"
+                onClick={() => setStudentFilter('all')}
+                className="inline-flex items-center rounded-xl border border-slate-300 bg-white px-3.5 py-1.5 text-xs font-bold text-slate-700 hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
+              >
+                全員を表示
+              </button>
+            </div>
           ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
-            {safeStudents.map((student) => {
+            {displayedStudents.map((student) => {
               const isZero = student.ticketBalance === 0;
               // Same threshold as the "チケット残り2枚以下" summary card and the booking form.
               const isLow = student.ticketBalance > 0 && student.ticketBalance <= 2;

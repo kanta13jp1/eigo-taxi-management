@@ -3,9 +3,9 @@
     "environment": "mighty-test",
     "projectId": "eigo-taxi-app",
     "siteId": "eigo-taxi-test",
-    "builtAt": "2026-11-26T20:13:21.650Z",
-    "baseCommit": "98e4a27f3709d80b7ebb2eeb03361e229a31700d",
-    "sourceDigest": "99284e780dec40fbaa902a59d8f12cfab31af69a1bd781e09a9bf3de06403208"
+    "builtAt": "2026-11-27T11:45:03.201Z",
+    "baseCommit": "a657acd5980f439a3159d06a6acf3f4e3a2b4bad",
+    "sourceDigest": "24e506a420eaf15acbee94d4ec772a568374a1c34c3155c019c37673c5ea29d9"
   },
   "sourceHashes": {
     ".firebaserc": "2033eed832610e2ed169fe647d9ddb4ecb9954563d81c7f991bcd7250f15589b",
@@ -27,13 +27,13 @@
     "src/components/GoogleSettings.tsx": "813fb6e30da6d1f739cc7e72960547d1955fc729f71e99f722a855e50e7a7c6d",
     "src/components/LoginScreen.tsx": "e5bb1cba35936aa8ea9d382f7336819c86275dc7df303a58ea0eedb02002928b",
     "src/components/Navbar.tsx": "d9b5fcef4d332e45d0028b023caf1f09f08a7ec3603c8a00fd92c0e40f858ab5",
-    "src/components/ParentPortal.tsx": "ce436fc381f2bf5d523c115c77af9d7687ddcf791153145deaf9498c385d2589",
+    "src/components/ParentPortal.tsx": "44d910236bf932c22c70e9c0b44032726a3a9c21eceee420da6f339d5bc5e493",
     "src/components/PortalInvitations.tsx": "d070747b00152acb81436ab851110bf07fc67b9a7e886296112f5376c8a1f278",
-    "src/components/TeacherDashboard.tsx": "c60d46066a6c0e5b77b04e56f5cf8f34b838be557033ade9a6f256f8f3a3772b",
+    "src/components/TeacherDashboard.tsx": "e008a999f225bb70418507cceff33b3966aea0a42e9eff5cd4655088850ba4cf",
     "src/components/TermsModal.tsx": "4316cdf48c240993c1c95765f952d5aab622360fbf996c4e24235a545a24ead1",
     "src/components/WebMcpBridge.tsx": "f9a505e558a3e12298429752c0cbe1ea3f11639b007404c51895459108098592",
     "src/deployment-config.ts": "5c30aad36376487fcf2fbb664f2574bdd430890191675ca9813b5fdea516b6f1",
-    "src/hooks/useModalDialog.ts": "e42891b04ffaf2cb7d5ee143296d79f491b58618a41e3b479dc91bc6fb336da8",
+    "src/hooks/useModalDialog.ts": "3316e91d0348660be765f5b4abf08f2af1096c056969d833136c0300c4b5774b",
     "src/index.css": "66baff8b6d7a116920270aba8584dd856cf5de345b59b511b849b96152ce91d8",
     "src/main.tsx": "6e9e5807fcbd48b75a96db5cbef36c996262196be42e6d4760dc86babbe61ad2",
     "src/portal.ts": "874dce7f269e59073b75d6ae47c7fb3b682686fa2ab214d8cb0eacb48c59cac7",
@@ -43,10 +43,10 @@
     "vite.config.ts": "1a9ae3ecf40070833468d79ee45adb1bc50aafa08ab3a904e497e81805af6d6f"
   },
   "distHashes": {
-    "dist/assets/index-C1hp1v-I.css": "855c80ce9ff3fa1d28c7ecb347c3bf236b439ad9e7d69406b545ca87c7c9d3d0",
-    "dist/assets/index-DzwRersW.js": "817be1c70d425c4950c9844ca93f4fce7bc58848a118427df245761a4aa87dde",
+    "dist/assets/index-BK8d4znc.js": "5992cb1c38763b6d32898512968cf554b543c4537a0c583f3869ff7053069054",
+    "dist/assets/index-COuYlynp.css": "ce6e489807b3fd571ba2d8707cbcc515d48806c82a8e2b194953dbfd366d696b",
     "dist/favicon.svg": "9229e4cd7db309abfac670ac1a23d6500aac3f3c2f426b2db832559291212745",
-    "dist/index.html": "9db71f6e605e4ef3d986c567694b4f99b2b8bcffb63b68192730aa3efff0c73b",
-    "dist/release.json": "11ac95d091d0de61eaa93fd89c97aac041021c06232eb7aca3b8d9c16b204297"
+    "dist/index.html": "3fe28196f7bba1ae553e12f98346781f488386a1d1716d756579b696536b27fe",
+    "dist/release.json": "74c91f7dad3d7446d2662eafc1ac7c5bc2fc473a84195aa1e20dfa03f64c3578"
   }
 }

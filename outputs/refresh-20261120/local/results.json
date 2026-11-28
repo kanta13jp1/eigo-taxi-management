@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
   "mode": "LOCAL_MOCK_UI_REHEARSAL",
-  "runStartedAt": "2026-11-27T00:26:44.282Z",
-  "finishedAt": "2026-11-27T00:27:16.349Z",
+  "runStartedAt": "2026-11-28T00:12:25.569Z",
+  "finishedAt": "2026-11-28T00:12:52.786Z",
   "nodeVersion": "24.22.1",
   "browserVersion": "158.0.8127.88",
   "timezone": "Asia/Tokyo",
-  "testDate": "2026-11-27",
+  "testDate": "2026-11-28",
   "sourceHashes": {
     "src/App.css": "6e25a776d3e8102da5bacb3cb99f4a5fc662a2e01e6143140671a556d28c3d5c",
     "src/App.tsx": "1b651eacd5401dcf531a76ee38494be15b35b2b58cbc376fc9bf50d00800257e",
@@ -20,13 +20,13 @@
     "src/components/GoogleSettings.tsx": "813fb6e30da6d1f739cc7e72960547d1955fc729f71e99f722a855e50e7a7c6d",
     "src/components/LoginScreen.tsx": "e5bb1cba35936aa8ea9d382f7336819c86275dc7df303a58ea0eedb02002928b",
     "src/components/Navbar.tsx": "d9b5fcef4d332e45d0028b023caf1f09f08a7ec3603c8a00fd92c0e40f858ab5",
-    "src/components/ParentPortal.tsx": "ce436fc381f2bf5d523c115c77af9d7687ddcf791153145deaf9498c385d2589",
+    "src/components/ParentPortal.tsx": "44d910236bf932c22c70e9c0b44032726a3a9c21eceee420da6f339d5bc5e493",
     "src/components/PortalInvitations.tsx": "d070747b00152acb81436ab851110bf07fc67b9a7e886296112f5376c8a1f278",
-    "src/components/TeacherDashboard.tsx": "c60d46066a6c0e5b77b04e56f5cf8f34b838be557033ade9a6f256f8f3a3772b",
+    "src/components/TeacherDashboard.tsx": "e008a999f225bb70418507cceff33b3966aea0a42e9eff5cd4655088850ba4cf",
     "src/components/TermsModal.tsx": "4316cdf48c240993c1c95765f952d5aab622360fbf996c4e24235a545a24ead1",
     "src/components/WebMcpBridge.tsx": "f9a505e558a3e12298429752c0cbe1ea3f11639b007404c51895459108098592",
     "src/deployment-config.ts": "5c30aad36376487fcf2fbb664f2574bdd430890191675ca9813b5fdea516b6f1",
-    "src/hooks/useModalDialog.ts": "e42891b04ffaf2cb7d5ee143296d79f491b58618a41e3b479dc91bc6fb336da8",
+    "src/hooks/useModalDialog.ts": "3316e91d0348660be765f5b4abf08f2af1096c056969d833136c0300c4b5774b",
     "src/index.css": "66baff8b6d7a116920270aba8584dd856cf5de345b59b511b849b96152ce91d8",
     "src/main.tsx": "6e9e5807fcbd48b75a96db5cbef36c996262196be42e6d4760dc86babbe61ad2",
     "src/portal.ts": "874dce7f269e59073b75d6ae47c7fb3b682686fa2ab214d8cb0eacb48c59cac7",
@@ -42,9 +42,9 @@
     "scripts/fixtures/local-acceptance/index.html": "a0030c371776b189471b5e18df159b04706dba1659ab740055c2d1954b62eb0b"
   },
   "buildHashes": {
-    "assets/index-C1hp1v-I.css": "855c80ce9ff3fa1d28c7ecb347c3bf236b439ad9e7d69406b545ca87c7c9d3d0",
-    "assets/index-C9kJRjHm.js": "11104c27dae730716b086eeaed4312ec71346f389f5c4e4359c2b2eba3edca93",
-    "index.html": "4da0a7399fbd6962a042cfc40728bb8b5640b1cf3cd265b22464a800bb8d4d78"
+    "assets/index-COuYlynp.css": "ce6e489807b3fd571ba2d8707cbcc515d48806c82a8e2b194953dbfd366d696b",
+    "assets/index-e3ZRkp9Q.js": "b3d705accd09670e5bd1e7d49a9bdd13adc09a353b7a1aff1ff7e606409d91ba",
+    "index.html": "df61445f42a2826222a7c5ae73e00255c16557caf4f8d0da60de0f9595e45d22"
   },
   "changedSources": [],
   "externalRequests": [],
@@ -76,10 +76,10 @@
       "status": "PASS",
       "screenshot": {
         "file": "LOCAL-UI-01.png",
-        "sha256": "fa696b4250fde7ee7ffe51b67047593c63470361a9738a3525be9c01bcc2a74b"
+        "sha256": "36a7f1adc8745c2770ac40760ea3fedb7535c7b9799887efbcb7ae79e3b05b59"
       },
-      "startedAt": "2026-11-27T00:26:46.666Z",
-      "finishedAt": "2026-11-27T00:26:47.495Z"
+      "startedAt": "2026-11-28T00:12:28.026Z",
+      "finishedAt": "2026-11-28T00:12:28.781Z"
     },
     {
       "id": "LOCAL-UI-02",
@@ -91,10 +91,10 @@
       "status": "PASS",
       "screenshot": {
         "file": "LOCAL-UI-02.png",
-        "sha256": "990cd2e294fbf5d800cd3d7f30bbf187e5ae3ef65eff8f0121eeccb7ca89f7d3"
+        "sha256": "d6fa8e5d7a35a7f0eb2de4b4e14e528ab1c4ea2f05d77da4abe25b693e0afee4"
       },
-      "startedAt": "2026-11-27T00:26:47.495Z",
-      "finishedAt": "2026-11-27T00:26:48.976Z"
+      "startedAt": "2026-11-28T00:12:28.781Z",
+      "finishedAt": "2026-11-28T00:12:29.889Z"
     },
     {
       "id": "LOCAL-UI-03",
@@ -105,10 +105,10 @@
       "status": "PASS",
       "screenshot": {
         "file": "LOCAL-UI-03.png",
-        "sha256": "fdfa633f14ce407075632d61db9e2cadcf7985b417da25a3af2875f2b1656844"
+        "sha256": "3f292e75d555012395d9324ba5a4e479b58cf5603b346b6d873b7c4dc71f2b71"
       },
-      "startedAt": "2026-11-27T00:26:48.976Z",
-      "finishedAt": "2026-11-27T00:26:51.016Z"
+      "startedAt": "2026-11-28T00:12:29.890Z",
+      "finishedAt": "2026-11-28T00:12:31.864Z"
     },
     {
       "id": "LOCAL-UI-04",
@@ -119,10 +119,10 @@
       "status": "PASS",
       "screenshot": {
         "file": "LOCAL-UI-04.png",
-        "sha256": "a95b8cf003bb22e22433739ce415b6d35e23c7dc5bb3fccb915aa18c8b044d3b"
+        "sha256": "4f5e00daa3bde0e00d1f3c597f714faedf67b282500e4c0d42af1d4cd4421528"
       },
-      "startedAt": "2026-11-27T00:26:51.016Z",
-      "finishedAt": "2026-11-27T00:26:53.022Z"
+      "startedAt": "2026-11-28T00:12:31.864Z",
+      "finishedAt": "2026-11-28T00:12:33.862Z"
     },
     {
       "id": "LOCAL-UI-05",
@@ -133,10 +133,10 @@
       "status": "PASS",
       "screenshot": {
         "file": "LOCAL-UI-05.png",
-        "sha256": "6f6c194ebff9c8bc13a45d6df7d58b60e1d4e090e89d57fe1139eb5525461090"
+        "sha256": "00f9e2dcddf256e7b88d281ed47411158f8037c6771981d3331b638b4dcee713"
       },
-      "startedAt": "2026-11-27T00:26:53.022Z",
-      "finishedAt": "2026-11-27T00:26:55.321Z"
+      "startedAt": "2026-11-28T00:12:33.863Z",
+      "finishedAt": "2026-11-28T00:12:35.771Z"
     },
     {
       "id": "LOCAL-UI-06",
@@ -147,10 +147,10 @@
       "status": "PASS",
       "screenshot": {
         "file": "LOCAL-UI-06.png",
-        "sha256": "9cdb253f8d4b97a28b3362069f209fb4729e42c2634dc2d5c108413f5f463cf4"
+        "sha256": "575a8ff3353950e930fa13869bbf16a55dfe13f2491f81262d9861b1f69065e2"
       },
-      "startedAt": "2026-11-27T00:26:55.321Z",
-      "finishedAt": "2026-11-27T00:26:57.029Z"
+      "startedAt": "2026-11-28T00:12:35.771Z",
+      "finishedAt": "2026-11-28T00:12:37.055Z"
     },
     {
       "id": "LOCAL-UI-07",
@@ -162,10 +162,10 @@
       "status": "PASS",
       "screenshot": {
         "file": "LOCAL-UI-07.png",
-        "sha256": "e863d67ceaf86c2483e821c70d51004d7d6482ee0ec0e3c85ec0de7a1ea7e25e"
+        "sha256": "1ddae413c7b67726d48d7245c5d0851d78375c86402e10bc20896ff37bb348e6"
       },
-      "startedAt": "2026-11-27T00:26:57.029Z",
-      "finishedAt": "2026-11-27T00:27:00.118Z"
+      "startedAt": "2026-11-28T00:12:37.055Z",
+      "finishedAt": "2026-11-28T00:12:39.481Z"
     },
     {
       "id": "LOCAL-UI-08",
@@ -177,10 +177,10 @@
       "status": "PASS",
       "screenshot": {
         "file": "LOCAL-UI-08.png",
-        "sha256": "45a2d851ea5bcee10c0c829befc9598d41a68d3a1e39e698b9a8de099a736e34"
+        "sha256": "566f23b08e115d76369b1f622362b257e40e1517b7bc130ebfe760fb37eeb6b4"
       },
-      "startedAt": "2026-11-27T00:27:00.118Z",
-      "finishedAt": "2026-11-27T00:27:02.396Z"
+      "startedAt": "2026-11-28T00:12:39.481Z",
+      "finishedAt": "2026-11-28T00:12:41.361Z"
     },
     {
       "id": "LOCAL-UI-09",
@@ -192,10 +192,10 @@
       "status": "PASS",
       "screenshot": {
         "file": "LOCAL-UI-09.png",
-        "sha256": "3dd3c43f361d60ec18ef9a104c358fde2210d6f48cbf4d98e5e5dd566acfdd71"
+        "sha256": "64495c356a4dab66606baad265bf082a559d7ef9cae77af288969a02acd61d7f"
       },
-      "startedAt": "2026-11-27T00:27:02.396Z",
-      "finishedAt": "2026-11-27T00:27:04.804Z"
+      "startedAt": "2026-11-28T00:12:41.361Z",
+      "finishedAt": "2026-11-28T00:12:43.205Z"
     },
     {
       "id": "LOCAL-UI-10",
@@ -206,10 +206,10 @@
       "status": "PASS",
       "screenshot": {
         "file": "LOCAL-UI-10.png",
-        "sha256": "5e94696d6ad00ec2f6b958351306014ed66e386cbb6b43d7125f61367065c342"
+        "sha256": "c2ebb7c7b6653ea102f4b9f0e417fc3d73f4c72afe7910f2768e7b5c478810b6"
       },
-      "startedAt": "2026-11-27T00:27:04.804Z",
-      "finishedAt": "2026-11-27T00:27:06.050Z"
+      "startedAt": "2026-11-28T00:12:43.206Z",
+      "finishedAt": "2026-11-28T00:12:44.137Z"
     },
     {
       "id": "LOCAL-UI-11",
@@ -221,10 +221,10 @@
       "status": "PASS",
       "screenshot": {
         "file": "LOCAL-UI-11.png",
-        "sha256": "990cd2e294fbf5d800cd3d7f30bbf187e5ae3ef65eff8f0121eeccb7ca89f7d3"
+        "sha256": "d6fa8e5d7a35a7f0eb2de4b4e14e528ab1c4ea2f05d77da4abe25b693e0afee4"
       },
-      "startedAt": "2026-11-27T00:27:06.050Z",
-      "finishedAt": "2026-11-27T00:27:08.396Z"
+      "startedAt": "2026-11-28T00:12:44.137Z",
+      "finishedAt": "2026-11-28T00:12:45.933Z"
     },
     {
       "id": "LOCAL-UI-12",
@@ -236,10 +236,10 @@
       "status": "PASS",
       "screenshot": {
         "file": "LOCAL-UI-12.png",
-        "sha256": "fce4f89bbd86f86d4e2b9e7a6568372d765d9fc00e9ead2d52a09bfe6aeac42d"
+        "sha256": "6780c7baba3deaa3cdfc8a17cb5c1ac809196c8ae55416116133a616399120df"
       },
-      "startedAt": "2026-11-27T00:27:08.396Z",
-      "finishedAt": "2026-11-27T00:27:10.017Z"
+      "startedAt": "2026-11-28T00:12:45.933Z",
+      "finishedAt": "2026-11-28T00:12:47.114Z"
     },
     {
       "id": "LOCAL-UI-13",
@@ -251,10 +251,10 @@
       "status": "PASS",
       "screenshot": {
         "file": "LOCAL-UI-13.png",
-        "sha256": "fa696b4250fde7ee7ffe51b67047593c63470361a9738a3525be9c01bcc2a74b"
+        "sha256": "36a7f1adc8745c2770ac40760ea3fedb7535c7b9799887efbcb7ae79e3b05b59"
       },
-      "startedAt": "2026-11-27T00:27:10.018Z",
-      "finishedAt": "2026-11-27T00:27:12.070Z"
+      "startedAt": "2026-11-28T00:12:47.115Z",
+      "finishedAt": "2026-11-28T00:12:48.616Z"
     },
     {
       "id": "LOCAL-UI-14",
@@ -265,10 +265,10 @@
       "status": "PASS",
       "screenshot": {
         "file": "LOCAL-UI-14.png",
-        "sha256": "e112e27c474d1b5d91a05c5c31e9bd03579c59e05fd57c6190333d9c9e455e22"
+        "sha256": "0b4fd7e3d5a4d187f244f9f86fa25dc5beecc0314f2c1d18a9548b6b5ccd34b8"
       },
-      "startedAt": "2026-11-27T00:27:12.071Z",
-      "finishedAt": "2026-11-27T00:27:16.115Z"
+      "startedAt": "2026-11-28T00:12:48.616Z",
+      "finishedAt": "2026-11-28T00:12:52.515Z"
     }
   ],
   "thirdPartyPassed": 0,

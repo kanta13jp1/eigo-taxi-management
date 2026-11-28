@@ -1,6 +1,8 @@
 # 最新の配布資料
 
-[最新の進捗追補（2026-11-21・累計62件）](2026-11-10-premeeting/progress-2026-11-21-cumulative62.pptx) は、11月18日時点の記録に最新検証版の画面と操作図を追加した22ページ版です。 [11月21日の公開検証記録](../progress/2026-11-21-cumulative-sixtytwo.md)
+[最新の進捗追補（2026-11-27・Round 16・23ページ）](2026-11-10-premeeting/progress-2026-11-27-r16-daily.pptx) は、11月21日版（22ページ）に検証版 `23cb92b1ecfa50d2`（`sourceDigest 24e506a420ea`）の公開画面と Round 16 改善（本日の直接取消・取消確認モーダル一元化・残少クイック絞り込み）を追加した23ページ版です。[11月27日 Round 16 公開検証記録](../progress/2026-11-27-r16-cancel-and-filter-delivery.md)
+
+前版：[進捗追補（2026-11-21・累計62件・22ページ）](2026-11-10-premeeting/progress-2026-11-21-cumulative62.pptx) ／ [11月21日の公開検証記録](../progress/2026-11-21-cumulative-sixtytwo.md)
 
 現行の全工程資料・運用手順書・ユーザーマニュアル・残課題／進捗・対応表は [2026-10-23 共通デザイン版](2026-10-23-traceability/README.md) を使用してください。
 
