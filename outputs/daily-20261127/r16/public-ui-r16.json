@@ -1,0 +1,110 @@
+{
+  "auditedAt": "2026-11-27T11:47:06.010Z",
+  "url": "https://eigo-taxi-test.web.app",
+  "mode": "public-frontend-demo-route (external network blocked; no real Google OAuth / GAS / Spreadsheet / Calendar / physical device)",
+  "expectedSourceDigest": "24e506a420eaf15acbee94d4ec772a568374a1c34c3155c019c37673c5ea29d9",
+  "checks": [
+    {
+      "id": "LIVE-R16-01",
+      "status": "PASS",
+      "description": "Live release.json matches deployed sourceDigest",
+      "detail": {
+        "environment": "mighty-test",
+        "projectId": "eigo-taxi-app",
+        "siteId": "eigo-taxi-test",
+        "builtAt": "2026-11-27T11:45:03.201Z",
+        "baseCommit": "a657acd5980f439a3159d06a6acf3f4e3a2b4bad",
+        "sourceDigest": "24e506a420eaf15acbee94d4ec772a568374a1c34c3155c019c37673c5ea29d9"
+      }
+    },
+    {
+      "id": "LIVE-R16-02",
+      "status": "PASS",
+      "description": "Admin Today tab shows direct cancel button and passes DOM standards at 1280x900",
+      "detail": {
+        "directCancelButtons": 2,
+        "deadMatches": [],
+        "headingsCount": 4,
+        "headingSkips": [],
+        "overflowX": 0
+      }
+    },
+    {
+      "id": "LIVE-R16-03",
+      "status": "PASS",
+      "description": "Admin cancel modal uses useModalDialog (overflow lock, Tab trap, Escape restore, confirm -> #main-content fallback)",
+      "detail": {
+        "triggerLabel": "田中 陽菜 (ひな) 2026-11-27 16:00 お迎え の予約を取消",
+        "initialFocusText": "戻る",
+        "afterTab1": {
+          "inDialog": true,
+          "text": "取消を確定"
+        },
+        "afterTab2": {
+          "inDialog": true,
+          "text": "戻る"
+        },
+        "afterShiftTab": {
+          "inDialog": true,
+          "text": "取消を確定"
+        },
+        "focusedAfterEsc": "田中 陽菜 (ひな) 2026-11-27 16:00 お迎え の予約を取消",
+        "fallbackFocusId": "main-content"
+      }
+    },
+    {
+      "id": "LIVE-R16-04",
+      "status": "PASS",
+      "description": "Low-ticket KPI card opens Students tab pre-filtered to <=2 tickets and toggles back cleanly",
+      "detail": {
+        "lowBalances": [
+          1,
+          0
+        ],
+        "allBalances": [
+          7,
+          1,
+          0
+        ],
+        "deadMatches": [],
+        "headingsCount": 5,
+        "headingSkips": [],
+        "overflowX": 0
+      }
+    },
+    {
+      "id": "LIVE-R16-05",
+      "status": "PASS",
+      "description": "Mobile 375px Admin Today tab wraps direct cancel + complete buttons with 0 horizontal overflow",
+      "detail": {
+        "deadMatches": [],
+        "headingsCount": 4,
+        "headingSkips": [],
+        "overflowX": 0
+      }
+    },
+    {
+      "id": "LIVE-R16-06",
+      "status": "PASS",
+      "description": "Mobile 375px Parent cancel dialog locks scroll, traps focus, restores on Escape, and confirms cleanly",
+      "detail": {
+        "triggerLabel": "田中 陽菜 (ひな) 2026-11-27 16:00 お迎え（教室へ） 東京都世田谷区桜新町1-10-5 パークサイド201 の予約をキャンセル",
+        "fallbackFocusId": "main-content",
+        "deadMatches": [],
+        "headingsCount": 4,
+        "headingSkips": [],
+        "overflowX": 0
+      }
+    }
+  ],
+  "pageErrors": [],
+  "consoleErrors": [],
+  "screenshots": [
+    "outputs/daily-20261127/r16/screenshots/admin-today-1280.png",
+    "outputs/daily-20261127/r16/screenshots/admin-cancel-dialog-1280.png",
+    "outputs/daily-20261127/r16/screenshots/admin-students-low-filter-1280.png",
+    "outputs/daily-20261127/r16/screenshots/admin-today-375.png",
+    "outputs/daily-20261127/r16/screenshots/parent-cancel-dialog-375.png"
+  ],
+  "pass": true
+}

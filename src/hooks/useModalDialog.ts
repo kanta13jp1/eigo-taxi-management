@@ -198,6 +198,11 @@ export function useModalDialog({
 
       if (previousActiveElement?.isConnected) {
         previousActiveElement.focus({ preventScroll: true });
+      } else {
+        const mainContent = document.getElementById('main-content');
+        if (mainContent instanceof HTMLElement) {
+          mainContent.focus({ preventScroll: true });
+        }
       }
     };
   }, [isOpen, dialogRef, initialFocusRef]);

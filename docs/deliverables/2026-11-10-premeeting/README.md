@@ -1,5 +1,9 @@
 # 11月11日16時の事前打ち合わせ資料
 
+[11月27日 Round 16 本日の直接取消・通信中保護・残少絞り込みの進捗追補（23ページ）](progress-2026-11-27-r16-daily.pptx)。検証版 `23cb92b1ecfa50d2`（`sourceDigest 24e506a420ea`）の公開デモ実画面と3改善を追加。[11月27日 Round 16 公開検証記録](../../progress/2026-11-27-r16-cancel-and-filter-delivery.md)・[構造・配置検査](../../../outputs/daily-20261127/r16/ppt/validation.json)（PowerPointアプリ上の表示は未確認）。
+
+[11月21日 累計62修正の進捗追補（22ページ）](progress-2026-11-21-cumulative62.pptx)を保持。
+
 [11月18日 累計27修正・27技術試験の最新進捗（21ページ）](progress-2026-11-18-cumulative27.pptx)。AT-23の模擬台帳試験を追加。
 
 

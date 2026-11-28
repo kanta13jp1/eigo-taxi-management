@@ -1,0 +1,130 @@
+{
+  "date": "2026-11-27",
+  "completedAt": "2026-11-27T20:49:00+09:00",
+  "round": "Round 16 (Daily 2026-11-27): Today Direct Cancel, Async Cancel Dialog Lock via useModalDialog, and Low-Ticket Student Filter",
+  "reviewer": "Independent subagent deep-reviewer (conversation 8dd6b6ac-4f71-455b-af6f-9ac5f198f07f) + live public deployment & visual browser verification",
+  "verdict": "APPROVE",
+  "scope": [
+    "src/hooks/useModalDialog.ts",
+    "src/components/TeacherDashboard.tsx",
+    "src/components/ParentPortal.tsx",
+    "scripts/test_dashboard_cancel_and_filter.cjs"
+  ],
+  "sourceHashes": {
+    "src/hooks/useModalDialog.ts": "3316e91d0348660be765f5b4abf08f2af1096c056969d833136c0300c4b5774b",
+    "src/components/TeacherDashboard.tsx": "e008a999f225bb70418507cceff33b3966aea0a42e9eff5cd4655088850ba4cf",
+    "src/components/ParentPortal.tsx": "44d910236bf932c22c70e9c0b44032726a3a9c21eceee420da6f339d5bc5e493",
+    "scripts/test_dashboard_cancel_and_filter.cjs": "da882d6f7c71dac98e088ad92c5774e96994618adc4279a149cb48628399c46d"
+  },
+  "deployment": {
+    "environment": "mighty-test",
+    "projectId": "eigo-taxi-app",
+    "siteId": "eigo-taxi-test",
+    "url": "https://eigo-taxi-test.web.app",
+    "hostingVersion": "23cb92b1ecfa50d2",
+    "builtAt": "2026-11-27T11:45:03.201Z",
+    "baseCommit": "a657acd5980f439a3159d06a6acf3f4e3a2b4bad",
+    "sourceDigest": "24e506a420eaf15acbee94d4ec772a568374a1c34c3155c019c37673c5ea29d9",
+    "publicVerificationSnapshot": "docs/acceptance/deployment-verification/public-2026-11-27T11-46-50-690Z.json",
+    "publicVerificationSha256": "326d67081b5e9e13708c2377a2d9f573a5adabea552fb999df248b19c1d23cac",
+    "publicUrlsMatched": "6/6"
+  },
+  "independentAudit": {
+    "subagent": "deep-reviewer",
+    "conversationId": "8dd6b6ac-4f71-455b-af6f-9ac5f198f07f",
+    "initialVerdict": "REQUEST_CHANGES",
+    "reReviewVerdict": "APPROVE",
+    "resolvedFindings": [
+      "Finding #1 (High): Added cancelError state (role=alert) and try/catch/finally so cancel confirmation dialog stays open on rejection and closes only on success without unhandled rejections.",
+      "Finding #2 (High): Unified both cancel confirmation dialogs onto useModalDialog (role=dialog, aria-modal=true, isDismissDisabled=cancelPending, initialFocusRef=cancelBackButtonRef), eliminating Blink CloseWatcher double-Escape desync and guaranteeing body.style.overflow lock/restore.",
+      "Finding #3 (High): Added openCancelDialog mutual exclusion between completeRide and cancelRide, mountedRef guard in completeRide, stale cancelRideId cleanup effect, and clear on parent student switch.",
+      "Finding #4 (Medium): Added #main-content focus fallback in useModalDialog.ts when previousActiveElement is disconnected after ride cancellation.",
+      "Finding #5 (Medium) & Low notes: Expanded test_dashboard_cancel_and_filter.cjs (5/5 PASS + JSON evidence), added border-rose-300, [overflow-wrap:anywhere] on ride.note, and studentName fallback."
+    ],
+    "blockingFindings": [],
+    "nonBlockingNotes": [
+      "NB-01: Adding cancelPending to the stale cancelRideId cleanup dependency array would further harden hypothetical future callers that mutate rides before rejecting."
+    ]
+  },
+  "visualReview": {
+    "inspectedViaReadFile": true,
+    "screenshots": {
+      "outputs/daily-20261127/r16/screenshots/admin-today-1280.png": {
+        "sha256": "a4b6c19be5759aaa98c2afb324f84a932df84f908830bfa38d68f6db082ad13e",
+        "observation": "1280x900 live public admin Today tab: direct rose-bordered 取消 button renders cleanly beside 送迎完了（1回消費） on both scheduled cards with balanced spacing and AA contrast."
+      },
+      "outputs/daily-20261127/r16/screenshots/admin-cancel-dialog-1280.png": {
+        "sha256": "cf4f1b6a0c8bcd559466a77e9b83d593f227ee877db30a7a7c629654890db536",
+        "observation": "1280x900 live public admin cancel confirmation modal via useModalDialog: centered over frosted backdrop, displays student name, date/time/type, address, and 備考 line with clear 戻る / 取消を確定 buttons."
+      },
+      "outputs/daily-20261127/r16/screenshots/admin-students-low-filter-1280.png": {
+        "sha256": "82060966e3c9dfbcbe871801f26b260ffb6c5f191a522aef5cfe8f46da8ac2b7",
+        "observation": "1280x900 live public admin Students tab after clicking チケット残り2枚以下 KPI card: 残り2枚以下のみ (2) active, displaying only 1回 and 0回 students cleanly."
+      },
+      "outputs/daily-20261127/r16/screenshots/admin-today-375.png": {
+        "sha256": "f851ba842136351691e83bb328ad7df8afd521e1c2f3d93a63f8164772c0c790",
+        "observation": "375x667 live public mobile admin Today tab: 地図アプリ and 取消 / 送迎完了 wrap cleanly with zero horizontal overflow or clipping."
+      },
+      "outputs/daily-20261127/r16/screenshots/parent-cancel-dialog-375.png": {
+        "sha256": "9c70fe037860c311e0d140005956c3a337bc74c7dc230e5332a7fa9a122bdb7a",
+        "observation": "375x667 live public mobile parent cancel modal via useModalDialog: centered card with wrapped address, memo, readable contrast, and aligned 戻る / 取消を確定 buttons."
+      }
+    }
+  },
+  "deliverables": {
+    "pptx": "docs/deliverables/2026-11-10-premeeting/progress-2026-11-27-r16-daily.pptx",
+    "pptxSha256": "d226313ea8aeeb4eb5a841f4c1f214825f8af1b3ce1deaf92e268c9c5f612deb",
+    "validationJson": "outputs/daily-20261127/r16/ppt/validation.json"
+  },
+  "evidenceChecks": {
+    "traceability_negative_tests": {
+      "status": "PASS",
+      "passed": 34,
+      "total": 34
+    },
+    "r16_contract_suite": {
+      "path": "outputs/daily-20261127/r16/r16-cancel-and-filter-contract.json",
+      "sha256": "3fd76e0528467a8a9c8b723a601f0f5669a36683e69f12c018774c538757e1e2",
+      "passed": 5,
+      "total": 5
+    },
+    "student_low_ticket_contract": {
+      "status": "PASS",
+      "passed": 5,
+      "total": 5
+    },
+    "outputs/refresh-20261120/local/results.json": {
+      "sha256": "ba373310d6df4e9d67b0e97df0c1ce964027296b080b8498a357fb0b663ac6c6",
+      "pass": true,
+      "count": 14
+    },
+    "outputs/refresh-20261120/reviewer/results.json": {
+      "sha256": "0d54a58bf1dd9b10b873dd9ae874628e5e13a789bc9cf2036629f3702a54b3b0",
+      "pass": true,
+      "count": 8
+    },
+    "outputs/refresh-20261120/modal-scroll/results.json": {
+      "sha256": "4d53cef9a294c8f9236faed66d9c8af224aba102c01b45e425868d789f743276",
+      "pass": true,
+      "count": 2
+    },
+    "outputs/r19-adoption-20261111/regression/trace-ui/results.json": {
+      "sha256": "d7b83f6da62cc3a8368a7c1f8edcd2a81869b8042bf6222a023c9d5c27a4b4bc",
+      "pass": true,
+      "count": 6
+    },
+    "outputs/daily-20261127/r16/public-ui-r16.json": {
+      "sha256": "38ae0dababcca79f733e88840e9ca3d65b8791f9c6d6e428309782df2f3e717b",
+      "pass": true,
+      "count": 6
+    }
+  },
+  "conclusion": "Round 16 fixes (direct cancel on admin Today cards, useModalDialog-unified async cancel confirmation with error alert and focus fallback, and low-ticket KPI quick filter) passed independent deep-reviewer APPROVE, full offline/Playwright suites, live eigo-taxi-test 6/6 SHA-256 verification, and 6/6 live browser + visual checks.",
+  "limits": [
+    "Customer acceptance CUST-01..06 remains NOT_RUN (0/6)",
+    "thirdPartyPassed: 0; release remains HOLD; production rollout has not started",
+    "gas/Code.gs and src/App.tsx are unmodified; scripts/test_gas.cjs was not run",
+    "Public live verification covers the public frontend demo route only; no real Google OAuth login, live GAS/Spreadsheet/Calendar write, or physical mobile device testing claimed",
+    "PowerPoint slide rendering was verified via structural/geometry validation and Pillow preview; Microsoft PowerPoint desktop app rendering is not-run"
+  ]
+}

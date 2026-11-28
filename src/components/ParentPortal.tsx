@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import type { Student, RideReservation, RideType } from '../types';
+import { useModalDialog } from '../hooks/useModalDialog';
 import {
   Ticket,
   Calendar,
@@ -50,36 +51,61 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({
       || b.id.localeCompare(a.id));
   const [cancelRideId, setCancelRideId] = useState<string | null>(null);
   const [cancelPending, setCancelPending] = useState(false);
+  const [cancelError, setCancelError] = useState('');
+  const mountedRef = useRef(true);
   const cancellationInFlight = useRef(false);
-  const cancelDialog = useRef<HTMLDialogElement>(null);
+  const cancelDialogRef = useRef<HTMLDivElement>(null);
+  const cancelBackButtonRef = useRef<HTMLButtonElement>(null);
   const cancelTarget = upcomingRides.find(ride => ride.id === cancelRideId);
-  const activeCancelId = cancelTarget?.id;
   useEffect(() => {
-    if (!activeCancelId) return;
-    const previousActive = document.activeElement instanceof HTMLElement ? document.activeElement : null;
-    const dialog = cancelDialog.current;
-    dialog?.showModal();
+    mountedRef.current = true;
     return () => {
-      dialog?.close();
-      if (previousActive?.isConnected) {
-        previousActive.focus({ preventScroll: true });
-      }
+      mountedRef.current = false;
     };
-  }, [activeCancelId]);
+  }, []);
+  useEffect(() => {
+    if (cancelRideId && !cancelTarget && !cancellationInFlight.current) {
+      setCancelRideId(null);
+      setCancelError('');
+    }
+  }, [cancelRideId, cancelTarget]);
+  const openCancelDialog = (rideId: string) => {
+    if (cancellationInFlight.current) return;
+    setCancelError('');
+    setCancelRideId(rideId);
+  };
   const dismissCancellation = () => {
-    cancelDialog.current?.close();
+    if (cancellationInFlight.current) return;
+    setCancelError('');
     setCancelRideId(null);
   };
+  useModalDialog({
+    isOpen: Boolean(cancelTarget),
+    onClose: dismissCancellation,
+    isDismissDisabled: cancelPending,
+    dialogRef: cancelDialogRef,
+    initialFocusRef: cancelBackButtonRef,
+  });
   const confirmCancellation = async () => {
     if (!cancelTarget || cancellationInFlight.current) return;
+    const targetId = cancelTarget.id;
     cancellationInFlight.current = true;
     setCancelPending(true);
-    dismissCancellation();
+    setCancelError('');
     try {
-      await onCancelRide(cancelTarget.id);
+      await onCancelRide(targetId);
+      if (mountedRef.current) {
+        setCancelRideId(null);
+      }
+    } catch (error) {
+      if (mountedRef.current) {
+        setCancelError(error instanceof Error ? error.message : 'キャンセルできませんでした');
+      }
     } finally {
       cancellationInFlight.current = false;
-      setCancelPending(false);
+      if (mountedRef.current) {
+        setCancelPending(false);
+      }
     }
   };
 
@@ -110,7 +136,13 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({
         <select
           id="parent-portal-student"
           value={student.id}
-          onChange={(e) => setPreferredStudentId(e.target.value)}
+          onChange={(e) => {
+            setPreferredStudentId(e.target.value);
+            if (!cancellationInFlight.current) {
+              setCancelRideId(null);
+              setCancelError('');
+            }
+          }}
           className="bg-slate-50 border border-slate-200 font-bold text-slate-800 text-sm rounded-xl px-3 py-1.5 focus:outline-none focus:ring-2 focus:ring-emerald-500 w-full"
         >
           {safeStudents.map((s) => (
@@ -228,9 +260,9 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({
                         <button
                           type="button"
                           aria-label={target + ' ' + ride.pickupLocation + ' の予約をキャンセル'}
-                          aria-busy={cancelPending}
+                          aria-busy={cancelPending && cancelRideId === ride.id}
                           disabled={cancelPending}
-                          onClick={() => setCancelRideId(ride.id)}
+                          onClick={() => openCancelDialog(ride.id)}
                           className="shrink-0 text-xs text-rose-700 hover:text-rose-800 bg-rose-50 hover:bg-rose-100 font-bold px-2.5 py-1.5 rounded-lg border border-rose-200 transition-colors flex items-center gap-1 disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-500"
                         >
                           <XCircle aria-hidden="true" className="w-3.5 h-3.5" />
@@ -245,12 +277,19 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({
           </div>
 
           {cancelTarget && (
-            <dialog ref={cancelDialog} aria-labelledby="parent-cancel-heading"
-              aria-describedby="parent-cancel-details parent-cancel-effect"
-              onCancel={(e) => { if (cancelPending) { e.preventDefault(); return; } dismissCancellation(); }}
+            <div
+              className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm"
               onClick={(e) => { if (e.target === e.currentTarget && !cancelPending) dismissCancellation(); }}
-              className="m-auto w-11/12 max-w-md rounded-2xl p-0 shadow-xl backdrop:bg-slate-900/60 backdrop:backdrop-blur-sm">
-              <div className="p-5">
+            >
+              <div
+                ref={cancelDialogRef}
+                role="dialog"
+                aria-modal="true"
+                aria-labelledby="parent-cancel-heading"
+                aria-describedby="parent-cancel-details parent-cancel-effect"
+                tabIndex={-1}
+                className="w-full max-w-md max-h-[calc(100dvh-2rem)] overflow-y-auto overscroll-contain rounded-2xl bg-white text-slate-900 p-5 shadow-xl"
+              >
                 <h2 id="parent-cancel-heading" className="text-lg font-bold">予約取消の確認</h2>
                 <div id="parent-cancel-details" className="mt-3 space-y-1 [overflow-wrap:anywhere]">
                   <p className="font-semibold">{student.name}</p>
@@ -258,13 +297,16 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({
                   <p>送迎先: {cancelTarget.pickupLocation}</p>
                   {cancelTarget.note && <p>備考: {cancelTarget.note}</p>}
                 </div>
-                <p id="parent-cancel-effect" className="mt-3 text-sm">{isDemo ? 'このブラウザ内のデモ予約を取り消します。教室の予定は変わりません。' : '台帳の予約を取消にし、対応するカレンダーの予定を削除します。'}</p>
+                <p id="parent-cancel-effect" className="mt-3 text-sm text-slate-700">{isDemo ? 'このブラウザ内のデモ予約を取り消します。教室の予定は変わりません。' : '台帳の予約を取消にし、対応するカレンダーの予定を削除します。'}</p>
+                {cancelError && (
+                  <p role="alert" className="mt-3 rounded-lg bg-rose-50 p-2.5 text-xs font-medium text-rose-800">{cancelError}</p>
+                )}
                 <div className="mt-5 flex justify-end gap-2">
-                  <button type="button" disabled={cancelPending} className="rounded-lg border px-3 py-2 disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-500" onClick={dismissCancellation}>戻る</button>
-                  <button type="button" aria-busy={cancelPending} disabled={cancelPending} className="rounded-lg bg-rose-700 px-3 py-2 font-bold text-white disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-500" onClick={confirmCancellation}>取消を確定</button>
+                  <button ref={cancelBackButtonRef} type="button" disabled={cancelPending} className="rounded-lg border border-slate-300 px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50 disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-500" onClick={dismissCancellation}>戻る</button>
+                  <button type="button" aria-busy={cancelPending} disabled={cancelPending} className="rounded-lg bg-rose-700 hover:bg-rose-800 px-3 py-2 text-sm font-bold text-white disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-500" onClick={() => void confirmCancellation()}>{cancelPending ? '取消処理中…' : '取消を確定'}</button>
                 </div>
               </div>
-            </dialog>
+            </div>
           )}
 
           {/* これまでの利用履歴 */}
